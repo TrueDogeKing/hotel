@@ -12,6 +12,18 @@ public class AppDbContext : DbContext
 
     public DbSet<RefreshToken> RefreshTokens => Set<RefreshToken>();
 
+    public DbSet<Room> Rooms => Set<Room>();
+
+    public DbSet<CampSession> CampSessions => Set<CampSession>();
+
+    public DbSet<Booking> Bookings => Set<Booking>();
+
+    public DbSet<BookingRoomAssignment> BookingRoomAssignments => Set<BookingRoomAssignment>();
+
+    public DbSet<RoomTask> RoomTasks => Set<RoomTask>();
+
+    public DbSet<Payment> Payments => Set<Payment>();
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);

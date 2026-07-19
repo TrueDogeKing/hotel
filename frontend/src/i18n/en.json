@@ -23,6 +23,54 @@
   "admin": {
     "dashboardTitle": "Admin panel",
     "welcome": "Signed in as {{login}}.",
-    "logout": "Log out"
+    "logout": "Log out",
+    "nav": {
+      "dashboard": "Dashboard",
+      "sessions": "Sessions",
+      "rooms": "Rooms"
+    }
+  },
+  "adminRooms": {
+    "title": "Rooms",
+    "number": "Number",
+    "capacity": "Capacity",
+    "description": "Description",
+    "status": "Status",
+    "active": "Active",
+    "inactive": "Inactive",
+    "add": "Add room",
+    "save": "Save changes",
+    "cancelEdit": "Cancel",
+    "edit": "Edit",
+    "activate": "Activate",
+    "deactivate": "Deactivate",
+    "delete": "Delete",
+    "deactivatedInstead": "The room has booking history — it was deactivated instead of deleted.",
+    "conflict": "Conflict: the room number is taken or someone else changed the data. Reload and try again.",
+    "genericError": "Saving the changes failed."
+  },
+  "adminSessions": {
+    "title": "Camp sessions",
+    "name": "Name",
+    "dates": "Dates",
+    "startDate": "Start date",
+    "endDate": "End date",
+    "pricePerPerson": "Price/person (zł)",
+    "depositPerPerson": "Deposit/person (zł)",
+    "status": "Status",
+    "statuses": {
+      "Draft": "Draft",
+      "Published": "Published",
+      "Archived": "Archived"
+    },
+    "add": "Add session",
+    "save": "Save changes",
+    "cancelEdit": "Cancel",
+    "edit": "Edit",
+    "publish": "Publish",
+    "archive": "Archive",
+    "delete": "Delete",
+    "conflict": "Conflict: someone else changed the data or the session has bookings. Reload and try again.",
+    "genericError": "Saving the changes failed."
   }
 }

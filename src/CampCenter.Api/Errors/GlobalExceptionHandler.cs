@@ -1,6 +1,7 @@
 using CampCenter.Domain.Exceptions;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace CampCenter.Api.Errors;
 
@@ -76,6 +77,12 @@ public class GlobalExceptionHandler : IExceptionHandler
                 StatusCodes.Status409Conflict,
                 "Conflict",
                 exception.Message
+            ),
+            // xmin concurrency token mismatch surfaced by EF on SaveChanges.
+            DbUpdateConcurrencyException => (
+                StatusCodes.Status409Conflict,
+                "Conflict",
+                "The resource was modified by someone else. Reload and try again."
             ),
             _ => (StatusCodes.Status500InternalServerError, "An unexpected error occurred.", null),
         };

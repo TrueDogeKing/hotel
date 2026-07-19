@@ -1534,3 +1534,65 @@ p[role="alert"] {
 .admin-content {
   padding: 24px;
 }
+
+/* --- Admin tables + forms (phase 2) --- */
+
+.admin-header-left {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.admin-nav {
+  display: flex;
+  gap: 12px;
+}
+
+.admin-nav a {
+  text-decoration: none;
+  opacity: 0.75;
+  padding: 6px 10px;
+  border-radius: 8px;
+}
+
+.admin-nav a.active {
+  opacity: 1;
+  background: color-mix(in oklch, currentColor 12%, transparent);
+}
+
+.admin-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.admin-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.85rem;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-table th,
+.admin-table td {
+  text-align: left;
+  padding: 8px 12px;
+  border-bottom: 1px solid color-mix(in oklch, currentColor 15%, transparent);
+}
+
+.admin-table tr.inactive {
+  opacity: 0.5;
+}
+
+.row-actions {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}

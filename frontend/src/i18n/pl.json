@@ -23,6 +23,54 @@
   "admin": {
     "dashboardTitle": "Panel administratora",
     "welcome": "Zalogowano jako {{login}}.",
-    "logout": "Wyloguj się"
+    "logout": "Wyloguj się",
+    "nav": {
+      "dashboard": "Pulpit",
+      "sessions": "Turnusy",
+      "rooms": "Pokoje"
+    }
+  },
+  "adminRooms": {
+    "title": "Pokoje",
+    "number": "Numer",
+    "capacity": "Liczba miejsc",
+    "description": "Opis",
+    "status": "Status",
+    "active": "Aktywny",
+    "inactive": "Nieaktywny",
+    "add": "Dodaj pokój",
+    "save": "Zapisz zmiany",
+    "cancelEdit": "Anuluj",
+    "edit": "Edytuj",
+    "activate": "Aktywuj",
+    "deactivate": "Dezaktywuj",
+    "delete": "Usuń",
+    "deactivatedInstead": "Pokój ma historię rezerwacji — został dezaktywowany zamiast usunięty.",
+    "conflict": "Konflikt: numer pokoju jest zajęty albo dane zmienił ktoś inny. Odśwież i spróbuj ponownie.",
+    "genericError": "Nie udało się zapisać zmian."
+  },
+  "adminSessions": {
+    "title": "Turnusy",
+    "name": "Nazwa",
+    "dates": "Termin",
+    "startDate": "Data rozpoczęcia",
+    "endDate": "Data zakończenia",
+    "pricePerPerson": "Cena/os. (zł)",
+    "depositPerPerson": "Zaliczka/os. (zł)",
+    "status": "Status",
+    "statuses": {
+      "Draft": "Szkic",
+      "Published": "Opublikowany",
+      "Archived": "Zarchiwizowany"
+    },
+    "add": "Dodaj turnus",
+    "save": "Zapisz zmiany",
+    "cancelEdit": "Anuluj",
+    "edit": "Edytuj",
+    "publish": "Opublikuj",
+    "archive": "Archiwizuj",
+    "delete": "Usuń",
+    "conflict": "Konflikt: dane zmienił ktoś inny albo turnus ma rezerwacje. Odśwież i spróbuj ponownie.",
+    "genericError": "Nie udało się zapisać zmian."
   }
 }
