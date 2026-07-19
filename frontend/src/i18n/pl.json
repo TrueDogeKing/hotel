@@ -1,0 +1,28 @@
+{
+  "common": {
+    "appName": "Ośrodek CampCenter",
+    "loading": "Ładowanie…"
+  },
+  "home": {
+    "heroTitle": "Ośrodek kolonijny nad jeziorem",
+    "heroSubtitle": "Turnusy dla grup zorganizowanych — zakwaterowanie, wyżywienie i teren rekreacyjny w jednym miejscu.",
+    "bookCta": "Zarezerwuj turnus",
+    "adminLink": "Panel administratora"
+  },
+  "login": {
+    "title": "Logowanie administratora",
+    "login": "Login",
+    "password": "Hasło",
+    "submit": "Zaloguj się",
+    "submitting": "Logowanie…",
+    "invalidCredentials": "Nieprawidłowy login lub hasło.",
+    "tooManyAttempts": "Zbyt wiele prób. Spróbuj ponownie za {{seconds}} s.",
+    "retryIn": "Spróbuj ponownie za {{seconds}} s",
+    "lastAttemptWarning": "Uwaga: została 1 próba przed tymczasową blokadą."
+  },
+  "admin": {
+    "dashboardTitle": "Panel administratora",
+    "welcome": "Zalogowano jako {{login}}.",
+    "logout": "Wyloguj się"
+  }
+}

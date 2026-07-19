@@ -1,0 +1,28 @@
+{
+  "common": {
+    "appName": "CampCenter",
+    "loading": "Loading…"
+  },
+  "home": {
+    "heroTitle": "Lakeside summer camp center",
+    "heroSubtitle": "Camp sessions for organized groups — accommodation, meals and recreation grounds in one place.",
+    "bookCta": "Book a session",
+    "adminLink": "Admin panel"
+  },
+  "login": {
+    "title": "Admin sign-in",
+    "login": "Login",
+    "password": "Password",
+    "submit": "Log in",
+    "submitting": "Logging in…",
+    "invalidCredentials": "Incorrect login or password.",
+    "tooManyAttempts": "Too many attempts. Try again in {{seconds}}s.",
+    "retryIn": "Try again in {{seconds}}s",
+    "lastAttemptWarning": "Warning: 1 attempt left before a temporary lockout."
+  },
+  "admin": {
+    "dashboardTitle": "Admin panel",
+    "welcome": "Signed in as {{login}}.",
+    "logout": "Log out"
+  }
+}

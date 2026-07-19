@@ -1,0 +1,18 @@
+# Reverse proxy + automatic HTTPS (Let's Encrypt) for the whole app.
+# DOMAIN comes from .env; Caddy provisions and renews the certificate itself.
+{$DOMAIN} {
+	encode zstd gzip
+
+	# TLS terminates here, so HSTS is set here (nginx intentionally leaves it to the proxy).
+	header Strict-Transport-Security "max-age=31536000; includeSubDomains"
+
+	# REST API.
+	handle /api/* {
+		reverse_proxy api:8080
+	}
+
+	# Everything else: the SPA served by nginx.
+	handle {
+		reverse_proxy frontend:8080
+	}
+}

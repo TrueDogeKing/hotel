@@ -1,0 +1,38 @@
+# cykl życia bazy/infrastruktury, bootstrap środowiska, narzędzia deweloperskie.
+
+# --- Baza danych (database lifecycle) ---
+
+[tasks."db:up"]
+description = "Start PostgreSQL + Mailpit (infra) w tle"
+run = "docker compose -f docker/docker-compose.infra.yml up -d"
+
+[tasks."db:down"]
+description = "Zatrzymaj infrastrukturę (PostgreSQL + Mailpit)"
+run = "docker compose -f docker/docker-compose.infra.yml down"
+
+[tasks."db:reset"]
+description = "Odtwórz PostgreSQL z czystym wolumenem"
+run = [
+  "docker compose -f docker/docker-compose.infra.yml down -v",
+  "docker compose -f docker/docker-compose.infra.yml up -d",
+]
+
+[tasks."db:logs"]
+description = "Podgląd logów bazy"
+run = "docker logs -f campcenter-db"
+
+# --- Kopie zapasowe ---
+
+[tasks."db:backup"]
+description = "Zrzut bazy (pg_dump) do backups/ z datą w nazwie"
+run = 'sh -c "mkdir -p backups && docker exec campcenter-db pg_dump -U ${POSTGRES_USER:-campcenter} ${POSTGRES_DB:-campcenter} > backups/campcenter-$(date +%Y%m%d-%H%M%S).sql"'
+
+# --- Narzędzia deweloperskie: migracje EF Core ---
+
+[tasks."ef:add"]
+description = "Nowa migracja EF Core (nazwę podaj jako argument)"
+run = "dotnet ef migrations add --project src/CampCenter.Infrastructure --startup-project src/CampCenter.Infrastructure --output-dir Persistence/Migrations"
+
+[tasks."ef:update"]
+description = "Zastosuj migracje EF Core"
+run = "dotnet ef database update --project src/CampCenter.Infrastructure --startup-project src/CampCenter.Infrastructure"

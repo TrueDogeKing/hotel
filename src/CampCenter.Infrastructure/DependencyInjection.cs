@@ -1,0 +1,34 @@
+using CampCenter.Application.Interfaces;
+using CampCenter.Domain.Repositories;
+using CampCenter.Infrastructure.Auth;
+using CampCenter.Infrastructure.Persistence;
+using CampCenter.Infrastructure.Repositories;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+
+namespace CampCenter.Infrastructure;
+
+/// Registration of infrastructure services in the DI container.
+public static class DependencyInjection
+{
+    /// Registers <see cref="Persistence.AppDbContext"/> with a PostgreSQL (Npgsql) provider
+    /// and other infrastructure services.
+    public static IServiceCollection AddInfrastructure(
+        this IServiceCollection services,
+        IConfiguration configuration
+    )
+    {
+        services.AddDbContext<AppDbContext>(options =>
+            options.UseNpgsql(configuration.GetConnectionString("DefaultConnection"))
+        );
+
+        services.AddSingleton<IPasswordHasher, BcryptPasswordHasher>();
+        services.AddSingleton<ITokenService, JwtTokenService>();
+
+        services.AddScoped<IAdminUserRepository, AdminUserRepository>();
+        services.AddScoped<IRefreshTokenRepository, RefreshTokenRepository>();
+
+        return services;
+    }
+}
