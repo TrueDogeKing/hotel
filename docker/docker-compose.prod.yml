@@ -1,6 +1,6 @@
 # Production stack: Caddy (TLS) -> frontend / api, PostgreSQL internal.
 # Usage: docker compose --env-file ../.env -f docker-compose.prod.yml up -d --build
-# Required in .env: DOMAIN, JWT__Key, POSTGRES_PASSWORD, ADMIN_PASSWORD, Email__* (SMTP).
+# Required in .env: DOMAIN, JWT__Key, POSTGRES_PASSWORD, ADMIN_PASSWORD, EMAIL_* (SMTP), P24_* (payments).
 name: campcenter
 
 services:
@@ -54,6 +54,14 @@ services:
       - Email__Password=${EMAIL_PASSWORD:-}
       - Email__From=${EMAIL_FROM:?set EMAIL_FROM in .env}
       - Email__UseSsl=${EMAIL_USE_SSL:-true}
+      - Booking__PublicBaseUrl=https://${DOMAIN}
+      - Booking__AdminAlertEmail=${BOOKING_ADMIN_ALERT_EMAIL:-}
+      - P24__MerchantId=${P24_MERCHANT_ID:?set P24_MERCHANT_ID in .env}
+      - P24__PosId=${P24_POS_ID:?set P24_POS_ID in .env}
+      - P24__CrcKey=${P24_CRC_KEY:?set P24_CRC_KEY in .env}
+      - P24__ApiKey=${P24_API_KEY:?set P24_API_KEY in .env}
+      - P24__BaseUrl=${P24_BASE_URL:-https://sandbox.przelewy24.pl}
+      - P24__ApiBaseUrl=https://${DOMAIN}
     depends_on:
       postgres:
         condition: service_healthy

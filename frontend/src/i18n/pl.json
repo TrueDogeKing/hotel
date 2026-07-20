@@ -7,7 +7,25 @@
     "heroTitle": "Ośrodek kolonijny nad jeziorem",
     "heroSubtitle": "Turnusy dla grup zorganizowanych — zakwaterowanie, wyżywienie i teren rekreacyjny w jednym miejscu.",
     "bookCta": "Zarezerwuj turnus",
-    "adminLink": "Panel administratora"
+    "adminLink": "Panel administratora",
+    "offerTitle": "Nasza oferta",
+    "offer": {
+      "rooms": {
+        "title": "Zakwaterowanie",
+        "body": "Pokoje 2-, 3- i 4-osobowe w budynkach z pełnym węzłem sanitarnym — łącznie miejsca dla kilkuset uczestników."
+      },
+      "meals": {
+        "title": "Wyżywienie",
+        "body": "Własna kuchnia i stołówka: cztery posiłki dziennie, jadłospisy dostosowane do diet uczestników."
+      },
+      "grounds": {
+        "title": "Teren rekreacyjny",
+        "body": "Boiska, świetlice, plaża nad jeziorem i wyznaczone kąpielisko z ratownikiem."
+      }
+    },
+    "contactTitle": "Kontakt",
+    "contactAddress": "Ośrodek CampCenter, ul. Jeziorna 1, 11-111 Nadjeziorze",
+    "contactPhone": "+48 000 000 000"
   },
   "login": {
     "title": "Logowanie administratora",

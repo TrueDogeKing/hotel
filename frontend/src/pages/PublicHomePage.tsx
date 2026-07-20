@@ -2,8 +2,7 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "../components/LanguageSwitcher";
 
-// Public landing page. Marketing content (offer, gallery, contact) lands here in phase 3;
-// for now it carries the hero and navigation so routing and i18n are in place.
+// Public landing page: hero, offer highlights and contact details.
 export default function PublicHomePage() {
   const { t } = useTranslation();
 
@@ -22,6 +21,26 @@ export default function PublicHomePage() {
         <Link className="cta" to="/rezerwacja">
           {t("home.bookCta")}
         </Link>
+      </section>
+
+      <section className="offer">
+        <h2>{t("home.offerTitle")}</h2>
+        <div className="offer-cards">
+          {(["rooms", "meals", "grounds"] as const).map((key) => (
+            <div key={key} className="offer-card">
+              <h3>{t(`home.offer.${key}.title`)}</h3>
+              <p>{t(`home.offer.${key}.body`)}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="contact">
+        <h2>{t("home.contactTitle")}</h2>
+        <p>{t("home.contactAddress")}</p>
+        <p>
+          {t("home.contactPhone")} · <a href="mailto:rezerwacje@campcenter.pl">rezerwacje@campcenter.pl</a>
+        </p>
       </section>
 
       <footer className="public-footer">

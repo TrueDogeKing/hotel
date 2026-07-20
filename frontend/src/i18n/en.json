@@ -7,7 +7,25 @@
     "heroTitle": "Lakeside summer camp center",
     "heroSubtitle": "Camp sessions for organized groups — accommodation, meals and recreation grounds in one place.",
     "bookCta": "Book a session",
-    "adminLink": "Admin panel"
+    "adminLink": "Admin panel",
+    "offerTitle": "What we offer",
+    "offer": {
+      "rooms": {
+        "title": "Accommodation",
+        "body": "2-, 3- and 4-person rooms with private bathrooms — beds for several hundred participants in total."
+      },
+      "meals": {
+        "title": "Meals",
+        "body": "Our own kitchen and canteen: four meals a day, menus adapted to participants' diets."
+      },
+      "grounds": {
+        "title": "Recreation grounds",
+        "body": "Sports fields, common rooms, a lakeside beach and a supervised swimming area."
+      }
+    },
+    "contactTitle": "Contact",
+    "contactAddress": "CampCenter, Jeziorna 1, 11-111 Nadjeziorze, Poland",
+    "contactPhone": "+48 000 000 000"
   },
   "login": {
     "title": "Admin sign-in",
