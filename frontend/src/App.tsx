@@ -2,6 +2,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./auth/AuthContext";
 import ProtectedRoute from "./auth/ProtectedRoute";
 import PublicHomePage from "./pages/PublicHomePage";
+import BookingWizardPage from "./pages/BookingWizardPage";
+import BookingManagePage from "./pages/BookingManagePage";
 import LoginPage from "./pages/LoginPage";
 import AdminDashboardPage from "./pages/admin/AdminDashboardPage";
 import RoomsPage from "./pages/admin/RoomsPage";
@@ -14,6 +16,8 @@ export default function App() {
       <AuthProvider>
         <Routes>
           <Route path="/" element={<PublicHomePage />} />
+          <Route path="/rezerwacja" element={<BookingWizardPage />} />
+          <Route path="/rezerwacja/:token" element={<BookingManagePage />} />
           <Route path="/admin/logowanie" element={<LoginPage />} />
 
           {/* Admin panel (requires authentication) */}

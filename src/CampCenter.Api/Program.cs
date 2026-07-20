@@ -70,6 +70,13 @@ builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection(JwtSett
 builder.Services.Configure<RefreshTokenSettings>(
     builder.Configuration.GetSection(RefreshTokenSettings.SectionName)
 );
+builder.Services.Configure<CampCenter.Application.Models.BookingSettings>(
+    builder.Configuration.GetSection(CampCenter.Application.Models.BookingSettings.SectionName)
+);
+builder.Services.Configure<CampCenter.Infrastructure.Email.EmailSettings>(
+    builder.Configuration.GetSection(CampCenter.Infrastructure.Email.EmailSettings.SectionName)
+);
+builder.Services.AddHostedService<CampCenter.Api.Background.BookingMaintenanceService>();
 
 builder
     .Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -128,6 +135,24 @@ builder.Services.AddRateLimiter(options =>
         }
         return ValueTask.CompletedTask;
     };
+
+    var publicPermitLimit =
+        builder.Configuration.GetValue<int?>("RateLimiting:PublicBooking:PermitLimit") ?? 20;
+    var publicWindowSeconds =
+        builder.Configuration.GetValue<int?>("RateLimiting:PublicBooking:WindowSeconds") ?? 60;
+    options.AddPolicy(
+        RateLimitPolicies.PublicBooking,
+        httpContext =>
+            RateLimitPartition.GetFixedWindowLimiter(
+                partitionKey: httpContext.Connection.RemoteIpAddress?.ToString() ?? "unknown",
+                factory: _ => new FixedWindowRateLimiterOptions
+                {
+                    PermitLimit = publicPermitLimit,
+                    Window = TimeSpan.FromSeconds(publicWindowSeconds),
+                    QueueLimit = 0,
+                }
+            )
+    );
 
     options.AddPolicy(
         RateLimitPolicies.Auth,

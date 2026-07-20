@@ -8,6 +8,12 @@ public interface ICampSessionRepository
 
     Task<CampSession?> GetByIdAsync(Guid id, CancellationToken cancellationToken = default);
 
+    /// Published sessions that have not ended yet, ordered by start date.
+    Task<List<CampSession>> GetPublishedUpcomingAsync(
+        DateOnly today,
+        CancellationToken cancellationToken = default
+    );
+
     /// True when another Published session overlaps the [start, end] date range.
     Task<bool> AnyPublishedOverlappingAsync(
         Guid excludeSessionId,

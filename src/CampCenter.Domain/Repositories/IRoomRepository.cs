@@ -6,6 +6,8 @@ public interface IRoomRepository
 {
     Task<List<Room>> GetAllAsync(CancellationToken cancellationToken = default);
 
+    Task<List<Room>> GetActiveAsync(CancellationToken cancellationToken = default);
+
     Task<Room?> GetByIdAsync(Guid id, CancellationToken cancellationToken = default);
 
     Task<Room?> GetByNumberAsync(string number, CancellationToken cancellationToken = default);

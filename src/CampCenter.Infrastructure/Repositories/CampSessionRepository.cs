@@ -19,6 +19,15 @@ public class CampSessionRepository : ICampSessionRepository
         CancellationToken cancellationToken = default
     ) => _db.CampSessions.FirstOrDefaultAsync(s => s.Id == id, cancellationToken);
 
+    public Task<List<CampSession>> GetPublishedUpcomingAsync(
+        DateOnly today,
+        CancellationToken cancellationToken = default
+    ) =>
+        _db
+            .CampSessions.Where(s => s.Status == CampSessionStatus.Published && s.EndDate >= today)
+            .OrderBy(s => s.StartDate)
+            .ToListAsync(cancellationToken);
+
     public Task<bool> AnyPublishedOverlappingAsync(
         Guid excludeSessionId,
         DateOnly startDate,

@@ -1596,3 +1596,165 @@ p[role="alert"] {
   gap: 6px;
   flex-wrap: wrap;
 }
+
+/* --- Booking wizard + manage page (phase 3) --- */
+
+.wizard,
+.manage {
+  width: min(720px, 100% - 48px);
+  margin: 0 auto 48px;
+}
+
+.wizard-steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px;
+  font-size: 0.85rem;
+}
+
+.wizard-steps li {
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: color-mix(in oklch, currentColor 8%, transparent);
+  opacity: 0.6;
+}
+
+.wizard-steps li.current {
+  opacity: 1;
+  background: var(--accent, #3b82f6);
+  color: white;
+}
+
+.wizard-steps li.done {
+  opacity: 0.85;
+}
+
+.wizard-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.wizard-nav {
+  display: flex;
+  gap: 12px;
+}
+
+.session-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+  width: 100%;
+}
+
+.session-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid color-mix(in oklch, currentColor 20%, transparent);
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+}
+
+.session-card:hover:not(:disabled) {
+  border-color: var(--accent, #3b82f6);
+}
+
+.session-card.unavailable {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.mix-editor {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.mix-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.mix-row > span:first-child {
+  min-width: 160px;
+}
+
+.mix-free {
+  opacity: 0.7;
+  font-size: 0.85rem;
+}
+
+.mix-stepper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+}
+
+.mix-stepper button {
+  width: 32px;
+  height: 32px;
+}
+
+.mix-status.ok {
+  color: var(--success, #16a34a);
+}
+
+.mix-status.bad {
+  color: var(--danger, #dc2626);
+}
+
+.summary-list {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 6px 20px;
+  margin: 0;
+}
+
+.summary-list dt {
+  opacity: 0.7;
+}
+
+.summary-list dd {
+  margin: 0;
+}
+
+.manage-banner {
+  padding: 12px 16px;
+  border-radius: 10px;
+  background: color-mix(in oklch, #16a34a 15%, transparent);
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  background: color-mix(in oklch, currentColor 10%, transparent);
+}
+
+.status-badge.status-confirmed {
+  background: color-mix(in oklch, #16a34a 20%, transparent);
+}
+
+.status-badge.status-cancelled {
+  background: color-mix(in oklch, #dc2626 20%, transparent);
+}
+
+.manage-actions {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+}

@@ -14,6 +14,9 @@ public class RoomRepository : IRoomRepository
     public Task<List<Room>> GetAllAsync(CancellationToken cancellationToken = default) =>
         _db.Rooms.OrderBy(r => r.Number).ToListAsync(cancellationToken);
 
+    public Task<List<Room>> GetActiveAsync(CancellationToken cancellationToken = default) =>
+        _db.Rooms.Where(r => r.IsActive).OrderBy(r => r.Number).ToListAsync(cancellationToken);
+
     public Task<Room?> GetByIdAsync(Guid id, CancellationToken cancellationToken = default) =>
         _db.Rooms.FirstOrDefaultAsync(r => r.Id == id, cancellationToken);
 
