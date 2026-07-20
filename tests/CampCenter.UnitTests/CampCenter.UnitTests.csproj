@@ -22,5 +22,6 @@
   <ItemGroup>
     <ProjectReference Include="..\..\src\CampCenter.Domain\CampCenter.Domain.csproj" />
     <ProjectReference Include="..\..\src\CampCenter.Application\CampCenter.Application.csproj" />
+    <ProjectReference Include="..\..\src\CampCenter.Infrastructure\CampCenter.Infrastructure.csproj" />
   </ItemGroup>
 </Project>

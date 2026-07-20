@@ -4,6 +4,7 @@ import ProtectedRoute from "./auth/ProtectedRoute";
 import PublicHomePage from "./pages/PublicHomePage";
 import BookingWizardPage from "./pages/BookingWizardPage";
 import BookingManagePage from "./pages/BookingManagePage";
+import PaymentReturnPage from "./pages/PaymentReturnPage";
 import LoginPage from "./pages/LoginPage";
 import AdminDashboardPage from "./pages/admin/AdminDashboardPage";
 import RoomsPage from "./pages/admin/RoomsPage";
@@ -21,6 +22,7 @@ export default function App() {
           <Route path="/" element={<PublicHomePage />} />
           <Route path="/rezerwacja" element={<BookingWizardPage />} />
           <Route path="/rezerwacja/:token" element={<BookingManagePage />} />
+          <Route path="/platnosc/powrot" element={<PaymentReturnPage />} />
           <Route path="/admin/logowanie" element={<LoginPage />} />
 
           {/* Admin panel (requires authentication) */}

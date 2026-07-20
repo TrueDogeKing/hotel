@@ -100,3 +100,13 @@ export function validateMix(
   }
   return "ok";
 }
+
+export async function initiatePayment(
+  token: string,
+  kind: "Deposit" | "Final",
+): Promise<{ redirectUrl: string }> {
+  const { data } = await api.post<{ redirectUrl: string }>(`/public/bookings/${token}/payments`, {
+    kind,
+  });
+  return data;
+}

@@ -61,6 +61,20 @@ public class PublicBookingsController : ControllerBase
         CancellationToken cancellationToken
     ) => Ok(await _bookings.GetByTokenAsync(token, cancellationToken));
 
+    /// Starts an online payment (deposit or final) — returns the P24 redirect URL.
+    [HttpPost("{token}/payments")]
+    [EnableRateLimiting(RateLimitPolicies.PublicBooking)]
+    [ProducesResponseType(typeof(InitiatePaymentResponseDto), StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    [ProducesResponseType(StatusCodes.Status409Conflict)]
+    public async Task<IActionResult> InitiatePayment(
+        string token,
+        [FromBody] InitiatePaymentRequestDto request,
+        [FromServices] IPaymentService payments,
+        CancellationToken cancellationToken
+    ) => Ok(await payments.InitiateAsync(token, request, cancellationToken));
+
     [HttpPost("{token}/cancel")]
     [EnableRateLimiting(RateLimitPolicies.PublicBooking)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]

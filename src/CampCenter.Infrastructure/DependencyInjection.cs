@@ -2,6 +2,7 @@ using CampCenter.Application.Interfaces;
 using CampCenter.Domain.Repositories;
 using CampCenter.Infrastructure.Auth;
 using CampCenter.Infrastructure.Email;
+using CampCenter.Infrastructure.Payments;
 using CampCenter.Infrastructure.Persistence;
 using CampCenter.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
@@ -30,6 +31,7 @@ public static class DependencyInjection
         services.AddScoped<IAdminUserRepository, AdminUserRepository>();
         services.AddScoped<IRefreshTokenRepository, RefreshTokenRepository>();
         services.AddSingleton<IEmailSender, SmtpEmailSender>();
+        services.AddHttpClient<IPaymentGateway, Przelewy24Client>();
         services.AddScoped<IRoomRepository, RoomRepository>();
         services.AddScoped<IBookingRepository, BookingRepository>();
         services.AddScoped<IRoomTaskRepository, RoomTaskRepository>();

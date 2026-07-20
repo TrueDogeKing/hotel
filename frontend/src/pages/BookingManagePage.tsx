@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "../components/LanguageSwitcher";
 import ConfirmDialog from "../components/ConfirmDialog";
 import { formatZl } from "../api/admin";
-import { cancelBooking, getBooking, type BookingDetails } from "../api/public";
+import { cancelBooking, getBooking, initiatePayment, type BookingDetails } from "../api/public";
 
 // Booking manage page, reached via the secret link from the confirmation email.
 export default function BookingManagePage() {
@@ -17,6 +17,7 @@ export default function BookingManagePage() {
   const [notFound, setNotFound] = useState(false);
   const [confirmCancel, setConfirmCancel] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [paying, setPaying] = useState(false);
 
   useEffect(() => {
     if (!token) return;
@@ -48,6 +49,19 @@ export default function BookingManagePage() {
       }),
     [i18n.language],
   );
+
+  async function pay(kind: "Deposit" | "Final") {
+    if (!token) return;
+    setError(null);
+    setPaying(true);
+    try {
+      const { redirectUrl } = await initiatePayment(token, kind);
+      window.location.href = redirectUrl;
+    } catch {
+      setError(t("manage.paymentError"));
+      setPaying(false);
+    }
+  }
 
   async function handleCancel() {
     if (!token) return;
@@ -136,13 +150,33 @@ export default function BookingManagePage() {
 
             {booking.status === "PendingDeposit" && (
               <div className="manage-actions">
-                {/* Online payment buttons arrive with the Przelewy24 integration. */}
-                <p>{t("manage.paymentSoon")}</p>
+                <button
+                  type="button"
+                  className="pay-button"
+                  disabled={paying}
+                  onClick={() => void pay("Deposit")}
+                >
+                  {paying ? t("manage.redirecting") : t("manage.payDeposit")}
+                </button>
                 <button type="button" onClick={() => setConfirmCancel(true)}>
                   {t("manage.cancel")}
                 </button>
               </div>
             )}
+
+            {booking.status === "Confirmed" &&
+              !booking.payments.some((p) => p.kind === "Final" && p.status === "Completed") && (
+                <div className="manage-actions">
+                  <button
+                    type="button"
+                    className="pay-button"
+                    disabled={paying}
+                    onClick={() => void pay("Final")}
+                  >
+                    {paying ? t("manage.redirecting") : t("manage.payFinal")}
+                  </button>
+                </div>
+              )}
           </>
         )}
       </section>

@@ -35,6 +35,15 @@ public interface IBookingRepository
         CancellationToken cancellationToken = default
     );
 
+    Task AddPaymentAsync(Payment payment, CancellationToken cancellationToken = default);
+
+    /// Payment by its P24 sessionId, with the booking (incl. session and
+    /// assignments) loaded — the webhook works off this.
+    Task<Payment?> GetPaymentByP24SessionIdAsync(
+        string p24SessionId,
+        CancellationToken cancellationToken = default
+    );
+
     Task<List<Payment>> GetPaymentsAsync(
         Guid bookingId,
         CancellationToken cancellationToken = default

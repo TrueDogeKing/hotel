@@ -76,6 +76,9 @@ builder.Services.Configure<CampCenter.Application.Models.BookingSettings>(
 builder.Services.Configure<CampCenter.Infrastructure.Email.EmailSettings>(
     builder.Configuration.GetSection(CampCenter.Infrastructure.Email.EmailSettings.SectionName)
 );
+builder.Services.Configure<CampCenter.Infrastructure.Payments.P24Settings>(
+    builder.Configuration.GetSection(CampCenter.Infrastructure.Payments.P24Settings.SectionName)
+);
 builder.Services.AddHostedService<CampCenter.Api.Background.BookingMaintenanceService>();
 
 builder

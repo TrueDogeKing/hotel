@@ -1915,3 +1915,17 @@ p[role="alert"] {
   background: color-mix(in oklch, currentColor 5%, transparent);
   font-size: 0.9rem;
 }
+
+.pay-button {
+  background: var(--accent, #3b82f6);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.pay-button:disabled {
+  opacity: 0.6;
+}

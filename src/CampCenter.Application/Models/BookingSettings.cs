@@ -13,4 +13,7 @@ public class BookingSettings
 
     /// Public site base URL used to build manage links in emails.
     public string PublicBaseUrl { get; set; } = "http://localhost:5173";
+
+    /// Address alerted when a payment arrives for an already-cancelled booking.
+    public string? AdminAlertEmail { get; set; }
 }

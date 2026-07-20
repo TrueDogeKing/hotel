@@ -86,19 +86,25 @@
     "holdExpires": "Zaliczka płatna do",
     "finalDue": "Dopłata do",
     "payments": "Płatności",
-    "paymentKinds": { "Deposit": "Zaliczka", "Final": "Dopłata" },
+    "paymentKinds": {
+      "Deposit": "Zaliczka",
+      "Final": "Dopłata"
+    },
     "paymentStatuses": {
       "Pending": "W trakcie",
       "Completed": "Opłacona",
       "Failed": "Nieudana"
     },
-    "paymentSoon": "Płatność online będzie dostępna wkrótce — skontaktujemy się w sprawie zaliczki.",
     "cancel": "Anuluj rezerwację",
     "cancelTitle": "Anulować rezerwację?",
     "cancelMessage": "Pokoje zostaną zwolnione. Tej operacji nie można cofnąć.",
     "cancelConfirm": "Tak, anuluj",
     "cancelKeep": "Wróć",
-    "cancelError": "Nie udało się anulować rezerwacji."
+    "cancelError": "Nie udało się anulować rezerwacji.",
+    "payDeposit": "Zapłać zaliczkę (Przelewy24)",
+    "payFinal": "Zapłać pozostałą kwotę (Przelewy24)",
+    "redirecting": "Przekierowywanie…",
+    "paymentError": "Nie udało się rozpocząć płatności. Spróbuj ponownie."
   },
   "admin": {
     "dashboardTitle": "Panel administratora",
@@ -214,5 +220,13 @@
     "delete": "Usuń",
     "conflict": "Konflikt: dane zmienił ktoś inny albo turnus ma rezerwacje. Odśwież i spróbuj ponownie.",
     "genericError": "Nie udało się zapisać zmian."
+  },
+  "paymentReturn": {
+    "waiting": "Przetwarzamy płatność…",
+    "paidTitle": "Płatność przyjęta!",
+    "paidBody": "Dziękujemy — potwierdzenie wyślemy e-mailem.",
+    "timeout": "Płatność jest jeszcze przetwarzana. Sprawdź status na stronie rezerwacji za kilka minut.",
+    "error": "Nie udało się sprawdzić statusu płatności.",
+    "backToBooking": "Przejdź do rezerwacji"
   }
 }

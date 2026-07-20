@@ -92,6 +92,22 @@ public class BookingRepository : IBookingRepository
                 .ThenInclude(a => a.Room)
             .FirstOrDefaultAsync(b => b.ManageTokenHash == tokenHash, cancellationToken);
 
+    public async Task AddPaymentAsync(
+        Payment payment,
+        CancellationToken cancellationToken = default
+    ) => await _db.Payments.AddAsync(payment, cancellationToken);
+
+    public Task<Payment?> GetPaymentByP24SessionIdAsync(
+        string p24SessionId,
+        CancellationToken cancellationToken = default
+    ) =>
+        _db
+            .Payments.Include(p => p.Booking)
+            .ThenInclude(b => b!.CampSession)
+            .Include(p => p.Booking)
+            .ThenInclude(b => b!.RoomAssignments)
+            .FirstOrDefaultAsync(p => p.P24SessionId == p24SessionId, cancellationToken);
+
     public Task<List<Payment>> GetPaymentsAsync(
         Guid bookingId,
         CancellationToken cancellationToken = default
