@@ -53,9 +53,7 @@ public class PaymentService : IPaymentService
             _ => throw new BusinessRuleViolationException("Unknown payment kind."),
         };
 
-        var completedKinds = (
-            await _bookings.GetPaymentsAsync(booking.Id, cancellationToken)
-        )
+        var completedKinds = (await _bookings.GetPaymentsAsync(booking.Id, cancellationToken))
             .Where(p => p.Status == PaymentStatus.Completed)
             .Select(p => p.Kind)
             .ToHashSet();
@@ -144,10 +142,8 @@ public class PaymentService : IPaymentService
         }
 
         var payment =
-            await _bookings.GetPaymentByP24SessionIdAsync(
-                notification.SessionId,
-                cancellationToken
-            ) ?? throw new NotFoundException("Unknown payment session.");
+            await _bookings.GetPaymentByP24SessionIdAsync(notification.SessionId, cancellationToken)
+            ?? throw new NotFoundException("Unknown payment session.");
 
         // Idempotency: P24 retries notifications; a completed payment is simply acknowledged.
         if (payment.Status == PaymentStatus.Completed)
@@ -180,8 +176,7 @@ public class PaymentService : IPaymentService
 
         var booking = payment.Booking!;
         var confirmedNow =
-            payment.Kind == PaymentKind.Deposit
-            && booking.Status == BookingStatus.PendingDeposit;
+            payment.Kind == PaymentKind.Deposit && booking.Status == BookingStatus.PendingDeposit;
         if (confirmedNow)
         {
             booking.Status = BookingStatus.Confirmed;
@@ -197,10 +192,7 @@ public class PaymentService : IPaymentService
                 cancellationToken
             );
         }
-        else if (
-            payment.Kind == PaymentKind.Deposit
-            && booking.Status == BookingStatus.Cancelled
-        )
+        else if (payment.Kind == PaymentKind.Deposit && booking.Status == BookingStatus.Cancelled)
         {
             // Race lost: the sweeper released the rooms before the deposit landed.
             // Money must not vanish silently — this needs a human decision (restore

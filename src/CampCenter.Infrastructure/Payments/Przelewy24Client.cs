@@ -23,9 +23,7 @@ public class Przelewy24Client : IPaymentGateway
         _http.BaseAddress = new Uri(_settings.BaseUrl.TrimEnd('/') + "/");
         _http.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(
             "Basic",
-            Convert.ToBase64String(
-                Encoding.UTF8.GetBytes($"{_settings.PosId}:{_settings.ApiKey}")
-            )
+            Convert.ToBase64String(Encoding.UTF8.GetBytes($"{_settings.PosId}:{_settings.ApiKey}"))
         );
     }
 
@@ -69,9 +67,7 @@ public class Przelewy24Client : IPaymentGateway
             );
         }
 
-        var result = await response.Content.ReadFromJsonAsync<RegisterResponse>(
-            cancellationToken
-        );
+        var result = await response.Content.ReadFromJsonAsync<RegisterResponse>(cancellationToken);
         var token =
             result?.Data?.Token
             ?? throw new InvalidOperationException("P24 register response had no token.");

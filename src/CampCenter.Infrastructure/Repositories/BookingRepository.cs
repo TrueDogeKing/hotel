@@ -103,9 +103,9 @@ public class BookingRepository : IBookingRepository
     ) =>
         _db
             .Payments.Include(p => p.Booking)
-            .ThenInclude(b => b!.CampSession)
+                .ThenInclude(b => b!.CampSession)
             .Include(p => p.Booking)
-            .ThenInclude(b => b!.RoomAssignments)
+                .ThenInclude(b => b!.RoomAssignments)
             .FirstOrDefaultAsync(p => p.P24SessionId == p24SessionId, cancellationToken);
 
     public Task<List<Payment>> GetPaymentsAsync(

@@ -34,8 +34,7 @@ public class FakePaymentGateway : IPaymentGateway
         );
     }
 
-    public bool VerifyNotificationSignature(GatewayNotification notification) =>
-        !RejectSignature;
+    public bool VerifyNotificationSignature(GatewayNotification notification) => !RejectSignature;
 
     public Task VerifyTransactionAsync(
         string sessionId,
@@ -89,7 +88,10 @@ public class PaymentsApiTests : IntegrationTestBase
             "sign-checked-by-fake"
         );
 
-    private async Task<(string Token, GatewayRegisterRequest Registered)> CreateBookingWithDepositAsync()
+    private async Task<(
+        string Token,
+        GatewayRegisterRequest Registered
+    )> CreateBookingWithDepositAsync()
     {
         // Authenticate the admin client of the overridden host.
         var login = await _admin.PostAsJsonAsync(
