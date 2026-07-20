@@ -8,6 +8,9 @@ import LoginPage from "./pages/LoginPage";
 import AdminDashboardPage from "./pages/admin/AdminDashboardPage";
 import RoomsPage from "./pages/admin/RoomsPage";
 import SessionsPage from "./pages/admin/SessionsPage";
+import SessionOccupancyPage from "./pages/admin/SessionOccupancyPage";
+import AdminBookingsPage from "./pages/admin/AdminBookingsPage";
+import TasksPage from "./pages/admin/TasksPage";
 import "./App.css";
 
 export default function App() {
@@ -25,6 +28,9 @@ export default function App() {
             <Route path="/admin" element={<AdminDashboardPage />} />
             <Route path="/admin/pokoje" element={<RoomsPage />} />
             <Route path="/admin/turnusy" element={<SessionsPage />} />
+            <Route path="/admin/turnusy/:id" element={<SessionOccupancyPage />} />
+            <Route path="/admin/rezerwacje" element={<AdminBookingsPage />} />
+            <Route path="/admin/zadania" element={<TasksPage />} />
           </Route>
         </Routes>
       </AuthProvider>

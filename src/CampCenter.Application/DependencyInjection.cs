@@ -16,6 +16,8 @@ public static class DependencyInjection
         services.AddScoped<ICampSessionService, CampSessionService>();
         services.AddScoped<IAvailabilityService, AvailabilityService>();
         services.AddScoped<IBookingService, BookingService>();
+        services.AddScoped<IAdminBookingService, AdminBookingService>();
+        services.AddScoped<IRoomTaskService, RoomTaskService>();
         services.AddValidatorsFromAssembly(typeof(DependencyInjection).Assembly);
 
         return services;

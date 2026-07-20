@@ -1,3 +1,4 @@
+using CampCenter.Application.DTOs.AdminPanel;
 using CampCenter.Application.DTOs.Sessions;
 using CampCenter.Application.Interfaces;
 using FluentValidation;
@@ -31,6 +32,16 @@ public class SessionsController : ControllerBase
     [ProducesResponseType(typeof(List<CampSessionDto>), StatusCodes.Status200OK)]
     public async Task<IActionResult> GetAll(CancellationToken cancellationToken) =>
         Ok(await _sessions.GetAllAsync(cancellationToken));
+
+    /// Per-room occupancy grid of the session (booking, people count, open tasks).
+    [HttpGet("{id:guid}/occupancy")]
+    [ProducesResponseType(typeof(SessionOccupancyDto), StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    public async Task<IActionResult> GetOccupancy(
+        Guid id,
+        [FromServices] IAdminBookingService adminBookings,
+        CancellationToken cancellationToken
+    ) => Ok(await adminBookings.GetOccupancyAsync(id, cancellationToken));
 
     [HttpPost]
     [ProducesResponseType(typeof(CampSessionDto), StatusCodes.Status201Created)]

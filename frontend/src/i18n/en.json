@@ -107,8 +107,70 @@
     "nav": {
       "dashboard": "Dashboard",
       "sessions": "Sessions",
-      "rooms": "Rooms"
+      "rooms": "Rooms",
+      "bookings": "Bookings",
+      "tasks": "Tasks"
     }
+  },
+  "dashboard": {
+    "pendingDeposits": "Pending deposits",
+    "overdueFinals": "Overdue final payments",
+    "openTasks": "Open tasks",
+    "upcomingSessions": "Upcoming sessions",
+    "noSessions": "No published sessions.",
+    "occupancy": "Occupancy: {{occupied}}/{{total}}",
+    "bookings": "Bookings: {{count}}"
+  },
+  "occupancy": {
+    "summary": "occupancy {{occupied}}/{{total}} beds",
+    "backToSessions": "Session list",
+    "room": "Room",
+    "beds": "beds",
+    "people": "people",
+    "freeRoom": "Room free",
+    "tasks": "Housekeeping tasks",
+    "noTasks": "No tasks.",
+    "taskPlaceholder": "e.g. extra bed",
+    "addTask": "Add task",
+    "taskError": "Failed to add the task."
+  },
+  "tasks": {
+    "title": "Housekeeping tasks",
+    "showDone": "Show done",
+    "empty": "No tasks.",
+    "room": "Room",
+    "delete": "Delete"
+  },
+  "adminBookings": {
+    "title": "Bookings",
+    "filterSession": "Session",
+    "filterStatus": "Status",
+    "allSessions": "All sessions",
+    "allStatuses": "All statuses",
+    "organization": "Organization",
+    "session": "Session",
+    "headcount": "People",
+    "total": "Amount",
+    "paymentState": "Payment",
+    "statuses": {
+      "PendingDeposit": "Awaiting deposit",
+      "Confirmed": "Confirmed",
+      "Cancelled": "Cancelled",
+      "Completed": "Completed"
+    },
+    "fullyPaid": "Fully paid",
+    "finalOverdue": "⚠ Final payment overdue",
+    "depositPaidBadge": "Deposit paid",
+    "awaitingDeposit": "Awaiting deposit",
+    "rooms": "Rooms",
+    "deposit": "Deposit",
+    "finalDue": "Final payment by",
+    "cancel": "Cancel",
+    "cancelMessage": "The booking of {{organization}} will be cancelled and its rooms released. Any deposit refund is settled outside the system.",
+    "cancelTitle": "Cancel the booking?",
+    "cancelConfirm": "Yes, cancel",
+    "cancelKeep": "Go back",
+    "cancelError": "Failed to cancel the booking."
   },
   "adminRooms": {
     "title": "Rooms",

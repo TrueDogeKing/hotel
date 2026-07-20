@@ -36,6 +36,52 @@ public class BookingRepository : IBookingRepository
     public async Task AddAsync(Booking booking, CancellationToken cancellationToken = default) =>
         await _db.Bookings.AddAsync(booking, cancellationToken);
 
+    public Task<Booking?> GetByIdAsync(Guid id, CancellationToken cancellationToken = default) =>
+        _db
+            .Bookings.Include(b => b.CampSession)
+            .Include(b => b.RoomAssignments)
+                .ThenInclude(a => a.Room)
+            .FirstOrDefaultAsync(b => b.Id == id, cancellationToken);
+
+    public Task<List<Booking>> ListAsync(
+        Guid? campSessionId,
+        BookingStatus? status,
+        CancellationToken cancellationToken = default
+    )
+    {
+        var query = _db
+            .Bookings.Include(b => b.CampSession)
+            .Include(b => b.RoomAssignments)
+                .ThenInclude(a => a.Room)
+            .AsQueryable();
+        if (campSessionId is not null)
+        {
+            query = query.Where(b => b.CampSessionId == campSessionId);
+        }
+
+        if (status is not null)
+        {
+            query = query.Where(b => b.Status == status);
+        }
+
+        return query.OrderByDescending(b => b.CreatedAt).ToListAsync(cancellationToken);
+    }
+
+    public async Task<Dictionary<Guid, List<PaymentKind>>> GetCompletedPaymentKindsAsync(
+        IReadOnlyCollection<Guid> bookingIds,
+        CancellationToken cancellationToken = default
+    ) =>
+        (
+            await _db
+                .Payments.Where(p =>
+                    bookingIds.Contains(p.BookingId) && p.Status == PaymentStatus.Completed
+                )
+                .Select(p => new { p.BookingId, p.Kind })
+                .ToListAsync(cancellationToken)
+        )
+            .GroupBy(p => p.BookingId)
+            .ToDictionary(g => g.Key, g => g.Select(x => x.Kind).ToList());
+
     public Task<Booking?> GetByTokenHashAsync(
         string tokenHash,
         CancellationToken cancellationToken = default
@@ -97,6 +143,14 @@ public class BookingRepository : IBookingRepository
 
         _db.Entry(booking).State = EntityState.Detached;
     }
+
+    public void RemoveAssignment(BookingRoomAssignment assignment) =>
+        _db.BookingRoomAssignments.Remove(assignment);
+
+    public async Task AddAssignmentAsync(
+        BookingRoomAssignment assignment,
+        CancellationToken cancellationToken = default
+    ) => await _db.BookingRoomAssignments.AddAsync(assignment, cancellationToken);
 
     public void RemoveAssignments(Booking booking)
     {

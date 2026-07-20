@@ -22,6 +22,8 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
             </NavLink>
             <NavLink to="/admin/turnusy">{t("admin.nav.sessions")}</NavLink>
             <NavLink to="/admin/pokoje">{t("admin.nav.rooms")}</NavLink>
+            <NavLink to="/admin/rezerwacje">{t("admin.nav.bookings")}</NavLink>
+            <NavLink to="/admin/zadania">{t("admin.nav.tasks")}</NavLink>
           </nav>
         </div>
         <div className="admin-header-actions">

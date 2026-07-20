@@ -107,8 +107,70 @@
     "nav": {
       "dashboard": "Pulpit",
       "sessions": "Turnusy",
-      "rooms": "Pokoje"
+      "rooms": "Pokoje",
+      "bookings": "Rezerwacje",
+      "tasks": "Zadania"
     }
+  },
+  "dashboard": {
+    "pendingDeposits": "Oczekujące zaliczki",
+    "overdueFinals": "Zaległe dopłaty",
+    "openTasks": "Otwarte zadania",
+    "upcomingSessions": "Nadchodzące turnusy",
+    "noSessions": "Brak opublikowanych turnusów.",
+    "occupancy": "Obłożenie: {{occupied}}/{{total}}",
+    "bookings": "Rezerwacje: {{count}}"
+  },
+  "occupancy": {
+    "summary": "obłożenie {{occupied}}/{{total}} miejsc",
+    "backToSessions": "Lista turnusów",
+    "room": "Pokój",
+    "beds": "miejsc",
+    "people": "os.",
+    "freeRoom": "Pokój wolny",
+    "tasks": "Zadania dla obsługi",
+    "noTasks": "Brak zadań.",
+    "taskPlaceholder": "np. dostawka — 1 łóżko",
+    "addTask": "Dodaj zadanie",
+    "taskError": "Nie udało się dodać zadania."
+  },
+  "tasks": {
+    "title": "Zadania dla obsługi",
+    "showDone": "Pokaż wykonane",
+    "empty": "Brak zadań.",
+    "room": "Pokój",
+    "delete": "Usuń"
+  },
+  "adminBookings": {
+    "title": "Rezerwacje",
+    "filterSession": "Turnus",
+    "filterStatus": "Status",
+    "allSessions": "Wszystkie turnusy",
+    "allStatuses": "Wszystkie statusy",
+    "organization": "Organizacja",
+    "session": "Turnus",
+    "headcount": "Osoby",
+    "total": "Kwota",
+    "paymentState": "Płatność",
+    "statuses": {
+      "PendingDeposit": "Oczekuje na zaliczkę",
+      "Confirmed": "Potwierdzona",
+      "Cancelled": "Anulowana",
+      "Completed": "Zakończona"
+    },
+    "fullyPaid": "Opłacona w całości",
+    "finalOverdue": "⚠ Zaległa dopłata",
+    "depositPaidBadge": "Zaliczka opłacona",
+    "awaitingDeposit": "Oczekuje na zaliczkę",
+    "rooms": "Pokoje",
+    "deposit": "Zaliczka",
+    "finalDue": "Dopłata do",
+    "cancel": "Anuluj",
+    "cancelTitle": "Anulować rezerwację?",
+    "cancelMessage": "Rezerwacja {{organization}} zostanie anulowana, a pokoje zwolnione. Ewentualny zwrot zaliczki rozliczasz poza systemem.",
+    "cancelConfirm": "Tak, anuluj",
+    "cancelKeep": "Wróć",
+    "cancelError": "Nie udało się anulować rezerwacji."
   },
   "adminRooms": {
     "title": "Pokoje",

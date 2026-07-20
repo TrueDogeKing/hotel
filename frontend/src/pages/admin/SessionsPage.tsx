@@ -1,4 +1,5 @@
 import { useEffect, useState, type FormEvent } from "react";
+import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { isAxiosError } from "axios";
 import AdminLayout from "../../components/admin/AdminLayout";
@@ -198,7 +199,9 @@ export default function SessionsPage() {
         <tbody>
           {sessions.map((session) => (
             <tr key={session.id}>
-              <td>{session.name}</td>
+              <td>
+                <Link to={`/admin/turnusy/${session.id}`}>{session.name}</Link>
+              </td>
               <td>
                 {formatDate(session.startDate)} – {formatDate(session.endDate)}
               </td>

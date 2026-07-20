@@ -32,6 +32,7 @@ public static class DependencyInjection
         services.AddSingleton<IEmailSender, SmtpEmailSender>();
         services.AddScoped<IRoomRepository, RoomRepository>();
         services.AddScoped<IBookingRepository, BookingRepository>();
+        services.AddScoped<IRoomTaskRepository, RoomTaskRepository>();
         services.AddScoped<ICampSessionRepository, CampSessionRepository>();
 
         return services;
