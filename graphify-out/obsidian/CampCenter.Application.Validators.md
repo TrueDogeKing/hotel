@@ -1,0 +1,72 @@
+---
+source_file: "src/CampCenter.Application/Validators/CampSessionValidators.cs"
+type: "code"
+community: "Validator Unit Tests"
+location: "L4"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/Validator_Unit_Tests
+---
+
+# CampCenter.Application.Validators
+
+## Context
+
+_Source: `src/CampCenter.Application/Validators/CampSessionValidators.cs` — full file embedded (42 lines)._ ⚠️ **This file is deleted in the current working tree** (uncommitted change); context below is the committed version from git HEAD.
+
+```csharp
+using CampCenter.Application.DTOs.Sessions;
+using FluentValidation;
+
+namespace CampCenter.Application.Validators;
+
+public static class CampSessionRules
+{
+    public static IRuleBuilderOptions<T, DateOnly> AfterStart<T>(
+        this IRuleBuilder<T, DateOnly> rule,
+        Func<T, DateOnly> start
+    ) =>
+        rule.Must((dto, end) => end > start(dto))
+            .WithMessage("End date must be after the start date.");
+}
+
+public class CreateCampSessionRequestValidator : AbstractValidator<CreateCampSessionRequestDto>
+{
+    public CreateCampSessionRequestValidator()
+    {
+        RuleFor(x => x.Name).NotEmpty().MaximumLength(128);
+        RuleFor(x => x.EndDate).AfterStart(x => x.StartDate);
+        RuleFor(x => x.PricePerPersonGrosze).GreaterThan(0);
+        RuleFor(x => x.DepositPerPersonGrosze).GreaterThan(0);
+        RuleFor(x => x.DepositPerPersonGrosze)
+            .LessThanOrEqualTo(x => x.PricePerPersonGrosze)
+            .WithMessage("Deposit per person cannot exceed the price per person.");
+    }
+}
+
+public class UpdateCampSessionRequestValidator : AbstractValidator<UpdateCampSessionRequestDto>
+{
+    public UpdateCampSessionRequestValidator()
+    {
+        RuleFor(x => x.Name).NotEmpty().MaximumLength(128);
+        RuleFor(x => x.EndDate).AfterStart(x => x.StartDate);
+        RuleFor(x => x.PricePerPersonGrosze).GreaterThan(0);
+        RuleFor(x => x.DepositPerPersonGrosze).GreaterThan(0);
+        RuleFor(x => x.DepositPerPersonGrosze)
+            .LessThanOrEqualTo(x => x.PricePerPersonGrosze)
+            .WithMessage("Deposit per person cannot exceed the price per person.");
+    }
+}
+```
+
+## Connections
+- [[CampSessionValidators.cs]] - `contains` [EXTRACTED]
+- [[CampSessionValidatorsTests.cs]] - `imports` [EXTRACTED]
+- [[CreateBookingRequestValidator.cs]] - `contains` [EXTRACTED]
+- [[LoginRequestValidator.cs]] - `contains` [EXTRACTED]
+- [[LoginRequestValidatorTests.cs]] - `imports` [EXTRACTED]
+- [[PasswordRules.cs]] - `contains` [EXTRACTED]
+- [[RoomValidators.cs]] - `contains` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/Validator_Unit_Tests

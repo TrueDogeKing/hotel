@@ -41,59 +41,45 @@ export async function deleteRoom(id: string): Promise<{ deleted: boolean }> {
   return data;
 }
 
-// --- Camp sessions (turnusy) ---
+// --- Closures (blokady) ---
 
-export type CampSessionStatus = "Draft" | "Published" | "Archived";
-
-export interface CampSession {
+export interface Closure {
   id: string;
-  name: string;
+  reason: string;
   startDate: string;
   endDate: string;
-  pricePerPersonGrosze: number;
-  depositPerPersonGrosze: number;
-  status: CampSessionStatus;
+  roomId: string | null;
+  roomNumber: string | null;
   rowVersion: number;
 }
 
-export interface CampSessionInput {
-  name: string;
+export interface ClosureInput {
+  reason: string;
   startDate: string;
   endDate: string;
-  pricePerPersonGrosze: number;
-  depositPerPersonGrosze: number;
+  roomId: string | null;
 }
 
-export async function getSessions(): Promise<CampSession[]> {
-  const { data } = await api.get<CampSession[]>("/admin/sessions");
+export async function getClosures(): Promise<Closure[]> {
+  const { data } = await api.get<Closure[]>("/admin/closures");
   return data;
 }
 
-export async function createSession(input: CampSessionInput): Promise<CampSession> {
-  const { data } = await api.post<CampSession>("/admin/sessions", input);
+export async function createClosure(input: ClosureInput): Promise<Closure> {
+  const { data } = await api.post<Closure>("/admin/closures", input);
   return data;
 }
 
-export async function updateSession(
+export async function updateClosure(
   id: string,
-  input: CampSessionInput & { rowVersion: number },
-): Promise<CampSession> {
-  const { data } = await api.put<CampSession>(`/admin/sessions/${id}`, input);
+  input: ClosureInput & { rowVersion: number },
+): Promise<Closure> {
+  const { data } = await api.put<Closure>(`/admin/closures/${id}`, input);
   return data;
 }
 
-export async function publishSession(id: string): Promise<CampSession> {
-  const { data } = await api.post<CampSession>(`/admin/sessions/${id}/publish`);
-  return data;
-}
-
-export async function archiveSession(id: string): Promise<CampSession> {
-  const { data } = await api.post<CampSession>(`/admin/sessions/${id}/archive`);
-  return data;
-}
-
-export async function deleteSession(id: string): Promise<void> {
-  await api.delete(`/admin/sessions/${id}`);
+export async function deleteClosure(id: string): Promise<void> {
+  await api.delete(`/admin/closures/${id}`);
 }
 
 // Grosze → "1 234,56 zł" style display; forms edit złote as decimal strings.
@@ -125,10 +111,9 @@ export interface AdminAssignment {
 
 export interface AdminBooking {
   id: string;
-  sessionName: string;
-  campSessionId: string;
   startDate: string;
   endDate: string;
+  nights: number;
   organizationName: string;
   contactName: string;
   email: string;
@@ -147,10 +132,7 @@ export interface AdminBooking {
   assignments: AdminAssignment[];
 }
 
-export async function getAdminBookings(filters: {
-  sessionId?: string;
-  status?: string;
-}): Promise<AdminBooking[]> {
+export async function getAdminBookings(filters: { status?: string }): Promise<AdminBooking[]> {
   const { data } = await api.get<AdminBooking[]>("/admin/bookings", { params: filters });
   return data;
 }
@@ -170,12 +152,12 @@ export interface RoomOccupancy {
   organizationName: string | null;
   bookingStatus: string | null;
   peopleCount: number | null;
+  closed: boolean;
+  closureReason: string | null;
   openTaskCount: number;
 }
 
-export interface SessionOccupancy {
-  sessionId: string;
-  sessionName: string;
+export interface Occupancy {
   startDate: string;
   endDate: string;
   totalBeds: number;
@@ -183,8 +165,8 @@ export interface SessionOccupancy {
   rooms: RoomOccupancy[];
 }
 
-export async function getOccupancy(sessionId: string): Promise<SessionOccupancy> {
-  const { data } = await api.get<SessionOccupancy>(`/admin/sessions/${sessionId}/occupancy`);
+export async function getOccupancy(start: string, end: string): Promise<Occupancy> {
+  const { data } = await api.get<Occupancy>("/admin/occupancy", { params: { start, end } });
   return data;
 }
 
@@ -194,7 +176,6 @@ export interface RoomTask {
   id: string;
   roomId: string;
   roomNumber: string;
-  campSessionId: string | null;
   bookingId: string | null;
   text: string;
   status: "Open" | "Done";
@@ -204,7 +185,7 @@ export interface RoomTask {
 
 export async function getTasks(filters: {
   status?: string;
-  sessionId?: string;
+  bookingId?: string;
 }): Promise<RoomTask[]> {
   const { data } = await api.get<RoomTask[]>("/admin/tasks", { params: filters });
   return data;
@@ -213,7 +194,6 @@ export async function getTasks(filters: {
 export async function createTask(input: {
   roomId: string;
   text: string;
-  campSessionId: string | null;
   bookingId: string | null;
 }): Promise<RoomTask> {
   const { data } = await api.post<RoomTask>("/admin/tasks", input);
@@ -231,21 +211,22 @@ export async function deleteTask(id: string): Promise<void> {
 
 // --- Dashboard ---
 
-export interface DashboardSession {
+export interface DashboardBooking {
   id: string;
-  name: string;
+  organizationName: string;
   startDate: string;
   endDate: string;
-  totalBeds: number;
+  headcount: number;
   occupiedBeds: number;
-  bookingCount: number;
+  status: string;
 }
 
 export interface Dashboard {
-  upcomingSessions: DashboardSession[];
+  upcomingBookings: DashboardBooking[];
   pendingDepositCount: number;
   overdueFinalCount: number;
   openTaskCount: number;
+  activeClosureCount: number;
 }
 
 export async function getDashboard(): Promise<Dashboard> {

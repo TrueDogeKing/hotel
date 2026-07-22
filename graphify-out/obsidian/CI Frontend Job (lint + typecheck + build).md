@@ -1,0 +1,88 @@
+---
+source_file: ".github/workflows/ci.yml"
+type: "concept"
+community: "Docker & Project Docs"
+location: "jobs.frontend"
+tags:
+  - graphify/concept
+  - graphify/INFERRED
+  - community/Docker__Project_Docs
+---
+
+# CI Frontend Job (lint + typecheck + build)
+
+## Context
+
+_Source: `.github/workflows/ci.yml` — full file embedded (63 lines)._
+
+```yaml
+name: CI
+
+# Validates every PR to main (and pushes to main): backend build + tests, frontend lint/typecheck/build.
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+# Cancel superseded runs on the same ref to save minutes.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  backend:
+    name: Backend (build + tests)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          global-json-file: global.json
+
+      - name: Restore
+        run: dotnet restore CampCenter.slnx
+
+      - name: Build
+        run: dotnet build CampCenter.slnx -c Release --no-restore
+
+      # Unit tests + integration tests. The integration suite uses Testcontainers, which spins up
+      # PostgreSQL via the runner's Docker daemon (available on ubuntu-latest).
+      - name: Test
+        run: dotnet test CampCenter.slnx -c Release --no-build --verbosity normal
+
+  frontend:
+    name: Frontend (lint + typecheck + build)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: "1.3.10"
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Lint
+        run: bun run lint
+
+      # `bun run build` is `tsc -b && vite build`, so this covers the typecheck and the production bundle.
+      - name: Build
+        run: bun run build
+```
+
+## Connections
+- [[Bun (application task runner  frontend package manager)]] - `references` [INFERRED]
+- [[CI Workflow]] - `references` [EXTRACTED]
+
+#graphify/concept #graphify/INFERRED #community/Docker__Project_Docs

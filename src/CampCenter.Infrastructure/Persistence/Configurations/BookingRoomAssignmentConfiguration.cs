@@ -12,9 +12,10 @@ public class BookingRoomAssignmentConfiguration : IEntityTypeConfiguration<Booki
 
         builder.HasKey(x => x.Id);
 
-        // THE double-booking guard: a room can be assigned at most once per session,
-        // enforced by the database regardless of application-level races.
-        builder.HasIndex(x => new { x.CampSessionId, x.RoomId }).IsUnique();
+        // THE double-booking guard is a Postgres GiST exclusion constraint over
+        // (RoomId, daterange[StartDate, EndDate)) added in the migration — EF's
+        // model can't express it. This index backs the range availability queries.
+        builder.HasIndex(x => new { x.RoomId, x.StartDate, x.EndDate });
 
         builder.HasIndex(x => x.BookingId);
 

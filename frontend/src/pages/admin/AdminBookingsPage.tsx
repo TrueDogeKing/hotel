@@ -6,52 +6,30 @@ import {
   cancelAdminBooking,
   formatZl,
   getAdminBookings,
-  getSessions,
   type AdminBooking,
-  type CampSession,
 } from "../../api/admin";
 
 export default function AdminBookingsPage() {
   const { t, i18n } = useTranslation();
   const [bookings, setBookings] = useState<AdminBooking[]>([]);
-  const [sessions, setSessions] = useState<CampSession[]>([]);
-  const [sessionFilter, setSessionFilter] = useState("");
   const [statusFilter, setStatusFilter] = useState("");
   const [expanded, setExpanded] = useState<string | null>(null);
   const [cancelTarget, setCancelTarget] = useState<AdminBooking | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   const reload = useCallback(async () => {
-    setBookings(
-      await getAdminBookings({
-        sessionId: sessionFilter || undefined,
-        status: statusFilter || undefined,
-      }),
-    );
-  }, [sessionFilter, statusFilter]);
+    setBookings(await getAdminBookings({ status: statusFilter || undefined }));
+  }, [statusFilter]);
 
   useEffect(() => {
     let cancelled = false;
-    void getSessions().then((data) => {
-      if (!cancelled) setSessions(data);
-    });
-    return () => {
-      cancelled = true;
-    };
-  }, []);
-
-  useEffect(() => {
-    let cancelled = false;
-    void getAdminBookings({
-      sessionId: sessionFilter || undefined,
-      status: statusFilter || undefined,
-    }).then((data) => {
+    void getAdminBookings({ status: statusFilter || undefined }).then((data) => {
       if (!cancelled) setBookings(data);
     });
     return () => {
       cancelled = true;
     };
-  }, [sessionFilter, statusFilter]);
+  }, [statusFilter]);
 
   async function confirmCancel() {
     if (!cancelTarget) return;
@@ -88,17 +66,6 @@ export default function AdminBookingsPage() {
 
       <div className="admin-form">
         <label>
-          {t("adminBookings.filterSession")}
-          <select value={sessionFilter} onChange={(e) => setSessionFilter(e.target.value)}>
-            <option value="">{t("adminBookings.allSessions")}</option>
-            {sessions.map((s) => (
-              <option key={s.id} value={s.id}>
-                {s.name}
-              </option>
-            ))}
-          </select>
-        </label>
-        <label>
           {t("adminBookings.filterStatus")}
           <select value={statusFilter} onChange={(e) => setStatusFilter(e.target.value)}>
             <option value="">{t("adminBookings.allStatuses")}</option>
@@ -117,7 +84,7 @@ export default function AdminBookingsPage() {
         <thead>
           <tr>
             <th>{t("adminBookings.organization")}</th>
-            <th>{t("adminBookings.session")}</th>
+            <th>{t("adminBookings.dates")}</th>
             <th>{t("adminBookings.headcount")}</th>
             <th>{t("adminBookings.total")}</th>
             <th>{t("adminBookings.paymentState")}</th>
@@ -134,7 +101,8 @@ export default function AdminBookingsPage() {
               >
                 <td>{booking.organizationName}</td>
                 <td>
-                  {booking.sessionName} ({dateFormatter.format(new Date(booking.startDate))})
+                  {dateFormatter.format(new Date(booking.startDate))} –{" "}
+                  {dateFormatter.format(new Date(booking.endDate))}
                 </td>
                 <td>{booking.headcount}</td>
                 <td>{formatZl(booking.totalGrosze)}</td>
@@ -159,6 +127,7 @@ export default function AdminBookingsPage() {
                     <p>
                       {booking.contactName} · {booking.email} · {booking.phone}
                     </p>
+                    <p>{t("adminBookings.nights", { count: booking.nights })}</p>
                     <p>
                       {t("adminBookings.rooms")}:{" "}
                       {booking.assignments

@@ -21,9 +21,9 @@ public class TasksController : ControllerBase
     [ProducesResponseType(typeof(List<RoomTaskDto>), StatusCodes.Status200OK)]
     public async Task<IActionResult> List(
         [FromQuery] RoomTaskStatus? status,
-        [FromQuery] Guid? sessionId,
+        [FromQuery] Guid? bookingId,
         CancellationToken cancellationToken
-    ) => Ok(await _tasks.ListAsync(status, sessionId, cancellationToken));
+    ) => Ok(await _tasks.ListAsync(status, bookingId, cancellationToken));
 
     [HttpPost]
     [ProducesResponseType(typeof(RoomTaskDto), StatusCodes.Status201Created)]

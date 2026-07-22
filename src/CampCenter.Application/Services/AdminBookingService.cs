@@ -12,39 +12,41 @@ namespace CampCenter.Application.Services;
 public class AdminBookingService : IAdminBookingService
 {
     private readonly IBookingRepository _bookings;
-    private readonly ICampSessionRepository _sessions;
     private readonly IRoomRepository _rooms;
     private readonly IRoomTaskRepository _tasks;
+    private readonly IClosureRepository _closures;
+    private readonly IAvailabilityService _availability;
     private readonly IEmailSender _email;
     private readonly BookingSettings _settings;
     private readonly ILogger<AdminBookingService> _logger;
 
     public AdminBookingService(
         IBookingRepository bookings,
-        ICampSessionRepository sessions,
         IRoomRepository rooms,
         IRoomTaskRepository tasks,
+        IClosureRepository closures,
+        IAvailabilityService availability,
         IEmailSender email,
         IOptions<BookingSettings> settings,
         ILogger<AdminBookingService> logger
     )
     {
         _bookings = bookings;
-        _sessions = sessions;
         _rooms = rooms;
         _tasks = tasks;
+        _closures = closures;
+        _availability = availability;
         _email = email;
         _settings = settings.Value;
         _logger = logger;
     }
 
     public async Task<List<AdminBookingDto>> ListAsync(
-        Guid? campSessionId,
         BookingStatus? status,
         CancellationToken cancellationToken = default
     )
     {
-        var bookings = await _bookings.ListAsync(campSessionId, status, cancellationToken);
+        var bookings = await _bookings.ListAsync(status, cancellationToken);
         var paid = await _bookings.GetCompletedPaymentKindsAsync(
             bookings.Select(b => b.Id).ToList(),
             cancellationToken
@@ -80,10 +82,7 @@ public class AdminBookingService : IAdminBookingService
 
         try
         {
-            await _email.SendAsync(
-                EmailTemplates.BookingCancelled(booking, booking.CampSession!),
-                cancellationToken
-            );
+            await _email.SendAsync(EmailTemplates.BookingCancelled(booking), cancellationToken);
         }
         catch (Exception ex)
         {
@@ -134,14 +133,15 @@ public class AdminBookingService : IAdminBookingService
             );
         }
 
-        // Requested rooms must exist and be free within the session — or already
-        // belong to this booking.
-        var own = booking.RoomAssignments.Select(a => a.RoomId).ToHashSet();
-        var taken = (
-            await _bookings.GetLiveAssignedRoomIdsAsync(booking.CampSessionId, cancellationToken)
-        )
-            .Where(roomId => !own.Contains(roomId))
-            .ToHashSet();
+        // Requested rooms must exist and be free over the booking's dates — booked
+        // by another booking or blocked by a closure disqualifies them. This
+        // booking's own rooms are excluded from the blocked set.
+        var blocked = await _availability.GetBlockedRoomIdsAsync(
+            booking.StartDate,
+            booking.EndDate,
+            booking.Id,
+            cancellationToken
+        );
         foreach (var entry in request.Assignments)
         {
             var room =
@@ -152,15 +152,15 @@ public class AdminBookingService : IAdminBookingService
                 throw new BusinessRuleViolationException($"Room {room.Number} is inactive.");
             }
 
-            if (taken.Contains(entry.RoomId))
+            if (blocked.Contains(entry.RoomId))
             {
-                throw new ConflictException($"Room {room.Number} is already booked.");
+                throw new ConflictException($"Room {room.Number} is unavailable in this range.");
             }
         }
 
         // Diff against the current assignments instead of delete-all + reinsert:
         // EF may order inserts before deletes in one batch, which would trip the
-        // unique (session, room) index for rooms the booking keeps.
+        // overlap exclusion constraint for rooms the booking keeps.
         var requestedByRoom = request.Assignments.ToDictionary(a => a.RoomId);
         foreach (var existing in booking.RoomAssignments.ToList())
         {
@@ -183,7 +183,8 @@ public class AdminBookingService : IAdminBookingService
                 Id = Guid.NewGuid(),
                 BookingId = booking.Id,
                 RoomId = entry.RoomId,
-                CampSessionId = booking.CampSessionId,
+                StartDate = booking.StartDate,
+                EndDate = booking.EndDate,
                 PeopleCount = entry.PeopleCount,
             };
             booking.RoomAssignments.Add(assignment);
@@ -194,32 +195,46 @@ public class AdminBookingService : IAdminBookingService
         return await GetAsync(id, cancellationToken);
     }
 
-    public async Task<SessionOccupancyDto> GetOccupancyAsync(
-        Guid campSessionId,
+    public async Task<OccupancyDto> GetOccupancyAsync(
+        DateOnly start,
+        DateOnly end,
         CancellationToken cancellationToken = default
     )
     {
-        var session =
-            await _sessions.GetByIdAsync(campSessionId, cancellationToken)
-            ?? throw new NotFoundException("Camp session not found.");
+        if (end <= start)
+        {
+            throw new BusinessRuleViolationException("The end date must be after the start date.");
+        }
 
         var rooms = await _rooms.GetAllAsync(cancellationToken);
-        var bookings = await _bookings.ListAsync(campSessionId, null, cancellationToken);
-        var liveAssignments = bookings
-            .Where(b =>
-                b.Status
-                    is BookingStatus.PendingDeposit
-                        or BookingStatus.Confirmed
-                        or BookingStatus.Completed
-            )
-            .SelectMany(b => b.RoomAssignments.Select(a => (Booking: b, Assignment: a)))
-            .ToDictionary(x => x.Assignment.RoomId);
+        var bookings = await _bookings.ListLiveInRangeAsync(start, end, cancellationToken);
+
+        // First live booking touching each room over the range (earliest arrival).
+        var byRoom = new Dictionary<Guid, (Booking Booking, BookingRoomAssignment Assignment)>();
+        foreach (var booking in bookings)
+        {
+            foreach (var assignment in booking.RoomAssignments)
+            {
+                byRoom.TryAdd(assignment.RoomId, (booking, assignment));
+            }
+        }
+
+        var closures = await _closures.GetOverlappingAsync(start, end, cancellationToken);
+        var centerClosure = closures.FirstOrDefault(c => c.RoomId is null);
+        var roomClosures = closures
+            .Where(c => c.RoomId is not null)
+            .GroupBy(c => c.RoomId!.Value)
+            .ToDictionary(g => g.Key, g => g.First().Reason);
+
         var openTasks = await _tasks.CountOpenByRoomAsync(cancellationToken);
 
         var roomDtos = rooms
             .Select(room =>
             {
-                liveAssignments.TryGetValue(room.Id, out var hit);
+                byRoom.TryGetValue(room.Id, out var hit);
+                var closed = centerClosure is not null || roomClosures.ContainsKey(room.Id);
+                var closureReason =
+                    centerClosure?.Reason ?? roomClosures.GetValueOrDefault(room.Id);
                 return new RoomOccupancyDto(
                     room.Id,
                     room.Number,
@@ -229,16 +244,16 @@ public class AdminBookingService : IAdminBookingService
                     hit.Booking?.OrganizationName,
                     hit.Booking?.Status.ToString(),
                     hit.Assignment?.PeopleCount,
+                    closed,
+                    closureReason,
                     openTasks.GetValueOrDefault(room.Id)
                 );
             })
             .ToList();
 
-        return new SessionOccupancyDto(
-            session.Id,
-            session.Name,
-            session.StartDate,
-            session.EndDate,
+        return new OccupancyDto(
+            start,
+            end,
             rooms.Where(r => r.IsActive).Sum(r => r.Capacity),
             roomDtos.Sum(r => r.PeopleCount ?? 0),
             roomDtos
@@ -248,49 +263,41 @@ public class AdminBookingService : IAdminBookingService
     public async Task<DashboardDto> GetDashboardAsync(CancellationToken cancellationToken = default)
     {
         var today = DateOnly.FromDateTime(DateTime.UtcNow);
-        var upcoming = await _sessions.GetPublishedUpcomingAsync(today, cancellationToken);
-        var totalBeds = (await _rooms.GetActiveAsync(cancellationToken)).Sum(r => r.Capacity);
 
-        var sessionDtos = new List<DashboardSessionDto>();
-        foreach (var session in upcoming)
-        {
-            var bookings = (await _bookings.ListAsync(session.Id, null, cancellationToken))
-                .Where(b => b.Status is BookingStatus.PendingDeposit or BookingStatus.Confirmed)
-                .ToList();
-            sessionDtos.Add(
-                new DashboardSessionDto(
-                    session.Id,
-                    session.Name,
-                    session.StartDate,
-                    session.EndDate,
-                    totalBeds,
-                    bookings.Sum(b => b.RoomAssignments.Sum(a => a.PeopleCount)),
-                    bookings.Count
-                )
-            );
-        }
+        var upcoming = await _bookings.ListUpcomingAsync(today, 8, cancellationToken);
+        var upcomingDtos = upcoming
+            .Select(b => new DashboardBookingDto(
+                b.Id,
+                b.OrganizationName,
+                b.StartDate,
+                b.EndDate,
+                b.Headcount,
+                b.RoomAssignments.Sum(a => a.PeopleCount),
+                b.Status.ToString()
+            ))
+            .ToList();
 
-        var pending = await _bookings.ListAsync(
-            null,
-            BookingStatus.PendingDeposit,
-            cancellationToken
-        );
-        var confirmed = await _bookings.ListAsync(null, BookingStatus.Confirmed, cancellationToken);
+        var pending = await _bookings.ListAsync(BookingStatus.PendingDeposit, cancellationToken);
+        var confirmed = await _bookings.ListAsync(BookingStatus.Confirmed, cancellationToken);
         var paid = await _bookings.GetCompletedPaymentKindsAsync(
             confirmed.Select(b => b.Id).ToList(),
             cancellationToken
         );
         var overdue = confirmed.Count(b =>
-            b.CampSession is not null
-            && !(paid.GetValueOrDefault(b.Id) ?? []).Contains(PaymentKind.Final)
-            && b.CampSession.StartDate.AddDays(-_settings.FinalPaymentDueDays) < today
+            !(paid.GetValueOrDefault(b.Id) ?? []).Contains(PaymentKind.Final)
+            && b.StartDate.AddDays(-_settings.FinalPaymentDueDays) < today
+        );
+
+        var activeClosures = (await _closures.GetAllAsync(cancellationToken)).Count(c =>
+            c.EndDate >= today
         );
 
         return new DashboardDto(
-            sessionDtos,
+            upcomingDtos,
             pending.Count,
             overdue,
-            await _tasks.CountOpenAsync(cancellationToken)
+            await _tasks.CountOpenAsync(cancellationToken),
+            activeClosures
         );
     }
 
@@ -300,16 +307,14 @@ public class AdminBookingService : IAdminBookingService
 
     private AdminBookingDto ToDto(Booking b, List<PaymentKind> completedKinds)
     {
-        var session = b.CampSession!;
-        var finalDue = session.StartDate.AddDays(-_settings.FinalPaymentDueDays);
+        var finalDue = b.StartDate.AddDays(-_settings.FinalPaymentDueDays);
         var depositPaid = completedKinds.Contains(PaymentKind.Deposit);
         var finalPaid = completedKinds.Contains(PaymentKind.Final);
         return new AdminBookingDto(
             b.Id,
-            session.Name,
-            b.CampSessionId,
-            session.StartDate,
-            session.EndDate,
+            b.StartDate,
+            b.EndDate,
+            b.Nights,
             b.OrganizationName,
             b.ContactName,
             b.Email,

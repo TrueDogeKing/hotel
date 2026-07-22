@@ -92,7 +92,10 @@ export default function BookingManagePage() {
         {booking && (
           <>
             {justCreated && <p className="manage-banner">{t("manage.created")}</p>}
-            <h1>{booking.sessionName}</h1>
+            <h1>
+              {dateFormatter.format(new Date(booking.startDate))} –{" "}
+              {dateFormatter.format(new Date(booking.endDate))}
+            </h1>
             <p className={`status-badge status-${booking.status.toLowerCase()}`}>
               {t(`manage.statuses.${booking.status}`)}
             </p>

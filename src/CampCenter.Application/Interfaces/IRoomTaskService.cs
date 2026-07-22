@@ -7,7 +7,7 @@ public interface IRoomTaskService
 {
     Task<List<RoomTaskDto>> ListAsync(
         RoomTaskStatus? status,
-        Guid? campSessionId,
+        Guid? bookingId,
         CancellationToken cancellationToken = default
     );
 

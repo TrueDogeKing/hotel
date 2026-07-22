@@ -8,8 +8,8 @@ import PaymentReturnPage from "./pages/PaymentReturnPage";
 import LoginPage from "./pages/LoginPage";
 import AdminDashboardPage from "./pages/admin/AdminDashboardPage";
 import RoomsPage from "./pages/admin/RoomsPage";
-import SessionsPage from "./pages/admin/SessionsPage";
-import SessionOccupancyPage from "./pages/admin/SessionOccupancyPage";
+import ClosuresPage from "./pages/admin/ClosuresPage";
+import OccupancyPage from "./pages/admin/OccupancyPage";
 import AdminBookingsPage from "./pages/admin/AdminBookingsPage";
 import TasksPage from "./pages/admin/TasksPage";
 import "./App.css";
@@ -29,8 +29,8 @@ export default function App() {
           <Route element={<ProtectedRoute />}>
             <Route path="/admin" element={<AdminDashboardPage />} />
             <Route path="/admin/pokoje" element={<RoomsPage />} />
-            <Route path="/admin/turnusy" element={<SessionsPage />} />
-            <Route path="/admin/turnusy/:id" element={<SessionOccupancyPage />} />
+            <Route path="/admin/blokady" element={<ClosuresPage />} />
+            <Route path="/admin/oblozenie" element={<OccupancyPage />} />
             <Route path="/admin/rezerwacje" element={<AdminBookingsPage />} />
             <Route path="/admin/zadania" element={<TasksPage />} />
           </Route>

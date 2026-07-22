@@ -7,7 +7,7 @@ public interface IRoomTaskRepository
     /// Tasks with rooms loaded, Open first then newest.
     Task<List<RoomTask>> ListAsync(
         RoomTaskStatus? status,
-        Guid? campSessionId,
+        Guid? bookingId,
         CancellationToken cancellationToken = default
     );
 

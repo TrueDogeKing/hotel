@@ -2,7 +2,6 @@ using System.Net;
 using System.Net.Http.Json;
 using CampCenter.Application.DTOs.Public;
 using CampCenter.Application.DTOs.Rooms;
-using CampCenter.Application.DTOs.Sessions;
 using CampCenter.Application.Interfaces;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.TestHost;
@@ -50,7 +49,13 @@ public class FakePaymentGateway : IPaymentGateway
 
 public class PaymentsApiTests : IntegrationTestBase
 {
-    private static int _sessionOffset;
+    // Default per-night pricing from appsettings.json (grosze per person per night).
+    private const long PricePerNight = 12_000;
+    private const long DepositPerNight = 3_000;
+    private const int Headcount = 9;
+    private const int Nights = 10;
+
+    private static int _windowOffset;
 
     private readonly FakePaymentGateway _gateway = new();
     private readonly HttpClient _client;
@@ -104,32 +109,24 @@ public class PaymentsApiTests : IntegrationTestBase
         _admin.DefaultRequestHeaders.Authorization =
             new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", loginBody!.Token);
 
-        // Capacity 9 rooms are unique to this test class; distinct session windows
-        // avoid the published-overlap guard across tests.
-        var offset = Interlocked.Increment(ref _sessionOffset) * 20;
+        // A fresh capacity-9 room and a distinct date window per booking keep the
+        // shared inventory free of cross-test interference.
+        var offset = Interlocked.Increment(ref _windowOffset) * 30;
         var suffix = Guid.NewGuid().ToString("N")[..6];
         await _admin.PostAsJsonAsync(
             "/api/admin/rooms",
             new CreateRoomRequestDto($"PAY-{suffix}", 9, null)
         );
-        var sessionResponse = await _admin.PostAsJsonAsync(
-            "/api/admin/sessions",
-            new CreateCampSessionRequestDto(
-                $"Turnus PAY {suffix}",
-                new DateOnly(2033, 3, 1).AddDays(offset),
-                new DateOnly(2033, 3, 10).AddDays(offset),
-                100_000,
-                25_000
-            )
-        );
-        var session = (await sessionResponse.Content.ReadFromJsonAsync<CampSessionDto>())!;
-        await _admin.PostAsync($"/api/admin/sessions/{session.Id}/publish", null);
+
+        var start = new DateOnly(2033, 3, 1).AddDays(offset);
+        var end = start.AddDays(Nights);
 
         var create = await _client.PostAsJsonAsync(
             "/api/public/bookings",
             new CreateBookingRequestDto(
-                session.Id,
-                9,
+                start,
+                end,
+                Headcount,
                 new Dictionary<int, int> { [9] = 1 },
                 "Pay Org",
                 "Jan Płatnik",
@@ -157,7 +154,7 @@ public class PaymentsApiTests : IntegrationTestBase
     public async Task DepositWebhook_ConfirmsBooking_AndIsIdempotent()
     {
         var (token, registered) = await CreateBookingWithDepositAsync();
-        Assert.Equal(9 * 25_000, registered.AmountGrosze);
+        Assert.Equal(Headcount * Nights * DepositPerNight, registered.AmountGrosze);
 
         // Webhook completes the payment via transaction/verify → booking Confirmed.
         var webhook = await _client.PostAsJsonAsync(
@@ -195,7 +192,10 @@ public class PaymentsApiTests : IntegrationTestBase
         );
         Assert.Equal(HttpStatusCode.OK, final.StatusCode);
         var finalRegistered = _gateway.Registered[^1];
-        Assert.Equal(9 * 75_000, finalRegistered.AmountGrosze);
+        Assert.Equal(
+            Headcount * Nights * (PricePerNight - DepositPerNight),
+            finalRegistered.AmountGrosze
+        );
         var finalWebhook = await _client.PostAsJsonAsync(
             "/api/public/payments/p24/status",
             Notification(finalRegistered, orderId: 556)

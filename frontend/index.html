@@ -4,15 +4,23 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="color-scheme" content="dark light" />
+    <meta name="color-scheme" content="light dark" />
     <title>CampCenter</title>
+    <!-- Lakeside typography: Bricolage Grotesque (display) + Inter (UI). Icons are
+         inline SVG (src/components/icons.tsx), so no icon web-font is needed. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <script>
-      // Apply the saved theme before first paint (dark is the default).
+      // Apply the saved theme before first paint (light is the default).
       try {
         document.documentElement.dataset.theme =
-          localStorage.getItem("theme") === "light" ? "light" : "dark";
+          localStorage.getItem("theme") === "dark" ? "dark" : "light";
       } catch (e) {
-        document.documentElement.dataset.theme = "dark";
+        document.documentElement.dataset.theme = "light";
       }
     </script>
   </head>

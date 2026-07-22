@@ -35,14 +35,11 @@ public class BookingConfiguration : IEntityTypeConfiguration<Booking>
 
         builder.Property(x => x.Language).IsRequired().HasMaxLength(2);
 
-        // Session lists (admin overview, availability) filter by session + status.
-        builder.HasIndex(x => new { x.CampSessionId, x.Status });
+        // Admin overview and availability filter/sort by stay dates and status.
+        builder.HasIndex(x => new { x.StartDate, x.Status });
 
-        builder
-            .HasOne(x => x.CampSession)
-            .WithMany()
-            .HasForeignKey(x => x.CampSessionId)
-            .OnDelete(DeleteBehavior.Restrict);
+        // Ignore the computed nights count — derived from the date range.
+        builder.Ignore(x => x.Nights);
 
         // Optimistic concurrency via the PostgreSQL "xmin" system column.
         builder

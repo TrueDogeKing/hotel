@@ -13,7 +13,6 @@ namespace CampCenter.Application.Services;
 public class BookingService : IBookingService
 {
     private readonly IBookingRepository _bookings;
-    private readonly ICampSessionRepository _sessions;
     private readonly IRoomRepository _rooms;
     private readonly IAvailabilityService _availability;
     private readonly ITokenService _tokenService;
@@ -23,7 +22,6 @@ public class BookingService : IBookingService
 
     public BookingService(
         IBookingRepository bookings,
-        ICampSessionRepository sessions,
         IRoomRepository rooms,
         IAvailabilityService availability,
         ITokenService tokenService,
@@ -33,7 +31,6 @@ public class BookingService : IBookingService
     )
     {
         _bookings = bookings;
-        _sessions = sessions;
         _rooms = rooms;
         _availability = availability;
         _tokenService = tokenService;
@@ -47,51 +44,72 @@ public class BookingService : IBookingService
         CancellationToken cancellationToken = default
     )
     {
-        var session =
-            await _sessions.GetByIdAsync(request.CampSessionId, cancellationToken)
-            ?? throw new NotFoundException("Camp session not found.");
-        if (session.Status != CampSessionStatus.Published)
+        var today = DateOnly.FromDateTime(DateTime.UtcNow);
+        if (request.StartDate <= today)
         {
-            throw new BusinessRuleViolationException("The session is not open for booking.");
+            throw new BusinessRuleViolationException("The stay must start in the future.");
         }
 
-        var today = DateOnly.FromDateTime(DateTime.UtcNow);
-        if (session.StartDate <= today)
+        if (request.EndDate <= request.StartDate)
         {
-            throw new BusinessRuleViolationException("The session has already started.");
+            throw new BusinessRuleViolationException("The departure date must be after arrival.");
+        }
+
+        if (request.EndDate.DayNumber - request.StartDate.DayNumber > _settings.MaxNights)
+        {
+            throw new BusinessRuleViolationException(
+                $"A stay may be at most {_settings.MaxNights} nights."
+            );
+        }
+
+        var centerClosed = await _availability.GetCenterClosureReasonAsync(
+            request.StartDate,
+            request.EndDate,
+            cancellationToken
+        );
+        if (centerClosed is not null)
+        {
+            throw new BusinessRuleViolationException(
+                $"The center is closed in the selected range ({centerClosed})."
+            );
         }
 
         try
         {
-            return await TryCreateAsync(request, session, cancellationToken);
+            return await TryCreateAsync(request, cancellationToken);
         }
         catch (ConflictException)
         {
             // A concurrent booking grabbed one of our rooms between the free-room
             // read and the insert; one retry re-reads availability and re-validates.
-            return await TryCreateAsync(request, session, cancellationToken);
+            return await TryCreateAsync(request, cancellationToken);
         }
     }
 
     private async Task<CreateBookingResponseDto> TryCreateAsync(
         CreateBookingRequestDto request,
-        CampSession session,
         CancellationToken cancellationToken
     )
     {
-        var free = await _availability.GetFreeRoomsByCapacityAsync(session.Id, cancellationToken);
+        var free = await _availability.GetFreeRoomsByCapacityAsync(
+            request.StartDate,
+            request.EndDate,
+            null,
+            cancellationToken
+        );
         var mixError = RoomMixCalculator.ValidateMix(request.Headcount, request.RoomCounts, free);
         if (mixError is not null)
         {
             throw new BusinessRuleViolationException($"Invalid room selection ({mixError}).");
         }
 
+        var nights = request.EndDate.DayNumber - request.StartDate.DayNumber;
         var now = DateTime.UtcNow;
-        var sessionStartUtc = session.StartDate.ToDateTime(TimeOnly.MinValue, DateTimeKind.Utc);
+        var startUtc = request.StartDate.ToDateTime(TimeOnly.MinValue, DateTimeKind.Utc);
         var holdExpires = now.AddDays(_settings.DepositHoldDays);
-        if (holdExpires > sessionStartUtc.AddDays(-1))
+        if (holdExpires > startUtc.AddDays(-1))
         {
-            holdExpires = sessionStartUtc.AddDays(-1);
+            holdExpires = startUtc.AddDays(-1);
         }
 
         var token = _tokenService.GenerateRefreshToken(); // 32-byte URL-safe secret + SHA-256 hash
@@ -99,7 +117,8 @@ public class BookingService : IBookingService
         var booking = new Booking
         {
             Id = Guid.NewGuid(),
-            CampSessionId = session.Id,
+            StartDate = request.StartDate,
+            EndDate = request.EndDate,
             OrganizationName = request.OrganizationName.Trim(),
             ContactName = request.ContactName.Trim(),
             Email = request.Email.Trim(),
@@ -108,8 +127,8 @@ public class BookingService : IBookingService
             Notes = string.IsNullOrWhiteSpace(request.Notes) ? null : request.Notes.Trim(),
             ManageTokenHash = token.TokenHash,
             HoldExpiresAt = holdExpires,
-            TotalGrosze = session.PricePerPersonGrosze * request.Headcount,
-            DepositGrosze = session.DepositPerPersonGrosze * request.Headcount,
+            TotalGrosze = _settings.PricePerPersonPerNightGrosze * request.Headcount * nights,
+            DepositGrosze = _settings.DepositPerPersonPerNightGrosze * request.Headcount * nights,
             RequestedRoomCounts = JsonSerializer.Serialize(
                 request
                     .RoomCounts.Where(kv => kv.Value > 0)
@@ -119,7 +138,7 @@ public class BookingService : IBookingService
             CreatedAt = now,
         };
 
-        AssignRooms(booking, request, await PickRoomsAsync(session.Id, request, cancellationToken));
+        AssignRooms(booking, request, await PickRoomsAsync(request, cancellationToken));
 
         await _bookings.AddAsync(booking, cancellationToken);
         try
@@ -133,12 +152,7 @@ public class BookingService : IBookingService
         }
 
         await SendSafelyAsync(
-            EmailTemplates.BookingCreated(
-                booking,
-                session,
-                ManageUrl(token.RawToken),
-                FinalDueDate(session)
-            ),
+            EmailTemplates.BookingCreated(booking, ManageUrl(token.RawToken), FinalDueDate(booking)),
             cancellationToken
         );
 
@@ -148,22 +162,24 @@ public class BookingService : IBookingService
     /// Picks concrete free rooms matching the requested counts: lowest room
     /// numbers first within each capacity.
     private async Task<List<Room>> PickRoomsAsync(
-        Guid sessionId,
         CreateBookingRequestDto request,
         CancellationToken cancellationToken
     )
     {
         var active = await _rooms.GetActiveAsync(cancellationToken);
-        var assigned = (
-            await _bookings.GetLiveAssignedRoomIdsAsync(sessionId, cancellationToken)
-        ).ToHashSet();
+        var blocked = await _availability.GetBlockedRoomIdsAsync(
+            request.StartDate,
+            request.EndDate,
+            null,
+            cancellationToken
+        );
 
         var picked = new List<Room>();
         foreach (var (capacity, count) in request.RoomCounts.Where(kv => kv.Value > 0))
         {
             picked.AddRange(
                 active
-                    .Where(r => r.Capacity == capacity && !assigned.Contains(r.Id))
+                    .Where(r => r.Capacity == capacity && !blocked.Contains(r.Id))
                     .OrderBy(r => r.Number, StringComparer.OrdinalIgnoreCase)
                     .Take(count)
             );
@@ -193,7 +209,8 @@ public class BookingService : IBookingService
                     Id = Guid.NewGuid(),
                     BookingId = booking.Id,
                     RoomId = room.Id,
-                    CampSessionId = booking.CampSessionId,
+                    StartDate = booking.StartDate,
+                    EndDate = booking.EndDate,
                     PeopleCount = peopleCount,
                 }
             );
@@ -207,15 +224,14 @@ public class BookingService : IBookingService
     {
         var booking = await FindByTokenAsync(token, cancellationToken);
         var payments = await _bookings.GetPaymentsAsync(booking.Id, cancellationToken);
-        var session = booking.CampSession!;
 
         return new BookingDetailsDto(
             booking.Id,
             booking.Status.ToString(),
             booking.CancelReason?.ToString(),
-            session.Name,
-            session.StartDate,
-            session.EndDate,
+            booking.StartDate,
+            booking.EndDate,
+            booking.Nights,
             booking.OrganizationName,
             booking.ContactName,
             booking.Email,
@@ -225,7 +241,7 @@ public class BookingService : IBookingService
             booking.TotalGrosze,
             booking.DepositGrosze,
             booking.Status == BookingStatus.PendingDeposit ? booking.HoldExpiresAt : null,
-            FinalDueDate(session),
+            FinalDueDate(booking),
             payments
                 .Select(p => new BookingPaymentDto(
                     p.Id,
@@ -258,10 +274,7 @@ public class BookingService : IBookingService
         _bookings.RemoveAssignments(booking);
         await _bookings.SaveChangesAsync(cancellationToken);
 
-        await SendSafelyAsync(
-            EmailTemplates.BookingCancelled(booking, booking.CampSession!),
-            cancellationToken
-        );
+        await SendSafelyAsync(EmailTemplates.BookingCancelled(booking), cancellationToken);
     }
 
     private async Task<Booking> FindByTokenAsync(string token, CancellationToken cancellationToken)
@@ -271,8 +284,8 @@ public class BookingService : IBookingService
             ?? throw new NotFoundException("Booking not found.");
     }
 
-    private DateOnly FinalDueDate(CampSession session) =>
-        session.StartDate.AddDays(-_settings.FinalPaymentDueDays);
+    private DateOnly FinalDueDate(Booking booking) =>
+        booking.StartDate.AddDays(-_settings.FinalPaymentDueDays);
 
     private string ManageUrl(string rawToken) =>
         $"{_settings.PublicBaseUrl.TrimEnd('/')}/rezerwacja/{rawToken}";

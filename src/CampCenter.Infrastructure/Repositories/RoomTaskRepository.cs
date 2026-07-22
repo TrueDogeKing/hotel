@@ -13,7 +13,7 @@ public class RoomTaskRepository : IRoomTaskRepository
 
     public Task<List<RoomTask>> ListAsync(
         RoomTaskStatus? status,
-        Guid? campSessionId,
+        Guid? bookingId,
         CancellationToken cancellationToken = default
     )
     {
@@ -23,9 +23,9 @@ public class RoomTaskRepository : IRoomTaskRepository
             query = query.Where(t => t.Status == status);
         }
 
-        if (campSessionId is not null)
+        if (bookingId is not null)
         {
-            query = query.Where(t => t.CampSessionId == campSessionId);
+            query = query.Where(t => t.BookingId == bookingId);
         }
 
         return query

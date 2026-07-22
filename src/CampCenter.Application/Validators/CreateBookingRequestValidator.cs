@@ -7,7 +7,9 @@ public class CreateBookingRequestValidator : AbstractValidator<CreateBookingRequ
 {
     public CreateBookingRequestValidator()
     {
-        RuleFor(x => x.CampSessionId).NotEmpty();
+        RuleFor(x => x.EndDate)
+            .GreaterThan(x => x.StartDate)
+            .WithMessage("The departure date must be after the arrival date.");
         RuleFor(x => x.Headcount).InclusiveBetween(1, 2000);
         RuleFor(x => x.RoomCounts)
             .NotEmpty()

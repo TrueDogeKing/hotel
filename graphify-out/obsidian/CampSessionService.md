@@ -1,0 +1,115 @@
+---
+source_file: "src/CampCenter.Application/Services/CampSessionService.cs"
+type: "code"
+community: "Camp Session Management"
+location: "L9"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/Camp_Session_Management
+---
+
+# CampSessionService
+
+## Context
+
+_Source: `src/CampCenter.Application/Services/CampSessionService.cs` — first 80 of 172 lines._ ⚠️ **This file is deleted in the current working tree** (uncommitted change); context below is the committed version from git HEAD.
+
+```csharp
+using CampCenter.Application.DTOs.Sessions;
+using CampCenter.Application.Interfaces;
+using CampCenter.Domain.Entities;
+using CampCenter.Domain.Exceptions;
+using CampCenter.Domain.Repositories;
+
+namespace CampCenter.Application.Services;
+
+public class CampSessionService : ICampSessionService
+{
+    private readonly ICampSessionRepository _sessions;
+
+    public CampSessionService(ICampSessionRepository sessions) => _sessions = sessions;
+
+    public async Task<List<CampSessionDto>> GetAllAsync(
+        CancellationToken cancellationToken = default
+    ) => (await _sessions.GetAllAsync(cancellationToken)).Select(ToDto).ToList();
+
+    public async Task<CampSessionDto> CreateAsync(
+        CreateCampSessionRequestDto request,
+        CancellationToken cancellationToken = default
+    )
+    {
+        var session = new CampSession
+        {
+            Id = Guid.NewGuid(),
+            Name = request.Name.Trim(),
+            StartDate = request.StartDate,
+            EndDate = request.EndDate,
+            PricePerPersonGrosze = request.PricePerPersonGrosze,
+            DepositPerPersonGrosze = request.DepositPerPersonGrosze,
+            CreatedAt = DateTime.UtcNow,
+        };
+
+        await _sessions.AddAsync(session, cancellationToken);
+        await _sessions.SaveChangesAsync(cancellationToken);
+        return ToDto(session);
+    }
+
+    public async Task<CampSessionDto> UpdateAsync(
+        Guid id,
+        UpdateCampSessionRequestDto request,
+        CancellationToken cancellationToken = default
+    )
+    {
+        var session = await GetOrThrowAsync(id, cancellationToken);
+
+        // Dates of a session with bookings are frozen: the whole allocation and
+        // pricing was made against them.
+        var datesChanged =
+            session.StartDate != request.StartDate || session.EndDate != request.EndDate;
+        if (datesChanged && await _sessions.HasBookingsAsync(id, cancellationToken))
+        {
+            throw new BusinessRuleViolationException(
+                "Cannot change the dates of a session that already has bookings."
+            );
+        }
+
+        // A published session must never start overlapping another published one.
+        if (
+            datesChanged
+            && session.Status == CampSessionStatus.Published
+            && await _sessions.AnyPublishedOverlappingAsync(
+                id,
+                request.StartDate,
+                request.EndDate,
+                cancellationToken
+            )
+        )
+        {
+            throw new BusinessRuleViolationException(
+                "The dates overlap another published session."
+            );
+        }
+
+        session.Name = request.Name.Trim();
+        session.StartDate = request.StartDate;
+        session.EndDate = request.EndDate;
+        session.PricePerPersonGrosze = request.PricePerPersonGrosze;
+        session.DepositPerPersonGrosze = request.DepositPerPersonGrosze;
+```
+
+## Connections
+- [[.ArchiveAsync()_1]] - `method` [EXTRACTED]
+- [[.CreateAsync()_5]] - `method` [EXTRACTED]
+- [[.DeleteAsync()_3]] - `method` [EXTRACTED]
+- [[.GetAllAsync()_2]] - `method` [EXTRACTED]
+- [[.GetOrThrowAsync()_1]] - `method` [EXTRACTED]
+- [[.PublishAsync()_1]] - `method` [EXTRACTED]
+- [[.SaveWithConcurrencyCheckAsync()]] - `method` [EXTRACTED]
+- [[.ToDto()_1]] - `method` [EXTRACTED]
+- [[.UpdateAsync()_2]] - `method` [EXTRACTED]
+- [[CampSessionService.cs]] - `contains` [EXTRACTED]
+- [[ICampSessionRepository_3]] - `references` [EXTRACTED]
+- [[ICampSessionService]] - `implements` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/Camp_Session_Management

@@ -4,9 +4,9 @@ import { useTranslation } from "react-i18next";
 import { isAxiosError } from "axios";
 import LanguageSwitcher from "../components/LanguageSwitcher";
 import { formatZl } from "../api/admin";
-import { createBooking, getPublicSessions, validateMix, type PublicSession } from "../api/public";
+import { createBooking, getAvailability, validateMix, type Availability } from "../api/public";
 
-type Step = "headcount" | "session" | "rooms" | "contact" | "summary";
+type Step = "dates" | "rooms" | "contact" | "summary";
 
 interface ContactForm {
   organizationName: string;
@@ -28,11 +28,12 @@ export default function BookingWizardPage() {
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
 
-  const [step, setStep] = useState<Step>("headcount");
+  const [step, setStep] = useState<Step>("dates");
+  const [startDate, setStartDate] = useState("");
+  const [endDate, setEndDate] = useState("");
   const [headcountInput, setHeadcountInput] = useState("");
   const [headcount, setHeadcount] = useState(0);
-  const [sessions, setSessions] = useState<PublicSession[]>([]);
-  const [session, setSession] = useState<PublicSession | null>(null);
+  const [availability, setAvailability] = useState<Availability | null>(null);
   const [counts, setCounts] = useState<Record<string, number>>({});
   const [contact, setContact] = useState<ContactForm>(emptyContact);
   const [error, setError] = useState<string | null>(null);
@@ -47,15 +48,26 @@ export default function BookingWizardPage() {
   );
   const formatDate = (iso: string) => dateFormatter.format(new Date(iso));
 
-  async function submitHeadcount() {
+  const datesValid =
+    startDate !== "" && endDate !== "" && endDate > startDate && Number(headcountInput) >= 1;
+
+  async function submitDates() {
     const value = Number(headcountInput);
-    if (!Number.isInteger(value) || value < 1) return;
+    if (!datesValid) return;
     setBusy(true);
     setError(null);
     try {
-      setSessions(await getPublicSessions(value));
+      const result = await getAvailability(startDate, endDate, value);
       setHeadcount(value);
-      setStep("session");
+      setAvailability(result);
+      if (result.centerClosed) {
+        setError(t("wizard.centerClosed", { reason: result.centerClosedReason ?? "" }));
+      } else if (!result.fits) {
+        setError(t("wizard.doesNotFitRange"));
+      } else {
+        setCounts(result.suggestedMix ?? {});
+        setStep("rooms");
+      }
     } catch {
       setError(t("wizard.loadError"));
     } finally {
@@ -63,14 +75,9 @@ export default function BookingWizardPage() {
     }
   }
 
-  function pickSession(s: PublicSession) {
-    if (!s.fits) return;
-    setSession(s);
-    setCounts(s.suggestedMix ?? {});
-    setStep("rooms");
-  }
-
-  const mixState = session ? validateMix(headcount, counts, session.freeRoomsByCapacity) : "ok";
+  const mixState = availability
+    ? validateMix(headcount, counts, availability.freeRoomsByCapacity)
+    : "ok";
   const totalBeds = Object.entries(counts).reduce(
     (sum, [cap, count]) => sum + Number(cap) * count,
     0,
@@ -90,12 +97,13 @@ export default function BookingWizardPage() {
     contact.phone.trim() !== "";
 
   async function submitBooking() {
-    if (!session) return;
+    if (!availability) return;
     setBusy(true);
     setError(null);
     try {
       const result = await createBooking({
-        campSessionId: session.id,
+        startDate,
+        endDate,
         headcount,
         roomCounts: Object.fromEntries(Object.entries(counts).filter(([, v]) => v > 0)),
         organizationName: contact.organizationName.trim(),
@@ -118,7 +126,7 @@ export default function BookingWizardPage() {
     }
   }
 
-  const steps: Step[] = ["headcount", "session", "rooms", "contact", "summary"];
+  const steps: Step[] = ["dates", "rooms", "contact", "summary"];
 
   return (
     <main className="public-page">
@@ -140,67 +148,56 @@ export default function BookingWizardPage() {
 
         {error && <p role="alert">{error}</p>}
 
-        {step === "headcount" && (
+        {step === "dates" && (
           <div className="wizard-panel">
-            <h1>{t("wizard.headcountTitle")}</h1>
-            <input
-              type="number"
-              min={1}
-              max={2000}
-              value={headcountInput}
-              onChange={(e) => setHeadcountInput(e.target.value)}
-              autoFocus
-            />
-            <button
-              type="button"
-              disabled={busy || !headcountInput}
-              onClick={() => void submitHeadcount()}
-            >
-              {t("wizard.next")}
-            </button>
-          </div>
-        )}
-
-        {step === "session" && (
-          <div className="wizard-panel">
-            <h1>{t("wizard.sessionTitle", { headcount })}</h1>
-            {sessions.length === 0 && <p>{t("wizard.noSessions")}</p>}
-            <div className="session-cards">
-              {sessions.map((s) => (
-                <button
-                  key={s.id}
-                  type="button"
-                  className={`session-card${s.fits ? "" : " unavailable"}`}
-                  disabled={!s.fits}
-                  onClick={() => pickSession(s)}
-                >
-                  <strong>{s.name}</strong>
-                  <span>
-                    {formatDate(s.startDate)} – {formatDate(s.endDate)}
-                  </span>
-                  <span>
-                    {t("wizard.pricePerPerson")}: {formatZl(s.pricePerPersonGrosze)}
-                  </span>
-                  <span>
-                    {s.fits
-                      ? t("wizard.freeBeds", { count: s.remainingCapacity })
-                      : t("wizard.doesNotFit")}
-                  </span>
-                </button>
-              ))}
+            <h1>{t("wizard.datesTitle")}</h1>
+            <div className="form">
+              <label>
+                {t("wizard.arrival")}
+                <input
+                  type="date"
+                  value={startDate}
+                  onChange={(e) => setStartDate(e.target.value)}
+                  required
+                />
+              </label>
+              <label>
+                {t("wizard.departure")}
+                <input
+                  type="date"
+                  value={endDate}
+                  min={startDate || undefined}
+                  onChange={(e) => setEndDate(e.target.value)}
+                  required
+                />
+              </label>
+              <label>
+                {t("wizard.headcountLabel")}
+                <input
+                  type="number"
+                  min={1}
+                  max={2000}
+                  value={headcountInput}
+                  onChange={(e) => setHeadcountInput(e.target.value)}
+                />
+              </label>
             </div>
-            <button type="button" onClick={() => setStep("headcount")}>
-              {t("wizard.back")}
+            <button type="button" disabled={busy || !datesValid} onClick={() => void submitDates()}>
+              {t("wizard.checkAvailability")}
             </button>
           </div>
         )}
 
-        {step === "rooms" && session && (
+        {step === "rooms" && availability && (
           <div className="wizard-panel">
             <h1>{t("wizard.roomsTitle")}</h1>
+            <p>
+              {formatDate(availability.startDate)} – {formatDate(availability.endDate)} ·{" "}
+              {t("wizard.nights", { count: availability.nights })}
+            </p>
             <p>{t("wizard.roomsHint", { headcount })}</p>
             <div className="mix-editor">
-              {Object.entries(session.freeRoomsByCapacity)
+              {Object.entries(availability.freeRoomsByCapacity)
                 .sort(([a], [b]) => Number(b) - Number(a))
                 .map(([capacity, free]) => (
                   <div key={capacity} className="mix-row">
@@ -226,7 +223,7 @@ export default function BookingWizardPage() {
               {t(`wizard.mix.${mixState}`, { beds: totalBeds, headcount })}
             </p>
             <div className="wizard-nav">
-              <button type="button" onClick={() => setStep("session")}>
+              <button type="button" onClick={() => setStep("dates")}>
                 {t("wizard.back")}
               </button>
               <button type="button" disabled={mixState !== "ok"} onClick={() => setStep("contact")}>
@@ -299,13 +296,14 @@ export default function BookingWizardPage() {
           </div>
         )}
 
-        {step === "summary" && session && (
+        {step === "summary" && availability && (
           <div className="wizard-panel">
             <h1>{t("wizard.summaryTitle")}</h1>
             <dl className="summary-list">
-              <dt>{t("wizard.summarySession")}</dt>
+              <dt>{t("wizard.summaryDates")}</dt>
               <dd>
-                {session.name} ({formatDate(session.startDate)} – {formatDate(session.endDate)})
+                {formatDate(availability.startDate)} – {formatDate(availability.endDate)} (
+                {t("wizard.nights", { count: availability.nights })})
               </dd>
               <dt>{t("wizard.summaryHeadcount")}</dt>
               <dd>{headcount}</dd>
@@ -318,9 +316,9 @@ export default function BookingWizardPage() {
                   .join(", ")}
               </dd>
               <dt>{t("wizard.summaryTotal")}</dt>
-              <dd>{formatZl(session.pricePerPersonGrosze * headcount)}</dd>
+              <dd>{formatZl(availability.totalGrosze ?? 0)}</dd>
               <dt>{t("wizard.summaryDeposit")}</dt>
-              <dd>{formatZl(session.depositPerPersonGrosze * headcount)}</dd>
+              <dd>{formatZl(availability.depositGrosze ?? 0)}</dd>
               <dt>{t("wizard.summaryContact")}</dt>
               <dd>
                 {contact.organizationName}, {contact.contactName}, {contact.email}, {contact.phone}

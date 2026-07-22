@@ -19,10 +19,9 @@ public class BookingsController : ControllerBase
     [HttpGet]
     [ProducesResponseType(typeof(List<AdminBookingDto>), StatusCodes.Status200OK)]
     public async Task<IActionResult> List(
-        [FromQuery] Guid? sessionId,
         [FromQuery] BookingStatus? status,
         CancellationToken cancellationToken
-    ) => Ok(await _bookings.ListAsync(sessionId, status, cancellationToken));
+    ) => Ok(await _bookings.ListAsync(status, cancellationToken));
 
     [HttpGet("{id:guid}")]
     [ProducesResponseType(typeof(AdminBookingDto), StatusCodes.Status200OK)]

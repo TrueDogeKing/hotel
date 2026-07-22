@@ -10,7 +10,7 @@ public enum BookingStatus
 
     Cancelled,
 
-    /// Session finished (set by the maintenance sweeper).
+    /// Stay finished (set by the maintenance sweeper).
     Completed,
 }
 
@@ -21,15 +21,17 @@ public enum BookingCancelReason
     DepositNotPaid,
 }
 
-/// A group booking for one camp session, made without an account. The booker
+/// A group booking for a chosen date range, made without an account. The booker
 /// manages it via an emailed link carrying a secret token (stored hashed).
 public class Booking
 {
     public Guid Id { get; set; }
 
-    public Guid CampSessionId { get; set; }
+    /// Arrival day (inclusive).
+    public DateOnly StartDate { get; set; }
 
-    public CampSession? CampSession { get; set; }
+    /// Departure day (exclusive — the last night stayed is EndDate - 1).
+    public DateOnly EndDate { get; set; }
 
     public required string OrganizationName { get; set; }
 
@@ -72,4 +74,7 @@ public class Booking
     public uint RowVersion { get; set; }
 
     public List<BookingRoomAssignment> RoomAssignments { get; set; } = [];
+
+    /// Number of nights the group stays.
+    public int Nights => EndDate.DayNumber - StartDate.DayNumber;
 }

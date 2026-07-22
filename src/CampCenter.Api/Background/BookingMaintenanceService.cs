@@ -81,12 +81,12 @@ public class BookingMaintenanceService : BackgroundService
         }
 
         // Cancellation emails only after the state is durable.
-        foreach (var booking in expired.Where(b => b.CampSession is not null))
+        foreach (var booking in expired)
         {
             try
             {
                 await email.SendAsync(
-                    EmailTemplates.BookingCancelled(booking, booking.CampSession!),
+                    EmailTemplates.BookingCancelled(booking),
                     cancellationToken
                 );
             }

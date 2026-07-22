@@ -108,11 +108,11 @@ public class PaymentService : IPaymentService
         await _bookings.AddPaymentAsync(payment, cancellationToken);
         await _bookings.SaveChangesAsync(cancellationToken);
 
-        var session = booking.CampSession!;
+        var stay = $"{booking.StartDate:dd.MM.yyyy}–{booking.EndDate:dd.MM.yyyy}";
         var description =
             kind == PaymentKind.Deposit
-                ? $"Zaliczka — {session.Name} — {booking.OrganizationName}"
-                : $"Dopłata — {session.Name} — {booking.OrganizationName}";
+                ? $"Zaliczka — {stay} — {booking.OrganizationName}"
+                : $"Dopłata — {stay} — {booking.OrganizationName}";
         var result = await _gateway.RegisterTransactionAsync(
             new GatewayRegisterRequest(
                 payment.P24SessionId,
@@ -188,7 +188,7 @@ public class PaymentService : IPaymentService
         if (confirmedNow)
         {
             await SendSafelyAsync(
-                EmailTemplates.BookingConfirmed(booking, booking.CampSession!),
+                EmailTemplates.BookingConfirmed(booking),
                 cancellationToken
             );
         }

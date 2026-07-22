@@ -4,6 +4,8 @@ import { isAxiosError } from "axios";
 import { useTranslation } from "react-i18next";
 import { useAuth } from "../auth/AuthContext";
 import LanguageSwitcher from "../components/LanguageSwitcher";
+import ThemeToggle from "../components/ThemeToggle";
+import { IconLandscape } from "../components/icons";
 
 // Mirrors the server policy (RateLimiting:Auth:PermitLimit). Used only to warn the user
 // before the lockout; the server's 429 + Retry-After response is the authoritative source.
@@ -74,10 +76,14 @@ export default function LoginPage() {
     <main className="page">
       <div className="auth-card">
         <div className="auth-card-lang">
+          <ThemeToggle />
           <LanguageSwitcher />
         </div>
         <div className="auth-brand">
-          <span className="mark">C</span> CampCenter
+          <span className="mark">
+            <IconLandscape />
+          </span>{" "}
+          CampCenter
         </div>
         <h1>{t("login.title")}</h1>
 

@@ -2,10 +2,10 @@
 
 ## Cel projektu
 
-Aplikacja webowa ośrodka kolonijnego: strona informacyjna, rezerwacja turnusów
-dla grup zorganizowanych (bez konta, potwierdzenie e-mailem) oraz panel
-administratora (pokoje, turnusy, obłożenie, zadania dla obsługi). Płatności
-online przez Przelewy24 (zaliczka + dopłata).
+Aplikacja webowa ośrodka kolonijnego: strona informacyjna, rezerwacja pobytów
+w dowolnym zakresie dat dla grup zorganizowanych (bez konta, potwierdzenie
+e-mailem) oraz panel administratora (pokoje, blokady, obłożenie, zadania dla
+obsługi). Płatności online przez Przelewy24 (zaliczka + dopłata).
 
 ## Architektura
 
@@ -22,15 +22,18 @@ online przez Przelewy24 (zaliczka + dopłata).
 ## Model domeny
 
 * AdminUser + RefreshToken — logowanie panelu admina (seeder tworzy konto "admin")
-* Room — pokój (numer, pojemność 2/3/4…, aktywny); bez dat — okres zajętości
-  wynika z turnusu (przydział → rezerwacja → turnus)
-* CampSession (turnus) — nazwa, daty, cena/os., zaliczka/os., status
-  Draft/Published/Archived; opublikowane turnusy nie mogą się nakładać
-* Booking — rezerwacja grupowa (organizacja, kontakt, liczba osób, status
-  PendingDeposit/Confirmed/Cancelled/Completed, token zarządzania hashowany,
-  język pl/en, kwoty w groszach — snapshot)
-* BookingRoomAssignment — konkretne pokoje przydzielone przy utworzeniu;
-  unikalny indeks (CampSessionId, RoomId) chroni przed podwójną rezerwacją
+* Room — pokój (numer, pojemność 2/3/4…, aktywny); zajętość wynika z zakresu
+  dat przydziału pokoju do rezerwacji
+* Closure (blokada) — zakres dat, w którym cały ośrodek (RoomId null) albo
+  jeden pokój jest niedostępny; zastępuje dawny model turnusów
+* Booking — rezerwacja grupowa (daty StartDate/EndDate, organizacja, kontakt,
+  liczba osób, status PendingDeposit/Confirmed/Cancelled/Completed, token
+  zarządzania hashowany, język pl/en, kwoty w groszach — snapshot). Cennik
+  globalny: cena/os./noc + zaliczka/os./noc z konfiguracji (sekcja "Booking")
+* BookingRoomAssignment — konkretne pokoje przydzielone przy utworzeniu, z
+  zakresem dat; ograniczenie wykluczające GiST (btree_gist) na
+  (RoomId, daterange[StartDate,EndDate)) chroni przed podwójną rezerwacją
+  (zakresy półotwarte — wyjazd = przyjazd tego samego dnia nie kolidują)
 * RoomTask — zadania dla obsługi (np. dostawka), Open/Done
 * Payment — Deposit/Final, Pending/Completed/Failed, pola P24; częściowy
   unikalny indeks (BookingId, Kind) WHERE Completed

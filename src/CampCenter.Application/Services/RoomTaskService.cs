@@ -19,9 +19,9 @@ public class RoomTaskService : IRoomTaskService
 
     public async Task<List<RoomTaskDto>> ListAsync(
         RoomTaskStatus? status,
-        Guid? campSessionId,
+        Guid? bookingId,
         CancellationToken cancellationToken = default
-    ) => (await _tasks.ListAsync(status, campSessionId, cancellationToken)).Select(ToDto).ToList();
+    ) => (await _tasks.ListAsync(status, bookingId, cancellationToken)).Select(ToDto).ToList();
 
     public async Task<RoomTaskDto> CreateAsync(
         CreateRoomTaskRequestDto request,
@@ -44,7 +44,6 @@ public class RoomTaskService : IRoomTaskService
             Id = Guid.NewGuid(),
             RoomId = room.Id,
             Room = room,
-            CampSessionId = request.CampSessionId,
             BookingId = request.BookingId,
             Text = text,
             CreatedByAdminUserId = createdByAdminUserId,
@@ -85,7 +84,6 @@ public class RoomTaskService : IRoomTaskService
             t.Id,
             t.RoomId,
             t.Room?.Number ?? "?",
-            t.CampSessionId,
             t.BookingId,
             t.Text,
             t.Status.ToString(),

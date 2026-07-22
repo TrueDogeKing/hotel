@@ -60,9 +60,6 @@ namespace CampCenter.Infrastructure.Persistence.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
-                    b.Property<Guid>("CampSessionId")
-                        .HasColumnType("uuid");
-
                     b.Property<string>("CancelReason")
                         .HasMaxLength(16)
                         .HasColumnType("character varying(16)");
@@ -82,6 +79,9 @@ namespace CampCenter.Infrastructure.Persistence.Migrations
                         .IsRequired()
                         .HasMaxLength(256)
                         .HasColumnType("character varying(256)");
+
+                    b.Property<DateOnly>("EndDate")
+                        .HasColumnType("date");
 
                     b.Property<int>("Headcount")
                         .HasColumnType("integer");
@@ -123,6 +123,9 @@ namespace CampCenter.Infrastructure.Persistence.Migrations
                         .HasColumnType("xid")
                         .HasColumnName("xmin");
 
+                    b.Property<DateOnly>("StartDate")
+                        .HasColumnType("date");
+
                     b.Property<string>("Status")
                         .IsRequired()
                         .HasMaxLength(16)
@@ -136,7 +139,7 @@ namespace CampCenter.Infrastructure.Persistence.Migrations
                     b.HasIndex("ManageTokenHash")
                         .IsUnique();
 
-                    b.HasIndex("CampSessionId", "Status");
+                    b.HasIndex("StartDate", "Status");
 
                     b.ToTable("Bookings", (string)null);
                 });
@@ -150,8 +153,8 @@ namespace CampCenter.Infrastructure.Persistence.Migrations
                     b.Property<Guid>("BookingId")
                         .HasColumnType("uuid");
 
-                    b.Property<Guid>("CampSessionId")
-                        .HasColumnType("uuid");
+                    b.Property<DateOnly>("EndDate")
+                        .HasColumnType("date");
 
                     b.Property<int>("PeopleCount")
                         .HasColumnType("integer");
@@ -159,19 +162,19 @@ namespace CampCenter.Infrastructure.Persistence.Migrations
                     b.Property<Guid>("RoomId")
                         .HasColumnType("uuid");
 
+                    b.Property<DateOnly>("StartDate")
+                        .HasColumnType("date");
+
                     b.HasKey("Id");
 
                     b.HasIndex("BookingId");
 
-                    b.HasIndex("RoomId");
-
-                    b.HasIndex("CampSessionId", "RoomId")
-                        .IsUnique();
+                    b.HasIndex("RoomId", "StartDate", "EndDate");
 
                     b.ToTable("BookingRoomAssignments", (string)null);
                 });
 
-            modelBuilder.Entity("CampCenter.Domain.Entities.CampSession", b =>
+            modelBuilder.Entity("CampCenter.Domain.Entities.Closure", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -180,19 +183,16 @@ namespace CampCenter.Infrastructure.Persistence.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<long>("DepositPerPersonGrosze")
-                        .HasColumnType("bigint");
-
                     b.Property<DateOnly>("EndDate")
                         .HasColumnType("date");
 
-                    b.Property<string>("Name")
+                    b.Property<string>("Reason")
                         .IsRequired()
-                        .HasMaxLength(128)
-                        .HasColumnType("character varying(128)");
+                        .HasMaxLength(256)
+                        .HasColumnType("character varying(256)");
 
-                    b.Property<long>("PricePerPersonGrosze")
-                        .HasColumnType("bigint");
+                    b.Property<Guid?>("RoomId")
+                        .HasColumnType("uuid");
 
                     b.Property<uint>("RowVersion")
                         .IsConcurrencyToken()
@@ -203,16 +203,13 @@ namespace CampCenter.Infrastructure.Persistence.Migrations
                     b.Property<DateOnly>("StartDate")
                         .HasColumnType("date");
 
-                    b.Property<string>("Status")
-                        .IsRequired()
-                        .HasMaxLength(16)
-                        .HasColumnType("character varying(16)");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("Status", "StartDate");
+                    b.HasIndex("RoomId");
 
-                    b.ToTable("CampSessions", (string)null);
+                    b.HasIndex("StartDate", "EndDate");
+
+                    b.ToTable("Closures", (string)null);
                 });
 
             modelBuilder.Entity("CampCenter.Domain.Entities.Payment", b =>
@@ -354,9 +351,6 @@ namespace CampCenter.Infrastructure.Persistence.Migrations
                     b.Property<Guid?>("BookingId")
                         .HasColumnType("uuid");
 
-                    b.Property<Guid?>("CampSessionId")
-                        .HasColumnType("uuid");
-
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("timestamp with time zone");
 
@@ -389,24 +383,11 @@ namespace CampCenter.Infrastructure.Persistence.Migrations
 
                     b.HasIndex("BookingId");
 
-                    b.HasIndex("CampSessionId");
-
                     b.HasIndex("RoomId");
 
                     b.HasIndex("Status");
 
                     b.ToTable("RoomTasks", (string)null);
-                });
-
-            modelBuilder.Entity("CampCenter.Domain.Entities.Booking", b =>
-                {
-                    b.HasOne("CampCenter.Domain.Entities.CampSession", "CampSession")
-                        .WithMany()
-                        .HasForeignKey("CampSessionId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.Navigation("CampSession");
                 });
 
             modelBuilder.Entity("CampCenter.Domain.Entities.BookingRoomAssignment", b =>
@@ -424,6 +405,16 @@ namespace CampCenter.Infrastructure.Persistence.Migrations
                         .IsRequired();
 
                     b.Navigation("Booking");
+
+                    b.Navigation("Room");
+                });
+
+            modelBuilder.Entity("CampCenter.Domain.Entities.Closure", b =>
+                {
+                    b.HasOne("CampCenter.Domain.Entities.Room", "Room")
+                        .WithMany()
+                        .HasForeignKey("RoomId")
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.Navigation("Room");
                 });
@@ -457,11 +448,6 @@ namespace CampCenter.Infrastructure.Persistence.Migrations
                         .HasForeignKey("BookingId")
                         .OnDelete(DeleteBehavior.SetNull);
 
-                    b.HasOne("CampCenter.Domain.Entities.CampSession", "CampSession")
-                        .WithMany()
-                        .HasForeignKey("CampSessionId")
-                        .OnDelete(DeleteBehavior.SetNull);
-
                     b.HasOne("CampCenter.Domain.Entities.Room", "Room")
                         .WithMany()
                         .HasForeignKey("RoomId")
@@ -469,8 +455,6 @@ namespace CampCenter.Infrastructure.Persistence.Migrations
                         .IsRequired();
 
                     b.Navigation("Booking");
-
-                    b.Navigation("CampSession");
 
                     b.Navigation("Room");
                 });

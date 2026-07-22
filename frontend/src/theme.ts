@@ -1,6 +1,6 @@
-// Dark is the product default; light is an opt-in stored per browser. The
-// initial theme is applied by a blocking snippet in index.html (no flash);
-// this module owns runtime toggling.
+// Light (Lakeside warm sand) is the product default; dark (charcoal) is an
+// opt-in stored per browser. The initial theme is applied by a blocking snippet
+// in index.html (no flash); this module owns runtime toggling.
 
 export type Theme = "dark" | "light";
 
@@ -14,7 +14,7 @@ const listeners = new Set<Listener>();
 export function getTheme(): Theme {
   const current = document.documentElement.dataset.theme;
   if (current === "light" || current === "dark") return current;
-  return localStorage.getItem(STORAGE_KEY) === "light" ? "light" : "dark";
+  return localStorage.getItem(STORAGE_KEY) === "dark" ? "dark" : "light";
 }
 
 export function applyTheme(theme: Theme): void {

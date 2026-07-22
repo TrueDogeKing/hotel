@@ -3,7 +3,6 @@ using System.Net.Http.Json;
 using CampCenter.Application.DTOs.AdminPanel;
 using CampCenter.Application.DTOs.Public;
 using CampCenter.Application.DTOs.Rooms;
-using CampCenter.Application.DTOs.Sessions;
 
 namespace CampCenter.IntegrationTests;
 
@@ -11,6 +10,9 @@ public class AdminPanelApiTests : IntegrationTestBase
 {
     public AdminPanelApiTests(CampCenterApiFactory factory)
         : base(factory) { }
+
+    private static string OccupancyUrl(DateOnly start, DateOnly end) =>
+        $"/api/admin/occupancy?start={start:yyyy-MM-dd}&end={end:yyyy-MM-dd}";
 
     [Fact]
     public async Task Occupancy_Reassign_Tasks_And_Dashboard_Work()
@@ -28,25 +30,16 @@ public class AdminPanelApiTests : IntegrationTestBase
             roomIds.Add((await response.Content.ReadFromJsonAsync<RoomDto>())!.Id);
         }
 
-        var sessionResponse = await admin.PostAsJsonAsync(
-            "/api/admin/sessions",
-            new CreateCampSessionRequestDto(
-                "Turnus AP",
-                new DateOnly(2032, 7, 1),
-                new DateOnly(2032, 7, 10),
-                90_000,
-                20_000
-            )
-        );
-        var session = (await sessionResponse.Content.ReadFromJsonAsync<CampSessionDto>())!;
-        await admin.PostAsync($"/api/admin/sessions/{session.Id}/publish", null);
+        var start = new DateOnly(2032, 7, 1);
+        var end = new DateOnly(2032, 7, 10); // 9 nights
 
         // Public booking: 13 people in 2×7 rooms.
         var create = await CreateClient()
             .PostAsJsonAsync(
                 "/api/public/bookings",
                 new CreateBookingRequestDto(
-                    session.Id,
+                    start,
+                    end,
                     13,
                     new Dictionary<int, int> { [7] = 2 },
                     "AP Org",
@@ -59,11 +52,9 @@ public class AdminPanelApiTests : IntegrationTestBase
             );
         Assert.Equal(HttpStatusCode.Created, create.StatusCode);
 
-        // Occupancy grid: two AP rooms occupied (7 + 6 people), one free.
+        // Occupancy grid over the stay: two AP rooms occupied (7 + 6 people), one free.
         var occupancy = (
-            await admin.GetFromJsonAsync<SessionOccupancyDto>(
-                $"/api/admin/sessions/{session.Id}/occupancy"
-            )
+            await admin.GetFromJsonAsync<OccupancyDto>(OccupancyUrl(start, end))
         )!;
         var apRooms = occupancy.Rooms.Where(r => roomIds.Contains(r.RoomId)).ToList();
         Assert.Equal(2, apRooms.Count(r => r.BookingId is not null));
@@ -74,12 +65,13 @@ public class AdminPanelApiTests : IntegrationTestBase
         // Bookings overview shows the booking with unpaid deposit.
         var list = (
             await admin.GetFromJsonAsync<List<AdminBookingDto>>(
-                $"/api/admin/bookings?sessionId={session.Id}"
+                "/api/admin/bookings?status=PendingDeposit"
             )
         )!;
-        var booking = Assert.Single(list);
+        var booking = Assert.Single(list, b => b.OrganizationName == "AP Org");
         Assert.False(booking.DepositPaid);
         Assert.Equal(2, booking.Assignments.Count);
+        Assert.Equal(9, booking.Nights);
 
         // Reassign into all three AP rooms (5+4+4 = 13).
         var reassign = await admin.PutAsJsonAsync(
@@ -107,16 +99,12 @@ public class AdminPanelApiTests : IntegrationTestBase
         // Housekeeping: add a task ("extra bed"), see it in the occupancy grid, mark done.
         var taskCreate = await admin.PostAsJsonAsync(
             "/api/admin/tasks",
-            new CreateRoomTaskRequestDto(roomIds[0], "Dostawka — 1 łóżko", session.Id, booking.Id)
+            new CreateRoomTaskRequestDto(roomIds[0], "Dostawka — 1 łóżko", booking.Id)
         );
         Assert.Equal(HttpStatusCode.Created, taskCreate.StatusCode);
         var task = (await taskCreate.Content.ReadFromJsonAsync<RoomTaskDto>())!;
 
-        occupancy = (
-            await admin.GetFromJsonAsync<SessionOccupancyDto>(
-                $"/api/admin/sessions/{session.Id}/occupancy"
-            )
-        )!;
+        occupancy = (await admin.GetFromJsonAsync<OccupancyDto>(OccupancyUrl(start, end)))!;
         Assert.Equal(1, occupancy.Rooms.Single(r => r.RoomId == roomIds[0]).OpenTaskCount);
 
         var done = await admin.PostAsync($"/api/admin/tasks/{task.Id}/done", null);
@@ -126,22 +114,51 @@ public class AdminPanelApiTests : IntegrationTestBase
         )!;
         Assert.DoesNotContain(tasks, t => t.Id == task.Id);
 
-        // Dashboard aggregates include this session and its pending deposit.
+        // Dashboard aggregates include upcoming bookings and the pending deposit.
         var dashboard = (await admin.GetFromJsonAsync<DashboardDto>("/api/admin/dashboard"))!;
-        Assert.Contains(dashboard.UpcomingSessions, s => s.Id == session.Id);
+        Assert.NotEmpty(dashboard.UpcomingBookings);
         Assert.True(dashboard.PendingDepositCount >= 1);
 
         // Admin cancel frees the rooms.
         var cancel = await admin.PostAsync($"/api/admin/bookings/{booking.Id}/cancel", null);
         Assert.Equal(HttpStatusCode.NoContent, cancel.StatusCode);
-        occupancy = (
-            await admin.GetFromJsonAsync<SessionOccupancyDto>(
-                $"/api/admin/sessions/{session.Id}/occupancy"
-            )
-        )!;
+        occupancy = (await admin.GetFromJsonAsync<OccupancyDto>(OccupancyUrl(start, end)))!;
         Assert.All(
             occupancy.Rooms.Where(r => roomIds.Contains(r.RoomId)),
             r => Assert.Null(r.BookingId)
         );
+    }
+
+    [Fact]
+    public async Task Closure_BlocksRoom_InOccupancyGrid()
+    {
+        var admin = await CreateAuthenticatedClientAsync();
+
+        var roomResponse = await admin.PostAsJsonAsync(
+            "/api/admin/rooms",
+            new CreateRoomRequestDto("APC-1", 13, null)
+        );
+        var roomId = (await roomResponse.Content.ReadFromJsonAsync<RoomDto>())!.Id;
+
+        var start = new DateOnly(2034, 5, 1);
+        var end = new DateOnly(2034, 5, 8);
+
+        // Block just this room for maintenance.
+        var closure = await admin.PostAsJsonAsync(
+            "/api/admin/closures",
+            new CampCenter.Application.DTOs.Closures.CreateClosureRequestDto(
+                "Remont pokoju",
+                start,
+                end.AddDays(-1),
+                RoomId: roomId
+            )
+        );
+        Assert.Equal(HttpStatusCode.Created, closure.StatusCode);
+
+        var occupancy = (await admin.GetFromJsonAsync<OccupancyDto>(OccupancyUrl(start, end)))!;
+        var row = occupancy.Rooms.Single(r => r.RoomId == roomId);
+        Assert.True(row.Closed);
+        Assert.Equal("Remont pokoju", row.ClosureReason);
+        Assert.Null(row.BookingId);
     }
 }

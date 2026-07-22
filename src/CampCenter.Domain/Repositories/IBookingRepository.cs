@@ -4,22 +4,39 @@ namespace CampCenter.Domain.Repositories;
 
 public interface IBookingRepository
 {
-    /// Room ids assigned within the session by "live" bookings (PendingDeposit,
-    /// Confirmed, Completed) — i.e. rooms unavailable to new bookings.
-    Task<List<Guid>> GetLiveAssignedRoomIdsAsync(
-        Guid campSessionId,
+    /// Room ids held by "live" bookings (PendingDeposit, Confirmed, Completed)
+    /// whose stay overlaps [start, end) — i.e. rooms unavailable over that range.
+    /// <paramref name="excludeBookingId"/> ignores one booking's own rooms (reassign).
+    Task<List<Guid>> GetBookedRoomIdsInRangeAsync(
+        DateOnly start,
+        DateOnly end,
+        Guid? excludeBookingId = null,
         CancellationToken cancellationToken = default
     );
 
     Task AddAsync(Booking booking, CancellationToken cancellationToken = default);
 
-    /// Booking by id with session and assignments (incl. rooms) loaded.
+    /// Booking by id with assignments (incl. rooms) loaded.
     Task<Booking?> GetByIdAsync(Guid id, CancellationToken cancellationToken = default);
 
-    /// Admin listing, newest first, with session and assignments loaded.
+    /// Admin listing, newest first, with assignments loaded.
     Task<List<Booking>> ListAsync(
-        Guid? campSessionId,
         BookingStatus? status,
+        CancellationToken cancellationToken = default
+    );
+
+    /// Live bookings whose stay overlaps [start, end), with assignments (incl.
+    /// rooms) loaded — the source for the occupancy grid over a date range.
+    Task<List<Booking>> ListLiveInRangeAsync(
+        DateOnly start,
+        DateOnly end,
+        CancellationToken cancellationToken = default
+    );
+
+    /// Live bookings starting on/after <paramref name="from"/>, earliest first.
+    Task<List<Booking>> ListUpcomingAsync(
+        DateOnly from,
+        int take,
         CancellationToken cancellationToken = default
     );
 
@@ -29,7 +46,7 @@ public interface IBookingRepository
         CancellationToken cancellationToken = default
     );
 
-    /// Booking by manage-token hash, with session, assignments (incl. rooms) and payments loaded.
+    /// Booking by manage-token hash, with assignments (incl. rooms) and payments loaded.
     Task<Booking?> GetByTokenHashAsync(
         string tokenHash,
         CancellationToken cancellationToken = default
@@ -37,8 +54,8 @@ public interface IBookingRepository
 
     Task AddPaymentAsync(Payment payment, CancellationToken cancellationToken = default);
 
-    /// Payment by its P24 sessionId, with the booking (incl. session and
-    /// assignments) loaded — the webhook works off this.
+    /// Payment by its P24 sessionId, with the booking (incl. assignments) loaded —
+    /// the webhook works off this.
     Task<Payment?> GetPaymentByP24SessionIdAsync(
         string p24SessionId,
         CancellationToken cancellationToken = default
@@ -57,7 +74,7 @@ public interface IBookingRepository
         CancellationToken cancellationToken = default
     );
 
-    /// Confirmed bookings whose session already ended.
+    /// Confirmed bookings whose stay already ended.
     Task<List<Booking>> GetConfirmedEndedAsync(
         DateOnly today,
         CancellationToken cancellationToken = default
@@ -81,7 +98,7 @@ public interface IBookingRepository
         CancellationToken cancellationToken = default
     );
 
-    /// Persists changes. Throws ConflictException when the unique
-    /// (CampSessionId, RoomId) index rejects a concurrently grabbed room.
+    /// Persists changes. Throws ConflictException when the overlap exclusion
+    /// constraint rejects a concurrently grabbed room.
     Task SaveChangesAsync(CancellationToken cancellationToken = default);
 }

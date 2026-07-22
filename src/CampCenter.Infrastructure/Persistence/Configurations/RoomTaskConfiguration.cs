@@ -26,12 +26,6 @@ public class RoomTaskConfiguration : IEntityTypeConfiguration<RoomTask>
             .OnDelete(DeleteBehavior.Cascade);
 
         builder
-            .HasOne(x => x.CampSession)
-            .WithMany()
-            .HasForeignKey(x => x.CampSessionId)
-            .OnDelete(DeleteBehavior.SetNull);
-
-        builder
             .HasOne(x => x.Booking)
             .WithMany()
             .HasForeignKey(x => x.BookingId)

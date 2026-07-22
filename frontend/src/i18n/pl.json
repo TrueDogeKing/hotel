@@ -5,10 +5,30 @@
   },
   "home": {
     "heroTitle": "Ośrodek kolonijny nad jeziorem",
-    "heroSubtitle": "Turnusy dla grup zorganizowanych — zakwaterowanie, wyżywienie i teren rekreacyjny w jednym miejscu.",
-    "bookCta": "Zarezerwuj turnus",
-    "adminLink": "Panel administratora",
-    "offerTitle": "Nasza oferta",
+    "heroSubtitle": "Rezerwacja w dowolnym terminie dla grup zorganizowanych — zakwaterowanie, wyżywienie i teren rekreacyjny w jednym miejscu.",
+    "bookCta": "Zarezerwuj pobyt",
+    "bookNow": "Rezerwuj",
+    "navOffer": "Oferta",
+    "navHow": "Jak rezerwować",
+    "navContact": "Kontakt",
+    "adminLink": "Panel personelu",
+    "offerTitle": "Wszystko, czego potrzebuje udany obóz",
+    "offerSubtitle": "Zaprojektowane z myślą o wygodzie i funkcjonalności, aby pobyt Twojej grupy nad jeziorem był niezapomniany.",
+    "how": {
+      "title": "Jak przebiega rezerwacja",
+      "step1": {
+        "title": "Wybierz termin",
+        "body": "Wskaż preferowane daty i liczebność grupy w portalu online."
+      },
+      "step2": {
+        "title": "Potwierdzamy",
+        "body": "Nasz zespół sprawdza i potwierdza dostępność w ciągu 24 godzin."
+      },
+      "step3": {
+        "title": "Wpłać zaliczkę",
+        "body": "Zabezpiecz rezerwację zaliczką i zaczynaj się pakować!"
+      }
+    },
     "offer": {
       "rooms": {
         "title": "Zakwaterowanie",
@@ -23,9 +43,12 @@
         "body": "Boiska, świetlice, plaża nad jeziorem i wyznaczone kąpielisko z ratownikiem."
       }
     },
-    "contactTitle": "Kontakt",
+    "contactTitle": "Skontaktuj się",
+    "contactLead": "Masz pytania o pobyt grupy w ośrodku CampCenter? Nasz zespół pomoże zaplanować idealny wyjazd.",
     "contactAddress": "Ośrodek CampCenter, ul. Jeziorna 1, 11-111 Nadjeziorze",
-    "contactPhone": "+48 000 000 000"
+    "contactPhone": "+48 000 000 000",
+    "contactEmail": "rezerwacje@campcenter.pl",
+    "rights": "© 2026 CampCenter Lakeside. Wszelkie prawa zastrzeżone."
   },
   "login": {
     "title": "Logowanie administratora",
@@ -40,18 +63,19 @@
   },
   "wizard": {
     "steps": {
-      "headcount": "Liczba osób",
-      "session": "Turnus",
+      "dates": "Termin",
       "rooms": "Pokoje",
       "contact": "Dane kontaktowe",
       "summary": "Podsumowanie"
     },
-    "headcountTitle": "Ile osób przyjedzie?",
-    "sessionTitle": "Wybierz turnus dla {{headcount}} osób",
-    "noSessions": "Brak dostępnych turnusów.",
-    "pricePerPerson": "Cena/os.",
-    "freeBeds": "Wolne miejsca: {{count}}",
-    "doesNotFit": "Brak miejsc dla tej grupy",
+    "datesTitle": "Kiedy przyjeżdżacie i ile osób?",
+    "arrival": "Data przyjazdu",
+    "departure": "Data wyjazdu",
+    "headcountLabel": "Liczba osób",
+    "checkAvailability": "Sprawdź dostępność",
+    "nights": "nocy: {{count}}",
+    "centerClosed": "Ośrodek jest zamknięty w wybranym terminie ({{reason}}). Wybierz inne daty.",
+    "doesNotFitRange": "Brak wystarczającej liczby miejsc dla tej grupy w wybranym terminie.",
     "roomsTitle": "Dopasuj podział pokoi",
     "roomsHint": "Proponowany podział pokrywa {{headcount}} osób — możesz go zmienić w granicach dostępności.",
     "roomType": "Pokój {{capacity}}-osobowy",
@@ -69,7 +93,7 @@
     "phone": "Telefon",
     "notes": "Uwagi (opcjonalnie)",
     "summaryTitle": "Podsumowanie rezerwacji",
-    "summarySession": "Turnus",
+    "summaryDates": "Termin",
     "summaryHeadcount": "Liczba osób",
     "summaryRooms": "Pokoje",
     "summaryTotal": "Cena łączna",
@@ -83,7 +107,7 @@
     "submitting": "Wysyłanie…",
     "roomsTaken": "Któryś z wybranych pokoi został właśnie zarezerwowany — wróć i odśwież dostępność.",
     "invalidData": "Nieprawidłowe dane rezerwacji.",
-    "loadError": "Nie udało się pobrać turnusów.",
+    "loadError": "Nie udało się pobrać dostępności.",
     "genericError": "Coś poszło nie tak. Spróbuj ponownie."
   },
   "manage": {
@@ -128,9 +152,11 @@
     "dashboardTitle": "Panel administratora",
     "welcome": "Zalogowano jako {{login}}.",
     "logout": "Wyloguj się",
+    "viewSite": "Strona publiczna",
     "nav": {
       "dashboard": "Pulpit",
-      "sessions": "Turnusy",
+      "occupancy": "Obłożenie",
+      "closures": "Blokady",
       "rooms": "Pokoje",
       "bookings": "Rezerwacje",
       "tasks": "Zadania"
@@ -140,23 +166,28 @@
     "pendingDeposits": "Oczekujące zaliczki",
     "overdueFinals": "Zaległe dopłaty",
     "openTasks": "Otwarte zadania",
-    "upcomingSessions": "Nadchodzące turnusy",
-    "noSessions": "Brak opublikowanych turnusów.",
-    "occupancy": "Obłożenie: {{occupied}}/{{total}}",
-    "bookings": "Rezerwacje: {{count}}"
+    "activeClosures": "Aktywne blokady",
+    "upcomingBookings": "Nadchodzące rezerwacje",
+    "noBookings": "Brak nadchodzących rezerwacji.",
+    "beds": "miejsc: {{count}}"
   },
   "occupancy": {
+    "title": "Obłożenie",
+    "from": "Od",
+    "to": "Do",
     "summary": "obłożenie {{occupied}}/{{total}} miejsc",
-    "backToSessions": "Lista turnusów",
     "room": "Pokój",
     "beds": "miejsc",
     "people": "os.",
     "freeRoom": "Pokój wolny",
+    "blocked": "zamknięty",
+    "closedRoom": "Pokój zamknięty w tym terminie",
     "tasks": "Zadania dla obsługi",
     "noTasks": "Brak zadań.",
     "taskPlaceholder": "np. dostawka — 1 łóżko",
     "addTask": "Dodaj zadanie",
-    "taskError": "Nie udało się dodać zadania."
+    "taskError": "Nie udało się dodać zadania.",
+    "loadError": "Nie udało się pobrać obłożenia."
   },
   "tasks": {
     "title": "Zadania dla obsługi",
@@ -167,12 +198,10 @@
   },
   "adminBookings": {
     "title": "Rezerwacje",
-    "filterSession": "Turnus",
     "filterStatus": "Status",
-    "allSessions": "Wszystkie turnusy",
     "allStatuses": "Wszystkie statusy",
     "organization": "Organizacja",
-    "session": "Turnus",
+    "dates": "Termin",
     "headcount": "Osoby",
     "total": "Kwota",
     "paymentState": "Płatność",
@@ -187,6 +216,7 @@
     "depositPaidBadge": "Zaliczka opłacona",
     "awaitingDeposit": "Oczekuje na zaliczkę",
     "rooms": "Pokoje",
+    "nights": "nocy: {{count}}",
     "deposit": "Zaliczka",
     "finalDue": "Dopłata do",
     "cancel": "Anuluj",
@@ -215,29 +245,24 @@
     "conflict": "Konflikt: numer pokoju jest zajęty albo dane zmienił ktoś inny. Odśwież i spróbuj ponownie.",
     "genericError": "Nie udało się zapisać zmian."
   },
-  "adminSessions": {
-    "title": "Turnusy",
-    "name": "Nazwa",
+  "adminClosures": {
+    "title": "Blokady",
+    "intro": "Zablokuj terminy, w których cały ośrodek lub pojedynczy pokój są niedostępne. Rezerwacje trafiające na blokadę są odrzucane.",
+    "reason": "Powód",
     "dates": "Termin",
-    "startDate": "Data rozpoczęcia",
-    "endDate": "Data zakończenia",
-    "pricePerPerson": "Cena/os. (zł)",
-    "depositPerPerson": "Zaliczka/os. (zł)",
-    "status": "Status",
-    "statuses": {
-      "Draft": "Szkic",
-      "Published": "Opublikowany",
-      "Archived": "Zarchiwizowany"
-    },
-    "add": "Dodaj turnus",
+    "startDate": "Pierwszy dzień blokady",
+    "endDate": "Ostatni dzień blokady",
+    "scope": "Zakres",
+    "wholeCenter": "Cały ośrodek",
+    "roomOption": "Tylko pokój {{number}}",
+    "roomScope": "Pokój {{number}}",
+    "add": "Dodaj blokadę",
     "save": "Zapisz zmiany",
     "cancelEdit": "Anuluj",
     "edit": "Edytuj",
-    "publish": "Opublikuj",
-    "archive": "Archiwizuj",
     "delete": "Usuń",
-    "conflict": "Konflikt: dane zmienił ktoś inny albo turnus ma rezerwacje. Odśwież i spróbuj ponownie.",
-    "genericError": "Nie udało się zapisać zmian."
+    "empty": "Brak blokad.",
+    "genericError": "Nie udało się zapisać blokady."
   },
   "paymentReturn": {
     "waiting": "Przetwarzamy płatność…",

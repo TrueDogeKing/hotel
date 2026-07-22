@@ -20,17 +20,23 @@ public class BookingRepository : IBookingRepository
 
     public BookingRepository(AppDbContext db) => _db = db;
 
-    public Task<List<Guid>> GetLiveAssignedRoomIdsAsync(
-        Guid campSessionId,
+    public Task<List<Guid>> GetBookedRoomIdsInRangeAsync(
+        DateOnly start,
+        DateOnly end,
+        Guid? excludeBookingId = null,
         CancellationToken cancellationToken = default
     ) =>
+        // Half-open overlap: two stays clash when a.Start < b.End && b.Start < a.End.
         _db
             .BookingRoomAssignments.Where(a =>
-                a.CampSessionId == campSessionId
+                a.StartDate < end
+                && start < a.EndDate
+                && (excludeBookingId == null || a.BookingId != excludeBookingId)
                 && a.Booking != null
                 && LiveStatuses.Contains(a.Booking.Status)
             )
             .Select(a => a.RoomId)
+            .Distinct()
             .ToListAsync(cancellationToken);
 
     public async Task AddAsync(Booking booking, CancellationToken cancellationToken = default) =>
@@ -38,27 +44,19 @@ public class BookingRepository : IBookingRepository
 
     public Task<Booking?> GetByIdAsync(Guid id, CancellationToken cancellationToken = default) =>
         _db
-            .Bookings.Include(b => b.CampSession)
-            .Include(b => b.RoomAssignments)
+            .Bookings.Include(b => b.RoomAssignments)
                 .ThenInclude(a => a.Room)
             .FirstOrDefaultAsync(b => b.Id == id, cancellationToken);
 
     public Task<List<Booking>> ListAsync(
-        Guid? campSessionId,
         BookingStatus? status,
         CancellationToken cancellationToken = default
     )
     {
         var query = _db
-            .Bookings.Include(b => b.CampSession)
-            .Include(b => b.RoomAssignments)
+            .Bookings.Include(b => b.RoomAssignments)
                 .ThenInclude(a => a.Room)
             .AsQueryable();
-        if (campSessionId is not null)
-        {
-            query = query.Where(b => b.CampSessionId == campSessionId);
-        }
-
         if (status is not null)
         {
             query = query.Where(b => b.Status == status);
@@ -66,6 +64,35 @@ public class BookingRepository : IBookingRepository
 
         return query.OrderByDescending(b => b.CreatedAt).ToListAsync(cancellationToken);
     }
+
+    public Task<List<Booking>> ListLiveInRangeAsync(
+        DateOnly start,
+        DateOnly end,
+        CancellationToken cancellationToken = default
+    ) =>
+        _db
+            .Bookings.Include(b => b.RoomAssignments)
+                .ThenInclude(a => a.Room)
+            .Where(b =>
+                LiveStatuses.Contains(b.Status) && b.StartDate < end && start < b.EndDate
+            )
+            .OrderBy(b => b.StartDate)
+            .ToListAsync(cancellationToken);
+
+    public Task<List<Booking>> ListUpcomingAsync(
+        DateOnly from,
+        int take,
+        CancellationToken cancellationToken = default
+    ) =>
+        _db
+            .Bookings.Include(b => b.RoomAssignments)
+            .Where(b =>
+                (b.Status == BookingStatus.PendingDeposit || b.Status == BookingStatus.Confirmed)
+                && b.EndDate >= from
+            )
+            .OrderBy(b => b.StartDate)
+            .Take(take)
+            .ToListAsync(cancellationToken);
 
     public async Task<Dictionary<Guid, List<PaymentKind>>> GetCompletedPaymentKindsAsync(
         IReadOnlyCollection<Guid> bookingIds,
@@ -87,8 +114,7 @@ public class BookingRepository : IBookingRepository
         CancellationToken cancellationToken = default
     ) =>
         _db
-            .Bookings.Include(b => b.CampSession)
-            .Include(b => b.RoomAssignments)
+            .Bookings.Include(b => b.RoomAssignments)
                 .ThenInclude(a => a.Room)
             .FirstOrDefaultAsync(b => b.ManageTokenHash == tokenHash, cancellationToken);
 
@@ -103,8 +129,6 @@ public class BookingRepository : IBookingRepository
     ) =>
         _db
             .Payments.Include(p => p.Booking)
-                .ThenInclude(b => b!.CampSession)
-            .Include(p => p.Booking)
                 .ThenInclude(b => b!.RoomAssignments)
             .FirstOrDefaultAsync(p => p.P24SessionId == p24SessionId, cancellationToken);
 
@@ -123,8 +147,7 @@ public class BookingRepository : IBookingRepository
         CancellationToken cancellationToken = default
     ) =>
         _db
-            .Bookings.Include(b => b.CampSession)
-            .Include(b => b.RoomAssignments)
+            .Bookings.Include(b => b.RoomAssignments)
             .Where(b =>
                 b.Status == BookingStatus.PendingDeposit
                 && b.HoldExpiresAt != null
@@ -142,11 +165,7 @@ public class BookingRepository : IBookingRepository
         CancellationToken cancellationToken = default
     ) =>
         _db
-            .Bookings.Where(b =>
-                b.Status == BookingStatus.Confirmed
-                && b.CampSession != null
-                && b.CampSession.EndDate < today
-            )
+            .Bookings.Where(b => b.Status == BookingStatus.Confirmed && b.EndDate <= today)
             .ToListAsync(cancellationToken);
 
     public void Detach(Booking booking)
@@ -182,10 +201,20 @@ public class BookingRepository : IBookingRepository
         }
         catch (DbUpdateException ex)
             when (ex.InnerException
-                    is PostgresException { SqlState: PostgresErrorCodes.UniqueViolation }
+                is PostgresException
+                {
+                    SqlState: PostgresErrorCodes.UniqueViolation
+                        or PostgresErrorCodes.ExclusionViolation
+                        or PostgresErrorCodes.DeadlockDetected
+                        or PostgresErrorCodes.SerializationFailure
+                }
             )
         {
-            // A concurrent booking grabbed one of the selected rooms first.
+            // A concurrent booking grabbed one of the selected rooms for an
+            // overlapping range first. The GiST exclusion constraint can surface
+            // this as a plain exclusion violation or, when two overlapping inserts
+            // race for the same lock, as a deadlock/serialization failure — all
+            // mean the same thing to the caller, which retries once.
             throw new ConflictException(
                 "One of the selected rooms was just booked by someone else."
             );

@@ -10,10 +10,9 @@ public record AdminAssignmentDto(
 
 public record AdminBookingDto(
     Guid Id,
-    string SessionName,
-    Guid CampSessionId,
     DateOnly StartDate,
     DateOnly EndDate,
+    int Nights,
     string OrganizationName,
     string ContactName,
     string Email,
@@ -33,7 +32,8 @@ public record AdminBookingDto(
     List<AdminAssignmentDto> Assignments
 );
 
-/// One row per room in the occupancy grid of a session.
+/// One row per room in the occupancy grid over a date range. A room is either
+/// free, taken by a booking, or blocked by a closure (Closed = true).
 public record RoomOccupancyDto(
     Guid RoomId,
     string RoomNumber,
@@ -43,12 +43,12 @@ public record RoomOccupancyDto(
     string? OrganizationName,
     string? BookingStatus,
     int? PeopleCount,
+    bool Closed,
+    string? ClosureReason,
     int OpenTaskCount
 );
 
-public record SessionOccupancyDto(
-    Guid SessionId,
-    string SessionName,
+public record OccupancyDto(
     DateOnly StartDate,
     DateOnly EndDate,
     int TotalBeds,
@@ -60,7 +60,6 @@ public record RoomTaskDto(
     Guid Id,
     Guid RoomId,
     string RoomNumber,
-    Guid? CampSessionId,
     Guid? BookingId,
     string Text,
     string Status,
@@ -68,30 +67,26 @@ public record RoomTaskDto(
     DateTime? DoneAt
 );
 
-public record CreateRoomTaskRequestDto(
-    Guid RoomId,
-    string Text,
-    Guid? CampSessionId,
-    Guid? BookingId
-);
+public record CreateRoomTaskRequestDto(Guid RoomId, string Text, Guid? BookingId);
 
 public record ReassignmentEntryDto(Guid RoomId, int PeopleCount);
 
 public record ReassignBookingRequestDto(List<ReassignmentEntryDto> Assignments);
 
-public record DashboardSessionDto(
+public record DashboardBookingDto(
     Guid Id,
-    string Name,
+    string OrganizationName,
     DateOnly StartDate,
     DateOnly EndDate,
-    int TotalBeds,
+    int Headcount,
     int OccupiedBeds,
-    int BookingCount
+    string Status
 );
 
 public record DashboardDto(
-    List<DashboardSessionDto> UpcomingSessions,
+    List<DashboardBookingDto> UpcomingBookings,
     int PendingDepositCount,
     int OverdueFinalCount,
-    int OpenTaskCount
+    int OpenTaskCount,
+    int ActiveClosureCount
 );

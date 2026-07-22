@@ -1,33 +1,17 @@
 /* ============================================================================
-   CampCenter — design foundation
+   CampCenter — Lakeside Hospitality design foundation
    Tokens, reset, base typography, and the shared control vocabulary.
-   Dark is the default theme; `:root[data-theme="light"]` is the light option.
-   Colors are authored in OKLCH. Accent is a refined blurple.
+   Light (warm sand + forest green) is the default; `:root[data-theme="dark"]`
+   is the charcoal-ink option. Palette from the Lakeside design system.
    ============================================================================ */
 
 :root {
-  /* ----- Brand + semantic (theme-independent) ----- */
-  --accent: oklch(0.63 0.188 266);
-  --accent-hover: oklch(0.68 0.17 266);
-  --accent-press: oklch(0.56 0.2 266);
-  --accent-soft: oklch(0.63 0.188 266 / 0.16);
-  --accent-ring: oklch(0.63 0.188 266 / 0.55);
-  --on-accent: oklch(0.99 0 0);
-
-  --success: oklch(0.7 0.15 152);
-  --success-soft: oklch(0.7 0.15 152 / 0.16);
-  --danger: oklch(0.62 0.2 22);
-  --danger-hover: oklch(0.67 0.19 22);
-  --danger-soft: oklch(0.62 0.2 22 / 0.15);
-  --warning: oklch(0.8 0.13 78);
-  --idle: oklch(0.8 0.13 78);
-
-  /* ----- Radii ----- */
+  /* ----- Radii — friendly, rounded (Lakeside) ----- */
   --r-xs: 3px;
-  --r-sm: 5px;
-  --r-md: 8px;
-  --r-lg: 12px;
-  --r-xl: 16px;
+  --r-sm: 6px;
+  --r-md: 10px;
+  --r-lg: 14px;
+  --r-xl: 18px;
   --r-full: 999px;
 
   /* ----- Motion ----- */
@@ -37,10 +21,12 @@
   --dur: 170ms;
   --dur-slow: 260ms;
 
-  /* ----- Type ----- */
+  /* ----- Type — Inter for UI/data, Bricolage Grotesque for display ----- */
   --font-sans:
-    "Inter var", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu,
+    "Inter", "Inter var", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu,
     "Helvetica Neue", Arial, sans-serif;
+  --font-display:
+    "Bricolage Grotesque", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-mono:
     ui-monospace, "Cascadia Code", "JetBrains Mono", "Segoe UI Mono", Consolas, "Liberation Mono",
     monospace;
@@ -55,77 +41,112 @@
   --z-toast: 500;
   --z-tooltip: 600;
 
-  /* ----- Dark theme surfaces (default) ----- */
-  --bg-app: oklch(0.21 0.006 266); /* deepest — rail */
-  --bg-nav: oklch(0.256 0.007 266); /* channel/DM sidebar */
-  --bg-body: oklch(0.288 0.007 266); /* conversation surface */
-  --bg-float: oklch(0.335 0.008 266); /* inputs, elevated panels, hover fills */
-  --bg-input: oklch(0.235 0.007 266);
-  --bg-hover: oklch(1 0 0 / 0.045);
-  --bg-active: oklch(1 0 0 / 0.09);
-  --bg-selected: oklch(1 0 0 / 0.075);
-  --bg-scrim: oklch(0.14 0.006 266 / 0.65);
+  /* ===== Lakeside LIGHT (default) — Warm Sand + Forest Green ===== */
+  --accent: #005236; /* forest green (primary) */
+  --accent-hover: #1f6b4c; /* primary container */
+  --accent-press: #003b26;
+  --accent-soft: rgba(0, 82, 54, 0.12);
+  --accent-ring: rgba(0, 82, 54, 0.45);
+  --on-accent: #ffffff;
 
-  --border: oklch(1 0 0 / 0.07);
-  --border-strong: oklch(1 0 0 / 0.13);
+  --secondary: #00639c; /* lake blue — links, highlights */
+  --on-secondary: #ffffff;
+  --secondary-soft: rgba(0, 99, 156, 0.12);
 
-  --text-strong: oklch(0.98 0.003 266); /* names, headings */
-  --text: oklch(0.9 0.004 266); /* body, messages */
-  --text-muted: oklch(0.74 0.008 266); /* secondary labels, timestamps */
-  --text-faint: oklch(0.63 0.009 266); /* section headers, hints */
+  --cta: #ffb956; /* sunny amber — high-priority CTAs */
+  --cta-hover: #ffd299;
+  --on-cta: #2a1800;
+
+  --success: #2f6b46;
+  --success-soft: rgba(47, 107, 70, 0.14);
+  --danger: #ba1a1a;
+  --danger-hover: #93000a;
+  --danger-soft: rgba(186, 26, 26, 0.1);
+  --warning: #9a6700;
+  --idle: #9a6700;
+
+  --bg-app: #eaf0e0; /* deepest — sand dim */
+  --bg-nav: #f1f5e9; /* surface container low */
+  --bg-body: #f6fbee; /* warm sand base */
+  --bg-float: #ffffff; /* cards, elevated panels */
+  --bg-input: #eef3e4;
+  --bg-hover: rgba(0, 82, 54, 0.06);
+  --bg-active: rgba(0, 82, 54, 0.1);
+  --bg-selected: rgba(0, 82, 54, 0.1);
+  --bg-scrim: rgba(24, 29, 21, 0.4);
+
+  --border: rgba(24, 29, 21, 0.1);
+  --border-strong: rgba(24, 29, 21, 0.2);
+
+  --text-strong: #181d15; /* on surface */
+  --text: #2b322a;
+  --text-muted: #3f4943; /* on surface variant */
+  --text-faint: #6f7972; /* outline */
   --text-on-brand: var(--on-accent);
 
-  --shadow-sm: 0 1px 2px oklch(0 0 0 / 0.28);
-  --shadow-md: 0 4px 14px oklch(0 0 0 / 0.34);
-  --shadow-lg: 0 12px 34px oklch(0 0 0 / 0.5);
+  /* Ambient, green-tinted shadows (soft stacking) */
+  --shadow-sm: 0 1px 2px rgba(31, 107, 76, 0.08);
+  --shadow-md: 0 4px 20px rgba(31, 107, 76, 0.1);
+  --shadow-lg: 0 12px 32px rgba(22, 39, 31, 0.14);
 
-  --scrollbar-thumb: oklch(0.16 0.006 266);
-  --scrollbar-thumb-hover: oklch(0.13 0.006 266);
-
-  color-scheme: dark;
-}
-
-:root[data-theme="light"] {
-  --accent: oklch(0.55 0.2 266);
-  --accent-hover: oklch(0.5 0.21 266);
-  --accent-press: oklch(0.46 0.21 266);
-  --accent-soft: oklch(0.55 0.2 266 / 0.12);
-  --accent-ring: oklch(0.55 0.2 266 / 0.45);
-
-  --success: oklch(0.6 0.15 152);
-  --success-soft: oklch(0.6 0.15 152 / 0.14);
-  --danger: oklch(0.55 0.22 25);
-  --danger-hover: oklch(0.5 0.22 25);
-  --danger-soft: oklch(0.55 0.22 25 / 0.1);
-  --warning: oklch(0.62 0.15 62);
-  --idle: oklch(0.7 0.14 72);
-
-  --bg-app: oklch(0.93 0.004 266);
-  --bg-nav: oklch(0.965 0.003 266);
-  --bg-body: oklch(1 0 0);
-  --bg-float: oklch(0.975 0.004 266);
-  --bg-input: oklch(0.955 0.005 266);
-  --bg-hover: oklch(0 0 0 / 0.045);
-  --bg-active: oklch(0 0 0 / 0.08);
-  --bg-selected: oklch(0.55 0.2 266 / 0.1);
-  --bg-scrim: oklch(0.4 0.01 266 / 0.4);
-
-  --border: oklch(0 0 0 / 0.09);
-  --border-strong: oklch(0 0 0 / 0.16);
-
-  --text-strong: oklch(0.24 0.012 266);
-  --text: oklch(0.32 0.011 266);
-  --text-muted: oklch(0.47 0.011 266);
-  --text-faint: oklch(0.55 0.011 266);
-
-  --shadow-sm: 0 1px 2px oklch(0 0 0 / 0.08);
-  --shadow-md: 0 4px 14px oklch(0 0 0 / 0.1);
-  --shadow-lg: 0 12px 34px oklch(0 0 0 / 0.16);
-
-  --scrollbar-thumb: oklch(0.8 0.005 266);
-  --scrollbar-thumb-hover: oklch(0.72 0.006 266);
+  --scrollbar-thumb: #cdd6c6;
+  --scrollbar-thumb-hover: #b9c3b1;
 
   color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  /* ===== Lakeside DARK — Charcoal Ink, forest green glows, sand text ===== */
+  --accent: #7ad5a8; /* glowing forest green */
+  --accent-hover: #8fe0b8;
+  --accent-press: #64c295;
+  --accent-soft: rgba(122, 213, 168, 0.16);
+  --accent-ring: rgba(122, 213, 168, 0.5);
+  --on-accent: #00251a;
+
+  --secondary: #97cbff;
+  --on-secondary: #001d33;
+  --secondary-soft: rgba(151, 203, 255, 0.16);
+
+  --cta: #ffb956;
+  --cta-hover: #ffd299;
+  --on-cta: #2a1800;
+
+  --success: #8cd6b0;
+  --success-soft: rgba(140, 214, 176, 0.16);
+  --danger: #ffb4ab;
+  --danger-hover: #ff897d;
+  --danger-soft: rgba(255, 180, 171, 0.15);
+  --warning: #ffb956;
+  --idle: #ffb956;
+
+  /* Tonal layers — higher elevation is slightly lighter (no harsh shadows) */
+  --bg-app: #0f120d;
+  --bg-nav: #171b13;
+  --bg-body: #161a14; /* charcoal ink base */
+  --bg-float: #1f241b;
+  --bg-input: #1b2017;
+  --bg-hover: rgba(255, 255, 255, 0.045);
+  --bg-active: rgba(255, 255, 255, 0.09);
+  --bg-selected: rgba(140, 214, 176, 0.14);
+  --bg-scrim: rgba(0, 0, 0, 0.65);
+
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.14);
+
+  --text-strong: #eef2e6;
+  --text: #d9e0d3;
+  --text-muted: #b7c1b3;
+  --text-faint: #8b968b;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 6px 20px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 12px 34px rgba(0, 0, 0, 0.55);
+
+  --scrollbar-thumb: #2a3025;
+  --scrollbar-thumb-hover: #333a2d;
+
+  color-scheme: dark;
 }
 
 /* ----- Reset ----- */
@@ -173,6 +194,7 @@ h2,
 h3,
 h4 {
   color: var(--text-strong);
+  font-family: var(--font-display);
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: -0.011em;

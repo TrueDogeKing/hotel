@@ -10,7 +10,6 @@ public static class EmailTemplates
 {
     public static EmailMessage BookingCreated(
         Booking booking,
-        CampSession session,
         string manageUrl,
         DateOnly finalDueDate
     )
@@ -18,20 +17,18 @@ public static class EmailTemplates
         var total = FormatZl(booking.TotalGrosze);
         var deposit = FormatZl(booking.DepositGrosze);
         var rest = FormatZl(booking.TotalGrosze - booking.DepositGrosze);
+        var stay = Stay(booking, booking.Language);
 
         if (booking.Language == "en")
         {
             return new EmailMessage(
                 booking.Email,
-                $"Booking received — {session.Name}",
+                $"Booking received — {stay}",
                 $"""
                 Hello {booking.ContactName},
 
                 we received your booking for {booking.Headcount} participants,
-                session "{session.Name}" ({Format(session.StartDate, "en")} – {Format(
-                    session.EndDate,
-                    "en"
-                )}).
+                {stay} ({booking.Nights} nights).
 
                 Total price: {total}
                 Deposit due to confirm the booking: {deposit}
@@ -53,15 +50,12 @@ public static class EmailTemplates
 
         return new EmailMessage(
             booking.Email,
-            $"Rezerwacja przyjęta — {session.Name}",
+            $"Rezerwacja przyjęta — {stay}",
             $"""
             Dzień dobry {booking.ContactName},
 
             przyjęliśmy rezerwację dla {booking.Headcount} uczestników,
-            turnus „{session.Name}" ({Format(session.StartDate, "pl")} – {Format(
-                session.EndDate,
-                "pl"
-            )}).
+            {stay} ({booking.Nights} nocy).
 
             Cena łączna: {total}
             Zaliczka potwierdzająca rezerwację: {deposit}
@@ -81,17 +75,18 @@ public static class EmailTemplates
         );
     }
 
-    public static EmailMessage BookingCancelled(Booking booking, CampSession session)
+    public static EmailMessage BookingCancelled(Booking booking)
     {
+        var stay = Stay(booking, booking.Language);
         if (booking.Language == "en")
         {
             return new EmailMessage(
                 booking.Email,
-                $"Booking cancelled — {session.Name}",
+                $"Booking cancelled — {stay}",
                 $"""
                 Hello {booking.ContactName},
 
-                your booking for session "{session.Name}" has been cancelled.
+                your booking for {stay} has been cancelled.
 
                 CampCenter
                 """
@@ -100,29 +95,29 @@ public static class EmailTemplates
 
         return new EmailMessage(
             booking.Email,
-            $"Rezerwacja anulowana — {session.Name}",
+            $"Rezerwacja anulowana — {stay}",
             $"""
             Dzień dobry {booking.ContactName},
 
-            Twoja rezerwacja na turnus „{session.Name}" została anulowana.
+            Twoja rezerwacja ({stay}) została anulowana.
 
             Ośrodek CampCenter
             """
         );
     }
 
-    public static EmailMessage BookingConfirmed(Booking booking, CampSession session)
+    public static EmailMessage BookingConfirmed(Booking booking)
     {
+        var stay = Stay(booking, booking.Language);
         if (booking.Language == "en")
         {
             return new EmailMessage(
                 booking.Email,
-                $"Booking confirmed — {session.Name}",
+                $"Booking confirmed — {stay}",
                 $"""
                 Hello {booking.ContactName},
 
-                we received your deposit — the booking for session "{session.Name}"
-                ({Format(session.StartDate, "en")} – {Format(session.EndDate, "en")}) is confirmed.
+                we received your deposit — the booking for {stay} is confirmed.
 
                 See you soon!
                 CampCenter
@@ -132,18 +127,21 @@ public static class EmailTemplates
 
         return new EmailMessage(
             booking.Email,
-            $"Rezerwacja potwierdzona — {session.Name}",
+            $"Rezerwacja potwierdzona — {stay}",
             $"""
             Dzień dobry {booking.ContactName},
 
-            otrzymaliśmy zaliczkę — rezerwacja na turnus „{session.Name}"
-            ({Format(session.StartDate, "pl")} – {Format(session.EndDate, "pl")}) jest potwierdzona.
+            otrzymaliśmy zaliczkę — rezerwacja ({stay}) jest potwierdzona.
 
             Do zobaczenia!
             Ośrodek CampCenter
             """
         );
     }
+
+    /// A stay rendered as a date range, e.g. "12–19 lipca 2026".
+    private static string Stay(Booking booking, string language) =>
+        $"{Format(booking.StartDate, language)} – {Format(booking.EndDate, language)}";
 
     private static string Format(DateOnly date, string language) =>
         date.ToString("d MMMM yyyy", new CultureInfo(language == "en" ? "en-GB" : "pl-PL"));

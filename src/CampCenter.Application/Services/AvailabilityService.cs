@@ -1,79 +1,125 @@
 using CampCenter.Application.DTOs.Public;
 using CampCenter.Application.Interfaces;
+using CampCenter.Application.Models;
 using CampCenter.Domain.Repositories;
+using Microsoft.Extensions.Options;
 
 namespace CampCenter.Application.Services;
 
 public class AvailabilityService : IAvailabilityService
 {
-    private readonly ICampSessionRepository _sessions;
     private readonly IRoomRepository _rooms;
     private readonly IBookingRepository _bookings;
+    private readonly IClosureRepository _closures;
+    private readonly BookingSettings _settings;
 
     public AvailabilityService(
-        ICampSessionRepository sessions,
         IRoomRepository rooms,
-        IBookingRepository bookings
+        IBookingRepository bookings,
+        IClosureRepository closures,
+        IOptions<BookingSettings> settings
     )
     {
-        _sessions = sessions;
         _rooms = rooms;
         _bookings = bookings;
+        _closures = closures;
+        _settings = settings.Value;
     }
 
-    public async Task<List<PublicSessionDto>> GetPublicSessionsAsync(
+    public async Task<AvailabilityDto> GetAvailabilityAsync(
+        DateOnly start,
+        DateOnly end,
         int? headcount,
         CancellationToken cancellationToken = default
     )
     {
-        var today = DateOnly.FromDateTime(DateTime.UtcNow);
-        var sessions = await _sessions.GetPublishedUpcomingAsync(today, cancellationToken);
+        var nights = end.DayNumber - start.DayNumber;
+        var centerReason = await GetCenterClosureReasonAsync(start, end, cancellationToken);
+        var free = await GetFreeRoomsByCapacityAsync(start, end, null, cancellationToken);
+        var remaining = (int)RoomMixCalculator.TotalCapacity(free);
 
-        var result = new List<PublicSessionDto>();
-        foreach (var session in sessions)
+        Dictionary<int, int>? mix = null;
+        bool? fits = null;
+        long? total = null;
+        long? deposit = null;
+        if (headcount is > 0)
         {
-            var free = await GetFreeRoomsByCapacityAsync(session.Id, cancellationToken);
-            var remaining = (int)RoomMixCalculator.TotalCapacity(free);
-            Dictionary<int, int>? mix = null;
-            bool? fits = null;
-            if (headcount is > 0)
-            {
-                mix = RoomMixCalculator.SuggestMix(headcount.Value, free);
-                fits = mix is not null;
-            }
-
-            result.Add(
-                new PublicSessionDto(
-                    session.Id,
-                    session.Name,
-                    session.StartDate,
-                    session.EndDate,
-                    session.PricePerPersonGrosze,
-                    session.DepositPerPersonGrosze,
-                    remaining,
-                    free,
-                    fits,
-                    mix
-                )
-            );
+            mix = RoomMixCalculator.SuggestMix(headcount.Value, free);
+            fits = centerReason is null && mix is not null;
+            total = _settings.PricePerPersonPerNightGrosze * headcount.Value * nights;
+            deposit = _settings.DepositPerPersonPerNightGrosze * headcount.Value * nights;
         }
 
-        return result;
+        return new AvailabilityDto(
+            start,
+            end,
+            nights,
+            centerReason is not null,
+            centerReason,
+            _settings.PricePerPersonPerNightGrosze,
+            _settings.DepositPerPersonPerNightGrosze,
+            remaining,
+            free,
+            fits,
+            mix,
+            total,
+            deposit
+        );
     }
 
     public async Task<Dictionary<int, int>> GetFreeRoomsByCapacityAsync(
-        Guid campSessionId,
+        DateOnly start,
+        DateOnly end,
+        Guid? excludeBookingId = null,
         CancellationToken cancellationToken = default
     )
     {
         var activeRooms = await _rooms.GetActiveAsync(cancellationToken);
-        var assigned = (
-            await _bookings.GetLiveAssignedRoomIdsAsync(campSessionId, cancellationToken)
-        ).ToHashSet();
+        var blocked = await GetBlockedRoomIdsAsync(start, end, excludeBookingId, cancellationToken);
 
         return activeRooms
-            .Where(r => !assigned.Contains(r.Id))
+            .Where(r => !blocked.Contains(r.Id))
             .GroupBy(r => r.Capacity)
             .ToDictionary(g => g.Key, g => g.Count());
+    }
+
+    public async Task<string?> GetCenterClosureReasonAsync(
+        DateOnly start,
+        DateOnly end,
+        CancellationToken cancellationToken = default
+    ) =>
+        (await _closures.GetOverlappingAsync(start, end, cancellationToken))
+            .FirstOrDefault(c => c.RoomId is null)
+            ?.Reason;
+
+    public async Task<HashSet<Guid>> GetBlockedRoomIdsAsync(
+        DateOnly start,
+        DateOnly end,
+        Guid? excludeBookingId = null,
+        CancellationToken cancellationToken = default
+    )
+    {
+        var overlappingClosures = await _closures.GetOverlappingAsync(start, end, cancellationToken);
+
+        // A center-wide closure (RoomId null) blocks every active room.
+        if (overlappingClosures.Any(c => c.RoomId is null))
+        {
+            return (await _rooms.GetActiveAsync(cancellationToken)).Select(r => r.Id).ToHashSet();
+        }
+
+        var blocked = (
+            await _bookings.GetBookedRoomIdsInRangeAsync(
+                start,
+                end,
+                excludeBookingId,
+                cancellationToken
+            )
+        ).ToHashSet();
+        foreach (var closure in overlappingClosures.Where(c => c.RoomId is not null))
+        {
+            blocked.Add(closure.RoomId!.Value);
+        }
+
+        return blocked;
     }
 }

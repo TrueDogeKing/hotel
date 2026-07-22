@@ -6,7 +6,6 @@ namespace CampCenter.Application.Interfaces;
 public interface IAdminBookingService
 {
     Task<List<AdminBookingDto>> ListAsync(
-        Guid? campSessionId,
         BookingStatus? status,
         CancellationToken cancellationToken = default
     );
@@ -24,8 +23,11 @@ public interface IAdminBookingService
         CancellationToken cancellationToken = default
     );
 
-    Task<SessionOccupancyDto> GetOccupancyAsync(
-        Guid campSessionId,
+    /// Per-room occupancy over an arbitrary date range: each room free, booked, or
+    /// blocked by a closure.
+    Task<OccupancyDto> GetOccupancyAsync(
+        DateOnly start,
+        DateOnly end,
         CancellationToken cancellationToken = default
     );
 

@@ -5,10 +5,30 @@
   },
   "home": {
     "heroTitle": "Lakeside summer camp center",
-    "heroSubtitle": "Camp sessions for organized groups — accommodation, meals and recreation grounds in one place.",
-    "bookCta": "Book a session",
-    "adminLink": "Admin panel",
-    "offerTitle": "What we offer",
+    "heroSubtitle": "Book any dates for your organized group — accommodation, meals and recreation grounds in one place.",
+    "bookCta": "Book your stay",
+    "bookNow": "Book now",
+    "navOffer": "Offer",
+    "navHow": "How it works",
+    "navContact": "Contact",
+    "adminLink": "Staff panel",
+    "offerTitle": "Everything you need for a perfect camp",
+    "offerSubtitle": "Designed for comfort and utility, so your group has an unforgettable lakeside stay.",
+    "how": {
+      "title": "How booking works",
+      "step1": {
+        "title": "Pick dates",
+        "body": "Choose your preferred dates and group size through the online portal."
+      },
+      "step2": {
+        "title": "We confirm",
+        "body": "Our team reviews and confirms availability within 24 hours."
+      },
+      "step3": {
+        "title": "Pay the deposit",
+        "body": "Secure your reservation with a deposit, and start packing!"
+      }
+    },
     "offer": {
       "rooms": {
         "title": "Accommodation",
@@ -23,9 +43,12 @@
         "body": "Sports fields, common rooms, a lakeside beach and a supervised swimming area."
       }
     },
-    "contactTitle": "Contact",
+    "contactTitle": "Get in touch",
+    "contactLead": "Have questions about hosting your group at CampCenter? Our team is ready to help you plan the perfect stay.",
     "contactAddress": "CampCenter, Jeziorna 1, 11-111 Nadjeziorze, Poland",
-    "contactPhone": "+48 000 000 000"
+    "contactPhone": "+48 000 000 000",
+    "contactEmail": "rezerwacje@campcenter.pl",
+    "rights": "© 2026 CampCenter Lakeside. All rights reserved."
   },
   "login": {
     "title": "Admin sign-in",
@@ -40,18 +63,19 @@
   },
   "wizard": {
     "steps": {
-      "headcount": "Group size",
-      "session": "Session",
+      "dates": "Dates",
       "rooms": "Rooms",
       "contact": "Contact details",
       "summary": "Summary"
     },
-    "headcountTitle": "How many people are coming?",
-    "sessionTitle": "Pick a session for {{headcount}} people",
-    "noSessions": "No sessions available.",
-    "pricePerPerson": "Price/person",
-    "freeBeds": "Free beds: {{count}}",
-    "doesNotFit": "Not enough space for this group",
+    "datesTitle": "When are you coming, and how many?",
+    "arrival": "Arrival date",
+    "departure": "Departure date",
+    "headcountLabel": "Group size",
+    "checkAvailability": "Check availability",
+    "nights": "{{count}} nights",
+    "centerClosed": "The center is closed in the selected range ({{reason}}). Pick other dates.",
+    "doesNotFitRange": "There is not enough space for this group in the selected range.",
     "roomsTitle": "Adjust the room split",
     "roomsHint": "The suggested split covers {{headcount}} people — adjust it within availability.",
     "roomType": "{{capacity}}-person room",
@@ -69,7 +93,7 @@
     "phone": "Phone",
     "notes": "Notes (optional)",
     "summaryTitle": "Booking summary",
-    "summarySession": "Session",
+    "summaryDates": "Dates",
     "summaryHeadcount": "Group size",
     "summaryRooms": "Rooms",
     "summaryTotal": "Total price",
@@ -83,7 +107,7 @@
     "submitting": "Submitting…",
     "roomsTaken": "One of the selected rooms was just booked — go back and refresh availability.",
     "invalidData": "Invalid booking data.",
-    "loadError": "Failed to load sessions.",
+    "loadError": "Failed to load availability.",
     "genericError": "Something went wrong. Try again."
   },
   "manage": {
@@ -128,9 +152,11 @@
     "dashboardTitle": "Admin panel",
     "welcome": "Signed in as {{login}}.",
     "logout": "Log out",
+    "viewSite": "Public site",
     "nav": {
       "dashboard": "Dashboard",
-      "sessions": "Sessions",
+      "occupancy": "Occupancy",
+      "closures": "Closures",
       "rooms": "Rooms",
       "bookings": "Bookings",
       "tasks": "Tasks"
@@ -140,23 +166,28 @@
     "pendingDeposits": "Pending deposits",
     "overdueFinals": "Overdue final payments",
     "openTasks": "Open tasks",
-    "upcomingSessions": "Upcoming sessions",
-    "noSessions": "No published sessions.",
-    "occupancy": "Occupancy: {{occupied}}/{{total}}",
-    "bookings": "Bookings: {{count}}"
+    "activeClosures": "Active closures",
+    "upcomingBookings": "Upcoming bookings",
+    "noBookings": "No upcoming bookings.",
+    "beds": "{{count}} beds"
   },
   "occupancy": {
+    "title": "Occupancy",
+    "from": "From",
+    "to": "To",
     "summary": "occupancy {{occupied}}/{{total}} beds",
-    "backToSessions": "Session list",
     "room": "Room",
     "beds": "beds",
     "people": "people",
     "freeRoom": "Room free",
+    "blocked": "closed",
+    "closedRoom": "Room closed in this range",
     "tasks": "Housekeeping tasks",
     "noTasks": "No tasks.",
     "taskPlaceholder": "e.g. extra bed",
     "addTask": "Add task",
-    "taskError": "Failed to add the task."
+    "taskError": "Failed to add the task.",
+    "loadError": "Failed to load occupancy."
   },
   "tasks": {
     "title": "Housekeeping tasks",
@@ -167,12 +198,10 @@
   },
   "adminBookings": {
     "title": "Bookings",
-    "filterSession": "Session",
     "filterStatus": "Status",
-    "allSessions": "All sessions",
     "allStatuses": "All statuses",
     "organization": "Organization",
-    "session": "Session",
+    "dates": "Dates",
     "headcount": "People",
     "total": "Amount",
     "paymentState": "Payment",
@@ -187,6 +216,7 @@
     "depositPaidBadge": "Deposit paid",
     "awaitingDeposit": "Awaiting deposit",
     "rooms": "Rooms",
+    "nights": "{{count}} nights",
     "deposit": "Deposit",
     "finalDue": "Final payment by",
     "cancel": "Cancel",
@@ -215,29 +245,24 @@
     "conflict": "Conflict: the room number is taken or someone else changed the data. Reload and try again.",
     "genericError": "Saving the changes failed."
   },
-  "adminSessions": {
-    "title": "Camp sessions",
-    "name": "Name",
+  "adminClosures": {
+    "title": "Closures",
+    "intro": "Block dates when the whole center, or a single room, is unavailable. Bookings that hit a closure are rejected.",
+    "reason": "Reason",
     "dates": "Dates",
-    "startDate": "Start date",
-    "endDate": "End date",
-    "pricePerPerson": "Price/person (zł)",
-    "depositPerPerson": "Deposit/person (zł)",
-    "status": "Status",
-    "statuses": {
-      "Draft": "Draft",
-      "Published": "Published",
-      "Archived": "Archived"
-    },
-    "add": "Add session",
+    "startDate": "First closed day",
+    "endDate": "Last closed day",
+    "scope": "Scope",
+    "wholeCenter": "Whole center",
+    "roomOption": "Only room {{number}}",
+    "roomScope": "Room {{number}}",
+    "add": "Add closure",
     "save": "Save changes",
     "cancelEdit": "Cancel",
     "edit": "Edit",
-    "publish": "Publish",
-    "archive": "Archive",
     "delete": "Delete",
-    "conflict": "Conflict: someone else changed the data or the session has bookings. Reload and try again.",
-    "genericError": "Saving the changes failed."
+    "empty": "No closures.",
+    "genericError": "Saving the closure failed."
   },
   "paymentReturn": {
     "waiting": "Processing the payment…",

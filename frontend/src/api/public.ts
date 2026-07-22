@@ -1,28 +1,47 @@
 import { api } from "./client";
 import { getStoredLanguage } from "../i18n";
 
-export interface PublicSession {
-  id: string;
-  name: string;
+export interface Availability {
   startDate: string;
   endDate: string;
-  pricePerPersonGrosze: number;
-  depositPerPersonGrosze: number;
+  nights: number;
+  centerClosed: boolean;
+  centerClosedReason: string | null;
+  pricePerPersonPerNightGrosze: number;
+  depositPerPersonPerNightGrosze: number;
   remainingCapacity: number;
   freeRoomsByCapacity: Record<string, number>;
   fits: boolean | null;
   suggestedMix: Record<string, number> | null;
+  totalGrosze: number | null;
+  depositGrosze: number | null;
 }
 
-export async function getPublicSessions(headcount?: number): Promise<PublicSession[]> {
-  const { data } = await api.get<PublicSession[]>("/public/sessions", {
-    params: headcount ? { headcount } : {},
+export async function getAvailability(
+  start: string,
+  end: string,
+  headcount?: number,
+): Promise<Availability> {
+  const { data } = await api.get<Availability>("/public/availability", {
+    params: { start, end, ...(headcount ? { headcount } : {}) },
   });
   return data;
 }
 
+export interface PublicClosure {
+  reason: string;
+  startDate: string;
+  endDate: string;
+}
+
+export async function getPublicClosures(): Promise<PublicClosure[]> {
+  const { data } = await api.get<PublicClosure[]>("/public/availability/closures");
+  return data;
+}
+
 export interface CreateBookingInput {
-  campSessionId: string;
+  startDate: string;
+  endDate: string;
   headcount: number;
   roomCounts: Record<string, number>;
   organizationName: string;
@@ -58,9 +77,9 @@ export interface BookingDetails {
   id: string;
   status: "PendingDeposit" | "Confirmed" | "Cancelled" | "Completed";
   cancelReason: string | null;
-  sessionName: string;
   startDate: string;
   endDate: string;
+  nights: number;
   organizationName: string;
   contactName: string;
   email: string;

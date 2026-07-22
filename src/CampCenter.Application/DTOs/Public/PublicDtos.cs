@@ -1,22 +1,31 @@
 namespace CampCenter.Application.DTOs.Public;
 
-/// A published session as the public booking flow sees it. When a headcount was
-/// given, Fits/SuggestedMix say whether and how the group can be housed.
-public record PublicSessionDto(
-    Guid Id,
-    string Name,
+/// Availability for a requested date range. When a headcount was given,
+/// Fits/SuggestedMix say whether and how the group can be housed, and the
+/// Total/Deposit amounts are computed for that headcount over the nights.
+public record AvailabilityDto(
     DateOnly StartDate,
     DateOnly EndDate,
-    long PricePerPersonGrosze,
-    long DepositPerPersonGrosze,
+    int Nights,
+    /// True when the whole center is closed for part of the range (no booking possible).
+    bool CenterClosed,
+    string? CenterClosedReason,
+    long PricePerPersonPerNightGrosze,
+    long DepositPerPersonPerNightGrosze,
     int RemainingCapacity,
     Dictionary<int, int> FreeRoomsByCapacity,
     bool? Fits,
-    Dictionary<int, int>? SuggestedMix
+    Dictionary<int, int>? SuggestedMix,
+    long? TotalGrosze,
+    long? DepositGrosze
 );
 
+/// A center-wide closure as the public site advertises it.
+public record PublicClosureDto(string Reason, DateOnly StartDate, DateOnly EndDate);
+
 public record CreateBookingRequestDto(
-    Guid CampSessionId,
+    DateOnly StartDate,
+    DateOnly EndDate,
     int Headcount,
     Dictionary<int, int> RoomCounts,
     string OrganizationName,
@@ -43,9 +52,9 @@ public record BookingDetailsDto(
     Guid Id,
     string Status,
     string? CancelReason,
-    string SessionName,
     DateOnly StartDate,
     DateOnly EndDate,
+    int Nights,
     string OrganizationName,
     string ContactName,
     string Email,

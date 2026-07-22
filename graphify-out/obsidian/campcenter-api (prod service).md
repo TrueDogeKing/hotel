@@ -1,0 +1,118 @@
+---
+source_file: "docker/docker-compose.prod.yml"
+type: "concept"
+community: "Docker & Project Docs"
+location: "services.api"
+tags:
+  - graphify/concept
+  - graphify/EXTRACTED
+  - community/Docker__Project_Docs
+---
+
+# campcenter-api (prod service)
+
+## Context
+
+_Source: `docker/docker-compose.prod.yml` — full file embedded (91 lines)._
+
+```yaml
+# Production stack: Caddy (TLS) -> frontend / api, PostgreSQL internal.
+# Usage: docker compose --env-file ../.env -f docker-compose.prod.yml up -d --build
+# Required in .env: DOMAIN, JWT__Key, POSTGRES_PASSWORD, ADMIN_PASSWORD, EMAIL_* (SMTP), P24_* (payments).
+name: campcenter
+
+services:
+  caddy:
+    image: caddy:2-alpine
+    container_name: campcenter-caddy
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp" # HTTP/3
+    environment:
+      DOMAIN: ${DOMAIN:?set DOMAIN in .env}
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data
+      - caddy-config:/config
+    depends_on:
+      - frontend
+      - api
+
+  frontend:
+    container_name: campcenter-frontend
+    restart: unless-stopped
+    build:
+      context: ../frontend
+    depends_on:
+      api:
+        condition: service_healthy
+
+  api:
+    container_name: campcenter-api
+    restart: unless-stopped
+    build:
+      context: ..
+      dockerfile: src/CampCenter.Api/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ASPNETCORE_HTTP_PORTS=8080
+      - ConnectionStrings__DefaultConnection=Host=postgres;Port=5432;Database=${POSTGRES_DB:-campcenter};Username=${POSTGRES_USER:-campcenter};Password=${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env}
+      - Database__MigrateAutomatically=true
+      - Database__SeedAutomatically=true
+      - Jwt__Key=${JWT__Key:?set JWT__Key in .env}
+      - Jwt__Issuer=${JWT__Issuer:-CampCenter}
+      - Jwt__Audience=${JWT__Audience:-CampCenter}
+      - Admin__Password=${ADMIN_PASSWORD:?set ADMIN_PASSWORD in .env}
+      - Cors__AllowedOrigins__0=https://${DOMAIN:?set DOMAIN in .env}
+      - Email__Host=${EMAIL_HOST:?set EMAIL_HOST in .env}
+      - Email__Port=${EMAIL_PORT:-587}
+      - Email__Username=${EMAIL_USERNAME:-}
+      - Email__Password=${EMAIL_PASSWORD:-}
+      - Email__From=${EMAIL_FROM:?set EMAIL_FROM in .env}
+      - Email__UseSsl=${EMAIL_USE_SSL:-true}
+      - Booking__PublicBaseUrl=https://${DOMAIN}
+      - Booking__AdminAlertEmail=${BOOKING_ADMIN_ALERT_EMAIL:-}
+      - P24__MerchantId=${P24_MERCHANT_ID:?set P24_MERCHANT_ID in .env}
+      - P24__PosId=${P24_POS_ID:?set P24_POS_ID in .env}
+      - P24__CrcKey=${P24_CRC_KEY:?set P24_CRC_KEY in .env}
+      - P24__ApiKey=${P24_API_KEY:?set P24_API_KEY in .env}
+      - P24__BaseUrl=${P24_BASE_URL:-https://sandbox.przelewy24.pl}
+      - P24__ApiBaseUrl=https://${DOMAIN}
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  postgres:
+    image: postgres:16-alpine
+    container_name: campcenter-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-campcenter}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env}
+      POSTGRES_DB: ${POSTGRES_DB:-campcenter}
+    volumes:
+      # Separate volume from the dev stack: initializes with the .env password on
+      # first prod:up instead of inheriting the dev database (default password).
+      - campcenter-db-prod:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-campcenter} -d ${POSTGRES_DB:-campcenter}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+
+volumes:
+  campcenter-db-prod:
+  caddy-data:
+  caddy-config:
+```
+
+## Connections
+- [[Production Docker Compose Stack]] - `references` [EXTRACTED]
+- [[Przelewy24 Payments Integration]] - `references` [INFERRED]
+- [[campcenter-caddy (reverse proxy  TLS)]] - `references` [EXTRACTED]
+- [[campcenter-db-prod (PostgreSQL)]] - `shares_data_with` [EXTRACTED]
+
+#graphify/concept #graphify/EXTRACTED #community/Docker__Project_Docs
