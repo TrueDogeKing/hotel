@@ -2,12 +2,7 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import AdminLayout from "../../components/admin/AdminLayout";
 import ConfirmDialog from "../../components/ConfirmDialog";
-import {
-  cancelAdminBooking,
-  formatZl,
-  getAdminBookings,
-  type AdminBooking,
-} from "../../api/admin";
+import { cancelAdminBooking, formatZl, getAdminBookings, type AdminBooking } from "../../api/admin";
 
 export default function AdminBookingsPage() {
   const { t, i18n } = useTranslation();

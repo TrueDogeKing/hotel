@@ -143,7 +143,10 @@ export default function ClosuresPage() {
         </label>
         <label>
           {t("adminClosures.scope")}
-          <select value={form.roomId} onChange={(e) => setForm({ ...form, roomId: e.target.value })}>
+          <select
+            value={form.roomId}
+            onChange={(e) => setForm({ ...form, roomId: e.target.value })}
+          >
             <option value="">{t("adminClosures.wholeCenter")}</option>
             {rooms.map((r) => (
               <option key={r.id} value={r.id}>
@@ -152,9 +155,7 @@ export default function ClosuresPage() {
             ))}
           </select>
         </label>
-        <button type="submit">
-          {editing ? t("adminClosures.save") : t("adminClosures.add")}
-        </button>
+        <button type="submit">{editing ? t("adminClosures.save") : t("adminClosures.add")}</button>
         {editing && (
           <button
             type="button"

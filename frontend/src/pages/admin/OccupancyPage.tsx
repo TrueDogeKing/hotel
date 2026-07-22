@@ -31,17 +31,32 @@ export default function OccupancyPage() {
 
   const reload = useCallback(async () => {
     if (!start || !end || end <= start) return;
-    setError(null);
     try {
-      setOccupancy(await getOccupancy(start, end));
+      const data = await getOccupancy(start, end);
+      setOccupancy(data);
+      setError(null);
     } catch {
       setError(t("occupancy.loadError"));
     }
   }, [start, end, t]);
 
   useEffect(() => {
-    void reload();
-  }, [reload]);
+    if (!start || !end || end <= start) return;
+    let cancelled = false;
+    void getOccupancy(start, end)
+      .then((data) => {
+        if (!cancelled) {
+          setOccupancy(data);
+          setError(null);
+        }
+      })
+      .catch(() => {
+        if (!cancelled) setError(t("occupancy.loadError"));
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [start, end, t]);
 
   async function selectRoom(room: RoomOccupancy) {
     setSelected(room);
@@ -119,7 +134,9 @@ export default function OccupancyPage() {
                 >
                   <strong>{room.roomNumber}</strong>
                   <span>
-                    {room.closed ? t("occupancy.blocked") : `${room.peopleCount ?? 0}/${room.capacity}`}
+                    {room.closed
+                      ? t("occupancy.blocked")
+                      : `${room.peopleCount ?? 0}/${room.capacity}`}
                   </span>
                   {room.openTaskCount > 0 && (
                     <span className="task-badge">{room.openTaskCount}</span>
