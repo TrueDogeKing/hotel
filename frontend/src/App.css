@@ -2410,18 +2410,30 @@ p[role="alert"] {
   margin-bottom: 0.25rem;
 }
 
+/* The group panel always sits under the calendar and timetable at full width —
+   the phone layout, used at every size. As a narrow sidebar it had far less room
+   than the day programme it shows, and the eye had to jump sideways to find it. */
 .schedule-layout {
   display: flex;
+  flex-direction: column;
   gap: 1.5rem;
-  align-items: flex-start;
 }
 .schedule-main {
-  flex: 1;
   min-width: 0;
+  width: 100%;
+}
+.schedule-group-anchor {
+  width: 100%;
+  scroll-margin-top: 1rem;
 }
 .schedule-hint {
   margin-top: 1.5rem;
   color: var(--text-faint);
+}
+/* Scroll target for a day click. The offset keeps the date heading clear of the
+   viewport edge instead of flush against it. */
+.schedule-day-anchor {
+  scroll-margin-top: 1rem;
 }
 
 /* --- Month grid --- */
@@ -2667,6 +2679,9 @@ p[role="alert"] {
   border-radius: var(--r-md);
   border: 1px solid var(--border);
   background: var(--bg-float);
+  /* Buttons inherit the accent's white text globally; every line inside used to
+     set its own colour, which left the bare <strong> title white on white. */
+  color: var(--text);
   font-size: 0.82rem;
   line-height: 1.25;
   text-align: left;
@@ -2718,14 +2733,12 @@ p[role="alert"] {
 /* --- Group programme panel --- */
 
 .group-panel {
-  width: min(460px, 100%);
+  width: 100%;
   padding: 1rem;
   border: 1px solid var(--border);
   border-radius: var(--r-lg);
   background: var(--bg-float);
   box-shadow: var(--shadow-sm);
-  max-height: calc(100dvh - 8rem);
-  overflow-y: auto;
 }
 .group-panel-header {
   display: flex;
@@ -2895,13 +2908,8 @@ p[role="alert"] {
 }
 
 @media (max-width: 60rem) {
-  .schedule-layout {
-    flex-direction: column;
-  }
-  .group-panel {
-    width: 100%;
-    max-height: none;
-  }
+  /* The stacked layout is now the default, so only the calendar's own density
+     still needs narrowing here. */
   .cal-tile {
     min-height: 5.5rem;
   }

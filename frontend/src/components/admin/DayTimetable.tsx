@@ -8,8 +8,9 @@ interface Props {
   onSelectGroup: (bookingId: string) => void;
 }
 
-/** Height of one hour row, in px. Blocks are positioned against this. */
-const HOUR_HEIGHT = 56;
+/** Height of one hour row, in px. Blocks are positioned against this; it needs to
+ *  leave a one-hour entry room for its title, time and groups. */
+const HOUR_HEIGHT = 64;
 /** Floor for very short entries, so a 15-minute item stays readable. */
 const MIN_BLOCK_HEIGHT = 26;
 

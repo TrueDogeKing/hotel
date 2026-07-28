@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { isAxiosError } from "axios";
 import {
@@ -25,6 +25,13 @@ interface Props {
   onClose: () => void;
   /** Lets the parent refresh the calendar after entries change. */
   onChanged?: () => void;
+  /**
+   * Fired once this group's programme has arrived and the panel has its real
+   * height. Parents scroll to the panel on this rather than on selection: while it
+   * is still an empty loading box the page is too short to bring it to the top, so
+   * the browser clamps the scroll and it lands halfway down.
+   */
+  onLoaded?: () => void;
 }
 
 /** Two entries on the same day whose times overlap — surfaced, not blocked. */
@@ -37,7 +44,12 @@ function overlaps(entry: ScheduleEntry, others: ScheduleEntry[]): boolean {
   );
 }
 
-export default function GroupSchedulePanel({ bookingId, onClose, onChanged }: Props) {
+export default function GroupSchedulePanel({
+  bookingId,
+  onClose,
+  onChanged,
+  onLoaded,
+}: Props) {
   const { t, i18n } = useTranslation();
   const [schedule, setSchedule] = useState<BookingSchedule | null>(null);
   const [dietaryNotes, setDietaryNotes] = useState("");
@@ -46,6 +58,23 @@ export default function GroupSchedulePanel({ bookingId, onClose, onChanged }: Pr
   const [deleteTarget, setDeleteTarget] = useState<ScheduleEntry | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [notice, setNotice] = useState<string | null>(null);
+  // Held in a ref so an inline arrow from the parent cannot change the effects'
+  // identity and re-trigger the fetch.
+  const onLoadedRef = useRef(onLoaded);
+  useEffect(() => {
+    onLoadedRef.current = onLoaded;
+  });
+
+  // Announced from an effect, not from the fetch callback: the state set there has
+  // not been committed yet, so the panel is still an empty box and a parent that
+  // scrolls to it would measure the wrong height. Once per group, so re-loading
+  // after an edit does not yank the page back.
+  const announcedFor = useRef<string | null>(null);
+  useEffect(() => {
+    if (!schedule || announcedFor.current === schedule.bookingId) return;
+    announcedFor.current = schedule.bookingId;
+    onLoadedRef.current?.();
+  }, [schedule]);
 
   async function reload() {
     const data = await getBookingSchedule(bookingId);

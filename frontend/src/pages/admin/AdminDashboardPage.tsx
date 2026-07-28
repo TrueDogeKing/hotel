@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { isAxiosError } from "axios";
@@ -14,6 +14,7 @@ import {
   type Dashboard,
 } from "../../api/admin";
 import { formatDate as formatIsoDate } from "../../utils/dates";
+import { scrollPanelIntoView } from "../../utils/scroll";
 
 export default function AdminDashboardPage() {
   const { t, i18n } = useTranslation();
@@ -23,6 +24,7 @@ export default function AdminDashboardPage() {
   const [adding, setAdding] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [notice, setNotice] = useState<string | null>(null);
+  const groupPanelRef = useRef<HTMLDivElement>(null);
 
   const reload = useCallback(async () => {
     setDashboard(await getDashboard());
@@ -169,11 +171,17 @@ export default function AdminDashboardPage() {
             </div>
 
             {selectedBookingId && (
-              <GroupSchedulePanel
-                bookingId={selectedBookingId}
-                onClose={() => setSelectedBookingId(null)}
-                onChanged={() => void reload()}
-              />
+              <div ref={groupPanelRef} className="schedule-group-anchor">
+                {/* Scrolls once the panel has content: the bookings table above is
+                    short, so an empty loading box leaves the page too short to
+                    bring the panel to the top. */}
+                <GroupSchedulePanel
+                  bookingId={selectedBookingId}
+                  onClose={() => setSelectedBookingId(null)}
+                  onChanged={() => void reload()}
+                  onLoaded={() => scrollPanelIntoView(groupPanelRef.current)}
+                />
+              </div>
             )}
           </div>
         </>

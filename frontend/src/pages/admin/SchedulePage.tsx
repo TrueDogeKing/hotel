@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { isAxiosError } from "axios";
@@ -17,6 +17,7 @@ import {
   type ScheduleDay,
 } from "../../api/admin";
 import { monthGrid, todayIso } from "../../utils/dates";
+import { scrollPanelIntoView } from "../../utils/scroll";
 
 const TODAY = todayIso();
 
@@ -33,6 +34,13 @@ export default function SchedulePage() {
   const [selectedBookingId, setSelectedBookingId] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [notice, setNotice] = useState<string | null>(null);
+  const timetableRef = useRef<HTMLDivElement>(null);
+  const groupPanelRef = useRef<HTMLDivElement>(null);
+  // Set when the user picks a day, cleared once that day's timetable has been
+  // scrolled to. A flag rather than scrolling straight from the click, because the
+  // timetable only renders after its fetch lands — scrolling any earlier would
+  // just move to the "pick a day" placeholder.
+  const scrollToTimetable = useRef(false);
 
   // The visible grid always spans six weeks, so fetch exactly what it shows —
   // that way bars starting in the trailing days of the previous month render too.
@@ -76,6 +84,16 @@ export default function SchedulePage() {
       cancelled = true;
     };
   }, [selectedDate, t]);
+
+  // The month grid is tall enough that the day's timetable lands below the fold, so
+  // a click could look like it did nothing. Deliberately not run on first paint —
+  // today is selected on mount and jumping the page down then would be jarring.
+  useEffect(() => {
+    if (!scrollToTimetable.current) return;
+    if (!selectedDate || day?.date !== selectedDate) return;
+    scrollToTimetable.current = false;
+    scrollPanelIntoView(timetableRef.current);
+  }, [day, selectedDate]);
 
   async function refreshAll() {
     await loadCalendar();
@@ -145,7 +163,12 @@ export default function SchedulePage() {
             bars={bars}
             dayBadges={dayBadges}
             selectedIso={selectedDate}
-            onSelectDay={(iso) => setSelectedDate(iso === selectedDate ? null : iso)}
+            onSelectDay={(iso) => {
+              // Clicking the selected day again clears it — nothing to scroll to.
+              const next = iso === selectedDate ? null : iso;
+              scrollToTimetable.current = next !== null;
+              setSelectedDate(next);
+            }}
             onSelectBar={setSelectedBookingId}
             onMonthChange={(y, m) => {
               setYear(y);
@@ -154,19 +177,24 @@ export default function SchedulePage() {
           />
 
           {/* Compare dates so a stale day never renders under a new selection. */}
-          {selectedDate && day?.date === selectedDate ? (
-            <DayTimetable day={day} onSelectGroup={setSelectedBookingId} />
-          ) : (
-            <p className="schedule-hint">{t("schedule.pickDay")}</p>
-          )}
+          <div ref={timetableRef} className="schedule-day-anchor">
+            {selectedDate && day?.date === selectedDate ? (
+              <DayTimetable day={day} onSelectGroup={setSelectedBookingId} />
+            ) : (
+              <p className="schedule-hint">{t("schedule.pickDay")}</p>
+            )}
+          </div>
         </div>
 
         {selectedBookingId && (
-          <GroupSchedulePanel
-            bookingId={selectedBookingId}
-            onClose={() => setSelectedBookingId(null)}
-            onChanged={() => void refreshAll()}
-          />
+          <div ref={groupPanelRef} className="schedule-group-anchor">
+            <GroupSchedulePanel
+              bookingId={selectedBookingId}
+              onClose={() => setSelectedBookingId(null)}
+              onChanged={() => void refreshAll()}
+              onLoaded={() => scrollPanelIntoView(groupPanelRef.current)}
+            />
+          </div>
         )}
       </div>
     </AdminLayout>
