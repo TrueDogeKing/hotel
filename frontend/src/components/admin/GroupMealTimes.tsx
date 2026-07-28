@@ -63,11 +63,15 @@ export default function GroupMealTimes({ bookingId, onChanged }: Props) {
     }
   }
 
-  function reportApplied(updated: number, skipped: number) {
-    setNotice(
+  function reportApplied(updated: number, skipped: number, created: number) {
+    const applied =
       skipped > 0
         ? t("schedule.mealTimes.appliedWithExceptions", { updated, skipped })
-        : t("schedule.mealTimes.applied", { updated }),
+        : t("schedule.mealTimes.applied", { updated });
+    // Applying a time also seeds whatever the stay was missing, so say so rather
+    // than leaving the new meals to appear unannounced.
+    setNotice(
+      created > 0 ? `${applied} ${t("schedule.mealTimes.alsoSeeded", { count: created })}` : applied,
     );
   }
 
@@ -85,7 +89,7 @@ export default function GroupMealTimes({ bookingId, onChanged }: Props) {
         rowVersion: mealTime.rowVersion,
       });
       applyToState(await getBookingMealTimes(bookingId));
-      reportApplied(result.updated, result.skippedCustomized);
+      reportApplied(result.updated, result.skippedCustomized, result.created);
       onChanged();
     } catch (err) {
       handleApiError(err);
@@ -101,7 +105,7 @@ export default function GroupMealTimes({ bookingId, onChanged }: Props) {
     try {
       const result = await resetBookingMealTime(bookingId, mealTime.mealTimeDefaultId, true);
       applyToState(await getBookingMealTimes(bookingId));
-      reportApplied(result.updated, result.skippedCustomized);
+      reportApplied(result.updated, result.skippedCustomized, result.created);
       onChanged();
     } catch (err) {
       handleApiError(err);

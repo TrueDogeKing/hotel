@@ -335,7 +335,13 @@ public class ScheduleService : IScheduleService
             )
             : (0, 0);
 
-        return new ApplyBookingMealTimeResultDto(ToDto(slot, existing), updated, skipped);
+        // Re-timing only moves meals that already exist, so choosing a time for a
+        // stay that has none would have left the group empty until someone pressed
+        // "generate missing meals". Seed them here instead. Idempotent, and meals an
+        // admin deleted on purpose still stay deleted.
+        var created = await GenerateMealsForBookingAsync(bookingId, cancellationToken);
+
+        return new ApplyBookingMealTimeResultDto(ToDto(slot, existing), updated, skipped, created);
     }
 
     public async Task<ApplyBookingMealTimeResultDto> ResetBookingMealTimeAsync(
@@ -371,7 +377,9 @@ public class ScheduleService : IScheduleService
             )
             : (0, 0);
 
-        return new ApplyBookingMealTimeResultDto(ToDto(slot, null), updated, skipped);
+        var created = await GenerateMealsForBookingAsync(bookingId, cancellationToken);
+
+        return new ApplyBookingMealTimeResultDto(ToDto(slot, null), updated, skipped, created);
     }
 
     /// Moves every meal this group has from one slot to new times in one go.

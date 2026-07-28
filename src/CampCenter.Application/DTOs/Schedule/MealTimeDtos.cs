@@ -59,10 +59,11 @@ public record SetBookingMealTimeRequestDto(
     uint RowVersion
 );
 
-/// How a re-time landed: how many meals moved, and how many one-off exceptions
-/// were deliberately preserved.
+/// How a re-time landed: how many meals moved, how many one-off exceptions were
+/// deliberately preserved, and how many the stay was missing and got seeded.
 public record ApplyBookingMealTimeResultDto(
     BookingMealTimeDto MealTime,
     int Updated,
-    int SkippedCustomized
+    int SkippedCustomized,
+    int Created
 );

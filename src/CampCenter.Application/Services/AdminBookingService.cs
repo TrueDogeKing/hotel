@@ -1,3 +1,4 @@
+using System.Text.Json;
 using CampCenter.Application.DTOs.AdminPanel;
 using CampCenter.Application.DTOs.Schedule;
 using CampCenter.Application.Interfaces;
@@ -18,6 +19,8 @@ public class AdminBookingService : IAdminBookingService
     private readonly IClosureRepository _closures;
     private readonly IAvailabilityService _availability;
     private readonly IEmailSender _email;
+    private readonly ITokenService _tokenService;
+    private readonly IScheduleService _schedule;
     private readonly BookingSettings _settings;
     private readonly ILogger<AdminBookingService> _logger;
 
@@ -28,6 +31,8 @@ public class AdminBookingService : IAdminBookingService
         IClosureRepository closures,
         IAvailabilityService availability,
         IEmailSender email,
+        ITokenService tokenService,
+        IScheduleService schedule,
         IOptions<BookingSettings> settings,
         ILogger<AdminBookingService> logger
     )
@@ -38,6 +43,8 @@ public class AdminBookingService : IAdminBookingService
         _closures = closures;
         _availability = availability;
         _email = email;
+        _tokenService = tokenService;
+        _schedule = schedule;
         _settings = settings.Value;
         _logger = logger;
     }
@@ -65,6 +72,115 @@ public class AdminBookingService : IAdminBookingService
         return ToDto(booking, paid.GetValueOrDefault(id) ?? []);
     }
 
+    public async Task<AdminBookingDto> CreateAsync(
+        CreateAdminBookingRequestDto request,
+        CancellationToken cancellationToken = default
+    )
+    {
+        if (request.EndDate <= request.StartDate)
+        {
+            throw new BusinessRuleViolationException("The departure date must be after arrival.");
+        }
+
+        if (request.EndDate.DayNumber - request.StartDate.DayNumber > _settings.MaxNights)
+        {
+            throw new BusinessRuleViolationException(
+                $"A stay may be at most {_settings.MaxNights} nights."
+            );
+        }
+
+        // Unlike the public wizard this deliberately allows a start date in the
+        // past: staff record groups that already arrived, and backfill old ones.
+        var status = ParseStatus(request.Status) ?? BookingStatus.Confirmed;
+
+        var centerClosed = await _availability.GetCenterClosureReasonAsync(
+            request.StartDate,
+            request.EndDate,
+            cancellationToken
+        );
+        if (centerClosed is not null)
+        {
+            throw new BusinessRuleViolationException(
+                $"The center is closed in the selected range ({centerClosed})."
+            );
+        }
+
+        var free = await _availability.GetFreeRoomsByCapacityAsync(
+            request.StartDate,
+            request.EndDate,
+            null,
+            cancellationToken
+        );
+        var mix =
+            RoomMixCalculator.SuggestMix(request.Headcount, free)
+            ?? throw new ConflictException(
+                "The free rooms cannot house this group over the selected range."
+            );
+
+        var nights = request.EndDate.DayNumber - request.StartDate.DayNumber;
+        var token = _tokenService.GenerateRefreshToken();
+        var booking = new Booking
+        {
+            Id = Guid.NewGuid(),
+            StartDate = request.StartDate,
+            EndDate = request.EndDate,
+            OrganizationName = request.OrganizationName.Trim(),
+            ContactName = request.ContactName.Trim(),
+            Email = request.Email.Trim(),
+            Phone = request.Phone.Trim(),
+            Headcount = request.Headcount,
+            Notes = string.IsNullOrWhiteSpace(request.Notes) ? null : request.Notes.Trim(),
+            Status = status,
+            // A manage token is minted so the group can still be given a
+            // self-service link later; nothing is emailed here.
+            ManageTokenHash = token.TokenHash,
+            HoldExpiresAt = status == BookingStatus.PendingDeposit
+                ? ComputeHoldExpiry(request.StartDate)
+                : null,
+            TotalGrosze = _settings.PricePerPersonPerNightGrosze * request.Headcount * nights,
+            DepositGrosze = _settings.DepositPerPersonPerNightGrosze * request.Headcount * nights,
+            RequestedRoomCounts = JsonSerializer.Serialize(mix),
+            Language = request.Language == "en" ? "en" : "pl",
+            CreatedAt = DateTime.UtcNow,
+        };
+
+        booking.RoomAssignments.AddRange(
+            await BuildAssignmentsAsync(booking, mix, cancellationToken)
+        );
+
+        await _bookings.AddAsync(booking, cancellationToken);
+        try
+        {
+            await _bookings.SaveChangesAsync(cancellationToken);
+        }
+        catch (ConflictException)
+        {
+            // A concurrent booking grabbed one of the picked rooms between the
+            // availability read and the insert.
+            _bookings.Detach(booking);
+            throw;
+        }
+
+        // Fill the stay's meals straight away, so a new group arrives with its
+        // programme already laid out instead of waiting on a manual generate step.
+        // Never fail the create over it — the booking is already committed, and the
+        // schedule page's backfill action remains the recovery path.
+        try
+        {
+            await _schedule.GenerateMealsForBookingAsync(booking.Id, cancellationToken);
+        }
+        catch (Exception ex) when (ex is not OperationCanceledException)
+        {
+            _logger.LogError(
+                ex,
+                "Meal generation failed for admin-created booking {BookingId}.",
+                booking.Id
+            );
+        }
+
+        return await GetAsync(booking.Id, cancellationToken);
+    }
+
     public async Task CancelAsync(Guid id, CancellationToken cancellationToken = default)
     {
         var booking = await GetOrThrowAsync(id, cancellationToken);
@@ -75,6 +191,62 @@ public class AdminBookingService : IAdminBookingService
             );
         }
 
+        await ApplyCancellationAsync(booking, cancellationToken);
+    }
+
+    public async Task<AdminBookingDto> SetStatusAsync(
+        Guid id,
+        SetBookingStatusRequestDto request,
+        CancellationToken cancellationToken = default
+    )
+    {
+        var booking = await GetOrThrowAsync(id, cancellationToken);
+        var target =
+            ParseStatus(request.Status)
+            ?? throw new BusinessRuleViolationException(
+                $"Unknown booking status '{request.Status}'."
+            );
+
+        if (booking.Status == target)
+        {
+            return await GetAsync(id, cancellationToken);
+        }
+
+        // Cancelling always goes down the same path as the cancel endpoint, so the
+        // rooms are freed and the group notified however the change was triggered.
+        // No status guard here: this override may cancel a completed stay too.
+        if (target == BookingStatus.Cancelled)
+        {
+            await ApplyCancellationAsync(booking, cancellationToken);
+            return await GetAsync(id, cancellationToken);
+        }
+
+        // Leaving Cancelled means the rooms released on cancel have to be taken
+        // back, and someone else may hold them by now.
+        if (booking.Status == BookingStatus.Cancelled)
+        {
+            var mix =
+                JsonSerializer.Deserialize<Dictionary<int, int>>(booking.RequestedRoomCounts)
+                ?? [];
+            foreach (var assignment in await BuildAssignmentsAsync(booking, mix, cancellationToken))
+            {
+                booking.RoomAssignments.Add(assignment);
+                await _bookings.AddAssignmentAsync(assignment, cancellationToken);
+            }
+        }
+
+        booking.Status = target;
+        booking.CancelReason = null;
+        booking.HoldExpiresAt = target == BookingStatus.PendingDeposit
+            ? ComputeHoldExpiry(booking.StartDate)
+            : null;
+
+        await _bookings.SaveChangesAsync(cancellationToken);
+        return await GetAsync(id, cancellationToken);
+    }
+
+    private async Task ApplyCancellationAsync(Booking booking, CancellationToken cancellationToken)
+    {
         booking.Status = BookingStatus.Cancelled;
         booking.CancelReason = BookingCancelReason.ByAdmin;
         booking.HoldExpiresAt = null;
@@ -94,6 +266,80 @@ public class AdminBookingService : IAdminBookingService
             );
         }
     }
+
+    /// Picks concrete free rooms for a mix (lowest room numbers first within each
+    /// capacity) and spreads the headcount over them. The assignments are returned
+    /// unattached so the caller decides how to track them.
+    private async Task<List<BookingRoomAssignment>> BuildAssignmentsAsync(
+        Booking booking,
+        IReadOnlyDictionary<int, int> mix,
+        CancellationToken cancellationToken
+    )
+    {
+        if (mix.Count == 0 || RoomMixCalculator.TotalCapacity(mix) < booking.Headcount)
+        {
+            throw new ConflictException("No room mix on record that fits this group.");
+        }
+
+        var active = await _rooms.GetActiveAsync(cancellationToken);
+        var blocked = await _availability.GetBlockedRoomIdsAsync(
+            booking.StartDate,
+            booking.EndDate,
+            booking.Id,
+            cancellationToken
+        );
+
+        var byCapacity = new Dictionary<int, Queue<Room>>();
+        foreach (var (capacity, count) in mix.Where(kv => kv.Value > 0))
+        {
+            var picked = active
+                .Where(r => r.Capacity == capacity && !blocked.Contains(r.Id))
+                .OrderBy(r => r.Number, StringComparer.OrdinalIgnoreCase)
+                .Take(count)
+                .ToList();
+            if (picked.Count < count)
+            {
+                throw new ConflictException(
+                    $"Only {picked.Count} of {count} rooms for {capacity} people are free in this range."
+                );
+            }
+
+            byCapacity[capacity] = new Queue<Room>(picked);
+        }
+
+        return RoomMixCalculator
+            .DistributePeople(booking.Headcount, mix)
+            .Select(load => new BookingRoomAssignment
+            {
+                Id = Guid.NewGuid(),
+                BookingId = booking.Id,
+                RoomId = byCapacity[load.Capacity].Dequeue().Id,
+                StartDate = booking.StartDate,
+                EndDate = booking.EndDate,
+                PeopleCount = load.PeopleCount,
+            })
+            .ToList();
+    }
+
+    /// Deposit hold: the standard window, cut short so it always expires before
+    /// arrival, and never dated in the past for a stay that already started.
+    private DateTime ComputeHoldExpiry(DateOnly startDate)
+    {
+        var now = DateTime.UtcNow;
+        var dayBeforeArrival = startDate
+            .ToDateTime(TimeOnly.MinValue, DateTimeKind.Utc)
+            .AddDays(-1);
+        var expiry = now.AddDays(_settings.DepositHoldDays);
+        if (expiry > dayBeforeArrival)
+        {
+            expiry = dayBeforeArrival;
+        }
+
+        return expiry < now ? now.AddDays(_settings.DepositHoldDays) : expiry;
+    }
+
+    private static BookingStatus? ParseStatus(string? value) =>
+        Enum.TryParse<BookingStatus>(value, ignoreCase: true, out var status) ? status : null;
 
     public async Task<AdminBookingDto> UpdateDietaryNotesAsync(
         Guid id,
@@ -309,7 +555,7 @@ public class AdminBookingService : IAdminBookingService
         );
         var overdue = confirmed.Count(b =>
             !(paid.GetValueOrDefault(b.Id) ?? []).Contains(PaymentKind.Final)
-            && b.StartDate.AddDays(-_settings.FinalPaymentDueDays) < today
+            && FinalDueDate(b) < today
         );
 
         var activeClosures = (await _closures.GetAllAsync(cancellationToken)).Count(c =>
@@ -329,9 +575,17 @@ public class AdminBookingService : IAdminBookingService
         await _bookings.GetByIdAsync(id, cancellationToken)
         ?? throw new NotFoundException("Booking not found.");
 
+    /// Rows stored with a Postgres -infinity date arrive as DateOnly.MinValue, and
+    /// subtracting the due-days window from that overflows — which took the whole
+    /// bookings list down with a 500 rather than just mislabelling one row.
+    private DateOnly FinalDueDate(Booking b) =>
+        b.StartDate.DayNumber >= _settings.FinalPaymentDueDays
+            ? b.StartDate.AddDays(-_settings.FinalPaymentDueDays)
+            : DateOnly.MinValue;
+
     private AdminBookingDto ToDto(Booking b, List<PaymentKind> completedKinds)
     {
-        var finalDue = b.StartDate.AddDays(-_settings.FinalPaymentDueDays);
+        var finalDue = FinalDueDate(b);
         var depositPaid = completedKinds.Contains(PaymentKind.Deposit);
         var finalPaid = completedKinds.Contains(PaymentKind.Final);
         return new AdminBookingDto(

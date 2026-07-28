@@ -2629,12 +2629,18 @@ p[role="alert"] {
   color: var(--text-faint);
 }
 
+/* An entry is drawn over the hour ruler at its real position and duration, so a
+   16:00–20:00 activity is a block reaching down to the 20:00 line rather than a
+   chip parked in the 16:00 row. --tt-hour is set by the component. */
 .timetable {
+  --tt-gutter: 4.5rem;
+  position: relative;
   margin-top: 1rem;
 }
 .timetable-row {
   display: grid;
-  grid-template-columns: 4.5rem 1fr;
+  grid-template-columns: var(--tt-gutter) 1fr;
+  height: var(--tt-hour);
   border-top: 1px solid var(--border);
 }
 .timetable-hour {
@@ -2644,25 +2650,52 @@ p[role="alert"] {
   font-variant-numeric: tabular-nums;
   color: var(--text-faint);
 }
-.timetable-slot {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.375rem;
-  padding: 0.375rem 0;
-  min-height: 2.25rem;
+.timetable-events {
+  position: absolute;
+  inset: 0 0 0 var(--tt-gutter);
+  /* The ruler underneath stays clickable-through; each block re-enables itself. */
+  pointer-events: none;
 }
 .timetable-chip {
+  position: absolute;
+  pointer-events: auto;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 2px;
-  padding: 0.375rem 0.625rem;
+  gap: 1px;
+  padding: 0.25rem 0.5rem;
   border-radius: var(--r-md);
   border: 1px solid var(--border);
   background: var(--bg-float);
   font-size: 0.82rem;
+  line-height: 1.25;
   text-align: left;
   cursor: pointer;
+  /* Short entries must not spill their text over the block below. */
+  overflow: hidden;
+}
+.timetable-chip:hover {
+  border-color: var(--accent);
+  z-index: 1;
+}
+.chip-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+  width: 100%;
+}
+.chip-head strong {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* Heads at this sitting — summed across every group sharing it. */
+.chip-people {
+  flex-shrink: 0;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  color: var(--text-strong);
 }
 .timetable-chip.meal {
   background: color-mix(in srgb, var(--cta) 18%, var(--bg-float));
@@ -2704,6 +2737,31 @@ p[role="alert"] {
   margin: 0 0 0.25rem;
   font-size: 1.1rem;
 }
+/* Editable status pill in the group panel header. */
+.group-panel-status {
+  margin: 0.25rem 0;
+  padding: 2px 0.5rem;
+  min-height: 0;
+  width: auto;
+  font-size: 0.85rem;
+  border-radius: 999px;
+}
+.group-panel-status.status-confirmed {
+  background: color-mix(in srgb, var(--success) 20%, var(--bg-input));
+}
+.group-panel-status.status-cancelled {
+  background: color-mix(in srgb, var(--danger) 20%, var(--bg-input));
+}
+.group-panel-status.status-pendingdeposit {
+  background: color-mix(in srgb, var(--warning) 20%, var(--bg-input));
+}
+
+/* Dashboard: the booking rows open the group programme panel, so they read as
+   clickable and the open one stays marked while the panel is up. */
+.admin-table tr.selected-row > td {
+  background: var(--accent-soft);
+}
+
 .group-panel-meta,
 .group-panel-note {
   font-size: 0.85rem;

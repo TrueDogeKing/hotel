@@ -142,6 +142,47 @@ export async function cancelAdminBooking(id: string): Promise<void> {
   await api.post(`/admin/bookings/${id}/cancel`);
 }
 
+export type BookingStatus = AdminBooking["status"];
+
+export const bookingStatuses: BookingStatus[] = [
+  "PendingDeposit",
+  "Confirmed",
+  "Cancelled",
+  "Completed",
+];
+
+export interface CreateAdminBookingInput {
+  startDate: string;
+  endDate: string;
+  organizationName: string;
+  contactName: string;
+  email: string;
+  phone: string;
+  headcount: number;
+  notes: string | null;
+  status: BookingStatus;
+  language: string;
+}
+
+/** Records a group taken by phone or at the door: rooms are picked automatically
+ *  and the contact gets no confirmation email. */
+export async function createAdminBooking(
+  input: CreateAdminBookingInput,
+): Promise<AdminBooking> {
+  const { data } = await api.post<AdminBooking>("/admin/bookings", input);
+  return data;
+}
+
+/** Manual status override. Cancelling frees the rooms and emails the group;
+ *  moving back out of Cancelled takes the rooms again and can 409. */
+export async function setBookingStatus(
+  id: string,
+  status: BookingStatus,
+): Promise<AdminBooking> {
+  const { data } = await api.put<AdminBooking>(`/admin/bookings/${id}/status`, { status });
+  return data;
+}
+
 // --- Occupancy ---
 
 export interface RoomOccupancy {
@@ -473,6 +514,8 @@ export interface ApplyBookingMealTimeResult {
   mealTime: BookingMealTime;
   updated: number;
   skippedCustomized: number;
+  /** Meals the stay was missing and that were seeded as part of applying the time. */
+  created: number;
 }
 
 export async function getBookingMealTimes(bookingId: string): Promise<BookingMealTime[]> {

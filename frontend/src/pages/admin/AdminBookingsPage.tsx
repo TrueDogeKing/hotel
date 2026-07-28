@@ -1,8 +1,17 @@
 import { useCallback, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { isAxiosError } from "axios";
 import AdminLayout from "../../components/admin/AdminLayout";
 import ConfirmDialog from "../../components/ConfirmDialog";
-import { cancelAdminBooking, formatZl, getAdminBookings, type AdminBooking } from "../../api/admin";
+import {
+  bookingStatuses,
+  cancelAdminBooking,
+  formatZl,
+  getAdminBookings,
+  setBookingStatus,
+  type AdminBooking,
+  type BookingStatus,
+} from "../../api/admin";
 import { formatDate as formatIsoDate } from "../../utils/dates";
 
 export default function AdminBookingsPage() {
@@ -37,6 +46,23 @@ export default function AdminBookingsPage() {
       setError(t("adminBookings.cancelError"));
     } finally {
       setCancelTarget(null);
+    }
+  }
+
+  // Reviving a cancelled booking is only reachable from here: the dashboard and the
+  // calendar both list live bookings only, so a cancelled group disappears from them.
+  async function handleStatusChange(id: string, status: BookingStatus) {
+    setError(null);
+    try {
+      await setBookingStatus(id, status);
+      await reload();
+    } catch (err) {
+      if (isAxiosError(err) && err.response) {
+        const detail = (err.response.data as { detail?: string } | undefined)?.detail;
+        setError(detail ?? t("adminBookings.statusError"));
+      } else {
+        setError(t("adminBookings.statusError"));
+      }
     }
   }
 
@@ -98,6 +124,21 @@ export default function AdminBookingsPage() {
                 <td>{formatZl(booking.totalGrosze)}</td>
                 <td>{paymentBadge(booking)}</td>
                 <td className="row-actions">
+                  <select
+                    value={booking.status}
+                    aria-label={t("adminBookings.status")}
+                    onClick={(e) => e.stopPropagation()}
+                    onChange={(e) => {
+                      e.stopPropagation();
+                      void handleStatusChange(booking.id, e.target.value as BookingStatus);
+                    }}
+                  >
+                    {bookingStatuses.map((status) => (
+                      <option key={status} value={status}>
+                        {t(`adminBookings.statuses.${status}`)}
+                      </option>
+                    ))}
+                  </select>
                   {(booking.status === "PendingDeposit" || booking.status === "Confirmed") && (
                     <button
                       type="button"

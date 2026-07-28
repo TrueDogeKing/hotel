@@ -13,8 +13,30 @@ public interface IAdminBookingService
 
     Task<AdminBookingDto> GetAsync(Guid id, CancellationToken cancellationToken = default);
 
+    /// Creates a group entered by staff. Rooms are picked automatically to fit the
+    /// headcount, pricing is snapshotted the same way as a public booking, and no
+    /// confirmation email is sent. Throws ConflictException when the free rooms
+    /// cannot house the group over the requested range.
+    Task<AdminBookingDto> CreateAsync(
+        CreateAdminBookingRequestDto request,
+        CancellationToken cancellationToken = default
+    );
+
     /// Admin cancel of any live booking (refunds are handled manually outside the system).
     Task CancelAsync(Guid id, CancellationToken cancellationToken = default);
+
+    /// Manual status override, allowed between any two statuses.
+    ///
+    /// Cancelling releases the rooms and emails the group, exactly as CancelAsync
+    /// does. Moving *out* of Cancelled has to take the rooms back, so it re-runs
+    /// assignment from the booking's requested room mix and throws
+    /// ConflictException when those rooms have since gone to someone else.
+    /// PendingDeposit re-arms the deposit hold; every other status clears it.
+    Task<AdminBookingDto> SetStatusAsync(
+        Guid id,
+        SetBookingStatusRequestDto request,
+        CancellationToken cancellationToken = default
+    );
 
     /// Replaces the booking's room assignments. Admin override: people counts may
     /// exceed room capacity (extra beds are a housekeeping task).

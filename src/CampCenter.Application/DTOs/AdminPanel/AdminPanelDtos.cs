@@ -75,6 +75,29 @@ public record ReassignmentEntryDto(Guid RoomId, int PeopleCount);
 
 public record ReassignBookingRequestDto(List<ReassignmentEntryDto> Assignments);
 
+/// A group entered by staff (phone or walk-in) rather than booked through the
+/// public wizard. Rooms are picked automatically to fit the headcount and the
+/// booker gets no confirmation email — the admin owns the booking's state, so
+/// the starting status is theirs to choose.
+public record CreateAdminBookingRequestDto(
+    DateOnly StartDate,
+    DateOnly EndDate,
+    string OrganizationName,
+    string ContactName,
+    string Email,
+    string Phone,
+    int Headcount,
+    string? Notes,
+    /// PendingDeposit / Confirmed / Cancelled / Completed. Defaults to Confirmed.
+    string? Status,
+    /// "pl" or "en"; drives the language of any later email. Defaults to "pl".
+    string? Language
+);
+
+/// Manual status override. Any status may be set from any other — see
+/// IAdminBookingService.SetStatusAsync for what each transition does.
+public record SetBookingStatusRequestDto(string Status);
+
 public record DashboardBookingDto(
     Guid Id,
     string OrganizationName,

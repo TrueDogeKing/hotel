@@ -174,7 +174,24 @@
     "activeClosures": "Active closures",
     "upcomingBookings": "Upcoming bookings",
     "noBookings": "No upcoming bookings.",
-    "beds": "{{count}} beds"
+    "beds": "{{count}} beds",
+    "addGroup": "Add group",
+    "addGroupSubmit": "Save group",
+    "addGroupCancel": "Cancel",
+    "addGroupError": "Could not add the group.",
+    "groupAdded": "Added group {{organization}}.",
+    "organization": "Organisation",
+    "contactName": "Contact person",
+    "email": "Email",
+    "phone": "Phone",
+    "from": "From",
+    "to": "To",
+    "headcount": "People",
+    "notes": "Notes",
+    "status": "Status",
+    "statusChanged": "Status changed to {{status}}.",
+    "statusError": "Could not change the status.",
+    "loadError": "Could not load the dashboard."
   },
   "occupancy": {
     "title": "Occupancy",
@@ -229,7 +246,9 @@
     "cancelTitle": "Cancel the booking?",
     "cancelConfirm": "Yes, cancel",
     "cancelKeep": "Go back",
-    "cancelError": "Failed to cancel the booking."
+    "cancelError": "Failed to cancel the booking.",
+    "status": "Booking status",
+    "statusError": "Could not change the status."
   },
   "adminRooms": {
     "title": "Rooms",
@@ -300,6 +319,8 @@
     "dietaryPlaceholder": "e.g. 2× gluten-free, 1× vegetarian",
     "saveDietary": "Save notes",
     "dietarySaved": "Notes saved.",
+    "status": "Group status",
+    "statusChanged": "Status changed to {{status}}.",
     "generateMeals": "Generate missing meals",
     "mealsGenerated": "Meals added: {{count}}.",
     "backfill": "Generate missing meals (visible range)",
@@ -345,6 +366,7 @@
       "resetHint": "Go back to the center time ({{start}}–{{end}}) for the whole stay.",
       "applied": "Meals moved: {{updated}}.",
       "appliedWithExceptions": "Meals moved: {{updated}}. Exceptions kept (days changed individually): {{skipped}}.",
+      "alsoSeeded": "Missing meals filled in: {{count}}.",
       "loadError": "Could not load the group's meal times."
     },
     "customTime": "exception",

@@ -174,7 +174,24 @@
     "activeClosures": "Aktywne blokady",
     "upcomingBookings": "Nadchodzące rezerwacje",
     "noBookings": "Brak nadchodzących rezerwacji.",
-    "beds": "miejsc: {{count}}"
+    "beds": "miejsc: {{count}}",
+    "addGroup": "Dodaj grupę",
+    "addGroupSubmit": "Zapisz grupę",
+    "addGroupCancel": "Anuluj",
+    "addGroupError": "Nie udało się dodać grupy.",
+    "groupAdded": "Dodano grupę {{organization}}.",
+    "organization": "Organizacja",
+    "contactName": "Osoba kontaktowa",
+    "email": "E-mail",
+    "phone": "Telefon",
+    "from": "Od",
+    "to": "Do",
+    "headcount": "Liczba osób",
+    "notes": "Uwagi",
+    "status": "Status",
+    "statusChanged": "Zmieniono status na: {{status}}.",
+    "statusError": "Nie udało się zmienić statusu.",
+    "loadError": "Nie udało się pobrać pulpitu."
   },
   "occupancy": {
     "title": "Obłożenie",
@@ -229,7 +246,9 @@
     "cancelMessage": "Rezerwacja {{organization}} zostanie anulowana, a pokoje zwolnione. Ewentualny zwrot zaliczki rozliczasz poza systemem.",
     "cancelConfirm": "Tak, anuluj",
     "cancelKeep": "Wróć",
-    "cancelError": "Nie udało się anulować rezerwacji."
+    "cancelError": "Nie udało się anulować rezerwacji.",
+    "status": "Status rezerwacji",
+    "statusError": "Nie udało się zmienić statusu."
   },
   "adminRooms": {
     "title": "Pokoje",
@@ -300,6 +319,8 @@
     "dietaryPlaceholder": "np. 2× bezglutenowa, 1× wegetariańska",
     "saveDietary": "Zapisz uwagi",
     "dietarySaved": "Zapisano uwagi.",
+    "status": "Status grupy",
+    "statusChanged": "Zmieniono status na: {{status}}.",
     "generateMeals": "Uzupełnij posiłki",
     "mealsGenerated": "Dodano posiłków: {{count}}.",
     "backfill": "Uzupełnij posiłki (widoczny zakres)",
@@ -345,6 +366,7 @@
       "resetHint": "Wróć do pory ośrodka ({{start}}–{{end}}) w całym turnusie.",
       "applied": "Przestawiono posiłków: {{updated}}.",
       "appliedWithExceptions": "Przestawiono posiłków: {{updated}}. Pominięto wyjątków (dni zmienione pojedynczo): {{skipped}}.",
+      "alsoSeeded": "Uzupełniono brakujących posiłków: {{count}}.",
       "loadError": "Nie udało się wczytać pór posiłków grupy."
     },
     "customTime": "wyjątek",

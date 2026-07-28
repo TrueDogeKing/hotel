@@ -2,13 +2,15 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { isAxiosError } from "axios";
 import {
+  bookingStatuses,
   createScheduleEntry,
   deleteScheduleEntry,
-  generateMealsForBooking,
   getBookingSchedule,
+  setBookingStatus,
   updateDietaryNotes,
   updateScheduleEntry,
   type BookingSchedule,
+  type BookingStatus,
   type ScheduleEntry,
   type ScheduleEntryInput,
 } from "../../api/admin";
@@ -82,6 +84,18 @@ export default function GroupSchedulePanel({ bookingId, onClose, onChanged }: Pr
     onChanged?.();
   }
 
+  async function handleStatusChange(status: BookingStatus) {
+    setError(null);
+    setNotice(null);
+    try {
+      await setBookingStatus(bookingId, status);
+      setNotice(t("schedule.statusChanged", { status: t(`adminBookings.statuses.${status}`) }));
+      await afterMutation();
+    } catch (err) {
+      handleApiError(err);
+    }
+  }
+
   // The date travels inside `input` — ScheduleEntryForm sets it from the day
   // section the "+ add" button belongs to.
   async function handleAdd(input: ScheduleEntryInput) {
@@ -132,17 +146,6 @@ export default function GroupSchedulePanel({ bookingId, onClose, onChanged }: Pr
     }
   }
 
-  async function handleGenerateMeals() {
-    setError(null);
-    try {
-      const { created } = await generateMealsForBooking(bookingId);
-      setNotice(t("schedule.mealsGenerated", { count: created }));
-      await afterMutation();
-    } catch (err) {
-      handleApiError(err);
-    }
-  }
-
   if (!schedule) {
     return (
       <aside className="group-panel">
@@ -156,9 +159,20 @@ export default function GroupSchedulePanel({ bookingId, onClose, onChanged }: Pr
       <div className="group-panel-header">
         <div>
           <h2>{schedule.organizationName}</h2>
-          <p className={`status-badge status-${schedule.status.toLowerCase()}`}>
-            {t(`adminBookings.statuses.${schedule.status}`)}
-          </p>
+          {/* The status is editable here rather than only on the dashboard, so it
+              can also be changed from the calendar, which opens this same panel. */}
+          <select
+            className={`group-panel-status status-${schedule.status.toLowerCase()}`}
+            value={schedule.status}
+            aria-label={t("schedule.status")}
+            onChange={(e) => void handleStatusChange(e.target.value as BookingStatus)}
+          >
+            {bookingStatuses.map((status) => (
+              <option key={status} value={status}>
+                {t(`adminBookings.statuses.${status}`)}
+              </option>
+            ))}
+          </select>
           <p className="group-panel-meta">
             {formatDate(schedule.startDate, i18n.language)} –{" "}
             {formatDate(schedule.endDate, i18n.language)} ·{" "}
@@ -187,12 +201,12 @@ export default function GroupSchedulePanel({ bookingId, onClose, onChanged }: Pr
           placeholder={t("schedule.dietaryPlaceholder")}
         />
       </label>
+      {/* No "generate meals" button here: a stay is seeded when the group is
+          created and again whenever its meal times are applied below. The schedule
+          page keeps a range-wide backfill for groups that predate that. */}
       <div className="row-actions">
         <button type="button" onClick={() => void handleSaveDietaryNotes()}>
           {t("schedule.saveDietary")}
-        </button>
-        <button type="button" onClick={() => void handleGenerateMeals()}>
-          {t("schedule.generateMeals")}
         </button>
       </div>
 
