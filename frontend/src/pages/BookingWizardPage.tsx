@@ -1,10 +1,11 @@
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { isAxiosError } from "axios";
 import LanguageSwitcher from "../components/LanguageSwitcher";
 import { formatZl } from "../api/admin";
 import { createBooking, getAvailability, validateMix, type Availability } from "../api/public";
+import { formatDate as formatIsoDate } from "../utils/dates";
 
 type Step = "dates" | "rooms" | "contact" | "summary";
 
@@ -39,14 +40,7 @@ export default function BookingWizardPage() {
   const [error, setError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
 
-  const dateFormatter = useMemo(
-    () =>
-      new Intl.DateTimeFormat(i18n.language === "en" ? "en-GB" : "pl-PL", {
-        dateStyle: "medium",
-      }),
-    [i18n.language],
-  );
-  const formatDate = (iso: string) => dateFormatter.format(new Date(iso));
+  const formatDate = (iso: string) => formatIsoDate(iso, i18n.language);
 
   const datesValid =
     startDate !== "" && endDate !== "" && endDate > startDate && Number(headcountInput) >= 1;

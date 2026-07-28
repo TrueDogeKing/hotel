@@ -5,6 +5,8 @@ import LanguageSwitcher from "../components/LanguageSwitcher";
 import ConfirmDialog from "../components/ConfirmDialog";
 import { formatZl } from "../api/admin";
 import { cancelBooking, getBooking, initiatePayment, type BookingDetails } from "../api/public";
+import { formatDate as formatIsoDate } from "../utils/dates";
+import BookingSchedule from "../components/BookingSchedule";
 
 // Booking manage page, reached via the secret link from the confirmation email.
 export default function BookingManagePage() {
@@ -34,13 +36,9 @@ export default function BookingManagePage() {
     };
   }, [token]);
 
-  const dateFormatter = useMemo(
-    () =>
-      new Intl.DateTimeFormat(i18n.language === "en" ? "en-GB" : "pl-PL", {
-        dateStyle: "medium",
-      }),
-    [i18n.language],
-  );
+  const formatDate = (iso: string) => formatIsoDate(iso, i18n.language);
+  // holdExpiresAt is a genuine UTC timestamp, not a date-only string, so it keeps
+  // its own formatter and plain `new Date(iso)`.
   const dateTimeFormatter = useMemo(
     () =>
       new Intl.DateTimeFormat(i18n.language === "en" ? "en-GB" : "pl-PL", {
@@ -93,8 +91,8 @@ export default function BookingManagePage() {
           <>
             {justCreated && <p className="manage-banner">{t("manage.created")}</p>}
             <h1>
-              {dateFormatter.format(new Date(booking.startDate))} –{" "}
-              {dateFormatter.format(new Date(booking.endDate))}
+              {formatDate(booking.startDate)} –{" "}
+              {formatDate(booking.endDate)}
             </h1>
             <p className={`status-badge status-${booking.status.toLowerCase()}`}>
               {t(`manage.statuses.${booking.status}`)}
@@ -103,8 +101,8 @@ export default function BookingManagePage() {
             <dl className="summary-list">
               <dt>{t("manage.dates")}</dt>
               <dd>
-                {dateFormatter.format(new Date(booking.startDate))} –{" "}
-                {dateFormatter.format(new Date(booking.endDate))}
+                {formatDate(booking.startDate)} –{" "}
+                {formatDate(booking.endDate)}
               </dd>
               <dt>{t("manage.organization")}</dt>
               <dd>{booking.organizationName}</dd>
@@ -130,7 +128,7 @@ export default function BookingManagePage() {
               {(booking.status === "PendingDeposit" || booking.status === "Confirmed") && (
                 <>
                   <dt>{t("manage.finalDue")}</dt>
-                  <dd>{dateFormatter.format(new Date(booking.finalPaymentDueDate))}</dd>
+                  <dd>{formatDate(booking.finalPaymentDueDate)}</dd>
                 </>
               )}
             </dl>
@@ -165,6 +163,11 @@ export default function BookingManagePage() {
                   {t("manage.cancel")}
                 </button>
               </div>
+            )}
+
+            {/* The camp programme only exists once the booking is confirmed. */}
+            {token && (booking.status === "Confirmed" || booking.status === "Completed") && (
+              <BookingSchedule token={token} />
             )}
 
             {booking.status === "Confirmed" &&

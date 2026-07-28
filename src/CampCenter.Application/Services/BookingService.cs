@@ -1,5 +1,6 @@
 using System.Text.Json;
 using CampCenter.Application.DTOs.Public;
+using CampCenter.Application.DTOs.Schedule;
 using CampCenter.Application.Interfaces;
 using CampCenter.Application.Models;
 using CampCenter.Domain.Entities;
@@ -17,6 +18,7 @@ public class BookingService : IBookingService
     private readonly IAvailabilityService _availability;
     private readonly ITokenService _tokenService;
     private readonly IEmailSender _email;
+    private readonly IScheduleEntryRepository _scheduleEntries;
     private readonly BookingSettings _settings;
     private readonly ILogger<BookingService> _logger;
 
@@ -26,6 +28,7 @@ public class BookingService : IBookingService
         IAvailabilityService availability,
         ITokenService tokenService,
         IEmailSender email,
+        IScheduleEntryRepository scheduleEntries,
         IOptions<BookingSettings> settings,
         ILogger<BookingService> logger
     )
@@ -35,6 +38,7 @@ public class BookingService : IBookingService
         _availability = availability;
         _tokenService = tokenService;
         _email = email;
+        _scheduleEntries = scheduleEntries;
         _settings = settings.Value;
         _logger = logger;
     }
@@ -253,6 +257,17 @@ public class BookingService : IBookingService
                 ))
                 .ToList()
         );
+    }
+
+    public async Task<PublicScheduleDto> GetScheduleByTokenAsync(
+        string token,
+        CancellationToken cancellationToken = default
+    )
+    {
+        // Token hashing stays in the one place that already does it.
+        var booking = await FindByTokenAsync(token, cancellationToken);
+        var entries = await _scheduleEntries.ListForBookingAsync(booking.Id, cancellationToken);
+        return ScheduleService.ToPublicDto(booking, entries);
     }
 
     public async Task CancelByTokenAsync(

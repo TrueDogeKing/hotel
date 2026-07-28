@@ -73,6 +73,9 @@ builder.Services.Configure<RefreshTokenSettings>(
 builder.Services.Configure<CampCenter.Application.Models.BookingSettings>(
     builder.Configuration.GetSection(CampCenter.Application.Models.BookingSettings.SectionName)
 );
+builder.Services.Configure<CampCenter.Application.Models.ScheduleSettings>(
+    builder.Configuration.GetSection(CampCenter.Application.Models.ScheduleSettings.SectionName)
+);
 builder.Services.Configure<CampCenter.Infrastructure.Email.EmailSettings>(
     builder.Configuration.GetSection(CampCenter.Infrastructure.Email.EmailSettings.SectionName)
 );
@@ -182,10 +185,11 @@ if (app.Configuration.GetValue<bool>("Database:MigrateAutomatically"))
     db.Database.Migrate();
 }
 
-// Seed initial data (default admin account)
+// Seed initial data (default admin account, default meal slots)
 if (app.Configuration.GetValue<bool>("Database:SeedAutomatically"))
 {
     await DataSeeder.SeedAdminUserAsync(app.Services);
+    await DataSeeder.SeedMealTimeDefaultsAsync(app.Services);
 }
 
 // Configure the HTTP request pipeline. Forwarded headers must run first so

@@ -24,6 +24,12 @@ public class AppDbContext : DbContext
 
     public DbSet<Payment> Payments => Set<Payment>();
 
+    public DbSet<MealTimeDefault> MealTimeDefaults => Set<MealTimeDefault>();
+
+    public DbSet<ScheduleEntry> ScheduleEntries => Set<ScheduleEntry>();
+
+    public DbSet<BookingMealTime> BookingMealTimes => Set<BookingMealTime>();
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);

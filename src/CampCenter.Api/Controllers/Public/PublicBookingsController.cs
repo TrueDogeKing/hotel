@@ -1,5 +1,6 @@
 using CampCenter.Api.RateLimiting;
 using CampCenter.Application.DTOs.Public;
+using CampCenter.Application.DTOs.Schedule;
 using CampCenter.Application.Interfaces;
 using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
@@ -60,6 +61,17 @@ public class PublicBookingsController : ControllerBase
         string token,
         CancellationToken cancellationToken
     ) => Ok(await _bookings.GetByTokenAsync(token, cancellationToken));
+
+    /// The group's own camp programme — meals (with menus) and activities, day by
+    /// day. Internal kitchen prep notes are never included.
+    [HttpGet("{token}/schedule")]
+    [EnableRateLimiting(RateLimitPolicies.PublicBooking)]
+    [ProducesResponseType(typeof(PublicScheduleDto), StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    public async Task<IActionResult> GetScheduleByToken(
+        string token,
+        CancellationToken cancellationToken
+    ) => Ok(await _bookings.GetScheduleByTokenAsync(token, cancellationToken));
 
     /// Starts an online payment (deposit or final) — returns the P24 redirect URL.
     [HttpPost("{token}/payments")]

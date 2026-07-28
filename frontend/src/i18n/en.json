@@ -146,7 +146,11 @@
     "payDeposit": "Pay the deposit (Przelewy24)",
     "payFinal": "Pay the remaining amount (Przelewy24)",
     "redirecting": "Redirecting…",
-    "paymentError": "Failed to start the payment. Try again."
+    "paymentError": "Failed to start the payment. Try again.",
+    "schedule": {
+      "title": "Your camp programme",
+      "intro": "Meals and activities for every day of your stay."
+    }
   },
   "admin": {
     "dashboardTitle": "Admin panel",
@@ -159,7 +163,8 @@
       "closures": "Closures",
       "rooms": "Rooms",
       "bookings": "Bookings",
-      "tasks": "Tasks"
+      "tasks": "Tasks",
+      "schedule": "Schedule"
     }
   },
   "dashboard": {
@@ -271,5 +276,101 @@
     "timeout": "The payment is still being processed. Check the booking page in a few minutes.",
     "error": "Failed to check the payment status.",
     "backToBooking": "Go to the booking"
+  },
+  "schedule": {
+    "title": "Schedule",
+    "intro": "Calendar of group stays: when they arrive and leave, what they eat and what they do, hour by hour.",
+    "previousMonth": "Previous month",
+    "nextMonth": "Next month",
+    "today": "Today",
+    "pickDay": "Pick a day in the calendar to see its hour-by-hour timetable.",
+    "noGroupsToday": "No groups are here on this day.",
+    "people": "{{count}} people",
+    "nights": "{{count}} nights",
+    "groupCount": "{{count}} groups",
+    "arrives": "arrival",
+    "departs": "departure",
+    "close": "Close",
+    "edit": "Edit",
+    "delete": "Delete",
+    "addEntry": "+ Add programme item",
+    "noEntries": "Nothing scheduled yet.",
+    "bookerNotes": "Booker's notes",
+    "dietaryNotes": "Dietary requirements and prep (for the kitchen)",
+    "dietaryPlaceholder": "e.g. 2× gluten-free, 1× vegetarian",
+    "saveDietary": "Save notes",
+    "dietarySaved": "Notes saved.",
+    "generateMeals": "Generate missing meals",
+    "mealsGenerated": "Meals added: {{count}}.",
+    "backfill": "Generate missing meals (visible range)",
+    "backfillDone": "Groups checked: {{bookings}}, meals added: {{created}}.",
+    "mealTimesLink": "Default meal times",
+    "deleteTitle": "Delete programme item?",
+    "deleteMessage": "Delete “{{title}}”?",
+    "loadError": "Could not load the schedule.",
+    "genericError": "The operation failed. Please try again.",
+    "kinds": {
+      "Meal": "Meal",
+      "Activity": "Activity"
+    },
+    "mealKinds": {
+      "Breakfast": "Breakfast",
+      "Lunch": "Lunch",
+      "Dinner": "Dinner",
+      "Snack": "Snack"
+    },
+    "form": {
+      "kind": "Kind",
+      "mealKind": "Meal",
+      "startTime": "From",
+      "endTime": "To",
+      "title": "Title",
+      "menu": "Menu",
+      "menuPlaceholder": "e.g. Soup, cutlet, compote",
+      "prepNotes": "To prepare",
+      "prepNotesPlaceholder": "e.g. 2 gluten-free portions",
+      "location": "Location",
+      "save": "Save",
+      "add": "Add",
+      "cancel": "Cancel"
+    },
+    "mealTimes": {
+      "title": "This group's meal times",
+      "intro": "Changing a time moves that meal across the whole stay in one go. Days you changed individually are left as they are.",
+      "empty": "No meal times defined yet.",
+      "overridden": "own",
+      "overriddenHint": "This group has its own time, different from the center default.",
+      "apply": "Apply to the whole stay",
+      "reset": "Restore default",
+      "resetHint": "Go back to the center time ({{start}}–{{end}}) for the whole stay.",
+      "applied": "Meals moved: {{updated}}.",
+      "appliedWithExceptions": "Meals moved: {{updated}}. Exceptions kept (days changed individually): {{skipped}}.",
+      "loadError": "Could not load the group's meal times."
+    },
+    "customTime": "exception",
+    "customTimeHint": "Time set for this day only — re-timing the group's meals will skip it."
+  },
+  "mealTimes": {
+    "title": "Default meal times",
+    "intro": "Meals for every confirmed booking are generated from these slots. Editing a slot affects future generation only — existing meals are left untouched.",
+    "backToSchedule": "← Back to the schedule",
+    "mealKind": "Kind",
+    "label": "Label",
+    "startTime": "From",
+    "endTime": "To",
+    "sortOrder": "Order",
+    "time": "Times",
+    "status": "Status",
+    "active": "Active",
+    "inactive": "Inactive",
+    "add": "Add",
+    "save": "Save",
+    "cancelEdit": "Cancel",
+    "edit": "Edit",
+    "activate": "Activate",
+    "deactivate": "Deactivate",
+    "delete": "Delete",
+    "empty": "No meal slots defined yet.",
+    "genericError": "The operation failed. Please try again."
   }
 }

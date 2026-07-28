@@ -22,6 +22,8 @@ public class BookingConfiguration : IEntityTypeConfiguration<Booking>
 
         builder.Property(x => x.Notes).HasMaxLength(2000);
 
+        builder.Property(x => x.DietaryNotes).HasMaxLength(2000);
+
         builder.Property(x => x.Status).HasConversion<string>().HasMaxLength(16);
 
         builder.Property(x => x.CancelReason).HasConversion<string>().HasMaxLength(16);

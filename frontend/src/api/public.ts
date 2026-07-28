@@ -102,6 +102,37 @@ export async function cancelBooking(token: string): Promise<void> {
   await api.post(`/public/bookings/${token}/cancel`);
 }
 
+// --- The group's own camp programme (read-only) ---
+
+// Deliberately has no prepNotes field: kitchen prep notes are internal and the
+// server never sends them here.
+export interface PublicScheduleEntry {
+  kind: "Meal" | "Activity";
+  mealKind: "Breakfast" | "Lunch" | "Dinner" | "Snack" | null;
+  startTime: string;
+  endTime: string;
+  title: string;
+  menu: string | null;
+  location: string | null;
+}
+
+export interface PublicScheduleDay {
+  date: string;
+  entries: PublicScheduleEntry[];
+}
+
+export interface PublicSchedule {
+  startDate: string;
+  endDate: string;
+  status: BookingDetails["status"];
+  days: PublicScheduleDay[];
+}
+
+export async function getBookingSchedule(token: string): Promise<PublicSchedule> {
+  const { data } = await api.get<PublicSchedule>(`/public/bookings/${token}/schedule`);
+  return data;
+}
+
 // Client-side mirror of the server's mix rules, for live wizard feedback.
 export function validateMix(
   headcount: number,

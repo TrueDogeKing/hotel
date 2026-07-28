@@ -19,6 +19,8 @@ public record AdminBookingDto(
     string Phone,
     int Headcount,
     string? Notes,
+    /// Admin-managed dietary/preparation note; distinct from Notes, which the booker wrote.
+    string? DietaryNotes,
     string Status,
     string? CancelReason,
     long TotalGrosze,

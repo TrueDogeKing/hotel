@@ -146,7 +146,11 @@
     "payDeposit": "Zapłać zaliczkę (Przelewy24)",
     "payFinal": "Zapłać pozostałą kwotę (Przelewy24)",
     "redirecting": "Przekierowywanie…",
-    "paymentError": "Nie udało się rozpocząć płatności. Spróbuj ponownie."
+    "paymentError": "Nie udało się rozpocząć płatności. Spróbuj ponownie.",
+    "schedule": {
+      "title": "Wasz program pobytu",
+      "intro": "Plan posiłków i zajęć na każdy dzień turnusu."
+    }
   },
   "admin": {
     "dashboardTitle": "Panel administratora",
@@ -159,7 +163,8 @@
       "closures": "Blokady",
       "rooms": "Pokoje",
       "bookings": "Rezerwacje",
-      "tasks": "Zadania"
+      "tasks": "Zadania",
+      "schedule": "Harmonogram"
     }
   },
   "dashboard": {
@@ -271,5 +276,101 @@
     "timeout": "Płatność jest jeszcze przetwarzana. Sprawdź status na stronie rezerwacji za kilka minut.",
     "error": "Nie udało się sprawdzić statusu płatności.",
     "backToBooking": "Przejdź do rezerwacji"
+  },
+  "schedule": {
+    "title": "Harmonogram",
+    "intro": "Kalendarz turnusów: kiedy grupy przyjeżdżają i wyjeżdżają, co jedzą i co robią godzina po godzinie.",
+    "previousMonth": "Poprzedni miesiąc",
+    "nextMonth": "Następny miesiąc",
+    "today": "Dziś",
+    "pickDay": "Wybierz dzień w kalendarzu, aby zobaczyć plan godzinowy.",
+    "noGroupsToday": "Tego dnia nie ma żadnej grupy.",
+    "people": "{{count}} os.",
+    "nights": "{{count}} nocy",
+    "groupCount": "{{count}} grupy",
+    "arrives": "przyjazd",
+    "departs": "wyjazd",
+    "close": "Zamknij",
+    "edit": "Edytuj",
+    "delete": "Usuń",
+    "addEntry": "+ Dodaj punkt programu",
+    "noEntries": "Brak zaplanowanych punktów.",
+    "bookerNotes": "Uwagi rezerwującego",
+    "dietaryNotes": "Diety i przygotowanie (dla kuchni)",
+    "dietaryPlaceholder": "np. 2× bezglutenowa, 1× wegetariańska",
+    "saveDietary": "Zapisz uwagi",
+    "dietarySaved": "Zapisano uwagi.",
+    "generateMeals": "Uzupełnij posiłki",
+    "mealsGenerated": "Dodano posiłków: {{count}}.",
+    "backfill": "Uzupełnij posiłki (widoczny zakres)",
+    "backfillDone": "Sprawdzono grup: {{bookings}}, dodano posiłków: {{created}}.",
+    "mealTimesLink": "Domyślne pory posiłków",
+    "deleteTitle": "Usunąć punkt programu?",
+    "deleteMessage": "Czy na pewno usunąć „{{title}}”?",
+    "loadError": "Nie udało się wczytać harmonogramu.",
+    "genericError": "Operacja się nie powiodła. Spróbuj ponownie.",
+    "kinds": {
+      "Meal": "Posiłek",
+      "Activity": "Zajęcia"
+    },
+    "mealKinds": {
+      "Breakfast": "Śniadanie",
+      "Lunch": "Obiad",
+      "Dinner": "Kolacja",
+      "Snack": "Podwieczorek"
+    },
+    "form": {
+      "kind": "Rodzaj",
+      "mealKind": "Posiłek",
+      "startTime": "Od",
+      "endTime": "Do",
+      "title": "Nazwa",
+      "menu": "Menu",
+      "menuPlaceholder": "np. Rosół, kotlet, kompot",
+      "prepNotes": "Do przygotowania",
+      "prepNotesPlaceholder": "np. 2 porcje bezglutenowe",
+      "location": "Miejsce",
+      "save": "Zapisz",
+      "add": "Dodaj",
+      "cancel": "Anuluj"
+    },
+    "mealTimes": {
+      "title": "Pory posiłków tej grupy",
+      "intro": "Zmiana pory przestawia ten posiłek w całym turnusie za jednym razem. Dni zmienione pojedynczo (wyjątki) zostają bez zmian.",
+      "empty": "Nie zdefiniowano jeszcze żadnych pór posiłków.",
+      "overridden": "własna",
+      "overriddenHint": "Ta grupa ma własną porę, inną niż domyślna ośrodka.",
+      "apply": "Zastosuj w całym turnusie",
+      "reset": "Przywróć domyślną",
+      "resetHint": "Wróć do pory ośrodka ({{start}}–{{end}}) w całym turnusie.",
+      "applied": "Przestawiono posiłków: {{updated}}.",
+      "appliedWithExceptions": "Przestawiono posiłków: {{updated}}. Pominięto wyjątków (dni zmienione pojedynczo): {{skipped}}.",
+      "loadError": "Nie udało się wczytać pór posiłków grupy."
+    },
+    "customTime": "wyjątek",
+    "customTimeHint": "Godzina ustawiona tylko na ten dzień — zmiana pór grupy jej nie ruszy."
+  },
+  "mealTimes": {
+    "title": "Domyślne pory posiłków",
+    "intro": "Z tych pór generowane są posiłki dla każdej potwierdzonej rezerwacji. Zmiana dotyczy tylko nowo generowanych posiłków — istniejące zostają bez zmian.",
+    "backToSchedule": "← Wróć do harmonogramu",
+    "mealKind": "Rodzaj",
+    "label": "Nazwa",
+    "startTime": "Od",
+    "endTime": "Do",
+    "sortOrder": "Kolejność",
+    "time": "Godziny",
+    "status": "Status",
+    "active": "Aktywna",
+    "inactive": "Nieaktywna",
+    "add": "Dodaj",
+    "save": "Zapisz",
+    "cancelEdit": "Anuluj",
+    "edit": "Edytuj",
+    "activate": "Aktywuj",
+    "deactivate": "Dezaktywuj",
+    "delete": "Usuń",
+    "empty": "Brak zdefiniowanych pór posiłków.",
+    "genericError": "Operacja się nie powiodła. Spróbuj ponownie."
   }
 }

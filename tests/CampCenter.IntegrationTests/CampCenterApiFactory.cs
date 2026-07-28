@@ -22,9 +22,22 @@ public class CampCenterApiFactory : WebApplicationFactory<Program>, IAsyncLifeti
 
     protected override void ConfigureWebHost(IWebHostBuilder builder)
     {
-        // The shared suite performs many admin logins; raise the auth rate limit so it never trips.
-        // A dedicated test enables a strict limit on its own isolated host (WithWebHostBuilder).
+        // Every test hits the API from the same loopback address, so all three per-IP
+        // limiters see the whole suite as one client. Raise them all: otherwise
+        // adding tests makes unrelated ones fail with 429 once the suite crosses the
+        // production thresholds (100 req/10s global, 20/60s public booking, 5/30s auth).
+        // A dedicated test enables a strict limit on its own isolated host
+        // (WithWebHostBuilder).
         builder.UseSetting("RateLimiting:Auth:PermitLimit", "100000");
+
+        // WebApplicationFactory runs as Development, so it would pick up the dev
+        // auto-migrate/auto-seed flags — but the host is built (and would seed)
+        // before InitializeAsync has pointed it at the container and migrated it.
+        // Take both steps into our own hands below instead.
+        builder.UseSetting("Database:MigrateAutomatically", "false");
+        builder.UseSetting("Database:SeedAutomatically", "false");
+        builder.UseSetting("RateLimiting:Global:PermitLimit", "100000");
+        builder.UseSetting("RateLimiting:PublicBooking:PermitLimit", "100000");
 
         builder.ConfigureTestServices(services =>
         {
@@ -46,8 +59,10 @@ public class CampCenterApiFactory : WebApplicationFactory<Program>, IAsyncLifeti
         var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
         await db.Database.MigrateAsync();
 
-        // Seed the same baseline the app seeds on startup: the default admin user.
+        // Seed the same baseline the app seeds on startup: the default admin user
+        // and the center's default meal slots.
         await DataSeeder.SeedAdminUserAsync(Services);
+        await DataSeeder.SeedMealTimeDefaultsAsync(Services);
     }
 
     async Task IAsyncLifetime.DisposeAsync()

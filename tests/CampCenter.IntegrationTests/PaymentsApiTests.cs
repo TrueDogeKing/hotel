@@ -2,6 +2,7 @@ using System.Net;
 using System.Net.Http.Json;
 using CampCenter.Application.DTOs.Public;
 using CampCenter.Application.DTOs.Rooms;
+using CampCenter.Application.DTOs.Schedule;
 using CampCenter.Application.Interfaces;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.TestHost;
@@ -205,6 +206,37 @@ public class PaymentsApiTests : IntegrationTestBase
             await _client.GetFromJsonAsync<BookingDetailsDto>($"/api/public/bookings/{token}")
         )!;
         Assert.Contains(details.Payments, p => p.Kind == "Final" && p.Status == "Completed");
+    }
+
+    /// Confirming the deposit must also lay down the group's meals. The hook lives
+    /// in PaymentService.HandleNotificationAsync, so it belongs with the payment
+    /// tests — they already own the only overridden host, and adding another one
+    /// puts a second background sweeper on the shared database.
+    [Fact]
+    public async Task DepositWebhook_GeneratesTheGroupsMeals()
+    {
+        var (token, registered) = await CreateBookingWithDepositAsync();
+
+        var webhook = await _client.PostAsJsonAsync(
+            "/api/public/payments/p24/status",
+            Notification(registered, orderId: 901)
+        );
+        Assert.Equal(HttpStatusCode.OK, webhook.StatusCode);
+
+        var schedule = (
+            await _client.GetFromJsonAsync<PublicScheduleDto>(
+                $"/api/public/bookings/{token}/schedule"
+            )
+        )!;
+
+        Assert.Equal("Confirmed", schedule.Status);
+        // Every day of the stay, departure day included.
+        Assert.Equal(Nights + 1, schedule.Days.Count);
+        // Arrival day: only dinner starts after the 15:00 cutoff.
+        Assert.Equal("Dinner", Assert.Single(schedule.Days[0].Entries).MealKind);
+        // Departure day: only breakfast ends before the 11:00 cutoff.
+        Assert.Equal("Breakfast", Assert.Single(schedule.Days[^1].Entries).MealKind);
+        Assert.All(schedule.Days[1..^1], day => Assert.Equal(3, day.Entries.Count));
     }
 
     [Fact]

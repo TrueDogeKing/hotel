@@ -1,4 +1,5 @@
 using CampCenter.Application.DTOs.AdminPanel;
+using CampCenter.Application.DTOs.Schedule;
 using CampCenter.Application.Interfaces;
 using CampCenter.Application.Models;
 using CampCenter.Domain.Entities;
@@ -92,6 +93,29 @@ public class AdminBookingService : IAdminBookingService
                 booking.Id
             );
         }
+    }
+
+    public async Task<AdminBookingDto> UpdateDietaryNotesAsync(
+        Guid id,
+        UpdateDietaryNotesRequestDto request,
+        CancellationToken cancellationToken = default
+    )
+    {
+        var booking = await GetOrThrowAsync(id, cancellationToken);
+        if (booking.RowVersion != request.RowVersion)
+        {
+            throw new ConcurrencyConflictException(
+                "The booking was modified by someone else. Reload and try again."
+            );
+        }
+
+        booking.DietaryNotes = string.IsNullOrWhiteSpace(request.DietaryNotes)
+            ? null
+            : request.DietaryNotes.Trim();
+
+        await _bookings.SaveChangesAsync(cancellationToken);
+        var paid = await _bookings.GetCompletedPaymentKindsAsync([id], cancellationToken);
+        return ToDto(booking, paid.GetValueOrDefault(id) ?? []);
     }
 
     public async Task<AdminBookingDto> ReassignAsync(
@@ -321,6 +345,7 @@ public class AdminBookingService : IAdminBookingService
             b.Phone,
             b.Headcount,
             b.Notes,
+            b.DietaryNotes,
             b.Status.ToString(),
             b.CancelReason?.ToString(),
             b.TotalGrosze,

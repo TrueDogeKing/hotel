@@ -1,9 +1,10 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useAuth } from "../../auth/AuthContext";
 import AdminLayout from "../../components/admin/AdminLayout";
 import { getDashboard, type Dashboard } from "../../api/admin";
+import { formatDate as formatIsoDate } from "../../utils/dates";
 
 export default function AdminDashboardPage() {
   const { t, i18n } = useTranslation();
@@ -20,13 +21,7 @@ export default function AdminDashboardPage() {
     };
   }, []);
 
-  const dateFormatter = useMemo(
-    () =>
-      new Intl.DateTimeFormat(i18n.language === "en" ? "en-GB" : "pl-PL", {
-        dateStyle: "medium",
-      }),
-    [i18n.language],
-  );
+  const formatDate = (iso: string) => formatIsoDate(iso, i18n.language);
 
   return (
     <AdminLayout>
@@ -65,8 +60,8 @@ export default function AdminDashboardPage() {
                 <tr key={booking.id}>
                   <td>{booking.organizationName}</td>
                   <td>
-                    {dateFormatter.format(new Date(booking.startDate))} –{" "}
-                    {dateFormatter.format(new Date(booking.endDate))}
+                    {formatDate(booking.startDate)} –{" "}
+                    {formatDate(booking.endDate)}
                   </td>
                   <td>{t("dashboard.beds", { count: booking.occupiedBeds })}</td>
                   <td>{t(`adminBookings.statuses.${booking.status}`)}</td>

@@ -14,6 +14,7 @@ public class PaymentService : IPaymentService
     private readonly IPaymentGateway _gateway;
     private readonly ITokenService _tokenService;
     private readonly IEmailSender _email;
+    private readonly IScheduleService _schedule;
     private readonly BookingSettings _settings;
     private readonly ILogger<PaymentService> _logger;
 
@@ -22,6 +23,7 @@ public class PaymentService : IPaymentService
         IPaymentGateway gateway,
         ITokenService tokenService,
         IEmailSender email,
+        IScheduleService schedule,
         IOptions<BookingSettings> settings,
         ILogger<PaymentService> logger
     )
@@ -30,6 +32,7 @@ public class PaymentService : IPaymentService
         _gateway = gateway;
         _tokenService = tokenService;
         _email = email;
+        _schedule = schedule;
         _settings = settings.Value;
         _logger = logger;
     }
@@ -187,6 +190,23 @@ public class PaymentService : IPaymentService
 
         if (confirmedNow)
         {
+            // Generation must never fail the webhook: P24 would retry, the retry
+            // short-circuits on the already-Completed payment above, and generation
+            // would then never run at all. Log instead — the admin's "generate
+            // missing meals" action is the recovery path.
+            try
+            {
+                await _schedule.GenerateMealsForBookingAsync(booking.Id, cancellationToken);
+            }
+            catch (Exception ex) when (ex is not OperationCanceledException)
+            {
+                _logger.LogError(
+                    ex,
+                    "Meal generation failed for confirmed booking {BookingId}.",
+                    booking.Id
+                );
+            }
+
             await SendSafelyAsync(
                 EmailTemplates.BookingConfirmed(booking),
                 cancellationToken

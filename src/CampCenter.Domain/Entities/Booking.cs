@@ -31,6 +31,10 @@ public class Booking
     public DateOnly StartDate { get; set; }
 
     /// Departure day (exclusive — the last night stayed is EndDate - 1).
+    ///
+    /// "Exclusive" applies to nights and room occupancy only. The group is still
+    /// physically here on this day, so it IS a valid schedule day — see
+    /// ScheduleEntry.Date.
     public DateOnly EndDate { get; set; }
 
     public required string OrganizationName { get; set; }
@@ -44,7 +48,13 @@ public class Booking
     /// Number of participants the group brings.
     public int Headcount { get; set; }
 
+    /// Free-text note left by the booker at booking time.
     public string? Notes { get; set; }
+
+    /// Admin-managed dietary requirements and preparation note for the kitchen
+    /// ("2× bezglutenowa, 1× wegetariańska"). Distinct from Notes, which the
+    /// booker wrote.
+    public string? DietaryNotes { get; set; }
 
     public BookingStatus Status { get; set; } = BookingStatus.PendingDeposit;
 

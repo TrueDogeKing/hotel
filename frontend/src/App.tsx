@@ -12,6 +12,8 @@ import ClosuresPage from "./pages/admin/ClosuresPage";
 import OccupancyPage from "./pages/admin/OccupancyPage";
 import AdminBookingsPage from "./pages/admin/AdminBookingsPage";
 import TasksPage from "./pages/admin/TasksPage";
+import SchedulePage from "./pages/admin/SchedulePage";
+import MealTimesPage from "./pages/admin/MealTimesPage";
 import "./App.css";
 
 export default function App() {
@@ -33,6 +35,8 @@ export default function App() {
             <Route path="/admin/oblozenie" element={<OccupancyPage />} />
             <Route path="/admin/rezerwacje" element={<AdminBookingsPage />} />
             <Route path="/admin/zadania" element={<TasksPage />} />
+            <Route path="/admin/harmonogram" element={<SchedulePage />} />
+            <Route path="/admin/posilki" element={<MealTimesPage />} />
           </Route>
         </Routes>
       </AuthProvider>

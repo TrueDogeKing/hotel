@@ -120,6 +120,7 @@ export interface AdminBooking {
   phone: string;
   headcount: number;
   notes: string | null;
+  dietaryNotes: string | null;
   status: "PendingDeposit" | "Confirmed" | "Cancelled" | "Completed";
   cancelReason: string | null;
   totalGrosze: number;
@@ -231,5 +232,280 @@ export interface Dashboard {
 
 export async function getDashboard(): Promise<Dashboard> {
   const { data } = await api.get<Dashboard>("/admin/dashboard");
+  return data;
+}
+
+// --- Camp schedule (harmonogram) ---
+
+export type ScheduleEntryKind = "Meal" | "Activity";
+export type MealKind = "Breakfast" | "Lunch" | "Dinner" | "Snack";
+
+export const mealKinds: MealKind[] = ["Breakfast", "Lunch", "Dinner", "Snack"];
+
+export interface ScheduleEntry {
+  id: string;
+  bookingId: string;
+  organizationName: string;
+  headcount: number;
+  kind: ScheduleEntryKind;
+  mealKind: MealKind | null;
+  date: string;
+  /** "HH:mm:ss" — pipe through toTimeInput() before binding to an <input type="time">. */
+  startTime: string;
+  endTime: string;
+  title: string;
+  menu: string | null;
+  prepNotes: string | null;
+  location: string | null;
+  /** This entry's time was set for this one day; a bulk re-time will skip it. */
+  timesCustomized: boolean;
+  rowVersion: number;
+}
+
+/** A group's stay as a calendar bar. endDate is inclusive: the bar spans nights + 1 days. */
+export interface ScheduleCalendarBooking {
+  bookingId: string;
+  organizationName: string;
+  startDate: string;
+  endDate: string;
+  nights: number;
+  headcount: number;
+  status: AdminBooking["status"];
+}
+
+export interface ScheduleCalendarDay {
+  date: string;
+  groupCount: number;
+  peopleCount: number;
+  mealCount: number;
+  activityCount: number;
+}
+
+export interface ScheduleCalendar {
+  start: string;
+  end: string;
+  bookings: ScheduleCalendarBooking[];
+  days: ScheduleCalendarDay[];
+}
+
+export interface ScheduleDayGroup {
+  bookingId: string;
+  organizationName: string;
+  headcount: number;
+  status: AdminBooking["status"];
+  isArrivalDay: boolean;
+  isDepartureDay: boolean;
+  dietaryNotes: string | null;
+}
+
+export interface ScheduleDay {
+  date: string;
+  groups: ScheduleDayGroup[];
+  entries: ScheduleEntry[];
+}
+
+export interface BookingScheduleDay {
+  date: string;
+  isArrivalDay: boolean;
+  isDepartureDay: boolean;
+  entries: ScheduleEntry[];
+}
+
+export interface BookingSchedule {
+  bookingId: string;
+  organizationName: string;
+  contactName: string;
+  email: string;
+  phone: string;
+  startDate: string;
+  endDate: string;
+  nights: number;
+  headcount: number;
+  status: AdminBooking["status"];
+  notes: string | null;
+  dietaryNotes: string | null;
+  bookingRowVersion: number;
+  days: BookingScheduleDay[];
+}
+
+export interface ScheduleEntryInput {
+  kind: ScheduleEntryKind;
+  mealKind: MealKind | null;
+  date: string;
+  startTime: string;
+  endTime: string;
+  title: string;
+  menu: string | null;
+  prepNotes: string | null;
+  location: string | null;
+}
+
+export async function getScheduleCalendar(start: string, end: string): Promise<ScheduleCalendar> {
+  const { data } = await api.get<ScheduleCalendar>("/admin/schedule/calendar", {
+    params: { start, end },
+  });
+  return data;
+}
+
+export async function getScheduleDay(date: string): Promise<ScheduleDay> {
+  const { data } = await api.get<ScheduleDay>(`/admin/schedule/day/${date}`);
+  return data;
+}
+
+export async function getBookingSchedule(bookingId: string): Promise<BookingSchedule> {
+  const { data } = await api.get<BookingSchedule>(`/admin/schedule/bookings/${bookingId}`);
+  return data;
+}
+
+export async function createScheduleEntry(
+  input: ScheduleEntryInput & { bookingId: string },
+): Promise<ScheduleEntry> {
+  const { data } = await api.post<ScheduleEntry>("/admin/schedule/entries", input);
+  return data;
+}
+
+export async function updateScheduleEntry(
+  id: string,
+  input: ScheduleEntryInput & { rowVersion: number },
+): Promise<ScheduleEntry> {
+  const { data } = await api.put<ScheduleEntry>(`/admin/schedule/entries/${id}`, input);
+  return data;
+}
+
+export async function deleteScheduleEntry(id: string): Promise<void> {
+  await api.delete(`/admin/schedule/entries/${id}`);
+}
+
+/** Idempotent — meals an admin deleted on purpose are not recreated. */
+export async function generateMealsForBooking(bookingId: string): Promise<{ created: number }> {
+  const { data } = await api.post<{ created: number }>(
+    `/admin/schedule/bookings/${bookingId}/generate-meals`,
+  );
+  return data;
+}
+
+export async function generateMissingMeals(
+  from: string,
+  to: string,
+): Promise<{ bookings: number; created: number }> {
+  const { data } = await api.post<{ bookings: number; created: number }>(
+    "/admin/schedule/generate-meals",
+    null,
+    { params: { from, to } },
+  );
+  return data;
+}
+
+export async function updateDietaryNotes(
+  bookingId: string,
+  input: { dietaryNotes: string | null; rowVersion: number },
+): Promise<AdminBooking> {
+  const { data } = await api.put<AdminBooking>(
+    `/admin/bookings/${bookingId}/dietary-notes`,
+    input,
+  );
+  return data;
+}
+
+// --- Meal-time defaults (domyślne pory posiłków) ---
+
+export interface MealTimeDefault {
+  id: string;
+  mealKind: MealKind;
+  label: string;
+  startTime: string;
+  endTime: string;
+  sortOrder: number;
+  isActive: boolean;
+  rowVersion: number;
+}
+
+export interface MealTimeDefaultInput {
+  mealKind: MealKind;
+  label: string;
+  startTime: string;
+  endTime: string;
+  sortOrder: number;
+}
+
+export async function getMealTimes(): Promise<MealTimeDefault[]> {
+  const { data } = await api.get<MealTimeDefault[]>("/admin/meal-times");
+  return data;
+}
+
+export async function createMealTime(input: MealTimeDefaultInput): Promise<MealTimeDefault> {
+  const { data } = await api.post<MealTimeDefault>("/admin/meal-times", input);
+  return data;
+}
+
+export async function updateMealTime(
+  id: string,
+  input: MealTimeDefaultInput & { isActive: boolean; rowVersion: number },
+): Promise<MealTimeDefault> {
+  const { data } = await api.put<MealTimeDefault>(`/admin/meal-times/${id}`, input);
+  return data;
+}
+
+/** Hard-deletes an unused slot; deactivates one that already produced meals. */
+export async function deleteMealTime(id: string): Promise<{ deleted: boolean }> {
+  const { data } = await api.delete<{ deleted: boolean }>(`/admin/meal-times/${id}`);
+  return data;
+}
+
+// --- Per-group meal times ---
+
+/** A center meal slot as it applies to one group. */
+export interface BookingMealTime {
+  mealTimeDefaultId: string;
+  mealKind: MealKind;
+  label: string;
+  sortOrder: number;
+  defaultStartTime: string;
+  defaultEndTime: string;
+  startTime: string;
+  endTime: string;
+  isOverridden: boolean;
+  /** 0 when the group has no override row yet. */
+  rowVersion: number;
+}
+
+export interface ApplyBookingMealTimeResult {
+  mealTime: BookingMealTime;
+  updated: number;
+  skippedCustomized: number;
+}
+
+export async function getBookingMealTimes(bookingId: string): Promise<BookingMealTime[]> {
+  const { data } = await api.get<BookingMealTime[]>(
+    `/admin/schedule/bookings/${bookingId}/meal-times`,
+  );
+  return data;
+}
+
+/**
+ * Sets this group's own time for a meal slot. With applyToExisting the whole stay
+ * is re-timed at once — days moved individually are always left alone.
+ */
+export async function setBookingMealTime(
+  bookingId: string,
+  mealTimeDefaultId: string,
+  input: { startTime: string; endTime: string; applyToExisting: boolean; rowVersion: number },
+): Promise<ApplyBookingMealTimeResult> {
+  const { data } = await api.put<ApplyBookingMealTimeResult>(
+    `/admin/schedule/bookings/${bookingId}/meal-times/${mealTimeDefaultId}`,
+    input,
+  );
+  return data;
+}
+
+export async function resetBookingMealTime(
+  bookingId: string,
+  mealTimeDefaultId: string,
+  applyToExisting: boolean,
+): Promise<ApplyBookingMealTimeResult> {
+  const { data } = await api.delete<ApplyBookingMealTimeResult>(
+    `/admin/schedule/bookings/${bookingId}/meal-times/${mealTimeDefaultId}`,
+    { params: { applyToExisting } },
+  );
   return data;
 }

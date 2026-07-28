@@ -1,6 +1,8 @@
 using CampCenter.Application.DTOs.AdminPanel;
+using CampCenter.Application.DTOs.Schedule;
 using CampCenter.Application.Interfaces;
 using CampCenter.Domain.Entities;
+using FluentValidation;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -13,8 +15,16 @@ namespace CampCenter.Api.Controllers.Admin;
 public class BookingsController : ControllerBase
 {
     private readonly IAdminBookingService _bookings;
+    private readonly IValidator<UpdateDietaryNotesRequestDto> _dietaryNotesValidator;
 
-    public BookingsController(IAdminBookingService bookings) => _bookings = bookings;
+    public BookingsController(
+        IAdminBookingService bookings,
+        IValidator<UpdateDietaryNotesRequestDto> dietaryNotesValidator
+    )
+    {
+        _bookings = bookings;
+        _dietaryNotesValidator = dietaryNotesValidator;
+    }
 
     [HttpGet]
     [ProducesResponseType(typeof(List<AdminBookingDto>), StatusCodes.Status200OK)]
@@ -49,4 +59,31 @@ public class BookingsController : ControllerBase
         [FromBody] ReassignBookingRequestDto request,
         CancellationToken cancellationToken
     ) => Ok(await _bookings.ReassignAsync(id, request, cancellationToken));
+
+    /// Kitchen-facing dietary/preparation note for the group. Separate from the
+    /// booker's own Notes.
+    [HttpPut("{id:guid}/dietary-notes")]
+    [ProducesResponseType(typeof(AdminBookingDto), StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    [ProducesResponseType(StatusCodes.Status409Conflict)]
+    public async Task<IActionResult> UpdateDietaryNotes(
+        Guid id,
+        [FromBody] UpdateDietaryNotesRequestDto request,
+        CancellationToken cancellationToken
+    )
+    {
+        var validation = await _dietaryNotesValidator.ValidateAsync(request, cancellationToken);
+        if (!validation.IsValid)
+        {
+            foreach (var error in validation.Errors)
+            {
+                ModelState.AddModelError(error.PropertyName, error.ErrorMessage);
+            }
+
+            return ValidationProblem(ModelState);
+        }
+
+        return Ok(await _bookings.UpdateDietaryNotesAsync(id, request, cancellationToken));
+    }
 }

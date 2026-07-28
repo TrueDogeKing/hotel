@@ -75,6 +75,10 @@ namespace CampCenter.Infrastructure.Persistence.Migrations
                     b.Property<long>("DepositGrosze")
                         .HasColumnType("bigint");
 
+                    b.Property<string>("DietaryNotes")
+                        .HasMaxLength(2000)
+                        .HasColumnType("character varying(2000)");
+
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasMaxLength(256)
@@ -144,6 +148,49 @@ namespace CampCenter.Infrastructure.Persistence.Migrations
                     b.ToTable("Bookings", (string)null);
                 });
 
+            modelBuilder.Entity("CampCenter.Domain.Entities.BookingMealTime", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("BookingId")
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<TimeOnly>("EndTime")
+                        .HasColumnType("time without time zone");
+
+                    b.Property<Guid>("MealTimeDefaultId")
+                        .HasColumnType("uuid");
+
+                    b.Property<uint>("RowVersion")
+                        .IsConcurrencyToken()
+                        .ValueGeneratedOnAddOrUpdate()
+                        .HasColumnType("xid")
+                        .HasColumnName("xmin");
+
+                    b.Property<TimeOnly>("StartTime")
+                        .HasColumnType("time without time zone");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MealTimeDefaultId");
+
+                    b.HasIndex("BookingId", "MealTimeDefaultId")
+                        .IsUnique();
+
+                    b.ToTable("BookingMealTimes", null, t =>
+                        {
+                            t.HasCheckConstraint("CK_BookingMealTimes_TimeOrder", "\"EndTime\" > \"StartTime\"");
+                        });
+                });
+
             modelBuilder.Entity("CampCenter.Domain.Entities.BookingRoomAssignment", b =>
                 {
                     b.Property<Guid>("Id")
@@ -210,6 +257,53 @@ namespace CampCenter.Infrastructure.Persistence.Migrations
                     b.HasIndex("StartDate", "EndDate");
 
                     b.ToTable("Closures", (string)null);
+                });
+
+            modelBuilder.Entity("CampCenter.Domain.Entities.MealTimeDefault", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<TimeOnly>("EndTime")
+                        .HasColumnType("time without time zone");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("boolean");
+
+                    b.Property<string>("Label")
+                        .IsRequired()
+                        .HasMaxLength(128)
+                        .HasColumnType("character varying(128)");
+
+                    b.Property<string>("MealKind")
+                        .IsRequired()
+                        .HasMaxLength(16)
+                        .HasColumnType("character varying(16)");
+
+                    b.Property<uint>("RowVersion")
+                        .IsConcurrencyToken()
+                        .ValueGeneratedOnAddOrUpdate()
+                        .HasColumnType("xid")
+                        .HasColumnName("xmin");
+
+                    b.Property<int>("SortOrder")
+                        .HasColumnType("integer");
+
+                    b.Property<TimeOnly>("StartTime")
+                        .HasColumnType("time without time zone");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("SortOrder", "StartTime");
+
+                    b.ToTable("MealTimeDefaults", null, t =>
+                        {
+                            t.HasCheckConstraint("CK_MealTimeDefaults_TimeOrder", "\"EndTime\" > \"StartTime\"");
+                        });
                 });
 
             modelBuilder.Entity("CampCenter.Domain.Entities.Payment", b =>
@@ -390,6 +484,108 @@ namespace CampCenter.Infrastructure.Persistence.Migrations
                     b.ToTable("RoomTasks", (string)null);
                 });
 
+            modelBuilder.Entity("CampCenter.Domain.Entities.ScheduleEntry", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("BookingId")
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<DateOnly>("Date")
+                        .HasColumnType("date");
+
+                    b.Property<TimeOnly>("EndTime")
+                        .HasColumnType("time without time zone");
+
+                    b.Property<bool>("IsSuppressed")
+                        .HasColumnType("boolean");
+
+                    b.Property<string>("Kind")
+                        .IsRequired()
+                        .HasMaxLength(16)
+                        .HasColumnType("character varying(16)");
+
+                    b.Property<string>("Location")
+                        .HasMaxLength(200)
+                        .HasColumnType("character varying(200)");
+
+                    b.Property<string>("MealKind")
+                        .HasMaxLength(16)
+                        .HasColumnType("character varying(16)");
+
+                    b.Property<Guid?>("MealTimeDefaultId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Menu")
+                        .HasMaxLength(2000)
+                        .HasColumnType("character varying(2000)");
+
+                    b.Property<string>("PrepNotes")
+                        .HasMaxLength(2000)
+                        .HasColumnType("character varying(2000)");
+
+                    b.Property<uint>("RowVersion")
+                        .IsConcurrencyToken()
+                        .ValueGeneratedOnAddOrUpdate()
+                        .HasColumnType("xid")
+                        .HasColumnName("xmin");
+
+                    b.Property<TimeOnly>("StartTime")
+                        .HasColumnType("time without time zone");
+
+                    b.Property<bool>("TimesCustomized")
+                        .HasColumnType("boolean");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("character varying(200)");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MealTimeDefaultId");
+
+                    b.HasIndex("Date", "StartTime");
+
+                    b.HasIndex("BookingId", "Date", "MealTimeDefaultId")
+                        .IsUnique()
+                        .HasFilter("\"MealTimeDefaultId\" IS NOT NULL");
+
+                    b.HasIndex("BookingId", "Date", "StartTime");
+
+                    b.ToTable("ScheduleEntries", null, t =>
+                        {
+                            t.HasCheckConstraint("CK_ScheduleEntries_TimeOrder", "\"EndTime\" > \"StartTime\"");
+                        });
+                });
+
+            modelBuilder.Entity("CampCenter.Domain.Entities.BookingMealTime", b =>
+                {
+                    b.HasOne("CampCenter.Domain.Entities.Booking", "Booking")
+                        .WithMany()
+                        .HasForeignKey("BookingId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CampCenter.Domain.Entities.MealTimeDefault", "MealTimeDefault")
+                        .WithMany()
+                        .HasForeignKey("MealTimeDefaultId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Booking");
+
+                    b.Navigation("MealTimeDefault");
+                });
+
             modelBuilder.Entity("CampCenter.Domain.Entities.BookingRoomAssignment", b =>
                 {
                     b.HasOne("CampCenter.Domain.Entities.Booking", "Booking")
@@ -457,6 +653,24 @@ namespace CampCenter.Infrastructure.Persistence.Migrations
                     b.Navigation("Booking");
 
                     b.Navigation("Room");
+                });
+
+            modelBuilder.Entity("CampCenter.Domain.Entities.ScheduleEntry", b =>
+                {
+                    b.HasOne("CampCenter.Domain.Entities.Booking", "Booking")
+                        .WithMany()
+                        .HasForeignKey("BookingId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CampCenter.Domain.Entities.MealTimeDefault", "MealTimeDefault")
+                        .WithMany()
+                        .HasForeignKey("MealTimeDefaultId")
+                        .OnDelete(DeleteBehavior.SetNull);
+
+                    b.Navigation("Booking");
+
+                    b.Navigation("MealTimeDefault");
                 });
 
             modelBuilder.Entity("CampCenter.Domain.Entities.Booking", b =>

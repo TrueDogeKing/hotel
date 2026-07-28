@@ -1,4 +1,5 @@
 using CampCenter.Application.DTOs.AdminPanel;
+using CampCenter.Application.DTOs.Schedule;
 using CampCenter.Domain.Entities;
 
 namespace CampCenter.Application.Interfaces;
@@ -20,6 +21,13 @@ public interface IAdminBookingService
     Task<AdminBookingDto> ReassignAsync(
         Guid id,
         ReassignBookingRequestDto request,
+        CancellationToken cancellationToken = default
+    );
+
+    /// Sets the kitchen-facing dietary/preparation note for a group.
+    Task<AdminBookingDto> UpdateDietaryNotesAsync(
+        Guid id,
+        UpdateDietaryNotesRequestDto request,
         CancellationToken cancellationToken = default
     );
 

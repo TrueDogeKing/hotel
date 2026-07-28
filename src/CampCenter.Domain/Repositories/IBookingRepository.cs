@@ -33,6 +33,17 @@ public interface IBookingRepository
         CancellationToken cancellationToken = default
     );
 
+    /// Live bookings *present* on any day in [firstDay, lastDay] — INCLUSIVE at
+    /// both ends, which is the schedule's window rather than the half-open window
+    /// used for room occupancy. Use this, not ListLiveInRangeAsync, for anything
+    /// schedule-related: the half-open predicate drops a group on its departure day.
+    /// No assignments loaded — the calendar and day views don't need rooms.
+    Task<List<Booking>> ListLivePresentInAsync(
+        DateOnly firstDay,
+        DateOnly lastDay,
+        CancellationToken cancellationToken = default
+    );
+
     /// Live bookings starting on/after <paramref name="from"/>, earliest first.
     Task<List<Booking>> ListUpcomingAsync(
         DateOnly from,

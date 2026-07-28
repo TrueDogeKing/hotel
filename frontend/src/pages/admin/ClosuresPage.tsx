@@ -11,6 +11,7 @@ import {
   type Closure,
   type Room,
 } from "../../api/admin";
+import { formatDate as formatIsoDate } from "../../utils/dates";
 
 interface ClosureFormState {
   reason: string;
@@ -103,10 +104,7 @@ export default function ClosuresPage() {
     }
   }
 
-  const dateFormatter = new Intl.DateTimeFormat(i18n.language === "en" ? "en-GB" : "pl-PL", {
-    dateStyle: "medium",
-  });
-  const formatDate = (iso: string) => dateFormatter.format(new Date(iso));
+  const formatDate = (iso: string) => formatIsoDate(iso, i18n.language);
 
   return (
     <AdminLayout>

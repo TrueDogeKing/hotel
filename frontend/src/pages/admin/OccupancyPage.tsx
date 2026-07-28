@@ -10,19 +10,14 @@ import {
   type RoomOccupancy,
   type RoomTask,
 } from "../../api/admin";
-
-function isoDate(d: Date): string {
-  return d.toISOString().slice(0, 10);
-}
+import { addDaysIso, todayIso } from "../../utils/dates";
 
 // Occupancy grid over a date range: rooms colored by occupancy or blocked by a
 // closure. Clicking a room shows its booking and lets the admin add tasks.
 export default function OccupancyPage() {
   const { t } = useTranslation();
-  const today = new Date();
-  const weekAhead = new Date(today.getTime() + 7 * 86_400_000);
-  const [start, setStart] = useState(isoDate(today));
-  const [end, setEnd] = useState(isoDate(weekAhead));
+  const [start, setStart] = useState(todayIso);
+  const [end, setEnd] = useState(() => addDaysIso(todayIso(), 7));
   const [occupancy, setOccupancy] = useState<Occupancy | null>(null);
   const [selected, setSelected] = useState<RoomOccupancy | null>(null);
   const [roomTasks, setRoomTasks] = useState<RoomTask[]>([]);

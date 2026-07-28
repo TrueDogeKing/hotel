@@ -1,8 +1,9 @@
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import AdminLayout from "../../components/admin/AdminLayout";
 import ConfirmDialog from "../../components/ConfirmDialog";
 import { cancelAdminBooking, formatZl, getAdminBookings, type AdminBooking } from "../../api/admin";
+import { formatDate as formatIsoDate } from "../../utils/dates";
 
 export default function AdminBookingsPage() {
   const { t, i18n } = useTranslation();
@@ -39,13 +40,7 @@ export default function AdminBookingsPage() {
     }
   }
 
-  const dateFormatter = useMemo(
-    () =>
-      new Intl.DateTimeFormat(i18n.language === "en" ? "en-GB" : "pl-PL", {
-        dateStyle: "medium",
-      }),
-    [i18n.language],
-  );
+  const formatDate = (iso: string) => formatIsoDate(iso, i18n.language);
 
   function paymentBadge(booking: AdminBooking) {
     if (booking.status === "Cancelled") return t(`adminBookings.statuses.${booking.status}`);
@@ -96,8 +91,8 @@ export default function AdminBookingsPage() {
               >
                 <td>{booking.organizationName}</td>
                 <td>
-                  {dateFormatter.format(new Date(booking.startDate))} –{" "}
-                  {dateFormatter.format(new Date(booking.endDate))}
+                  {formatDate(booking.startDate)} –{" "}
+                  {formatDate(booking.endDate)}
                 </td>
                 <td>{booking.headcount}</td>
                 <td>{formatZl(booking.totalGrosze)}</td>
@@ -132,7 +127,7 @@ export default function AdminBookingsPage() {
                     <p>
                       {t("adminBookings.deposit")}: {formatZl(booking.depositGrosze)} ·{" "}
                       {t("adminBookings.finalDue")}:{" "}
-                      {dateFormatter.format(new Date(booking.finalPaymentDueDate))}
+                      {formatDate(booking.finalPaymentDueDate)}
                     </p>
                     {booking.notes && <p>{booking.notes}</p>}
                   </td>

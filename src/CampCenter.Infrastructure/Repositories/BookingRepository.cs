@@ -9,12 +9,7 @@ namespace CampCenter.Infrastructure.Repositories;
 
 public class BookingRepository : IBookingRepository
 {
-    private static readonly BookingStatus[] LiveStatuses =
-    [
-        BookingStatus.PendingDeposit,
-        BookingStatus.Confirmed,
-        BookingStatus.Completed,
-    ];
+    private static readonly BookingStatus[] LiveStatuses = BookingStatuses.Live;
 
     private readonly AppDbContext _db;
 
@@ -77,6 +72,21 @@ public class BookingRepository : IBookingRepository
                 LiveStatuses.Contains(b.Status) && b.StartDate < end && start < b.EndDate
             )
             .OrderBy(b => b.StartDate)
+            .ToListAsync(cancellationToken);
+
+    public Task<List<Booking>> ListLivePresentInAsync(
+        DateOnly firstDay,
+        DateOnly lastDay,
+        CancellationToken cancellationToken = default
+    ) =>
+        // Inclusive on both ends, unlike ListLiveInRangeAsync: a group is still
+        // here on its departure day, and the schedule must show it.
+        _db
+            .Bookings.Where(b =>
+                LiveStatuses.Contains(b.Status) && b.StartDate <= lastDay && firstDay <= b.EndDate
+            )
+            .OrderBy(b => b.StartDate)
+            .ThenBy(b => b.OrganizationName)
             .ToListAsync(cancellationToken);
 
     public Task<List<Booking>> ListUpcomingAsync(

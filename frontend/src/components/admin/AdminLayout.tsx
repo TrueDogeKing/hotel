@@ -21,6 +21,7 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
             <NavLink to="/admin" end>
               {t("admin.nav.dashboard")}
             </NavLink>
+            <NavLink to="/admin/harmonogram">{t("admin.nav.schedule")}</NavLink>
             <NavLink to="/admin/oblozenie">{t("admin.nav.occupancy")}</NavLink>
             <NavLink to="/admin/blokady">{t("admin.nav.closures")}</NavLink>
             <NavLink to="/admin/pokoje">{t("admin.nav.rooms")}</NavLink>
@@ -45,6 +46,7 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
           <NavLink to="/admin" end>
             {t("admin.nav.dashboard")}
           </NavLink>
+          <NavLink to="/admin/harmonogram">{t("admin.nav.schedule")}</NavLink>
           <NavLink to="/admin/oblozenie">{t("admin.nav.occupancy")}</NavLink>
           <NavLink to="/admin/rezerwacje">{t("admin.nav.bookings")}</NavLink>
           <NavLink to="/admin/zadania">{t("admin.nav.tasks")}</NavLink>
