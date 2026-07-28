@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { useAuth } from "../../auth/AuthContext";
 import LanguageSwitcher from "../LanguageSwitcher";
 import ThemeToggle from "../ThemeToggle";
+import { IconLandscape } from "../icons";
 
 // Shared admin shell: brand, section nav, language flags, logout.
 export default function AdminLayout({ children }: { children: ReactNode }) {
@@ -14,8 +15,12 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
     <main className="admin-page">
       <header className="public-header">
         <div className="admin-header-left">
-          <div className="auth-brand">
-            <span className="mark">C</span> {t("admin.dashboardTitle")}
+          <div className="auth-brand admin-brand">
+            <span className="mark">
+              <IconLandscape />
+            </span>
+            {/* Hidden on narrow screens so the section nav keeps the room. */}
+            <span className="admin-brand-text">{t("admin.dashboardTitle")}</span>
           </div>
           <nav className="admin-nav">
             <NavLink to="/admin" end>

@@ -1513,7 +1513,16 @@ p[role="alert"] {
   box-shadow: var(--shadow-sm);
 }
 
+/* Below this the title costs the nav more room than it is worth; the mark alone
+   still identifies the panel. */
+@media (max-width: 60rem) {
+  .admin-brand-text {
+    display: none;
+  }
+}
+
 .admin-header-actions {
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -1526,25 +1535,60 @@ p[role="alert"] {
 
 /* --- Admin tables + forms (phase 2) --- */
 
+/* The admin header stays a single row: brand, then the sections, then the actions.
+   Only the nav is allowed to shrink — it scrolls sideways within its own strip
+   rather than wrapping the whole header onto three lines. */
+.admin-page .public-header {
+  flex-wrap: nowrap;
+  gap: 1rem;
+}
+
 .admin-header-left {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 1.25rem;
+  /* Without this the nav refuses to shrink and shoves the actions off the edge. */
+  min-width: 0;
+  flex: 1;
+}
+
+.admin-brand {
+  flex-shrink: 0;
+  gap: 0.5rem;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+.admin-brand .mark {
+  width: 2rem;
+  height: 2rem;
+  font-size: 1rem;
+}
+.admin-brand .mark svg {
+  width: 1.15rem;
+  height: 1.15rem;
 }
 
 .admin-nav {
   display: flex;
-  /* Seven sections no longer fit on a narrow screen; wrapping keeps the page from
-     scrolling sideways. */
-  flex-wrap: wrap;
-  gap: 12px;
+  flex-wrap: nowrap;
+  gap: 0.25rem;
+  min-width: 0;
+  overflow-x: auto;
+  /* No scrollbar rail: it would add height to the header on exactly the widths
+     where space is tight. The clipped link at the edge is the affordance, and the
+     footer repeats every section. */
+  scrollbar-width: none;
+}
+.admin-nav::-webkit-scrollbar {
+  display: none;
 }
 
 .admin-nav a {
   text-decoration: none;
+  white-space: nowrap;
   color: var(--text-muted);
   font-weight: 500;
-  padding: 6px 12px;
+  padding: 0.4rem 0.7rem;
   border-radius: var(--r-md);
   transition:
     color var(--dur-fast) var(--ease-out),
