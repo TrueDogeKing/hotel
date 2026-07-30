@@ -1,19 +1,21 @@
 ---
 type: community
-members: 13
+members: 15
 ---
 
 # Global Exception Handler
 
-**Members:** 13 nodes
+**Members:** 15 nodes
 
 ## Members
 - [[.Map()]] - code - src/CampCenter.Api/Errors/GlobalExceptionHandler.cs
 - [[.TryHandleAsync()]] - code - src/CampCenter.Api/Errors/GlobalExceptionHandler.cs
+- [[CampCenter.Api.Errors]] - code - src/CampCenter.Api/Errors/GlobalExceptionHandler.cs
 - [[CancellationToken_14]] - code
 - [[Detail]] - code
 - [[Exception]] - code
 - [[GlobalExceptionHandler]] - code - src/CampCenter.Api/Errors/GlobalExceptionHandler.cs
+- [[GlobalExceptionHandler.cs]] - code - src/CampCenter.Api/Errors/GlobalExceptionHandler.cs
 - [[HttpContext]] - code
 - [[IExceptionHandler]] - code
 - [[ILogger_1]] - code
@@ -30,7 +32,9 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_Public Booking Service (2)]]
+- 1 edge to [[_COMMUNITY_Domain & Infra Namespaces]]
+- 1 edge to [[_COMMUNITY_CampCenter.Application  Services (1)]]
 
 ## Top bridge nodes
-- [[GlobalExceptionHandler]] - degree 6, connects to 1 community
+- [[GlobalExceptionHandler.cs]] - degree 3, connects to 1 community
+- [[CampCenter.Api.Errors]] - degree 2, connects to 1 community

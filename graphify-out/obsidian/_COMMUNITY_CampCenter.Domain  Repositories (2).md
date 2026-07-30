@@ -1,24 +1,30 @@
 ---
 type: community
-members: 11
+members: 17
 ---
 
 # CampCenter.Domain / Repositories (2)
 
-**Members:** 11 nodes
+**Members:** 17 nodes
 
 ## Members
-- [[.Configure()_8]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/RoomCleaningConfiguration.cs
-- [[DateOnly_20]] - code
-- [[DateTime_11]] - code
-- [[EntityTypeBuilder_8]] - code
-- [[Guid_34]] - code
-- [[RoomCleaning]] - code - src/CampCenter.Domain/Entities/RoomCleaning.cs
-- [[RoomCleaning.cs]] - code - src/CampCenter.Domain/Entities/RoomCleaning.cs
-- [[RoomCleaningConfiguration]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/RoomCleaningConfiguration.cs
-- [[RoomCleaningConfiguration.cs]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/RoomCleaningConfiguration.cs
-- [[RoomCleaningKind_1]] - code - src/CampCenter.Domain/Entities/RoomCleaning.cs
-- [[RoomCleaningStatus_1]] - code - src/CampCenter.Domain/Entities/RoomCleaning.cs
+- [[.AddAsync()_9]] - code - src/CampCenter.Infrastructure/Repositories/BookingMealTimeRepository.cs
+- [[.GetAsync()_4]] - code - src/CampCenter.Infrastructure/Repositories/BookingMealTimeRepository.cs
+- [[.ListForBookingAsync()_2]] - code - src/CampCenter.Infrastructure/Repositories/BookingMealTimeRepository.cs
+- [[.ListForBookingsAsync()_1]] - code - src/CampCenter.Infrastructure/Repositories/BookingMealTimeRepository.cs
+- [[.Remove()_6]] - code - src/CampCenter.Infrastructure/Repositories/BookingMealTimeRepository.cs
+- [[.SaveChangesAsync()_11]] - code - src/CampCenter.Infrastructure/Repositories/BookingMealTimeRepository.cs
+- [[BookingMealTime_1]] - code - src/CampCenter.Domain/Entities/BookingMealTime.cs
+- [[BookingMealTime.cs]] - code - src/CampCenter.Domain/Entities/BookingMealTime.cs
+- [[BookingMealTimeRepository]] - code - src/CampCenter.Infrastructure/Repositories/BookingMealTimeRepository.cs
+- [[CancellationToken_54]] - code
+- [[DateTime_6]] - code
+- [[Guid_27]] - code
+- [[Guid_48]] - code
+- [[IReadOnlyCollection_4]] - code
+- [[List_26]] - code
+- [[Task_53]] - code
+- [[TimeOnly_4]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -28,17 +34,15 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (2)]]
-- 3 edges to [[_COMMUNITY_Integration Test Harness (2)]]
-- 2 edges to [[_COMMUNITY_Domain & Infra Namespaces]]
-- 1 edge to [[_COMMUNITY_Room Management]]
-- 1 edge to [[_COMMUNITY_Booking Persistence & Entities (1)]]
-- 1 edge to [[_COMMUNITY_Persistence  Configurations]]
-- 1 edge to [[_COMMUNITY_Validator Unit Tests]]
+- 7 edges to [[_COMMUNITY_CampCenter.Application  Services (2)]]
+- 2 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (1)]]
+- 2 edges to [[_COMMUNITY_Public Booking Service (2)]]
+- 2 edges to [[_COMMUNITY_Booking Persistence & Entities (1)]]
+- 2 edges to [[_COMMUNITY_Persistence  Configurations]]
+- 1 edge to [[_COMMUNITY_CampCenter.UnitTests  Validators]]
+- 1 edge to [[_COMMUNITY_Admin Booking & Notifications (3)]]
 
 ## Top bridge nodes
-- [[RoomCleaning]] - degree 16, connects to 4 communities
-- [[RoomCleaningConfiguration.cs]] - degree 3, connects to 2 communities
-- [[RoomCleaning.cs]] - degree 4, connects to 1 community
-- [[RoomCleaningConfiguration]] - degree 4, connects to 1 community
-- [[RoomCleaningKind_1]] - degree 3, connects to 1 community
+- [[BookingMealTime_1]] - degree 22, connects to 6 communities
+- [[BookingMealTimeRepository]] - degree 9, connects to 3 communities
+- [[BookingMealTime.cs]] - degree 2, connects to 1 community

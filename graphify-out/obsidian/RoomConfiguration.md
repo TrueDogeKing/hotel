@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Persistence/Configurations/RoomConfiguration.cs"
 type: "code"
-community: "DTOs / AdminPanel"
+community: "Persistence / Configurations"
 location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DTOs_/_AdminPanel
+  - community/Persistence_/_Configurations
 ---
 
 # RoomConfiguration
@@ -17,4 +17,4 @@ tags:
 - [[Room_1]] - `references` [EXTRACTED]
 - [[RoomConfiguration.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DTOs_/_AdminPanel
+#graphify/code #graphify/EXTRACTED #community/Persistence_/_Configurations

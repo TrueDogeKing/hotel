@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Camp Session Management"
+community: "Payment Gateway Integration Tests (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Camp_Session_Management
+  - community/Payment_Gateway_Integration_Tests_1
 ---
 
 # Fact
@@ -15,4 +15,4 @@ tags:
 - [[.RegisterSign_MatchesDocumentedJsonShape()]] - `references` [EXTRACTED]
 - [[.VerifySign_MatchesDocumentedJsonShape()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Camp_Session_Management
+#graphify/code #graphify/EXTRACTED #community/Payment_Gateway_Integration_Tests_1

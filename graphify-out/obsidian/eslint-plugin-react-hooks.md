@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/package.json"
 type: "code"
-community: "React Hooks ESLint Plugin"
+community: "DTOs / AdminPanel"
 location: "L29"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/React_Hooks_ESLint_Plugin
+  - community/DTOs_/_AdminPanel
 ---
 
 # eslint-plugin-react-hooks
@@ -15,4 +15,4 @@ tags:
 - [[devDependencies]] - `contains` [EXTRACTED]
 - [[eslint-plugin-react-hooks_1]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/React_Hooks_ESLint_Plugin
+#graphify/code #graphify/EXTRACTED #community/DTOs_/_AdminPanel

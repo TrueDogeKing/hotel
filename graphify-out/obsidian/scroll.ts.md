@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/utils/scroll.ts"
 type: "code"
-community: "src / utils"
+community: "Admin Tasks & Occupancy Pages"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/src_/_utils
+  - community/Admin_Tasks__Occupancy_Pages
 ---
 
 # scroll.ts
@@ -16,4 +16,4 @@ tags:
 - [[SchedulePage.tsx]] - `imports_from` [EXTRACTED]
 - [[scrollPanelIntoView()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/src_/_utils
+#graphify/code #graphify/EXTRACTED #community/Admin_Tasks__Occupancy_Pages

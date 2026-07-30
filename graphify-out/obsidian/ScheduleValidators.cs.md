@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Validators/ScheduleValidators.cs"
 type: "code"
-community: "Rate Limiting & Startup"
+community: "DTOs / Schedule (1)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Rate_Limiting__Startup
+  - community/DTOs_/_Schedule_1
 ---
 
 # ScheduleValidators.cs
@@ -20,4 +20,4 @@ tags:
 - [[UpdateDietaryNotesRequestValidator]] - `contains` [EXTRACTED]
 - [[UpdateScheduleEntryRequestValidator]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Rate_Limiting__Startup
+#graphify/code #graphify/EXTRACTED #community/DTOs_/_Schedule_1

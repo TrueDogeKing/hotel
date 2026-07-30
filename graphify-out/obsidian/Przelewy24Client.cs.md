@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Payments/Przelewy24Client.cs"
 type: "code"
-community: "Przelewy24 Payment Client"
+community: "Payment"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Przelewy24_Payment_Client
+  - community/Payment
 ---
 
 # Przelewy24Client.cs
@@ -18,4 +18,4 @@ tags:
 - [[RegisterData_1]] - `contains` [EXTRACTED]
 - [[RegisterResponse]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Przelewy24_Payment_Client
+#graphify/code #graphify/EXTRACTED #community/Payment

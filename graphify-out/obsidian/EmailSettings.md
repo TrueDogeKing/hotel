@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Email/EmailSettings.cs"
 type: "code"
-community: "Public Booking Service (1)"
+community: "Payment"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public_Booking_Service_1
+  - community/Payment
 ---
 
 # EmailSettings
@@ -16,4 +16,4 @@ tags:
 - [[SmtpEmailSender]] - `references` [EXTRACTED]
 - [[string_8]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_1
+#graphify/code #graphify/EXTRACTED #community/Payment

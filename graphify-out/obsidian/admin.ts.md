@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/api/admin.ts"
 type: "code"
-community: "src / api (1)"
+community: "CampCenter.Application / Services (3)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/src_/_api_1
+  - community/CampCenterApplication_/_Services_3
 ---
 
 # admin.ts
@@ -19,6 +19,9 @@ tags:
 - [[AdminDashboardPage.tsx]] - `imports_from` [EXTRACTED]
 - [[ApplyBookingMealTimeResult]] - `contains` [EXTRACTED]
 - [[AssignableRoom]] - `contains` [EXTRACTED]
+- [[BookingGroupCategory]] - `contains` [EXTRACTED]
+- [[BookingGroupPage]] - `contains` [EXTRACTED]
+- [[BookingGroupSection.tsx]] - `imports_from` [EXTRACTED]
 - [[BookingManagePage.tsx]] - `imports_from` [EXTRACTED]
 - [[BookingMealTime]] - `contains` [EXTRACTED]
 - [[BookingSchedule]] - `contains` [EXTRACTED]
@@ -70,6 +73,7 @@ tags:
 - [[SchedulePage.tsx]] - `imports_from` [EXTRACTED]
 - [[TasksPage.tsx]] - `imports_from` [EXTRACTED]
 - [[api]] - `imports` [EXTRACTED]
+- [[bookingGroupCategories]] - `contains` [EXTRACTED]
 - [[bookingStatuses]] - `contains` [EXTRACTED]
 - [[cancelAdminBooking()]] - `contains` [EXTRACTED]
 - [[checkScheduleConflicts()]] - `contains` [EXTRACTED]
@@ -90,6 +94,7 @@ tags:
 - [[getAdminBooking()]] - `contains` [EXTRACTED]
 - [[getAdminBookings()]] - `contains` [EXTRACTED]
 - [[getAssignableRooms()]] - `contains` [EXTRACTED]
+- [[getBookingGroupPage()]] - `contains` [EXTRACTED]
 - [[getBookingMealTimes()]] - `contains` [EXTRACTED]
 - [[getBookingSchedule()]] - `contains` [EXTRACTED]
 - [[getClosures()]] - `contains` [EXTRACTED]
@@ -119,4 +124,4 @@ tags:
 - [[updateScheduleEntry()]] - `contains` [EXTRACTED]
 - [[zlToGrosze()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/src_/_api_1
+#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_3

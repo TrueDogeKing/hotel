@@ -1,12 +1,18 @@
 /* ============================================================================
-   CampCenter — Lakeside Hospitality design foundation
+   CampCenter — Baltic Coast design foundation
    Tokens, reset, base typography, and the shared control vocabulary.
-   Light (warm sand + forest green) is the default; `:root[data-theme="dark"]`
-   is the charcoal-ink option. Palette from the Lakeside design system.
+
+   The centre is on the Baltic, and the palette is that coast rather than the
+   travel-poster one: deep petrol water, sea-mist greys, amber. Not turquoise,
+   not navy-and-rope — the Baltic is cool and overcast more often than it is
+   blue, and amber is what actually washes up on it.
+
+   Light (sea mist by day) is the default; `:root[data-theme="dark"]` is the
+   night-water option, for the evening housekeeping round on a phone.
    ============================================================================ */
 
 :root {
-  /* ----- Radii — friendly, rounded (Lakeside) ----- */
+  /* ----- Radii — friendly, rounded ----- */
   --r-xs: 3px;
   --r-sm: 6px;
   --r-md: 10px;
@@ -41,110 +47,119 @@
   --z-toast: 500;
   --z-tooltip: 600;
 
-  /* ===== Lakeside LIGHT (default) — Warm Sand + Forest Green ===== */
-  --accent: #005236; /* forest green (primary) */
-  --accent-hover: #1f6b4c; /* primary container */
-  --accent-press: #003b26;
-  --accent-soft: rgba(0, 82, 54, 0.12);
-  --accent-ring: rgba(0, 82, 54, 0.45);
+  /* ===== Baltic LIGHT (default) — Sea Mist + Deep Water =====
+     Neutrals are tinted toward the water's own hue, not toward warmth: a
+     sand-coloured near-white is what every seaside brief turns into, and it
+     would fight the amber rather than hold it. */
+  --accent: #0b4f60; /* deep water (primary) — 9.1:1 against white */
+  --accent-hover: #166478;
+  --accent-press: #083a47;
+  --accent-soft: rgba(11, 79, 96, 0.12);
+  --accent-ring: rgba(11, 79, 96, 0.45);
   --on-accent: #ffffff;
 
-  --secondary: #00639c; /* lake blue — links, highlights */
+  --secondary: #00668f; /* shallows — links, highlights */
   --on-secondary: #ffffff;
-  --secondary-soft: rgba(0, 99, 156, 0.12);
+  --secondary-soft: rgba(0, 102, 143, 0.12);
 
-  --cta: #ffb956; /* sunny amber — high-priority CTAs */
+  --cta: #ffb956; /* Baltic amber — high-priority CTAs */
   --cta-hover: #ffd299;
   --on-cta: #2a1800;
 
-  --success: #2f6b46;
-  --success-soft: rgba(47, 107, 70, 0.14);
-  --danger: #ba1a1a;
-  --danger-hover: #93000a;
-  --danger-soft: rgba(186, 26, 26, 0.1);
-  --warning: #9a6700;
-  --idle: #9a6700;
+  --success: #1f6b52; /* eelgrass */
+  --success-soft: rgba(31, 107, 82, 0.14);
+  --danger: #b3261e;
+  --danger-hover: #8c1810;
+  --danger-soft: rgba(179, 38, 30, 0.1);
+  --on-danger: #ffffff;
+  --warning: #8a5a00;
+  --idle: #8a5a00;
 
-  --bg-app: #eaf0e0; /* deepest — sand dim */
-  --bg-nav: #f1f5e9; /* surface container low */
-  --bg-body: #f6fbee; /* warm sand base */
-  --bg-float: #ffffff; /* cards, elevated panels */
-  --bg-input: #eef3e4;
-  --bg-hover: rgba(0, 82, 54, 0.06);
-  --bg-active: rgba(0, 82, 54, 0.1);
-  --bg-selected: rgba(0, 82, 54, 0.1);
-  --bg-scrim: rgba(24, 29, 21, 0.4);
+  --bg-app: #e2ebed; /* deepest — wet sand */
+  --bg-nav: #e9f1f2; /* surface container low */
+  --bg-body: #eef4f5; /* sea mist base */
+  --bg-float: #ffffff; /* cards, elevated panels — foam */
+  --bg-input: #e7eff1;
+  --bg-hover: rgba(11, 79, 96, 0.06);
+  --bg-active: rgba(11, 79, 96, 0.1);
+  --bg-selected: rgba(11, 79, 96, 0.1);
+  --bg-scrim: rgba(13, 26, 30, 0.4);
 
-  --border: rgba(24, 29, 21, 0.1);
-  --border-strong: rgba(24, 29, 21, 0.2);
+  --border: rgba(13, 26, 30, 0.1);
+  --border-strong: rgba(13, 26, 30, 0.2);
 
-  --text-strong: #181d15; /* on surface */
-  --text: #2b322a;
-  --text-muted: #3f4943; /* on surface variant */
-  --text-faint: #6f7972; /* outline */
+  --text-strong: #0d1a1e; /* on surface */
+  --text: #1e2c31;
+  --text-muted: #3a4b51; /* on surface variant */
+  /* Dark enough to clear 4.5:1 at small sizes on the *darkest* light surface
+     (--bg-app), not just on white — it labels calendar weekdays and strip counts,
+     which sit on that one. */
+  --text-faint: #5a6c73; /* outline */
   --text-on-brand: var(--on-accent);
 
-  /* Ambient, green-tinted shadows (soft stacking) */
-  --shadow-sm: 0 1px 2px rgba(31, 107, 76, 0.08);
-  --shadow-md: 0 4px 20px rgba(31, 107, 76, 0.1);
-  --shadow-lg: 0 12px 32px rgba(22, 39, 31, 0.14);
+  /* Ambient, water-tinted shadows (soft stacking) */
+  --shadow-sm: 0 1px 2px rgba(11, 79, 96, 0.09);
+  --shadow-md: 0 4px 20px rgba(11, 79, 96, 0.11);
+  --shadow-lg: 0 12px 32px rgba(8, 40, 49, 0.15);
 
-  --scrollbar-thumb: #cdd6c6;
-  --scrollbar-thumb-hover: #b9c3b1;
+  --scrollbar-thumb: #c3d3d7;
+  --scrollbar-thumb-hover: #aec2c7;
 
   color-scheme: light;
 }
 
 :root[data-theme="dark"] {
-  /* ===== Lakeside DARK — Charcoal Ink, forest green glows, sand text ===== */
-  --accent: #7ad5a8; /* glowing forest green */
-  --accent-hover: #8fe0b8;
-  --accent-press: #64c295;
-  --accent-soft: rgba(122, 213, 168, 0.16);
-  --accent-ring: rgba(122, 213, 168, 0.5);
-  --on-accent: #00251a;
+  /* ===== Baltic DARK — Night Water, seafoam glows ===== */
+  --accent: #7fd1cd; /* seafoam under a deck light */
+  --accent-hover: #96ded9;
+  --accent-press: #64b8b4;
+  --accent-soft: rgba(127, 209, 205, 0.16);
+  --accent-ring: rgba(127, 209, 205, 0.5);
+  --on-accent: #00323a;
 
-  --secondary: #97cbff;
+  --secondary: #8ecbff;
   --on-secondary: #001d33;
-  --secondary-soft: rgba(151, 203, 255, 0.16);
+  --secondary-soft: rgba(142, 203, 255, 0.16);
 
   --cta: #ffb956;
   --cta-hover: #ffd299;
   --on-cta: #2a1800;
 
-  --success: #8cd6b0;
-  --success-soft: rgba(140, 214, 176, 0.16);
+  --success: #7fd6b0;
+  --success-soft: rgba(127, 214, 176, 0.16);
   --danger: #ffb4ab;
   --danger-hover: #ff897d;
   --danger-soft: rgba(255, 180, 171, 0.15);
+  /* Dark's danger is a light coral, so anything sitting on it takes ink, not white. */
+  --on-danger: #4a0a05;
   --warning: #ffb956;
   --idle: #ffb956;
 
   /* Tonal layers — higher elevation is slightly lighter (no harsh shadows) */
-  --bg-app: #0f120d;
-  --bg-nav: #171b13;
-  --bg-body: #161a14; /* charcoal ink base */
-  --bg-float: #1f241b;
-  --bg-input: #1b2017;
+  --bg-app: #0b1417;
+  --bg-nav: #121e23;
+  --bg-body: #101b1f; /* night water base */
+  --bg-float: #16242a;
+  --bg-input: #132026;
   --bg-hover: rgba(255, 255, 255, 0.045);
   --bg-active: rgba(255, 255, 255, 0.09);
-  --bg-selected: rgba(140, 214, 176, 0.14);
+  --bg-selected: rgba(127, 209, 205, 0.14);
   --bg-scrim: rgba(0, 0, 0, 0.65);
 
   --border: rgba(255, 255, 255, 0.08);
   --border-strong: rgba(255, 255, 255, 0.14);
 
-  --text-strong: #eef2e6;
-  --text: #d9e0d3;
-  --text-muted: #b7c1b3;
-  --text-faint: #8b968b;
+  --text-strong: #e6eef0;
+  --text: #d2dee1;
+  --text-muted: #adbdc2;
+  --text-faint: #83969c;
 
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
   --shadow-md: 0 6px 20px rgba(0, 0, 0, 0.45);
   --shadow-lg: 0 12px 34px rgba(0, 0, 0, 0.55);
 
-  --scrollbar-thumb: #2a3025;
-  --scrollbar-thumb-hover: #333a2d;
+  --scrollbar-thumb: #22343a;
+  --scrollbar-thumb-hover: #2c4149;
 
   color-scheme: dark;
 }

@@ -64,6 +64,22 @@ public interface IBookingRepository
         CancellationToken cancellationToken = default
     );
 
+    /// One page of the bookings in a category, with the category's total so the
+    /// caller knows how much is left. Paged in the database rather than filtered in
+    /// memory: the dashboard opens these lists on demand and the inactive one grows
+    /// without bound, so the page must never depend on loading the whole history.
+    ///
+    /// Ordered by nearness to today: Current by departure (who leaves first),
+    /// Upcoming by arrival (who comes first), Inactive by arrival descending (most
+    /// recently here first).
+    Task<(List<Booking> Items, int Total)> ListByCategoryAsync(
+        BookingGroupCategory category,
+        DateOnly today,
+        int skip,
+        int take,
+        CancellationToken cancellationToken = default
+    );
+
     /// Kinds of Completed payments per booking (for payment-status badges).
     Task<Dictionary<Guid, List<PaymentKind>>> GetCompletedPaymentKindsAsync(
         IReadOnlyCollection<Guid> bookingIds,

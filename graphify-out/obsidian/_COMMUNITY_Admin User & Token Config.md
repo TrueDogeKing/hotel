@@ -1,13 +1,14 @@
 ---
 type: community
-members: 18
+members: 21
 ---
 
 # Admin User & Token Config
 
-**Members:** 18 nodes
+**Members:** 21 nodes
 
 ## Members
+- [[.Configure()]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/AdminUserConfiguration.cs
 - [[.GetByIdAsync()]] - code - src/CampCenter.Domain/Repositories/IAdminUserRepository.cs
 - [[.GetByIdAsync()_7]] - code - src/CampCenter.Infrastructure/Repositories/AdminUserRepository.cs
 - [[.GetByLoginAsync()]] - code - src/CampCenter.Domain/Repositories/IAdminUserRepository.cs
@@ -16,10 +17,12 @@ members: 18
 - [[.SaveChangesAsync()_10]] - code - src/CampCenter.Infrastructure/Repositories/AdminUserRepository.cs
 - [[AdminUser]] - code - src/CampCenter.Domain/Entities/AdminUser.cs
 - [[AdminUser.cs]] - code - src/CampCenter.Domain/Entities/AdminUser.cs
+- [[AdminUserConfiguration]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/AdminUserConfiguration.cs
 - [[AdminUserRepository]] - code - src/CampCenter.Infrastructure/Repositories/AdminUserRepository.cs
 - [[CancellationToken_40]] - code
 - [[CancellationToken_53]] - code
 - [[DateTime_4]] - code
+- [[EntityTypeBuilder]] - code
 - [[Guid_25]] - code
 - [[Guid_37]] - code
 - [[Guid_47]] - code
@@ -36,15 +39,15 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 4 edges to [[_COMMUNITY_Auth Service & Tokens]]
-- 3 edges to [[_COMMUNITY_Domain & Infra Namespaces]]
+- 3 edges to [[_COMMUNITY_Public Booking Service (2)]]
 - 2 edges to [[_COMMUNITY_Booking Persistence & Entities (1)]]
-- 2 edges to [[_COMMUNITY_Validator Unit Tests]]
+- 2 edges to [[_COMMUNITY_Persistence  Configurations]]
 - 1 edge to [[_COMMUNITY_Refresh Token Repository]]
 - 1 edge to [[_COMMUNITY_JWT Token Service]]
 
 ## Top bridge nodes
-- [[AdminUser]] - degree 14, connects to 5 communities
+- [[AdminUser]] - degree 14, connects to 4 communities
 - [[IAdminUserRepository]] - degree 6, connects to 2 communities
 - [[AdminUserRepository]] - degree 6, connects to 2 communities
 - [[.GetByLoginAsync()]] - degree 5, connects to 1 community
-- [[AdminUser.cs]] - degree 2, connects to 1 community
+- [[AdminUserConfiguration]] - degree 4, connects to 1 community

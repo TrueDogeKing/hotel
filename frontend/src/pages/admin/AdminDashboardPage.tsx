@@ -6,18 +6,19 @@ import { useAuth } from "../../auth/AuthContext";
 import AdminLayout from "../../components/admin/AdminLayout";
 import GroupSchedulePanel from "../../components/admin/GroupSchedulePanel";
 import AddGroupForm from "../../components/admin/AddGroupForm";
+import AdminTiles from "../../components/admin/AdminTiles";
+import BookingGroupSection from "../../components/admin/BookingGroupSection";
 import {
-  bookingStatuses,
+  bookingGroupCategories,
   getDashboard,
   setBookingStatus,
   type BookingStatus,
   type Dashboard,
 } from "../../api/admin";
-import { formatDate as formatIsoDate } from "../../utils/dates";
 import { scrollPanelIntoView } from "../../utils/scroll";
 
 export default function AdminDashboardPage() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const { userLogin } = useAuth();
   const [dashboard, setDashboard] = useState<Dashboard | null>(null);
   const [selectedBookingId, setSelectedBookingId] = useState<string | null>(null);
@@ -25,9 +26,14 @@ export default function AdminDashboardPage() {
   const [error, setError] = useState<string | null>(null);
   const [notice, setNotice] = useState<string | null>(null);
   const groupPanelRef = useRef<HTMLDivElement>(null);
+  // Bumped after anything that can move a group between the three lists, so the
+  // open folds re-fetch. A counter rather than a callback: each fold decides for
+  // itself whether it has anything loaded to refresh.
+  const [refreshToken, setRefreshToken] = useState(0);
 
   const reload = useCallback(async () => {
     setDashboard(await getDashboard());
+    setRefreshToken((current) => current + 1);
   }, []);
 
   useEffect(() => {
@@ -65,11 +71,14 @@ export default function AdminDashboardPage() {
     }
   }
 
-  const formatDate = (iso: string) => formatIsoDate(iso, i18n.language);
 
   return (
     <AdminLayout>
       <p>{t("admin.welcome", { login: userLogin ?? "" })}</p>
+
+      {/* The sections, as tiles. This is the way into them — the header carries no
+          section links, so the dashboard is where a view is chosen. */}
+      <AdminTiles />
 
       {dashboard && (
         <>
@@ -97,7 +106,7 @@ export default function AdminDashboardPage() {
           </div>
 
           <div className="schedule-toolbar">
-            <h2>{t("dashboard.upcomingBookings")}</h2>
+            <h2>{t("dashboard.groups.title")}</h2>
             <button type="button" onClick={() => setAdding((open) => !open)}>
               {adding ? t("dashboard.addGroupCancel") : t("dashboard.addGroup")}
             </button>
@@ -124,50 +133,20 @@ export default function AdminDashboardPage() {
 
           <div className="schedule-layout">
             <div className="schedule-main">
-              {dashboard.upcomingBookings.length === 0 && <p>{t("dashboard.noBookings")}</p>}
-              <table className="admin-table">
-                <tbody>
-                  {dashboard.upcomingBookings.map((booking) => (
-                    <tr
-                      key={booking.id}
-                      className={booking.id === selectedBookingId ? "selected-row" : ""}
-                      onClick={() =>
-                        setSelectedBookingId(
-                          selectedBookingId === booking.id ? null : booking.id,
-                        )
-                      }
-                    >
-                      <td>{booking.organizationName}</td>
-                      <td>
-                        {formatDate(booking.startDate)} – {formatDate(booking.endDate)}
-                      </td>
-                      <td>{t("dashboard.beds", { count: booking.occupiedBeds })}</td>
-                      <td>
-                        {/* Stop propagation so picking a status doesn't also
-                            toggle the row's programme panel. */}
-                        <select
-                          value={booking.status}
-                          aria-label={t("dashboard.status")}
-                          onClick={(e) => e.stopPropagation()}
-                          onChange={(e) => {
-                            e.stopPropagation();
-                            void handleStatusChange(
-                              booking.id,
-                              e.target.value as BookingStatus,
-                            );
-                          }}
-                        >
-                          {bookingStatuses.map((status) => (
-                            <option key={status} value={status}>
-                              {t(`adminBookings.statuses.${status}`)}
-                            </option>
-                          ))}
-                        </select>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+              {/* Who is here, who is coming, and everything finished with — in that
+                  order, and each loading only when it is opened. Only the current
+                  groups are open to begin with: the other two are reference. */}
+              {bookingGroupCategories.map((category) => (
+                <BookingGroupSection
+                  key={category}
+                  category={category}
+                  defaultOpen={category === "Current"}
+                  selectedBookingId={selectedBookingId}
+                  onSelect={setSelectedBookingId}
+                  onStatusChange={handleStatusChange}
+                  refreshToken={refreshToken}
+                />
+              ))}
             </div>
 
             {selectedBookingId && (

@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/components/admin/GroupSchedulePanel.tsx"
 type: "code"
-community: "src / api (2)"
+community: "CampCenter.Application / Services (3)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/src_/_api_2
+  - community/CampCenterApplication_/_Services_3
 ---
 
 # GroupSchedulePanel.tsx
@@ -21,7 +21,7 @@ tags:
 - [[GroupRooms.tsx]] - `imports_from` [EXTRACTED]
 - [[GroupSchedulePanel()]] - `contains` [EXTRACTED]
 - [[IconUtensils()]] - `imports` [EXTRACTED]
-- [[Props_7]] - `contains` [EXTRACTED]
+- [[Props_8]] - `contains` [EXTRACTED]
 - [[ScheduleConflict]] - `imports` [EXTRACTED]
 - [[ScheduleEntry]] - `imports` [EXTRACTED]
 - [[ScheduleEntryForm.tsx]] - `imports_from` [EXTRACTED]
@@ -44,4 +44,4 @@ tags:
 - [[updateDietaryNotes()]] - `imports` [EXTRACTED]
 - [[updateScheduleEntry()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/src_/_api_2
+#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_3

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Domain Exceptions"
+community: "Domain & Infra Namespaces"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Domain_Exceptions
+  - community/Domain__Infra_Namespaces
 ---
 
 # Exception
@@ -17,4 +17,4 @@ tags:
 - [[ForbiddenActionException]] - `inherits` [EXTRACTED]
 - [[NotFoundException]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Domain_Exceptions
+#graphify/code #graphify/EXTRACTED #community/Domain__Infra_Namespaces

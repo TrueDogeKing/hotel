@@ -14,6 +14,7 @@ tags:
 ## Connections
 - [[.AssignableRooms_OffersOwnAndFreeRooms_ButNotTakenOrClosedOnes()]] - `method` [EXTRACTED]
 - [[.Closure_BlocksRoom_InOccupancyGrid()]] - `method` [EXTRACTED]
+- [[.DashboardGroups_SplitByCategory_AndPage()]] - `method` [EXTRACTED]
 - [[.OccupancyUrl()]] - `method` [EXTRACTED]
 - [[.Occupancy_Reassign_Tasks_And_Dashboard_Work()]] - `method` [EXTRACTED]
 - [[AdminPanelApiTests.cs]] - `contains` [EXTRACTED]

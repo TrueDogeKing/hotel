@@ -126,6 +126,43 @@ public class BookingRepository : IBookingRepository
             .Take(take)
             .ToListAsync(cancellationToken);
 
+    public async Task<(List<Booking> Items, int Total)> ListByCategoryAsync(
+        BookingGroupCategory category,
+        DateOnly today,
+        int skip,
+        int take,
+        CancellationToken cancellationToken = default
+    )
+    {
+        // Cancelled is inactive whatever its dates say, and so is anything that has
+        // already departed — which is what keeps the three categories disjoint.
+        var query = _db.Bookings.Include(b => b.RoomAssignments).AsQueryable();
+        query = category switch
+        {
+            BookingGroupCategory.Current => query.Where(b =>
+                b.Status != BookingStatus.Cancelled && b.StartDate <= today && today <= b.EndDate
+            ),
+            BookingGroupCategory.Upcoming => query.Where(b =>
+                b.Status != BookingStatus.Cancelled && b.StartDate > today
+            ),
+            _ => query.Where(b => b.Status == BookingStatus.Cancelled || b.EndDate < today),
+        };
+
+        // Counted before paging, so "showing 20 of 340" is the real total. Ties are
+        // broken on Id: without a total order Postgres may repeat or skip a row
+        // between pages, which on an append-only history is a silently wrong list.
+        var total = await query.CountAsync(cancellationToken);
+        var ordered = category switch
+        {
+            BookingGroupCategory.Current => query.OrderBy(b => b.EndDate).ThenBy(b => b.Id),
+            BookingGroupCategory.Upcoming => query.OrderBy(b => b.StartDate).ThenBy(b => b.Id),
+            _ => query.OrderByDescending(b => b.StartDate).ThenBy(b => b.Id),
+        };
+
+        var items = await ordered.Skip(skip).Take(take).ToListAsync(cancellationToken);
+        return (items, total);
+    }
+
     public async Task<Dictionary<Guid, List<PaymentKind>>> GetCompletedPaymentKindsAsync(
         IReadOnlyCollection<Guid> bookingIds,
         CancellationToken cancellationToken = default

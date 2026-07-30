@@ -4,7 +4,7 @@
     "loading": "Loading…"
   },
   "home": {
-    "heroTitle": "Lakeside summer camp center",
+    "heroTitle": "Summer camp centre by the sea",
     "heroSubtitle": "Book any dates for your organized group — accommodation, meals and recreation grounds in one place.",
     "bookCta": "Book your stay",
     "bookNow": "Book now",
@@ -13,7 +13,7 @@
     "navContact": "Contact",
     "adminLink": "Staff panel",
     "offerTitle": "Everything you need for a perfect camp",
-    "offerSubtitle": "Designed for comfort and utility, so your group has an unforgettable lakeside stay.",
+    "offerSubtitle": "Designed for comfort and utility, so your group has an unforgettable stay by the sea.",
     "how": {
       "title": "How booking works",
       "step1": {
@@ -40,7 +40,7 @@
       },
       "grounds": {
         "title": "Recreation grounds",
-        "body": "Sports fields, common rooms, a lakeside beach and a supervised swimming area."
+        "body": "Sports fields, common rooms, a beach on the sea and a supervised swimming area."
       }
     },
     "contactTitle": "Get in touch",
@@ -48,7 +48,7 @@
     "contactAddress": "CampCenter, Jeziorna 1, 11-111 Nadjeziorze, Poland",
     "contactPhone": "+48 000 000 000",
     "contactEmail": "rezerwacje@campcenter.pl",
-    "rights": "© 2026 CampCenter Lakeside. All rights reserved."
+    "rights": "© 2026 CampCenter. All rights reserved."
   },
   "login": {
     "title": "Admin sign-in",
@@ -166,6 +166,41 @@
       "tasks": "Tasks",
       "schedule": "Schedule",
       "housekeeping": "Housekeeping"
+    },
+    "tiles": {
+      "label": "Admin sections",
+      "schedule": {
+        "name": "Schedule",
+        "description": "Calendar of group stays and the hour-by-hour day."
+      },
+      "housekeeping": {
+        "name": "Housekeeping",
+        "description": "Rooms to deal with today and in the days ahead."
+      },
+      "bookings": {
+        "name": "Bookings",
+        "description": "Every booking, its status and its payments."
+      },
+      "occupancy": {
+        "name": "Occupancy",
+        "description": "Which rooms are free, taken or blocked."
+      },
+      "rooms": {
+        "name": "Rooms",
+        "description": "Room numbers, bed counts and availability."
+      },
+      "tasks": {
+        "name": "Tasks",
+        "description": "Jobs for the staff, such as an extra bed."
+      },
+      "closures": {
+        "name": "Closures",
+        "description": "Dates when the centre or a room is unavailable."
+      },
+      "mealTimes": {
+        "name": "Meal times",
+        "description": "The centre's default meal slots."
+      }
     }
   },
   "dashboard": {
@@ -175,6 +210,15 @@
     "activeClosures": "Active closures",
     "upcomingBookings": "Upcoming bookings",
     "noBookings": "No upcoming bookings.",
+    "groups": {
+      "title": "Groups",
+      "current": "Current groups",
+      "upcoming": "Upcoming groups",
+      "inactive": "Inactive groups",
+      "empty": "No groups here.",
+      "loadMore": "Load more ({{shown}} of {{total}})",
+      "loadError": "Could not load the groups."
+    },
     "beds": "{{count}} beds",
     "addGroup": "Add group",
     "addGroupSubmit": "Save group",

@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Api/Controllers/Public/PublicAvailabilityController.cs"
 type: "code"
-community: "Room Closure Management"
+community: "Public Booking Service (1)"
 location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Closure_Management
+  - community/Public_Booking_Service_1
 ---
 
 # PublicAvailabilityController
@@ -19,4 +19,4 @@ tags:
 - [[IClosureRepository]] - `references` [EXTRACTED]
 - [[PublicAvailabilityController.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management
+#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_1

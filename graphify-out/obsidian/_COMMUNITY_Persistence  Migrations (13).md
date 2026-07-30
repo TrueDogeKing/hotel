@@ -21,7 +21,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_Domain & Infra Namespaces]]
+- 1 edge to [[_COMMUNITY_Public Booking Service (2)]]
 - 1 edge to [[_COMMUNITY_EF Core Migrations (1)]]
 
 ## Top bridge nodes

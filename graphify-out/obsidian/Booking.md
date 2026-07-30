@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Domain/Entities/Booking.cs"
 type: "code"
-community: "CampCenter.UnitTests / Services (2)"
+community: "CampCenter.UnitTests / Validators"
 location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Services_2
+  - community/CampCenterUnitTests_/_Validators
 ---
 
 # Booking
@@ -52,6 +52,8 @@ tags:
 - [[.GuardDateWithinStay()]] - `references` [EXTRACTED]
 - [[.ListAsync()_4]] - `references` [EXTRACTED]
 - [[.ListAsync()_6]] - `references` [EXTRACTED]
+- [[.ListByCategoryAsync()]] - `references` [EXTRACTED]
+- [[.ListByCategoryAsync()_1]] - `references` [EXTRACTED]
 - [[.ListLiveChangingOverAsync()]] - `references` [EXTRACTED]
 - [[.ListLiveChangingOverAsync()_1]] - `references` [EXTRACTED]
 - [[.ListLiveInRangeAsync()]] - `references` [EXTRACTED]
@@ -91,4 +93,4 @@ tags:
 - [[RoomTask_1]] - `references` [EXTRACTED]
 - [[ScheduleEntry_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_2
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Validators

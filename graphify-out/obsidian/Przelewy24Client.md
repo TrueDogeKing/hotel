@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Payments/Przelewy24Client.cs"
 type: "code"
-community: "Admin Booking & Notifications (2)"
+community: "Payment Gateway Integration Tests (1)"
 location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Booking__Notifications_2
+  - community/Payment_Gateway_Integration_Tests_1
 ---
 
 # Przelewy24Client
@@ -21,4 +21,4 @@ tags:
 - [[Przelewy24Client.cs]] - `contains` [EXTRACTED]
 - [[string_10]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_2
+#graphify/code #graphify/EXTRACTED #community/Payment_Gateway_Integration_Tests_1

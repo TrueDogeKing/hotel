@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Services/ClosureService.cs"
 type: "code"
-community: "Domain Exceptions"
+community: "Public Booking Service (2)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Domain_Exceptions
+  - community/Public_Booking_Service_2
 ---
 
 # ClosureService.cs
@@ -20,4 +20,4 @@ tags:
 - [[CampCenter.Domain.Repositories]] - `imports` [EXTRACTED]
 - [[ClosureService]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Domain_Exceptions
+#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_2

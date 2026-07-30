@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/DependencyInjection.cs"
 type: "code"
-community: "Przelewy24 Payment Client"
+community: "Payment"
 location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Przelewy24_Payment_Client
+  - community/Payment
 ---
 
 # DependencyInjection
@@ -15,4 +15,4 @@ tags:
 - [[.AddInfrastructure()]] - `method` [EXTRACTED]
 - [[DependencyInjection.cs_1]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Przelewy24_Payment_Client
+#graphify/code #graphify/EXTRACTED #community/Payment

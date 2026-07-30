@@ -1,17 +1,19 @@
 ---
 type: community
-members: 4
+members: 6
 ---
 
 # Admin Frontend Pages
 
-**Members:** 4 nodes
+**Members:** 6 nodes
 
 ## Members
-- [[.Configure()_2]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/BookingMealTimeConfiguration.cs
-- [[BookingMealTimeConfiguration]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/BookingMealTimeConfiguration.cs
-- [[BookingMealTimeConfiguration.cs]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/BookingMealTimeConfiguration.cs
-- [[EntityTypeBuilder_2]] - code
+- [[DateTime_9]] - code
+- [[Guid_31]] - code
+- [[Payment]] - code - src/CampCenter.Domain/Entities/Payment.cs
+- [[Payment.cs]] - code - src/CampCenter.Domain/Entities/Payment.cs
+- [[PaymentKind]] - code - src/CampCenter.Domain/Entities/Payment.cs
+- [[PaymentStatus]] - code - src/CampCenter.Domain/Entities/Payment.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -21,12 +23,15 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_CampCenter.Application  Services (2)]]
-- 1 edge to [[_COMMUNITY_Domain & Infra Namespaces]]
-- 1 edge to [[_COMMUNITY_Persistence  Configurations]]
-- 1 edge to [[_COMMUNITY_Validator Unit Tests]]
+- 4 edges to [[_COMMUNITY_Integration Test Harness (2)]]
+- 4 edges to [[_COMMUNITY_CampCenter.Domain  Repositories (1)]]
+- 2 edges to [[_COMMUNITY_Persistence  Configurations]]
+- 1 edge to [[_COMMUNITY_Admin Booking & Notifications (1)]]
+- 1 edge to [[_COMMUNITY_Public Booking Service (2)]]
+- 1 edge to [[_COMMUNITY_CampCenter.UnitTests  Validators]]
+- 1 edge to [[_COMMUNITY_Booking Persistence & Entities (1)]]
 
 ## Top bridge nodes
-- [[BookingMealTimeConfiguration]] - degree 4, connects to 2 communities
-- [[BookingMealTimeConfiguration.cs]] - degree 3, connects to 2 communities
-- [[.Configure()_2]] - degree 3, connects to 1 community
+- [[Payment]] - degree 15, connects to 5 communities
+- [[PaymentKind]] - degree 5, connects to 3 communities
+- [[Payment.cs]] - degree 4, connects to 1 community

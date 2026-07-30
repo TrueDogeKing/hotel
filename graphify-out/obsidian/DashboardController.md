@@ -2,7 +2,7 @@
 source_file: "src/CampCenter.Api/Controllers/Admin/DashboardController.cs"
 type: "code"
 community: "Admin Bookings Controller & DTOs"
-location: "L8"
+location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,6 +13,7 @@ tags:
 
 ## Connections
 - [[.Get()_1]] - `method` [EXTRACTED]
+- [[.Groups()]] - `method` [EXTRACTED]
 - [[ControllerBase]] - `inherits` [EXTRACTED]
 - [[DashboardController.cs]] - `contains` [EXTRACTED]
 - [[IAdminBookingService]] - `references` [EXTRACTED]

@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Persistence/Configurations/BookingConfiguration.cs"
 type: "code"
-community: "tests / CampCenter.IntegrationTests (2)"
+community: "Persistence / Configurations"
 location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/tests_/_CampCenterIntegrationTests_2
+  - community/Persistence_/_Configurations
 ---
 
 # BookingConfiguration
@@ -17,4 +17,4 @@ tags:
 - [[BookingConfiguration.cs]] - `contains` [EXTRACTED]
 - [[IEntityTypeConfiguration]] - `implements` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/tests_/_CampCenterIntegrationTests_2
+#graphify/code #graphify/EXTRACTED #community/Persistence_/_Configurations

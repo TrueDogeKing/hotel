@@ -1,23 +1,24 @@
 ---
 type: community
-members: 10
+members: 11
 ---
 
 # Admin Booking & Notifications (2)
 
-**Members:** 10 nodes
+**Members:** 11 nodes
 
 ## Members
-- [[.RegisterTransactionAsync()_1]] - code - src/CampCenter.Infrastructure/Payments/Przelewy24Client.cs
-- [[.VerifyTransactionAsync()_1]] - code - src/CampCenter.Infrastructure/Payments/Przelewy24Client.cs
-- [[CancellationToken_51]] - code
-- [[HttpClient]] - code
-- [[P24Settings]] - code - src/CampCenter.Infrastructure/Payments/P24Settings.cs
-- [[P24Settings.cs]] - code - src/CampCenter.Infrastructure/Payments/P24Settings.cs
-- [[Przelewy24Client]] - code - src/CampCenter.Infrastructure/Payments/Przelewy24Client.cs
-- [[Task_50]] - code
-- [[string_9]] - code
-- [[string_10]] - code
+- [[.AddAsync()_3]] - code - src/CampCenter.Domain/Repositories/IMealTimeDefaultRepository.cs
+- [[.GetActiveAsync()]] - code - src/CampCenter.Domain/Repositories/IMealTimeDefaultRepository.cs
+- [[.GetAllAsync()_7]] - code - src/CampCenter.Domain/Repositories/IMealTimeDefaultRepository.cs
+- [[.GetByIdAsync()_3]] - code - src/CampCenter.Domain/Repositories/IMealTimeDefaultRepository.cs
+- [[.IsReferencedAsync()]] - code - src/CampCenter.Domain/Repositories/IMealTimeDefaultRepository.cs
+- [[.SaveChangesAsync()_4]] - code - src/CampCenter.Domain/Repositories/IMealTimeDefaultRepository.cs
+- [[CancellationToken_44]] - code
+- [[Guid_41]] - code
+- [[IMealTimeDefaultRepository]] - code - src/CampCenter.Domain/Repositories/IMealTimeDefaultRepository.cs
+- [[List_21]] - code
+- [[Task_43]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -27,12 +28,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_Payment Gateway Integration Tests (1)]]
-- 3 edges to [[_COMMUNITY_Camp Session Management]]
-- 2 edges to [[_COMMUNITY_Przelewy24 Payment Client]]
+- 8 edges to [[_COMMUNITY_Validator Unit Tests]]
+- 6 edges to [[_COMMUNITY_Admin Booking & Notifications (3)]]
+- 5 edges to [[_COMMUNITY_CampCenter.Application  Services (2)]]
+- 1 edge to [[_COMMUNITY_Public Booking Service (2)]]
 
 ## Top bridge nodes
-- [[Przelewy24Client]] - degree 8, connects to 3 communities
-- [[.RegisterTransactionAsync()_1]] - degree 6, connects to 2 communities
-- [[.VerifyTransactionAsync()_1]] - degree 4, connects to 1 community
-- [[P24Settings.cs]] - degree 2, connects to 1 community
+- [[IMealTimeDefaultRepository]] - degree 11, connects to 4 communities
+- [[.GetByIdAsync()_3]] - degree 8, connects to 3 communities
+- [[.GetActiveAsync()]] - degree 7, connects to 2 communities
+- [[.GetAllAsync()_7]] - degree 6, connects to 2 communities
+- [[.AddAsync()_3]] - degree 5, connects to 2 communities

@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Services/RoomService.cs"
 type: "code"
-community: "Domain Exceptions"
+community: "Integration Test Harness (1)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Domain_Exceptions
+  - community/Integration_Test_Harness_1
 ---
 
 # RoomService.cs
@@ -20,4 +20,4 @@ tags:
 - [[CampCenter.Domain.Repositories]] - `imports` [EXTRACTED]
 - [[RoomService]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Domain_Exceptions
+#graphify/code #graphify/EXTRACTED #community/Integration_Test_Harness_1

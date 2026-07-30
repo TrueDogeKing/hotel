@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "DTOs / Schedule (2)"
+community: "Camp Session Management"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DTOs_/_Schedule_2
+  - community/Camp_Session_Management
 ---
 
 # CancellationToken
@@ -16,4 +16,4 @@ tags:
 - [[.GetAllAsync()_1]] - `references` [EXTRACTED]
 - [[.UpdateAsync()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DTOs_/_Schedule_2
+#graphify/code #graphify/EXTRACTED #community/Camp_Session_Management

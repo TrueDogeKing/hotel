@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/utils/dates.ts"
 type: "code"
-community: "src / api (2)"
+community: "CampCenter.Application / Services (3)"
 location: "L116"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/src_/_api_2
+  - community/CampCenterApplication_/_Services_3
 ---
 
 # formatTimeRange()
@@ -15,4 +15,4 @@ tags:
 - [[dates.ts]] - `contains` [EXTRACTED]
 - [[toTimeInput()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/src_/_api_2
+#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_3

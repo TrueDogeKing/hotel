@@ -34,8 +34,8 @@ export function packLanes(events: readonly LaneEvent[]): Map<string, number> {
 }
 
 /**
- * Deterministic hue per group, banded to the app's forest-green → lake-blue range
- * (accent #005236 is roughly 159°) so bars stay on-brand.
+ * Deterministic hue per group, banded to the app's water range — teal through sea
+ * blue (accent #0b4f60 is roughly 193°) — so bars stay on-brand.
  *
  * Only the hue is returned. The CSS picks saturation and lightness per theme —
  * baking a full hsl() here, as the reference implementation does, would give
@@ -46,5 +46,7 @@ export function groupHue(id: string): number {
   for (let i = 0; i < id.length; i++) {
     hash = ((hash << 5) - hash + id.charCodeAt(i)) | 0;
   }
-  return 130 + (Math.abs(hash) % 70);
+  // 168–228°: teal through sea blue. A band, not the whole wheel, so a month of
+  // bars reads as one palette and still tells groups apart.
+  return 168 + (Math.abs(hash) % 60);
 }

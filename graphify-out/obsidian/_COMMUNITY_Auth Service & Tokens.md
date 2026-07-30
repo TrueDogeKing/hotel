@@ -1,11 +1,11 @@
 ---
 type: community
-members: 25
+members: 27
 ---
 
 # Auth Service & Tokens
 
-**Members:** 25 nodes
+**Members:** 27 nodes
 
 ## Members
 - [[.AddAsync()_4]] - code - src/CampCenter.Domain/Repositories/IRefreshTokenRepository.cs
@@ -31,6 +31,8 @@ members: 25
 - [[Guid_42]] - code
 - [[IRefreshTokenRepository]] - code - src/CampCenter.Domain/Repositories/IRefreshTokenRepository.cs
 - [[ITokenService]] - code - src/CampCenter.Application/Interfaces/ITokenService.cs
+- [[RefreshTokenInfo]] - code - src/CampCenter.Application/Models/RefreshTokenInfo.cs
+- [[RefreshTokenInfo.cs]] - code - src/CampCenter.Application/Models/RefreshTokenInfo.cs
 - [[Task_29]] - code
 - [[Task_44]] - code
 
@@ -42,22 +44,22 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_Auth Controller (2)]]
-- 4 edges to [[_COMMUNITY_JWT Token Service]]
+- 5 edges to [[_COMMUNITY_Auth Controller (1)]]
 - 4 edges to [[_COMMUNITY_Admin User & Token Config]]
 - 4 edges to [[_COMMUNITY_Refresh Token Repository]]
-- 3 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (5)]]
+- 3 edges to [[_COMMUNITY_Domain & Infra Namespaces]]
 - 3 edges to [[_COMMUNITY_Public Booking Service (1)]]
+- 3 edges to [[_COMMUNITY_JWT Token Service]]
 - 2 edges to [[_COMMUNITY_Password Hashing (bcrypt)]]
 - 2 edges to [[_COMMUNITY_Admin Booking & Notifications (1)]]
 - 2 edges to [[_COMMUNITY_Admin Booking & Notifications (4)]]
-- 1 edge to [[_COMMUNITY_Auth Controller (1)]]
 - 1 edge to [[_COMMUNITY_Login Normalizer]]
-- 1 edge to [[_COMMUNITY_Domain & Infra Namespaces]]
+- 1 edge to [[_COMMUNITY_Rate Limiting & Startup]]
+- 1 edge to [[_COMMUNITY_Public Booking Service (2)]]
 
 ## Top bridge nodes
 - [[ITokenService]] - degree 9, connects to 5 communities
 - [[AuthService]] - degree 11, connects to 4 communities
 - [[.LoginAsync()_1]] - degree 9, connects to 4 communities
-- [[.GenerateRefreshToken()]] - degree 6, connects to 3 communities
-- [[AuthResult]] - degree 7, connects to 2 communities
+- [[IRefreshTokenRepository]] - degree 7, connects to 2 communities
+- [[.GenerateRefreshToken()]] - degree 6, connects to 2 communities

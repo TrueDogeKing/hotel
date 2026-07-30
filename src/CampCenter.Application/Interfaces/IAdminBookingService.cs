@@ -71,4 +71,15 @@ public interface IAdminBookingService
     );
 
     Task<DashboardDto> GetDashboardAsync(CancellationToken cancellationToken = default);
+
+    /// One page of the groups in a category (current / upcoming / inactive), for the
+    /// dashboard's foldable lists. Each fold asks for its own first page when it is
+    /// opened and for further pages as they are scrolled to, so the page never loads
+    /// a history it is not showing. `take` is clamped to a sane maximum.
+    Task<BookingGroupPageDto> GetGroupPageAsync(
+        BookingGroupCategory category,
+        int skip,
+        int take,
+        CancellationToken cancellationToken = default
+    );
 }

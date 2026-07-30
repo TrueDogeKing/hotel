@@ -1,11 +1,11 @@
 ---
 type: community
-members: 38
+members: 40
 ---
 
 # Public Booking Frontend (1)
 
-**Members:** 38 nodes
+**Members:** 40 nodes
 
 ## Members
 - [[Availability]] - code - frontend/src/api/public.ts
@@ -36,6 +36,8 @@ members: 38
 - [[cancelBooking()]] - code - frontend/src/api/public.ts
 - [[createBooking()]] - code - frontend/src/api/public.ts
 - [[emptyContact]] - code - frontend/src/pages/BookingWizardPage.tsx
+- [[formatDate()]] - code - frontend/src/utils/dates.ts
+- [[formatZl()]] - code - frontend/src/api/admin.ts
 - [[getAvailability()]] - code - frontend/src/api/public.ts
 - [[getBooking()]] - code - frontend/src/api/public.ts
 - [[getBookingSchedule()_1]] - code - frontend/src/api/public.ts
@@ -55,18 +57,19 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 10 edges to [[_COMMUNITY_Frontend App Shell & i18n]]
 - 8 edges to [[_COMMUNITY_Admin Tasks & Occupancy Pages]]
-- 3 edges to [[_COMMUNITY_src  utils]]
-- 2 edges to [[_COMMUNITY_src  api (1)]]
+- 8 edges to [[_COMMUNITY_Frontend App Shell & i18n]]
+- 7 edges to [[_COMMUNITY_CampCenter.Application  Services (3)]]
+- 5 edges to [[_COMMUNITY_src  utils]]
 - 2 edges to [[_COMMUNITY_Frontend Auth & API Client]]
-- 2 edges to [[_COMMUNITY_src  api (2)]]
-- 2 edges to [[_COMMUNITY_CampCenter.Application  Services (3)]]
 - 2 edges to [[_COMMUNITY_Frontend Icon Components]]
+- 2 edges to [[_COMMUNITY_src  api (2)]]
+- 2 edges to [[_COMMUNITY_src  api (1)]]
+- 2 edges to [[_COMMUNITY_Room Task Management (2)]]
 
 ## Top bridge nodes
-- [[BookingManagePage.tsx]] - degree 16, connects to 5 communities
-- [[BookingWizardPage.tsx]] - degree 16, connects to 4 communities
-- [[BookingSchedule.tsx]] - degree 9, connects to 3 communities
+- [[formatDate()]] - degree 20, connects to 6 communities
+- [[BookingManagePage.tsx]] - degree 16, connects to 4 communities
+- [[BookingWizardPage.tsx]] - degree 16, connects to 3 communities
 - [[LanguageSwitcher.tsx]] - degree 13, connects to 2 communities
-- [[LanguageSwitcher()]] - degree 8, connects to 2 communities
+- [[BookingSchedule.tsx]] - degree 9, connects to 2 communities

@@ -21,6 +21,7 @@ tags:
 - [[.GetAssignableRoomsAsync()_1]] - `method` [EXTRACTED]
 - [[.GetAsync()_1]] - `method` [EXTRACTED]
 - [[.GetDashboardAsync()_1]] - `method` [EXTRACTED]
+- [[.GetGroupPageAsync()_1]] - `method` [EXTRACTED]
 - [[.GetOccupancyAsync()_1]] - `method` [EXTRACTED]
 - [[.GetOrThrowAsync()]] - `method` [EXTRACTED]
 - [[.ListAsync()_2]] - `method` [EXTRACTED]
@@ -41,5 +42,6 @@ tags:
 - [[IRoomTaskRepository]] - `references` [EXTRACTED]
 - [[IScheduleService]] - `references` [EXTRACTED]
 - [[ITokenService]] - `references` [EXTRACTED]
+- [[int]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_1

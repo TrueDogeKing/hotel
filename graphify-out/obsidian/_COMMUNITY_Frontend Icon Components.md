@@ -1,22 +1,29 @@
 ---
 type: community
-members: 40
+members: 50
 ---
 
 # Frontend Icon Components
 
-**Members:** 40 nodes
+**Members:** 50 nodes
 
 ## Members
+- [[AdminTiles()]] - code - frontend/src/components/admin/AdminTiles.tsx
+- [[AdminTiles.tsx]] - code - frontend/src/components/admin/AdminTiles.tsx
 - [[Icon()]] - code - frontend/src/components/icons.tsx
 - [[IconArrowRight()]] - code - frontend/src/components/icons.tsx
 - [[IconBed()]] - code - frontend/src/components/icons.tsx
+- [[IconCalendar()]] - code - frontend/src/components/icons.tsx
 - [[IconCamera()]] - code - frontend/src/components/icons.tsx
 - [[IconCameraOff()]] - code - frontend/src/components/icons.tsx
+- [[IconCheckSquare()]] - code - frontend/src/components/icons.tsx
 - [[IconChevronDown()]] - code - frontend/src/components/icons.tsx
 - [[IconChevronUp()]] - code - frontend/src/components/icons.tsx
+- [[IconClipboard()]] - code - frontend/src/components/icons.tsx
 - [[IconClose()]] - code - frontend/src/components/icons.tsx
+- [[IconGrid()]] - code - frontend/src/components/icons.tsx
 - [[IconHome()]] - code - frontend/src/components/icons.tsx
+- [[IconLock()]] - code - frontend/src/components/icons.tsx
 - [[IconLogOut()]] - code - frontend/src/components/icons.tsx
 - [[IconMail()]] - code - frontend/src/components/icons.tsx
 - [[IconMap()]] - code - frontend/src/components/icons.tsx
@@ -29,6 +36,7 @@ members: 40
 - [[IconPhoneOff()]] - code - frontend/src/components/icons.tsx
 - [[IconScreenShare()]] - code - frontend/src/components/icons.tsx
 - [[IconSettings()]] - code - frontend/src/components/icons.tsx
+- [[IconSparkles()]] - code - frontend/src/components/icons.tsx
 - [[IconSun()]] - code - frontend/src/components/icons.tsx
 - [[IconUsers()]] - code - frontend/src/components/icons.tsx
 - [[IconUtensils()]] - code - frontend/src/components/icons.tsx
@@ -38,9 +46,11 @@ members: 40
 - [[PublicHomePage()]] - code - frontend/src/pages/PublicHomePage.tsx
 - [[PublicHomePage.tsx]] - code - frontend/src/pages/PublicHomePage.tsx
 - [[STEPS]] - code - frontend/src/pages/PublicHomePage.tsx
+- [[TILES]] - code - frontend/src/components/admin/AdminTiles.tsx
 - [[Theme]] - code - frontend/src/theme.ts
 - [[ThemeToggle()]] - code - frontend/src/components/ThemeToggle.tsx
 - [[ThemeToggle.tsx]] - code - frontend/src/components/ThemeToggle.tsx
+- [[Tile]] - code - frontend/src/components/admin/AdminTiles.tsx
 - [[applyTheme()]] - code - frontend/src/theme.ts
 - [[getTheme()]] - code - frontend/src/theme.ts
 - [[icons.tsx]] - code - frontend/src/components/icons.tsx
@@ -57,13 +67,13 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 9 edges to [[_COMMUNITY_Admin Tasks & Occupancy Pages]]
+- 10 edges to [[_COMMUNITY_Admin Tasks & Occupancy Pages]]
 - 2 edges to [[_COMMUNITY_Public Booking Frontend (1)]]
-- 2 edges to [[_COMMUNITY_src  api (2)]]
+- 2 edges to [[_COMMUNITY_CampCenter.Application  Services (3)]]
 
 ## Top bridge nodes
-- [[icons.tsx]] - degree 31, connects to 2 communities
+- [[icons.tsx]] - degree 38, connects to 2 communities
 - [[PublicHomePage.tsx]] - degree 18, connects to 2 communities
+- [[AdminTiles.tsx]] - degree 13, connects to 1 community
 - [[ThemeToggle.tsx]] - degree 11, connects to 1 community
 - [[ThemeToggle()]] - degree 7, connects to 1 community
-- [[IconUtensils()]] - degree 3, connects to 1 community

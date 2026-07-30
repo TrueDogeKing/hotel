@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Domain/Repositories/IAdminUserRepository.cs"
 type: "code"
-community: "Domain & Infra Namespaces"
+community: "Public Booking Service (2)"
 location: "L3"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Domain__Infra_Namespaces
+  - community/Public_Booking_Service_2
 ---
 
 # CampCenter.Domain.Repositories
@@ -49,4 +49,4 @@ tags:
 - [[ScheduleEntryRepository.cs]] - `imports` [EXTRACTED]
 - [[ScheduleService.cs]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Domain__Infra_Namespaces
+#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_2

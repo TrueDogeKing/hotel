@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.Application / Services (2)"
+community: "CampCenter.Domain / Repositories (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterApplication_/_Services_2
+  - community/CampCenterDomain_/_Repositories_2
 ---
 
 # Guid
@@ -15,4 +15,4 @@ tags:
 - [[.ListForBookingAsync()_2]] - `references` [EXTRACTED]
 - [[.ListForBookingsAsync()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_2
+#graphify/code #graphify/EXTRACTED #community/CampCenterDomain_/_Repositories_2

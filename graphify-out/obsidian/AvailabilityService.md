@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Services/AvailabilityService.cs"
 type: "code"
-community: "Room Management"
+community: "Room Closure Management"
 location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Management
+  - community/Room_Closure_Management
 ---
 
 # AvailabilityService
@@ -23,4 +23,4 @@ tags:
 - [[IClosureRepository]] - `references` [EXTRACTED]
 - [[IRoomRepository]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Management
+#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management

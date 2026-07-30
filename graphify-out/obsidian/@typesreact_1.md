@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/package.json"
 type: "concept"
-community: "CampCenter.Domain / Entities"
+community: "ESLint Dev Dependencies"
 location: "L25"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/CampCenterDomain_/_Entities
+  - community/ESLint_Dev_Dependencies
 ---
 
 # @types/react
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[@typesreact]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/CampCenterDomain_/_Entities
+#graphify/concept #graphify/EXTRACTED #community/ESLint_Dev_Dependencies

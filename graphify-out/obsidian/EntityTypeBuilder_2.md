@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Admin Frontend Pages"
+community: "Persistence / Configurations"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Frontend_Pages
+  - community/Persistence_/_Configurations
 ---
 
 # EntityTypeBuilder
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.Configure()_2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Frontend_Pages
+#graphify/code #graphify/EXTRACTED #community/Persistence_/_Configurations

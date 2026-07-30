@@ -12,5 +12,6 @@ tags:
 
 ## Connections
 - [[.Get()_1]] - `references` [EXTRACTED]
+- [[.Groups()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Admin_Bookings_Controller__DTOs

@@ -6,17 +6,17 @@ import ThemeToggle from "../components/ThemeToggle";
 import {
   IconArrowRight,
   IconBed,
-  IconLandscape,
   IconMail,
   IconMap,
   IconMapPin,
   IconPhone,
+  IconSunSea,
   IconUtensils,
   IconWaves,
 } from "../components/icons";
 
-// Public landing page — Lakeside look: sticky nav, hero, feature cards,
-// how-it-works, contact, footer. Structure mirrors the stitch mockup.
+// Public landing page: sticky nav, hero, feature cards, how-it-works, contact,
+// footer. Structure mirrors the stitch mockup.
 const OFFER: { key: string; icon: ReactNode }[] = [
   { key: "rooms", icon: <IconBed /> },
   { key: "meals", icon: <IconUtensils /> },
@@ -32,7 +32,7 @@ export default function PublicHomePage() {
     <div className="home">
       <header className="home-header">
         <a className="home-brand" href="#top">
-          <IconLandscape />
+          <IconSunSea />
           {t("common.appName")}
         </a>
         <nav className="home-nav">

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "20260721111400_ReplaceSessionsWithClosures.Designer.cs"
+community: "CampCenter.UnitTests / Services (3)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/20260721111400_ReplaceSessionsWithClosuresDesignercs
+  - community/CampCenterUnitTests_/_Services_3
 ---
 
 # ModelBuilder
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.BuildTargetModel()_2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/20260721111400_ReplaceSessionsWithClosuresDesignercs
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_3

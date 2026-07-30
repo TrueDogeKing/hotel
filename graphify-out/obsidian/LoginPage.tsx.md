@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[App.tsx]] - `imports_from` [EXTRACTED]
 - [[AuthContext.tsx]] - `imports_from` [EXTRACTED]
-- [[IconLandscape()]] - `imports` [EXTRACTED]
+- [[IconSunSea()]] - `imports` [EXTRACTED]
 - [[LanguageSwitcher()]] - `imports` [EXTRACTED]
 - [[LanguageSwitcher.tsx]] - `imports_from` [EXTRACTED]
 - [[LoginPage()]] - `contains` [EXTRACTED]

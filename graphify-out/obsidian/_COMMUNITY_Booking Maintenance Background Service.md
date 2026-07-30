@@ -26,8 +26,8 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_Domain & Infra Namespaces]]
-- 1 edge to [[_COMMUNITY_Public Booking Service (1)]]
+- 1 edge to [[_COMMUNITY_Public Booking Service (2)]]
+- 1 edge to [[_COMMUNITY_Admin Booking & Notifications (4)]]
 
 ## Top bridge nodes
 - [[BookingMaintenanceService]] - degree 7, connects to 1 community

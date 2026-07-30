@@ -1,12 +1,12 @@
 ---
 source_file: "tests/CampCenter.IntegrationTests/CampCenterApiFactory.cs"
 type: "code"
-community: "tests / CampCenter.IntegrationTests (1)"
+community: "Payment Gateway Integration Tests (2)"
 location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/tests_/_CampCenterIntegrationTests_1
+  - community/Payment_Gateway_Integration_Tests_2
 ---
 
 # CampCenterApiFactory
@@ -23,4 +23,4 @@ tags:
 - [[Program]] - `references` [EXTRACTED]
 - [[WebApplicationFactory]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/tests_/_CampCenterIntegrationTests_1
+#graphify/code #graphify/EXTRACTED #community/Payment_Gateway_Integration_Tests_2

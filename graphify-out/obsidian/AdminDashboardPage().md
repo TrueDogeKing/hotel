@@ -1,21 +1,20 @@
 ---
 source_file: "frontend/src/pages/admin/AdminDashboardPage.tsx"
 type: "code"
-community: "Frontend App Shell & i18n"
-location: "L19"
+community: "Admin Tasks & Occupancy Pages"
+location: "L20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Frontend_App_Shell__i18n
+  - community/Admin_Tasks__Occupancy_Pages
 ---
 
 # AdminDashboardPage()
 
 ## Connections
 - [[AdminDashboardPage.tsx]] - `contains` [EXTRACTED]
-- [[formatDate()]] - `calls` [EXTRACTED]
 - [[getDashboard()]] - `calls` [EXTRACTED]
 - [[scrollPanelIntoView()]] - `calls` [EXTRACTED]
 - [[useAuth()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Frontend_App_Shell__i18n
+#graphify/code #graphify/EXTRACTED #community/Admin_Tasks__Occupancy_Pages

@@ -1,11 +1,11 @@
 ---
 type: community
-members: 34
+members: 32
 ---
 
 # src / utils
 
-**Members:** 34 nodes
+**Members:** 32 nodes
 
 ## Members
 - [[CalendarBar]] - code - frontend/src/components/calendar/MonthCalendar.tsx
@@ -15,8 +15,8 @@ members: 34
 - [[LaneEvent]] - code - frontend/src/components/calendar/lanes.ts
 - [[MonthCalendar()]] - code - frontend/src/components/calendar/MonthCalendar.tsx
 - [[MonthCalendar.tsx]] - code - frontend/src/components/calendar/MonthCalendar.tsx
-- [[Props_9]] - code - frontend/src/components/calendar/CalendarTile.tsx
-- [[Props_10]] - code - frontend/src/components/calendar/MonthCalendar.tsx
+- [[Props_10]] - code - frontend/src/components/calendar/CalendarTile.tsx
+- [[Props_11]] - code - frontend/src/components/calendar/MonthCalendar.tsx
 - [[ScheduleCalendar]] - code - frontend/src/api/admin.ts
 - [[SchedulePage()]] - code - frontend/src/pages/admin/SchedulePage.tsx
 - [[SchedulePage.tsx]] - code - frontend/src/pages/admin/SchedulePage.tsx
@@ -36,8 +36,6 @@ members: 34
 - [[monthFormatters]] - code - frontend/src/utils/dates.ts
 - [[monthGrid()]] - code - frontend/src/utils/dates.ts
 - [[packLanes()]] - code - frontend/src/components/calendar/lanes.ts
-- [[scroll.ts]] - code - frontend/src/utils/scroll.ts
-- [[scrollPanelIntoView()]] - code - frontend/src/utils/scroll.ts
 - [[shortWeekdays()]] - code - frontend/src/utils/dates.ts
 - [[toIsoDate()]] - code - frontend/src/utils/dates.ts
 - [[todayIso()]] - code - frontend/src/utils/dates.ts
@@ -51,17 +49,18 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 10 edges to [[_COMMUNITY_src  api (1)]]
-- 7 edges to [[_COMMUNITY_Admin Tasks & Occupancy Pages]]
-- 7 edges to [[_COMMUNITY_src  api (2)]]
-- 7 edges to [[_COMMUNITY_Frontend App Shell & i18n]]
-- 3 edges to [[_COMMUNITY_components  admin]]
-- 3 edges to [[_COMMUNITY_Public Booking Frontend (1)]]
-- 1 edge to [[_COMMUNITY_CampCenter.Application  Services (3)]]
+- 12 edges to [[_COMMUNITY_CampCenter.Application  Services (3)]]
+- 5 edges to [[_COMMUNITY_Admin Tasks & Occupancy Pages]]
+- 5 edges to [[_COMMUNITY_Public Booking Frontend (1)]]
+- 5 edges to [[_COMMUNITY_Room Task Management (2)]]
+- 5 edges to [[_COMMUNITY_components  admin]]
+- 3 edges to [[_COMMUNITY_src  api (2)]]
+- 2 edges to [[_COMMUNITY_Frontend App Shell & i18n]]
+- 1 edge to [[_COMMUNITY_src  api (1)]]
 
 ## Top bridge nodes
 - [[dates.ts]] - degree 33, connects to 7 communities
-- [[SchedulePage.tsx]] - degree 21, connects to 4 communities
+- [[SchedulePage.tsx]] - degree 21, connects to 3 communities
 - [[todayIso()]] - degree 10, connects to 2 communities
 - [[addDaysIso()]] - degree 8, connects to 2 communities
 - [[fromIsoDate()]] - degree 6, connects to 1 community

@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Domain/Entities/AdminUser.cs"
 type: "code"
-community: "Domain & Infra Namespaces"
+community: "Public Booking Service (2)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Domain__Infra_Namespaces
+  - community/Public_Booking_Service_2
 ---
 
 # CampCenter.Domain.Entities
@@ -21,6 +21,7 @@ tags:
 - [[AuthService.cs]] - `imports` [EXTRACTED]
 - [[Booking.cs]] - `contains` [EXTRACTED]
 - [[BookingConfiguration.cs]] - `imports` [EXTRACTED]
+- [[BookingGroupCategory.cs]] - `contains` [EXTRACTED]
 - [[BookingMaintenanceService.cs]] - `imports` [EXTRACTED]
 - [[BookingMealTime.cs]] - `contains` [EXTRACTED]
 - [[BookingMealTimeConfiguration.cs]] - `imports` [EXTRACTED]
@@ -35,6 +36,7 @@ tags:
 - [[ClosureConfiguration.cs]] - `imports` [EXTRACTED]
 - [[ClosureRepository.cs]] - `imports` [EXTRACTED]
 - [[ClosureService.cs]] - `imports` [EXTRACTED]
+- [[DashboardController.cs]] - `imports` [EXTRACTED]
 - [[DataSeeder.cs]] - `imports` [EXTRACTED]
 - [[EmailTemplates.cs]] - `imports` [EXTRACTED]
 - [[HousekeepingPlanner.cs]] - `imports` [EXTRACTED]
@@ -87,4 +89,4 @@ tags:
 - [[ScheduleValidators.cs]] - `imports` [EXTRACTED]
 - [[TasksController.cs]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Domain__Infra_Namespaces
+#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_2

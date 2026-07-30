@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Repositories/MealTimeDefaultRepository.cs"
 type: "code"
-community: "CampCenter.UnitTests / Services (1)"
+community: "Admin Booking & Notifications (3)"
 location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Services_1
+  - community/Admin_Booking__Notifications_3
 ---
 
 # MealTimeDefaultRepository
@@ -23,4 +23,4 @@ tags:
 - [[IMealTimeDefaultRepository]] - `implements` [EXTRACTED]
 - [[MealTimeDefaultRepository.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_1
+#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_3

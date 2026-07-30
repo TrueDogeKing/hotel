@@ -2,14 +2,14 @@
 source_file: "frontend/src/components/icons.tsx"
 type: "code"
 community: "Admin Tasks & Occupancy Pages"
-location: "L187"
+location: "L192"
 tags:
   - graphify/code
   - graphify/EXTRACTED
   - community/Admin_Tasks__Occupancy_Pages
 ---
 
-# IconLandscape()
+# IconSunSea()
 
 ## Connections
 - [[AdminLayout.tsx]] - `imports` [EXTRACTED]

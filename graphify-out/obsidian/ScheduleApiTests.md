@@ -37,6 +37,6 @@ tags:
 - [[.SettingAGroupsMealTime_RetimesTheWholeStay_ButNotOtherGroups()]] - `method` [EXTRACTED]
 - [[IntegrationTestBase]] - `inherits` [EXTRACTED]
 - [[ScheduleApiTests.cs]] - `contains` [EXTRACTED]
-- [[int_3]] - `references` [EXTRACTED]
+- [[int_4]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/tests_/_CampCenterIntegrationTests_1

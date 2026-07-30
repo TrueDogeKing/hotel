@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Repositories/RoomCleaningRepository.cs"
 type: "code"
-community: "Integration Test Harness (2)"
+community: "CampCenter.UnitTests / Services (2)"
 location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Integration_Test_Harness_2
+  - community/CampCenterUnitTests_/_Services_2
 ---
 
 # RoomCleaningRepository
@@ -21,4 +21,4 @@ tags:
 - [[IRoomCleaningRepository]] - `implements` [EXTRACTED]
 - [[RoomCleaningRepository.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Integration_Test_Harness_2
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_2

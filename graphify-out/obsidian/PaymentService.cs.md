@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Services/PaymentService.cs"
 type: "code"
-community: "CampCenter.UnitTests / Services (5)"
+community: "Domain & Infra Namespaces"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Services_5
+  - community/Domain__Infra_Namespaces
 ---
 
 # PaymentService.cs
@@ -20,4 +20,4 @@ tags:
 - [[CampCenter.Domain.Repositories]] - `imports` [EXTRACTED]
 - [[PaymentService]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_5
+#graphify/code #graphify/EXTRACTED #community/Domain__Infra_Namespaces

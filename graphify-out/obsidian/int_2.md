@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.Domain / Repositories (1)"
+community: "JWT Token Service"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterDomain_/_Repositories_1
+  - community/JWT_Token_Service
 ---
 
 # int
 
 ## Connections
-- [[PaymentsApiTests]] - `references` [EXTRACTED]
+- [[JwtTokenService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterDomain_/_Repositories_1
+#graphify/code #graphify/EXTRACTED #community/JWT_Token_Service

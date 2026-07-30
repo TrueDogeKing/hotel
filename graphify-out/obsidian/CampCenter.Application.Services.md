@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Services/AdminBookingService.cs"
 type: "code"
-community: "CampCenter.Application / Services (1)"
+community: "Domain & Infra Namespaces"
 location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterApplication_/_Services_1
+  - community/Domain__Infra_Namespaces
 ---
 
 # CampCenter.Application.Services
@@ -35,4 +35,4 @@ tags:
 - [[ScheduleConflictTests.cs]] - `imports` [EXTRACTED]
 - [[ScheduleService.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_1
+#graphify/code #graphify/EXTRACTED #community/Domain__Infra_Namespaces

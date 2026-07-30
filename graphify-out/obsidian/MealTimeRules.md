@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Validators/MealTimeValidators.cs"
 type: "code"
-community: "DTOs / Schedule (2)"
+community: "Rate Limiting & Startup"
 location: "L49"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DTOs_/_Schedule_2
+  - community/Rate_Limiting__Startup
 ---
 
 # MealTimeRules
@@ -16,4 +16,4 @@ tags:
 - [[MealTimeValidators.cs]] - `contains` [EXTRACTED]
 - [[string_4]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DTOs_/_Schedule_2
+#graphify/code #graphify/EXTRACTED #community/Rate_Limiting__Startup

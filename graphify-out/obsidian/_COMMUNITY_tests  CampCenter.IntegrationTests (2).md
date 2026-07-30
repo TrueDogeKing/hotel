@@ -1,17 +1,19 @@
 ---
 type: community
-members: 4
+members: 6
 ---
 
 # tests / CampCenter.IntegrationTests (2)
 
-**Members:** 4 nodes
+**Members:** 6 nodes
 
 ## Members
-- [[.Configure()_1]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/BookingConfiguration.cs
-- [[BookingConfiguration]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/BookingConfiguration.cs
-- [[BookingConfiguration.cs]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/BookingConfiguration.cs
-- [[EntityTypeBuilder_1]] - code
+- [[.RemoveAssignment()]] - code - src/CampCenter.Domain/Repositories/IBookingRepository.cs
+- [[.RemoveAssignment()_1]] - code - src/CampCenter.Infrastructure/Repositories/BookingRepository.cs
+- [[BookingRoomAssignment]] - code - src/CampCenter.Domain/Entities/BookingRoomAssignment.cs
+- [[BookingRoomAssignment.cs]] - code - src/CampCenter.Domain/Entities/BookingRoomAssignment.cs
+- [[DateOnly_18]] - code
+- [[Guid_28]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -21,12 +23,17 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (2)]]
-- 1 edge to [[_COMMUNITY_Domain & Infra Namespaces]]
-- 1 edge to [[_COMMUNITY_Persistence  Configurations]]
-- 1 edge to [[_COMMUNITY_Validator Unit Tests]]
+- 2 edges to [[_COMMUNITY_Admin Booking & Notifications (1)]]
+- 2 edges to [[_COMMUNITY_Integration Test Harness (2)]]
+- 2 edges to [[_COMMUNITY_Persistence  Configurations]]
+- 2 edges to [[_COMMUNITY_CampCenter.Domain  Repositories (1)]]
+- 1 edge to [[_COMMUNITY_Public Booking Service (2)]]
+- 1 edge to [[_COMMUNITY_CampCenter.UnitTests  Validators]]
+- 1 edge to [[_COMMUNITY_Room Management]]
+- 1 edge to [[_COMMUNITY_Booking Persistence & Entities (1)]]
 
 ## Top bridge nodes
-- [[BookingConfiguration]] - degree 4, connects to 2 communities
-- [[BookingConfiguration.cs]] - degree 3, connects to 2 communities
-- [[.Configure()_1]] - degree 3, connects to 1 community
+- [[BookingRoomAssignment]] - degree 13, connects to 7 communities
+- [[.RemoveAssignment()]] - degree 3, connects to 2 communities
+- [[BookingRoomAssignment.cs]] - degree 2, connects to 1 community
+- [[.RemoveAssignment()_1]] - degree 2, connects to 1 community

@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Interfaces/IPaymentService.cs"
 type: "code"
-community: "CampCenter.UnitTests / Services (3)"
+community: "Public Booking Service (1)"
 location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Services_3
+  - community/Public_Booking_Service_1
 ---
 
 # InitiatePaymentResponseDto
@@ -16,4 +16,4 @@ tags:
 - [[.InitiateAsync()_1]] - `references` [EXTRACTED]
 - [[IPaymentService.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_3
+#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_1

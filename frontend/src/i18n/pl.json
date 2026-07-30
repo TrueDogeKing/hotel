@@ -4,7 +4,7 @@
     "loading": "Ładowanie…"
   },
   "home": {
-    "heroTitle": "Ośrodek kolonijny nad jeziorem",
+    "heroTitle": "Ośrodek kolonijny nad morzem",
     "heroSubtitle": "Rezerwacja w dowolnym terminie dla grup zorganizowanych — zakwaterowanie, wyżywienie i teren rekreacyjny w jednym miejscu.",
     "bookCta": "Zarezerwuj pobyt",
     "bookNow": "Rezerwuj",
@@ -13,7 +13,7 @@
     "navContact": "Kontakt",
     "adminLink": "Panel personelu",
     "offerTitle": "Wszystko, czego potrzebuje udany obóz",
-    "offerSubtitle": "Zaprojektowane z myślą o wygodzie i funkcjonalności, aby pobyt Twojej grupy nad jeziorem był niezapomniany.",
+    "offerSubtitle": "Zaprojektowane z myślą o wygodzie i funkcjonalności, aby pobyt Twojej grupy nad morzem był niezapomniany.",
     "how": {
       "title": "Jak przebiega rezerwacja",
       "step1": {
@@ -40,7 +40,7 @@
       },
       "grounds": {
         "title": "Teren rekreacyjny",
-        "body": "Boiska, świetlice, plaża nad jeziorem i wyznaczone kąpielisko z ratownikiem."
+        "body": "Boiska, świetlice, plaża nad morzem i wyznaczone kąpielisko z ratownikiem."
       }
     },
     "contactTitle": "Skontaktuj się",
@@ -48,7 +48,7 @@
     "contactAddress": "Ośrodek CampCenter, ul. Jeziorna 1, 11-111 Nadjeziorze",
     "contactPhone": "+48 000 000 000",
     "contactEmail": "rezerwacje@campcenter.pl",
-    "rights": "© 2026 CampCenter Lakeside. Wszelkie prawa zastrzeżone."
+    "rights": "© 2026 CampCenter. Wszelkie prawa zastrzeżone."
   },
   "login": {
     "title": "Logowanie administratora",
@@ -166,6 +166,41 @@
       "tasks": "Zadania",
       "schedule": "Harmonogram",
       "housekeeping": "Sprzątanie"
+    },
+    "tiles": {
+      "label": "Sekcje panelu",
+      "schedule": {
+        "name": "Harmonogram",
+        "description": "Kalendarz turnusów i plan godzinowy dnia."
+      },
+      "housekeeping": {
+        "name": "Sprzątanie",
+        "description": "Pokoje do ogarnięcia dziś i w kolejnych dniach."
+      },
+      "bookings": {
+        "name": "Rezerwacje",
+        "description": "Wszystkie rezerwacje, statusy i płatności."
+      },
+      "occupancy": {
+        "name": "Obłożenie",
+        "description": "Które pokoje są wolne, zajęte albo zablokowane."
+      },
+      "rooms": {
+        "name": "Pokoje",
+        "description": "Numery, liczba miejsc i dostępność pokoi."
+      },
+      "tasks": {
+        "name": "Zadania",
+        "description": "Zadania dla obsługi, np. dostawki."
+      },
+      "closures": {
+        "name": "Blokady",
+        "description": "Terminy, w których ośrodek lub pokój jest niedostępny."
+      },
+      "mealTimes": {
+        "name": "Pory posiłków",
+        "description": "Domyślne godziny posiłków dla całego ośrodka."
+      }
     }
   },
   "dashboard": {
@@ -175,6 +210,15 @@
     "activeClosures": "Aktywne blokady",
     "upcomingBookings": "Nadchodzące rezerwacje",
     "noBookings": "Brak nadchodzących rezerwacji.",
+    "groups": {
+      "title": "Grupy",
+      "current": "Grupy obecne",
+      "upcoming": "Grupy nadchodzące",
+      "inactive": "Grupy nieaktywne",
+      "empty": "Brak grup.",
+      "loadMore": "Wczytaj więcej ({{shown}} z {{total}})",
+      "loadError": "Nie udało się wczytać grup."
+    },
     "beds": "miejsc: {{count}}",
     "addGroup": "Dodaj grupę",
     "addGroupSubmit": "Zapisz grupę",

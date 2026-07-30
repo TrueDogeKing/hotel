@@ -1,17 +1,16 @@
 ---
 type: community
-members: 4
+members: 3
 ---
 
 # CampCenter.Application / Services (4)
 
-**Members:** 4 nodes
+**Members:** 3 nodes
 
 ## Members
-- [[.Configure()_10]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/RoomTaskConfiguration.cs
-- [[EntityTypeBuilder_10]] - code
-- [[RoomTaskConfiguration]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/RoomTaskConfiguration.cs
-- [[RoomTaskConfiguration.cs]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/RoomTaskConfiguration.cs
+- [[HousekeepingJob]] - code - src/CampCenter.Application/Services/HousekeepingPlanner.cs
+- [[HousekeepingPlanner]] - code - src/CampCenter.Application/Services/HousekeepingPlanner.cs
+- [[HousekeepingPlanner.cs]] - code - src/CampCenter.Application/Services/HousekeepingPlanner.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -21,12 +20,12 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_Room Task Management (1)]]
+- 2 edges to [[_COMMUNITY_CampCenter.UnitTests  Validators]]
 - 1 edge to [[_COMMUNITY_Domain & Infra Namespaces]]
-- 1 edge to [[_COMMUNITY_Persistence  Configurations]]
-- 1 edge to [[_COMMUNITY_Validator Unit Tests]]
+- 1 edge to [[_COMMUNITY_Public Booking Service (2)]]
+- 1 edge to [[_COMMUNITY_CampCenter.UnitTests  Services (2)]]
 
 ## Top bridge nodes
-- [[RoomTaskConfiguration]] - degree 4, connects to 2 communities
-- [[RoomTaskConfiguration.cs]] - degree 3, connects to 2 communities
-- [[.Configure()_10]] - degree 3, connects to 1 community
+- [[HousekeepingPlanner.cs]] - degree 4, connects to 2 communities
+- [[HousekeepingJob]] - degree 3, connects to 2 communities
+- [[HousekeepingPlanner]] - degree 2, connects to 1 community

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Payment"
+community: "Persistence / Configurations"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Payment
+  - community/Persistence_/_Configurations
 ---
 
 # EntityTypeBuilder
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.Configure()_11]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Payment
+#graphify/code #graphify/EXTRACTED #community/Persistence_/_Configurations

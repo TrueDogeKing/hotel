@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Repositories/MealTimeDefaultRepository.cs"
 type: "code"
-community: "Domain & Infra Namespaces"
+community: "Public Booking Service (2)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Domain__Infra_Namespaces
+  - community/Public_Booking_Service_2
 ---
 
 # MealTimeDefaultRepository.cs
@@ -18,4 +18,4 @@ tags:
 - [[CampCenter.Infrastructure.Repositories]] - `contains` [EXTRACTED]
 - [[MealTimeDefaultRepository]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Domain__Infra_Namespaces
+#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_2

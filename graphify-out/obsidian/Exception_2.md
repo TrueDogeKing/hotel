@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.UnitTests / Services (2)"
+community: "CampCenter.Domain / Repositories (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Services_2
+  - community/CampCenterDomain_/_Repositories_1
 ---
 
 # Exception
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.IsRoomRace()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_2
+#graphify/code #graphify/EXTRACTED #community/CampCenterDomain_/_Repositories_1

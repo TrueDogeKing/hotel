@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import { useAuth } from "../../auth/AuthContext";
 import LanguageSwitcher from "../LanguageSwitcher";
 import ThemeToggle from "../ThemeToggle";
-import { IconLandscape } from "../icons";
+import { IconSunSea } from "../icons";
 
 // Shared admin shell: brand, section nav, language flags, logout.
 export default function AdminLayout({ children }: { children: ReactNode }) {
@@ -15,25 +15,14 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
     <main className="admin-page">
       <header className="public-header">
         <div className="admin-header-left">
-          <div className="auth-brand admin-brand">
+          {/* Sections are chosen from the dashboard's tiles, not from here — so the
+              brand is the way back to them from wherever you are. */}
+          <Link to="/admin" className="auth-brand admin-brand">
             <span className="mark">
-              <IconLandscape />
+              <IconSunSea />
             </span>
-            {/* Hidden on narrow screens so the section nav keeps the room. */}
             <span className="admin-brand-text">{t("admin.dashboardTitle")}</span>
-          </div>
-          <nav className="admin-nav">
-            <NavLink to="/admin" end>
-              {t("admin.nav.dashboard")}
-            </NavLink>
-            <NavLink to="/admin/harmonogram">{t("admin.nav.schedule")}</NavLink>
-            <NavLink to="/admin/sprzatanie">{t("admin.nav.housekeeping")}</NavLink>
-            <NavLink to="/admin/oblozenie">{t("admin.nav.occupancy")}</NavLink>
-            <NavLink to="/admin/blokady">{t("admin.nav.closures")}</NavLink>
-            <NavLink to="/admin/pokoje">{t("admin.nav.rooms")}</NavLink>
-            <NavLink to="/admin/rezerwacje">{t("admin.nav.bookings")}</NavLink>
-            <NavLink to="/admin/zadania">{t("admin.nav.tasks")}</NavLink>
-          </nav>
+          </Link>
         </div>
         <div className="admin-header-actions">
           <ThemeToggle />

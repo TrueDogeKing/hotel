@@ -19,6 +19,6 @@ tags:
 - [[JwtSettings]] - `references` [EXTRACTED]
 - [[JwtTokenService.cs]] - `contains` [EXTRACTED]
 - [[RefreshTokenSettings]] - `references` [EXTRACTED]
-- [[int_1]] - `references` [EXTRACTED]
+- [[int_2]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/JWT_Token_Service

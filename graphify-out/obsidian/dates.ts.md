@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[AdminBookingsPage.tsx]] - `imports_from` [EXTRACTED]
-- [[AdminDashboardPage.tsx]] - `imports_from` [EXTRACTED]
+- [[BookingGroupSection.tsx]] - `imports_from` [EXTRACTED]
 - [[BookingManagePage.tsx]] - `imports_from` [EXTRACTED]
 - [[BookingSchedule.tsx]] - `imports_from` [EXTRACTED]
 - [[BookingWizardPage.tsx]] - `imports_from` [EXTRACTED]

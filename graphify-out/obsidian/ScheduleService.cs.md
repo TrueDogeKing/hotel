@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Services/ScheduleService.cs"
 type: "code"
-community: "Application Namespaces & DTOs"
+community: "Domain & Infra Namespaces"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Application_Namespaces__DTOs
+  - community/Domain__Infra_Namespaces
 ---
 
 # ScheduleService.cs
@@ -21,4 +21,4 @@ tags:
 - [[CampCenter.Domain.Repositories]] - `imports` [EXTRACTED]
 - [[ScheduleService]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Application_Namespaces__DTOs
+#graphify/code #graphify/EXTRACTED #community/Domain__Infra_Namespaces

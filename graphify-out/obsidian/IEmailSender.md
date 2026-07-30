@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Interfaces/IEmailSender.cs"
 type: "code"
-community: "Public Booking Service (1)"
+community: "Admin Booking & Notifications (4)"
 location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public_Booking_Service_1
+  - community/Admin_Booking__Notifications_4
 ---
 
 # IEmailSender
@@ -19,4 +19,4 @@ tags:
 - [[PaymentService]] - `references` [EXTRACTED]
 - [[SmtpEmailSender]] - `implements` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_1
+#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_4

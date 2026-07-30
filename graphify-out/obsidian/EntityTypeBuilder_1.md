@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "tests / CampCenter.IntegrationTests (2)"
+community: "Persistence / Configurations"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/tests_/_CampCenterIntegrationTests_2
+  - community/Persistence_/_Configurations
 ---
 
 # EntityTypeBuilder
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.Configure()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/tests_/_CampCenterIntegrationTests_2
+#graphify/code #graphify/EXTRACTED #community/Persistence_/_Configurations

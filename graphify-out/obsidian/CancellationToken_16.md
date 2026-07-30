@@ -16,6 +16,7 @@ tags:
 - [[.GetAssignableRoomsAsync()]] - `references` [EXTRACTED]
 - [[.GetAsync()]] - `references` [EXTRACTED]
 - [[.GetDashboardAsync()]] - `references` [EXTRACTED]
+- [[.GetGroupPageAsync()]] - `references` [EXTRACTED]
 - [[.GetOccupancyAsync()]] - `references` [EXTRACTED]
 - [[.ListAsync()]] - `references` [EXTRACTED]
 - [[.ReassignAsync()]] - `references` [EXTRACTED]

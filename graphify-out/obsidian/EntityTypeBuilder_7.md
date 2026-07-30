@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Persistence / Configurations"
+community: "Refresh Token Repository"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Persistence_/_Configurations
+  - community/Refresh_Token_Repository
 ---
 
 # EntityTypeBuilder
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.Configure()_7]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Persistence_/_Configurations
+#graphify/code #graphify/EXTRACTED #community/Refresh_Token_Repository

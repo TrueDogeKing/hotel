@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/pages/admin/HousekeepingPage.tsx"
 type: "code"
-community: "src / api (1)"
+community: "Room Task Management (2)"
 location: "L27"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/src_/_api_1
+  - community/Room_Task_Management_2
 ---
 
 # kindOrder
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[HousekeepingPage.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/src_/_api_1
+#graphify/code #graphify/EXTRACTED #community/Room_Task_Management_2

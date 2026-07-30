@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Rate Limiting & Startup"
+community: "Admin Booking & Notifications (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Rate_Limiting__Startup
+  - community/Admin_Booking__Notifications_1
 ---
 
 # int
 
 ## Connections
-- [[PasswordRules]] - `references` [EXTRACTED]
+- [[AdminBookingService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Rate_Limiting__Startup
+#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_1

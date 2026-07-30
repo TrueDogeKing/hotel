@@ -601,6 +601,43 @@ public class AdminBookingService : IAdminBookingService
         );
     }
 
+    /// Page size ceiling. A caller asking for everything at once would defeat the
+    /// point of paging these lists, and the inactive one has no upper bound.
+    private const int MaxGroupPageSize = 100;
+
+    public async Task<BookingGroupPageDto> GetGroupPageAsync(
+        BookingGroupCategory category,
+        int skip,
+        int take,
+        CancellationToken cancellationToken = default
+    )
+    {
+        var (items, total) = await _bookings.ListByCategoryAsync(
+            category,
+            DateOnly.FromDateTime(DateTime.UtcNow),
+            Math.Max(0, skip),
+            Math.Clamp(take, 1, MaxGroupPageSize),
+            cancellationToken
+        );
+
+        return new BookingGroupPageDto(
+            category.ToString(),
+            total,
+            Math.Max(0, skip),
+            [
+                .. items.Select(b => new DashboardBookingDto(
+                    b.Id,
+                    b.OrganizationName,
+                    b.StartDate,
+                    b.EndDate,
+                    b.Headcount,
+                    b.RoomAssignments.Sum(a => a.PeopleCount),
+                    b.Status.ToString()
+                )),
+            ]
+        );
+    }
+
     private async Task<Booking> GetOrThrowAsync(Guid id, CancellationToken cancellationToken) =>
         await _bookings.GetByIdAsync(id, cancellationToken)
         ?? throw new NotFoundException("Booking not found.");

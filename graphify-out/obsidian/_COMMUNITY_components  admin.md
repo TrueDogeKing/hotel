@@ -1,26 +1,25 @@
 ---
 type: community
-members: 13
+members: 12
 ---
 
 # components / admin
 
-**Members:** 13 nodes
+**Members:** 12 nodes
 
 ## Members
-- [[Chip]] - code - frontend/src/components/admin/DayTimetable.tsx
-- [[ClashReason]] - code - frontend/src/components/admin/DayTimetable.tsx
-- [[DayTimetable()]] - code - frontend/src/components/admin/DayTimetable.tsx
-- [[DayTimetable.tsx]] - code - frontend/src/components/admin/DayTimetable.tsx
-- [[PlacedChip]] - code - frontend/src/components/admin/DayTimetable.tsx
-- [[Props_4]] - code - frontend/src/components/admin/DayTimetable.tsx
-- [[ScheduleDay]] - code - frontend/src/api/admin.ts
-- [[buildChips()]] - code - frontend/src/components/admin/DayTimetable.tsx
-- [[findClashes()]] - code - frontend/src/components/admin/DayTimetable.tsx
-- [[groupsOf()]] - code - frontend/src/components/admin/DayTimetable.tsx
-- [[minutesOf()]] - code - frontend/src/components/admin/DayTimetable.tsx
-- [[placeChips()]] - code - frontend/src/components/admin/DayTimetable.tsx
-- [[placesOf()]] - code - frontend/src/components/admin/DayTimetable.tsx
+- [[Occupancy]] - code - frontend/src/api/admin.ts
+- [[OccupancyPage()]] - code - frontend/src/pages/admin/OccupancyPage.tsx
+- [[OccupancyPage.tsx]] - code - frontend/src/pages/admin/OccupancyPage.tsx
+- [[RoomOccupancy]] - code - frontend/src/api/admin.ts
+- [[RoomTask]] - code - frontend/src/api/admin.ts
+- [[TasksPage()]] - code - frontend/src/pages/admin/TasksPage.tsx
+- [[TasksPage.tsx]] - code - frontend/src/pages/admin/TasksPage.tsx
+- [[createTask()]] - code - frontend/src/api/admin.ts
+- [[deleteTask()]] - code - frontend/src/api/admin.ts
+- [[getOccupancy()]] - code - frontend/src/api/admin.ts
+- [[getTasks()]] - code - frontend/src/api/admin.ts
+- [[setTaskDone()]] - code - frontend/src/api/admin.ts
 
 ## Live Query (requires Dataview plugin)
 
@@ -30,13 +29,13 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_src  api (2)]]
-- 3 edges to [[_COMMUNITY_src  utils]]
-- 2 edges to [[_COMMUNITY_src  api (1)]]
-- 2 edges to [[_COMMUNITY_Frontend App Shell & i18n]]
+- 10 edges to [[_COMMUNITY_CampCenter.Application  Services (3)]]
+- 5 edges to [[_COMMUNITY_src  utils]]
+- 4 edges to [[_COMMUNITY_Admin Tasks & Occupancy Pages]]
 
 ## Top bridge nodes
-- [[DayTimetable.tsx]] - degree 18, connects to 4 communities
-- [[DayTimetable()]] - degree 7, connects to 2 communities
-- [[ScheduleDay]] - degree 4, connects to 2 communities
-- [[Chip]] - degree 3, connects to 1 community
+- [[OccupancyPage.tsx]] - degree 14, connects to 3 communities
+- [[TasksPage.tsx]] - degree 8, connects to 2 communities
+- [[getTasks()]] - degree 4, connects to 1 community
+- [[setTaskDone()]] - degree 4, connects to 1 community
+- [[OccupancyPage()]] - degree 4, connects to 1 community

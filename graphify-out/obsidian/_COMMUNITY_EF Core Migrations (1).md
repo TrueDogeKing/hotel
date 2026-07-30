@@ -27,11 +27,11 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_Domain & Infra Namespaces]]
+- 2 edges to [[_COMMUNITY_Public Booking Service (2)]]
 - 1 edge to [[_COMMUNITY_EF Core Migrations (4)]]
 - 1 edge to [[_COMMUNITY_EF Core Migrations (5)]]
 - 1 edge to [[_COMMUNITY_Persistence  Migrations (1)]]
-- 1 edge to [[_COMMUNITY_20260721111400_ReplaceSessionsWithClosures.Designer.cs]]
+- 1 edge to [[_COMMUNITY_CampCenter.UnitTests  Services (3)]]
 - 1 edge to [[_COMMUNITY_Persistence  Migrations (2)]]
 - 1 edge to [[_COMMUNITY_Persistence  Migrations (9)]]
 - 1 edge to [[_COMMUNITY_Persistence  Migrations (3)]]

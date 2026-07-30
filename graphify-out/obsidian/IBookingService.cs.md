@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Interfaces/IBookingService.cs"
 type: "code"
-community: "Integration Test Harness (1)"
+community: "Application Namespaces & DTOs"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Integration_Test_Harness_1
+  - community/Application_Namespaces__DTOs
 ---
 
 # IBookingService.cs
@@ -17,4 +17,4 @@ tags:
 - [[CampCenter.Application.Interfaces]] - `contains` [EXTRACTED]
 - [[IBookingService]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Integration_Test_Harness_1
+#graphify/code #graphify/EXTRACTED #community/Application_Namespaces__DTOs

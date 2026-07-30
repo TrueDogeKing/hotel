@@ -386,6 +386,31 @@ export async function getDashboard(): Promise<Dashboard> {
   return data;
 }
 
+/** Current = here today, Upcoming = arriving later, Inactive = cancelled or already
+ *  departed. Disjoint, so every group is in exactly one. */
+export const bookingGroupCategories = ["Current", "Upcoming", "Inactive"] as const;
+
+export type BookingGroupCategory = (typeof bookingGroupCategories)[number];
+
+export interface BookingGroupPage {
+  category: BookingGroupCategory;
+  /** The whole category, not this page — how many rows are still to come. */
+  total: number;
+  skip: number;
+  items: DashboardBooking[];
+}
+
+export async function getBookingGroupPage(
+  category: BookingGroupCategory,
+  skip: number,
+  take: number,
+): Promise<BookingGroupPage> {
+  const { data } = await api.get<BookingGroupPage>("/admin/dashboard/groups", {
+    params: { category, skip, take },
+  });
+  return data;
+}
+
 // --- Camp schedule (harmonogram) ---
 
 export type ScheduleEntryKind = "Meal" | "Activity";

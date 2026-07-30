@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Api/Controllers/Admin/MealTimesController.cs"
 type: "code"
-community: "DTOs / Schedule (2)"
+community: "Camp Session Management"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DTOs_/_Schedule_2
+  - community/Camp_Session_Management
 ---
 
 # MealTimesController
@@ -21,4 +21,4 @@ tags:
 - [[IValidator_2]] - `references` [EXTRACTED]
 - [[MealTimesController.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DTOs_/_Schedule_2
+#graphify/code #graphify/EXTRACTED #community/Camp_Session_Management

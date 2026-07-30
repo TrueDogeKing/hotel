@@ -1,27 +1,69 @@
 ---
 type: community
-members: 14
+members: 56
 ---
 
 # Camp Session Management
 
-**Members:** 14 nodes
+**Members:** 56 nodes
 
 ## Members
-- [[.NotificationSign()]] - code - src/CampCenter.Infrastructure/Payments/P24SignCalculator.cs
-- [[.NotificationSign_RoundTrips()]] - code - tests/CampCenter.UnitTests/Services/P24SignCalculatorTests.cs
-- [[.RegisterSign()]] - code - src/CampCenter.Infrastructure/Payments/P24SignCalculator.cs
-- [[.RegisterSign_MatchesDocumentedJsonShape()]] - code - tests/CampCenter.UnitTests/Services/P24SignCalculatorTests.cs
-- [[.Sha384()]] - code - src/CampCenter.Infrastructure/Payments/P24SignCalculator.cs
-- [[.Sha384()_1]] - code - tests/CampCenter.UnitTests/Services/P24SignCalculatorTests.cs
-- [[.VerifyNotificationSignature()]] - code - src/CampCenter.Application/Interfaces/IPaymentGateway.cs
-- [[.VerifyNotificationSignature()_1]] - code - src/CampCenter.Infrastructure/Payments/Przelewy24Client.cs
-- [[.VerifySign()]] - code - src/CampCenter.Infrastructure/Payments/P24SignCalculator.cs
-- [[.VerifySign_MatchesDocumentedJsonShape()]] - code - tests/CampCenter.UnitTests/Services/P24SignCalculatorTests.cs
-- [[Fact_9]] - code
-- [[GatewayNotification]] - code - src/CampCenter.Application/Interfaces/IPaymentGateway.cs
-- [[P24SignCalculator]] - code - src/CampCenter.Infrastructure/Payments/P24SignCalculator.cs
-- [[P24SignCalculatorTests]] - code - tests/CampCenter.UnitTests/Services/P24SignCalculatorTests.cs
+- [[.ActivityWithoutMealKind_Passes()]] - code - tests/CampCenter.UnitTests/Validators/ScheduleValidatorsTests.cs
+- [[.Create()_2]] - code - src/CampCenter.Api/Controllers/Admin/MealTimesController.cs
+- [[.CreateAsync()_3]] - code - src/CampCenter.Application/Interfaces/IMealTimeService.cs
+- [[.Delete()_1]] - code - src/CampCenter.Api/Controllers/Admin/MealTimesController.cs
+- [[.DeleteAsync()_1]] - code - src/CampCenter.Application/Interfaces/IMealTimeService.cs
+- [[.EmptyBookingId_Fails()]] - code - tests/CampCenter.UnitTests/Validators/ScheduleValidatorsTests.cs
+- [[.EmptyLabel_Fails()]] - code - tests/CampCenter.UnitTests/Validators/ScheduleValidatorsTests.cs
+- [[.EmptyTitle_Fails()]] - code - tests/CampCenter.UnitTests/Validators/ScheduleValidatorsTests.cs
+- [[.EndBeforeStart_Fails()_1]] - code - tests/CampCenter.UnitTests/Validators/ScheduleValidatorsTests.cs
+- [[.EndTimeBeforeStartTime_Fails()]] - code - tests/CampCenter.UnitTests/Validators/ScheduleValidatorsTests.cs
+- [[.EqualStartAndEndTime_Fails()]] - code - tests/CampCenter.UnitTests/Validators/ScheduleValidatorsTests.cs
+- [[.GetAll()_1]] - code - src/CampCenter.Api/Controllers/Admin/MealTimesController.cs
+- [[.GetAllAsync()_1]] - code - src/CampCenter.Application/Interfaces/IMealTimeService.cs
+- [[.KindIsCaseInsensitive()]] - code - tests/CampCenter.UnitTests/Validators/ScheduleValidatorsTests.cs
+- [[.MealWithUnknownMealKind_Fails()]] - code - tests/CampCenter.UnitTests/Validators/ScheduleValidatorsTests.cs
+- [[.MealWithoutMealKind_Fails()]] - code - tests/CampCenter.UnitTests/Validators/ScheduleValidatorsTests.cs
+- [[.NegativeSortOrder_Fails()]] - code - tests/CampCenter.UnitTests/Validators/ScheduleValidatorsTests.cs
+- [[.NullParticipantCount_Passes()]] - code - tests/CampCenter.UnitTests/Validators/ScheduleValidatorsTests.cs
+- [[.OverlongMenuOrPrepNotes_Fails()]] - code - tests/CampCenter.UnitTests/Validators/ScheduleValidatorsTests.cs
+- [[.OverlongTitle_Fails()]] - code - tests/CampCenter.UnitTests/Validators/ScheduleValidatorsTests.cs
+- [[.UnknownKind_Fails()]] - code - tests/CampCenter.UnitTests/Validators/ScheduleValidatorsTests.cs
+- [[.UnknownMealKind_Fails()]] - code - tests/CampCenter.UnitTests/Validators/ScheduleValidatorsTests.cs
+- [[.Update()_1]] - code - src/CampCenter.Api/Controllers/Admin/MealTimesController.cs
+- [[.UpdateAsync()_1]] - code - src/CampCenter.Application/Interfaces/IMealTimeService.cs
+- [[.UpdateValidator_EnforcesTheSameRules()]] - code - tests/CampCenter.UnitTests/Validators/ScheduleValidatorsTests.cs
+- [[.UpdateValidator_EnforcesTheSameRules()_1]] - code - tests/CampCenter.UnitTests/Validators/ScheduleValidatorsTests.cs
+- [[.Valid()_1]] - code - tests/CampCenter.UnitTests/Validators/ScheduleValidatorsTests.cs
+- [[.ValidActivity()]] - code - tests/CampCenter.UnitTests/Validators/ScheduleValidatorsTests.cs
+- [[.ValidActivity_Passes()]] - code - tests/CampCenter.UnitTests/Validators/ScheduleValidatorsTests.cs
+- [[.ValidMeal()]] - code - tests/CampCenter.UnitTests/Validators/ScheduleValidatorsTests.cs
+- [[.ValidMeal_Passes()]] - code - tests/CampCenter.UnitTests/Validators/ScheduleValidatorsTests.cs
+- [[.ValidSlot_Passes()]] - code - tests/CampCenter.UnitTests/Validators/ScheduleValidatorsTests.cs
+- [[.ZeroOrNegativeParticipantCount_Fails()]] - code - tests/CampCenter.UnitTests/Validators/ScheduleValidatorsTests.cs
+- [[CancellationToken_5]] - code
+- [[CancellationToken_23]] - code
+- [[CreateMealTimeDefaultRequestDto]] - code - src/CampCenter.Application/DTOs/Schedule/MealTimeDtos.cs
+- [[CreateMealTimeDefaultRequestValidator]] - code - src/CampCenter.Application/Validators/MealTimeValidators.cs
+- [[CreateScheduleEntryRequestDto]] - code - src/CampCenter.Application/DTOs/Schedule/ScheduleDtos.cs
+- [[DeleteMealTimeDefaultResultDto]] - code - src/CampCenter.Application/DTOs/Schedule/MealTimeDtos.cs
+- [[Fact_14]] - code
+- [[Guid_3]] - code
+- [[Guid_12]] - code
+- [[HttpDelete_1]] - code
+- [[HttpGet_4]] - code
+- [[HttpPost_2]] - code
+- [[HttpPut_3]] - code
+- [[IActionResult_4]] - code
+- [[IMealTimeService]] - code - src/CampCenter.Application/Interfaces/IMealTimeService.cs
+- [[IValidator_2]] - code
+- [[List_2]] - code
+- [[MealTimeValidatorsTests]] - code - tests/CampCenter.UnitTests/Validators/ScheduleValidatorsTests.cs
+- [[MealTimesController]] - code - src/CampCenter.Api/Controllers/Admin/MealTimesController.cs
+- [[ProducesResponseType_4]] - code
+- [[ScheduleEntryValidatorsTests]] - code - tests/CampCenter.UnitTests/Validators/ScheduleValidatorsTests.cs
+- [[Task_5]] - code
+- [[Task_22]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -31,17 +73,17 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_Payment Gateway Integration Tests (1)]]
-- 3 edges to [[_COMMUNITY_Admin Booking & Notifications (2)]]
-- 2 edges to [[_COMMUNITY_Admin Booking & Notifications (4)]]
-- 2 edges to [[_COMMUNITY_Przelewy24 Payment Client]]
-- 1 edge to [[_COMMUNITY_Booking Persistence & Entities (2)]]
-- 1 edge to [[_COMMUNITY_CampCenter.UnitTests  Services (3)]]
-- 1 edge to [[_COMMUNITY_CampCenter.Domain  Repositories (1)]]
+- 10 edges to [[_COMMUNITY_DTOs  Schedule (1)]]
+- 6 edges to [[_COMMUNITY_Validator Unit Tests]]
+- 3 edges to [[_COMMUNITY_Rate Limiting & Startup]]
+- 2 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
+- 1 edge to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
+- 1 edge to [[_COMMUNITY_CampCenter.Application  Services (2)]]
+- 1 edge to [[_COMMUNITY_tests  CampCenter.IntegrationTests (1)]]
 
 ## Top bridge nodes
-- [[GatewayNotification]] - degree 9, connects to 5 communities
-- [[.VerifyNotificationSignature()]] - degree 3, connects to 2 communities
-- [[P24SignCalculator]] - degree 5, connects to 1 community
-- [[P24SignCalculatorTests]] - degree 5, connects to 1 community
-- [[.RegisterSign()]] - degree 4, connects to 1 community
+- [[CreateScheduleEntryRequestDto]] - degree 8, connects to 3 communities
+- [[ScheduleEntryValidatorsTests]] - degree 20, connects to 2 communities
+- [[MealTimesController]] - degree 8, connects to 2 communities
+- [[IMealTimeService]] - degree 7, connects to 2 communities
+- [[.UpdateAsync()_1]] - degree 7, connects to 2 communities

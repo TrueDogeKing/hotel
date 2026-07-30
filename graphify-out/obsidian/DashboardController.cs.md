@@ -15,6 +15,7 @@ tags:
 - [[CampCenter.Api.Controllers.Admin]] - `contains` [EXTRACTED]
 - [[CampCenter.Application.DTOs.AdminPanel]] - `imports` [EXTRACTED]
 - [[CampCenter.Application.Interfaces]] - `imports` [EXTRACTED]
+- [[CampCenter.Domain.Entities]] - `imports` [EXTRACTED]
 - [[DashboardController]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Application_Namespaces__DTOs

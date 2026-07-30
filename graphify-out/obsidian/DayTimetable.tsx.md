@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/components/admin/DayTimetable.tsx"
 type: "code"
-community: "components / admin"
+community: "src / api (2)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/components_/_admin
+  - community/src_/_api_2
 ---
 
 # DayTimetable.tsx
@@ -16,7 +16,7 @@ tags:
 - [[ClashReason]] - `contains` [EXTRACTED]
 - [[DayTimetable()]] - `contains` [EXTRACTED]
 - [[PlacedChip]] - `contains` [EXTRACTED]
-- [[Props_4]] - `contains` [EXTRACTED]
+- [[Props_5]] - `contains` [EXTRACTED]
 - [[ScheduleDay]] - `imports` [EXTRACTED]
 - [[ScheduleEntry]] - `imports` [EXTRACTED]
 - [[SchedulePage.tsx]] - `imports_from` [EXTRACTED]
@@ -31,4 +31,4 @@ tags:
 - [[placesOf()]] - `contains` [EXTRACTED]
 - [[toTimeInput()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/components_/_admin
+#graphify/code #graphify/EXTRACTED #community/src_/_api_2

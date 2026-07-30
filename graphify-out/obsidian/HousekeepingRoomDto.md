@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/DTOs/AdminPanel/HousekeepingDtos.cs"
 type: "code"
-community: "CampCenter.UnitTests / Validators"
+community: "CampCenter.UnitTests / Services (2)"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Validators
+  - community/CampCenterUnitTests_/_Services_2
 ---
 
 # HousekeepingRoomDto
@@ -16,4 +16,4 @@ tags:
 - [[.SetStatusAsync()_4]] - `references` [EXTRACTED]
 - [[HousekeepingDtos.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Validators
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_2

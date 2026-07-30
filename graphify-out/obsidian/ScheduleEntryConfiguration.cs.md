@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Persistence/Configurations/ScheduleEntryConfiguration.cs"
 type: "code"
-community: "Payment"
+community: "Persistence / Configurations"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Payment
+  - community/Persistence_/_Configurations
 ---
 
 # ScheduleEntryConfiguration.cs
@@ -16,4 +16,4 @@ tags:
 - [[CampCenter.Infrastructure.Persistence.Configurations]] - `contains` [EXTRACTED]
 - [[ScheduleEntryConfiguration]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Payment
+#graphify/code #graphify/EXTRACTED #community/Persistence_/_Configurations

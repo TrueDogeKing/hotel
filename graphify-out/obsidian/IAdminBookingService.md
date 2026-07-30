@@ -17,6 +17,7 @@ tags:
 - [[.GetAssignableRoomsAsync()]] - `method` [EXTRACTED]
 - [[.GetAsync()]] - `method` [EXTRACTED]
 - [[.GetDashboardAsync()]] - `method` [EXTRACTED]
+- [[.GetGroupPageAsync()]] - `method` [EXTRACTED]
 - [[.GetOccupancyAsync()]] - `method` [EXTRACTED]
 - [[.ListAsync()]] - `method` [EXTRACTED]
 - [[.ReassignAsync()]] - `method` [EXTRACTED]

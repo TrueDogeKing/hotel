@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Repositories/BookingRepository.cs"
 type: "code"
-community: "CampCenter.UnitTests / Services (2)"
+community: "CampCenter.Domain / Repositories (1)"
 location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Services_2
+  - community/CampCenterDomain_/_Repositories_1
 ---
 
 # BookingRepository
@@ -26,6 +26,7 @@ tags:
 - [[.GetPaymentsAsync()_1]] - `method` [EXTRACTED]
 - [[.IsRoomRace()]] - `method` [EXTRACTED]
 - [[.ListAsync()_6]] - `method` [EXTRACTED]
+- [[.ListByCategoryAsync()_1]] - `method` [EXTRACTED]
 - [[.ListLiveChangingOverAsync()_1]] - `method` [EXTRACTED]
 - [[.ListLiveInRangeAsync()_1]] - `method` [EXTRACTED]
 - [[.ListLivePresentInAsync()_1]] - `method` [EXTRACTED]
@@ -38,4 +39,4 @@ tags:
 - [[BookingStatus_1]] - `references` [EXTRACTED]
 - [[IBookingRepository]] - `implements` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_2
+#graphify/code #graphify/EXTRACTED #community/CampCenterDomain_/_Repositories_1

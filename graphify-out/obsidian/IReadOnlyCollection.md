@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.UnitTests / Services (1)"
+community: "Booking Persistence & Entities (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Services_1
+  - community/Booking_Persistence__Entities_2
 ---
 
 # IReadOnlyCollection
@@ -14,4 +14,4 @@ tags:
 - [[.EffectiveSlots()]] - `references` [EXTRACTED]
 - [[.NextFreeSitting()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_1
+#graphify/code #graphify/EXTRACTED #community/Booking_Persistence__Entities_2

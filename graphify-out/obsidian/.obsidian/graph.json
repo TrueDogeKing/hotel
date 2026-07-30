@@ -435,13 +435,6 @@
       }
     },
     {
-      "query": "tag:#community/CampCenter.Domain_/_Entities",
-      "color": {
-        "a": 1,
-        "rgb": 14767961
-      }
-    },
-    {
       "query": "tag:#community/Domain_Exceptions",
       "color": {
         "a": 1,
@@ -477,13 +470,6 @@
       }
     },
     {
-      "query": "tag:#community/20260721111400_ReplaceSessionsWithClosures.Designer.cs",
-      "color": {
-        "a": 1,
-        "rgb": 10253663
-      }
-    },
-    {
       "query": "tag:#community/OpenAPI_Security_Scheme",
       "color": {
         "a": 1,
@@ -505,24 +491,10 @@
       }
     },
     {
-      "query": "tag:#community/CampCenter.UnitTests_/_Services_(5)",
+      "query": "tag:#community/PasswordRules",
       "color": {
         "a": 1,
-        "rgb": 15583560
-      }
-    },
-    {
-      "query": "tag:#community/Auth_Controller_(2)",
-      "color": {
-        "a": 1,
-        "rgb": 11565729
-      }
-    },
-    {
-      "query": "tag:#community/Przelewy24_Payment_Client",
-      "color": {
-        "a": 1,
-        "rgb": 10253663
+        "rgb": 5873999
       }
     },
     {
@@ -572,13 +544,6 @@
       "color": {
         "a": 1,
         "rgb": 15583560
-      }
-    },
-    {
-      "query": "tag:#community/DTOs_/_Schedule_(2)",
-      "color": {
-        "a": 1,
-        "rgb": 11565729
       }
     },
     {
@@ -705,13 +670,6 @@
       "color": {
         "a": 1,
         "rgb": 10253663
-      }
-    },
-    {
-      "query": "tag:#community/React_Hooks_ESLint_Plugin",
-      "color": {
-        "a": 1,
-        "rgb": 5142951
       }
     },
     {

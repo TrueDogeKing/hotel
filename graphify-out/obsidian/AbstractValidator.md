@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "DTOs / Schedule (2)"
+community: "DTOs / Schedule (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DTOs_/_Schedule_2
+  - community/DTOs_/_Schedule_1
 ---
 
 # AbstractValidator
@@ -25,4 +25,4 @@ tags:
 - [[UpdateRoomRequestValidator]] - `inherits` [EXTRACTED]
 - [[UpdateScheduleEntryRequestValidator]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DTOs_/_Schedule_2
+#graphify/code #graphify/EXTRACTED #community/DTOs_/_Schedule_1

@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Domain/Entities/BookingStatuses.cs"
 type: "code"
-community: "CampCenter.UnitTests / Services (2)"
+community: "Public Booking Service (2)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Services_2
+  - community/Public_Booking_Service_2
 ---
 
 # BookingStatuses.cs
@@ -15,4 +15,4 @@ tags:
 - [[BookingStatuses_1]] - `contains` [EXTRACTED]
 - [[CampCenter.Domain.Entities]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_2
+#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_2

@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/DTOs/Schedule/ScheduleDtos.cs"
 type: "code"
-community: "DTOs / Schedule (2)"
+community: "Camp Session Management"
 location: "L102"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DTOs_/_Schedule_2
+  - community/Camp_Session_Management
 ---
 
 # CreateScheduleEntryRequestDto
@@ -21,4 +21,4 @@ tags:
 - [[CreateScheduleEntryRequestValidator]] - `references` [EXTRACTED]
 - [[ScheduleDtos.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DTOs_/_Schedule_2
+#graphify/code #graphify/EXTRACTED #community/Camp_Session_Management

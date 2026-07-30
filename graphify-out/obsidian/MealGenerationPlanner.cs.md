@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Services/MealGenerationPlanner.cs"
 type: "code"
-community: "CampCenter.Application / Services (1)"
+community: "Domain & Infra Namespaces"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterApplication_/_Services_1
+  - community/Domain__Infra_Namespaces
 ---
 
 # MealGenerationPlanner.cs
@@ -17,4 +17,4 @@ tags:
 - [[MealGenerationPlanner]] - `contains` [EXTRACTED]
 - [[MealSlot]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_1
+#graphify/code #graphify/EXTRACTED #community/Domain__Infra_Namespaces

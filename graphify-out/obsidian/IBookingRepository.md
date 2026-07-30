@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Domain/Repositories/IBookingRepository.cs"
 type: "code"
-community: "Admin Booking & Notifications (1)"
+community: "Integration Test Harness (2)"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Booking__Notifications_1
+  - community/Integration_Test_Harness_2
 ---
 
 # IBookingRepository
@@ -25,6 +25,7 @@ tags:
 - [[.GetPaymentByP24SessionIdAsync()]] - `method` [EXTRACTED]
 - [[.GetPaymentsAsync()]] - `method` [EXTRACTED]
 - [[.ListAsync()_4]] - `method` [EXTRACTED]
+- [[.ListByCategoryAsync()]] - `method` [EXTRACTED]
 - [[.ListLiveChangingOverAsync()]] - `method` [EXTRACTED]
 - [[.ListLiveInRangeAsync()]] - `method` [EXTRACTED]
 - [[.ListLivePresentInAsync()]] - `method` [EXTRACTED]
@@ -43,4 +44,4 @@ tags:
 - [[PaymentService]] - `references` [EXTRACTED]
 - [[ScheduleService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_1
+#graphify/code #graphify/EXTRACTED #community/Integration_Test_Harness_2

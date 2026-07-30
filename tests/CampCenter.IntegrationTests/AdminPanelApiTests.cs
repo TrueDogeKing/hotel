@@ -129,6 +129,96 @@ public class AdminPanelApiTests : IntegrationTestBase
         );
     }
 
+    /// The dashboard's three folds: disjoint categories, and a page at a time so
+    /// opening one never loads the whole history.
+    [Fact]
+    public async Task DashboardGroups_SplitByCategory_AndPage()
+    {
+        var admin = await CreateAuthenticatedClientAsync();
+        var today = DateOnly.FromDateTime(DateTime.UtcNow);
+
+        // Capacity 9 is unique to this test (the room inventory is shared).
+        var roomIds = new List<Guid>();
+        for (var i = 1; i <= 4; i++)
+        {
+            var created = await admin.PostAsJsonAsync(
+                "/api/admin/rooms",
+                new CreateRoomRequestDto($"DG-{i}", 9, null)
+            );
+            roomIds.Add((await created.Content.ReadFromJsonAsync<RoomDto>())!.Id);
+        }
+
+        async Task<Guid> BookAsync(string name, DateOnly start, DateOnly end)
+        {
+            var response = await admin.PostAsJsonAsync(
+                "/api/admin/bookings",
+                new CreateAdminBookingRequestDto(
+                    start,
+                    end,
+                    name,
+                    "Ola Testowa",
+                    $"{name.ToLowerInvariant()}@example.com",
+                    "+48 500 500 503",
+                    9,
+                    null,
+                    "Confirmed",
+                    "pl"
+                )
+            );
+            Assert.Equal(HttpStatusCode.Created, response.StatusCode);
+            return (await response.Content.ReadFromJsonAsync<AdminBookingDto>())!.Id;
+        }
+
+        // Here today, arriving later, and long gone.
+        var current = await BookAsync("DG Current", today.AddDays(-2), today.AddDays(2));
+        var upcoming = await BookAsync("DG Upcoming", today.AddDays(30), today.AddDays(37));
+        var past = await BookAsync("DG Past", today.AddDays(-40), today.AddDays(-33));
+
+        async Task<BookingGroupPageDto> PageAsync(string category, int skip, int take) =>
+            (
+                await admin.GetFromJsonAsync<BookingGroupPageDto>(
+                    $"/api/admin/dashboard/groups?category={category}&skip={skip}&take={take}"
+                )
+            )!;
+
+        var currentPage = await PageAsync("Current", 0, 20);
+        Assert.Contains(currentPage.Items, b => b.Id == current);
+        Assert.DoesNotContain(currentPage.Items, b => b.Id == upcoming || b.Id == past);
+
+        var upcomingPage = await PageAsync("Upcoming", 0, 20);
+        Assert.Contains(upcomingPage.Items, b => b.Id == upcoming);
+        Assert.DoesNotContain(upcomingPage.Items, b => b.Id == current || b.Id == past);
+
+        var inactivePage = await PageAsync("Inactive", 0, 20);
+        Assert.Contains(inactivePage.Items, b => b.Id == past);
+        Assert.DoesNotContain(inactivePage.Items, b => b.Id == current || b.Id == upcoming);
+
+        // Cancelling moves a group to Inactive whatever its dates say.
+        var cancel = await admin.PostAsync($"/api/admin/bookings/{upcoming}/cancel", null);
+        Assert.Equal(HttpStatusCode.NoContent, cancel.StatusCode);
+        Assert.DoesNotContain((await PageAsync("Upcoming", 0, 20)).Items, b => b.Id == upcoming);
+        Assert.Contains((await PageAsync("Inactive", 0, 20)).Items, b => b.Id == upcoming);
+
+        // Paging: the total counts the whole category, and the pages walk it without
+        // repeating or dropping a row.
+        var firstPage = await PageAsync("Inactive", 0, 1);
+        Assert.True(firstPage.Total >= 2, $"expected at least 2 inactive, got {firstPage.Total}");
+        Assert.Single(firstPage.Items);
+
+        var seen = new List<Guid>();
+        for (var skip = 0; skip < firstPage.Total; skip++)
+        {
+            seen.AddRange((await PageAsync("Inactive", skip, 1)).Items.Select(b => b.Id));
+        }
+        Assert.Equal(firstPage.Total, seen.Count);
+        Assert.Equal(seen.Count, seen.Distinct().Count());
+        Assert.Contains(past, seen);
+        Assert.Contains(upcoming, seen);
+
+        // Past the end is an empty page, not an error — the fold stops asking there.
+        Assert.Empty((await PageAsync("Inactive", firstPage.Total, 20)).Items);
+    }
+
     /// The room-move panel offers exactly what a reassign would accept: the group's
     /// own rooms, plus rooms free for the whole stay — never a room another group
     /// holds or a closure blocks.

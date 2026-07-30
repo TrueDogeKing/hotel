@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/pages/admin/OccupancyPage.tsx"
 type: "code"
-community: "Admin Tasks & Occupancy Pages"
+community: "components / admin"
 location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Tasks__Occupancy_Pages
+  - community/components_/_admin
 ---
 
 # OccupancyPage()
@@ -17,4 +17,4 @@ tags:
 - [[getOccupancy()]] - `calls` [EXTRACTED]
 - [[todayIso()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Tasks__Occupancy_Pages
+#graphify/code #graphify/EXTRACTED #community/components_/_admin

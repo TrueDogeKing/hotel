@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Rate Limiting & Startup"
+community: "DTOs / Schedule (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Rate_Limiting__Startup
+  - community/DTOs_/_Schedule_1
 ---
 
 # string
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[ScheduleRules]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Rate_Limiting__Startup
+#graphify/code #graphify/EXTRACTED #community/DTOs_/_Schedule_1

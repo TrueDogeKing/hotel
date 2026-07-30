@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/pages/admin/TasksPage.tsx"
 type: "code"
-community: "Admin Tasks & Occupancy Pages"
+community: "components / admin"
 location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Tasks__Occupancy_Pages
+  - community/components_/_admin
 ---
 
 # TasksPage()
@@ -17,4 +17,4 @@ tags:
 - [[getTasks()]] - `calls` [EXTRACTED]
 - [[setTaskDone()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Tasks__Occupancy_Pages
+#graphify/code #graphify/EXTRACTED #community/components_/_admin

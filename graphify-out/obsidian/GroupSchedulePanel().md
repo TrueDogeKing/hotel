@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/components/admin/GroupSchedulePanel.tsx"
 type: "code"
-community: "src / api (2)"
+community: "CampCenter.Application / Services (3)"
 location: "L52"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/src_/_api_2
+  - community/CampCenterApplication_/_Services_3
 ---
 
 # GroupSchedulePanel()
@@ -19,4 +19,4 @@ tags:
 - [[overlaps()]] - `calls` [EXTRACTED]
 - [[toTimeInput()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/src_/_api_2
+#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_3

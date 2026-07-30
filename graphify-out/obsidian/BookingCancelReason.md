@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Domain/Entities/Booking.cs"
 type: "code"
-community: "CampCenter.UnitTests / Services (2)"
+community: "CampCenter.UnitTests / Validators"
 location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Services_2
+  - community/CampCenterUnitTests_/_Validators
 ---
 
 # BookingCancelReason
@@ -15,4 +15,4 @@ tags:
 - [[Booking]] - `references` [EXTRACTED]
 - [[Booking.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_2
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Validators

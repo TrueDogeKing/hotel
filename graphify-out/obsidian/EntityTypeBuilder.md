@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Validator Unit Tests"
+community: "Admin User & Token Config"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Validator_Unit_Tests
+  - community/Admin_User__Token_Config
 ---
 
 # EntityTypeBuilder
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.Configure()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Validator_Unit_Tests
+#graphify/code #graphify/EXTRACTED #community/Admin_User__Token_Config

@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/components/admin/DayTimetable.tsx"
 type: "code"
-community: "components / admin"
+community: "src / api (2)"
 location: "L116"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/components_/_admin
+  - community/src_/_api_2
 ---
 
 # buildChips()
@@ -16,4 +16,4 @@ tags:
 - [[DayTimetable.tsx]] - `contains` [EXTRACTED]
 - [[minutesOf()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/components_/_admin
+#graphify/code #graphify/EXTRACTED #community/src_/_api_2

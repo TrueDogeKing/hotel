@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Przelewy24 Payment Client"
+community: "Payment"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Przelewy24_Payment_Client
+  - community/Payment
 ---
 
 # IServiceCollection
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.AddInfrastructure()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Przelewy24_Payment_Client
+#graphify/code #graphify/EXTRACTED #community/Payment

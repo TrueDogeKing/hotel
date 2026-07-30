@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "DTOs / AdminPanel"
+community: "Persistence / Configurations"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DTOs_/_AdminPanel
+  - community/Persistence_/_Configurations
 ---
 
 # EntityTypeBuilder
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.Configure()_9]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DTOs_/_AdminPanel
+#graphify/code #graphify/EXTRACTED #community/Persistence_/_Configurations

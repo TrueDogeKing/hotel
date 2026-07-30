@@ -46,7 +46,7 @@ SORT file.name ASC
 ## Connections to other communities
 - 8 edges to [[_COMMUNITY_CampCenter.Application  Services (2)]]
 - 1 edge to [[_COMMUNITY_Booking Persistence & Entities (1)]]
-- 1 edge to [[_COMMUNITY_Domain & Infra Namespaces]]
+- 1 edge to [[_COMMUNITY_Public Booking Service (2)]]
 
 ## Top bridge nodes
 - [[ScheduleEntryRepository]] - degree 15, connects to 3 communities

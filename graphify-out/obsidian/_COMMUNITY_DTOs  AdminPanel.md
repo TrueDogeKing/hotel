@@ -1,17 +1,15 @@
 ---
 type: community
-members: 4
+members: 2
 ---
 
 # DTOs / AdminPanel
 
-**Members:** 4 nodes
+**Members:** 2 nodes
 
 ## Members
-- [[.Configure()_9]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/RoomConfiguration.cs
-- [[EntityTypeBuilder_9]] - code
-- [[RoomConfiguration]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/RoomConfiguration.cs
-- [[RoomConfiguration.cs]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/RoomConfiguration.cs
+- [[eslint-plugin-react-hooks]] - code - frontend/package.json
+- [[eslint-plugin-react-hooks_1]] - concept - frontend/package.json
 
 ## Live Query (requires Dataview plugin)
 
@@ -21,12 +19,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_Room Management]]
-- 1 edge to [[_COMMUNITY_Domain & Infra Namespaces]]
-- 1 edge to [[_COMMUNITY_Persistence  Configurations]]
-- 1 edge to [[_COMMUNITY_Validator Unit Tests]]
+- 1 edge to [[_COMMUNITY_ESLint Dev Dependencies]]
 
 ## Top bridge nodes
-- [[RoomConfiguration]] - degree 4, connects to 2 communities
-- [[RoomConfiguration.cs]] - degree 3, connects to 2 communities
-- [[.Configure()_9]] - degree 3, connects to 1 community
+- [[eslint-plugin-react-hooks]] - degree 2, connects to 1 community

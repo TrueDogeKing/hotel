@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/api/admin.ts"
 type: "code"
-community: "Payment Gateway Integration Tests (2)"
+community: "CampCenter.Application / Services (3)"
 location: "L152"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Payment_Gateway_Integration_Tests_2
+  - community/CampCenterApplication_/_Services_3
 ---
 
 # AssignableRoom
@@ -15,4 +15,4 @@ tags:
 - [[GroupRooms.tsx]] - `imports` [EXTRACTED]
 - [[admin.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Payment_Gateway_Integration_Tests_2
+#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_3

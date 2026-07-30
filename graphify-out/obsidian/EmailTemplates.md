@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Services/EmailTemplates.cs"
 type: "code"
-community: "Public Booking Service (1)"
+community: "Admin Booking & Notifications (4)"
 location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public_Booking_Service_1
+  - community/Admin_Booking__Notifications_4
 ---
 
 # EmailTemplates
@@ -21,4 +21,4 @@ tags:
 - [[.Stay()]] - `method` [EXTRACTED]
 - [[EmailTemplates.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_1
+#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_4

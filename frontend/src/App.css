@@ -1058,6 +1058,8 @@ button.link.selected .row-name,
   color: var(--text-strong);
 }
 .auth-brand .mark {
+  /* Same reason as .home-brand svg: a flex item with a width still shrinks. */
+  flex: none;
   width: 2.25rem;
   height: 2.25rem;
   border-radius: var(--r-md);
@@ -1513,9 +1515,10 @@ p[role="alert"] {
   box-shadow: var(--shadow-sm);
 }
 
-/* Below this the title costs the nav more room than it is worth; the mark alone
-   still identifies the panel. */
-@media (max-width: 60rem) {
+/* The title used to be dropped here to leave the section nav room. The nav has
+   moved to the dashboard's tiles, so the header has the room again and only the
+   narrowest screens still hide it. */
+@media (max-width: 26rem) {
   .admin-brand-text {
     display: none;
   }
@@ -1552,11 +1555,20 @@ p[role="alert"] {
   flex: 1;
 }
 
+/* A link now, not a label: with no section links in the header this is the way
+   back to the dashboard, so it has to keep the brand's look and lose the
+   underline a link would otherwise bring. */
 .admin-brand {
   flex-shrink: 0;
   gap: 0.5rem;
   font-size: 1rem;
   white-space: nowrap;
+  color: var(--text-strong);
+  text-decoration: none;
+}
+.admin-brand:hover {
+  text-decoration: none;
+  color: var(--accent);
 }
 .admin-brand .mark {
   width: 2rem;
@@ -1790,11 +1802,11 @@ p[role="alert"] {
 }
 
 .mix-status.ok {
-  color: var(--success, #16a34a);
+  color: var(--success);
 }
 
 .mix-status.bad {
-  color: var(--danger, #dc2626);
+  color: var(--danger);
 }
 
 .summary-list {
@@ -1815,7 +1827,7 @@ p[role="alert"] {
 .manage-banner {
   padding: 12px 16px;
   border-radius: 10px;
-  background: color-mix(in oklch, #16a34a 15%, transparent);
+  background: color-mix(in oklch, var(--success) 15%, transparent);
 }
 
 .status-badge {
@@ -1827,11 +1839,11 @@ p[role="alert"] {
 }
 
 .status-badge.status-confirmed {
-  background: color-mix(in oklch, #16a34a 20%, transparent);
+  background: color-mix(in oklch, var(--success) 20%, transparent);
 }
 
 .status-badge.status-cancelled {
-  background: color-mix(in oklch, #dc2626 20%, transparent);
+  background: color-mix(in oklch, var(--danger) 20%, transparent);
 }
 
 .manage-actions {
@@ -1840,6 +1852,205 @@ p[role="alert"] {
   flex-direction: column;
   gap: 10px;
   align-items: flex-start;
+}
+
+/* --- Dashboard tiles: the way into every admin section ---
+   A bento grid: two columns on a phone, four on a tablet, six on a desktop, with
+   the daily sections spanning more of it. Rows are a fixed height so tiles stay
+   square-ish however long their names are. */
+
+.tile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-rows: 9rem;
+  gap: 0.75rem;
+  margin: 1rem 0 2rem;
+}
+@media (min-width: 768px) {
+  .tile-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1100px) {
+  .tile-grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+}
+
+.tile {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.875rem;
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  background: var(--bg-float);
+  color: var(--text-strong);
+  text-decoration: none;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 4%);
+  transition:
+    border-color var(--dur-fast) var(--ease-out),
+    box-shadow var(--dur-fast) var(--ease-out),
+    transform var(--dur-fast) var(--ease-out);
+}
+.tile:hover,
+.tile:focus-visible {
+  border-color: var(--accent);
+  box-shadow: 0 6px 16px rgb(0 0 0 / 10%);
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+/* The spans that make it a bento rather than a uniform row of squares. Only from
+   the tablet breakpoint up: at two columns a wide tile would be the whole row. */
+@media (min-width: 768px) {
+  .tile-wide {
+    grid-column: span 2;
+  }
+  .tile-tall {
+    grid-row: span 2;
+  }
+  .tile-big {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+}
+
+/* Shrinks as the description slides in, the way the reference dashboard does it —
+   the tile keeps its size and the icon makes room rather than the text overflowing. */
+.tile-icon {
+  display: block;
+  width: 2.5rem;
+  height: 2.5rem;
+  color: var(--accent);
+  transition:
+    width var(--dur-fast) var(--ease-out),
+    height var(--dur-fast) var(--ease-out);
+}
+.tile-icon svg {
+  width: 100%;
+  height: 100%;
+}
+.tile-big .tile-icon {
+  width: 3.25rem;
+  height: 3.25rem;
+}
+.tile:hover .tile-icon,
+.tile:focus-visible .tile-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.tile-name {
+  font-weight: 600;
+  line-height: 1.2;
+}
+.tile-big .tile-name {
+  font-size: 1.15rem;
+}
+/* Present for screen readers at all times; slides up into view on hover or focus. */
+.tile-description {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  line-height: 1.3;
+  opacity: 0;
+  transform: translateY(0.75rem);
+  transition:
+    opacity var(--dur-fast) var(--ease-out),
+    transform var(--dur-fast) var(--ease-out);
+}
+.tile:hover .tile-description,
+.tile:focus-visible .tile-description {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* A tile is one row tall on a phone and there is no hover there, so the
+   description would only ever crowd the name. */
+@media (max-width: 767px), (hover: none) {
+  .tile {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .tile-description {
+    display: none;
+  }
+  .tile:hover .tile-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tile,
+  .tile-icon,
+  .tile-description {
+    transition: none;
+  }
+  .tile:hover,
+  .tile:focus-visible {
+    transform: none;
+  }
+}
+
+/* --- Dashboard group folds: current / upcoming / inactive --- */
+
+.group-section {
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  margin-bottom: 0.75rem;
+  background: var(--bg-float);
+}
+.group-section h2 {
+  margin: 0;
+  font-size: 1rem;
+}
+/* The whole header is the hit target, so the fold opens wherever it is clicked. */
+.group-section-toggle {
+  width: 100%;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  padding: 0.625rem 0.875rem;
+  border: 0;
+  border-radius: var(--r-md);
+  background: none;
+  color: var(--text-strong);
+  font: inherit;
+  font-weight: 600;
+  text-align: left;
+}
+.group-section-toggle:hover {
+  background: var(--bg-hover);
+  color: var(--text-strong);
+}
+.group-section-chevron {
+  width: 1rem;
+  color: var(--text-faint);
+}
+/* Sits hard right so the three counts line up down the column. */
+.group-section-count {
+  margin-left: auto;
+  padding: 0 0.5rem;
+  border-radius: 999px;
+  background: var(--bg-active);
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-variant-numeric: tabular-nums;
+}
+.group-section-body {
+  padding: 0 0.875rem 0.875rem;
+}
+.group-section-empty,
+.group-section-loading {
+  margin: 0.5rem 0;
+  color: var(--text-faint);
+  font-size: 0.875rem;
+}
+.group-section-more {
+  display: flex;
+  justify-content: center;
+  padding-top: 0.5rem;
 }
 
 /* --- Occupancy grid, tasks, dashboard (phase 4) --- */
@@ -1868,7 +2079,7 @@ p[role="alert"] {
 }
 
 .stat-card.warn {
-  border-color: #dc2626;
+  border-color: var(--danger);
 }
 
 .occupancy-layout {
@@ -1929,24 +2140,24 @@ p[role="alert"] {
 .room-cell.closed {
   background: repeating-linear-gradient(
     45deg,
-    color-mix(in oklch, #ef4444 16%, transparent),
-    color-mix(in oklch, #ef4444 16%, transparent) 6px,
+    color-mix(in oklch, var(--danger) 16%, transparent),
+    color-mix(in oklch, var(--danger) 16%, transparent) 6px,
     transparent 6px,
     transparent 12px
   );
-  border-color: color-mix(in oklch, #ef4444 55%, transparent);
+  border-color: color-mix(in oklch, var(--danger) 55%, transparent);
 }
 
 .room-cell.selected {
-  outline: 2px solid var(--accent, #3b82f6);
+  outline: 2px solid var(--accent);
 }
 
 .task-badge {
   position: absolute;
   top: -6px;
   right: -6px;
-  background: #dc2626;
-  color: white;
+  background: var(--danger);
+  color: var(--on-danger);
   border-radius: 999px;
   font-size: 0.7rem;
   min-width: 18px;
@@ -2013,7 +2224,7 @@ p[role="alert"] {
 }
 
 .admin-table tr.overdue td {
-  color: #dc2626;
+  color: var(--danger);
 }
 
 .booking-details td {
@@ -2036,7 +2247,7 @@ p[role="alert"] {
 }
 
 /* ============================================================================
-   Lakeside public landing page (PublicHomePage)
+   Public landing page (PublicHomePage)
    ============================================================================ */
 
 /* Icon-only theme switch used in the public + admin headers. */
@@ -2094,6 +2305,9 @@ p[role="alert"] {
   text-decoration: none;
 }
 .home-brand svg {
+  /* flex: none, or a narrow header squeezes the mark's width while its height
+     stays put — the drawing then letterboxes inside a squashed box. */
+  flex: none;
   width: 1.5rem;
   height: 1.5rem;
 }
@@ -2157,15 +2371,17 @@ p[role="alert"] {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  /* Low sun off the water at the top right, shallows below it, deep water at the
+     bottom — the depth gradient of the coast rather than a flat brand wash. */
   background:
-    radial-gradient(70% 55% at 78% 8%, rgba(255, 185, 86, 0.4), transparent 60%),
-    radial-gradient(120% 90% at 50% 0%, #2c8a63 0%, transparent 55%),
-    linear-gradient(165deg, #1f6b4c 0%, #005236 45%, #06301f 100%);
+    radial-gradient(70% 55% at 78% 8%, rgba(255, 185, 86, 0.42), transparent 60%),
+    radial-gradient(120% 90% at 50% 0%, #2f8fa3 0%, transparent 55%),
+    linear-gradient(165deg, #166478 0%, #0b4f60 45%, #062733 100%);
 }
 .home-hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(6, 21, 15, 0.15) 0%, rgba(6, 21, 15, 0.6) 100%);
+  background: linear-gradient(180deg, rgba(5, 18, 24, 0.15) 0%, rgba(5, 18, 24, 0.6) 100%);
 }
 .home-hero-content {
   position: relative;
@@ -2188,7 +2404,7 @@ p[role="alert"] {
   margin: 0;
 }
 .home-hero-content p {
-  color: rgba(246, 251, 238, 0.92);
+  color: rgba(238, 244, 245, 0.92);
   font-size: clamp(1.05rem, 2.2vw, 1.25rem);
   line-height: 1.6;
   max-width: 40rem;
@@ -2275,7 +2491,9 @@ p[role="alert"] {
   padding: 2rem;
   background: var(--bg-float);
   border-radius: var(--r-xl);
-  border-top: 4px solid var(--accent);
+  /* The icon and the elevation carry the card; a 4px accent stripe across a
+     rounded corner only fought the radius. */
+  border: 1px solid var(--border);
   box-shadow: var(--shadow-md);
   transition:
     transform var(--dur) var(--ease-out),
@@ -2397,7 +2615,7 @@ p[role="alert"] {
   min-height: 18rem;
   border-radius: var(--r-xl);
   background:
-    radial-gradient(60% 60% at 30% 30%, rgba(0, 99, 156, 0.18), transparent 60%), var(--bg-float);
+    radial-gradient(60% 60% at 30% 30%, rgba(0, 102, 143, 0.18), transparent 60%), var(--bg-float);
   border: 1px solid var(--border);
   box-shadow: var(--shadow-md);
   display: grid;
@@ -2679,7 +2897,7 @@ p[role="alert"] {
 /* Lightness has to flip in dark mode, so these need an explicit override. */
 :root[data-theme="dark"] .cal-bar {
   background: hsl(var(--bar-hue) 45% 62%);
-  color: #10140f;
+  color: #0d1a1e;
 }
 :root[data-theme="dark"] .cal-bar.pending {
   background: hsl(var(--bar-hue) 22% 74%);

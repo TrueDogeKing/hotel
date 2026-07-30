@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Api/Background/BookingMaintenanceService.cs"
 type: "code"
-community: "Domain & Infra Namespaces"
+community: "Public Booking Service (2)"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Domain__Infra_Namespaces
+  - community/Public_Booking_Service_2
 ---
 
 # CampCenter.Api.Background
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[BookingMaintenanceService.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Domain__Infra_Namespaces
+#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_2

@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Interfaces/IAuthService.cs"
 type: "code"
-community: "CampCenter.UnitTests / Services (5)"
+community: "Rate Limiting & Startup"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Services_5
+  - community/Rate_Limiting__Startup
 ---
 
 # IAuthService.cs
@@ -17,4 +17,4 @@ tags:
 - [[CampCenter.Application.Models]] - `imports` [EXTRACTED]
 - [[IAuthService]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_5
+#graphify/code #graphify/EXTRACTED #community/Rate_Limiting__Startup

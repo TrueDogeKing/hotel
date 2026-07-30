@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/utils/dates.ts"
 type: "code"
-community: "Frontend App Shell & i18n"
+community: "Public Booking Frontend (1)"
 location: "L67"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Frontend_App_Shell__i18n
+  - community/Public_Booking_Frontend_1
 ---
 
 # formatDate()
@@ -14,8 +14,8 @@ tags:
 ## Connections
 - [[AdminBookingsPage()]] - `calls` [EXTRACTED]
 - [[AdminBookingsPage.tsx]] - `imports` [EXTRACTED]
-- [[AdminDashboardPage()]] - `calls` [EXTRACTED]
-- [[AdminDashboardPage.tsx]] - `imports` [EXTRACTED]
+- [[BookingGroupSection()]] - `calls` [EXTRACTED]
+- [[BookingGroupSection.tsx]] - `imports` [EXTRACTED]
 - [[BookingManagePage()]] - `calls` [EXTRACTED]
 - [[BookingManagePage.tsx]] - `imports` [EXTRACTED]
 - [[BookingSchedule()]] - `calls` [EXTRACTED]
@@ -33,4 +33,4 @@ tags:
 - [[dates.ts]] - `contains` [EXTRACTED]
 - [[fromIsoDate()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Frontend_App_Shell__i18n
+#graphify/code #graphify/EXTRACTED #community/Public_Booking_Frontend_1

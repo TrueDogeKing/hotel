@@ -1,11 +1,11 @@
 ---
 type: community
-members: 19
+members: 22
 ---
 
 # Frontend App Shell & i18n
 
-**Members:** 19 nodes
+**Members:** 22 nodes
 
 ## Members
 - [[AddGroupForm()]] - code - frontend/src/components/admin/AddGroupForm.tsx
@@ -13,18 +13,21 @@ members: 19
 - [[AdminBooking]] - code - frontend/src/api/admin.ts
 - [[AdminBookingsPage()]] - code - frontend/src/pages/admin/AdminBookingsPage.tsx
 - [[AdminBookingsPage.tsx]] - code - frontend/src/pages/admin/AdminBookingsPage.tsx
-- [[AdminDashboardPage()]] - code - frontend/src/pages/admin/AdminDashboardPage.tsx
-- [[AdminDashboardPage.tsx]] - code - frontend/src/pages/admin/AdminDashboardPage.tsx
+- [[BookingGroupCategory]] - code - frontend/src/api/admin.ts
+- [[BookingGroupSection()]] - code - frontend/src/components/admin/BookingGroupSection.tsx
+- [[BookingGroupSection.tsx]] - code - frontend/src/components/admin/BookingGroupSection.tsx
 - [[BookingStatus]] - code - frontend/src/api/admin.ts
-- [[Dashboard]] - code - frontend/src/api/admin.ts
+- [[ConfirmDialog()]] - code - frontend/src/components/ConfirmDialog.tsx
+- [[ConfirmDialog.tsx]] - code - frontend/src/components/ConfirmDialog.tsx
+- [[DashboardBooking]] - code - frontend/src/api/admin.ts
+- [[Props_1]] - code - frontend/src/components/ConfirmDialog.tsx
 - [[Props_3]] - code - frontend/src/components/admin/AddGroupForm.tsx
+- [[Props_4]] - code - frontend/src/components/admin/BookingGroupSection.tsx
 - [[bookingStatuses]] - code - frontend/src/api/admin.ts
 - [[cancelAdminBooking()]] - code - frontend/src/api/admin.ts
 - [[createAdminBooking()]] - code - frontend/src/api/admin.ts
-- [[formatDate()]] - code - frontend/src/utils/dates.ts
-- [[formatZl()]] - code - frontend/src/api/admin.ts
 - [[getAdminBookings()]] - code - frontend/src/api/admin.ts
-- [[getDashboard()]] - code - frontend/src/api/admin.ts
+- [[getBookingGroupPage()]] - code - frontend/src/api/admin.ts
 - [[isoInDays()]] - code - frontend/src/components/admin/AddGroupForm.tsx
 - [[setBookingStatus()]] - code - frontend/src/api/admin.ts
 
@@ -36,19 +39,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 17 edges to [[_COMMUNITY_src  api (1)]]
-- 10 edges to [[_COMMUNITY_Public Booking Frontend (1)]]
-- 7 edges to [[_COMMUNITY_src  utils]]
+- 21 edges to [[_COMMUNITY_CampCenter.Application  Services (3)]]
+- 8 edges to [[_COMMUNITY_Public Booking Frontend (1)]]
 - 6 edges to [[_COMMUNITY_Admin Tasks & Occupancy Pages]]
-- 6 edges to [[_COMMUNITY_src  api (2)]]
-- 2 edges to [[_COMMUNITY_CampCenter.Application  Services (3)]]
-- 2 edges to [[_COMMUNITY_components  admin]]
-- 1 edge to [[_COMMUNITY_Payment Gateway Integration Tests (2)]]
-- 1 edge to [[_COMMUNITY_Frontend Auth & API Client]]
+- 2 edges to [[_COMMUNITY_src  utils]]
 
 ## Top bridge nodes
-- [[formatDate()]] - degree 20, connects to 5 communities
-- [[AdminDashboardPage.tsx]] - degree 17, connects to 5 communities
 - [[AdminBookingsPage.tsx]] - degree 15, connects to 4 communities
-- [[formatZl()]] - degree 7, connects to 2 communities
-- [[AdminBooking]] - degree 5, connects to 2 communities
+- [[BookingGroupSection.tsx]] - degree 11, connects to 4 communities
+- [[AddGroupForm.tsx]] - degree 9, connects to 2 communities
+- [[BookingStatus]] - degree 7, connects to 2 communities
+- [[ConfirmDialog.tsx]] - degree 6, connects to 2 communities

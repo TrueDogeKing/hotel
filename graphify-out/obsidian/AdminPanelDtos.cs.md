@@ -15,6 +15,7 @@ tags:
 - [[AdminAssignmentDto]] - `contains` [EXTRACTED]
 - [[AdminBookingDto]] - `contains` [EXTRACTED]
 - [[AssignableRoomDto]] - `contains` [EXTRACTED]
+- [[BookingGroupPageDto]] - `contains` [EXTRACTED]
 - [[CampCenter.Application.DTOs.AdminPanel]] - `contains` [EXTRACTED]
 - [[CreateAdminBookingRequestDto]] - `contains` [EXTRACTED]
 - [[CreateRoomTaskRequestDto]] - `contains` [EXTRACTED]

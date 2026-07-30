@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "JWT Token Service"
+community: "PasswordRules"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/JWT_Token_Service
+  - community/PasswordRules
 ---
 
 # int
 
 ## Connections
-- [[JwtTokenService]] - `references` [EXTRACTED]
+- [[PasswordRules]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/JWT_Token_Service
+#graphify/code #graphify/EXTRACTED #community/PasswordRules

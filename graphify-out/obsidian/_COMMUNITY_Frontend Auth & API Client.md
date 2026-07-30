@@ -44,13 +44,12 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 6 edges to [[_COMMUNITY_Admin Tasks & Occupancy Pages]]
-- 2 edges to [[_COMMUNITY_src  api (1)]]
+- 7 edges to [[_COMMUNITY_Admin Tasks & Occupancy Pages]]
+- 2 edges to [[_COMMUNITY_CampCenter.Application  Services (3)]]
 - 2 edges to [[_COMMUNITY_Public Booking Frontend (1)]]
-- 1 edge to [[_COMMUNITY_Frontend App Shell & i18n]]
 
 ## Top bridge nodes
-- [[AuthContext.tsx]] - degree 22, connects to 2 communities
 - [[client.ts]] - degree 13, connects to 2 communities
 - [[api]] - degree 4, connects to 2 communities
+- [[AuthContext.tsx]] - degree 22, connects to 1 community
 - [[AuthProvider()]] - degree 7, connects to 1 community

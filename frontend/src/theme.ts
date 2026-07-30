@@ -1,4 +1,4 @@
-// Light (Lakeside warm sand) is the product default; dark (charcoal) is an
+// Light (sea mist) is the product default; dark (night water) is an
 // opt-in stored per browser. The initial theme is applied by a blocking snippet
 // in index.html (no flash); this module owns runtime toggling.
 

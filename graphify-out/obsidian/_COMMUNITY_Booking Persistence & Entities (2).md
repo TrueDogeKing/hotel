@@ -1,19 +1,20 @@
 ---
 type: community
-members: 6
+members: 7
 ---
 
 # Booking Persistence & Entities (2)
 
-**Members:** 6 nodes
+**Members:** 7 nodes
 
 ## Members
-- [[.P24Status()]] - code - src/CampCenter.Api/Controllers/Public/PublicPaymentsController.cs
-- [[CancellationToken_13]] - code
-- [[HttpPost_8]] - code
-- [[IActionResult_12]] - code
-- [[ProducesResponseType_12]] - code
-- [[Task_13]] - code
+- [[.ClashesWith()]] - code - src/CampCenter.Application/Services/MealGenerationPlanner.cs
+- [[.NextFreeSitting()]] - code - src/CampCenter.Application/Services/MealGenerationPlanner.cs
+- [[End]] - code
+- [[IReadOnlyCollection]] - code
+- [[MealGenerationPlanner]] - code - src/CampCenter.Application/Services/MealGenerationPlanner.cs
+- [[Start]] - code
+- [[TimeOnly_1]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -23,9 +24,12 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
-- 1 edge to [[_COMMUNITY_Camp Session Management]]
-- 1 edge to [[_COMMUNITY_CampCenter.UnitTests  Services (3)]]
+- 4 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (1)]]
+- 1 edge to [[_COMMUNITY_Domain & Infra Namespaces]]
+- 1 edge to [[_COMMUNITY_CampCenter.Application  Services (2)]]
 
 ## Top bridge nodes
-- [[.P24Status()]] - degree 8, connects to 3 communities
+- [[MealGenerationPlanner]] - degree 5, connects to 2 communities
+- [[.NextFreeSitting()]] - degree 7, connects to 1 community
+- [[TimeOnly_1]] - degree 3, connects to 1 community
+- [[IReadOnlyCollection]] - degree 2, connects to 1 community

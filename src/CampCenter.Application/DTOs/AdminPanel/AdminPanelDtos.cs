@@ -113,6 +113,15 @@ public record DashboardBookingDto(
     string Status
 );
 
+/// One page of a dashboard group list. Total is the whole category, so the fold can
+/// show its size without having loaded a single row of it.
+public record BookingGroupPageDto(
+    string Category,
+    int Total,
+    int Skip,
+    List<DashboardBookingDto> Items
+);
+
 public record DashboardDto(
     List<DashboardBookingDto> UpcomingBookings,
     int PendingDepositCount,

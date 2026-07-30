@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.Domain / Repositories (1)"
+community: "Payment Gateway Integration Tests (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterDomain_/_Repositories_1
+  - community/Payment_Gateway_Integration_Tests_1
 ---
 
 # Task
@@ -19,4 +19,4 @@ tags:
 - [[.Webhook_AmountMismatch_IsRejected()]] - `references` [EXTRACTED]
 - [[.Webhook_BadSignature_IsRejected()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterDomain_/_Repositories_1
+#graphify/code #graphify/EXTRACTED #community/Payment_Gateway_Integration_Tests_1

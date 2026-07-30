@@ -1,21 +1,28 @@
 ---
 type: community
-members: 8
+members: 15
 ---
 
 # Payment Gateway Integration Tests (2)
 
-**Members:** 8 nodes
+**Members:** 15 nodes
 
 ## Members
-- [[AssignableRoom]] - code - frontend/src/api/admin.ts
-- [[Draft]] - code - frontend/src/components/admin/GroupRooms.tsx
-- [[GroupRooms()]] - code - frontend/src/components/admin/GroupRooms.tsx
-- [[GroupRooms.tsx]] - code - frontend/src/components/admin/GroupRooms.tsx
-- [[Props_6]] - code - frontend/src/components/admin/GroupRooms.tsx
-- [[getAdminBooking()]] - code - frontend/src/api/admin.ts
-- [[getAssignableRooms()]] - code - frontend/src/api/admin.ts
-- [[reassignBooking()]] - code - frontend/src/api/admin.ts
+- [[.ConfigureWebHost()]] - code - tests/CampCenter.IntegrationTests/CampCenterApiFactory.cs
+- [[.DisposeAsync()]] - code - tests/CampCenter.IntegrationTests/CampCenterApiFactory.cs
+- [[.InitializeAsync()]] - code - tests/CampCenter.IntegrationTests/CampCenterApiFactory.cs
+- [[.SeedAdminUserAsync()]] - code - src/CampCenter.Infrastructure/Persistence/Seed/DataSeeder.cs
+- [[.SeedMealTimeDefaultsAsync()]] - code - src/CampCenter.Infrastructure/Persistence/Seed/DataSeeder.cs
+- [[CampCenterApiFactory]] - code - tests/CampCenter.IntegrationTests/CampCenterApiFactory.cs
+- [[CancellationToken_52]] - code
+- [[DataSeeder]] - code - src/CampCenter.Infrastructure/Persistence/Seed/DataSeeder.cs
+- [[IAsyncLifetime]] - code
+- [[IServiceProvider]] - code
+- [[IWebHostBuilder]] - code
+- [[PostgreSqlContainer]] - code
+- [[Task_51]] - code
+- [[Task_65]] - code
+- [[WebApplicationFactory]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -25,13 +32,9 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_src  api (1)]]
-- 1 edge to [[_COMMUNITY_Frontend App Shell & i18n]]
-- 1 edge to [[_COMMUNITY_src  api (2)]]
+- 3 edges to [[_COMMUNITY_CampCenter.Application  Services (1)]]
+- 2 edges to [[_COMMUNITY_tests  CampCenter.IntegrationTests (1)]]
 
 ## Top bridge nodes
-- [[GroupRooms.tsx]] - degree 10, connects to 3 communities
-- [[getAdminBooking()]] - degree 3, connects to 1 community
-- [[getAssignableRooms()]] - degree 3, connects to 1 community
-- [[AssignableRoom]] - degree 2, connects to 1 community
-- [[reassignBooking()]] - degree 2, connects to 1 community
+- [[CampCenterApiFactory]] - degree 10, connects to 2 communities
+- [[DataSeeder]] - degree 3, connects to 1 community

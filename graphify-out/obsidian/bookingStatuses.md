@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[AddGroupForm.tsx]] - `imports` [EXTRACTED]
 - [[AdminBookingsPage.tsx]] - `imports` [EXTRACTED]
-- [[AdminDashboardPage.tsx]] - `imports` [EXTRACTED]
+- [[BookingGroupSection.tsx]] - `imports` [EXTRACTED]
 - [[GroupSchedulePanel.tsx]] - `imports` [EXTRACTED]
 - [[admin.ts]] - `contains` [EXTRACTED]
 

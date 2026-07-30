@@ -1,0 +1,29 @@
+---
+type: community
+members: 6
+---
+
+# PasswordRules
+
+**Members:** 6 nodes
+
+## Members
+- [[.ValidPassword()]] - code - src/CampCenter.Application/Validators/PasswordRules.cs
+- [[IRuleBuilder]] - code
+- [[IRuleBuilderOptions]] - code
+- [[PasswordRules]] - code - src/CampCenter.Application/Validators/PasswordRules.cs
+- [[PasswordRules.cs]] - code - src/CampCenter.Application/Validators/PasswordRules.cs
+- [[int_1]] - code
+
+## Live Query (requires Dataview plugin)
+
+```dataview
+TABLE source_file, type FROM #community/PasswordRules
+SORT file.name ASC
+```
+
+## Connections to other communities
+- 1 edge to [[_COMMUNITY_Rate Limiting & Startup]]
+
+## Top bridge nodes
+- [[PasswordRules.cs]] - degree 2, connects to 1 community

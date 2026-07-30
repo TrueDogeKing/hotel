@@ -1,17 +1,24 @@
 ---
 type: community
-members: 4
+members: 11
 ---
 
 # Room Task Management (2)
 
-**Members:** 4 nodes
+**Members:** 11 nodes
 
 ## Members
-- [[.Configure()_6]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/PaymentConfiguration.cs
-- [[EntityTypeBuilder_6]] - code
-- [[PaymentConfiguration]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/PaymentConfiguration.cs
-- [[PaymentConfiguration.cs]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/PaymentConfiguration.cs
+- [[HousekeepingDay]] - code - frontend/src/api/admin.ts
+- [[HousekeepingPage()]] - code - frontend/src/pages/admin/HousekeepingPage.tsx
+- [[HousekeepingPage.tsx]] - code - frontend/src/pages/admin/HousekeepingPage.tsx
+- [[HousekeepingRange]] - code - frontend/src/api/admin.ts
+- [[HousekeepingRoom]] - code - frontend/src/api/admin.ts
+- [[RoomCleaningStatus]] - code - frontend/src/api/admin.ts
+- [[getHousekeepingDay()]] - code - frontend/src/api/admin.ts
+- [[getHousekeepingRange()]] - code - frontend/src/api/admin.ts
+- [[kindOrder]] - code - frontend/src/pages/admin/HousekeepingPage.tsx
+- [[roomCleaningStatuses]] - code - frontend/src/api/admin.ts
+- [[setRoomCleaning()]] - code - frontend/src/api/admin.ts
 
 ## Live Query (requires Dataview plugin)
 
@@ -21,12 +28,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (2)]]
-- 1 edge to [[_COMMUNITY_Domain & Infra Namespaces]]
-- 1 edge to [[_COMMUNITY_Persistence  Configurations]]
-- 1 edge to [[_COMMUNITY_Validator Unit Tests]]
+- 9 edges to [[_COMMUNITY_CampCenter.Application  Services (3)]]
+- 5 edges to [[_COMMUNITY_src  utils]]
+- 2 edges to [[_COMMUNITY_Admin Tasks & Occupancy Pages]]
+- 2 edges to [[_COMMUNITY_Public Booking Frontend (1)]]
 
 ## Top bridge nodes
-- [[PaymentConfiguration]] - degree 4, connects to 2 communities
-- [[PaymentConfiguration.cs]] - degree 3, connects to 2 communities
-- [[.Configure()_6]] - degree 3, connects to 1 community
+- [[HousekeepingPage.tsx]] - degree 17, connects to 4 communities
+- [[HousekeepingPage()]] - degree 6, connects to 2 communities
+- [[getHousekeepingDay()]] - degree 3, connects to 1 community
+- [[getHousekeepingRange()]] - degree 3, connects to 1 community
+- [[RoomCleaningStatus]] - degree 2, connects to 1 community

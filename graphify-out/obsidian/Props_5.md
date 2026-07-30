@@ -1,17 +1,18 @@
 ---
-source_file: "frontend/src/components/admin/GroupMealTimes.tsx"
+source_file: "frontend/src/components/admin/DayTimetable.tsx"
 type: "code"
-community: "CampCenter.Application / Services (3)"
-location: "L40"
+community: "src / api (2)"
+location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterApplication_/_Services_3
+  - community/src_/_api_2
 ---
 
 # Props
 
 ## Connections
-- [[GroupMealTimes.tsx]] - `contains` [EXTRACTED]
+- [[DayTimetable.tsx]] - `contains` [EXTRACTED]
+- [[ScheduleDay]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_3
+#graphify/code #graphify/EXTRACTED #community/src_/_api_2

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Room Closure Management"
+community: "Public Booking Service (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Closure_Management
+  - community/Public_Booking_Service_1
 ---
 
 # HttpGet
@@ -14,4 +14,4 @@ tags:
 - [[.Closures()]] - `references` [EXTRACTED]
 - [[.Get()_3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management
+#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_1

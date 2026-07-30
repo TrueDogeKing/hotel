@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Rate Limiting & Startup"
+community: "PasswordRules"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Rate_Limiting__Startup
+  - community/PasswordRules
 ---
 
 # IRuleBuilderOptions
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.ValidPassword()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Rate_Limiting__Startup
+#graphify/code #graphify/EXTRACTED #community/PasswordRules

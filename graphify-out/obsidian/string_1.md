@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Public Booking Service (2)"
+community: "Integration Test Harness (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public_Booking_Service_2
+  - community/Integration_Test_Harness_1
 ---
 
 # string
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[RateLimitPolicies]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_2
+#graphify/code #graphify/EXTRACTED #community/Integration_Test_Harness_1

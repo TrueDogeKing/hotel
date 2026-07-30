@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import { useAuth } from "../auth/AuthContext";
 import LanguageSwitcher from "../components/LanguageSwitcher";
 import ThemeToggle from "../components/ThemeToggle";
-import { IconLandscape } from "../components/icons";
+import { IconSunSea } from "../components/icons";
 
 // Mirrors the server policy (RateLimiting:Auth:PermitLimit). Used only to warn the user
 // before the lockout; the server's 429 + Retry-After response is the authoritative source.
@@ -81,7 +81,7 @@ export default function LoginPage() {
         </div>
         <div className="auth-brand">
           <span className="mark">
-            <IconLandscape />
+            <IconSunSea />
           </span>{" "}
           CampCenter
         </div>

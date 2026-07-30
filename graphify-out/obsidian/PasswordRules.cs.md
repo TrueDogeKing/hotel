@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Validators/PasswordRules.cs"
 type: "code"
-community: "Rate Limiting & Startup"
+community: "PasswordRules"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Rate_Limiting__Startup
+  - community/PasswordRules
 ---
 
 # PasswordRules.cs
@@ -15,4 +15,4 @@ tags:
 - [[CampCenter.Application.Validators]] - `contains` [EXTRACTED]
 - [[PasswordRules]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Rate_Limiting__Startup
+#graphify/code #graphify/EXTRACTED #community/PasswordRules
