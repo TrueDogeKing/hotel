@@ -14,6 +14,7 @@ tags:
 ## Connections
 - [[.RegisterTransactionAsync()]] - `references` [EXTRACTED]
 - [[.RegisterTransactionAsync()_1]] - `references` [EXTRACTED]
+- [[.RegisterTransactionAsync()_2]] - `references` [EXTRACTED]
 - [[IPaymentGateway.cs]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Payment_Gateway_Integration_Tests_1

@@ -1,16 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.Application / Services (1)"
+community: "Public Booking Service (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterApplication_/_Services_1
+  - community/Public_Booking_Service_1
 ---
 
 # HttpPost
 
 ## Connections
-- [[.Create()_2]] - `references` [EXTRACTED]
+- [[.Cancel()_1]] - `references` [EXTRACTED]
+- [[.Create()_5]] - `references` [EXTRACTED]
+- [[.InitiatePayment()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_1
+#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_1

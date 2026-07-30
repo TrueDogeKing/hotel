@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Public Booking Service (2)"
+community: "Public Booking Service (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public_Booking_Service_2
+  - community/Public_Booking_Service_1
 ---
 
 # ILogger
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[BookingService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_2
+#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_1

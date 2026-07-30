@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Services/HousekeepingService.cs"
 type: "code"
-community: "CampCenter.Application / Services (4)"
+community: "CampCenter.UnitTests / Services (2)"
 location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterApplication_/_Services_4
+  - community/CampCenterUnitTests_/_Services_2
 ---
 
 # HousekeepingService
@@ -17,14 +17,14 @@ tags:
 - [[.GetRangeAsync()_1]] - `method` [EXTRACTED]
 - [[.KindOrder()]] - `method` [EXTRACTED]
 - [[.ParseStatus()_1]] - `method` [EXTRACTED]
-- [[.SetStatusAsync()_5]] - `method` [EXTRACTED]
+- [[.SetStatusAsync()_4]] - `method` [EXTRACTED]
 - [[HousekeepingService.cs]] - `contains` [EXTRACTED]
 - [[HousekeepingServiceTests]] - `references` [EXTRACTED]
 - [[IBookingRepository]] - `references` [EXTRACTED]
-- [[IClosureRepository_4]] - `references` [EXTRACTED]
+- [[IClosureRepository]] - `references` [EXTRACTED]
 - [[IHousekeepingService]] - `implements` [EXTRACTED]
 - [[IRoomCleaningRepository]] - `references` [EXTRACTED]
-- [[IRoomRepository_4]] - `references` [EXTRACTED]
-- [[IRoomTaskRepository_2]] - `references` [EXTRACTED]
+- [[IRoomRepository]] - `references` [EXTRACTED]
+- [[IRoomTaskRepository]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_4
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_2

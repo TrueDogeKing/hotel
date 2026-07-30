@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/DTOs/Schedule/ScheduleDtos.cs"
 type: "code"
-community: "Booking Persistence & Entities (2)"
+community: "DTOs / Schedule (1)"
 location: "L29"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Booking_Persistence__Entities_2
+  - community/DTOs_/_Schedule_1
 ---
 
 # ScheduleCalendarBookingDto
@@ -15,4 +15,4 @@ tags:
 - [[.ToCalendarDto()]] - `references` [EXTRACTED]
 - [[ScheduleDtos.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Booking_Persistence__Entities_2
+#graphify/code #graphify/EXTRACTED #community/DTOs_/_Schedule_1

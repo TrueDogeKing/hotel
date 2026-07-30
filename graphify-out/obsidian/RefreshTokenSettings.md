@@ -15,6 +15,6 @@ tags:
 - [[AuthController]] - `references` [EXTRACTED]
 - [[JwtTokenService]] - `references` [EXTRACTED]
 - [[RefreshTokenSettings.cs]] - `contains` [EXTRACTED]
-- [[string_4]] - `references` [EXTRACTED]
+- [[string_7]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/JWT_Token_Service

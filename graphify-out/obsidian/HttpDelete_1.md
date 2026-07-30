@@ -1,13 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Unlabeled (5)"
+community: "DTOs / Schedule (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Unlabeled_5
+  - community/DTOs_/_Schedule_2
 ---
 
 # HttpDelete
 
-#graphify/code #graphify/EXTRACTED #community/Unlabeled_5
+## Connections
+- [[.Delete()_1]] - `references` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/DTOs_/_Schedule_2

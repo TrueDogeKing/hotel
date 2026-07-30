@@ -1,23 +1,21 @@
 ---
 type: community
-cohesion: 0.39
 members: 8
 ---
 
 # Auth Controller (2)
 
-**Cohesion:** 0.39 - loosely connected
 **Members:** 8 nodes
 
 ## Members
 - [[.LoginAsync()]] - code - src/CampCenter.Application/Interfaces/IAuthService.cs
 - [[.LogoutAsync()]] - code - src/CampCenter.Application/Interfaces/IAuthService.cs
 - [[.RefreshAsync()]] - code - src/CampCenter.Application/Interfaces/IAuthService.cs
-- [[CancellationToken_13]] - code
+- [[CancellationToken_17]] - code
 - [[IAuthService]] - code - src/CampCenter.Application/Interfaces/IAuthService.cs
 - [[LoginRequestDto]] - code - src/CampCenter.Application/DTOs/Auth/LoginRequestDto.cs
 - [[LoginRequestDto.cs]] - code - src/CampCenter.Application/DTOs/Auth/LoginRequestDto.cs
-- [[Task_12]] - code
+- [[Task_16]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -29,8 +27,8 @@ SORT file.name ASC
 ## Connections to other communities
 - 5 edges to [[_COMMUNITY_Auth Controller (1)]]
 - 4 edges to [[_COMMUNITY_Auth Service & Tokens]]
-- 2 edges to [[_COMMUNITY_Rate Limiting & Startup]]
-- 1 edge to [[_COMMUNITY_Validator Unit Tests]]
+- 2 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (5)]]
+- 1 edge to [[_COMMUNITY_Rate Limiting & Startup]]
 
 ## Top bridge nodes
 - [[IAuthService]] - degree 6, connects to 3 communities

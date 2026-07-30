@@ -364,6 +364,36 @@ public class AdminBookingService : IAdminBookingService
         return ToDto(booking, paid.GetValueOrDefault(id) ?? []);
     }
 
+    public async Task<List<AssignableRoomDto>> GetAssignableRoomsAsync(
+        Guid id,
+        CancellationToken cancellationToken = default
+    )
+    {
+        var booking = await GetOrThrowAsync(id, cancellationToken);
+        // Excluding this booking is what makes its own rooms candidates: they are
+        // "taken" only by the group being moved, which is free to keep or leave them.
+        var blocked = await _availability.GetBlockedRoomIdsAsync(
+            booking.StartDate,
+            booking.EndDate,
+            booking.Id,
+            cancellationToken
+        );
+        var assigned = booking.RoomAssignments.Select(a => a.RoomId).ToHashSet();
+
+        return
+        [
+            .. (await _rooms.GetActiveAsync(cancellationToken))
+                .Where(room => !blocked.Contains(room.Id))
+                .OrderBy(room => room.Number)
+                .Select(room => new AssignableRoomDto(
+                    room.Id,
+                    room.Number,
+                    room.Capacity,
+                    assigned.Contains(room.Id)
+                )),
+        ];
+    }
+
     public async Task<AdminBookingDto> ReassignAsync(
         Guid id,
         ReassignBookingRequestDto request,

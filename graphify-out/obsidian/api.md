@@ -12,7 +12,9 @@ tags:
 # api
 
 ## Connections
+- [[admin.ts]] - `imports` [EXTRACTED]
 - [[auth.ts]] - `imports` [EXTRACTED]
 - [[client.ts]] - `contains` [EXTRACTED]
+- [[public.ts]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Frontend_Auth__API_Client

@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Persistence/Migrations/20260728105506_PerGroupMealTimes.Designer.cs"
 type: "code"
-community: "Persistence / Migrations (11)"
+community: "20260728105506_PerGroupMealTimes.Designer.cs"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Persistence_/_Migrations_11
+  - community/20260728105506_PerGroupMealTimesDesignercs
 ---
 
 # 20260728105506_PerGroupMealTimes.Designer.cs
@@ -16,4 +16,4 @@ tags:
 - [[CampCenter.Infrastructure.Persistence.Migrations]] - `contains` [EXTRACTED]
 - [[PerGroupMealTimes]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Persistence_/_Migrations_11
+#graphify/code #graphify/EXTRACTED #community/20260728105506_PerGroupMealTimesDesignercs

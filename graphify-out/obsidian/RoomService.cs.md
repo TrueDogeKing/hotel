@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Services/RoomService.cs"
 type: "code"
-community: "Application Namespaces & DTOs"
+community: "Domain Exceptions"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Application_Namespaces__DTOs
+  - community/Domain_Exceptions
 ---
 
 # RoomService.cs
@@ -20,4 +20,4 @@ tags:
 - [[CampCenter.Domain.Repositories]] - `imports` [EXTRACTED]
 - [[RoomService]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Application_Namespaces__DTOs
+#graphify/code #graphify/EXTRACTED #community/Domain_Exceptions

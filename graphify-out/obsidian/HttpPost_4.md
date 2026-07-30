@@ -1,18 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "Auth Controller (1)"
+community: "DTOs / Schedule (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Auth_Controller_1
+  - community/DTOs_/_Schedule_1
 ---
 
 # HttpPost
 
 ## Connections
-- [[.Login()]] - `references` [EXTRACTED]
-- [[.Logout()]] - `references` [EXTRACTED]
-- [[.Refresh()]] - `references` [EXTRACTED]
+- [[.CheckConflicts()]] - `references` [EXTRACTED]
+- [[.CreateEntry()]] - `references` [EXTRACTED]
+- [[.GenerateMeals()]] - `references` [EXTRACTED]
+- [[.GenerateMissingMeals()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Auth_Controller_1
+#graphify/code #graphify/EXTRACTED #community/DTOs_/_Schedule_1

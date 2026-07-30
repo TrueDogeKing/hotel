@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/components/admin/ScheduleEntryForm.tsx"
 type: "code"
-community: "components / admin"
+community: "src / api (2)"
 location: "L29"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/components_/_admin
+  - community/src_/_api_2
 ---
 
 # ScheduleEntryForm()
@@ -15,4 +15,4 @@ tags:
 - [[ScheduleEntryForm.tsx]] - `contains` [EXTRACTED]
 - [[toTimeInput()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/components_/_admin
+#graphify/code #graphify/EXTRACTED #community/src_/_api_2

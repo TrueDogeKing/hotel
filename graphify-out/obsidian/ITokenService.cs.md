@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Interfaces/ITokenService.cs"
 type: "code"
-community: "Rate Limiting & Startup"
+community: "CampCenter.UnitTests / Services (5)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Rate_Limiting__Startup
+  - community/CampCenterUnitTests_/_Services_5
 ---
 
 # ITokenService.cs
@@ -17,4 +17,4 @@ tags:
 - [[CampCenter.Domain.Entities]] - `imports` [EXTRACTED]
 - [[ITokenService]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Rate_Limiting__Startup
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_5

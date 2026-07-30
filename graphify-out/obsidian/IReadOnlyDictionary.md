@@ -1,20 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Room Mix Calculator Tests"
+community: "Admin Booking & Notifications (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Mix_Calculator_Tests
+  - community/Admin_Booking__Notifications_1
 ---
 
 # IReadOnlyDictionary
 
 ## Connections
 - [[.BuildAssignmentsAsync()]] - `references` [EXTRACTED]
-- [[.DistributePeople()]] - `references` [EXTRACTED]
-- [[.SuggestMix()]] - `references` [EXTRACTED]
-- [[.TotalCapacity()]] - `references` [EXTRACTED]
-- [[.ValidateMix()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Mix_Calculator_Tests
+#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_1

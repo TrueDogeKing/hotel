@@ -1,22 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "Room Management"
+community: "CampCenter.UnitTests / Services (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Management
+  - community/CampCenterUnitTests_/_Services_2
 ---
 
 # CancellationToken
 
 ## Connections
-- [[.AddAsync()_2]] - `references` [EXTRACTED]
-- [[.GetActiveAsync()]] - `references` [EXTRACTED]
-- [[.GetAllAsync()_5]] - `references` [EXTRACTED]
-- [[.GetByIdAsync()_2]] - `references` [EXTRACTED]
-- [[.GetByNumberAsync()]] - `references` [EXTRACTED]
-- [[.HasAssignmentsAsync()]] - `references` [EXTRACTED]
-- [[.SaveChangesAsync()_3]] - `references` [EXTRACTED]
+- [[.GetDayAsync()_2]] - `references` [EXTRACTED]
+- [[.GetJobsAsync()]] - `references` [EXTRACTED]
+- [[.GetRangeAsync()_1]] - `references` [EXTRACTED]
+- [[.SetStatusAsync()_4]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Management
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_2

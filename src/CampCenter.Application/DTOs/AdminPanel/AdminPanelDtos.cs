@@ -71,6 +71,11 @@ public record RoomTaskDto(
 
 public record CreateRoomTaskRequestDto(Guid RoomId, string Text, Guid? BookingId);
 
+/// A room this booking may occupy: active, and free of other bookings and closures
+/// over the whole stay. The booking's own rooms are in the list too, flagged with
+/// Assigned — moving a group is picking from this one set.
+public record AssignableRoomDto(Guid RoomId, string RoomNumber, int Capacity, bool Assigned);
+
 public record ReassignmentEntryDto(Guid RoomId, int PeopleCount);
 
 public record ReassignBookingRequestDto(List<ReassignmentEntryDto> Assignments);

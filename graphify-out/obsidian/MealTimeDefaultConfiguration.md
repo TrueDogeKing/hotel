@@ -12,7 +12,7 @@ tags:
 # MealTimeDefaultConfiguration
 
 ## Connections
-- [[.Configure()_9]] - `method` [EXTRACTED]
+- [[.Configure()_5]] - `method` [EXTRACTED]
 - [[IEntityTypeConfiguration]] - `implements` [EXTRACTED]
 - [[MealTimeDefault_1]] - `references` [EXTRACTED]
 - [[MealTimeDefaultConfiguration.cs]] - `contains` [EXTRACTED]

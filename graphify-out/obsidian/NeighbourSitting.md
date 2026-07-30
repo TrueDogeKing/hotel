@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/api/admin.ts"
 type: "code"
-community: "src / api (2)"
-location: "L620"
+community: "CampCenter.Application / Services (3)"
+location: "L653"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/src_/_api_2
+  - community/CampCenterApplication_/_Services_3
 ---
 
 # NeighbourSitting
@@ -15,4 +15,4 @@ tags:
 - [[GroupMealTimes.tsx]] - `imports` [EXTRACTED]
 - [[admin.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/src_/_api_2
+#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_3

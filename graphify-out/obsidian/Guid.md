@@ -11,8 +11,9 @@ tags:
 # Guid
 
 ## Connections
+- [[.AssignableRooms()]] - `references` [EXTRACTED]
 - [[.Cancel()]] - `references` [EXTRACTED]
-- [[.Get()_1]] - `references` [EXTRACTED]
+- [[.Get()]] - `references` [EXTRACTED]
 - [[.Reassign()]] - `references` [EXTRACTED]
 - [[.SetStatus()]] - `references` [EXTRACTED]
 - [[.UpdateDietaryNotes()]] - `references` [EXTRACTED]

@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Validators/MealTimeValidators.cs"
 type: "code"
-community: "Validator Unit Tests"
+community: "DTOs / Schedule (2)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Validator_Unit_Tests
+  - community/DTOs_/_Schedule_2
 ---
 
 # MealTimeValidators.cs
@@ -20,4 +20,4 @@ tags:
 - [[SetBookingMealTimeRequestValidator]] - `contains` [EXTRACTED]
 - [[UpdateMealTimeDefaultRequestValidator]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Validator_Unit_Tests
+#graphify/code #graphify/EXTRACTED #community/DTOs_/_Schedule_2

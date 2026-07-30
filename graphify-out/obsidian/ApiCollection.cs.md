@@ -1,12 +1,12 @@
 ---
 source_file: "tests/CampCenter.IntegrationTests/ApiCollection.cs"
 type: "code"
-community: "Integration Test Harness (2)"
+community: "tests / CampCenter.IntegrationTests (1)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Integration_Test_Harness_2
+  - community/tests_/_CampCenterIntegrationTests_1
 ---
 
 # ApiCollection.cs
@@ -17,4 +17,4 @@ tags:
 - [[CampCenter.IntegrationTests]] - `contains` [EXTRACTED]
 - [[IntegrationTestBase]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Integration_Test_Harness_2
+#graphify/code #graphify/EXTRACTED #community/tests_/_CampCenterIntegrationTests_1

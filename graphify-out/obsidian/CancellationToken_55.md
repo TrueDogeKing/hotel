@@ -1,29 +1,32 @@
 ---
 source_file: ""
 type: "code"
-community: "DTOs / Schedule (1)"
+community: "CampCenter.UnitTests / Services (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DTOs_/_Schedule_1
+  - community/CampCenterUnitTests_/_Services_2
 ---
 
 # CancellationToken
 
 ## Connections
-- [[.CheckConflictsAsync()]] - `references` [EXTRACTED]
-- [[.CreateEntryAsync()]] - `references` [EXTRACTED]
-- [[.DeleteBookingMealsAsync()]] - `references` [EXTRACTED]
-- [[.DeleteEntryAsync()]] - `references` [EXTRACTED]
-- [[.GenerateMealsForBookingAsync()]] - `references` [EXTRACTED]
-- [[.GenerateMissingMealsAsync()]] - `references` [EXTRACTED]
-- [[.GetBookingMealTimesAsync()]] - `references` [EXTRACTED]
-- [[.GetCalendarAsync()]] - `references` [EXTRACTED]
-- [[.GetDayAsync()_1]] - `references` [EXTRACTED]
-- [[.GetForBookingAsync()]] - `references` [EXTRACTED]
-- [[.GetLocationsAsync()]] - `references` [EXTRACTED]
-- [[.ResetBookingMealTimeAsync()]] - `references` [EXTRACTED]
-- [[.SetBookingMealTimeAsync()]] - `references` [EXTRACTED]
-- [[.UpdateEntryAsync()]] - `references` [EXTRACTED]
+- [[.AddAssignmentAsync()_1]] - `references` [EXTRACTED]
+- [[.AddAsync()_10]] - `references` [EXTRACTED]
+- [[.AddPaymentAsync()_1]] - `references` [EXTRACTED]
+- [[.GetBookedRoomIdsInRangeAsync()_1]] - `references` [EXTRACTED]
+- [[.GetByIdAsync()_8]] - `references` [EXTRACTED]
+- [[.GetByTokenHashAsync()_2]] - `references` [EXTRACTED]
+- [[.GetCompletedPaymentKindsAsync()_1]] - `references` [EXTRACTED]
+- [[.GetConfirmedEndedAsync()_1]] - `references` [EXTRACTED]
+- [[.GetExpiredPendingAsync()_1]] - `references` [EXTRACTED]
+- [[.GetPaymentByP24SessionIdAsync()_1]] - `references` [EXTRACTED]
+- [[.GetPaymentsAsync()_1]] - `references` [EXTRACTED]
+- [[.ListAsync()_6]] - `references` [EXTRACTED]
+- [[.ListLiveChangingOverAsync()_1]] - `references` [EXTRACTED]
+- [[.ListLiveInRangeAsync()_1]] - `references` [EXTRACTED]
+- [[.ListLivePresentInAsync()_1]] - `references` [EXTRACTED]
+- [[.ListUpcomingAsync()_1]] - `references` [EXTRACTED]
+- [[.SaveChangesAsync()_12]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DTOs_/_Schedule_1
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_2

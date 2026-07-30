@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/components/admin/GroupSchedulePanel.tsx"
 type: "code"
-community: "src / api (1)"
+community: "src / api (2)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/src_/_api_1
+  - community/src_/_api_2
 ---
 
 # GroupSchedulePanel.tsx
@@ -15,10 +15,13 @@ tags:
 - [[AdminDashboardPage.tsx]] - `imports_from` [EXTRACTED]
 - [[BookingSchedule]] - `imports` [EXTRACTED]
 - [[BookingStatus]] - `imports` [EXTRACTED]
+- [[ConfirmDialog()]] - `imports` [EXTRACTED]
+- [[ConfirmDialog.tsx]] - `imports_from` [EXTRACTED]
 - [[GroupMealTimes.tsx]] - `imports_from` [EXTRACTED]
+- [[GroupRooms.tsx]] - `imports_from` [EXTRACTED]
 - [[GroupSchedulePanel()]] - `contains` [EXTRACTED]
 - [[IconUtensils()]] - `imports` [EXTRACTED]
-- [[Props_6]] - `contains` [EXTRACTED]
+- [[Props_7]] - `contains` [EXTRACTED]
 - [[ScheduleConflict]] - `imports` [EXTRACTED]
 - [[ScheduleEntry]] - `imports` [EXTRACTED]
 - [[ScheduleEntryForm.tsx]] - `imports_from` [EXTRACTED]
@@ -41,4 +44,4 @@ tags:
 - [[updateDietaryNotes()]] - `imports` [EXTRACTED]
 - [[updateScheduleEntry()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/src_/_api_1
+#graphify/code #graphify/EXTRACTED #community/src_/_api_2

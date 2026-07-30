@@ -1,19 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.Application / Services (4)"
+community: "tests / CampCenter.IntegrationTests (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterApplication_/_Services_4
+  - community/tests_/_CampCenterIntegrationTests_1
 ---
 
 # Task
 
 ## Connections
-- [[.GetDayAsync()_2]] - `references` [EXTRACTED]
-- [[.GetJobsAsync()]] - `references` [EXTRACTED]
-- [[.GetRangeAsync()_1]] - `references` [EXTRACTED]
-- [[.SetStatusAsync()_5]] - `references` [EXTRACTED]
+- [[.AssignableRooms_OffersOwnAndFreeRooms_ButNotTakenOrClosedOnes()]] - `references` [EXTRACTED]
+- [[.Closure_BlocksRoom_InOccupancyGrid()]] - `references` [EXTRACTED]
+- [[.Occupancy_Reassign_Tasks_And_Dashboard_Work()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_4
+#graphify/code #graphify/EXTRACTED #community/tests_/_CampCenterIntegrationTests_1

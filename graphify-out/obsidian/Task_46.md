@@ -1,20 +1,22 @@
 ---
 source_file: ""
 type: "code"
-community: "Integration Test Harness (2)"
+community: "Room Management"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Integration_Test_Harness_2
+  - community/Room_Management
 ---
 
 # Task
 
 ## Connections
-- [[.Login_ExceedingRateLimit_ReturnsTooManyRequests()]] - `references` [EXTRACTED]
-- [[.Login_WithInvalidPayload_ReturnsBadRequest()]] - `references` [EXTRACTED]
-- [[.Login_WithUnknownLogin_ReturnsUnauthorized()]] - `references` [EXTRACTED]
-- [[.Login_WithValidAdminCredentials_ReturnsTokenAndSetsRefreshCookie()]] - `references` [EXTRACTED]
-- [[.Login_WithWrongPassword_ReturnsUnauthorized()]] - `references` [EXTRACTED]
+- [[.AddAsync()_6]] - `references` [EXTRACTED]
+- [[.GetActiveAsync()_1]] - `references` [EXTRACTED]
+- [[.GetAllAsync()_8]] - `references` [EXTRACTED]
+- [[.GetByIdAsync()_4]] - `references` [EXTRACTED]
+- [[.GetByNumberAsync()]] - `references` [EXTRACTED]
+- [[.HasAssignmentsAsync()]] - `references` [EXTRACTED]
+- [[.SaveChangesAsync()_7]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Integration_Test_Harness_2
+#graphify/code #graphify/EXTRACTED #community/Room_Management

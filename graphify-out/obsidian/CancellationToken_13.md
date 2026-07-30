@@ -1,18 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Auth Controller (2)"
+community: "Booking Persistence & Entities (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Auth_Controller_2
+  - community/Booking_Persistence__Entities_2
 ---
 
 # CancellationToken
 
 ## Connections
-- [[.LoginAsync()]] - `references` [EXTRACTED]
-- [[.LogoutAsync()]] - `references` [EXTRACTED]
-- [[.RefreshAsync()]] - `references` [EXTRACTED]
+- [[.P24Status()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Auth_Controller_2
+#graphify/code #graphify/EXTRACTED #community/Booking_Persistence__Entities_2

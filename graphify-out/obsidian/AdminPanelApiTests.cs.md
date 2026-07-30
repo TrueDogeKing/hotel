@@ -14,6 +14,8 @@ tags:
 ## Connections
 - [[AdminPanelApiTests]] - `contains` [EXTRACTED]
 - [[CampCenter.Application.DTOs.AdminPanel]] - `imports` [EXTRACTED]
+- [[CampCenter.Application.DTOs.Public]] - `imports` [EXTRACTED]
+- [[CampCenter.Application.DTOs.Rooms]] - `imports` [EXTRACTED]
 - [[CampCenter.IntegrationTests]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Integration_Test_Harness_1

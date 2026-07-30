@@ -1,31 +1,23 @@
 ---
 type: community
-cohesion: 0.06
-members: 56
+members: 47
 ---
 
 # src / api (1)
 
-**Cohesion:** 0.06 - loosely connected
-**Members:** 56 nodes
+**Members:** 47 nodes
 
 ## Members
-- [[AddGroupForm()]] - code - frontend/src/components/admin/AddGroupForm.tsx
-- [[AddGroupForm.tsx]] - code - frontend/src/components/admin/AddGroupForm.tsx
 - [[AdminAssignment]] - code - frontend/src/api/admin.ts
-- [[AdminBooking]] - code - frontend/src/api/admin.ts
-- [[AdminDashboardPage()]] - code - frontend/src/pages/admin/AdminDashboardPage.tsx
-- [[AdminDashboardPage.tsx]] - code - frontend/src/pages/admin/AdminDashboardPage.tsx
 - [[ApplyBookingMealTimeResult]] - code - frontend/src/api/admin.ts
-- [[BookingSchedule]] - code - frontend/src/api/admin.ts
 - [[BookingScheduleDay]] - code - frontend/src/api/admin.ts
-- [[BookingStatus]] - code - frontend/src/api/admin.ts
+- [[Closure]] - code - frontend/src/api/admin.ts
+- [[ClosureFormState]] - code - frontend/src/pages/admin/ClosuresPage.tsx
 - [[ClosureInput]] - code - frontend/src/api/admin.ts
+- [[ClosuresPage()]] - code - frontend/src/pages/admin/ClosuresPage.tsx
+- [[ClosuresPage.tsx]] - code - frontend/src/pages/admin/ClosuresPage.tsx
 - [[CreateAdminBookingInput]] - code - frontend/src/api/admin.ts
-- [[Dashboard]] - code - frontend/src/api/admin.ts
 - [[DashboardBooking]] - code - frontend/src/api/admin.ts
-- [[GroupSchedulePanel()]] - code - frontend/src/components/admin/GroupSchedulePanel.tsx
-- [[GroupSchedulePanel.tsx]] - code - frontend/src/components/admin/GroupSchedulePanel.tsx
 - [[HousekeepingDay]] - code - frontend/src/api/admin.ts
 - [[HousekeepingDaySummary]] - code - frontend/src/api/admin.ts
 - [[HousekeepingPage()]] - code - frontend/src/pages/admin/HousekeepingPage.tsx
@@ -33,38 +25,35 @@ members: 56
 - [[HousekeepingRange]] - code - frontend/src/api/admin.ts
 - [[HousekeepingRoom]] - code - frontend/src/api/admin.ts
 - [[MealTimeDefaultInput]] - code - frontend/src/api/admin.ts
-- [[Props_3]] - code - frontend/src/components/admin/AddGroupForm.tsx
-- [[Props_6]] - code - frontend/src/components/admin/GroupSchedulePanel.tsx
+- [[Room]] - code - frontend/src/api/admin.ts
 - [[RoomCleaningKind]] - code - frontend/src/api/admin.ts
 - [[RoomCleaningStatus]] - code - frontend/src/api/admin.ts
+- [[RoomFormState]] - code - frontend/src/pages/admin/RoomsPage.tsx
 - [[RoomInput]] - code - frontend/src/api/admin.ts
+- [[RoomsPage()]] - code - frontend/src/pages/admin/RoomsPage.tsx
+- [[RoomsPage.tsx]] - code - frontend/src/pages/admin/RoomsPage.tsx
 - [[ScheduleCalendarBooking]] - code - frontend/src/api/admin.ts
 - [[ScheduleCalendarDay]] - code - frontend/src/api/admin.ts
-- [[ScheduleConflict]] - code - frontend/src/api/admin.ts
 - [[ScheduleConflictReason]] - code - frontend/src/api/admin.ts
 - [[ScheduleConflicts]] - code - frontend/src/api/admin.ts
 - [[ScheduleDayGroup]] - code - frontend/src/api/admin.ts
-- [[ScheduleLocations]] - code - frontend/src/api/admin.ts
 - [[admin.ts]] - code - frontend/src/api/admin.ts
-- [[bookingStatuses]] - code - frontend/src/api/admin.ts
-- [[checkScheduleConflicts()]] - code - frontend/src/api/admin.ts
-- [[createAdminBooking()]] - code - frontend/src/api/admin.ts
-- [[createScheduleEntry()]] - code - frontend/src/api/admin.ts
-- [[deleteScheduleEntry()]] - code - frontend/src/api/admin.ts
-- [[getBookingSchedule()]] - code - frontend/src/api/admin.ts
-- [[getDashboard()]] - code - frontend/src/api/admin.ts
+- [[createClosure()]] - code - frontend/src/api/admin.ts
+- [[createRoom()]] - code - frontend/src/api/admin.ts
+- [[deleteClosure()]] - code - frontend/src/api/admin.ts
+- [[deleteRoom()]] - code - frontend/src/api/admin.ts
+- [[emptyForm]] - code - frontend/src/pages/admin/ClosuresPage.tsx
+- [[emptyForm_2]] - code - frontend/src/pages/admin/RoomsPage.tsx
+- [[getClosures()]] - code - frontend/src/api/admin.ts
 - [[getHousekeepingDay()]] - code - frontend/src/api/admin.ts
 - [[getHousekeepingRange()]] - code - frontend/src/api/admin.ts
-- [[getScheduleLocations()]] - code - frontend/src/api/admin.ts
+- [[getRooms()]] - code - frontend/src/api/admin.ts
 - [[groszeToZl()]] - code - frontend/src/api/admin.ts
-- [[isoInDays()]] - code - frontend/src/components/admin/AddGroupForm.tsx
 - [[kindOrder]] - code - frontend/src/pages/admin/HousekeepingPage.tsx
-- [[overlaps()]] - code - frontend/src/components/admin/GroupSchedulePanel.tsx
 - [[roomCleaningStatuses]] - code - frontend/src/api/admin.ts
-- [[setBookingStatus()]] - code - frontend/src/api/admin.ts
 - [[setRoomCleaning()]] - code - frontend/src/api/admin.ts
-- [[updateDietaryNotes()]] - code - frontend/src/api/admin.ts
-- [[updateScheduleEntry()]] - code - frontend/src/api/admin.ts
+- [[updateClosure()]] - code - frontend/src/api/admin.ts
+- [[updateRoom()]] - code - frontend/src/api/admin.ts
 - [[zlToGrosze()]] - code - frontend/src/api/admin.ts
 
 ## Live Query (requires Dataview plugin)
@@ -75,19 +64,19 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 16 edges to [[_COMMUNITY_Public Booking Frontend (1)]]
-- 15 edges to [[_COMMUNITY_src  utils]]
-- 11 edges to [[_COMMUNITY_Admin Frontend Pages]]
-- 11 edges to [[_COMMUNITY_components  admin]]
-- 10 edges to [[_COMMUNITY_Admin Tasks & Occupancy Pages]]
-- 10 edges to [[_COMMUNITY_Frontend App Shell & i18n]]
-- 8 edges to [[_COMMUNITY_src  api (2)]]
-- 4 edges to [[_COMMUNITY_Frontend Icon Components]]
-- 1 edge to [[_COMMUNITY_CampCenter.UnitTests  Services (2)]]
+- 23 edges to [[_COMMUNITY_src  api (2)]]
+- 17 edges to [[_COMMUNITY_Frontend App Shell & i18n]]
+- 16 edges to [[_COMMUNITY_Admin Tasks & Occupancy Pages]]
+- 10 edges to [[_COMMUNITY_src  utils]]
+- 7 edges to [[_COMMUNITY_CampCenter.Application  Services (3)]]
+- 5 edges to [[_COMMUNITY_Payment Gateway Integration Tests (2)]]
+- 2 edges to [[_COMMUNITY_components  admin]]
+- 2 edges to [[_COMMUNITY_Frontend Auth & API Client]]
+- 2 edges to [[_COMMUNITY_Public Booking Frontend (1)]]
 
 ## Top bridge nodes
-- [[admin.ts]] - degree 99, connects to 8 communities
-- [[GroupSchedulePanel.tsx]] - degree 28, connects to 5 communities
-- [[HousekeepingPage.tsx]] - degree 17, connects to 4 communities
-- [[AdminDashboardPage.tsx]] - degree 15, connects to 4 communities
-- [[GroupSchedulePanel()]] - degree 6, connects to 2 communities
+- [[admin.ts]] - degree 106, connects to 9 communities
+- [[HousekeepingPage.tsx]] - degree 17, connects to 3 communities
+- [[ClosuresPage.tsx]] - degree 15, connects to 3 communities
+- [[HousekeepingPage()]] - degree 6, connects to 2 communities
+- [[RoomsPage.tsx]] - degree 11, connects to 1 community

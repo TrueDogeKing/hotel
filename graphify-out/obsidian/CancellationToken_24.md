@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "Room Mix Calculator Tests"
+community: "Payment Gateway Integration Tests (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Mix_Calculator_Tests
+  - community/Payment_Gateway_Integration_Tests_1
 ---
 
 # CancellationToken
 
 ## Connections
-- [[.GetFreeRoomsByCapacityAsync()_1]] - `references` [EXTRACTED]
-- [[.GetPublicSessionsAsync()_1]] - `references` [EXTRACTED]
+- [[.RegisterTransactionAsync()]] - `references` [EXTRACTED]
+- [[.VerifyTransactionAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Mix_Calculator_Tests
+#graphify/code #graphify/EXTRACTED #community/Payment_Gateway_Integration_Tests_1

@@ -12,9 +12,9 @@ tags:
 # CreateRoomRequestDto
 
 ## Connections
-- [[.Create()]] - `references` [EXTRACTED]
-- [[.CreateAsync()_1]] - `references` [EXTRACTED]
+- [[.Create()_3]] - `references` [EXTRACTED]
 - [[.CreateAsync()_4]] - `references` [EXTRACTED]
+- [[.CreateAsync()_10]] - `references` [EXTRACTED]
 - [[CreateRoomRequestValidator]] - `references` [EXTRACTED]
 - [[RoomDtos.cs]] - `contains` [EXTRACTED]
 

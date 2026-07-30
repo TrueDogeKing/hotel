@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "JWT Token Service"
+community: "CampCenter.Application / Services (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/JWT_Token_Service
+  - community/CampCenterApplication_/_Services_2
 ---
 
 # string
 
 ## Connections
-- [[JwtSettings]] - `references` [EXTRACTED]
+- [[ScheduleSettings]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/JWT_Token_Service
+#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_2

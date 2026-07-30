@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Room Mix Calculator Tests"
+community: "Booking Persistence & Entities (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Mix_Calculator_Tests
+  - community/Booking_Persistence__Entities_2
 ---
 
 # Task
 
 ## Connections
-- [[.GetFreeRoomsByCapacityAsync()]] - `references` [EXTRACTED]
-- [[.GetPublicSessionsAsync()]] - `references` [EXTRACTED]
+- [[.P24Status()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Mix_Calculator_Tests
+#graphify/code #graphify/EXTRACTED #community/Booking_Persistence__Entities_2

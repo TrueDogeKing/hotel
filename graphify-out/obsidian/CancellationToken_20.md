@@ -1,19 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "Room Management"
+community: "Room Closure Management"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Management
+  - community/Room_Closure_Management
 ---
 
 # CancellationToken
 
 ## Connections
-- [[.CreateAsync()_1]] - `references` [EXTRACTED]
-- [[.DeleteAsync()_1]] - `references` [EXTRACTED]
-- [[.GetAllAsync()_1]] - `references` [EXTRACTED]
-- [[.UpdateAsync()_1]] - `references` [EXTRACTED]
+- [[.CreateAsync()_2]] - `references` [EXTRACTED]
+- [[.DeleteAsync()]] - `references` [EXTRACTED]
+- [[.GetAllAsync()]] - `references` [EXTRACTED]
+- [[.UpdateAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Management
+#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management

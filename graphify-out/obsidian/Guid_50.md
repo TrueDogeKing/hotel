@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.Domain / Repositories (2)"
+community: "Room Closure Management"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterDomain_/_Repositories_2
+  - community/Room_Closure_Management
 ---
 
 # Guid
 
 ## Connections
-- [[BookingMealTime_1]] - `references` [EXTRACTED]
+- [[.GetByIdAsync()_9]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterDomain_/_Repositories_2
+#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management

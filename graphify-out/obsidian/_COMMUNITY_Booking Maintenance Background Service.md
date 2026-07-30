@@ -1,12 +1,10 @@
 ---
 type: community
-cohesion: 0.31
 members: 9
 ---
 
 # Booking Maintenance Background Service
 
-**Cohesion:** 0.31 - loosely connected
 **Members:** 9 nodes
 
 ## Members
@@ -29,6 +27,8 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 1 edge to [[_COMMUNITY_Domain & Infra Namespaces]]
+- 1 edge to [[_COMMUNITY_Public Booking Service (1)]]
 
 ## Top bridge nodes
 - [[BookingMaintenanceService]] - degree 7, connects to 1 community
+- [[.SweepAsync()]] - degree 5, connects to 1 community

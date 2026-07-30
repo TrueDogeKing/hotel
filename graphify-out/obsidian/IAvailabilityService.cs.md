@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Interfaces/IAvailabilityService.cs"
 type: "code"
-community: "Room Mix Calculator Tests"
+community: "Integration Test Harness (1)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Mix_Calculator_Tests
+  - community/Integration_Test_Harness_1
 ---
 
 # IAvailabilityService.cs
@@ -16,4 +16,4 @@ tags:
 - [[CampCenter.Application.Interfaces]] - `contains` [EXTRACTED]
 - [[IAvailabilityService]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Mix_Calculator_Tests
+#graphify/code #graphify/EXTRACTED #community/Integration_Test_Harness_1

@@ -12,7 +12,7 @@ tags:
 # NeighbourSittingDto
 
 ## Connections
-- [[.ToDto()_6]] - `references` [EXTRACTED]
+- [[.ToDto()_5]] - `references` [EXTRACTED]
 - [[MealTimeDtos.cs]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/DTOs_/_Schedule_2

@@ -1,27 +1,27 @@
 ---
 source_file: "src/CampCenter.Application/Services/MealTimeService.cs"
 type: "code"
-community: "CampCenter.Application / Services (3)"
+community: "CampCenter.UnitTests / Services (1)"
 location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterApplication_/_Services_3
+  - community/CampCenterUnitTests_/_Services_1
 ---
 
 # MealTimeService
 
 ## Connections
-- [[.CreateAsync()_13]] - `method` [EXTRACTED]
-- [[.DeleteAsync()_9]] - `method` [EXTRACTED]
-- [[.GetAllAsync()_11]] - `method` [EXTRACTED]
-- [[.GetOrThrowAsync()_3]] - `method` [EXTRACTED]
+- [[.CreateAsync()_9]] - `method` [EXTRACTED]
+- [[.DeleteAsync()_5]] - `method` [EXTRACTED]
+- [[.GetAllAsync()_4]] - `method` [EXTRACTED]
+- [[.GetOrThrowAsync()_2]] - `method` [EXTRACTED]
 - [[.GuardTimes()]] - `method` [EXTRACTED]
 - [[.ParseMealKind()]] - `method` [EXTRACTED]
-- [[.ToDto()_5]] - `method` [EXTRACTED]
-- [[.UpdateAsync()_7]] - `method` [EXTRACTED]
+- [[.ToDto()_2]] - `method` [EXTRACTED]
+- [[.UpdateAsync()_4]] - `method` [EXTRACTED]
 - [[IMealTimeDefaultRepository]] - `references` [EXTRACTED]
 - [[IMealTimeService]] - `implements` [EXTRACTED]
 - [[MealTimeService.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_3
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_1

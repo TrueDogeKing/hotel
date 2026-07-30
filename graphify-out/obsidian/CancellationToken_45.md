@@ -1,17 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "Payment Gateway Integration Tests (2)"
+community: "Auth Service & Tokens"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Payment_Gateway_Integration_Tests_2
+  - community/Auth_Service__Tokens
 ---
 
 # CancellationToken
 
 ## Connections
-- [[.RegisterTransactionAsync()_2]] - `references` [EXTRACTED]
-- [[.VerifyTransactionAsync()_2]] - `references` [EXTRACTED]
+- [[.AddAsync()_4]] - `references` [EXTRACTED]
+- [[.GetByTokenHashAsync()_1]] - `references` [EXTRACTED]
+- [[.RevokeAllActiveForUserAsync()]] - `references` [EXTRACTED]
+- [[.SaveChangesAsync()_5]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Payment_Gateway_Integration_Tests_2
+#graphify/code #graphify/EXTRACTED #community/Auth_Service__Tokens

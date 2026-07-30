@@ -1,19 +1,21 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.UnitTests / Validators"
+community: "Room Task Management (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Validators
+  - community/Room_Task_Management_1
 ---
 
 # CancellationToken
 
 ## Connections
-- [[.Create()_3]] - `references` [EXTRACTED]
-- [[.Delete()_2]] - `references` [EXTRACTED]
-- [[.GetAll()_2]] - `references` [EXTRACTED]
-- [[.Update()_2]] - `references` [EXTRACTED]
+- [[.AddAsync()_7]] - `references` [EXTRACTED]
+- [[.CountOpenAsync()]] - `references` [EXTRACTED]
+- [[.CountOpenByRoomAsync()]] - `references` [EXTRACTED]
+- [[.GetByIdAsync()_5]] - `references` [EXTRACTED]
+- [[.ListAsync()_5]] - `references` [EXTRACTED]
+- [[.SaveChangesAsync()_8]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Validators
+#graphify/code #graphify/EXTRACTED #community/Room_Task_Management_1

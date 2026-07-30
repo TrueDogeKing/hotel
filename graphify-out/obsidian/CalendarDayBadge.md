@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[CalendarTile.tsx]] - `imports` [EXTRACTED]
 - [[MonthCalendar.tsx]] - `contains` [EXTRACTED]
-- [[Props_8]] - `references` [EXTRACTED]
+- [[Props_9]] - `references` [EXTRACTED]
 - [[SchedulePage.tsx]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/src_/_utils

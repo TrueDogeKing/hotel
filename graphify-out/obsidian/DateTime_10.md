@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Auth Service & Tokens"
+community: "Refresh Token Repository"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Auth_Service__Tokens
+  - community/Refresh_Token_Repository
 ---
 
 # DateTime
 
 ## Connections
-- [[.RevokeAllActiveForUserAsync()]] - `references` [EXTRACTED]
+- [[RefreshToken]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Auth_Service__Tokens
+#graphify/code #graphify/EXTRACTED #community/Refresh_Token_Repository

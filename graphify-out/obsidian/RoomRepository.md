@@ -12,14 +12,14 @@ tags:
 # RoomRepository
 
 ## Connections
-- [[.AddAsync()_6]] - `method` [EXTRACTED]
-- [[.GetActiveAsync()_1]] - `method` [EXTRACTED]
-- [[.GetAllAsync()_7]] - `method` [EXTRACTED]
-- [[.GetByIdAsync()_6]] - `method` [EXTRACTED]
+- [[.AddAsync()_15]] - `method` [EXTRACTED]
+- [[.GetActiveAsync()_3]] - `method` [EXTRACTED]
+- [[.GetAllAsync()_11]] - `method` [EXTRACTED]
+- [[.GetByIdAsync()_11]] - `method` [EXTRACTED]
 - [[.GetByNumberAsync()_1]] - `method` [EXTRACTED]
 - [[.HasAssignmentsAsync()_1]] - `method` [EXTRACTED]
-- [[.Remove()_4]] - `method` [EXTRACTED]
-- [[.SaveChangesAsync()_8]] - `method` [EXTRACTED]
+- [[.Remove()_9]] - `method` [EXTRACTED]
+- [[.SaveChangesAsync()_17]] - `method` [EXTRACTED]
 - [[AppDbContext]] - `references` [EXTRACTED]
 - [[IRoomRepository]] - `implements` [EXTRACTED]
 - [[RoomRepository.cs]] - `contains` [EXTRACTED]

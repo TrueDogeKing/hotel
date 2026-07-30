@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.UnitTests / Validators"
+community: "Public Booking Service (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Validators
+  - community/Public_Booking_Service_1
 ---
 
 # IValidator
 
 ## Connections
-- [[MealTimesController]] - `references` [EXTRACTED]
+- [[PublicBookingsController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Validators
+#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_1

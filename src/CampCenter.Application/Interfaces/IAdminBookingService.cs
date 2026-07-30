@@ -38,6 +38,15 @@ public interface IAdminBookingService
         CancellationToken cancellationToken = default
     );
 
+    /// The rooms this booking may occupy over its stay: its own, plus every other
+    /// active room free of bookings and closures for the whole range. Drawn from the
+    /// same availability check ReassignAsync enforces, so the panel offering a move
+    /// cannot list a room the save would then reject.
+    Task<List<AssignableRoomDto>> GetAssignableRoomsAsync(
+        Guid id,
+        CancellationToken cancellationToken = default
+    );
+
     /// Replaces the booking's room assignments. Admin override: people counts may
     /// exceed room capacity (extra beds are a housekeeping task).
     Task<AdminBookingDto> ReassignAsync(

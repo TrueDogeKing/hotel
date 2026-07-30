@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Room Task Management (2)"
+community: "Room Management"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Task_Management_2
+  - community/Room_Management
 ---
 
 # HttpDelete
 
 ## Connections
-- [[.Delete()_3]] - `references` [EXTRACTED]
+- [[.Delete()_2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Task_Management_2
+#graphify/code #graphify/EXTRACTED #community/Room_Management

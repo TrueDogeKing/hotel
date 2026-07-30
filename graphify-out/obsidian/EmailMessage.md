@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Interfaces/IEmailSender.cs"
 type: "code"
-community: "Admin Booking & Notifications (4)"
+community: "Public Booking Service (1)"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Booking__Notifications_4
+  - community/Public_Booking_Service_1
 ---
 
 # EmailMessage
@@ -17,6 +17,8 @@ tags:
 - [[.BookingCreated()]] - `references` [EXTRACTED]
 - [[.SendAsync()]] - `references` [EXTRACTED]
 - [[.SendAsync()_1]] - `references` [EXTRACTED]
+- [[.SendSafelyAsync()]] - `references` [EXTRACTED]
+- [[.SendSafelyAsync()_1]] - `references` [EXTRACTED]
 - [[IEmailSender.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_4
+#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_1

@@ -1,18 +1,21 @@
 ---
 source_file: "src/CampCenter.Domain/Entities/Payment.cs"
 type: "code"
-community: "Booking Persistence & Entities (3)"
+community: "CampCenter.UnitTests / Services (2)"
 location: "L3"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Booking_Persistence__Entities_3
+  - community/CampCenterUnitTests_/_Services_2
 ---
 
 # PaymentKind
 
 ## Connections
+- [[.GetCompletedPaymentKindsAsync()]] - `references` [EXTRACTED]
+- [[.GetCompletedPaymentKindsAsync()_1]] - `references` [EXTRACTED]
+- [[.ToDto()]] - `references` [EXTRACTED]
 - [[Payment]] - `references` [EXTRACTED]
 - [[Payment.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Booking_Persistence__Entities_3
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_2

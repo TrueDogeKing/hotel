@@ -1,21 +1,25 @@
 ---
 source_file: "src/CampCenter.Api/Program.cs"
 type: "code"
-community: "tests / CampCenter.IntegrationTests (2)"
+community: "Public Booking Service (2)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/tests_/_CampCenterIntegrationTests_2
+  - community/Public_Booking_Service_2
 ---
 
 # Program.cs
 
 ## Connections
+- [[CampCenter.Api.Errors]] - `imports` [EXTRACTED]
+- [[CampCenter.Api.OpenApi]] - `imports` [EXTRACTED]
+- [[CampCenter.Api.RateLimiting]] - `imports` [EXTRACTED]
 - [[CampCenter.Application]] - `imports` [EXTRACTED]
 - [[CampCenter.Infrastructure]] - `imports` [EXTRACTED]
+- [[CampCenter.Infrastructure.Auth]] - `imports` [EXTRACTED]
 - [[CampCenter.Infrastructure.Persistence]] - `imports` [EXTRACTED]
 - [[CampCenter.Infrastructure.Persistence.Seed]] - `imports` [EXTRACTED]
 - [[Program]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/tests_/_CampCenterIntegrationTests_2
+#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_2

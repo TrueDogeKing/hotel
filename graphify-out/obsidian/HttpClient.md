@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Payment Gateway Integration Tests (1)"
+community: "Admin Booking & Notifications (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Payment_Gateway_Integration_Tests_1
+  - community/Admin_Booking__Notifications_2
 ---
 
 # HttpClient
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Przelewy24Client]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Payment_Gateway_Integration_Tests_1
+#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_2

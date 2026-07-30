@@ -1,22 +1,26 @@
 ---
 source_file: ""
 type: "code"
-community: "Payment Gateway Integration Tests (2)"
+community: "CampCenter.Application / Services (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Payment_Gateway_Integration_Tests_2
+  - community/CampCenterApplication_/_Services_2
 ---
 
 # Task
 
 ## Connections
-- [[.CreateBookingWithDepositAsync()]] - `references` [EXTRACTED]
-- [[.DepositWebhook_ConfirmsBooking_AndIsIdempotent()]] - `references` [EXTRACTED]
-- [[.DepositWebhook_GeneratesTheGroupsMeals()]] - `references` [EXTRACTED]
-- [[.RegisterTransactionAsync()_2]] - `references` [EXTRACTED]
-- [[.VerifyTransactionAsync()_2]] - `references` [EXTRACTED]
-- [[.Webhook_AmountMismatch_IsRejected()]] - `references` [EXTRACTED]
-- [[.Webhook_BadSignature_IsRejected()]] - `references` [EXTRACTED]
+- [[.AddAsync()_8]] - `references` [EXTRACTED]
+- [[.AddRangeAsync()]] - `references` [EXTRACTED]
+- [[.CountByDateAndKindAsync()]] - `references` [EXTRACTED]
+- [[.GetByIdAsync()_6]] - `references` [EXTRACTED]
+- [[.ListForBookingAsync()_1]] - `references` [EXTRACTED]
+- [[.ListForDateAsync()_1]] - `references` [EXTRACTED]
+- [[.ListFullySuppressedSlotsAsync()]] - `references` [EXTRACTED]
+- [[.ListGeneratedSlotsAsync()]] - `references` [EXTRACTED]
+- [[.ListLocationsAsync()]] - `references` [EXTRACTED]
+- [[.ListVisibleSlotSpansAsync()]] - `references` [EXTRACTED]
+- [[.SaveChangesAsync()_9]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Payment_Gateway_Integration_Tests_2
+#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_2

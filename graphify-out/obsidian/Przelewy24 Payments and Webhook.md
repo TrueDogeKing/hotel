@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Guest Booking Flow]] - `conceptually_related_to` [EXTRACTED]
-- [[P24 Go-Live Checklist]] - `references` [EXTRACTED]
+- [[P24 go-live checklist]] - `references` [EXTRACTED]
 - [[Security Requirements]] - `conceptually_related_to` [EXTRACTED]
 - [[campcenter-api (prod service)]] - `references` [INFERRED]
 

@@ -1,12 +1,10 @@
 ---
 type: community
-cohesion: 0.42
 members: 20
 ---
 
 # CampCenter.UnitTests / Services (4)
 
-**Cohesion:** 0.42 - moderately connected
 **Members:** 20 nodes
 
 ## Members
@@ -25,11 +23,11 @@ members: 20
 - [[.Late_evening_sittings_do_not_wrap_past_midnight()]] - code - tests/CampCenter.UnitTests/Services/ScheduleConflictTests.cs
 - [[.Matches_places_case_insensitively()]] - code - tests/CampCenter.UnitTests/Services/ScheduleConflictTests.cs
 - [[.Reports_the_place_rather_than_the_meal_when_both_hold()]] - code - tests/CampCenter.UnitTests/Services/ScheduleConflictTests.cs
-- [[DateOnly_34]] - code
-- [[Fact_14]] - code
-- [[Guid_65]] - code
+- [[DateOnly_35]] - code
+- [[Fact_11]] - code
+- [[Guid_60]] - code
 - [[ScheduleConflictTests]] - code - tests/CampCenter.UnitTests/Services/ScheduleConflictTests.cs
-- [[Task_76]] - code
+- [[Task_71]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -39,13 +37,12 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_CampCenter.Domain  Repositories (1)]]
-- 2 edges to [[_COMMUNITY_CampCenter.Application  Services (2)]]
+- 7 edges to [[_COMMUNITY_CampCenter.Application  Services (2)]]
 - 1 edge to [[_COMMUNITY_DTOs  Schedule (1)]]
-- 1 edge to [[_COMMUNITY_CampCenter.UnitTests  Services (5)]]
+- 1 edge to [[_COMMUNITY_CampCenter.Application  Services (1)]]
 
 ## Top bridge nodes
-- [[ScheduleConflictTests]] - degree 20, connects to 3 communities
-- [[.CheckAsync()]] - degree 18, connects to 3 communities
+- [[ScheduleConflictTests]] - degree 20, connects to 2 communities
+- [[.CheckAsync()]] - degree 18, connects to 2 communities
 - [[.Entry()]] - degree 16, connects to 1 community
 - [[.DayHas()]] - degree 14, connects to 1 community

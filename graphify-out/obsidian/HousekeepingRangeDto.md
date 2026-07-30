@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/DTOs/AdminPanel/HousekeepingDtos.cs"
 type: "code"
-community: "DTOs / AdminPanel"
+community: "CampCenter.UnitTests / Validators"
 location: "L50"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DTOs_/_AdminPanel
+  - community/CampCenterUnitTests_/_Validators
 ---
 
 # HousekeepingRangeDto
@@ -16,4 +16,4 @@ tags:
 - [[.GetRangeAsync()_1]] - `references` [EXTRACTED]
 - [[HousekeepingDtos.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DTOs_/_AdminPanel
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Validators

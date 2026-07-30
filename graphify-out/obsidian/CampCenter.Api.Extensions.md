@@ -1,17 +1,19 @@
 ---
 source_file: "src/CampCenter.Api/Extensions/ClaimsPrincipalExtensions.cs"
 type: "code"
-community: "Claims Principal Extensions"
+community: "Application Namespaces & DTOs"
 location: "L4"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Claims_Principal_Extensions
+  - community/Application_Namespaces__DTOs
 ---
 
 # CampCenter.Api.Extensions
 
 ## Connections
 - [[ClaimsPrincipalExtensions.cs]] - `contains` [EXTRACTED]
+- [[HousekeepingController.cs]] - `imports` [EXTRACTED]
+- [[TasksController.cs]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Claims_Principal_Extensions
+#graphify/code #graphify/EXTRACTED #community/Application_Namespaces__DTOs

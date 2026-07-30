@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.Application / Services (1)"
+community: "Auth Service & Tokens"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterApplication_/_Services_1
+  - community/Auth_Service__Tokens
 ---
 
 # Guid
 
 ## Connections
-- [[.DeleteAsync()_6]] - `references` [EXTRACTED]
-- [[.UpdateAsync()_4]] - `references` [EXTRACTED]
+- [[.RevokeAllActiveForUserAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_1
+#graphify/code #graphify/EXTRACTED #community/Auth_Service__Tokens

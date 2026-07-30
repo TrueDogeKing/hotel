@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Refresh Token Repository"
+community: "Room Task Management (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Refresh_Token_Repository
+  - community/Room_Task_Management_1
 ---
 
 # DateTime
 
 ## Connections
-- [[.RevokeAllActiveForUserAsync()_1]] - `references` [EXTRACTED]
+- [[RoomTask_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Refresh_Token_Repository
+#graphify/code #graphify/EXTRACTED #community/Room_Task_Management_1

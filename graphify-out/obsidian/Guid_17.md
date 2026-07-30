@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Admin User & Token Config"
+community: "Auth Service & Tokens"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_User__Token_Config
+  - community/Auth_Service__Tokens
 ---
 
 # Guid
 
 ## Connections
-- [[AdminUser]] - `references` [EXTRACTED]
+- [[.CreateTokenEntity()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_User__Token_Config
+#graphify/code #graphify/EXTRACTED #community/Auth_Service__Tokens

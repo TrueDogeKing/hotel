@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "JWT Token Service"
+community: "DTOs / Schedule (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/JWT_Token_Service
+  - community/DTOs_/_Schedule_2
 ---
 
 # string
 
 ## Connections
-- [[RefreshTokenSettings]] - `references` [EXTRACTED]
+- [[MealTimeRules]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/JWT_Token_Service
+#graphify/code #graphify/EXTRACTED #community/DTOs_/_Schedule_2

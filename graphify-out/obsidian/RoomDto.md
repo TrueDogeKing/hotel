@@ -12,13 +12,13 @@ tags:
 # RoomDto
 
 ## Connections
-- [[.CreateAsync()_1]] - `references` [EXTRACTED]
 - [[.CreateAsync()_4]] - `references` [EXTRACTED]
-- [[.GetAllAsync()_1]] - `references` [EXTRACTED]
-- [[.GetAllAsync()_3]] - `references` [EXTRACTED]
-- [[.ToDto()_1]] - `references` [EXTRACTED]
-- [[.UpdateAsync()_1]] - `references` [EXTRACTED]
-- [[.UpdateAsync()_3]] - `references` [EXTRACTED]
+- [[.CreateAsync()_10]] - `references` [EXTRACTED]
+- [[.GetAllAsync()_2]] - `references` [EXTRACTED]
+- [[.GetAllAsync()_5]] - `references` [EXTRACTED]
+- [[.ToDto()_3]] - `references` [EXTRACTED]
+- [[.UpdateAsync()_2]] - `references` [EXTRACTED]
+- [[.UpdateAsync()_5]] - `references` [EXTRACTED]
 - [[RoomDtos.cs]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Room_Management

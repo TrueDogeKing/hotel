@@ -1,12 +1,10 @@
 ---
 type: community
-cohesion: 0.14
 members: 34
 ---
 
 # src / utils
 
-**Cohesion:** 0.14 - loosely connected
 **Members:** 34 nodes
 
 ## Members
@@ -17,8 +15,8 @@ members: 34
 - [[LaneEvent]] - code - frontend/src/components/calendar/lanes.ts
 - [[MonthCalendar()]] - code - frontend/src/components/calendar/MonthCalendar.tsx
 - [[MonthCalendar.tsx]] - code - frontend/src/components/calendar/MonthCalendar.tsx
-- [[Props_8]] - code - frontend/src/components/calendar/CalendarTile.tsx
-- [[Props_9]] - code - frontend/src/components/calendar/MonthCalendar.tsx
+- [[Props_9]] - code - frontend/src/components/calendar/CalendarTile.tsx
+- [[Props_10]] - code - frontend/src/components/calendar/MonthCalendar.tsx
 - [[ScheduleCalendar]] - code - frontend/src/api/admin.ts
 - [[SchedulePage()]] - code - frontend/src/pages/admin/SchedulePage.tsx
 - [[SchedulePage.tsx]] - code - frontend/src/pages/admin/SchedulePage.tsx
@@ -53,18 +51,17 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 15 edges to [[_COMMUNITY_src  api (1)]]
-- 7 edges to [[_COMMUNITY_components  admin]]
-- 5 edges to [[_COMMUNITY_Public Booking Frontend (1)]]
-- 5 edges to [[_COMMUNITY_Admin Tasks & Occupancy Pages]]
-- 2 edges to [[_COMMUNITY_Frontend App Shell & i18n]]
-- 2 edges to [[_COMMUNITY_src  api (2)]]
-- 1 edge to [[_COMMUNITY_Frontend Icon Components]]
-- 1 edge to [[_COMMUNITY_Admin Frontend Pages]]
+- 10 edges to [[_COMMUNITY_src  api (1)]]
+- 7 edges to [[_COMMUNITY_Admin Tasks & Occupancy Pages]]
+- 7 edges to [[_COMMUNITY_src  api (2)]]
+- 7 edges to [[_COMMUNITY_Frontend App Shell & i18n]]
+- 3 edges to [[_COMMUNITY_components  admin]]
+- 3 edges to [[_COMMUNITY_Public Booking Frontend (1)]]
+- 1 edge to [[_COMMUNITY_CampCenter.Application  Services (3)]]
 
 ## Top bridge nodes
 - [[dates.ts]] - degree 33, connects to 7 communities
-- [[SchedulePage.tsx]] - degree 19, connects to 4 communities
+- [[SchedulePage.tsx]] - degree 21, connects to 4 communities
 - [[todayIso()]] - degree 10, connects to 2 communities
-- [[addDaysIso()]] - degree 7, connects to 2 communities
-- [[fromIsoDate()]] - degree 5, connects to 1 community
+- [[addDaysIso()]] - degree 8, connects to 2 communities
+- [[fromIsoDate()]] - degree 6, connects to 1 community

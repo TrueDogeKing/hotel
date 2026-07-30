@@ -1,18 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Room Closure Management"
+community: "Room Management"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Closure_Management
+  - community/Room_Management
 ---
 
 # List
 
 ## Connections
-- [[.GetAllAsync()_4]] - `references` [EXTRACTED]
-- [[.GetOverlappingAsync()]] - `references` [EXTRACTED]
-- [[.GetUpcomingCenterWideAsync()]] - `references` [EXTRACTED]
+- [[.GetAllAsync()_5]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management
+#graphify/code #graphify/EXTRACTED #community/Room_Management

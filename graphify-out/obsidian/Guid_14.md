@@ -1,20 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "Camp Session Management"
+community: "Room Task Management (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Camp_Session_Management
+  - community/Room_Task_Management_1
 ---
 
 # Guid
 
 ## Connections
-- [[.ArchiveAsync()_1]] - `references` [EXTRACTED]
+- [[.CreateAsync()_5]] - `references` [EXTRACTED]
 - [[.DeleteAsync()_3]] - `references` [EXTRACTED]
-- [[.GetOrThrowAsync()]] - `references` [EXTRACTED]
-- [[.PublishAsync()_1]] - `references` [EXTRACTED]
-- [[.UpdateAsync()_2]] - `references` [EXTRACTED]
+- [[.ListAsync()_1]] - `references` [EXTRACTED]
+- [[.SetStatusAsync()_2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Camp_Session_Management
+#graphify/code #graphify/EXTRACTED #community/Room_Task_Management_1

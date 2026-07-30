@@ -11,9 +11,10 @@ tags:
 # IActionResult
 
 ## Connections
+- [[.AssignableRooms()]] - `references` [EXTRACTED]
 - [[.Cancel()]] - `references` [EXTRACTED]
-- [[.Create()_1]] - `references` [EXTRACTED]
-- [[.Get()_1]] - `references` [EXTRACTED]
+- [[.Create()]] - `references` [EXTRACTED]
+- [[.Get()]] - `references` [EXTRACTED]
 - [[.List()]] - `references` [EXTRACTED]
 - [[.Reassign()]] - `references` [EXTRACTED]
 - [[.SetStatus()]] - `references` [EXTRACTED]

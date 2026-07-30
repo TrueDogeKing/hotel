@@ -1,17 +1,15 @@
 ---
 type: community
-cohesion: 1.00
 members: 2
 ---
 
 # React Hooks ESLint Plugin
 
-**Cohesion:** 1.00 - tightly connected
 **Members:** 2 nodes
 
 ## Members
-- [[eslint-plugin-react-hooks_1]] - concept - frontend/package.json
 - [[eslint-plugin-react-hooks]] - code - frontend/package.json
+- [[eslint-plugin-react-hooks_1]] - concept - frontend/package.json
 
 ## Live Query (requires Dataview plugin)
 

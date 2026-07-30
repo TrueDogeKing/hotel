@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Auth Service & Tokens"
+community: "Admin Booking & Notifications (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Auth_Service__Tokens
+  - community/Admin_Booking__Notifications_1
 ---
 
 # Guid
 
 ## Connections
-- [[.RevokeAllActiveForUserAsync()]] - `references` [EXTRACTED]
+- [[BookingRoomAssignment]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Auth_Service__Tokens
+#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_1

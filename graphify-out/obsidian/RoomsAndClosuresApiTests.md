@@ -1,12 +1,12 @@
 ---
 source_file: "tests/CampCenter.IntegrationTests/RoomsAndClosuresApiTests.cs"
 type: "code"
-community: "Integration Test Harness (1)"
+community: "tests / CampCenter.IntegrationTests (1)"
 location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Integration_Test_Harness_1
+  - community/tests_/_CampCenterIntegrationTests_1
 ---
 
 # RoomsAndClosuresApiTests
@@ -15,7 +15,7 @@ tags:
 - [[.AdminEndpoints_WithoutToken_ReturnUnauthorized()]] - `method` [EXTRACTED]
 - [[.Closures_CrudRoundtrip_Works()]] - `method` [EXTRACTED]
 - [[.Rooms_CrudRoundtrip_Works()]] - `method` [EXTRACTED]
-- [[IntegrationTestBase_1]] - `inherits` [EXTRACTED]
+- [[IntegrationTestBase]] - `inherits` [EXTRACTED]
 - [[RoomsAndClosuresApiTests.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Integration_Test_Harness_1
+#graphify/code #graphify/EXTRACTED #community/tests_/_CampCenterIntegrationTests_1

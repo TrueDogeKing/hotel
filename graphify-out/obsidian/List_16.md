@@ -1,16 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "Room Task Management (1)"
+community: "CampCenter.Application / Services (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Task_Management_1
+  - community/CampCenterApplication_/_Services_2
 ---
 
 # List
 
 ## Connections
-- [[.ListAsync()_2]] - `references` [EXTRACTED]
+- [[.GetBookingMealTimesAsync()_1]] - `references` [EXTRACTED]
+- [[.ToDto()_5]] - `references` [EXTRACTED]
+- [[.ToPublicDto()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Task_Management_1
+#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_2

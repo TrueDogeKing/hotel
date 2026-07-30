@@ -1,21 +1,21 @@
 ---
 source_file: ""
 type: "code"
-community: "Room Task Management (1)"
+community: "CampCenter.UnitTests / Services (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Task_Management_1
+  - community/CampCenterUnitTests_/_Services_1
 ---
 
 # Task
 
 ## Connections
-- [[.AddAsync()_7]] - `references` [EXTRACTED]
-- [[.CountOpenAsync()_1]] - `references` [EXTRACTED]
-- [[.CountOpenByRoomAsync()_1]] - `references` [EXTRACTED]
-- [[.GetByIdAsync()_7]] - `references` [EXTRACTED]
-- [[.ListAsync()_3]] - `references` [EXTRACTED]
-- [[.SaveChangesAsync()_9]] - `references` [EXTRACTED]
+- [[.AddAsync()_3]] - `references` [EXTRACTED]
+- [[.GetActiveAsync()]] - `references` [EXTRACTED]
+- [[.GetAllAsync()_7]] - `references` [EXTRACTED]
+- [[.GetByIdAsync()_3]] - `references` [EXTRACTED]
+- [[.IsReferencedAsync()]] - `references` [EXTRACTED]
+- [[.SaveChangesAsync()_4]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Task_Management_1
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_1

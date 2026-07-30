@@ -1,20 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.Application / Services (3)"
+community: "Refresh Token Repository"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterApplication_/_Services_3
+  - community/Refresh_Token_Repository
 ---
 
 # CancellationToken
 
 ## Connections
-- [[.CreateAsync()_13]] - `references` [EXTRACTED]
-- [[.DeleteAsync()_9]] - `references` [EXTRACTED]
-- [[.GetAllAsync()_11]] - `references` [EXTRACTED]
-- [[.GetOrThrowAsync()_3]] - `references` [EXTRACTED]
-- [[.UpdateAsync()_7]] - `references` [EXTRACTED]
+- [[.AddAsync()_13]] - `references` [EXTRACTED]
+- [[.GetByTokenHashAsync()_3]] - `references` [EXTRACTED]
+- [[.RevokeAllActiveForUserAsync()_1]] - `references` [EXTRACTED]
+- [[.SaveChangesAsync()_15]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_3
+#graphify/code #graphify/EXTRACTED #community/Refresh_Token_Repository

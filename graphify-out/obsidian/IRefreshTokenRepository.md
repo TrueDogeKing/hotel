@@ -12,10 +12,10 @@ tags:
 # IRefreshTokenRepository
 
 ## Connections
-- [[.AddAsync()_1]] - `method` [EXTRACTED]
-- [[.GetByTokenHashAsync()]] - `method` [EXTRACTED]
+- [[.AddAsync()_4]] - `method` [EXTRACTED]
+- [[.GetByTokenHashAsync()_1]] - `method` [EXTRACTED]
 - [[.RevokeAllActiveForUserAsync()]] - `method` [EXTRACTED]
-- [[.SaveChangesAsync()_2]] - `method` [EXTRACTED]
+- [[.SaveChangesAsync()_5]] - `method` [EXTRACTED]
 - [[AuthService]] - `references` [EXTRACTED]
 - [[IRefreshTokenRepository.cs]] - `contains` [EXTRACTED]
 - [[RefreshTokenRepository]] - `implements` [EXTRACTED]

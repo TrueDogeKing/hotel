@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "DTOs / AdminPanel"
+community: "CampCenter.UnitTests / Services (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DTOs_/_AdminPanel
+  - community/CampCenterUnitTests_/_Services_2
 ---
 
 # Guid
 
 ## Connections
-- [[.SetStatusAsync()_3]] - `references` [EXTRACTED]
+- [[.GetAsync()_3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DTOs_/_AdminPanel
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_2

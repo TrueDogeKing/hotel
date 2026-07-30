@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Domain/Entities/Booking.cs"
 type: "code"
-community: "Booking Persistence & Entities (2)"
+community: "CampCenter.UnitTests / Services (2)"
 location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Booking_Persistence__Entities_2
+  - community/CampCenterUnitTests_/_Services_2
 ---
 
 # Booking
@@ -18,8 +18,8 @@ tags:
 - [[.A_room_occupied_through_the_day_is_left_alone()]] - `calls` [EXTRACTED]
 - [[.A_room_taken_today_by_a_group_is_an_arrival()]] - `calls` [EXTRACTED]
 - [[.A_turnaround_carries_both_groups_and_both_bed_counts()]] - `calls` [EXTRACTED]
-- [[.AddAsync()_9]] - `references` [EXTRACTED]
-- [[.AddAsync()_14]] - `references` [EXTRACTED]
+- [[.AddAsync()_1]] - `references` [EXTRACTED]
+- [[.AddAsync()_10]] - `references` [EXTRACTED]
 - [[.ApplyCancellationAsync()]] - `references` [EXTRACTED]
 - [[.AssignMealTimesAsync()]] - `references` [EXTRACTED]
 - [[.AssignRooms()]] - `references` [EXTRACTED]
@@ -29,7 +29,7 @@ tags:
 - [[.BookingConfirmed()]] - `references` [EXTRACTED]
 - [[.BookingCreated()]] - `references` [EXTRACTED]
 - [[.BuildAssignmentsAsync()]] - `references` [EXTRACTED]
-- [[.Configure()_7]] - `references` [EXTRACTED]
+- [[.Configure()_1]] - `references` [EXTRACTED]
 - [[.Departures_and_unrelated_arrivals_on_one_day_are_separate_jobs()]] - `calls` [EXTRACTED]
 - [[.Detach()]] - `references` [EXTRACTED]
 - [[.Detach()_1]] - `references` [EXTRACTED]
@@ -39,19 +39,19 @@ tags:
 - [[.FindByTokenAsync()]] - `references` [EXTRACTED]
 - [[.ForDay()]] - `references` [EXTRACTED]
 - [[.GetBookingOrThrowAsync()]] - `references` [EXTRACTED]
+- [[.GetByIdAsync()_1]] - `references` [EXTRACTED]
 - [[.GetByIdAsync()_8]] - `references` [EXTRACTED]
-- [[.GetByIdAsync()_11]] - `references` [EXTRACTED]
+- [[.GetByTokenHashAsync()]] - `references` [EXTRACTED]
 - [[.GetByTokenHashAsync()_2]] - `references` [EXTRACTED]
-- [[.GetByTokenHashAsync()_3]] - `references` [EXTRACTED]
 - [[.GetConfirmedEndedAsync()]] - `references` [EXTRACTED]
 - [[.GetConfirmedEndedAsync()_1]] - `references` [EXTRACTED]
 - [[.GetExpiredPendingAsync()]] - `references` [EXTRACTED]
 - [[.GetExpiredPendingAsync()_1]] - `references` [EXTRACTED]
-- [[.GetOrThrowAsync()_1]] - `references` [EXTRACTED]
+- [[.GetOrThrowAsync()]] - `references` [EXTRACTED]
 - [[.GuardBookingIsLive()]] - `references` [EXTRACTED]
 - [[.GuardDateWithinStay()]] - `references` [EXTRACTED]
+- [[.ListAsync()_4]] - `references` [EXTRACTED]
 - [[.ListAsync()_6]] - `references` [EXTRACTED]
-- [[.ListAsync()_7]] - `references` [EXTRACTED]
 - [[.ListLiveChangingOverAsync()]] - `references` [EXTRACTED]
 - [[.ListLiveChangingOverAsync()_1]] - `references` [EXTRACTED]
 - [[.ListLiveInRangeAsync()]] - `references` [EXTRACTED]
@@ -68,26 +68,27 @@ tags:
 - [[.RemoveAssignments()]] - `references` [EXTRACTED]
 - [[.RemoveAssignments()_1]] - `references` [EXTRACTED]
 - [[.Reopening_a_room_clears_who_finished_it()]] - `calls` [EXTRACTED]
+- [[.Stay()]] - `references` [EXTRACTED]
 - [[.Stored_progress_is_merged_into_the_derived_list()]] - `calls` [EXTRACTED]
 - [[.The_day_before_a_departure_is_not_the_departure_day()]] - `calls` [EXTRACTED]
 - [[.The_day_strip_counts_rooms_and_rooms_done_per_day()]] - `calls` [EXTRACTED]
 - [[.ToCalendarDto()]] - `references` [EXTRACTED]
-- [[.ToDto()_3]] - `references` [EXTRACTED]
-- [[.ToDto()_6]] - `references` [EXTRACTED]
+- [[.ToDto()]] - `references` [EXTRACTED]
+- [[.ToDto()_5]] - `references` [EXTRACTED]
 - [[.ToPublicDto()]] - `references` [EXTRACTED]
 - [[AppDbContext]] - `references` [EXTRACTED]
 - [[Booking.cs]] - `contains` [EXTRACTED]
 - [[BookingCancelReason]] - `references` [EXTRACTED]
 - [[BookingConfiguration]] - `references` [EXTRACTED]
 - [[BookingMealTime_1]] - `references` [EXTRACTED]
-- [[BookingRoomAssignment_2]] - `references` [EXTRACTED]
+- [[BookingRoomAssignment]] - `references` [EXTRACTED]
 - [[BookingStatus_1]] - `references` [EXTRACTED]
-- [[DateOnly_3]] - `references` [EXTRACTED]
-- [[DateTime_4]] - `references` [EXTRACTED]
-- [[Guid_18]] - `references` [EXTRACTED]
-- [[List_12]] - `references` [EXTRACTED]
+- [[DateOnly_17]] - `references` [EXTRACTED]
+- [[DateTime_5]] - `references` [EXTRACTED]
+- [[Guid_26]] - `references` [EXTRACTED]
+- [[List_17]] - `references` [EXTRACTED]
 - [[Payment]] - `references` [EXTRACTED]
-- [[RoomTask]] - `references` [EXTRACTED]
+- [[RoomTask_1]] - `references` [EXTRACTED]
 - [[ScheduleEntry_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Booking_Persistence__Entities_2
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_2

@@ -1,21 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "Room Closure Management"
+community: "CampCenter.Application / Services (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Closure_Management
+  - community/CampCenterApplication_/_Services_2
 ---
 
 # Task
 
 ## Connections
-- [[.AddAsync()_4]] - `references` [EXTRACTED]
-- [[.GetAllAsync()_6]] - `references` [EXTRACTED]
-- [[.GetByIdAsync()_5]] - `references` [EXTRACTED]
-- [[.GetOverlappingAsync()_1]] - `references` [EXTRACTED]
-- [[.GetUpcomingCenterWideAsync()_1]] - `references` [EXTRACTED]
-- [[.SaveChangesAsync()_6]] - `references` [EXTRACTED]
+- [[.AddAsync()]] - `references` [EXTRACTED]
+- [[.GetAsync()_2]] - `references` [EXTRACTED]
+- [[.ListForBookingAsync()]] - `references` [EXTRACTED]
+- [[.ListForBookingsAsync()]] - `references` [EXTRACTED]
+- [[.SaveChangesAsync()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management
+#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_2

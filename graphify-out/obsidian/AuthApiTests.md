@@ -1,12 +1,12 @@
 ---
 source_file: "tests/CampCenter.IntegrationTests/AuthApiTests.cs"
 type: "code"
-community: "Integration Test Harness (2)"
+community: "tests / CampCenter.IntegrationTests (1)"
 location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Integration_Test_Harness_2
+  - community/tests_/_CampCenterIntegrationTests_1
 ---
 
 # AuthApiTests
@@ -20,4 +20,4 @@ tags:
 - [[AuthApiTests.cs]] - `contains` [EXTRACTED]
 - [[IntegrationTestBase]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Integration_Test_Harness_2
+#graphify/code #graphify/EXTRACTED #community/tests_/_CampCenterIntegrationTests_1

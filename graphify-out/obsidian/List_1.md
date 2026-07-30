@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Room Mix Calculator Tests"
+community: "Room Closure Management"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Mix_Calculator_Tests
+  - community/Room_Closure_Management
 ---
 
 # List
 
 ## Connections
-- [[.GetPublicSessionsAsync()]] - `references` [EXTRACTED]
+- [[.GetAllAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Mix_Calculator_Tests
+#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management

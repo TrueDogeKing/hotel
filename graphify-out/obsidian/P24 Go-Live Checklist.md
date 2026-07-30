@@ -1,18 +1,19 @@
 ---
 source_file: "README.md"
-type: "concept"
+type: "document"
 community: "Docker & Project Docs"
-location: "P24 go-live checklist"
+location: "L53"
 tags:
-  - graphify/concept
+  - graphify/document
   - graphify/EXTRACTED
   - community/Docker__Project_Docs
 ---
 
-# P24 Go-Live Checklist
+# P24 go-live checklist
 
 ## Connections
+- [[Payments (Przelewy24)]] - `contains` [EXTRACTED]
 - [[Production Deployment (Caddy + Docker Compose)]] - `conceptually_related_to` [INFERRED]
 - [[Przelewy24 Payments and Webhook]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Docker__Project_Docs
+#graphify/document #graphify/EXTRACTED #community/Docker__Project_Docs

@@ -1,16 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.Application / Services (1)"
+community: "DTOs / Schedule (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterApplication_/_Services_1
+  - community/DTOs_/_Schedule_1
 ---
 
 # HttpDelete
 
 ## Connections
-- [[.Delete()_1]] - `references` [EXTRACTED]
+- [[.DeleteBookingMeals()]] - `references` [EXTRACTED]
+- [[.DeleteEntry()]] - `references` [EXTRACTED]
+- [[.ResetBookingMealTime()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_1
+#graphify/code #graphify/EXTRACTED #community/DTOs_/_Schedule_1

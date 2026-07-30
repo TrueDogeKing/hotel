@@ -1,17 +1,17 @@
 ---
-source_file: "frontend/src/components/ConfirmDialog.tsx"
+source_file: "frontend/src/components/BookingSchedule.tsx"
 type: "code"
-community: "Public Booking Frontend (2)"
-location: "L3"
+community: "Public Booking Frontend (1)"
+location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public_Booking_Frontend_2
+  - community/Public_Booking_Frontend_1
 ---
 
 # Props
 
 ## Connections
-- [[ConfirmDialog.tsx]] - `contains` [EXTRACTED]
+- [[BookingSchedule.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public_Booking_Frontend_2
+#graphify/code #graphify/EXTRACTED #community/Public_Booking_Frontend_1

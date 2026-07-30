@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Services/AdminBookingService.cs"
 type: "code"
-community: "Rate Limiting & Startup"
+community: "CampCenter.UnitTests / Services (5)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Rate_Limiting__Startup
+  - community/CampCenterUnitTests_/_Services_5
 ---
 
 # AdminBookingService.cs
@@ -19,6 +19,7 @@ tags:
 - [[CampCenter.Application.Models]] - `imports` [EXTRACTED]
 - [[CampCenter.Application.Services]] - `contains` [EXTRACTED]
 - [[CampCenter.Domain.Entities]] - `imports` [EXTRACTED]
+- [[CampCenter.Domain.Exceptions]] - `imports` [EXTRACTED]
 - [[CampCenter.Domain.Repositories]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Rate_Limiting__Startup
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_5

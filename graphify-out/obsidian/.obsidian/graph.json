@@ -463,31 +463,24 @@
       }
     },
     {
-      "query": "tag:#community/Controllers_/_Admin",
+      "query": "tag:#community/Payment",
       "color": {
         "a": 1,
         "rgb": 11565729
       }
     },
     {
-      "query": "tag:#community/CampCenter.Domain_/_Repositories_(3)",
+      "query": "tag:#community/20260728105506_PerGroupMealTimes.Designer.cs",
       "color": {
         "a": 1,
         "rgb": 16752039
       }
     },
     {
-      "query": "tag:#community/CampCenter.Infrastructure_/_Repositories_(2)",
+      "query": "tag:#community/20260721111400_ReplaceSessionsWithClosures.Designer.cs",
       "color": {
         "a": 1,
         "rgb": 10253663
-      }
-    },
-    {
-      "query": "tag:#community/CampCenter.Infrastructure_/_Repositories_(3)",
-      "color": {
-        "a": 1,
-        "rgb": 12234924
       }
     },
     {
@@ -505,24 +498,10 @@
       }
     },
     {
-      "query": "tag:#community/Booking_Persistence_&_Entities_(3)",
-      "color": {
-        "a": 1,
-        "rgb": 14767961
-      }
-    },
-    {
       "query": "tag:#community/Booking_Maintenance_Background_Service",
       "color": {
         "a": 1,
         "rgb": 7780274
-      }
-    },
-    {
-      "query": "tag:#community/Admin_Booking_&_Notifications_(5)",
-      "color": {
-        "a": 1,
-        "rgb": 5873999
       }
     },
     {
@@ -537,13 +516,6 @@
       "color": {
         "a": 1,
         "rgb": 11565729
-      }
-    },
-    {
-      "query": "tag:#community/Booking_Persistence_&_Entities_(4)",
-      "color": {
-        "a": 1,
-        "rgb": 16752039
       }
     },
     {
@@ -687,24 +659,10 @@
       }
     },
     {
-      "query": "tag:#community/Infrastructure_DI_Registration",
-      "color": {
-        "a": 1,
-        "rgb": 10253663
-      }
-    },
-    {
       "query": "tag:#community/EF_Core_Migrations_(5)",
       "color": {
         "a": 1,
         "rgb": 12234924
-      }
-    },
-    {
-      "query": "tag:#community/Persistence_/_Migrations_(8)",
-      "color": {
-        "a": 1,
-        "rgb": 5142951
       }
     },
     {
@@ -719,13 +677,6 @@
       "color": {
         "a": 1,
         "rgb": 14767961
-      }
-    },
-    {
-      "query": "tag:#community/Persistence_/_Migrations_(11)",
-      "color": {
-        "a": 1,
-        "rgb": 7780274
       }
     },
     {
@@ -750,24 +701,10 @@
       }
     },
     {
-      "query": "tag:#community/Public_Booking_Frontend_(2)",
-      "color": {
-        "a": 1,
-        "rgb": 16752039
-      }
-    },
-    {
       "query": "tag:#community/Root_TS_Config",
       "color": {
         "a": 1,
         "rgb": 10253663
-      }
-    },
-    {
-      "query": "tag:#community/ESLint_Package",
-      "color": {
-        "a": 1,
-        "rgb": 12234924
       }
     },
     {
@@ -820,13 +757,6 @@
       }
     },
     {
-      "query": "tag:#community/Unlabeled_(1)",
-      "color": {
-        "a": 1,
-        "rgb": 16752039
-      }
-    },
-    {
       "query": "tag:#community/frontend_(2)",
       "color": {
         "a": 1,
@@ -859,223 +789,6 @@
       "color": {
         "a": 1,
         "rgb": 14767961
-      }
-    },
-    {
-      "query": "tag:#community/Unlabeled_(2)",
-      "color": {
-        "a": 1,
-        "rgb": 7780274
-      }
-    },
-    {
-      "query": "tag:#community/Unlabeled_(3)",
-      "color": {
-        "a": 1,
-        "rgb": 5873999
-      }
-    },
-    {
-      "query": "tag:#community/Unlabeled_(4)",
-      "color": {
-        "a": 1,
-        "rgb": 15583560
-      }
-    },
-    {
-      "query": "tag:#community/Unlabeled_(5)",
-      "color": {
-        "a": 1,
-        "rgb": 11565729
-      }
-    },
-    {
-      "query": "tag:#community/Unlabeled_(6)",
-      "color": {
-        "a": 1,
-        "rgb": 16752039
-      }
-    },
-    {
-      "query": "tag:#community/Unlabeled_(7)",
-      "color": {
-        "a": 1,
-        "rgb": 10253663
-      }
-    },
-    {
-      "query": "tag:#community/Unlabeled_(8)",
-      "color": {
-        "a": 1,
-        "rgb": 12234924
-      }
-    },
-    {
-      "query": "tag:#community/Unlabeled_(9)",
-      "color": {
-        "a": 1,
-        "rgb": 5142951
-      }
-    },
-    {
-      "query": "tag:#community/Unlabeled_(10)",
-      "color": {
-        "a": 1,
-        "rgb": 15896107
-      }
-    },
-    {
-      "query": "tag:#community/Unlabeled_(11)",
-      "color": {
-        "a": 1,
-        "rgb": 14767961
-      }
-    },
-    {
-      "query": "tag:#community/Unlabeled_(12)",
-      "color": {
-        "a": 1,
-        "rgb": 7780274
-      }
-    },
-    {
-      "query": "tag:#community/Unlabeled_(13)",
-      "color": {
-        "a": 1,
-        "rgb": 5873999
-      }
-    },
-    {
-      "query": "tag:#community/Unlabeled_(14)",
-      "color": {
-        "a": 1,
-        "rgb": 15583560
-      }
-    },
-    {
-      "query": "tag:#community/Unlabeled_(15)",
-      "color": {
-        "a": 1,
-        "rgb": 11565729
-      }
-    },
-    {
-      "query": "tag:#community/Unlabeled_(16)",
-      "color": {
-        "a": 1,
-        "rgb": 16752039
-      }
-    },
-    {
-      "query": "tag:#community/Unlabeled_(17)",
-      "color": {
-        "a": 1,
-        "rgb": 10253663
-      }
-    },
-    {
-      "query": "tag:#community/Unlabeled_(18)",
-      "color": {
-        "a": 1,
-        "rgb": 12234924
-      }
-    },
-    {
-      "query": "tag:#community/Unlabeled_(19)",
-      "color": {
-        "a": 1,
-        "rgb": 5142951
-      }
-    },
-    {
-      "query": "tag:#community/Unlabeled_(20)",
-      "color": {
-        "a": 1,
-        "rgb": 15896107
-      }
-    },
-    {
-      "query": "tag:#community/Unlabeled_(21)",
-      "color": {
-        "a": 1,
-        "rgb": 14767961
-      }
-    },
-    {
-      "query": "tag:#community/Unlabeled_(22)",
-      "color": {
-        "a": 1,
-        "rgb": 7780274
-      }
-    },
-    {
-      "query": "tag:#community/Unlabeled_(23)",
-      "color": {
-        "a": 1,
-        "rgb": 5873999
-      }
-    },
-    {
-      "query": "tag:#community/Unlabeled_(24)",
-      "color": {
-        "a": 1,
-        "rgb": 15583560
-      }
-    },
-    {
-      "query": "tag:#community/Unlabeled_(25)",
-      "color": {
-        "a": 1,
-        "rgb": 11565729
-      }
-    },
-    {
-      "query": "tag:#community/Unlabeled_(26)",
-      "color": {
-        "a": 1,
-        "rgb": 16752039
-      }
-    },
-    {
-      "query": "tag:#community/Unlabeled_(27)",
-      "color": {
-        "a": 1,
-        "rgb": 10253663
-      }
-    },
-    {
-      "query": "tag:#community/Unlabeled_(28)",
-      "color": {
-        "a": 1,
-        "rgb": 12234924
-      }
-    },
-    {
-      "query": "tag:#community/Unlabeled_(29)",
-      "color": {
-        "a": 1,
-        "rgb": 5142951
-      }
-    },
-    {
-      "query": "tag:#community/Unlabeled_(30)",
-      "color": {
-        "a": 1,
-        "rgb": 15896107
-      }
-    },
-    {
-      "query": "tag:#community/Unlabeled_(31)",
-      "color": {
-        "a": 1,
-        "rgb": 14767961
-      }
-    },
-    {
-      "query": "tag:#community/Unlabeled_(32)",
-      "color": {
-        "a": 1,
-        "rgb": 7780274
       }
     }
   ]

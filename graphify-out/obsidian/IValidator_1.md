@@ -1,13 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Unlabeled (10)"
+community: "Room Closure Management"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Unlabeled_10
+  - community/Room_Closure_Management
 ---
 
 # IValidator
 
-#graphify/code #graphify/EXTRACTED #community/Unlabeled_10
+## Connections
+- [[ClosuresController]] - `references` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management

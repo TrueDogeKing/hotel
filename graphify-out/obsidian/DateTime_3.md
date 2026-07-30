@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Admin User & Token Config"
+community: "Public Booking Service (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_User__Token_Config
+  - community/Public_Booking_Service_1
 ---
 
 # DateTime
 
 ## Connections
-- [[AdminUser]] - `references` [EXTRACTED]
+- [[.FormatDateTime()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_User__Token_Config
+#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_1

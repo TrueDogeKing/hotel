@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Persistence/AppDbContext.cs"
 type: "code"
-community: "Domain & Infra Namespaces"
+community: "Booking Persistence & Entities (1)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Domain__Infra_Namespaces
+  - community/Booking_Persistence__Entities_1
 ---
 
 # AppDbContext.cs
@@ -16,4 +16,4 @@ tags:
 - [[CampCenter.Domain.Entities]] - `imports` [EXTRACTED]
 - [[CampCenter.Infrastructure.Persistence]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Domain__Infra_Namespaces
+#graphify/code #graphify/EXTRACTED #community/Booking_Persistence__Entities_1

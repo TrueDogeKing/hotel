@@ -1,29 +1,23 @@
 ---
 type: community
-cohesion: 0.16
-members: 14
+members: 10
 ---
 
 # Persistence / Configurations
 
-**Cohesion:** 0.16 - loosely connected
-**Members:** 14 nodes
+**Members:** 10 nodes
 
 ## Members
-- [[.Configure()_8]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/BookingMealTimeConfiguration.cs
-- [[.Configure()_9]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/MealTimeDefaultConfiguration.cs
-- [[.Configure()_11]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/ScheduleEntryConfiguration.cs
-- [[BookingMealTimeConfiguration]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/BookingMealTimeConfiguration.cs
-- [[BookingMealTimeConfiguration.cs]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/BookingMealTimeConfiguration.cs
+- [[.Configure()_5]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/MealTimeDefaultConfiguration.cs
+- [[.Configure()_7]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/RefreshTokenConfiguration.cs
+- [[AdminUserConfiguration.cs]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/AdminUserConfiguration.cs
 - [[CampCenter.Infrastructure.Persistence.Configurations]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/AdminUserConfiguration.cs
-- [[EntityTypeBuilder_8]] - code
-- [[EntityTypeBuilder_9]] - code
-- [[EntityTypeBuilder_11]] - code
-- [[IEntityTypeConfiguration]] - code
+- [[EntityTypeBuilder_5]] - code
+- [[EntityTypeBuilder_7]] - code
 - [[MealTimeDefaultConfiguration]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/MealTimeDefaultConfiguration.cs
 - [[MealTimeDefaultConfiguration.cs]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/MealTimeDefaultConfiguration.cs
-- [[ScheduleEntryConfiguration]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/ScheduleEntryConfiguration.cs
-- [[ScheduleEntryConfiguration.cs]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/ScheduleEntryConfiguration.cs
+- [[RefreshTokenConfiguration]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/RefreshTokenConfiguration.cs
+- [[RefreshTokenConfiguration.cs]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/RefreshTokenConfiguration.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -33,23 +27,22 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
+- 4 edges to [[_COMMUNITY_Validator Unit Tests]]
 - 3 edges to [[_COMMUNITY_Domain & Infra Namespaces]]
-- 2 edges to [[_COMMUNITY_Admin User & Token Config]]
-- 2 edges to [[_COMMUNITY_Booking Persistence & Entities (2)]]
-- 2 edges to [[_COMMUNITY_Booking Persistence & Entities (4)]]
-- 2 edges to [[_COMMUNITY_Room Closure Management]]
-- 2 edges to [[_COMMUNITY_Booking Persistence & Entities (3)]]
+- 2 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (1)]]
 - 2 edges to [[_COMMUNITY_Refresh Token Repository]]
-- 2 edges to [[_COMMUNITY_CampCenter.Domain  Entities]]
-- 2 edges to [[_COMMUNITY_Room Management]]
-- 2 edges to [[_COMMUNITY_Room Task Management (1)]]
-- 2 edges to [[_COMMUNITY_CampCenter.Domain  Repositories (2)]]
-- 2 edges to [[_COMMUNITY_CampCenter.Application  Services (3)]]
-- 2 edges to [[_COMMUNITY_CampCenter.Domain  Repositories (1)]]
+- 1 edge to [[_COMMUNITY_tests  CampCenter.IntegrationTests (2)]]
+- 1 edge to [[_COMMUNITY_Admin Frontend Pages]]
+- 1 edge to [[_COMMUNITY_Admin Booking & Notifications (3)]]
+- 1 edge to [[_COMMUNITY_Room Task Management (2)]]
+- 1 edge to [[_COMMUNITY_CampCenter.Domain  Repositories (2)]]
+- 1 edge to [[_COMMUNITY_DTOs  AdminPanel]]
+- 1 edge to [[_COMMUNITY_CampCenter.Application  Services (4)]]
+- 1 edge to [[_COMMUNITY_Payment]]
 
 ## Top bridge nodes
 - [[CampCenter.Infrastructure.Persistence.Configurations]] - degree 12, connects to 9 communities
-- [[IEntityTypeConfiguration]] - degree 12, connects to 9 communities
-- [[BookingMealTimeConfiguration]] - degree 4, connects to 1 community
-- [[MealTimeDefaultConfiguration]] - degree 4, connects to 1 community
-- [[ScheduleEntryConfiguration]] - degree 4, connects to 1 community
+- [[MealTimeDefaultConfiguration]] - degree 4, connects to 2 communities
+- [[RefreshTokenConfiguration]] - degree 4, connects to 2 communities
+- [[AdminUserConfiguration.cs]] - degree 3, connects to 2 communities
+- [[MealTimeDefaultConfiguration.cs]] - degree 3, connects to 1 community

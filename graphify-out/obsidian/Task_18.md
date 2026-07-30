@@ -1,17 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "Payment Gateway Integration Tests (1)"
+community: "Public Booking Service (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Payment_Gateway_Integration_Tests_1
+  - community/Public_Booking_Service_1
 ---
 
 # Task
 
 ## Connections
-- [[.HandleNotificationAsync()]] - `references` [EXTRACTED]
-- [[.InitiateAsync()]] - `references` [EXTRACTED]
+- [[.CancelByTokenAsync()]] - `references` [EXTRACTED]
+- [[.CreateAsync()_1]] - `references` [EXTRACTED]
+- [[.GetByTokenAsync()]] - `references` [EXTRACTED]
+- [[.GetScheduleByTokenAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Payment_Gateway_Integration_Tests_1
+#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_1

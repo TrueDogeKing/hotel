@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Room Closure Management"
+community: "Room Management"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Closure_Management
+  - community/Room_Management
 ---
 
 # Guid
 
 ## Connections
-- [[.GetByIdAsync()_5]] - `references` [EXTRACTED]
+- [[Room_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management
+#graphify/code #graphify/EXTRACTED #community/Room_Management

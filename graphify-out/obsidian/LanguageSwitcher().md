@@ -19,5 +19,6 @@ tags:
 - [[LoginPage.tsx]] - `imports` [EXTRACTED]
 - [[PaymentReturnPage.tsx]] - `imports` [EXTRACTED]
 - [[PublicHomePage.tsx]] - `imports` [EXTRACTED]
+- [[getStoredLanguage()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Public_Booking_Frontend_1

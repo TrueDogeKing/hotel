@@ -31,7 +31,6 @@ tags:
 - [[BookingService.cs]] - `imports` [EXTRACTED]
 - [[BookingStatuses.cs]] - `contains` [EXTRACTED]
 - [[BookingsController.cs]] - `imports` [EXTRACTED]
-- [[CampSessionService.cs]] - `imports` [EXTRACTED]
 - [[Closure.cs]] - `contains` [EXTRACTED]
 - [[ClosureConfiguration.cs]] - `imports` [EXTRACTED]
 - [[ClosureRepository.cs]] - `imports` [EXTRACTED]

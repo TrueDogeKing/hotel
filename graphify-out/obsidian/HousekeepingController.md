@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Api/Controllers/Admin/HousekeepingController.cs"
 type: "code"
-community: "Controllers / Admin"
+community: "CampCenter.UnitTests / Validators"
 location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Controllers_/_Admin
+  - community/CampCenterUnitTests_/_Validators
 ---
 
 # HousekeepingController
@@ -19,4 +19,4 @@ tags:
 - [[HousekeepingController.cs]] - `contains` [EXTRACTED]
 - [[IHousekeepingService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Controllers_/_Admin
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Validators

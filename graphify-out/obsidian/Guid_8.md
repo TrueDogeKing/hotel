@@ -1,17 +1,21 @@
 ---
 source_file: ""
 type: "code"
-community: "Room Management"
+community: "Admin Bookings Controller & DTOs"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Management
+  - community/Admin_Bookings_Controller__DTOs
 ---
 
 # Guid
 
 ## Connections
-- [[.DeleteAsync()_1]] - `references` [EXTRACTED]
-- [[.UpdateAsync()_1]] - `references` [EXTRACTED]
+- [[.CancelAsync()]] - `references` [EXTRACTED]
+- [[.GetAssignableRoomsAsync()]] - `references` [EXTRACTED]
+- [[.GetAsync()]] - `references` [EXTRACTED]
+- [[.ReassignAsync()]] - `references` [EXTRACTED]
+- [[.SetStatusAsync()]] - `references` [EXTRACTED]
+- [[.UpdateDietaryNotesAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Management
+#graphify/code #graphify/EXTRACTED #community/Admin_Bookings_Controller__DTOs

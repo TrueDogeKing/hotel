@@ -1,24 +1,22 @@
 ---
 type: community
-cohesion: 0.13
 members: 15
 ---
 
 # ESLint Dev Dependencies
 
-**Cohesion:** 0.13 - loosely connected
 **Members:** 15 nodes
 
 ## Members
-- [[@eslintjs_1]] - concept - frontend/package.json
 - [[@eslintjs]] - code - frontend/package.json
-- [[@typesreact]] - code - frontend/package.json
-- [[@typesreact_1]] - concept - frontend/package.json
+- [[@eslintjs_1]] - concept - frontend/package.json
 - [[@vitejsplugin-react]] - code - frontend/package.json
 - [[@vitejsplugin-react_1]] - concept - frontend/package.json
 - [[devDependencies]] - code - frontend/package.json
-- [[eslint-plugin-react-refresh_1]] - concept - frontend/package.json
+- [[eslint]] - code - frontend/package.json
+- [[eslint_1]] - concept - frontend/package.json
 - [[eslint-plugin-react-refresh]] - code - frontend/package.json
+- [[eslint-plugin-react-refresh_1]] - concept - frontend/package.json
 - [[globals]] - code - frontend/package.json
 - [[globals_1]] - concept - frontend/package.json
 - [[typescript-eslint]] - code - frontend/package.json
@@ -35,10 +33,10 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 1 edge to [[_COMMUNITY_Frontend Package Manifest]]
-- 1 edge to [[_COMMUNITY_ESLint Package]]
 - 1 edge to [[_COMMUNITY_React Hooks ESLint Plugin]]
 - 1 edge to [[_COMMUNITY_Prettier Dependency]]
 - 1 edge to [[_COMMUNITY_Node Type Definitions]]
+- 1 edge to [[_COMMUNITY_CampCenter.Domain  Entities]]
 - 1 edge to [[_COMMUNITY_React DOM Type Definitions]]
 - 1 edge to [[_COMMUNITY_TypeScript Dependency]]
 

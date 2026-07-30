@@ -915,6 +915,12 @@ public class ScheduleService : IScheduleService
     {
         var start = own?.StartTime ?? slot.StartTime;
         var end = own?.EndTime ?? slot.EndTime;
+        // A BookingMealTime row is not by itself an override: generation seats every
+        // group in one, and a group seated on the window's own first sitting eats at
+        // the centre time. What the panel means by "overridden" is that this group's
+        // times differ from the centre's, so compare the times rather than testing
+        // for the row's existence.
+        var overridden = start != slot.StartTime || end != slot.EndTime;
         return new BookingMealTimeDto(
             slot.Id,
             slot.MealKind.ToString(),
@@ -925,7 +931,7 @@ public class ScheduleService : IScheduleService
             slot.DurationMinutes,
             start,
             end,
-            own is not null,
+            overridden,
             end > slot.EndTime,
             neighbours ?? [],
             own?.RowVersion ?? 0

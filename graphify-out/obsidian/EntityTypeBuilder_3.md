@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Room Closure Management"
+community: "Admin Booking & Notifications (3)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Closure_Management
+  - community/Admin_Booking__Notifications_3
 ---
 
 # EntityTypeBuilder
 
 ## Connections
-- [[.Configure()_2]] - `references` [EXTRACTED]
+- [[.Configure()_3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management
+#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_3

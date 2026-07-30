@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/pages/admin/AdminBookingsPage.tsx"
 type: "code"
-community: "Public Booking Frontend (1)"
+community: "Frontend App Shell & i18n"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public_Booking_Frontend_1
+  - community/Frontend_App_Shell__i18n
 ---
 
 # AdminBookingsPage.tsx
@@ -17,6 +17,8 @@ tags:
 - [[AdminLayout.tsx]] - `imports_from` [EXTRACTED]
 - [[App.tsx]] - `imports_from` [EXTRACTED]
 - [[BookingStatus]] - `imports` [EXTRACTED]
+- [[ConfirmDialog()]] - `imports` [EXTRACTED]
+- [[ConfirmDialog.tsx]] - `imports_from` [EXTRACTED]
 - [[admin.ts]] - `imports_from` [EXTRACTED]
 - [[bookingStatuses]] - `imports` [EXTRACTED]
 - [[cancelAdminBooking()]] - `imports` [EXTRACTED]
@@ -26,4 +28,4 @@ tags:
 - [[getAdminBookings()]] - `imports` [EXTRACTED]
 - [[setBookingStatus()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public_Booking_Frontend_1
+#graphify/code #graphify/EXTRACTED #community/Frontend_App_Shell__i18n

@@ -1,18 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "Integration Test Harness (1)"
+community: "Camp Session Management"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Integration_Test_Harness_1
+  - community/Camp_Session_Management
 ---
 
 # Fact
 
 ## Connections
-- [[.AdminEndpoints_WithoutToken_ReturnUnauthorized()]] - `references` [EXTRACTED]
-- [[.Closures_CrudRoundtrip_Works()]] - `references` [EXTRACTED]
-- [[.Rooms_CrudRoundtrip_Works()]] - `references` [EXTRACTED]
+- [[.NotificationSign_RoundTrips()]] - `references` [EXTRACTED]
+- [[.RegisterSign_MatchesDocumentedJsonShape()]] - `references` [EXTRACTED]
+- [[.VerifySign_MatchesDocumentedJsonShape()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Integration_Test_Harness_1
+#graphify/code #graphify/EXTRACTED #community/Camp_Session_Management

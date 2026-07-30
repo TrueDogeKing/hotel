@@ -1,35 +1,21 @@
 ---
 type: community
-cohesion: 0.18
-members: 20
+members: 8
 ---
 
 # CampCenter.UnitTests / Services (3)
 
-**Cohesion:** 0.18 - loosely connected
-**Members:** 20 nodes
+**Members:** 8 nodes
 
 ## Members
-- [[.A_one_night_stay_is_an_arrival_on_one_day_and_a_departure_on_the_next()]] - code - tests/CampCenter.UnitTests/Services/HousekeepingPlannerTests.cs
-- [[.A_room_being_vacated_today_is_a_departure()]] - code - tests/CampCenter.UnitTests/Services/HousekeepingPlannerTests.cs
-- [[.A_room_occupied_through_the_day_is_left_alone()]] - code - tests/CampCenter.UnitTests/Services/HousekeepingPlannerTests.cs
-- [[.A_room_taken_today_by_a_group_is_an_arrival()]] - code - tests/CampCenter.UnitTests/Services/HousekeepingPlannerTests.cs
-- [[.Booking()]] - code - tests/CampCenter.UnitTests/Services/HousekeepingPlannerTests.cs
-- [[.Departures_and_unrelated_arrivals_on_one_day_are_separate_jobs()]] - code - tests/CampCenter.UnitTests/Services/HousekeepingPlannerTests.cs
-- [[.Each_room_of_a_multi_room_group_gets_its_own_job()]] - code - tests/CampCenter.UnitTests/Services/HousekeepingPlannerTests.cs
-- [[.ForDay()]] - code - src/CampCenter.Application/Services/HousekeepingPlanner.cs
-- [[.One_group_out_and_the_next_in_is_a_single_turnaround()]] - code - tests/CampCenter.UnitTests/Services/HousekeepingPlannerTests.cs
-- [[.The_day_before_a_departure_is_not_the_departure_day()]] - code - tests/CampCenter.UnitTests/Services/HousekeepingPlannerTests.cs
-- [[DateOnly_20]] - code
-- [[DateOnly_32]] - code
-- [[Fact_11]] - code
-- [[Guid_63]] - code
-- [[HousekeepingJob]] - code - src/CampCenter.Application/Services/HousekeepingPlanner.cs
-- [[HousekeepingPlanner]] - code - src/CampCenter.Application/Services/HousekeepingPlanner.cs
-- [[HousekeepingPlanner.cs]] - code - src/CampCenter.Application/Services/HousekeepingPlanner.cs
-- [[HousekeepingPlannerTests]] - code - tests/CampCenter.UnitTests/Services/HousekeepingPlannerTests.cs
-- [[IEnumerable]] - code
-- [[List_26]] - code
+- [[.HandleNotificationAsync()]] - code - src/CampCenter.Application/Interfaces/IPaymentService.cs
+- [[.InitiateAsync()]] - code - src/CampCenter.Application/Interfaces/IPaymentService.cs
+- [[CancellationToken_25]] - code
+- [[IPaymentService]] - code - src/CampCenter.Application/Interfaces/IPaymentService.cs
+- [[IPaymentService.cs]] - code - src/CampCenter.Application/Interfaces/IPaymentService.cs
+- [[InitiatePaymentRequestDto]] - code - src/CampCenter.Application/Interfaces/IPaymentService.cs
+- [[InitiatePaymentResponseDto]] - code - src/CampCenter.Application/Interfaces/IPaymentService.cs
+- [[Task_24]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -39,14 +25,17 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 10 edges to [[_COMMUNITY_Booking Persistence & Entities (2)]]
-- 3 edges to [[_COMMUNITY_CampCenter.Application  Services (4)]]
-- 2 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (5)]]
-- 1 edge to [[_COMMUNITY_Domain & Infra Namespaces]]
+- 3 edges to [[_COMMUNITY_Public Booking Service (1)]]
+- 3 edges to [[_COMMUNITY_Admin Booking & Notifications (4)]]
+- 1 edge to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
+- 1 edge to [[_COMMUNITY_Booking Persistence & Entities (2)]]
+- 1 edge to [[_COMMUNITY_Integration Test Harness (1)]]
+- 1 edge to [[_COMMUNITY_Application Namespaces & DTOs]]
+- 1 edge to [[_COMMUNITY_Camp Session Management]]
 
 ## Top bridge nodes
-- [[.ForDay()]] - degree 16, connects to 2 communities
-- [[HousekeepingPlanner.cs]] - degree 4, connects to 2 communities
-- [[HousekeepingPlannerTests]] - degree 12, connects to 1 community
-- [[.A_one_night_stay_is_an_arrival_on_one_day_and_a_departure_on_the_next()]] - degree 4, connects to 1 community
-- [[.A_room_being_vacated_today_is_a_departure()]] - degree 4, connects to 1 community
+- [[IPaymentService]] - degree 6, connects to 3 communities
+- [[IPaymentService.cs]] - degree 5, connects to 2 communities
+- [[.HandleNotificationAsync()]] - degree 5, connects to 2 communities
+- [[InitiatePaymentRequestDto]] - degree 4, connects to 2 communities
+- [[.InitiateAsync()]] - degree 6, connects to 1 community

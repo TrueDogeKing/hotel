@@ -13,13 +13,14 @@ tags:
 
 ## Connections
 - [[.CancelAsync()]] - `method` [EXTRACTED]
-- [[.CreateAsync()_6]] - `method` [EXTRACTED]
+- [[.CreateAsync()]] - `method` [EXTRACTED]
+- [[.GetAssignableRoomsAsync()]] - `method` [EXTRACTED]
 - [[.GetAsync()]] - `method` [EXTRACTED]
 - [[.GetDashboardAsync()]] - `method` [EXTRACTED]
 - [[.GetOccupancyAsync()]] - `method` [EXTRACTED]
-- [[.ListAsync()_4]] - `method` [EXTRACTED]
+- [[.ListAsync()]] - `method` [EXTRACTED]
 - [[.ReassignAsync()]] - `method` [EXTRACTED]
-- [[.SetStatusAsync()_2]] - `method` [EXTRACTED]
+- [[.SetStatusAsync()]] - `method` [EXTRACTED]
 - [[.UpdateDietaryNotesAsync()]] - `method` [EXTRACTED]
 - [[AdminBookingService]] - `implements` [EXTRACTED]
 - [[BookingsController]] - `references` [EXTRACTED]

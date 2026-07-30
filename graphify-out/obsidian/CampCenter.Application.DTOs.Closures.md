@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/DTOs/Closures/ClosureDtos.cs"
 type: "code"
-community: "tests / CampCenter.IntegrationTests (2)"
+community: "Integration Test Harness (1)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/tests_/_CampCenterIntegrationTests_2
+  - community/Integration_Test_Harness_1
 ---
 
 # CampCenter.Application.DTOs.Closures
@@ -21,4 +21,4 @@ tags:
 - [[PublicBookingApiTests.cs]] - `imports` [EXTRACTED]
 - [[RoomsAndClosuresApiTests.cs]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/tests_/_CampCenterIntegrationTests_2
+#graphify/code #graphify/EXTRACTED #community/Integration_Test_Harness_1

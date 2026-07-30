@@ -1,17 +1,17 @@
 ---
-source_file: "frontend/src/components/BookingSchedule.tsx"
+source_file: "frontend/src/components/Select.tsx"
 type: "code"
-community: "components / admin"
-location: "L6"
+community: "Select Component"
+location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/components_/_admin
+  - community/Select_Component
 ---
 
 # Props
 
 ## Connections
-- [[BookingSchedule.tsx]] - `contains` [EXTRACTED]
+- [[Select.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/components_/_admin
+#graphify/code #graphify/EXTRACTED #community/Select_Component

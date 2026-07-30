@@ -1,12 +1,10 @@
 ---
 type: community
-cohesion: 0.20
 members: 10
 ---
 
 # OpenAPI Security Scheme
 
-**Cohesion:** 0.20 - loosely connected
 **Members:** 10 nodes
 
 ## Members
@@ -14,11 +12,11 @@ members: 10
 - [[BearerSecuritySchemeTransformer]] - code - src/CampCenter.Api/OpenApi/BearerSecuritySchemeTransformer.cs
 - [[BearerSecuritySchemeTransformer.cs]] - code - src/CampCenter.Api/OpenApi/BearerSecuritySchemeTransformer.cs
 - [[CampCenter.Api.OpenApi]] - code - src/CampCenter.Api/OpenApi/BearerSecuritySchemeTransformer.cs
-- [[CancellationToken_11]] - code
+- [[CancellationToken_15]] - code
 - [[IOpenApiDocumentTransformer]] - code
 - [[OpenApiDocument]] - code
 - [[OpenApiDocumentTransformerContext]] - code
-- [[Task_10]] - code
+- [[Task_14]] - code
 - [[string]] - code
 
 ## Live Query (requires Dataview plugin)
@@ -27,3 +25,9 @@ members: 10
 TABLE source_file, type FROM #community/OpenAPI_Security_Scheme
 SORT file.name ASC
 ```
+
+## Connections to other communities
+- 1 edge to [[_COMMUNITY_Public Booking Service (2)]]
+
+## Top bridge nodes
+- [[CampCenter.Api.OpenApi]] - degree 2, connects to 1 community

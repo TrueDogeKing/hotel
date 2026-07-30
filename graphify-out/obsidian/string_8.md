@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Integration Test Harness (2)"
+community: "Public Booking Service (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Integration_Test_Harness_2
+  - community/Public_Booking_Service_1
 ---
 
 # string
 
 ## Connections
-- [[ApiCollection]] - `references` [EXTRACTED]
-- [[IntegrationTestBase]] - `references` [EXTRACTED]
+- [[EmailSettings]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Integration_Test_Harness_2
+#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_1

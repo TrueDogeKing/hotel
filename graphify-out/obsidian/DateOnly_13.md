@@ -1,18 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "DTOs / Schedule (1)"
+community: "CampCenter.UnitTests / Services (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DTOs_/_Schedule_1
+  - community/CampCenterUnitTests_/_Services_2
 ---
 
 # DateOnly
 
 ## Connections
-- [[.GenerateMissingMeals()]] - `references` [EXTRACTED]
-- [[.GetCalendar()]] - `references` [EXTRACTED]
-- [[.GetDay()_1]] - `references` [EXTRACTED]
+- [[.ForDay()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DTOs_/_Schedule_1
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_2

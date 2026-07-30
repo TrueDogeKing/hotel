@@ -2692,6 +2692,20 @@ p[role="alert"] {
 }
 .timetable-panel h2 {
   text-transform: capitalize;
+  margin: 0;
+}
+/* The day's heading doubles as its day stepper, so a week can be walked from here
+   without scrolling back up to the calendar. */
+.timetable-head {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+.timetable-nav {
+  min-width: 2.25rem;
+  font-size: 1.25rem;
+  line-height: 1;
 }
 .timetable-groups {
   list-style: none;
@@ -3016,6 +3030,85 @@ p[role="alert"] {
   font-size: 0.85rem;
 }
 
+/* --- The group's rooms, and moving it between them --- */
+
+.group-rooms {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+.group-rooms h3 {
+  margin: 0 0 0.5rem;
+  font-size: 0.95rem;
+}
+.group-rooms-list,
+.group-rooms-edit {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+.group-rooms-list li {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+}
+.group-rooms-number {
+  min-width: 3rem;
+  color: var(--text-strong);
+}
+.group-rooms-capacity {
+  color: var(--text-faint);
+}
+/* Deliberate overfilling, not an error — housekeeping has to know, so it is
+   marked rather than blocked. */
+.group-rooms-over {
+  margin-left: 0.375rem;
+  padding: 0 0.375rem;
+  border-radius: var(--r-sm);
+  background: var(--bg-active);
+  color: var(--warning);
+  font-style: normal;
+  font-size: 0.75rem;
+}
+.group-rooms-empty,
+.group-rooms-hint {
+  color: var(--text-faint);
+  font-size: 0.85rem;
+}
+.group-rooms-edit li {
+  display: flex;
+  align-items: stretch;
+  gap: 0.375rem;
+}
+.group-rooms-edit select {
+  flex: 1;
+  min-width: 0;
+}
+.group-rooms-edit input[type="number"] {
+  flex: 0 0 4.5rem;
+  width: 4.5rem;
+}
+.group-rooms-edit li.duplicate select {
+  border-color: var(--danger);
+}
+.group-rooms-total {
+  margin: 0.5rem 0 0;
+  font-size: 0.85rem;
+}
+.group-rooms-total.balanced {
+  color: var(--success);
+}
+/* Not an error yet — people are moved a field at a time, and the total is out
+   for as long as that takes. */
+.group-rooms-total.off {
+  color: var(--text-faint);
+}
+
 .group-panel-day {
   margin-top: 1.25rem;
 }
@@ -3231,19 +3324,59 @@ p[role="alert"] {
 .hk-toolbar {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  /* stretch, not center: a date input is a couple of pixels taller than a button,
+     which left the two day steps and Today sitting slightly proud of the picker.
+     Stretching gives every control the row's height, so they line up exactly. */
+  align-items: stretch;
   gap: 0.5rem;
   margin: 1rem 0;
+}
+/* Inputs are 100%-wide by default, which in this flex row ate the whole line and
+   pushed "Next day" and "Today" onto one of their own. */
+.hk-toolbar input[type="date"] {
+  flex: 0 0 auto;
+  width: auto;
+}
+
+/* The strip and the arrows that page it. The arrows sit outside the scroller so
+   they stay put while the days slide under them. */
+.hk-strip-row {
+  display: flex;
+  align-items: stretch;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+.hk-strip-nav {
+  flex: none;
+  min-width: 2.25rem;
+  font-size: 1.25rem;
+  line-height: 1;
+}
+.hk-strip-note {
+  margin: -1rem 0 1.5rem;
+  font-size: 0.875rem;
+  color: var(--text-faint);
+}
+.hk-strip-reset {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--accent);
+  font: inherit;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 /* The days either side of the chosen one, so a heavy changeover is visible before
    the morning it lands rather than on it. */
 .hk-strip {
+  flex: 1;
+  min-width: 0;
   list-style: none;
   display: flex;
   gap: 0.5rem;
   padding: 0 0 0.25rem;
-  margin: 0 0 1.5rem;
+  margin: 0;
   /* More days than fit scroll sideways rather than wrapping into a second row that
      pushes the list itself off the screen. */
   overflow-x: auto;

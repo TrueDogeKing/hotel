@@ -1,23 +1,27 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.UnitTests / Services (3)"
+community: "CampCenter.UnitTests / Services (4)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Services_3
+  - community/CampCenterUnitTests_/_Services_4
 ---
 
 # Fact
 
 ## Connections
-- [[.A_one_night_stay_is_an_arrival_on_one_day_and_a_departure_on_the_next()]] - `references` [EXTRACTED]
-- [[.A_room_being_vacated_today_is_a_departure()]] - `references` [EXTRACTED]
-- [[.A_room_occupied_through_the_day_is_left_alone()]] - `references` [EXTRACTED]
-- [[.A_room_taken_today_by_a_group_is_an_arrival()]] - `references` [EXTRACTED]
-- [[.Departures_and_unrelated_arrivals_on_one_day_are_separate_jobs()]] - `references` [EXTRACTED]
-- [[.Each_room_of_a_multi_room_group_gets_its_own_job()]] - `references` [EXTRACTED]
-- [[.One_group_out_and_the_next_in_is_a_single_turnaround()]] - `references` [EXTRACTED]
-- [[.The_day_before_a_departure_is_not_the_departure_day()]] - `references` [EXTRACTED]
+- [[.Accepts_a_sitting_after_the_changeover()]] - `references` [EXTRACTED]
+- [[.Does_not_flag_an_activity_against_a_meal_elsewhere()]] - `references` [EXTRACTED]
+- [[.Does_not_flag_the_entry_being_edited_against_itself()]] - `references` [EXTRACTED]
+- [[.Flags_a_meal_while_another_group_is_at_the_tables()]] - `references` [EXTRACTED]
+- [[.Flags_a_sitting_that_leaves_no_changeover()]] - `references` [EXTRACTED]
+- [[.Flags_another_group_in_the_same_place()]] - `references` [EXTRACTED]
+- [[.Ignores_a_different_place_at_the_same_time()]] - `references` [EXTRACTED]
+- [[.Ignores_the_group_own_programme()]] - `references` [EXTRACTED]
+- [[.Ignores_the_place_being_free_before_the_activity_starts()]] - `references` [EXTRACTED]
+- [[.Late_evening_sittings_do_not_wrap_past_midnight()]] - `references` [EXTRACTED]
+- [[.Matches_places_case_insensitively()]] - `references` [EXTRACTED]
+- [[.Reports_the_place_rather_than_the_meal_when_both_hold()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_3
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_4

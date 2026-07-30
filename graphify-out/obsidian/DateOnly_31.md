@@ -11,7 +11,7 @@ tags:
 # DateOnly
 
 ## Connections
-- [[.CreateBookingAsync()]] - `references` [EXTRACTED]
-- [[.EntryOn()]] - `references` [EXTRACTED]
+- [[.AvailabilityUrl()]] - `references` [EXTRACTED]
+- [[.BookingRequest()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/tests_/_CampCenterIntegrationTests_1

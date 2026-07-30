@@ -1,18 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "DTOs / AdminPanel"
+community: "Admin User & Token Config"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DTOs_/_AdminPanel
+  - community/Admin_User__Token_Config
 ---
 
 # CancellationToken
 
 ## Connections
-- [[.GetDayAsync()]] - `references` [EXTRACTED]
-- [[.GetRangeAsync()]] - `references` [EXTRACTED]
-- [[.SetStatusAsync()_3]] - `references` [EXTRACTED]
+- [[.GetByIdAsync()_7]] - `references` [EXTRACTED]
+- [[.GetByLoginAsync()_1]] - `references` [EXTRACTED]
+- [[.SaveChangesAsync()_10]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DTOs_/_AdminPanel
+#graphify/code #graphify/EXTRACTED #community/Admin_User__Token_Config

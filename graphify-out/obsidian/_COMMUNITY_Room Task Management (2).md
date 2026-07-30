@@ -1,31 +1,17 @@
 ---
 type: community
-cohesion: 0.30
-members: 16
+members: 4
 ---
 
 # Room Task Management (2)
 
-**Cohesion:** 0.30 - loosely connected
-**Members:** 16 nodes
+**Members:** 4 nodes
 
 ## Members
-- [[.Create()_4]] - code - src/CampCenter.Api/Controllers/Admin/TasksController.cs
-- [[.Delete()_3]] - code - src/CampCenter.Api/Controllers/Admin/TasksController.cs
-- [[.Done()]] - code - src/CampCenter.Api/Controllers/Admin/TasksController.cs
-- [[.List()_1]] - code - src/CampCenter.Api/Controllers/Admin/TasksController.cs
-- [[.Reopen()]] - code - src/CampCenter.Api/Controllers/Admin/TasksController.cs
-- [[CancellationToken_5]] - code
-- [[Guid_3]] - code
-- [[HttpDelete_2]] - code
-- [[HttpGet_4]] - code
-- [[HttpPost_3]] - code
-- [[IActionResult_4]] - code
-- [[IRoomTaskService_1]] - code
-- [[ProducesResponseType_4]] - code
-- [[RoomTaskStatus_1]] - code
-- [[Task_5]] - code
-- [[TasksController]] - code - src/CampCenter.Api/Controllers/Admin/TasksController.cs
+- [[.Configure()_6]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/PaymentConfiguration.cs
+- [[EntityTypeBuilder_6]] - code
+- [[PaymentConfiguration]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/PaymentConfiguration.cs
+- [[PaymentConfiguration.cs]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/PaymentConfiguration.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -35,9 +21,12 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
-- 1 edge to [[_COMMUNITY_Application Namespaces & DTOs]]
+- 2 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (2)]]
+- 1 edge to [[_COMMUNITY_Domain & Infra Namespaces]]
+- 1 edge to [[_COMMUNITY_Persistence  Configurations]]
+- 1 edge to [[_COMMUNITY_Validator Unit Tests]]
 
 ## Top bridge nodes
-- [[TasksController]] - degree 8, connects to 2 communities
-- [[.Create()_4]] - degree 7, connects to 1 community
+- [[PaymentConfiguration]] - degree 4, connects to 2 communities
+- [[PaymentConfiguration.cs]] - degree 3, connects to 2 communities
+- [[.Configure()_6]] - degree 3, connects to 1 community

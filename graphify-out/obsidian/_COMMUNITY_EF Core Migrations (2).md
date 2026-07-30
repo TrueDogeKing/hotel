@@ -1,12 +1,10 @@
 ---
 type: community
-cohesion: 0.50
 members: 5
 ---
 
 # EF Core Migrations (2)
 
-**Cohesion:** 0.50 - moderately connected
 **Members:** 5 nodes
 
 ## Members

@@ -1,22 +1,21 @@
 ---
 source_file: ""
 type: "code"
-community: "Room Management"
+community: "Room Closure Management"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Management
+  - community/Room_Closure_Management
 ---
 
 # Task
 
 ## Connections
-- [[.AddAsync()_6]] - `references` [EXTRACTED]
-- [[.GetActiveAsync()_1]] - `references` [EXTRACTED]
-- [[.GetAllAsync()_7]] - `references` [EXTRACTED]
-- [[.GetByIdAsync()_6]] - `references` [EXTRACTED]
-- [[.GetByNumberAsync()_1]] - `references` [EXTRACTED]
-- [[.HasAssignmentsAsync()_1]] - `references` [EXTRACTED]
-- [[.SaveChangesAsync()_8]] - `references` [EXTRACTED]
+- [[.AddAsync()_2]] - `references` [EXTRACTED]
+- [[.GetAllAsync()_6]] - `references` [EXTRACTED]
+- [[.GetByIdAsync()_2]] - `references` [EXTRACTED]
+- [[.GetOverlappingAsync()]] - `references` [EXTRACTED]
+- [[.GetUpcomingCenterWideAsync()]] - `references` [EXTRACTED]
+- [[.SaveChangesAsync()_3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Management
+#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management

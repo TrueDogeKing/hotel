@@ -1,26 +1,27 @@
 ---
 source_file: "frontend/src/pages/admin/RoomsPage.tsx"
 type: "code"
-community: "Admin Frontend Pages"
+community: "src / api (1)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Frontend_Pages
+  - community/src_/_api_1
 ---
 
 # RoomsPage.tsx
 
 ## Connections
 - [[AdminLayout.tsx]] - `imports_from` [EXTRACTED]
-- [[Room_1]] - `imports` [EXTRACTED]
+- [[App.tsx]] - `imports_from` [EXTRACTED]
+- [[Room]] - `imports` [EXTRACTED]
 - [[RoomFormState]] - `contains` [EXTRACTED]
 - [[RoomsPage()]] - `contains` [EXTRACTED]
 - [[admin.ts]] - `imports_from` [EXTRACTED]
 - [[createRoom()]] - `imports` [EXTRACTED]
 - [[deleteRoom()]] - `imports` [EXTRACTED]
-- [[emptyForm]] - `contains` [EXTRACTED]
+- [[emptyForm_2]] - `contains` [EXTRACTED]
 - [[getRooms()]] - `imports` [EXTRACTED]
 - [[updateRoom()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Frontend_Pages
+#graphify/code #graphify/EXTRACTED #community/src_/_api_1

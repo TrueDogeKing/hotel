@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Api/RateLimiting/RateLimitPolicies.cs"
 type: "code"
-community: "Rate Limiting & Startup"
+community: "Public Booking Service (2)"
 location: "L4"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Rate_Limiting__Startup
+  - community/Public_Booking_Service_2
 ---
 
 # RateLimitPolicies
@@ -15,4 +15,4 @@ tags:
 - [[RateLimitPolicies.cs]] - `contains` [EXTRACTED]
 - [[string_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Rate_Limiting__Startup
+#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_2

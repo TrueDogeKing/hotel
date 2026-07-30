@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.Application / Services (1)"
+community: "CampCenter.UnitTests / Services (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterApplication_/_Services_1
+  - community/CampCenterUnitTests_/_Services_2
 ---
 
 # List
 
 ## Connections
-- [[.GetAllAsync()_8]] - `references` [EXTRACTED]
+- [[.ListForDateAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_1
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_2

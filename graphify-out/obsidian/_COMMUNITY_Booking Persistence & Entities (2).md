@@ -1,34 +1,19 @@
 ---
 type: community
-cohesion: 0.12
-members: 19
+members: 6
 ---
 
 # Booking Persistence & Entities (2)
 
-**Cohesion:** 0.12 - loosely connected
-**Members:** 19 nodes
+**Members:** 6 nodes
 
 ## Members
-- [[.Configure()_7]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/BookingConfiguration.cs
-- [[.Detach()_1]] - code - src/CampCenter.Infrastructure/Repositories/BookingRepository.cs
-- [[.RemoveAssignments()_1]] - code - src/CampCenter.Infrastructure/Repositories/BookingRepository.cs
-- [[.ToCalendarDto()]] - code - src/CampCenter.Application/Services/ScheduleService.cs
-- [[Booking]] - code - src/CampCenter.Domain/Entities/Booking.cs
-- [[Booking.cs]] - code - src/CampCenter.Domain/Entities/Booking.cs
-- [[BookingCancelReason]] - code - src/CampCenter.Domain/Entities/Booking.cs
-- [[BookingConfiguration]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/BookingConfiguration.cs
-- [[BookingConfiguration.cs]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/BookingConfiguration.cs
-- [[BookingRoomAssignment_2]] - code
-- [[BookingStatus_1]] - code - src/CampCenter.Domain/Entities/Booking.cs
-- [[BookingStatuses_1]] - code - src/CampCenter.Domain/Entities/BookingStatuses.cs
-- [[BookingStatuses.cs]] - code - src/CampCenter.Domain/Entities/BookingStatuses.cs
-- [[DateOnly_3]] - code
-- [[DateTime_4]] - code
-- [[EntityTypeBuilder_1]] - code
-- [[Guid_18]] - code
-- [[List_12]] - code
-- [[ScheduleCalendarBookingDto]] - code - src/CampCenter.Application/DTOs/Schedule/ScheduleDtos.cs
+- [[.P24Status()]] - code - src/CampCenter.Api/Controllers/Public/PublicPaymentsController.cs
+- [[CancellationToken_13]] - code
+- [[HttpPost_8]] - code
+- [[IActionResult_12]] - code
+- [[ProducesResponseType_12]] - code
+- [[Task_13]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -38,27 +23,9 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 14 edges to [[_COMMUNITY_Booking Persistence & Entities (1)]]
-- 11 edges to [[_COMMUNITY_Admin Booking & Notifications (2)]]
-- 10 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (3)]]
-- 10 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (2)]]
-- 7 edges to [[_COMMUNITY_Admin Booking & Notifications (1)]]
-- 6 edges to [[_COMMUNITY_CampCenter.Application  Services (2)]]
-- 5 edges to [[_COMMUNITY_Public Booking Service (2)]]
-- 3 edges to [[_COMMUNITY_Admin Booking & Notifications (4)]]
-- 3 edges to [[_COMMUNITY_Domain & Infra Namespaces]]
-- 2 edges to [[_COMMUNITY_Persistence  Configurations]]
-- 2 edges to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
-- 2 edges to [[_COMMUNITY_CampCenter.Domain  Repositories (2)]]
-- 1 edge to [[_COMMUNITY_Booking Persistence & Entities (3)]]
-- 1 edge to [[_COMMUNITY_Room Task Management (1)]]
-- 1 edge to [[_COMMUNITY_DTOs  Schedule (1)]]
-- 1 edge to [[_COMMUNITY_CampCenter.Domain  Repositories (1)]]
-- 1 edge to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
+- 1 edge to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
+- 1 edge to [[_COMMUNITY_Camp Session Management]]
+- 1 edge to [[_COMMUNITY_CampCenter.UnitTests  Services (3)]]
 
 ## Top bridge nodes
-- [[Booking]] - degree 77, connects to 13 communities
-- [[BookingStatus_1]] - degree 10, connects to 4 communities
-- [[BookingConfiguration.cs]] - degree 3, connects to 2 communities
-- [[Booking.cs]] - degree 4, connects to 1 community
-- [[BookingConfiguration]] - degree 4, connects to 1 community
+- [[.P24Status()]] - degree 8, connects to 3 communities

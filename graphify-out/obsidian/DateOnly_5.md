@@ -1,16 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "Room Closure Management"
+community: "Public Booking Service (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Closure_Management
+  - community/Public_Booking_Service_1
 ---
 
 # DateOnly
 
 ## Connections
-- [[Closure]] - `references` [EXTRACTED]
+- [[.GetAvailabilityAsync()]] - `references` [EXTRACTED]
+- [[.GetBlockedRoomIdsAsync()]] - `references` [EXTRACTED]
+- [[.GetCenterClosureReasonAsync()]] - `references` [EXTRACTED]
+- [[.GetFreeRoomsByCapacityAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management
+#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_1

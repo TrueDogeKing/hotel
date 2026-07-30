@@ -1,19 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Public Booking Service (1)"
+community: "OpenAPI Security Scheme"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public_Booking_Service_1
+  - community/OpenAPI_Security_Scheme
 ---
 
 # Task
 
 ## Connections
-- [[.CancelByTokenAsync()]] - `references` [EXTRACTED]
-- [[.CreateAsync()_7]] - `references` [EXTRACTED]
-- [[.GetByTokenAsync()]] - `references` [EXTRACTED]
-- [[.GetScheduleByTokenAsync()]] - `references` [EXTRACTED]
+- [[.TransformAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_1
+#graphify/code #graphify/EXTRACTED #community/OpenAPI_Security_Scheme

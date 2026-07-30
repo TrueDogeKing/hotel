@@ -11,6 +11,6 @@ tags:
 # List
 
 ## Connections
-- [[.GetAllAsync()_1]] - `references` [EXTRACTED]
+- [[.GetAllAsync()_2]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Room_Management

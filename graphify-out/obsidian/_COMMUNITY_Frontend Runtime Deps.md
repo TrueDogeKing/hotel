@@ -1,17 +1,15 @@
 ---
 type: community
-cohesion: 0.15
 members: 13
 ---
 
 # Frontend Runtime Deps
 
-**Cohesion:** 0.15 - loosely connected
 **Members:** 13 nodes
 
 ## Members
-- [[axios_1]] - concept - frontend/package.json
 - [[axios]] - code - frontend/package.json
+- [[axios_1]] - concept - frontend/package.json
 - [[dependencies]] - code - frontend/package.json
 - [[i18next]] - code - frontend/package.json
 - [[i18next_1]] - concept - frontend/package.json

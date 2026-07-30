@@ -1,19 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.UnitTests / Validators"
+community: "Public Booking Service (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Validators
+  - community/Public_Booking_Service_1
 ---
 
 # ProducesResponseType
 
 ## Connections
-- [[.Create()_3]] - `references` [EXTRACTED]
-- [[.Delete()_2]] - `references` [EXTRACTED]
-- [[.GetAll()_2]] - `references` [EXTRACTED]
-- [[.Update()_2]] - `references` [EXTRACTED]
+- [[.Cancel()_1]] - `references` [EXTRACTED]
+- [[.Create()_5]] - `references` [EXTRACTED]
+- [[.GetByToken()]] - `references` [EXTRACTED]
+- [[.GetScheduleByToken()]] - `references` [EXTRACTED]
+- [[.InitiatePayment()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Validators
+#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_1

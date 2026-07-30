@@ -1,20 +1,23 @@
 ---
 source_file: ""
 type: "code"
-community: "Admin Bookings Controller & DTOs"
+community: "DTOs / Schedule (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Bookings_Controller__DTOs
+  - community/DTOs_/_Schedule_1
 ---
 
 # Guid
 
 ## Connections
-- [[.CancelAsync()]] - `references` [EXTRACTED]
-- [[.GetAsync()]] - `references` [EXTRACTED]
-- [[.ReassignAsync()]] - `references` [EXTRACTED]
-- [[.SetStatusAsync()_2]] - `references` [EXTRACTED]
-- [[.UpdateDietaryNotesAsync()]] - `references` [EXTRACTED]
+- [[.DeleteBookingMeals()]] - `references` [EXTRACTED]
+- [[.DeleteEntry()]] - `references` [EXTRACTED]
+- [[.GenerateMeals()]] - `references` [EXTRACTED]
+- [[.GetBookingMealTimes()]] - `references` [EXTRACTED]
+- [[.GetForBooking()]] - `references` [EXTRACTED]
+- [[.ResetBookingMealTime()]] - `references` [EXTRACTED]
+- [[.SetBookingMealTime()]] - `references` [EXTRACTED]
+- [[.UpdateEntry()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Bookings_Controller__DTOs
+#graphify/code #graphify/EXTRACTED #community/DTOs_/_Schedule_1

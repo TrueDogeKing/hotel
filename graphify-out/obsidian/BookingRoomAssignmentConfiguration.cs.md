@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Persistence/Configurations/BookingRoomAssignmentConfiguration.cs"
 type: "code"
-community: "Booking Persistence & Entities (4)"
+community: "Admin Booking & Notifications (3)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Booking_Persistence__Entities_4
+  - community/Admin_Booking__Notifications_3
 ---
 
 # BookingRoomAssignmentConfiguration.cs
@@ -16,4 +16,4 @@ tags:
 - [[CampCenter.Domain.Entities]] - `imports` [EXTRACTED]
 - [[CampCenter.Infrastructure.Persistence.Configurations]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Booking_Persistence__Entities_4
+#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_3

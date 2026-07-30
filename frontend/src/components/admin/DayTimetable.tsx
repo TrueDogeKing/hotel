@@ -6,6 +6,8 @@ import { formatDate, toTimeInput } from "../../utils/dates";
 interface Props {
   day: ScheduleDay;
   onSelectGroup: (bookingId: string) => void;
+  /** Step the shown day by whole days. Omitted when there is nowhere to step to. */
+  onChangeDay?: (delta: number) => void;
 }
 
 /** Height of one hour row, in px. Blocks are positioned against this; a one-hour
@@ -183,7 +185,7 @@ function placeChips(chips: Chip[]): PlacedChip[] {
   return placed;
 }
 
-export default function DayTimetable({ day, onSelectGroup }: Props) {
+export default function DayTimetable({ day, onSelectGroup, onChangeDay }: Props) {
   const { t, i18n } = useTranslation();
   const chips = buildChips(day.entries);
   const placed = placeChips(chips);
@@ -250,7 +252,34 @@ export default function DayTimetable({ day, onSelectGroup }: Props) {
 
   return (
     <section className="timetable-panel">
-      <h2>{formatDate(day.date, i18n.language, "long")}</h2>
+      {/* Stepping a day belongs here as well as on the calendar: the month grid is
+          tall enough that walking a week from the timetable would mean scrolling
+          back up to it for every single day. */}
+      <header className="timetable-head">
+        {onChangeDay && (
+          <button
+            type="button"
+            className="timetable-nav"
+            aria-label={t("schedule.previousDay")}
+            title={t("schedule.previousDay")}
+            onClick={() => onChangeDay(-1)}
+          >
+            ‹
+          </button>
+        )}
+        <h2>{formatDate(day.date, i18n.language, "long")}</h2>
+        {onChangeDay && (
+          <button
+            type="button"
+            className="timetable-nav"
+            aria-label={t("schedule.nextDay")}
+            title={t("schedule.nextDay")}
+            onClick={() => onChangeDay(1)}
+          >
+            ›
+          </button>
+        )}
+      </header>
 
       {day.groups.length === 0 ? (
         <p>{t("schedule.noGroupsToday")}</p>

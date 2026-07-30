@@ -13,8 +13,8 @@ tags:
 
 ## Connections
 - [[.Create()_4]] - `references` [EXTRACTED]
-- [[.CreateAsync()_2]] - `references` [EXTRACTED]
 - [[.CreateAsync()_5]] - `references` [EXTRACTED]
+- [[.CreateAsync()_11]] - `references` [EXTRACTED]
 - [[AdminPanelDtos.cs]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Admin_Bookings_Controller__DTOs

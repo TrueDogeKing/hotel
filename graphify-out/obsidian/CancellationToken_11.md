@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "OpenAPI Security Scheme"
+community: "Room Closure Management"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/OpenAPI_Security_Scheme
+  - community/Room_Closure_Management
 ---
 
 # CancellationToken
 
 ## Connections
-- [[.TransformAsync()]] - `references` [EXTRACTED]
+- [[.Closures()]] - `references` [EXTRACTED]
+- [[.Get()_3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/OpenAPI_Security_Scheme
+#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management

@@ -11,8 +11,6 @@ tags:
 # DateOnly
 
 ## Connections
-- [[.ComputeHoldExpiry()]] - `references` [EXTRACTED]
-- [[.FinalDueDate()]] - `references` [EXTRACTED]
-- [[.GetOccupancyAsync()_1]] - `references` [EXTRACTED]
+- [[BookingRoomAssignment]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_1

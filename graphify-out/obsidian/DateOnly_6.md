@@ -1,21 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "Admin Booking & Notifications (2)"
+community: "CampCenter.UnitTests / Validators"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Booking__Notifications_2
+  - community/CampCenterUnitTests_/_Validators
 ---
 
 # DateOnly
 
 ## Connections
-- [[.GetBookedRoomIdsInRangeAsync()]] - `references` [EXTRACTED]
-- [[.GetConfirmedEndedAsync()]] - `references` [EXTRACTED]
-- [[.ListLiveChangingOverAsync()]] - `references` [EXTRACTED]
-- [[.ListLiveInRangeAsync()]] - `references` [EXTRACTED]
-- [[.ListLivePresentInAsync()]] - `references` [EXTRACTED]
-- [[.ListUpcomingAsync()]] - `references` [EXTRACTED]
+- [[.GetDayAsync()]] - `references` [EXTRACTED]
+- [[.GetRangeAsync()]] - `references` [EXTRACTED]
+- [[.SetStatusAsync()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_2
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Validators

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Refresh Token Repository"
+community: "Room Closure Management"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Refresh_Token_Repository
+  - community/Room_Closure_Management
 ---
 
 # DateTime
 
 ## Connections
-- [[RefreshToken]] - `references` [EXTRACTED]
+- [[Closure_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Refresh_Token_Repository
+#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management

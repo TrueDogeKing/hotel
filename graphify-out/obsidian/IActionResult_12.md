@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Admin Bookings Controller & DTOs"
+community: "Booking Persistence & Entities (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Bookings_Controller__DTOs
+  - community/Booking_Persistence__Entities_2
 ---
 
 # IActionResult
 
 ## Connections
-- [[.Get()_2]] - `references` [EXTRACTED]
+- [[.P24Status()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Bookings_Controller__DTOs
+#graphify/code #graphify/EXTRACTED #community/Booking_Persistence__Entities_2

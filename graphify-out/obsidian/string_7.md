@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Payment Gateway Integration Tests (1)"
+community: "JWT Token Service"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Payment_Gateway_Integration_Tests_1
+  - community/JWT_Token_Service
 ---
 
 # string
 
 ## Connections
-- [[Przelewy24Client]] - `references` [EXTRACTED]
+- [[RefreshTokenSettings]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Payment_Gateway_Integration_Tests_1
+#graphify/code #graphify/EXTRACTED #community/JWT_Token_Service

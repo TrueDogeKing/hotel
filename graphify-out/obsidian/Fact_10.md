@@ -1,33 +1,24 @@
 ---
 source_file: ""
 type: "code"
-community: "tests / CampCenter.IntegrationTests (1)"
+community: "Room Mix Calculator Tests"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/tests_/_CampCenterIntegrationTests_1
+  - community/Room_Mix_Calculator_Tests
 ---
 
 # Fact
 
 ## Connections
-- [[.BookingMealTimes_DefaultToTheCenterTimes()]] - `references` [EXTRACTED]
-- [[.BulkRetime_PreservesADayChangedIndividually()]] - `references` [EXTRACTED]
-- [[.Calendar_BarSpansFullStayInclusive()]] - `references` [EXTRACTED]
-- [[.DayView_IncludesDepartingGroup()]] - `references` [EXTRACTED]
-- [[.DietaryNotes_AreStoredAndReturnedOnTheGroupSchedule()]] - `references` [EXTRACTED]
-- [[.GenerateMeals_CoversTheStay_AndIsIdempotent()]] - `references` [EXTRACTED]
-- [[.GenerateMeals_DoesNotResurrectADeletedMeal()]] - `references` [EXTRACTED]
-- [[.GenerationUsesTheGroupsOwnTimes_ForMealsAddedLater()]] - `references` [EXTRACTED]
-- [[.MealTimeDefaults_CrudRoundtrip_Works()]] - `references` [EXTRACTED]
-- [[.Meal_WithoutMealKind_IsRejected()]] - `references` [EXTRACTED]
-- [[.PublicSchedule_ByToken_ShowsMenu_ButHidesPrepNotes()]] - `references` [EXTRACTED]
-- [[.ResettingAGroupsMealTime_RestoresTheCenterTime()]] - `references` [EXTRACTED]
-- [[.ScheduleEndpoints_WithoutToken_ReturnUnauthorized()]] - `references` [EXTRACTED]
-- [[.ScheduleEntries_CrudRoundtrip_Works()]] - `references` [EXTRACTED]
-- [[.ScheduleEntry_EndBeforeStart_IsRejected()]] - `references` [EXTRACTED]
-- [[.ScheduleEntry_OnDepartureDay_IsAccepted_ButNotOutsideTheStay()]] - `references` [EXTRACTED]
-- [[.SettingAGroupsMealTime_RejectsEndBeforeStart_AndStaleRowVersion()]] - `references` [EXTRACTED]
-- [[.SettingAGroupsMealTime_RetimesTheWholeStay_ButNotOtherGroups()]] - `references` [EXTRACTED]
+- [[.DistributePeople_FillsAllButLastRoom()]] - `references` [EXTRACTED]
+- [[.SuggestMix_ExactFit_NoShrink()]] - `references` [EXTRACTED]
+- [[.SuggestMix_FallsBackToLargerRoom_WhenNoSmallFits()]] - `references` [EXTRACTED]
+- [[.SuggestMix_ReturnsNull_WhenCapacityInsufficient()]] - `references` [EXTRACTED]
+- [[.SuggestMix_UsesShrinkPass_ForRemainder()]] - `references` [EXTRACTED]
+- [[.ValidateMix_Accepts_TightSelection()]] - `references` [EXTRACTED]
+- [[.ValidateMix_RejectsInsufficientCoverage()]] - `references` [EXTRACTED]
+- [[.ValidateMix_RejectsOverAvailability()]] - `references` [EXTRACTED]
+- [[.ValidateMix_RejectsRedundantRoom()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/tests_/_CampCenterIntegrationTests_1
+#graphify/code #graphify/EXTRACTED #community/Room_Mix_Calculator_Tests

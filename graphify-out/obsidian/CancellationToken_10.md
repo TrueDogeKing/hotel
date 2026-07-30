@@ -1,16 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "Global Exception Handler"
+community: "Auth Controller (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Global_Exception_Handler
+  - community/Auth_Controller_1
 ---
 
 # CancellationToken
 
 ## Connections
-- [[.TryHandleAsync()]] - `references` [EXTRACTED]
+- [[.Login()]] - `references` [EXTRACTED]
+- [[.Logout()]] - `references` [EXTRACTED]
+- [[.Refresh()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Global_Exception_Handler
+#graphify/code #graphify/EXTRACTED #community/Auth_Controller_1

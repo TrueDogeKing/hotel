@@ -1,19 +1,19 @@
 ---
 source_file: "src/CampCenter.Application/DTOs/Schedule/MealTimeDtos.cs"
 type: "code"
-community: "CampCenter.UnitTests / Validators"
+community: "DTOs / Schedule (2)"
 location: "L38"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Validators
+  - community/DTOs_/_Schedule_2
 ---
 
 # DeleteMealTimeDefaultResultDto
 
 ## Connections
-- [[.DeleteAsync()_7]] - `references` [EXTRACTED]
-- [[.DeleteAsync()_9]] - `references` [EXTRACTED]
+- [[.DeleteAsync()_1]] - `references` [EXTRACTED]
+- [[.DeleteAsync()_5]] - `references` [EXTRACTED]
 - [[MealTimeDtos.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Validators
+#graphify/code #graphify/EXTRACTED #community/DTOs_/_Schedule_2

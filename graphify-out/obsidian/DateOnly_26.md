@@ -1,18 +1,21 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.Domain / Repositories (3)"
+community: "CampCenter.UnitTests / Services (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterDomain_/_Repositories_3
+  - community/CampCenterUnitTests_/_Services_2
 ---
 
 # DateOnly
 
 ## Connections
-- [[.CountDoneByDateAsync()]] - `references` [EXTRACTED]
-- [[.GetAsync()_3]] - `references` [EXTRACTED]
-- [[.ListForDateAsync()]] - `references` [EXTRACTED]
+- [[.GetBookedRoomIdsInRangeAsync()_1]] - `references` [EXTRACTED]
+- [[.GetConfirmedEndedAsync()_1]] - `references` [EXTRACTED]
+- [[.ListLiveChangingOverAsync()_1]] - `references` [EXTRACTED]
+- [[.ListLiveInRangeAsync()_1]] - `references` [EXTRACTED]
+- [[.ListLivePresentInAsync()_1]] - `references` [EXTRACTED]
+- [[.ListUpcomingAsync()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterDomain_/_Repositories_3
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_2

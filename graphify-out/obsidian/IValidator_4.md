@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Admin Bookings Controller & DTOs"
+community: "DTOs / Schedule (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Bookings_Controller__DTOs
+  - community/DTOs_/_Schedule_1
 ---
 
 # IValidator
 
 ## Connections
-- [[BookingsController]] - `references` [EXTRACTED]
+- [[ScheduleController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Bookings_Controller__DTOs
+#graphify/code #graphify/EXTRACTED #community/DTOs_/_Schedule_1

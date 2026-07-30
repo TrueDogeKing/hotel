@@ -12,6 +12,7 @@ tags:
 # CampCenter.Infrastructure.Payments
 
 ## Connections
+- [[DependencyInjection.cs_1]] - `imports` [EXTRACTED]
 - [[P24Settings.cs]] - `contains` [EXTRACTED]
 - [[P24SignCalculator.cs]] - `contains` [EXTRACTED]
 - [[P24SignCalculatorTests.cs]] - `imports` [EXTRACTED]

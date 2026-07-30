@@ -1,12 +1,12 @@
 ---
 source_file: "tests/CampCenter.IntegrationTests/CampCenterApiFactory.cs"
 type: "code"
-community: "Integration Test Harness (2)"
+community: "tests / CampCenter.IntegrationTests (1)"
 location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Integration_Test_Harness_2
+  - community/tests_/_CampCenterIntegrationTests_1
 ---
 
 # CampCenterApiFactory
@@ -23,4 +23,4 @@ tags:
 - [[Program]] - `references` [EXTRACTED]
 - [[WebApplicationFactory]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Integration_Test_Harness_2
+#graphify/code #graphify/EXTRACTED #community/tests_/_CampCenterIntegrationTests_1

@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Admin Booking & Notifications (4)"
+community: "Admin Bookings Controller & DTOs"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Booking__Notifications_4
+  - community/Admin_Bookings_Controller__DTOs
 ---
 
 # DateOnly
 
 ## Connections
-- [[.BookingCreated()]] - `references` [EXTRACTED]
-- [[.Format()]] - `references` [EXTRACTED]
+- [[.Get()_2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_4
+#graphify/code #graphify/EXTRACTED #community/Admin_Bookings_Controller__DTOs

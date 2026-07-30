@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Models/BookingSettings.cs"
 type: "code"
-community: "Rate Limiting & Startup"
+community: "Admin Booking & Notifications (4)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Rate_Limiting__Startup
+  - community/Admin_Booking__Notifications_4
 ---
 
 # BookingSettings.cs
@@ -15,4 +15,4 @@ tags:
 - [[BookingSettings]] - `contains` [EXTRACTED]
 - [[CampCenter.Application.Models]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Rate_Limiting__Startup
+#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_4

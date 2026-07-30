@@ -1,19 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Admin Booking & Notifications (2)"
+community: "CampCenter.UnitTests / Services (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Booking__Notifications_2
+  - community/CampCenterUnitTests_/_Services_2
 ---
 
 # Guid
 
 ## Connections
-- [[.GetBookedRoomIdsInRangeAsync()]] - `references` [EXTRACTED]
-- [[.GetByIdAsync()_8]] - `references` [EXTRACTED]
-- [[.GetCompletedPaymentKindsAsync()]] - `references` [EXTRACTED]
-- [[.GetPaymentsAsync()]] - `references` [EXTRACTED]
+- [[Booking]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_2
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_2

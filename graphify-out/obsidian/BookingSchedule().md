@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/components/BookingSchedule.tsx"
 type: "code"
-community: "components / admin"
+community: "Public Booking Frontend (1)"
 location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/components_/_admin
+  - community/Public_Booking_Frontend_1
 ---
 
 # BookingSchedule()
@@ -17,4 +17,4 @@ tags:
 - [[getBookingSchedule()_1]] - `calls` [EXTRACTED]
 - [[toTimeInput()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/components_/_admin
+#graphify/code #graphify/EXTRACTED #community/Public_Booking_Frontend_1

@@ -1,18 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Auth Controller (1)"
+community: "Admin Bookings Controller & DTOs"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Auth_Controller_1
+  - community/Admin_Bookings_Controller__DTOs
 ---
 
 # Task
 
 ## Connections
-- [[.Login()]] - `references` [EXTRACTED]
-- [[.Logout()]] - `references` [EXTRACTED]
-- [[.Refresh()]] - `references` [EXTRACTED]
+- [[.Get()_2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Auth_Controller_1
+#graphify/code #graphify/EXTRACTED #community/Admin_Bookings_Controller__DTOs

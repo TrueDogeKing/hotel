@@ -11,6 +11,7 @@ tags:
 # List
 
 ## Connections
-- [[.ListAsync()_4]] - `references` [EXTRACTED]
+- [[.GetAssignableRoomsAsync()]] - `references` [EXTRACTED]
+- [[.ListAsync()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Admin_Bookings_Controller__DTOs

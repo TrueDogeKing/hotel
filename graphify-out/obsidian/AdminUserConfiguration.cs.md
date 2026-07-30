@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Persistence/Configurations/AdminUserConfiguration.cs"
 type: "code"
-community: "Admin User & Token Config"
+community: "Persistence / Configurations"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_User__Token_Config
+  - community/Persistence_/_Configurations
 ---
 
 # AdminUserConfiguration.cs
@@ -16,4 +16,4 @@ tags:
 - [[CampCenter.Domain.Entities]] - `imports` [EXTRACTED]
 - [[CampCenter.Infrastructure.Persistence.Configurations]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_User__Token_Config
+#graphify/code #graphify/EXTRACTED #community/Persistence_/_Configurations

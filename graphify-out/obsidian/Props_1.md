@@ -1,17 +1,17 @@
 ---
-source_file: "frontend/src/components/Select.tsx"
+source_file: "frontend/src/components/ConfirmDialog.tsx"
 type: "code"
-community: "Select Component"
-location: "L8"
+community: "CampCenter.Application / Services (3)"
+location: "L3"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Select_Component
+  - community/CampCenterApplication_/_Services_3
 ---
 
 # Props
 
 ## Connections
-- [[Select.tsx]] - `contains` [EXTRACTED]
+- [[ConfirmDialog.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Select_Component
+#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_3

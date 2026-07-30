@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/api/admin.ts"
 type: "code"
-community: "src / api (1)"
-location: "L548"
+community: "src / api (2)"
+location: "L581"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/src_/_api_1
+  - community/src_/_api_2
 ---
 
 # deleteScheduleEntry()
@@ -15,4 +15,4 @@ tags:
 - [[GroupSchedulePanel.tsx]] - `imports` [EXTRACTED]
 - [[admin.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/src_/_api_1
+#graphify/code #graphify/EXTRACTED #community/src_/_api_2

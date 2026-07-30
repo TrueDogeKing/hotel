@@ -1,13 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "Unlabeled (28)"
+community: "Admin Booking & Notifications (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Unlabeled_28
+  - community/Admin_Booking__Notifications_2
 ---
 
 # Task
 
-#graphify/code #graphify/EXTRACTED #community/Unlabeled_28
+## Connections
+- [[.RegisterTransactionAsync()_1]] - `references` [EXTRACTED]
+- [[.VerifyTransactionAsync()_1]] - `references` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_2

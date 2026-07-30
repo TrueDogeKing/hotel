@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Booking Persistence & Entities (1)"
+community: "Room Task Management (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Booking_Persistence__Entities_1
+  - community/Room_Task_Management_1
 ---
 
 # Dictionary
 
 ## Connections
-- [[.GetCompletedPaymentKindsAsync()_1]] - `references` [EXTRACTED]
+- [[.CountOpenByRoomAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Booking_Persistence__Entities_1
+#graphify/code #graphify/EXTRACTED #community/Room_Task_Management_1

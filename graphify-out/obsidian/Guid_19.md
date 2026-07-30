@@ -1,16 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "Booking Persistence & Entities (4)"
+community: "Room Closure Management"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Booking_Persistence__Entities_4
+  - community/Room_Closure_Management
 ---
 
 # Guid
 
 ## Connections
-- [[BookingRoomAssignment]] - `references` [EXTRACTED]
+- [[.DeleteAsync()_4]] - `references` [EXTRACTED]
+- [[.GetOrThrowAsync()_1]] - `references` [EXTRACTED]
+- [[.GuardNoLiveBookingsAsync()]] - `references` [EXTRACTED]
+- [[.GuardRoomExistsAsync()]] - `references` [EXTRACTED]
+- [[.UpdateAsync()_3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Booking_Persistence__Entities_4
+#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management

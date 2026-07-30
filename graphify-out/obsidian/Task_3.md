@@ -1,19 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Room Management"
+community: "Admin Bookings Controller & DTOs"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Management
+  - community/Admin_Bookings_Controller__DTOs
 ---
 
 # Task
 
 ## Connections
-- [[.Create()]] - `references` [EXTRACTED]
-- [[.Delete()]] - `references` [EXTRACTED]
-- [[.GetAll()]] - `references` [EXTRACTED]
-- [[.Update()]] - `references` [EXTRACTED]
+- [[.Get()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Management
+#graphify/code #graphify/EXTRACTED #community/Admin_Bookings_Controller__DTOs

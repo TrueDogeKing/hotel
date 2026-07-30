@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Validators/ClosureValidators.cs"
 type: "code"
-community: "CampCenter.Application / Services (1)"
+community: "Room Closure Management"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterApplication_/_Services_1
+  - community/Room_Closure_Management
 ---
 
 # CreateClosureRequestValidator
@@ -17,4 +17,4 @@ tags:
 - [[ClosureValidatorsTests]] - `references` [EXTRACTED]
 - [[CreateClosureRequestDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_1
+#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management

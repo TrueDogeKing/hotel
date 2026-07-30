@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Public Booking Service (1)"
+community: "Room Management"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public_Booking_Service_1
+  - community/Room_Management
 ---
 
 # IValidator
 
 ## Connections
-- [[PublicBookingsController]] - `references` [EXTRACTED]
+- [[RoomsController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_1
+#graphify/code #graphify/EXTRACTED #community/Room_Management

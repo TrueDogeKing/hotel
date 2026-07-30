@@ -1,17 +1,17 @@
 ---
-source_file: "frontend/src/components/admin/GroupSchedulePanel.tsx"
+source_file: "frontend/src/components/admin/GroupRooms.tsx"
 type: "code"
-community: "src / api (1)"
-location: "L27"
+community: "Payment Gateway Integration Tests (2)"
+location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/src_/_api_1
+  - community/Payment_Gateway_Integration_Tests_2
 ---
 
 # Props
 
 ## Connections
-- [[GroupSchedulePanel.tsx]] - `contains` [EXTRACTED]
+- [[GroupRooms.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/src_/_api_1
+#graphify/code #graphify/EXTRACTED #community/Payment_Gateway_Integration_Tests_2

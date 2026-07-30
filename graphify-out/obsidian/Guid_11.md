@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Auth Service & Tokens"
+community: "CampCenter.UnitTests / Validators"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Auth_Service__Tokens
+  - community/CampCenterUnitTests_/_Validators
 ---
 
 # Guid
 
 ## Connections
-- [[.CreateTokenEntity()]] - `references` [EXTRACTED]
+- [[.SetStatusAsync()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Auth_Service__Tokens
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Validators

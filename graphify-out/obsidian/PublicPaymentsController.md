@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Api/Controllers/Public/PublicPaymentsController.cs"
 type: "code"
-community: "Payment Gateway Integration Tests (1)"
+community: "Admin Bookings Controller & DTOs"
 location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Payment_Gateway_Integration_Tests_1
+  - community/Admin_Bookings_Controller__DTOs
 ---
 
 # PublicPaymentsController
@@ -17,4 +17,4 @@ tags:
 - [[IPaymentService]] - `references` [EXTRACTED]
 - [[PublicPaymentsController.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Payment_Gateway_Integration_Tests_1
+#graphify/code #graphify/EXTRACTED #community/Admin_Bookings_Controller__DTOs

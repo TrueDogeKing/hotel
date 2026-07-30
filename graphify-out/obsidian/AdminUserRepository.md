@@ -12,9 +12,9 @@ tags:
 # AdminUserRepository
 
 ## Connections
-- [[.GetByIdAsync()_4]] - `method` [EXTRACTED]
+- [[.GetByIdAsync()_7]] - `method` [EXTRACTED]
 - [[.GetByLoginAsync()_1]] - `method` [EXTRACTED]
-- [[.SaveChangesAsync()_5]] - `method` [EXTRACTED]
+- [[.SaveChangesAsync()_10]] - `method` [EXTRACTED]
 - [[AdminUserRepository.cs]] - `contains` [EXTRACTED]
 - [[AppDbContext]] - `references` [EXTRACTED]
 - [[IAdminUserRepository]] - `implements` [EXTRACTED]

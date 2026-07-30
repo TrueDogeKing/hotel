@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[.CancelByTokenAsync()]] - `method` [EXTRACTED]
-- [[.CreateAsync()_7]] - `method` [EXTRACTED]
+- [[.CreateAsync()_1]] - `method` [EXTRACTED]
 - [[.GetByTokenAsync()]] - `method` [EXTRACTED]
 - [[.GetScheduleByTokenAsync()]] - `method` [EXTRACTED]
 - [[BookingService]] - `implements` [EXTRACTED]

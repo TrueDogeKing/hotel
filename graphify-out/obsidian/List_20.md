@@ -1,16 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "Room Task Management (1)"
+community: "Room Closure Management"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Task_Management_1
+  - community/Room_Closure_Management
 ---
 
 # List
 
 ## Connections
-- [[.ListAsync()_3]] - `references` [EXTRACTED]
+- [[.GetAllAsync()_6]] - `references` [EXTRACTED]
+- [[.GetOverlappingAsync()]] - `references` [EXTRACTED]
+- [[.GetUpcomingCenterWideAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Task_Management_1
+#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management

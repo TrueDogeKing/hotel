@@ -1,13 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Unlabeled (25)"
+community: "tests / CampCenter.IntegrationTests (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Unlabeled_25
+  - community/tests_/_CampCenterIntegrationTests_1
 ---
 
 # Capacity
 
-#graphify/code #graphify/EXTRACTED #community/Unlabeled_25
+## Connections
+- [[.SetUpRoomsAsync()]] - `references` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/tests_/_CampCenterIntegrationTests_1

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/CampCenter.UnitTests/Validators/ScheduleValidatorsTests.cs"
 type: "code"
-community: "CampCenter.UnitTests / Validators"
+community: "DTOs / Schedule (2)"
 location: "L154"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Validators
+  - community/DTOs_/_Schedule_2
 ---
 
 # MealTimeValidatorsTests
@@ -22,4 +22,4 @@ tags:
 - [[CreateMealTimeDefaultRequestValidator]] - `references` [EXTRACTED]
 - [[ScheduleValidatorsTests.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Validators
+#graphify/code #graphify/EXTRACTED #community/DTOs_/_Schedule_2

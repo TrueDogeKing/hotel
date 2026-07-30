@@ -1,18 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "Admin User & Token Config"
+community: "Auth Service & Tokens"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_User__Token_Config
+  - community/Auth_Service__Tokens
 ---
 
 # CancellationToken
 
 ## Connections
-- [[.GetByIdAsync()]] - `references` [EXTRACTED]
-- [[.GetByLoginAsync()]] - `references` [EXTRACTED]
-- [[.SaveChangesAsync()]] - `references` [EXTRACTED]
+- [[.IssueTokensAsync()]] - `references` [EXTRACTED]
+- [[.LoginAsync()_1]] - `references` [EXTRACTED]
+- [[.LogoutAsync()_1]] - `references` [EXTRACTED]
+- [[.RefreshAsync()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_User__Token_Config
+#graphify/code #graphify/EXTRACTED #community/Auth_Service__Tokens

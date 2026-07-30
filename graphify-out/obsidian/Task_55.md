@@ -1,29 +1,21 @@
 ---
 source_file: ""
 type: "code"
-community: "DTOs / Schedule (1)"
+community: "Room Closure Management"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DTOs_/_Schedule_1
+  - community/Room_Closure_Management
 ---
 
 # Task
 
 ## Connections
-- [[.CheckConflicts()]] - `references` [EXTRACTED]
-- [[.CreateEntry()]] - `references` [EXTRACTED]
-- [[.DeleteBookingMeals()]] - `references` [EXTRACTED]
-- [[.DeleteEntry()]] - `references` [EXTRACTED]
-- [[.GenerateMeals()]] - `references` [EXTRACTED]
-- [[.GenerateMissingMeals()]] - `references` [EXTRACTED]
-- [[.GetBookingMealTimes()]] - `references` [EXTRACTED]
-- [[.GetCalendar()]] - `references` [EXTRACTED]
-- [[.GetDay()_1]] - `references` [EXTRACTED]
-- [[.GetForBooking()]] - `references` [EXTRACTED]
-- [[.GetLocations()]] - `references` [EXTRACTED]
-- [[.ResetBookingMealTime()]] - `references` [EXTRACTED]
-- [[.SetBookingMealTime()]] - `references` [EXTRACTED]
-- [[.UpdateEntry()]] - `references` [EXTRACTED]
+- [[.AddAsync()_11]] - `references` [EXTRACTED]
+- [[.GetAllAsync()_9]] - `references` [EXTRACTED]
+- [[.GetByIdAsync()_9]] - `references` [EXTRACTED]
+- [[.GetOverlappingAsync()_1]] - `references` [EXTRACTED]
+- [[.GetUpcomingCenterWideAsync()_1]] - `references` [EXTRACTED]
+- [[.SaveChangesAsync()_13]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DTOs_/_Schedule_1
+#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management

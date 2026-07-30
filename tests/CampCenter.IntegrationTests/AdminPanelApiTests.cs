@@ -129,6 +129,131 @@ public class AdminPanelApiTests : IntegrationTestBase
         );
     }
 
+    /// The room-move panel offers exactly what a reassign would accept: the group's
+    /// own rooms, plus rooms free for the whole stay — never a room another group
+    /// holds or a closure blocks.
+    [Fact]
+    public async Task AssignableRooms_OffersOwnAndFreeRooms_ButNotTakenOrClosedOnes()
+    {
+        var admin = await CreateAuthenticatedClientAsync();
+
+        // Capacity 11 is unique to this test (the room inventory is shared).
+        var roomIds = new List<Guid>();
+        foreach (var number in new[] { "AR-1", "AR-2", "AR-3", "AR-4" })
+        {
+            var created = await admin.PostAsJsonAsync(
+                "/api/admin/rooms",
+                new CreateRoomRequestDto(number, 11, null)
+            );
+            roomIds.Add((await created.Content.ReadFromJsonAsync<RoomDto>())!.Id);
+        }
+
+        var start = new DateOnly(2035, 6, 1);
+        var end = new DateOnly(2035, 6, 8);
+
+        // The group under test takes one 11-bed room…
+        var create = await CreateClient()
+            .PostAsJsonAsync(
+                "/api/public/bookings",
+                new CreateBookingRequestDto(
+                    start,
+                    end,
+                    11,
+                    new Dictionary<int, int> { [11] = 1 },
+                    "AR Org",
+                    "Ola Testowa",
+                    "ar@example.com",
+                    "+48 500 500 501",
+                    null,
+                    "pl"
+                )
+            );
+        Assert.Equal(HttpStatusCode.Created, create.StatusCode);
+
+        // …a second group takes another over an overlapping range…
+        var rival = await CreateClient()
+            .PostAsJsonAsync(
+                "/api/public/bookings",
+                new CreateBookingRequestDto(
+                    start.AddDays(2),
+                    end.AddDays(2),
+                    11,
+                    new Dictionary<int, int> { [11] = 1 },
+                    "AR Rival",
+                    "Jan Testowy",
+                    "ar-rival@example.com",
+                    "+48 500 500 502",
+                    null,
+                    "pl"
+                )
+            );
+        Assert.Equal(HttpStatusCode.Created, rival.StatusCode);
+
+        var bookings = (
+            await admin.GetFromJsonAsync<List<AdminBookingDto>>("/api/admin/bookings")
+        )!;
+        var booking = Assert.Single(bookings, b => b.OrganizationName == "AR Org");
+        var ownRoomId = Assert.Single(booking.Assignments).RoomId;
+        var rivalRoomId = Assert
+            .Single(bookings, b => b.OrganizationName == "AR Rival")
+            .Assignments.Single()
+            .RoomId;
+
+        // …a third is closed for maintenance across part of the stay, and a fourth is
+        // left free, so there is something to move into.
+        var spare = roomIds.Where(id => id != ownRoomId && id != rivalRoomId).ToList();
+        Assert.Equal(2, spare.Count);
+        var closureRoomId = spare[0];
+        var freeRoomId = spare[1];
+        var closure = await admin.PostAsJsonAsync(
+            "/api/admin/closures",
+            new CampCenter.Application.DTOs.Closures.CreateClosureRequestDto(
+                "Remont",
+                start.AddDays(1),
+                start.AddDays(3),
+                RoomId: closureRoomId
+            )
+        );
+        Assert.Equal(HttpStatusCode.Created, closure.StatusCode);
+
+        var assignable = (
+            await admin.GetFromJsonAsync<List<AssignableRoomDto>>(
+                $"/api/admin/bookings/{booking.Id}/assignable-rooms"
+            )
+        )!;
+
+        // Its own room is offered and flagged as held; the rival's and the closed one
+        // are not offered at all.
+        var own = Assert.Single(assignable, r => r.RoomId == ownRoomId);
+        Assert.True(own.Assigned);
+        Assert.Equal(11, own.Capacity);
+        Assert.DoesNotContain(assignable, r => r.RoomId == rivalRoomId);
+        Assert.DoesNotContain(assignable, r => r.RoomId == closureRoomId);
+
+        // Everything offered is genuinely assignable: moving into one is accepted.
+        var target = Assert.Single(assignable, r => r.RoomId == freeRoomId);
+        Assert.False(target.Assigned);
+        var move = await admin.PutAsJsonAsync(
+            $"/api/admin/bookings/{booking.Id}/assignments",
+            new ReassignBookingRequestDto([new ReassignmentEntryDto(target.RoomId, 11)])
+        );
+        Assert.True(
+            move.StatusCode == HttpStatusCode.OK,
+            $"Move failed: {move.StatusCode} {await move.Content.ReadAsStringAsync()}"
+        );
+        var moved = (await move.Content.ReadFromJsonAsync<AdminBookingDto>())!;
+        Assert.Equal(target.RoomId, Assert.Single(moved.Assignments).RoomId);
+
+        // The room just vacated is offered again, no longer flagged as held.
+        var after = (
+            await admin.GetFromJsonAsync<List<AssignableRoomDto>>(
+                $"/api/admin/bookings/{booking.Id}/assignable-rooms"
+            )
+        )!;
+        Assert.False(Assert.Single(after, r => r.RoomId == ownRoomId).Assigned);
+        Assert.True(Assert.Single(after, r => r.RoomId == target.RoomId).Assigned);
+    }
+
     [Fact]
     public async Task Closure_BlocksRoom_InOccupancyGrid()
     {

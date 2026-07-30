@@ -1,19 +1,22 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.UnitTests / Validators"
+community: "Room Management"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Validators
+  - community/Room_Management
 ---
 
 # Task
 
 ## Connections
-- [[.CreateAsync()_9]] - `references` [EXTRACTED]
-- [[.DeleteAsync()_7]] - `references` [EXTRACTED]
-- [[.GetAllAsync()_9]] - `references` [EXTRACTED]
-- [[.UpdateAsync()_5]] - `references` [EXTRACTED]
+- [[.AddAsync()_15]] - `references` [EXTRACTED]
+- [[.GetActiveAsync()_3]] - `references` [EXTRACTED]
+- [[.GetAllAsync()_11]] - `references` [EXTRACTED]
+- [[.GetByIdAsync()_11]] - `references` [EXTRACTED]
+- [[.GetByNumberAsync()_1]] - `references` [EXTRACTED]
+- [[.HasAssignmentsAsync()_1]] - `references` [EXTRACTED]
+- [[.SaveChangesAsync()_17]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Validators
+#graphify/code #graphify/EXTRACTED #community/Room_Management

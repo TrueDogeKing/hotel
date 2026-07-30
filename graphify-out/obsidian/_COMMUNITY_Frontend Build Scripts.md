@@ -1,12 +1,10 @@
 ---
 type: community
-cohesion: 0.29
 members: 7
 ---
 
 # Frontend Build Scripts
 
-**Cohesion:** 0.29 - loosely connected
 **Members:** 7 nodes
 
 ## Members

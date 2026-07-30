@@ -1,17 +1,23 @@
 ---
 source_file: ""
 type: "code"
-community: "Room Management"
+community: "DTOs / Schedule (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Management
+  - community/DTOs_/_Schedule_1
 ---
 
 # Guid
 
 ## Connections
-- [[.DeleteAsync()_4]] - `references` [EXTRACTED]
-- [[.UpdateAsync()_3]] - `references` [EXTRACTED]
+- [[.DeleteBookingMealsAsync()]] - `references` [EXTRACTED]
+- [[.DeleteEntryAsync()]] - `references` [EXTRACTED]
+- [[.GenerateMealsForBookingAsync()]] - `references` [EXTRACTED]
+- [[.GetBookingMealTimesAsync()]] - `references` [EXTRACTED]
+- [[.GetForBookingAsync()]] - `references` [EXTRACTED]
+- [[.ResetBookingMealTimeAsync()]] - `references` [EXTRACTED]
+- [[.SetBookingMealTimeAsync()]] - `references` [EXTRACTED]
+- [[.UpdateEntryAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Management
+#graphify/code #graphify/EXTRACTED #community/DTOs_/_Schedule_1

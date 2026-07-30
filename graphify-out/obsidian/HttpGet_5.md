@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Public Booking Service (1)"
+community: "Admin Bookings Controller & DTOs"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public_Booking_Service_1
+  - community/Admin_Bookings_Controller__DTOs
 ---
 
 # HttpGet
 
 ## Connections
-- [[.GetByToken()]] - `references` [EXTRACTED]
-- [[.GetScheduleByToken()]] - `references` [EXTRACTED]
+- [[.Get()_2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_1
+#graphify/code #graphify/EXTRACTED #community/Admin_Bookings_Controller__DTOs

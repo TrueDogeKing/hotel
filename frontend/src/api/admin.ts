@@ -138,8 +138,41 @@ export async function getAdminBookings(filters: { status?: string }): Promise<Ad
   return data;
 }
 
+export async function getAdminBooking(id: string): Promise<AdminBooking> {
+  const { data } = await api.get<AdminBooking>(`/admin/bookings/${id}`);
+  return data;
+}
+
 export async function cancelAdminBooking(id: string): Promise<void> {
   await api.post(`/admin/bookings/${id}/cancel`);
+}
+
+/** A room this group may occupy: free of other groups and closures for the whole
+ *  stay. Its own rooms come back too, flagged `assigned`. */
+export interface AssignableRoom {
+  roomId: string;
+  roomNumber: string;
+  capacity: number;
+  assigned: boolean;
+}
+
+export async function getAssignableRooms(bookingId: string): Promise<AssignableRoom[]> {
+  const { data } = await api.get<AssignableRoom[]>(
+    `/admin/bookings/${bookingId}/assignable-rooms`,
+  );
+  return data;
+}
+
+/** Replaces the group's rooms wholesale; the people counts have to add up to the
+ *  headcount. A room another group has taken meanwhile comes back as a 409. */
+export async function reassignBooking(
+  bookingId: string,
+  assignments: { roomId: string; peopleCount: number }[],
+): Promise<AdminBooking> {
+  const { data } = await api.put<AdminBooking>(`/admin/bookings/${bookingId}/assignments`, {
+    assignments,
+  });
+  return data;
 }
 
 export type BookingStatus = AdminBooking["status"];

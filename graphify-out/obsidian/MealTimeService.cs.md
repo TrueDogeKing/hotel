@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Services/MealTimeService.cs"
 type: "code"
-community: "Domain & Infra Namespaces"
+community: "Application Namespaces & DTOs"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Domain__Infra_Namespaces
+  - community/Application_Namespaces__DTOs
 ---
 
 # MealTimeService.cs
@@ -16,7 +16,8 @@ tags:
 - [[CampCenter.Application.Interfaces]] - `imports` [EXTRACTED]
 - [[CampCenter.Application.Services]] - `contains` [EXTRACTED]
 - [[CampCenter.Domain.Entities]] - `imports` [EXTRACTED]
+- [[CampCenter.Domain.Exceptions]] - `imports` [EXTRACTED]
 - [[CampCenter.Domain.Repositories]] - `imports` [EXTRACTED]
 - [[MealTimeService]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Domain__Infra_Namespaces
+#graphify/code #graphify/EXTRACTED #community/Application_Namespaces__DTOs

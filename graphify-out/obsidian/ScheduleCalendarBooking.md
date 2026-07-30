@@ -2,7 +2,7 @@
 source_file: "frontend/src/api/admin.ts"
 type: "code"
 community: "src / api (1)"
-location: "L386"
+location: "L419"
 tags:
   - graphify/code
   - graphify/EXTRACTED

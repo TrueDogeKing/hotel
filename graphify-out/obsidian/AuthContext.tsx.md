@@ -12,9 +12,13 @@ tags:
 # AuthContext.tsx
 
 ## Connections
+- [[AdminDashboardPage.tsx]] - `imports_from` [EXTRACTED]
+- [[AdminLayout.tsx]] - `imports_from` [EXTRACTED]
+- [[App.tsx]] - `imports_from` [EXTRACTED]
 - [[AuthContext]] - `contains` [EXTRACTED]
 - [[AuthContextValue]] - `contains` [EXTRACTED]
 - [[AuthProvider()]] - `contains` [EXTRACTED]
+- [[LoginPage.tsx]] - `imports_from` [EXTRACTED]
 - [[LoginRequest]] - `imports` [EXTRACTED]
 - [[ProtectedRoute.tsx]] - `imports_from` [EXTRACTED]
 - [[auth.ts]] - `imports_from` [EXTRACTED]

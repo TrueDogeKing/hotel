@@ -1,17 +1,17 @@
 ---
-source_file: "frontend/src/pages/admin/RoomsPage.tsx"
+source_file: "frontend/src/pages/admin/ClosuresPage.tsx"
 type: "code"
-community: "Admin Frontend Pages"
-location: "L13"
+community: "src / api (1)"
+location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Frontend_Pages
+  - community/src_/_api_1
 ---
 
 # emptyForm
 
 ## Connections
-- [[RoomsPage.tsx]] - `contains` [EXTRACTED]
+- [[ClosuresPage.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Frontend_Pages
+#graphify/code #graphify/EXTRACTED #community/src_/_api_1

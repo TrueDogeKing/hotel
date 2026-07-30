@@ -22,7 +22,7 @@ tags:
 - [[AuthController.cs]] - `contains` [EXTRACTED]
 - [[ControllerBase]] - `inherits` [EXTRACTED]
 - [[IAuthService]] - `references` [EXTRACTED]
-- [[IValidator_2]] - `references` [EXTRACTED]
+- [[IValidator_5]] - `references` [EXTRACTED]
 - [[RefreshTokenSettings]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Auth_Controller_1

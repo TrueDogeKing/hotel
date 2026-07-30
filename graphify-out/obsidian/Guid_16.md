@@ -1,19 +1,22 @@
 ---
 source_file: ""
 type: "code"
-community: "Room Task Management (1)"
+community: "Admin Booking & Notifications (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Task_Management_1
+  - community/Admin_Booking__Notifications_1
 ---
 
 # Guid
 
 ## Connections
-- [[.CreateAsync()_5]] - `references` [EXTRACTED]
-- [[.DeleteAsync()_5]] - `references` [EXTRACTED]
-- [[.ListAsync()_1]] - `references` [EXTRACTED]
-- [[.SetStatusAsync()_1]] - `references` [EXTRACTED]
+- [[.CancelAsync()_1]] - `references` [EXTRACTED]
+- [[.GetAssignableRoomsAsync()_1]] - `references` [EXTRACTED]
+- [[.GetAsync()_1]] - `references` [EXTRACTED]
+- [[.GetOrThrowAsync()]] - `references` [EXTRACTED]
+- [[.ReassignAsync()_1]] - `references` [EXTRACTED]
+- [[.SetStatusAsync()_3]] - `references` [EXTRACTED]
+- [[.UpdateDietaryNotesAsync()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Task_Management_1
+#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_1

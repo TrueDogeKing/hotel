@@ -1,23 +1,23 @@
 ---
 source_file: "src/CampCenter.Application/Interfaces/IClosureService.cs"
 type: "code"
-community: "CampCenter.Application / Services (1)"
+community: "Room Closure Management"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterApplication_/_Services_1
+  - community/Room_Closure_Management
 ---
 
 # IClosureService
 
 ## Connections
-- [[.CreateAsync()_8]] - `method` [EXTRACTED]
-- [[.DeleteAsync()_6]] - `method` [EXTRACTED]
-- [[.GetAllAsync()_8]] - `method` [EXTRACTED]
-- [[.UpdateAsync()_4]] - `method` [EXTRACTED]
+- [[.CreateAsync()_2]] - `method` [EXTRACTED]
+- [[.DeleteAsync()]] - `method` [EXTRACTED]
+- [[.GetAllAsync()]] - `method` [EXTRACTED]
+- [[.UpdateAsync()]] - `method` [EXTRACTED]
 - [[ClosureService]] - `implements` [EXTRACTED]
 - [[ClosuresController]] - `references` [EXTRACTED]
 - [[IClosureService.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_1
+#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management

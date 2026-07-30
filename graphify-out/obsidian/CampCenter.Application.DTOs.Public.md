@@ -1,20 +1,29 @@
 ---
 source_file: "src/CampCenter.Application/DTOs/Public/PublicDtos.cs"
 type: "code"
-community: "Room Mix Calculator Tests"
+community: "Integration Test Harness (1)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Mix_Calculator_Tests
+  - community/Integration_Test_Harness_1
 ---
 
 # CampCenter.Application.DTOs.Public
 
 ## Connections
+- [[AdminPanelApiTests.cs]] - `imports` [EXTRACTED]
 - [[AvailabilityService.cs]] - `imports` [EXTRACTED]
+- [[BookingService.cs]] - `imports` [EXTRACTED]
+- [[CreateBookingRequestValidator.cs]] - `imports` [EXTRACTED]
 - [[IAvailabilityService.cs]] - `imports` [EXTRACTED]
+- [[IBookingService.cs]] - `imports` [EXTRACTED]
 - [[IPaymentService.cs]] - `imports` [EXTRACTED]
+- [[PaymentsApiTests.cs]] - `imports` [EXTRACTED]
+- [[PublicAvailabilityController.cs]] - `imports` [EXTRACTED]
+- [[PublicBookingApiTests.cs]] - `imports` [EXTRACTED]
+- [[PublicBookingsController.cs]] - `imports` [EXTRACTED]
 - [[PublicDtos.cs]] - `contains` [EXTRACTED]
+- [[ScheduleApiTests.cs]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Mix_Calculator_Tests
+#graphify/code #graphify/EXTRACTED #community/Integration_Test_Harness_1

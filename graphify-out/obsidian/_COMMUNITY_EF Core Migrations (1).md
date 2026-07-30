@@ -1,12 +1,10 @@
 ---
 type: community
-cohesion: 0.20
 members: 10
 ---
 
 # EF Core Migrations (1)
 
-**Cohesion:** 0.20 - loosely connected
 **Members:** 10 nodes
 
 ## Members
@@ -18,7 +16,7 @@ members: 10
 - [[CampCenter.Infrastructure.Persistence.Migrations]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/20260719142059_InitialAuth.Designer.cs
 - [[InitialAuth]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/20260719142059_InitialAuth.Designer.cs
 - [[ModelBuilder_1]] - code
-- [[ModelBuilder_10]] - code
+- [[ModelBuilder_9]] - code
 - [[RoomCleanings]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/20260729224623_RoomCleanings.Designer.cs
 
 ## Live Query (requires Dataview plugin)
@@ -33,13 +31,13 @@ SORT file.name ASC
 - 1 edge to [[_COMMUNITY_EF Core Migrations (4)]]
 - 1 edge to [[_COMMUNITY_EF Core Migrations (5)]]
 - 1 edge to [[_COMMUNITY_Persistence  Migrations (1)]]
-- 1 edge to [[_COMMUNITY_Persistence  Migrations (8)]]
+- 1 edge to [[_COMMUNITY_20260721111400_ReplaceSessionsWithClosures.Designer.cs]]
 - 1 edge to [[_COMMUNITY_Persistence  Migrations (2)]]
 - 1 edge to [[_COMMUNITY_Persistence  Migrations (9)]]
 - 1 edge to [[_COMMUNITY_Persistence  Migrations (3)]]
 - 1 edge to [[_COMMUNITY_Persistence  Migrations (10)]]
 - 1 edge to [[_COMMUNITY_Persistence  Migrations (4)]]
-- 1 edge to [[_COMMUNITY_Persistence  Migrations (11)]]
+- 1 edge to [[_COMMUNITY_20260728105506_PerGroupMealTimes.Designer.cs]]
 - 1 edge to [[_COMMUNITY_Persistence  Migrations (5)]]
 - 1 edge to [[_COMMUNITY_Persistence  Migrations (12)]]
 - 1 edge to [[_COMMUNITY_Persistence  Migrations (6)]]

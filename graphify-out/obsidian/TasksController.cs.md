@@ -13,6 +13,7 @@ tags:
 
 ## Connections
 - [[CampCenter.Api.Controllers.Admin]] - `contains` [EXTRACTED]
+- [[CampCenter.Api.Extensions]] - `imports` [EXTRACTED]
 - [[CampCenter.Application.DTOs.AdminPanel]] - `imports` [EXTRACTED]
 - [[CampCenter.Application.Interfaces]] - `imports` [EXTRACTED]
 - [[CampCenter.Domain.Entities]] - `imports` [EXTRACTED]

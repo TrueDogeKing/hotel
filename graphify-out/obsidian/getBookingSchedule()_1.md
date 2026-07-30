@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/api/public.ts"
 type: "code"
-community: "components / admin"
+community: "Public Booking Frontend (1)"
 location: "L131"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/components_/_admin
+  - community/Public_Booking_Frontend_1
 ---
 
 # getBookingSchedule()
@@ -16,4 +16,4 @@ tags:
 - [[BookingSchedule.tsx]] - `imports` [EXTRACTED]
 - [[public.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/components_/_admin
+#graphify/code #graphify/EXTRACTED #community/Public_Booking_Frontend_1

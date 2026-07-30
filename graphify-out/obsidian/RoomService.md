@@ -12,12 +12,12 @@ tags:
 # RoomService
 
 ## Connections
-- [[.CreateAsync()_4]] - `method` [EXTRACTED]
-- [[.DeleteAsync()_4]] - `method` [EXTRACTED]
-- [[.GetAllAsync()_3]] - `method` [EXTRACTED]
-- [[.SaveWithConcurrencyCheckAsync()_1]] - `method` [EXTRACTED]
-- [[.ToDto()_1]] - `method` [EXTRACTED]
-- [[.UpdateAsync()_3]] - `method` [EXTRACTED]
+- [[.CreateAsync()_10]] - `method` [EXTRACTED]
+- [[.DeleteAsync()_6]] - `method` [EXTRACTED]
+- [[.GetAllAsync()_5]] - `method` [EXTRACTED]
+- [[.SaveWithConcurrencyCheckAsync()]] - `method` [EXTRACTED]
+- [[.ToDto()_3]] - `method` [EXTRACTED]
+- [[.UpdateAsync()_5]] - `method` [EXTRACTED]
 - [[IRoomRepository]] - `references` [EXTRACTED]
 - [[IRoomService]] - `implements` [EXTRACTED]
 - [[RoomService.cs]] - `contains` [EXTRACTED]

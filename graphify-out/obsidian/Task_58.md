@@ -1,18 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "DTOs / AdminPanel"
+community: "Integration Test Harness (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DTOs_/_AdminPanel
+  - community/Integration_Test_Harness_2
 ---
 
 # Task
 
 ## Connections
-- [[.GetDayAsync()]] - `references` [EXTRACTED]
-- [[.GetRangeAsync()]] - `references` [EXTRACTED]
-- [[.SetStatusAsync()_3]] - `references` [EXTRACTED]
+- [[.AddAsync()_14]] - `references` [EXTRACTED]
+- [[.CountDoneByDateAsync()_1]] - `references` [EXTRACTED]
+- [[.GetAsync()_5]] - `references` [EXTRACTED]
+- [[.ListForDateAsync()_2]] - `references` [EXTRACTED]
+- [[.SaveChangesAsync()_16]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DTOs_/_AdminPanel
+#graphify/code #graphify/EXTRACTED #community/Integration_Test_Harness_2

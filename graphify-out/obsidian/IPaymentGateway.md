@@ -15,7 +15,9 @@ tags:
 - [[.RegisterTransactionAsync()]] - `method` [EXTRACTED]
 - [[.VerifyNotificationSignature()]] - `method` [EXTRACTED]
 - [[.VerifyTransactionAsync()]] - `method` [EXTRACTED]
+- [[FakePaymentGateway]] - `implements` [EXTRACTED]
 - [[IPaymentGateway.cs]] - `contains` [EXTRACTED]
+- [[PaymentService]] - `references` [EXTRACTED]
 - [[Przelewy24Client]] - `implements` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Payment_Gateway_Integration_Tests_1

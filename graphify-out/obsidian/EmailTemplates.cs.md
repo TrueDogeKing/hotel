@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Services/EmailTemplates.cs"
 type: "code"
-community: "CampCenter.UnitTests / Services (5)"
+community: "CampCenter.Application / Services (1)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Services_5
+  - community/CampCenterApplication_/_Services_1
 ---
 
 # EmailTemplates.cs
@@ -17,4 +17,4 @@ tags:
 - [[CampCenter.Domain.Entities]] - `imports` [EXTRACTED]
 - [[EmailTemplates]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_5
+#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_1

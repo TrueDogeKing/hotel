@@ -1,18 +1,22 @@
 ---
 source_file: ""
 type: "code"
-community: "Controllers / Admin"
+community: "Room Management"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Controllers_/_Admin
+  - community/Room_Management
 ---
 
 # CancellationToken
 
 ## Connections
-- [[.GetDay()]] - `references` [EXTRACTED]
-- [[.GetRange()]] - `references` [EXTRACTED]
-- [[.SetStatus()_1]] - `references` [EXTRACTED]
+- [[.AddAsync()_6]] - `references` [EXTRACTED]
+- [[.GetActiveAsync()_1]] - `references` [EXTRACTED]
+- [[.GetAllAsync()_8]] - `references` [EXTRACTED]
+- [[.GetByIdAsync()_4]] - `references` [EXTRACTED]
+- [[.GetByNumberAsync()]] - `references` [EXTRACTED]
+- [[.HasAssignmentsAsync()]] - `references` [EXTRACTED]
+- [[.SaveChangesAsync()_7]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Controllers_/_Admin
+#graphify/code #graphify/EXTRACTED #community/Room_Management

@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.UnitTests / Validators"
+community: "DTOs / Schedule (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Validators
+  - community/DTOs_/_Schedule_1
 ---
 
 # HttpPut
 
 ## Connections
-- [[.Update()_2]] - `references` [EXTRACTED]
+- [[.SetBookingMealTime()]] - `references` [EXTRACTED]
+- [[.UpdateEntry()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Validators
+#graphify/code #graphify/EXTRACTED #community/DTOs_/_Schedule_1

@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "Booking Persistence & Entities (2)"
+community: "Room Management"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Booking_Persistence__Entities_2
+  - community/Room_Management
 ---
 
 # Guid
 
 ## Connections
-- [[Booking]] - `references` [EXTRACTED]
+- [[.GetBlockedRoomIdsAsync()_1]] - `references` [EXTRACTED]
+- [[.GetFreeRoomsByCapacityAsync()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Booking_Persistence__Entities_2
+#graphify/code #graphify/EXTRACTED #community/Room_Management

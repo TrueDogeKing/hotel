@@ -1,24 +1,24 @@
 ---
 source_file: "src/CampCenter.Api/Controllers/Admin/ClosuresController.cs"
 type: "code"
-community: "CampCenter.Application / Services (1)"
+community: "Room Closure Management"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterApplication_/_Services_1
+  - community/Room_Closure_Management
 ---
 
 # ClosuresController
 
 ## Connections
-- [[.Create()_2]] - `method` [EXTRACTED]
-- [[.Delete()_1]] - `method` [EXTRACTED]
-- [[.GetAll()_1]] - `method` [EXTRACTED]
-- [[.Update()_1]] - `method` [EXTRACTED]
+- [[.Create()_1]] - `method` [EXTRACTED]
+- [[.Delete()]] - `method` [EXTRACTED]
+- [[.GetAll()]] - `method` [EXTRACTED]
+- [[.Update()]] - `method` [EXTRACTED]
 - [[ClosuresController.cs]] - `contains` [EXTRACTED]
 - [[ControllerBase]] - `inherits` [EXTRACTED]
 - [[IClosureService]] - `references` [EXTRACTED]
-- [[IValidator_5]] - `references` [EXTRACTED]
+- [[IValidator_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_1
+#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management

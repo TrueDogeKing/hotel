@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/DependencyInjection.cs"
 type: "code"
-community: "tests / CampCenter.IntegrationTests (2)"
+community: "CampCenter.Application / Services (1)"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/tests_/_CampCenterIntegrationTests_2
+  - community/CampCenterApplication_/_Services_1
 ---
 
 # CampCenter.Application
@@ -15,4 +15,4 @@ tags:
 - [[DependencyInjection.cs]] - `contains` [EXTRACTED]
 - [[Program.cs]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/tests_/_CampCenterIntegrationTests_2
+#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_1

@@ -2,7 +2,7 @@
 source_file: "frontend/src/pages/admin/HousekeepingPage.tsx"
 type: "code"
 community: "src / api (1)"
-location: "L24"
+location: "L27"
 tags:
   - graphify/code
   - graphify/EXTRACTED

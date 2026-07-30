@@ -15,6 +15,6 @@ tags:
 - [[Closure Model Replaces Camp Sessions]] - `references` [EXTRACTED]
 - [[GiST Exclusion Constraint Against Double Booking]] - `references` [EXTRACTED]
 - [[Guest Booking Flow]] - `conceptually_related_to` [INFERRED]
-- [[Technology Stack]] - `references` [EXTRACTED]
+- [[Stack]] - `references` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Docker__Project_Docs

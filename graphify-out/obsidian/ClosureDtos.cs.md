@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/DTOs/Closures/ClosureDtos.cs"
 type: "code"
-community: "CampCenter.Application / Services (1)"
+community: "Room Closure Management"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterApplication_/_Services_1
+  - community/Room_Closure_Management
 ---
 
 # ClosureDtos.cs
@@ -17,4 +17,4 @@ tags:
 - [[CreateClosureRequestDto]] - `contains` [EXTRACTED]
 - [[UpdateClosureRequestDto]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_1
+#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management

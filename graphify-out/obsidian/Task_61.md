@@ -1,22 +1,26 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.Application / Services (1)"
+community: "CampCenter.Infrastructure / Repositories (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterApplication_/_Services_1
+  - community/CampCenterInfrastructure_/_Repositories_1
 ---
 
 # Task
 
 ## Connections
-- [[.CreateAsync()_12]] - `references` [EXTRACTED]
-- [[.DeleteAsync()_8]] - `references` [EXTRACTED]
-- [[.GetAllAsync()_10]] - `references` [EXTRACTED]
-- [[.GetOrThrowAsync()_2]] - `references` [EXTRACTED]
-- [[.GuardNoLiveBookingsAsync()]] - `references` [EXTRACTED]
-- [[.GuardRoomExistsAsync()]] - `references` [EXTRACTED]
-- [[.UpdateAsync()_6]] - `references` [EXTRACTED]
+- [[.AddAsync()_17]] - `references` [EXTRACTED]
+- [[.AddRangeAsync()_1]] - `references` [EXTRACTED]
+- [[.CountByDateAndKindAsync()_1]] - `references` [EXTRACTED]
+- [[.GetByIdAsync()_13]] - `references` [EXTRACTED]
+- [[.ListForBookingAsync()_3]] - `references` [EXTRACTED]
+- [[.ListForDateAsync()_3]] - `references` [EXTRACTED]
+- [[.ListFullySuppressedSlotsAsync()_1]] - `references` [EXTRACTED]
+- [[.ListGeneratedSlotsAsync()_1]] - `references` [EXTRACTED]
+- [[.ListLocationsAsync()_1]] - `references` [EXTRACTED]
+- [[.ListVisibleSlotSpansAsync()_1]] - `references` [EXTRACTED]
+- [[.SaveChangesAsync()_19]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_1
+#graphify/code #graphify/EXTRACTED #community/CampCenterInfrastructure_/_Repositories_1

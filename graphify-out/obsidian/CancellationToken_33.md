@@ -1,19 +1,22 @@
 ---
 source_file: ""
 type: "code"
-community: "Auth Service & Tokens"
+community: "Room Closure Management"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Auth_Service__Tokens
+  - community/Room_Closure_Management
 ---
 
 # CancellationToken
 
 ## Connections
-- [[.AddAsync()_1]] - `references` [EXTRACTED]
-- [[.GetByTokenHashAsync()]] - `references` [EXTRACTED]
-- [[.RevokeAllActiveForUserAsync()]] - `references` [EXTRACTED]
-- [[.SaveChangesAsync()_2]] - `references` [EXTRACTED]
+- [[.CreateAsync()_8]] - `references` [EXTRACTED]
+- [[.DeleteAsync()_4]] - `references` [EXTRACTED]
+- [[.GetAllAsync()_3]] - `references` [EXTRACTED]
+- [[.GetOrThrowAsync()_1]] - `references` [EXTRACTED]
+- [[.GuardNoLiveBookingsAsync()]] - `references` [EXTRACTED]
+- [[.GuardRoomExistsAsync()]] - `references` [EXTRACTED]
+- [[.UpdateAsync()_3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Auth_Service__Tokens
+#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management

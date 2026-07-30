@@ -1,20 +1,21 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.Domain / Repositories (3)"
+community: "tests / CampCenter.IntegrationTests (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterDomain_/_Repositories_3
+  - community/tests_/_CampCenterIntegrationTests_1
 ---
 
 # Task
 
 ## Connections
-- [[.AddAsync()_11]] - `references` [EXTRACTED]
-- [[.CountDoneByDateAsync()]] - `references` [EXTRACTED]
-- [[.GetAsync()_3]] - `references` [EXTRACTED]
-- [[.ListForDateAsync()]] - `references` [EXTRACTED]
-- [[.SaveChangesAsync()_13]] - `references` [EXTRACTED]
+- [[.BookingFlow_AvailabilityShrinks_AndCancelFreesRooms()]] - `references` [EXTRACTED]
+- [[.Booking_RedundantRoomSelection_IsRejected()]] - `references` [EXTRACTED]
+- [[.Booking_WhenCenterClosed_IsRejected()]] - `references` [EXTRACTED]
+- [[.ParallelBookings_ForTheLastRooms_ExactlyOneWins()]] - `references` [EXTRACTED]
+- [[.SetUpRoomsAsync()]] - `references` [EXTRACTED]
+- [[.UnknownManageToken_Returns404()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterDomain_/_Repositories_3
+#graphify/code #graphify/EXTRACTED #community/tests_/_CampCenterIntegrationTests_1

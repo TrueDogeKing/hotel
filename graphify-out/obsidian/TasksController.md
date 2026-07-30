@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Api/Controllers/Admin/TasksController.cs"
 type: "code"
-community: "Room Task Management (2)"
+community: "Room Task Management (1)"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Task_Management_2
+  - community/Room_Task_Management_1
 ---
 
 # TasksController
@@ -18,7 +18,7 @@ tags:
 - [[.List()_1]] - `method` [EXTRACTED]
 - [[.Reopen()]] - `method` [EXTRACTED]
 - [[ControllerBase]] - `inherits` [EXTRACTED]
-- [[IRoomTaskService_1]] - `references` [EXTRACTED]
+- [[IRoomTaskService]] - `references` [EXTRACTED]
 - [[TasksController.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Task_Management_2
+#graphify/code #graphify/EXTRACTED #community/Room_Task_Management_1

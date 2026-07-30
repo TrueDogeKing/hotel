@@ -2,7 +2,7 @@
 source_file: "frontend/src/api/admin.ts"
 type: "code"
 community: "Admin Tasks & Occupancy Pages"
-location: "L250"
+location: "L283"
 tags:
   - graphify/code
   - graphify/EXTRACTED

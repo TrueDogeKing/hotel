@@ -1,13 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "Unlabeled (18)"
+community: "Room Task Management (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Unlabeled_18
+  - community/Room_Task_Management_1
 ---
 
 # Task
 
-#graphify/code #graphify/EXTRACTED #community/Unlabeled_18
+## Connections
+- [[.Create()_4]] - `references` [EXTRACTED]
+- [[.Delete()_3]] - `references` [EXTRACTED]
+- [[.Done()]] - `references` [EXTRACTED]
+- [[.List()_1]] - `references` [EXTRACTED]
+- [[.Reopen()]] - `references` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/Room_Task_Management_1

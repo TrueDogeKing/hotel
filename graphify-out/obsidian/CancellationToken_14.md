@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Room Mix Calculator Tests"
+community: "Global Exception Handler"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Mix_Calculator_Tests
+  - community/Global_Exception_Handler
 ---
 
 # CancellationToken
 
 ## Connections
-- [[.GetFreeRoomsByCapacityAsync()]] - `references` [EXTRACTED]
-- [[.GetPublicSessionsAsync()]] - `references` [EXTRACTED]
+- [[.TryHandleAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Mix_Calculator_Tests
+#graphify/code #graphify/EXTRACTED #community/Global_Exception_Handler

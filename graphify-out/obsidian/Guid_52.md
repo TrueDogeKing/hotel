@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.Domain / Entities"
+community: "Refresh Token Repository"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterDomain_/_Entities
+  - community/Refresh_Token_Repository
 ---
 
 # Guid
 
 ## Connections
-- [[RoomCleaning]] - `references` [EXTRACTED]
+- [[.RevokeAllActiveForUserAsync()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterDomain_/_Entities
+#graphify/code #graphify/EXTRACTED #community/Refresh_Token_Repository

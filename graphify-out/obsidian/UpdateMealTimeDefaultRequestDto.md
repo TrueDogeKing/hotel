@@ -12,9 +12,9 @@ tags:
 # UpdateMealTimeDefaultRequestDto
 
 ## Connections
-- [[.Update()_2]] - `references` [EXTRACTED]
-- [[.UpdateAsync()_5]] - `references` [EXTRACTED]
-- [[.UpdateAsync()_7]] - `references` [EXTRACTED]
+- [[.Update()_1]] - `references` [EXTRACTED]
+- [[.UpdateAsync()_1]] - `references` [EXTRACTED]
+- [[.UpdateAsync()_4]] - `references` [EXTRACTED]
 - [[MealTimeDtos.cs]] - `contains` [EXTRACTED]
 - [[UpdateMealTimeDefaultRequestValidator]] - `references` [EXTRACTED]
 

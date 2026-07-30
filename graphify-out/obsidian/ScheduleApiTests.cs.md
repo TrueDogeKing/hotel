@@ -1,19 +1,21 @@
 ---
 source_file: "tests/CampCenter.IntegrationTests/ScheduleApiTests.cs"
 type: "code"
-community: "tests / CampCenter.IntegrationTests (2)"
+community: "Integration Test Harness (1)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/tests_/_CampCenterIntegrationTests_2
+  - community/Integration_Test_Harness_1
 ---
 
 # ScheduleApiTests.cs
 
 ## Connections
+- [[CampCenter.Application.DTOs.Public]] - `imports` [EXTRACTED]
+- [[CampCenter.Application.DTOs.Rooms]] - `imports` [EXTRACTED]
 - [[CampCenter.Application.DTOs.Schedule]] - `imports` [EXTRACTED]
 - [[CampCenter.IntegrationTests]] - `contains` [EXTRACTED]
 - [[ScheduleApiTests]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/tests_/_CampCenterIntegrationTests_2
+#graphify/code #graphify/EXTRACTED #community/Integration_Test_Harness_1

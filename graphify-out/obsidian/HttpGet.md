@@ -11,7 +11,8 @@ tags:
 # HttpGet
 
 ## Connections
-- [[.Get()_1]] - `references` [EXTRACTED]
+- [[.AssignableRooms()]] - `references` [EXTRACTED]
+- [[.Get()]] - `references` [EXTRACTED]
 - [[.List()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Admin_Bookings_Controller__DTOs

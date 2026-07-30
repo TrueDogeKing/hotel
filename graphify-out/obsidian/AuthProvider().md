@@ -12,6 +12,7 @@ tags:
 # AuthProvider()
 
 ## Connections
+- [[App.tsx]] - `imports` [EXTRACTED]
 - [[AuthContext.tsx]] - `contains` [EXTRACTED]
 - [[getAccessToken()]] - `indirect_call` [INFERRED]
 - [[getUserLoginFromToken()]] - `calls` [EXTRACTED]

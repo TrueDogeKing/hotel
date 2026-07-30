@@ -11,6 +11,6 @@ tags:
 # Guid
 
 ## Connections
-- [[.GetByIdAsync()]] - `references` [EXTRACTED]
+- [[AdminUser]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Admin_User__Token_Config

@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Models/ScheduleSettings.cs"
 type: "code"
-community: "Rate Limiting & Startup"
+community: "CampCenter.Application / Services (2)"
 location: "L4"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Rate_Limiting__Startup
+  - community/CampCenterApplication_/_Services_2
 ---
 
 # ScheduleSettings
@@ -15,6 +15,6 @@ tags:
 - [[ScheduleService]] - `references` [EXTRACTED]
 - [[ScheduleSettings.cs]] - `contains` [EXTRACTED]
 - [[TimeOnly]] - `references` [EXTRACTED]
-- [[string_9]] - `references` [EXTRACTED]
+- [[string_3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Rate_Limiting__Startup
+#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_2

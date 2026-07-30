@@ -1,17 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "Room Closure Management"
+community: "DTOs / Schedule (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Closure_Management
+  - community/DTOs_/_Schedule_1
 ---
 
 # DateOnly
 
 ## Connections
-- [[.GetOverlappingAsync()]] - `references` [EXTRACTED]
-- [[.GetUpcomingCenterWideAsync()]] - `references` [EXTRACTED]
+- [[.GenerateMissingMealsAsync()]] - `references` [EXTRACTED]
+- [[.GetCalendarAsync()]] - `references` [EXTRACTED]
+- [[.GetDayAsync()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management
+#graphify/code #graphify/EXTRACTED #community/DTOs_/_Schedule_1

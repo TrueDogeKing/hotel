@@ -1,13 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Unlabeled (7)"
+community: "DTOs / Schedule (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Unlabeled_7
+  - community/DTOs_/_Schedule_2
 ---
 
 # HttpPost
 
-#graphify/code #graphify/EXTRACTED #community/Unlabeled_7
+## Connections
+- [[.Create()_2]] - `references` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/DTOs_/_Schedule_2

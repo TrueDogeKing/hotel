@@ -12,6 +12,6 @@ tags:
 
 ## Connections
 - [[.Cancel()]] - `references` [EXTRACTED]
-- [[.Create()_1]] - `references` [EXTRACTED]
+- [[.Create()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Admin_Bookings_Controller__DTOs

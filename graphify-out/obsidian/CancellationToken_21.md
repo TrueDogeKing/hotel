@@ -1,19 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Room Task Management (1)"
+community: "Public Booking Service (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Task_Management_1
+  - community/Public_Booking_Service_1
 ---
 
 # CancellationToken
 
 ## Connections
-- [[.CreateAsync()_2]] - `references` [EXTRACTED]
-- [[.DeleteAsync()_2]] - `references` [EXTRACTED]
-- [[.ListAsync()]] - `references` [EXTRACTED]
-- [[.SetStatusAsync()]] - `references` [EXTRACTED]
+- [[.SendAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Task_Management_1
+#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_1

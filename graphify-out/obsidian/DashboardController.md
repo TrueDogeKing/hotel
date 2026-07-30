@@ -12,7 +12,7 @@ tags:
 # DashboardController
 
 ## Connections
-- [[.Get()]] - `method` [EXTRACTED]
+- [[.Get()_1]] - `method` [EXTRACTED]
 - [[ControllerBase]] - `inherits` [EXTRACTED]
 - [[DashboardController.cs]] - `contains` [EXTRACTED]
 - [[IAdminBookingService]] - `references` [EXTRACTED]

@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/utils/dates.ts"
 type: "code"
-community: "Public Booking Frontend (1)"
+community: "Frontend App Shell & i18n"
 location: "L67"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public_Booking_Frontend_1
+  - community/Frontend_App_Shell__i18n
 ---
 
 # formatDate()
@@ -33,4 +33,4 @@ tags:
 - [[dates.ts]] - `contains` [EXTRACTED]
 - [[fromIsoDate()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public_Booking_Frontend_1
+#graphify/code #graphify/EXTRACTED #community/Frontend_App_Shell__i18n

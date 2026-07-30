@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.Infrastructure / Repositories (3)"
+community: "tests / CampCenter.IntegrationTests (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterInfrastructure_/_Repositories_3
+  - community/tests_/_CampCenterIntegrationTests_1
 ---
 
 # Dictionary
 
 ## Connections
-- [[.CountDoneByDateAsync()_1]] - `references` [EXTRACTED]
+- [[.BookingRequest()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterInfrastructure_/_Repositories_3
+#graphify/code #graphify/EXTRACTED #community/tests_/_CampCenterIntegrationTests_1

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Admin Booking & Notifications (4)"
+community: "Auth Service & Tokens"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Booking__Notifications_4
+  - community/Auth_Service__Tokens
 ---
 
 # DateTime
 
 ## Connections
-- [[.FormatDateTime()]] - `references` [EXTRACTED]
+- [[.CreateTokenEntity()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_4
+#graphify/code #graphify/EXTRACTED #community/Auth_Service__Tokens

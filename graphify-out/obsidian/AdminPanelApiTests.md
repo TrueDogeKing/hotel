@@ -1,21 +1,22 @@
 ---
 source_file: "tests/CampCenter.IntegrationTests/AdminPanelApiTests.cs"
 type: "code"
-community: "Integration Test Harness (1)"
+community: "tests / CampCenter.IntegrationTests (1)"
 location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Integration_Test_Harness_1
+  - community/tests_/_CampCenterIntegrationTests_1
 ---
 
 # AdminPanelApiTests
 
 ## Connections
+- [[.AssignableRooms_OffersOwnAndFreeRooms_ButNotTakenOrClosedOnes()]] - `method` [EXTRACTED]
 - [[.Closure_BlocksRoom_InOccupancyGrid()]] - `method` [EXTRACTED]
 - [[.OccupancyUrl()]] - `method` [EXTRACTED]
 - [[.Occupancy_Reassign_Tasks_And_Dashboard_Work()]] - `method` [EXTRACTED]
 - [[AdminPanelApiTests.cs]] - `contains` [EXTRACTED]
-- [[IntegrationTestBase_1]] - `inherits` [EXTRACTED]
+- [[IntegrationTestBase]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Integration_Test_Harness_1
+#graphify/code #graphify/EXTRACTED #community/tests_/_CampCenterIntegrationTests_1

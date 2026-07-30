@@ -14,6 +14,7 @@ tags:
 ## Connections
 - [[CalendarTile()]] - `calls` [EXTRACTED]
 - [[CalendarTile.tsx]] - `imports` [EXTRACTED]
+- [[SchedulePage.tsx]] - `imports` [EXTRACTED]
 - [[dates.ts]] - `contains` [EXTRACTED]
 - [[formatDate()]] - `calls` [EXTRACTED]
 - [[mondayIndex()]] - `calls` [EXTRACTED]

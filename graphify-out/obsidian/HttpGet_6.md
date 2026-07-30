@@ -1,13 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Unlabeled (15)"
+community: "Room Management"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Unlabeled_15
+  - community/Room_Management
 ---
 
 # HttpGet
 
-#graphify/code #graphify/EXTRACTED #community/Unlabeled_15
+## Connections
+- [[.GetAll()_2]] - `references` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/Room_Management

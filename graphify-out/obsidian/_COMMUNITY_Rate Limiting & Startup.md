@@ -1,41 +1,41 @@
 ---
 type: community
-cohesion: 0.09
-members: 26
+members: 28
 ---
 
 # Rate Limiting & Startup
 
-**Cohesion:** 0.09 - loosely connected
-**Members:** 26 nodes
+**Members:** 28 nodes
 
 ## Members
-- [[AdminBookingService.cs]] - code - src/CampCenter.Application/Services/AdminBookingService.cs
-- [[AuthApiTests.cs]] - code - tests/CampCenter.IntegrationTests/AuthApiTests.cs
-- [[AuthController.cs]] - code - src/CampCenter.Api/Controllers/AuthController.cs
-- [[AuthService.cs]] - code - src/CampCenter.Application/Services/AuthService.cs
-- [[BcryptPasswordHasher.cs]] - code - src/CampCenter.Infrastructure/Auth/BcryptPasswordHasher.cs
-- [[BookingSettings]] - code - src/CampCenter.Application/Models/BookingSettings.cs
-- [[BookingSettings.cs]] - code - src/CampCenter.Application/Models/BookingSettings.cs
-- [[CampCenter.Api.Controllers]] - code - src/CampCenter.Api/Controllers/AuthController.cs
-- [[CampCenter.Api.RateLimiting]] - code - src/CampCenter.Api/RateLimiting/RateLimitPolicies.cs
-- [[CampCenter.Application.DTOs.Auth]] - code - src/CampCenter.Application/DTOs/Auth/LoginRequestDto.cs
-- [[CampCenter.Application.Models]] - code - src/CampCenter.Application/Models/AccessToken.cs
-- [[CampCenter.Infrastructure.Auth]] - code - src/CampCenter.Infrastructure/Auth/BcryptPasswordHasher.cs
-- [[IAuthService.cs]] - code - src/CampCenter.Application/Interfaces/IAuthService.cs
-- [[ITokenService.cs]] - code - src/CampCenter.Application/Interfaces/ITokenService.cs
-- [[JwtTokenService.cs]] - code - src/CampCenter.Infrastructure/Auth/JwtTokenService.cs
-- [[LoginResponseDto]] - code - src/CampCenter.Application/DTOs/Auth/LoginResponseDto.cs
-- [[LoginResponseDto.cs]] - code - src/CampCenter.Application/DTOs/Auth/LoginResponseDto.cs
-- [[RateLimitPolicies]] - code - src/CampCenter.Api/RateLimiting/RateLimitPolicies.cs
-- [[RateLimitPolicies.cs]] - code - src/CampCenter.Api/RateLimiting/RateLimitPolicies.cs
-- [[ScheduleService.cs]] - code - src/CampCenter.Application/Services/ScheduleService.cs
-- [[ScheduleSettings]] - code - src/CampCenter.Application/Models/ScheduleSettings.cs
-- [[ScheduleSettings.cs]] - code - src/CampCenter.Application/Models/ScheduleSettings.cs
-- [[TimeOnly]] - code
-- [[string_1]] - code
-- [[string_2]] - code
-- [[string_9]] - code
+- [[.BeAKind()]] - code - src/CampCenter.Application/Validators/ScheduleValidators.cs
+- [[.BeAMealKind()_1]] - code - src/CampCenter.Application/Validators/ScheduleValidators.cs
+- [[.IsMeal()]] - code - src/CampCenter.Application/Validators/ScheduleValidators.cs
+- [[.MissingFields_Fail()]] - code - tests/CampCenter.UnitTests/Validators/LoginRequestValidatorTests.cs
+- [[.ValidCredentials_Pass()]] - code - tests/CampCenter.UnitTests/Validators/LoginRequestValidatorTests.cs
+- [[.ValidPassword()]] - code - src/CampCenter.Application/Validators/PasswordRules.cs
+- [[AdminBookingValidators.cs]] - code - src/CampCenter.Application/Validators/AdminBookingValidators.cs
+- [[CampCenter.Application.Validators]] - code - src/CampCenter.Application/Validators/AdminBookingValidators.cs
+- [[CampCenter.UnitTests.Validators]] - code - tests/CampCenter.UnitTests/Validators/ClosureValidatorsTests.cs
+- [[ClosureValidatorsTests.cs]] - code - tests/CampCenter.UnitTests/Validators/ClosureValidatorsTests.cs
+- [[CreateBookingRequestValidator]] - code - src/CampCenter.Application/Validators/CreateBookingRequestValidator.cs
+- [[CreateBookingRequestValidator.cs]] - code - src/CampCenter.Application/Validators/CreateBookingRequestValidator.cs
+- [[Fact_13]] - code
+- [[IRuleBuilder]] - code
+- [[IRuleBuilderOptions]] - code
+- [[InlineData]] - code
+- [[LoginRequestValidator]] - code - src/CampCenter.Application/Validators/LoginRequestValidator.cs
+- [[LoginRequestValidator.cs]] - code - src/CampCenter.Application/Validators/LoginRequestValidator.cs
+- [[LoginRequestValidatorTests]] - code - tests/CampCenter.UnitTests/Validators/LoginRequestValidatorTests.cs
+- [[LoginRequestValidatorTests.cs]] - code - tests/CampCenter.UnitTests/Validators/LoginRequestValidatorTests.cs
+- [[PasswordRules]] - code - src/CampCenter.Application/Validators/PasswordRules.cs
+- [[PasswordRules.cs]] - code - src/CampCenter.Application/Validators/PasswordRules.cs
+- [[ScheduleRules]] - code - src/CampCenter.Application/Validators/ScheduleValidators.cs
+- [[ScheduleValidators.cs]] - code - src/CampCenter.Application/Validators/ScheduleValidators.cs
+- [[ScheduleValidatorsTests.cs]] - code - tests/CampCenter.UnitTests/Validators/ScheduleValidatorsTests.cs
+- [[Theory]] - code
+- [[int]] - code
+- [[string_5]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -45,24 +45,21 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 11 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
-- 10 edges to [[_COMMUNITY_Domain & Infra Namespaces]]
-- 6 edges to [[_COMMUNITY_JWT Token Service]]
-- 4 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (5)]]
-- 2 edges to [[_COMMUNITY_Auth Controller (2)]]
-- 2 edges to [[_COMMUNITY_Validator Unit Tests]]
-- 2 edges to [[_COMMUNITY_Integration Test Harness (2)]]
-- 2 edges to [[_COMMUNITY_Auth Service & Tokens]]
-- 2 edges to [[_COMMUNITY_CampCenter.Application  Services (2)]]
-- 1 edge to [[_COMMUNITY_Auth Controller (1)]]
-- 1 edge to [[_COMMUNITY_Login Normalizer]]
-- 1 edge to [[_COMMUNITY_Password Hashing (bcrypt)]]
-- 1 edge to [[_COMMUNITY_tests  CampCenter.IntegrationTests (2)]]
-- 1 edge to [[_COMMUNITY_Admin Booking & Notifications (1)]]
+- 6 edges to [[_COMMUNITY_DTOs  Schedule (2)]]
+- 3 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
+- 2 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (5)]]
+- 2 edges to [[_COMMUNITY_Integration Test Harness (1)]]
+- 2 edges to [[_COMMUNITY_Domain & Infra Namespaces]]
+- 2 edges to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
+- 2 edges to [[_COMMUNITY_Room Closure Management]]
+- 1 edge to [[_COMMUNITY_Auth Controller (2)]]
+- 1 edge to [[_COMMUNITY_Public Booking Service (1)]]
+- 1 edge to [[_COMMUNITY_Room Management]]
+- 1 edge to [[_COMMUNITY_DTOs  Schedule (1)]]
 
 ## Top bridge nodes
-- [[AuthService.cs]] - degree 8, connects to 5 communities
-- [[CampCenter.Application.Models]] - degree 15, connects to 4 communities
-- [[AdminBookingService.cs]] - degree 8, connects to 4 communities
-- [[ScheduleService.cs]] - degree 7, connects to 4 communities
-- [[CampCenter.Application.DTOs.Auth]] - degree 9, connects to 3 communities
+- [[ScheduleValidators.cs]] - degree 7, connects to 5 communities
+- [[CampCenter.Application.Validators]] - degree 11, connects to 3 communities
+- [[AdminBookingValidators.cs]] - degree 4, connects to 3 communities
+- [[ScheduleValidatorsTests.cs]] - degree 5, connects to 2 communities
+- [[LoginRequestValidator]] - degree 4, connects to 2 communities

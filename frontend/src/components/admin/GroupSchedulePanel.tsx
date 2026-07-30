@@ -23,6 +23,7 @@ import { IconUtensils } from "../icons";
 import ConfirmDialog from "../ConfirmDialog";
 import ScheduleEntryForm from "./ScheduleEntryForm";
 import GroupMealTimes from "./GroupMealTimes";
+import GroupRooms from "./GroupRooms";
 
 interface Props {
   bookingId: string;
@@ -319,6 +320,10 @@ export default function GroupSchedulePanel({
 
       {error && <p role="alert">{error}</p>}
       {notice && <p className="group-panel-notice">{notice}</p>}
+
+      {/* Above the programme: where the group sleeps is the first thing asked when
+          something has to be moved, and a room change feeds housekeeping too. */}
+      <GroupRooms bookingId={bookingId} onChanged={() => void afterMutation()} />
 
       <GroupMealTimes bookingId={bookingId} onChanged={() => void afterMutation()} />
 

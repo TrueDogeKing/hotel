@@ -1,21 +1,22 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.Application / Services (3)"
+community: "CampCenter.Domain / Repositories (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterApplication_/_Services_3
+  - community/CampCenterDomain_/_Repositories_1
 ---
 
 # Task
 
 ## Connections
-- [[.AddAsync()_10]] - `references` [EXTRACTED]
-- [[.GetActiveAsync()_2]] - `references` [EXTRACTED]
-- [[.GetAllAsync()_12]] - `references` [EXTRACTED]
-- [[.GetByIdAsync()_9]] - `references` [EXTRACTED]
-- [[.IsReferencedAsync()]] - `references` [EXTRACTED]
-- [[.SaveChangesAsync()_12]] - `references` [EXTRACTED]
+- [[.CreateBookingWithDepositAsync()]] - `references` [EXTRACTED]
+- [[.DepositWebhook_ConfirmsBooking_AndIsIdempotent()]] - `references` [EXTRACTED]
+- [[.DepositWebhook_GeneratesTheGroupsMeals()]] - `references` [EXTRACTED]
+- [[.RegisterTransactionAsync()_2]] - `references` [EXTRACTED]
+- [[.VerifyTransactionAsync()_2]] - `references` [EXTRACTED]
+- [[.Webhook_AmountMismatch_IsRejected()]] - `references` [EXTRACTED]
+- [[.Webhook_BadSignature_IsRejected()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_3
+#graphify/code #graphify/EXTRACTED #community/CampCenterDomain_/_Repositories_1

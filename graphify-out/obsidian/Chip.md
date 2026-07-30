@@ -2,7 +2,7 @@
 source_file: "frontend/src/components/admin/DayTimetable.tsx"
 type: "code"
 community: "components / admin"
-location: "L34"
+location: "L36"
 tags:
   - graphify/code
   - graphify/EXTRACTED

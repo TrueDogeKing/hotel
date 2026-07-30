@@ -12,6 +12,6 @@ tags:
 # Knowledge Graph / Obsidian Vault Workflow
 
 ## Connections
-- [[Task Runner Rules (Mise vs Bun)]] - `conceptually_related_to` [INFERRED]
+- [[Task Runner Rules]] - `conceptually_related_to` [INFERRED]
 
 #graphify/rationale #graphify/INFERRED #community/Docker__Project_Docs

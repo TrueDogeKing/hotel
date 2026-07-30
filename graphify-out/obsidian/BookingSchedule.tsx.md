@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/components/BookingSchedule.tsx"
 type: "code"
-community: "components / admin"
+community: "Public Booking Frontend (1)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/components_/_admin
+  - community/Public_Booking_Frontend_1
 ---
 
 # BookingSchedule.tsx
@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[BookingManagePage.tsx]] - `imports_from` [EXTRACTED]
 - [[BookingSchedule()]] - `contains` [EXTRACTED]
-- [[Props_2]] - `contains` [EXTRACTED]
+- [[Props]] - `contains` [EXTRACTED]
 - [[PublicSchedule]] - `imports` [EXTRACTED]
 - [[dates.ts]] - `imports_from` [EXTRACTED]
 - [[formatDate()]] - `imports` [EXTRACTED]
@@ -22,4 +22,4 @@ tags:
 - [[public.ts]] - `imports_from` [EXTRACTED]
 - [[toTimeInput()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/components_/_admin
+#graphify/code #graphify/EXTRACTED #community/Public_Booking_Frontend_1

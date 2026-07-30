@@ -1,16 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.Domain / Repositories (2)"
+community: "CampCenter.Application / Services (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterDomain_/_Repositories_2
+  - community/CampCenterApplication_/_Services_2
 ---
 
 # IReadOnlyCollection
 
 ## Connections
-- [[.ListForBookingsAsync()]] - `references` [EXTRACTED]
+- [[.AddRangeAsync()]] - `references` [EXTRACTED]
+- [[.CountByDateAndKindAsync()]] - `references` [EXTRACTED]
+- [[.ListFullySuppressedSlotsAsync()]] - `references` [EXTRACTED]
+- [[.ListVisibleSlotSpansAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterDomain_/_Repositories_2
+#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_2

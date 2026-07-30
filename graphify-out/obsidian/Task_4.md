@@ -1,13 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "Unlabeled (12)"
+community: "CampCenter.UnitTests / Validators"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Unlabeled_12
+  - community/CampCenterUnitTests_/_Validators
 ---
 
 # Task
 
-#graphify/code #graphify/EXTRACTED #community/Unlabeled_12
+## Connections
+- [[.GetDay()]] - `references` [EXTRACTED]
+- [[.GetRange()]] - `references` [EXTRACTED]
+- [[.SetStatus()_1]] - `references` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Validators

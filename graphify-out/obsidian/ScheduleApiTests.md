@@ -35,7 +35,7 @@ tags:
 - [[.ScheduleEntry_OnDepartureDay_IsAccepted_ButNotOutsideTheStay()]] - `method` [EXTRACTED]
 - [[.SettingAGroupsMealTime_RejectsEndBeforeStart_AndStaleRowVersion()]] - `method` [EXTRACTED]
 - [[.SettingAGroupsMealTime_RetimesTheWholeStay_ButNotOtherGroups()]] - `method` [EXTRACTED]
-- [[IntegrationTestBase_1]] - `inherits` [EXTRACTED]
+- [[IntegrationTestBase]] - `inherits` [EXTRACTED]
 - [[ScheduleApiTests.cs]] - `contains` [EXTRACTED]
 - [[int_3]] - `references` [EXTRACTED]
 

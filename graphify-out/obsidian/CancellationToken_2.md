@@ -1,16 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "Admin Bookings Controller & DTOs"
+community: "Room Closure Management"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Bookings_Controller__DTOs
+  - community/Room_Closure_Management
 ---
 
 # CancellationToken
 
 ## Connections
-- [[.Get()]] - `references` [EXTRACTED]
+- [[.Create()_1]] - `references` [EXTRACTED]
+- [[.Delete()]] - `references` [EXTRACTED]
+- [[.GetAll()]] - `references` [EXTRACTED]
+- [[.Update()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Bookings_Controller__DTOs
+#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management

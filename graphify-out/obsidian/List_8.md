@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Camp Session Management"
+community: "Room Closure Management"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Camp_Session_Management
+  - community/Room_Closure_Management
 ---
 
 # List
 
 ## Connections
-- [[.GetAllAsync()_2]] - `references` [EXTRACTED]
+- [[.GetAllAsync()_3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Camp_Session_Management
+#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management

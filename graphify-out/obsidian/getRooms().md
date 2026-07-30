@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/api/admin.ts"
 type: "code"
-community: "Admin Frontend Pages"
+community: "src / api (1)"
 location: "L20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Frontend_Pages
+  - community/src_/_api_1
 ---
 
 # getRooms()
@@ -18,4 +18,4 @@ tags:
 - [[RoomsPage.tsx]] - `imports` [EXTRACTED]
 - [[admin.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Frontend_Pages
+#graphify/code #graphify/EXTRACTED #community/src_/_api_1

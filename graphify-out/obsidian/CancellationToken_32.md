@@ -1,21 +1,23 @@
 ---
 source_file: ""
 type: "code"
-community: "Room Closure Management"
+community: "Public Booking Service (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Closure_Management
+  - community/Public_Booking_Service_1
 ---
 
 # CancellationToken
 
 ## Connections
-- [[.AddAsync()]] - `references` [EXTRACTED]
-- [[.GetAllAsync()_4]] - `references` [EXTRACTED]
-- [[.GetByIdAsync()_1]] - `references` [EXTRACTED]
-- [[.GetOverlappingAsync()]] - `references` [EXTRACTED]
-- [[.GetUpcomingCenterWideAsync()]] - `references` [EXTRACTED]
-- [[.SaveChangesAsync()_1]] - `references` [EXTRACTED]
+- [[.CancelByTokenAsync()_1]] - `references` [EXTRACTED]
+- [[.CreateAsync()_7]] - `references` [EXTRACTED]
+- [[.FindByTokenAsync()]] - `references` [EXTRACTED]
+- [[.GetByTokenAsync()_1]] - `references` [EXTRACTED]
+- [[.GetScheduleByTokenAsync()_1]] - `references` [EXTRACTED]
+- [[.PickRoomsAsync()]] - `references` [EXTRACTED]
+- [[.SendSafelyAsync()]] - `references` [EXTRACTED]
+- [[.TryCreateAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management
+#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_1

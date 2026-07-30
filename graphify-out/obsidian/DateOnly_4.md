@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Booking Persistence & Entities (4)"
+community: "Admin Bookings Controller & DTOs"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Booking_Persistence__Entities_4
+  - community/Admin_Bookings_Controller__DTOs
 ---
 
 # DateOnly
 
 ## Connections
-- [[BookingRoomAssignment]] - `references` [EXTRACTED]
+- [[.GetOccupancyAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Booking_Persistence__Entities_4
+#graphify/code #graphify/EXTRACTED #community/Admin_Bookings_Controller__DTOs

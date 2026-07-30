@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Auth Controller (1)"
+community: "DTOs / Schedule (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Auth_Controller_1
+  - community/DTOs_/_Schedule_2
 ---
 
 # IValidator
 
 ## Connections
-- [[AuthController]] - `references` [EXTRACTED]
+- [[MealTimesController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Auth_Controller_1
+#graphify/code #graphify/EXTRACTED #community/DTOs_/_Schedule_2

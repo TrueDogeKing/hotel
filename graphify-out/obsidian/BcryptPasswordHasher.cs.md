@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Auth/BcryptPasswordHasher.cs"
 type: "code"
-community: "Rate Limiting & Startup"
+community: "CampCenter.UnitTests / Services (5)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Rate_Limiting__Startup
+  - community/CampCenterUnitTests_/_Services_5
 ---
 
 # BcryptPasswordHasher.cs
@@ -16,4 +16,4 @@ tags:
 - [[CampCenter.Application.Interfaces]] - `imports` [EXTRACTED]
 - [[CampCenter.Infrastructure.Auth]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Rate_Limiting__Startup
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_5

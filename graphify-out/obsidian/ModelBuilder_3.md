@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "EF Core Migrations (3)"
+community: "20260721111400_ReplaceSessionsWithClosures.Designer.cs"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EF_Core_Migrations_3
+  - community/20260721111400_ReplaceSessionsWithClosuresDesignercs
 ---
 
 # ModelBuilder
 
 ## Connections
-- [[.BuildModel()]] - `references` [EXTRACTED]
+- [[.BuildTargetModel()_2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EF_Core_Migrations_3
+#graphify/code #graphify/EXTRACTED #community/20260721111400_ReplaceSessionsWithClosuresDesignercs

@@ -1,13 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "Unlabeled (6)"
+community: "CampCenter.UnitTests / Validators"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Unlabeled_6
+  - community/CampCenterUnitTests_/_Validators
 ---
 
 # HttpGet
 
-#graphify/code #graphify/EXTRACTED #community/Unlabeled_6
+## Connections
+- [[.GetDay()]] - `references` [EXTRACTED]
+- [[.GetRange()]] - `references` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Validators

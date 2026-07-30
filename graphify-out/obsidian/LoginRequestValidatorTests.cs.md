@@ -1,12 +1,12 @@
 ---
 source_file: "tests/CampCenter.UnitTests/Validators/LoginRequestValidatorTests.cs"
 type: "code"
-community: "Validator Unit Tests"
+community: "Rate Limiting & Startup"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Validator_Unit_Tests
+  - community/Rate_Limiting__Startup
 ---
 
 # LoginRequestValidatorTests.cs
@@ -14,6 +14,7 @@ tags:
 ## Connections
 - [[CampCenter.Application.DTOs.Auth]] - `imports` [EXTRACTED]
 - [[CampCenter.Application.Validators]] - `imports` [EXTRACTED]
+- [[CampCenter.UnitTests.Validators]] - `contains` [EXTRACTED]
 - [[LoginRequestValidatorTests]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Validator_Unit_Tests
+#graphify/code #graphify/EXTRACTED #community/Rate_Limiting__Startup

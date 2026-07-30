@@ -1,13 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Unlabeled (1)"
+community: "CampCenter.Application / Services (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Unlabeled_1
+  - community/CampCenterApplication_/_Services_2
 ---
 
 # Count
 
-#graphify/code #graphify/EXTRACTED #community/Unlabeled_1
+## Connections
+- [[.CountByDateAndKindAsync()]] - `references` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_2

@@ -1,19 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.Application / Services (2)"
+community: "Room Closure Management"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterApplication_/_Services_2
+  - community/Room_Closure_Management
 ---
 
 # DateOnly
 
 ## Connections
-- [[.GenerateMissingMealsAsync()_1]] - `references` [EXTRACTED]
-- [[.GetCalendarAsync()_1]] - `references` [EXTRACTED]
-- [[.GetDayAsync()_3]] - `references` [EXTRACTED]
-- [[.GuardDateWithinStay()]] - `references` [EXTRACTED]
+- [[.GetOverlappingAsync()]] - `references` [EXTRACTED]
+- [[.GetUpcomingCenterWideAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_2
+#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Booking Persistence & Entities (3)"
+community: "CampCenter.Application / Services (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Booking_Persistence__Entities_3
+  - community/CampCenterApplication_/_Services_2
 ---
 
 # DateTime
 
 ## Connections
-- [[Payment]] - `references` [EXTRACTED]
+- [[BookingMealTime_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Booking_Persistence__Entities_3
+#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_2

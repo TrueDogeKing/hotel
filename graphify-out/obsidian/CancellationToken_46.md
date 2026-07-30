@@ -1,19 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.Application / Services (1)"
+community: "CampCenter.UnitTests / Services (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterApplication_/_Services_1
+  - community/CampCenterUnitTests_/_Services_2
 ---
 
 # CancellationToken
 
 ## Connections
-- [[.Create()_2]] - `references` [EXTRACTED]
-- [[.Delete()_1]] - `references` [EXTRACTED]
-- [[.GetAll()_1]] - `references` [EXTRACTED]
-- [[.Update()_1]] - `references` [EXTRACTED]
+- [[.AddAsync()_5]] - `references` [EXTRACTED]
+- [[.CountDoneByDateAsync()]] - `references` [EXTRACTED]
+- [[.GetAsync()_3]] - `references` [EXTRACTED]
+- [[.ListForDateAsync()]] - `references` [EXTRACTED]
+- [[.SaveChangesAsync()_6]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_1
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_2

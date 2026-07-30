@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Validators/AdminBookingValidators.cs"
 type: "code"
-community: "Validator Unit Tests"
+community: "Rate Limiting & Startup"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Validator_Unit_Tests
+  - community/Rate_Limiting__Startup
 ---
 
 # AdminBookingValidators.cs
@@ -17,4 +17,4 @@ tags:
 - [[CampCenter.Domain.Entities]] - `imports` [EXTRACTED]
 - [[CreateAdminBookingRequestValidator]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Validator_Unit_Tests
+#graphify/code #graphify/EXTRACTED #community/Rate_Limiting__Startup

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Room Management"
+community: "Admin Bookings Controller & DTOs"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Management
+  - community/Admin_Bookings_Controller__DTOs
 ---
 
 # IValidator
 
 ## Connections
-- [[RoomsController]] - `references` [EXTRACTED]
+- [[BookingsController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Management
+#graphify/code #graphify/EXTRACTED #community/Admin_Bookings_Controller__DTOs

@@ -12,11 +12,12 @@ tags:
 # IRoomTaskService
 
 ## Connections
-- [[.CreateAsync()_2]] - `method` [EXTRACTED]
-- [[.DeleteAsync()_2]] - `method` [EXTRACTED]
-- [[.ListAsync()]] - `method` [EXTRACTED]
-- [[.SetStatusAsync()]] - `method` [EXTRACTED]
+- [[.CreateAsync()_5]] - `method` [EXTRACTED]
+- [[.DeleteAsync()_3]] - `method` [EXTRACTED]
+- [[.ListAsync()_1]] - `method` [EXTRACTED]
+- [[.SetStatusAsync()_2]] - `method` [EXTRACTED]
 - [[IRoomTaskService.cs]] - `contains` [EXTRACTED]
 - [[RoomTaskService]] - `implements` [EXTRACTED]
+- [[TasksController]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Room_Task_Management_1

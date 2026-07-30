@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Services/ScheduleService.cs"
 type: "code"
-community: "Rate Limiting & Startup"
+community: "Application Namespaces & DTOs"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Rate_Limiting__Startup
+  - community/Application_Namespaces__DTOs
 ---
 
 # ScheduleService.cs
@@ -17,7 +17,8 @@ tags:
 - [[CampCenter.Application.Models]] - `imports` [EXTRACTED]
 - [[CampCenter.Application.Services]] - `contains` [EXTRACTED]
 - [[CampCenter.Domain.Entities]] - `imports` [EXTRACTED]
+- [[CampCenter.Domain.Exceptions]] - `imports` [EXTRACTED]
 - [[CampCenter.Domain.Repositories]] - `imports` [EXTRACTED]
 - [[ScheduleService]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Rate_Limiting__Startup
+#graphify/code #graphify/EXTRACTED #community/Application_Namespaces__DTOs

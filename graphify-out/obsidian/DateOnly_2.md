@@ -1,13 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "Unlabeled (22)"
+community: "DTOs / Schedule (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Unlabeled_22
+  - community/DTOs_/_Schedule_1
 ---
 
 # DateOnly
 
-#graphify/code #graphify/EXTRACTED #community/Unlabeled_22
+## Connections
+- [[.GenerateMissingMeals()]] - `references` [EXTRACTED]
+- [[.GetCalendar()]] - `references` [EXTRACTED]
+- [[.GetDay()_1]] - `references` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/DTOs_/_Schedule_1

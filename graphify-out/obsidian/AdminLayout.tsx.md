@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/components/admin/AdminLayout.tsx"
 type: "code"
-community: "Frontend Icon Components"
+community: "Admin Tasks & Occupancy Pages"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Frontend_Icon_Components
+  - community/Admin_Tasks__Occupancy_Pages
 ---
 
 # AdminLayout.tsx
@@ -15,6 +15,7 @@ tags:
 - [[AdminBookingsPage.tsx]] - `imports_from` [EXTRACTED]
 - [[AdminDashboardPage.tsx]] - `imports_from` [EXTRACTED]
 - [[AdminLayout()]] - `contains` [EXTRACTED]
+- [[AuthContext.tsx]] - `imports_from` [EXTRACTED]
 - [[ClosuresPage.tsx]] - `imports_from` [EXTRACTED]
 - [[HousekeepingPage.tsx]] - `imports_from` [EXTRACTED]
 - [[IconLandscape()]] - `imports` [EXTRACTED]
@@ -28,5 +29,6 @@ tags:
 - [[ThemeToggle()]] - `imports` [EXTRACTED]
 - [[ThemeToggle.tsx]] - `imports_from` [EXTRACTED]
 - [[icons.tsx]] - `imports_from` [EXTRACTED]
+- [[useAuth()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Frontend_Icon_Components
+#graphify/code #graphify/EXTRACTED #community/Admin_Tasks__Occupancy_Pages

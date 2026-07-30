@@ -1,19 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.UnitTests / Validators"
+community: "CampCenter.Application / Services (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Validators
+  - community/CampCenterApplication_/_Services_2
 ---
 
 # Task
 
 ## Connections
-- [[.Create()_3]] - `references` [EXTRACTED]
-- [[.Delete()_2]] - `references` [EXTRACTED]
-- [[.GetAll()_2]] - `references` [EXTRACTED]
-- [[.Update()_2]] - `references` [EXTRACTED]
+- [[.AddAsync()_9]] - `references` [EXTRACTED]
+- [[.GetAsync()_4]] - `references` [EXTRACTED]
+- [[.ListForBookingAsync()_2]] - `references` [EXTRACTED]
+- [[.ListForBookingsAsync()_1]] - `references` [EXTRACTED]
+- [[.SaveChangesAsync()_11]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Validators
+#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_2

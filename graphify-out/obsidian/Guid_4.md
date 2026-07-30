@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "Claims Principal Extensions"
+community: "Room Management"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Claims_Principal_Extensions
+  - community/Room_Management
 ---
 
 # Guid
 
 ## Connections
-- [[.GetUserId()]] - `references` [EXTRACTED]
+- [[.Delete()_2]] - `references` [EXTRACTED]
+- [[.Update()_2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Claims_Principal_Extensions
+#graphify/code #graphify/EXTRACTED #community/Room_Management

@@ -1,20 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "Room Task Management (2)"
+community: "DTOs / Schedule (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Task_Management_2
+  - community/DTOs_/_Schedule_2
 ---
 
 # IActionResult
 
 ## Connections
-- [[.Create()_4]] - `references` [EXTRACTED]
-- [[.Delete()_3]] - `references` [EXTRACTED]
-- [[.Done()]] - `references` [EXTRACTED]
-- [[.List()_1]] - `references` [EXTRACTED]
-- [[.Reopen()]] - `references` [EXTRACTED]
+- [[.Create()_2]] - `references` [EXTRACTED]
+- [[.Delete()_1]] - `references` [EXTRACTED]
+- [[.GetAll()_1]] - `references` [EXTRACTED]
+- [[.Update()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Task_Management_2
+#graphify/code #graphify/EXTRACTED #community/DTOs_/_Schedule_2

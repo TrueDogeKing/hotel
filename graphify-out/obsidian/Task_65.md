@@ -1,20 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.Domain / Repositories (2)"
+community: "tests / CampCenter.IntegrationTests (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterDomain_/_Repositories_2
+  - community/tests_/_CampCenterIntegrationTests_1
 ---
 
 # Task
 
 ## Connections
-- [[.AddAsync()_8]] - `references` [EXTRACTED]
-- [[.GetAsync()_2]] - `references` [EXTRACTED]
-- [[.ListForBookingAsync()]] - `references` [EXTRACTED]
-- [[.ListForBookingsAsync()]] - `references` [EXTRACTED]
-- [[.SaveChangesAsync()_10]] - `references` [EXTRACTED]
+- [[.DisposeAsync()]] - `references` [EXTRACTED]
+- [[.InitializeAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterDomain_/_Repositories_2
+#graphify/code #graphify/EXTRACTED #community/tests_/_CampCenterIntegrationTests_1

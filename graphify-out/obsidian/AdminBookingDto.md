@@ -12,17 +12,17 @@ tags:
 # AdminBookingDto
 
 ## Connections
+- [[.CreateAsync()]] - `references` [EXTRACTED]
 - [[.CreateAsync()_6]] - `references` [EXTRACTED]
-- [[.CreateAsync()_10]] - `references` [EXTRACTED]
 - [[.GetAsync()]] - `references` [EXTRACTED]
 - [[.GetAsync()_1]] - `references` [EXTRACTED]
-- [[.ListAsync()_4]] - `references` [EXTRACTED]
-- [[.ListAsync()_5]] - `references` [EXTRACTED]
+- [[.ListAsync()]] - `references` [EXTRACTED]
+- [[.ListAsync()_2]] - `references` [EXTRACTED]
 - [[.ReassignAsync()]] - `references` [EXTRACTED]
 - [[.ReassignAsync()_1]] - `references` [EXTRACTED]
-- [[.SetStatusAsync()_2]] - `references` [EXTRACTED]
-- [[.SetStatusAsync()_4]] - `references` [EXTRACTED]
-- [[.ToDto()_3]] - `references` [EXTRACTED]
+- [[.SetStatusAsync()]] - `references` [EXTRACTED]
+- [[.SetStatusAsync()_3]] - `references` [EXTRACTED]
+- [[.ToDto()]] - `references` [EXTRACTED]
 - [[.UpdateDietaryNotesAsync()]] - `references` [EXTRACTED]
 - [[.UpdateDietaryNotesAsync()_1]] - `references` [EXTRACTED]
 - [[AdminPanelDtos.cs]] - `contains` [EXTRACTED]

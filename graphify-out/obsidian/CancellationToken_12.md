@@ -1,24 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "Admin Bookings Controller & DTOs"
+community: "Public Booking Service (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Bookings_Controller__DTOs
+  - community/Public_Booking_Service_1
 ---
 
 # CancellationToken
 
 ## Connections
-- [[.CancelAsync()]] - `references` [EXTRACTED]
-- [[.CreateAsync()_6]] - `references` [EXTRACTED]
-- [[.GetAsync()]] - `references` [EXTRACTED]
-- [[.GetDashboardAsync()]] - `references` [EXTRACTED]
-- [[.GetOccupancyAsync()]] - `references` [EXTRACTED]
-- [[.ListAsync()_4]] - `references` [EXTRACTED]
-- [[.ReassignAsync()]] - `references` [EXTRACTED]
-- [[.SetStatusAsync()_2]] - `references` [EXTRACTED]
-- [[.UpdateDietaryNotesAsync()]] - `references` [EXTRACTED]
+- [[.Cancel()_1]] - `references` [EXTRACTED]
+- [[.Create()_5]] - `references` [EXTRACTED]
+- [[.GetByToken()]] - `references` [EXTRACTED]
+- [[.GetScheduleByToken()]] - `references` [EXTRACTED]
+- [[.InitiatePayment()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Bookings_Controller__DTOs
+#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_1

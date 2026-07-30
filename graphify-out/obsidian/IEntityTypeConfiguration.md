@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Persistence / Configurations"
+community: "Validator Unit Tests"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Persistence_/_Configurations
+  - community/Validator_Unit_Tests
 ---
 
 # IEntityTypeConfiguration
@@ -24,4 +24,4 @@ tags:
 - [[RoomTaskConfiguration]] - `implements` [EXTRACTED]
 - [[ScheduleEntryConfiguration]] - `implements` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Persistence_/_Configurations
+#graphify/code #graphify/EXTRACTED #community/Validator_Unit_Tests

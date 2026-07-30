@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[CampCenter.Domain.Entities]] - `contains` [EXTRACTED]
-- [[RoomTask]] - `contains` [EXTRACTED]
+- [[RoomTask_1]] - `contains` [EXTRACTED]
 - [[RoomTaskStatus]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Room_Task_Management_1

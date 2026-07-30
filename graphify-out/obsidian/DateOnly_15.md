@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Admin Bookings Controller & DTOs"
+community: "CampCenter.UnitTests / Services (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Bookings_Controller__DTOs
+  - community/CampCenterUnitTests_/_Services_1
 ---
 
 # DateOnly
 
 ## Connections
-- [[.GetOccupancyAsync()]] - `references` [EXTRACTED]
+- [[.Plan()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Bookings_Controller__DTOs
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_1

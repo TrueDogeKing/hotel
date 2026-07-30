@@ -12,13 +12,14 @@ tags:
 # RoomTaskStatus
 
 ## Connections
-- [[.ListAsync()]] - `references` [EXTRACTED]
+- [[.List()_1]] - `references` [EXTRACTED]
 - [[.ListAsync()_1]] - `references` [EXTRACTED]
-- [[.ListAsync()_2]] - `references` [EXTRACTED]
 - [[.ListAsync()_3]] - `references` [EXTRACTED]
-- [[.SetStatusAsync()]] - `references` [EXTRACTED]
-- [[.SetStatusAsync()_1]] - `references` [EXTRACTED]
-- [[RoomTask]] - `references` [EXTRACTED]
+- [[.ListAsync()_5]] - `references` [EXTRACTED]
+- [[.ListAsync()_7]] - `references` [EXTRACTED]
+- [[.SetStatusAsync()_2]] - `references` [EXTRACTED]
+- [[.SetStatusAsync()_5]] - `references` [EXTRACTED]
+- [[RoomTask_1]] - `references` [EXTRACTED]
 - [[RoomTask.cs]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Room_Task_Management_1

@@ -1,18 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "Public Booking Service (1)"
+community: "Room Task Management (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public_Booking_Service_1
+  - community/Room_Task_Management_1
 ---
 
 # HttpPost
 
 ## Connections
-- [[.Cancel()_1]] - `references` [EXTRACTED]
-- [[.Create()_5]] - `references` [EXTRACTED]
-- [[.InitiatePayment()]] - `references` [EXTRACTED]
+- [[.Create()_4]] - `references` [EXTRACTED]
+- [[.Done()]] - `references` [EXTRACTED]
+- [[.Reopen()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_1
+#graphify/code #graphify/EXTRACTED #community/Room_Task_Management_1

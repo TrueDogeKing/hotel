@@ -1,21 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Integration Test Harness (1)"
+community: "Public Booking Service (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Integration_Test_Harness_1
+  - community/Public_Booking_Service_1
 ---
 
 # Task
 
 ## Connections
-- [[.BookingFlow_AvailabilityShrinks_AndCancelFreesRooms()]] - `references` [EXTRACTED]
-- [[.Booking_RedundantRoomSelection_IsRejected()]] - `references` [EXTRACTED]
-- [[.Booking_WhenCenterClosed_IsRejected()]] - `references` [EXTRACTED]
-- [[.ParallelBookings_ForTheLastRooms_ExactlyOneWins()]] - `references` [EXTRACTED]
-- [[.SetUpRoomsAsync()]] - `references` [EXTRACTED]
-- [[.UnknownManageToken_Returns404()]] - `references` [EXTRACTED]
+- [[.SendAsync()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Integration_Test_Harness_1
+#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_1

@@ -19,7 +19,7 @@ tags:
 - [[.InitiatePayment()]] - `method` [EXTRACTED]
 - [[ControllerBase]] - `inherits` [EXTRACTED]
 - [[IBookingService]] - `references` [EXTRACTED]
-- [[IValidator_3]] - `references` [EXTRACTED]
+- [[IValidator_6]] - `references` [EXTRACTED]
 - [[PublicBookingsController.cs]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_1

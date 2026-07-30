@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Booking Persistence & Entities (2)"
+community: "Admin User & Token Config"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Booking_Persistence__Entities_2
+  - community/Admin_User__Token_Config
 ---
 
 # DateTime
 
 ## Connections
-- [[Booking]] - `references` [EXTRACTED]
+- [[AdminUser]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Booking_Persistence__Entities_2
+#graphify/code #graphify/EXTRACTED #community/Admin_User__Token_Config

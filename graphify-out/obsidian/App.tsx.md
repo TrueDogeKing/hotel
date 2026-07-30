@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/App.tsx"
 type: "code"
-community: "Frontend App Shell & i18n"
+community: "Admin Tasks & Occupancy Pages"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Frontend_App_Shell__i18n
+  - community/Admin_Tasks__Occupancy_Pages
 ---
 
 # App.tsx
@@ -15,6 +15,8 @@ tags:
 - [[AdminBookingsPage.tsx]] - `imports_from` [EXTRACTED]
 - [[AdminDashboardPage.tsx]] - `imports_from` [EXTRACTED]
 - [[App()]] - `contains` [EXTRACTED]
+- [[AuthContext.tsx]] - `imports_from` [EXTRACTED]
+- [[AuthProvider()]] - `imports` [EXTRACTED]
 - [[BookingManagePage.tsx]] - `imports_from` [EXTRACTED]
 - [[BookingWizardPage.tsx]] - `imports_from` [EXTRACTED]
 - [[ClosuresPage.tsx]] - `imports_from` [EXTRACTED]
@@ -22,8 +24,13 @@ tags:
 - [[LoginPage.tsx]] - `imports_from` [EXTRACTED]
 - [[MealTimesPage.tsx]] - `imports_from` [EXTRACTED]
 - [[OccupancyPage.tsx]] - `imports_from` [EXTRACTED]
+- [[PaymentReturnPage.tsx]] - `imports_from` [EXTRACTED]
+- [[ProtectedRoute()]] - `imports` [EXTRACTED]
+- [[ProtectedRoute.tsx]] - `imports_from` [EXTRACTED]
 - [[PublicHomePage.tsx]] - `imports_from` [EXTRACTED]
+- [[RoomsPage.tsx]] - `imports_from` [EXTRACTED]
 - [[SchedulePage.tsx]] - `imports_from` [EXTRACTED]
+- [[TasksPage.tsx]] - `imports_from` [EXTRACTED]
 - [[main.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Frontend_App_Shell__i18n
+#graphify/code #graphify/EXTRACTED #community/Admin_Tasks__Occupancy_Pages

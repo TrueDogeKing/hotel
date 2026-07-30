@@ -1,18 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "Controllers / Admin"
+community: "Room Closure Management"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Controllers_/_Admin
+  - community/Room_Closure_Management
 ---
 
 # IActionResult
 
 ## Connections
-- [[.GetDay()]] - `references` [EXTRACTED]
-- [[.GetRange()]] - `references` [EXTRACTED]
-- [[.SetStatus()_1]] - `references` [EXTRACTED]
+- [[.Closures()]] - `references` [EXTRACTED]
+- [[.Get()_3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Controllers_/_Admin
+#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management

@@ -13,5 +13,6 @@ tags:
 
 ## Connections
 - [[BearerSecuritySchemeTransformer.cs]] - `contains` [EXTRACTED]
+- [[Program.cs]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/OpenAPI_Security_Scheme

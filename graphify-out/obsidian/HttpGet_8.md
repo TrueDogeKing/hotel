@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Controllers / Admin"
+community: "Room Task Management (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Controllers_/_Admin
+  - community/Room_Task_Management_1
 ---
 
 # HttpGet
 
 ## Connections
-- [[.GetDay()]] - `references` [EXTRACTED]
-- [[.GetRange()]] - `references` [EXTRACTED]
+- [[.List()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Controllers_/_Admin
+#graphify/code #graphify/EXTRACTED #community/Room_Task_Management_1

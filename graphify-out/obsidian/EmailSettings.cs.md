@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Email/EmailSettings.cs"
 type: "code"
-community: "Admin Booking & Notifications (5)"
+community: "Public Booking Service (1)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Booking__Notifications_5
+  - community/Public_Booking_Service_1
 ---
 
 # EmailSettings.cs
@@ -15,4 +15,4 @@ tags:
 - [[CampCenter.Infrastructure.Email]] - `contains` [EXTRACTED]
 - [[EmailSettings]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_5
+#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_1

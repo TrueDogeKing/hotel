@@ -12,13 +12,13 @@ tags:
 # RoomsController
 
 ## Connections
-- [[.Create()]] - `method` [EXTRACTED]
-- [[.Delete()]] - `method` [EXTRACTED]
-- [[.GetAll()]] - `method` [EXTRACTED]
-- [[.Update()]] - `method` [EXTRACTED]
+- [[.Create()_3]] - `method` [EXTRACTED]
+- [[.Delete()_2]] - `method` [EXTRACTED]
+- [[.GetAll()_2]] - `method` [EXTRACTED]
+- [[.Update()_2]] - `method` [EXTRACTED]
 - [[ControllerBase]] - `inherits` [EXTRACTED]
 - [[IRoomService]] - `references` [EXTRACTED]
-- [[IValidator]] - `references` [EXTRACTED]
+- [[IValidator_3]] - `references` [EXTRACTED]
 - [[RoomsController.cs]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Room_Management

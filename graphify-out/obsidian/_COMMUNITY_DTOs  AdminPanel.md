@@ -1,29 +1,17 @@
 ---
 type: community
-cohesion: 0.24
-members: 14
+members: 4
 ---
 
 # DTOs / AdminPanel
 
-**Cohesion:** 0.24 - loosely connected
-**Members:** 14 nodes
+**Members:** 4 nodes
 
 ## Members
-- [[.GetDayAsync()]] - code - src/CampCenter.Application/Interfaces/IHousekeepingService.cs
-- [[.GetRangeAsync()]] - code - src/CampCenter.Application/Interfaces/IHousekeepingService.cs
-- [[.SetStatusAsync()_3]] - code - src/CampCenter.Application/Interfaces/IHousekeepingService.cs
-- [[CancellationToken_53]] - code
-- [[DateOnly_16]] - code
-- [[Guid_43]] - code
-- [[HousekeepingDayDto]] - code - src/CampCenter.Application/DTOs/AdminPanel/HousekeepingDtos.cs
-- [[HousekeepingDaySummaryDto]] - code - src/CampCenter.Application/DTOs/AdminPanel/HousekeepingDtos.cs
-- [[HousekeepingDtos.cs]] - code - src/CampCenter.Application/DTOs/AdminPanel/HousekeepingDtos.cs
-- [[HousekeepingRangeDto]] - code - src/CampCenter.Application/DTOs/AdminPanel/HousekeepingDtos.cs
-- [[HousekeepingRoomDto]] - code - src/CampCenter.Application/DTOs/AdminPanel/HousekeepingDtos.cs
-- [[IHousekeepingService]] - code - src/CampCenter.Application/Interfaces/IHousekeepingService.cs
-- [[SetRoomCleaningRequestDto]] - code - src/CampCenter.Application/DTOs/AdminPanel/HousekeepingDtos.cs
-- [[Task_58]] - code
+- [[.Configure()_9]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/RoomConfiguration.cs
+- [[EntityTypeBuilder_9]] - code
+- [[RoomConfiguration]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/RoomConfiguration.cs
+- [[RoomConfiguration.cs]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/RoomConfiguration.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -33,13 +21,12 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_Controllers  Admin]]
-- 5 edges to [[_COMMUNITY_CampCenter.Application  Services (4)]]
-- 2 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
+- 2 edges to [[_COMMUNITY_Room Management]]
+- 1 edge to [[_COMMUNITY_Domain & Infra Namespaces]]
+- 1 edge to [[_COMMUNITY_Persistence  Configurations]]
+- 1 edge to [[_COMMUNITY_Validator Unit Tests]]
 
 ## Top bridge nodes
-- [[IHousekeepingService]] - degree 6, connects to 3 communities
-- [[SetRoomCleaningRequestDto]] - degree 4, connects to 2 communities
-- [[.SetStatusAsync()_3]] - degree 8, connects to 1 community
-- [[HousekeepingDtos.cs]] - degree 6, connects to 1 community
-- [[.GetDayAsync()]] - degree 6, connects to 1 community
+- [[RoomConfiguration]] - degree 4, connects to 2 communities
+- [[RoomConfiguration.cs]] - degree 3, connects to 2 communities
+- [[.Configure()_9]] - degree 3, connects to 1 community

@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/App.tsx"
 type: "code"
-community: "Frontend App Shell & i18n"
+community: "Admin Tasks & Occupancy Pages"
 location: "L20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Frontend_App_Shell__i18n
+  - community/Admin_Tasks__Occupancy_Pages
 ---
 
 # App()
@@ -15,4 +15,4 @@ tags:
 - [[App.tsx]] - `contains` [EXTRACTED]
 - [[main.tsx]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Frontend_App_Shell__i18n
+#graphify/code #graphify/EXTRACTED #community/Admin_Tasks__Occupancy_Pages

@@ -1,13 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "Unlabeled (27)"
+community: "tests / CampCenter.IntegrationTests (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Unlabeled_27
+  - community/tests_/_CampCenterIntegrationTests_1
 ---
 
 # Fact
 
-#graphify/code #graphify/EXTRACTED #community/Unlabeled_27
+## Connections
+- [[.AdminEndpoints_WithoutToken_ReturnUnauthorized()]] - `references` [EXTRACTED]
+- [[.Closures_CrudRoundtrip_Works()]] - `references` [EXTRACTED]
+- [[.Rooms_CrudRoundtrip_Works()]] - `references` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/tests_/_CampCenterIntegrationTests_1

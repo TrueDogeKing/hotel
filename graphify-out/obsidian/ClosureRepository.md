@@ -12,13 +12,13 @@ tags:
 # ClosureRepository
 
 ## Connections
-- [[.AddAsync()_4]] - `method` [EXTRACTED]
-- [[.GetAllAsync()_6]] - `method` [EXTRACTED]
-- [[.GetByIdAsync()_5]] - `method` [EXTRACTED]
+- [[.AddAsync()_11]] - `method` [EXTRACTED]
+- [[.GetAllAsync()_9]] - `method` [EXTRACTED]
+- [[.GetByIdAsync()_9]] - `method` [EXTRACTED]
 - [[.GetOverlappingAsync()_1]] - `method` [EXTRACTED]
 - [[.GetUpcomingCenterWideAsync()_1]] - `method` [EXTRACTED]
-- [[.Remove()_3]] - `method` [EXTRACTED]
-- [[.SaveChangesAsync()_6]] - `method` [EXTRACTED]
+- [[.Remove()_7]] - `method` [EXTRACTED]
+- [[.SaveChangesAsync()_13]] - `method` [EXTRACTED]
 - [[AppDbContext]] - `references` [EXTRACTED]
 - [[ClosureRepository.cs]] - `contains` [EXTRACTED]
 - [[IClosureRepository]] - `implements` [EXTRACTED]

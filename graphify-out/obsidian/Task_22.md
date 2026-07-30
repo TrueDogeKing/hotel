@@ -1,19 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "Auth Service & Tokens"
+community: "DTOs / Schedule (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Auth_Service__Tokens
+  - community/DTOs_/_Schedule_2
 ---
 
 # Task
 
 ## Connections
-- [[.IssueTokensAsync()]] - `references` [EXTRACTED]
-- [[.LoginAsync()_1]] - `references` [EXTRACTED]
-- [[.LogoutAsync()_1]] - `references` [EXTRACTED]
-- [[.RefreshAsync()_1]] - `references` [EXTRACTED]
+- [[.CreateAsync()_3]] - `references` [EXTRACTED]
+- [[.DeleteAsync()_1]] - `references` [EXTRACTED]
+- [[.GetAllAsync()_1]] - `references` [EXTRACTED]
+- [[.UpdateAsync()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Auth_Service__Tokens
+#graphify/code #graphify/EXTRACTED #community/DTOs_/_Schedule_2

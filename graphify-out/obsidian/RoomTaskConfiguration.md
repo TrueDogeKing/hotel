@@ -1,20 +1,20 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Persistence/Configurations/RoomTaskConfiguration.cs"
 type: "code"
-community: "Room Task Management (1)"
+community: "CampCenter.Application / Services (4)"
 location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Task_Management_1
+  - community/CampCenterApplication_/_Services_4
 ---
 
 # RoomTaskConfiguration
 
 ## Connections
-- [[.Configure()_6]] - `method` [EXTRACTED]
+- [[.Configure()_10]] - `method` [EXTRACTED]
 - [[IEntityTypeConfiguration]] - `implements` [EXTRACTED]
-- [[RoomTask]] - `references` [EXTRACTED]
+- [[RoomTask_1]] - `references` [EXTRACTED]
 - [[RoomTaskConfiguration.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Task_Management_1
+#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_4

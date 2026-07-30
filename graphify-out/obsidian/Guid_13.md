@@ -1,13 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "Unlabeled (20)"
+community: "Room Management"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Unlabeled_20
+  - community/Room_Management
 ---
 
 # Guid
 
-#graphify/code #graphify/EXTRACTED #community/Unlabeled_20
+## Connections
+- [[.DeleteAsync()_2]] - `references` [EXTRACTED]
+- [[.UpdateAsync()_2]] - `references` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/Room_Management

@@ -12,9 +12,10 @@ tags:
 # BookingsController
 
 ## Connections
+- [[.AssignableRooms()]] - `method` [EXTRACTED]
 - [[.Cancel()]] - `method` [EXTRACTED]
-- [[.Create()_1]] - `method` [EXTRACTED]
-- [[.Get()_1]] - `method` [EXTRACTED]
+- [[.Create()]] - `method` [EXTRACTED]
+- [[.Get()]] - `method` [EXTRACTED]
 - [[.List()]] - `method` [EXTRACTED]
 - [[.Reassign()]] - `method` [EXTRACTED]
 - [[.SetStatus()]] - `method` [EXTRACTED]
@@ -22,6 +23,6 @@ tags:
 - [[BookingsController.cs]] - `contains` [EXTRACTED]
 - [[ControllerBase]] - `inherits` [EXTRACTED]
 - [[IAdminBookingService]] - `references` [EXTRACTED]
-- [[IValidator_4]] - `references` [EXTRACTED]
+- [[IValidator]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Admin_Bookings_Controller__DTOs

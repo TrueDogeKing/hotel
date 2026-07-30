@@ -1,18 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "Controllers / Admin"
+community: "Admin User & Token Config"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Controllers_/_Admin
+  - community/Admin_User__Token_Config
 ---
 
 # Task
 
 ## Connections
-- [[.GetDay()]] - `references` [EXTRACTED]
-- [[.GetRange()]] - `references` [EXTRACTED]
-- [[.SetStatus()_1]] - `references` [EXTRACTED]
+- [[.GetByIdAsync()_7]] - `references` [EXTRACTED]
+- [[.GetByLoginAsync()_1]] - `references` [EXTRACTED]
+- [[.SaveChangesAsync()_10]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Controllers_/_Admin
+#graphify/code #graphify/EXTRACTED #community/Admin_User__Token_Config

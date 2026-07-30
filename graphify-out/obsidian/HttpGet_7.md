@@ -1,16 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.Application / Services (1)"
+community: "DTOs / Schedule (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterApplication_/_Services_1
+  - community/DTOs_/_Schedule_1
 ---
 
 # HttpGet
 
 ## Connections
-- [[.GetAll()_1]] - `references` [EXTRACTED]
+- [[.GetBookingMealTimes()]] - `references` [EXTRACTED]
+- [[.GetCalendar()]] - `references` [EXTRACTED]
+- [[.GetDay()_1]] - `references` [EXTRACTED]
+- [[.GetForBooking()]] - `references` [EXTRACTED]
+- [[.GetLocations()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_1
+#graphify/code #graphify/EXTRACTED #community/DTOs_/_Schedule_1

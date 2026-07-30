@@ -1,13 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Unlabeled (32)"
+community: "CampCenter.Domain / Repositories (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Unlabeled_32
+  - community/CampCenterDomain_/_Repositories_1
 ---
 
 # Token
 
-#graphify/code #graphify/EXTRACTED #community/Unlabeled_32
+## Connections
+- [[.CreateBookingWithDepositAsync()]] - `references` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/CampCenterDomain_/_Repositories_1

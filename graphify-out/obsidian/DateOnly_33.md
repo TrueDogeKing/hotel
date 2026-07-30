@@ -11,7 +11,7 @@ tags:
 # DateOnly
 
 ## Connections
-- [[.Booking()_1]] - `references` [EXTRACTED]
-- [[HousekeepingServiceTests]] - `references` [EXTRACTED]
+- [[.Booking()]] - `references` [EXTRACTED]
+- [[HousekeepingPlannerTests]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_2

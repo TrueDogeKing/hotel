@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.Domain / Repositories (3)"
+community: "Room Task Management (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterDomain_/_Repositories_3
+  - community/Room_Task_Management_1
 ---
 
 # Dictionary
 
 ## Connections
-- [[.CountDoneByDateAsync()]] - `references` [EXTRACTED]
+- [[.CountOpenByRoomAsync()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterDomain_/_Repositories_3
+#graphify/code #graphify/EXTRACTED #community/Room_Task_Management_1

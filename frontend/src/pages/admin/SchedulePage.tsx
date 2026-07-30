@@ -14,7 +14,7 @@ import {
   type ScheduleCalendar,
   type ScheduleDay,
 } from "../../api/admin";
-import { monthGrid, todayIso } from "../../utils/dates";
+import { addDaysIso, fromIsoDate, monthGrid, todayIso } from "../../utils/dates";
 import { scrollPanelIntoView } from "../../utils/scroll";
 
 const TODAY = todayIso();
@@ -92,6 +92,20 @@ export default function SchedulePage() {
     scrollPanelIntoView(timetableRef.current);
   }, [day, selectedDate]);
 
+  // Stepping a day from the timetable. The calendar follows across a month
+  // boundary, so the grid above never highlights a day it is no longer showing —
+  // and no scroll, because the timetable is already what the reader is looking at.
+  function stepDay(delta: number) {
+    if (!selectedDate) return;
+    const next = addDaysIso(selectedDate, delta);
+    const nextDate = fromIsoDate(next);
+    if (nextDate.getFullYear() !== year || nextDate.getMonth() !== month0) {
+      setYear(nextDate.getFullYear());
+      setMonth0(nextDate.getMonth());
+    }
+    setSelectedDate(next);
+  }
+
   async function refreshAll() {
     await loadCalendar();
     if (selectedDate) setDay(await getScheduleDay(selectedDate));
@@ -160,7 +174,11 @@ export default function SchedulePage() {
           {/* Compare dates so a stale day never renders under a new selection. */}
           <div ref={timetableRef} className="schedule-day-anchor">
             {selectedDate && day?.date === selectedDate ? (
-              <DayTimetable day={day} onSelectGroup={setSelectedBookingId} />
+              <DayTimetable
+                day={day}
+                onSelectGroup={setSelectedBookingId}
+                onChangeDay={stepDay}
+              />
             ) : (
               <p className="schedule-hint">{t("schedule.pickDay")}</p>
             )}

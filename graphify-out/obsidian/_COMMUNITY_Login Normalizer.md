@@ -1,12 +1,10 @@
 ---
 type: community
-cohesion: 0.50
 members: 4
 ---
 
 # Login Normalizer
 
-**Cohesion:** 0.50 - moderately connected
 **Members:** 4 nodes
 
 ## Members
@@ -23,7 +21,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_Rate Limiting & Startup]]
+- 1 edge to [[_COMMUNITY_CampCenter.UnitTests  Services (5)]]
 - 1 edge to [[_COMMUNITY_Auth Service & Tokens]]
 
 ## Top bridge nodes

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Booking Persistence & Entities (2)"
+community: "Room Closure Management"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Booking_Persistence__Entities_2
+  - community/Room_Closure_Management
 ---
 
 # DateOnly
 
 ## Connections
-- [[Booking]] - `references` [EXTRACTED]
+- [[.Get()_3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Booking_Persistence__Entities_2
+#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management

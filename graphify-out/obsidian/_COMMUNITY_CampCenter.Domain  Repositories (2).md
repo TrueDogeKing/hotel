@@ -1,45 +1,24 @@
 ---
 type: community
-cohesion: 0.14
-members: 30
+members: 11
 ---
 
 # CampCenter.Domain / Repositories (2)
 
-**Cohesion:** 0.14 - loosely connected
-**Members:** 30 nodes
+**Members:** 11 nodes
 
 ## Members
-- [[.AddAsync()_8]] - code - src/CampCenter.Domain/Repositories/IBookingMealTimeRepository.cs
-- [[.AddAsync()_13]] - code - src/CampCenter.Infrastructure/Repositories/BookingMealTimeRepository.cs
-- [[.AssignMealTimesAsync()]] - code - src/CampCenter.Application/Services/ScheduleService.cs
-- [[.GetAsync()_2]] - code - src/CampCenter.Domain/Repositories/IBookingMealTimeRepository.cs
-- [[.GetAsync()_4]] - code - src/CampCenter.Infrastructure/Repositories/BookingMealTimeRepository.cs
-- [[.ListForBookingAsync()]] - code - src/CampCenter.Domain/Repositories/IBookingMealTimeRepository.cs
-- [[.ListForBookingAsync()_2]] - code - src/CampCenter.Infrastructure/Repositories/BookingMealTimeRepository.cs
-- [[.ListForBookingsAsync()]] - code - src/CampCenter.Domain/Repositories/IBookingMealTimeRepository.cs
-- [[.ListForBookingsAsync()_1]] - code - src/CampCenter.Infrastructure/Repositories/BookingMealTimeRepository.cs
-- [[.Remove()_6]] - code - src/CampCenter.Domain/Repositories/IBookingMealTimeRepository.cs
-- [[.Remove()_9]] - code - src/CampCenter.Infrastructure/Repositories/BookingMealTimeRepository.cs
-- [[.SaveChangesAsync()_10]] - code - src/CampCenter.Domain/Repositories/IBookingMealTimeRepository.cs
-- [[.SaveChangesAsync()_15]] - code - src/CampCenter.Infrastructure/Repositories/BookingMealTimeRepository.cs
-- [[BookingMealTime_1]] - code - src/CampCenter.Domain/Entities/BookingMealTime.cs
-- [[BookingMealTimeRepository]] - code - src/CampCenter.Infrastructure/Repositories/BookingMealTimeRepository.cs
-- [[CancellationToken_60]] - code
-- [[CancellationToken_64]] - code
-- [[DateTime_14]] - code
-- [[Guid_50]] - code
-- [[Guid_54]] - code
-- [[Guid_58]] - code
-- [[IBookingMealTimeRepository]] - code - src/CampCenter.Domain/Repositories/IBookingMealTimeRepository.cs
-- [[IReadOnlyCollection_3]] - code
-- [[IReadOnlyCollection_5]] - code
-- [[IReadOnlyList_1]] - code
-- [[List_31]] - code
-- [[List_35]] - code
-- [[Task_65]] - code
-- [[Task_69]] - code
-- [[TimeOnly_4]] - code
+- [[.Configure()_8]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/RoomCleaningConfiguration.cs
+- [[DateOnly_20]] - code
+- [[DateTime_11]] - code
+- [[EntityTypeBuilder_8]] - code
+- [[Guid_34]] - code
+- [[RoomCleaning]] - code - src/CampCenter.Domain/Entities/RoomCleaning.cs
+- [[RoomCleaning.cs]] - code - src/CampCenter.Domain/Entities/RoomCleaning.cs
+- [[RoomCleaningConfiguration]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/RoomCleaningConfiguration.cs
+- [[RoomCleaningConfiguration.cs]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/RoomCleaningConfiguration.cs
+- [[RoomCleaningKind_1]] - code - src/CampCenter.Domain/Entities/RoomCleaning.cs
+- [[RoomCleaningStatus_1]] - code - src/CampCenter.Domain/Entities/RoomCleaning.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -49,19 +28,17 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 15 edges to [[_COMMUNITY_CampCenter.Application  Services (2)]]
-- 3 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (1)]]
-- 3 edges to [[_COMMUNITY_Domain & Infra Namespaces]]
-- 2 edges to [[_COMMUNITY_Booking Persistence & Entities (2)]]
-- 2 edges to [[_COMMUNITY_CampCenter.Application  Services (3)]]
-- 2 edges to [[_COMMUNITY_CampCenter.Domain  Repositories (1)]]
-- 2 edges to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
-- 2 edges to [[_COMMUNITY_Persistence  Configurations]]
-- 1 edge to [[_COMMUNITY_Admin Booking & Notifications (2)]]
+- 5 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (2)]]
+- 3 edges to [[_COMMUNITY_Integration Test Harness (2)]]
+- 2 edges to [[_COMMUNITY_Domain & Infra Namespaces]]
+- 1 edge to [[_COMMUNITY_Room Management]]
+- 1 edge to [[_COMMUNITY_Booking Persistence & Entities (1)]]
+- 1 edge to [[_COMMUNITY_Persistence  Configurations]]
+- 1 edge to [[_COMMUNITY_Validator Unit Tests]]
 
 ## Top bridge nodes
-- [[BookingMealTime_1]] - degree 22, connects to 7 communities
-- [[.AssignMealTimesAsync()]] - degree 15, connects to 6 communities
-- [[IBookingMealTimeRepository]] - degree 9, connects to 2 communities
-- [[BookingMealTimeRepository]] - degree 9, connects to 2 communities
-- [[.ListForBookingAsync()]] - degree 9, connects to 1 community
+- [[RoomCleaning]] - degree 16, connects to 4 communities
+- [[RoomCleaningConfiguration.cs]] - degree 3, connects to 2 communities
+- [[RoomCleaning.cs]] - degree 4, connects to 1 community
+- [[RoomCleaningConfiguration]] - degree 4, connects to 1 community
+- [[RoomCleaningKind_1]] - degree 3, connects to 1 community

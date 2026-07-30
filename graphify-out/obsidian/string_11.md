@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "DTOs / Schedule (1)"
+community: "tests / CampCenter.IntegrationTests (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DTOs_/_Schedule_1
+  - community/tests_/_CampCenterIntegrationTests_1
 ---
 
 # string
 
 ## Connections
-- [[ScheduleRules]] - `references` [EXTRACTED]
+- [[ApiCollection]] - `references` [EXTRACTED]
+- [[IntegrationTestBase]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DTOs_/_Schedule_1
+#graphify/code #graphify/EXTRACTED #community/tests_/_CampCenterIntegrationTests_1

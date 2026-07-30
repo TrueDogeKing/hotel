@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Interfaces/ITokenService.cs"
 type: "code"
-community: "JWT Token Service"
+community: "Auth Service & Tokens"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/JWT_Token_Service
+  - community/Auth_Service__Tokens
 ---
 
 # ITokenService
@@ -15,8 +15,11 @@ tags:
 - [[.CreateAccessToken()]] - `method` [EXTRACTED]
 - [[.GenerateRefreshToken()]] - `method` [EXTRACTED]
 - [[.HashRefreshToken()]] - `method` [EXTRACTED]
+- [[AdminBookingService]] - `references` [EXTRACTED]
 - [[AuthService]] - `references` [EXTRACTED]
+- [[BookingService]] - `references` [EXTRACTED]
 - [[ITokenService.cs]] - `contains` [EXTRACTED]
 - [[JwtTokenService]] - `implements` [EXTRACTED]
+- [[PaymentService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/JWT_Token_Service
+#graphify/code #graphify/EXTRACTED #community/Auth_Service__Tokens

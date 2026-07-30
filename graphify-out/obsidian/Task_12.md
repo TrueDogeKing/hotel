@@ -1,18 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "Auth Controller (2)"
+community: "Public Booking Service (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Auth_Controller_2
+  - community/Public_Booking_Service_1
 ---
 
 # Task
 
 ## Connections
-- [[.LoginAsync()]] - `references` [EXTRACTED]
-- [[.LogoutAsync()]] - `references` [EXTRACTED]
-- [[.RefreshAsync()]] - `references` [EXTRACTED]
+- [[.Cancel()_1]] - `references` [EXTRACTED]
+- [[.Create()_5]] - `references` [EXTRACTED]
+- [[.GetByToken()]] - `references` [EXTRACTED]
+- [[.GetScheduleByToken()]] - `references` [EXTRACTED]
+- [[.InitiatePayment()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Auth_Controller_2
+#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_1

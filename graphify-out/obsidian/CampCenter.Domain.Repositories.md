@@ -20,7 +20,6 @@ tags:
 - [[BookingMealTimeRepository.cs]] - `imports` [EXTRACTED]
 - [[BookingRepository.cs]] - `imports` [EXTRACTED]
 - [[BookingService.cs]] - `imports` [EXTRACTED]
-- [[CampSessionService.cs]] - `imports` [EXTRACTED]
 - [[ClosureRepository.cs]] - `imports` [EXTRACTED]
 - [[ClosureService.cs]] - `imports` [EXTRACTED]
 - [[DependencyInjection.cs_1]] - `imports` [EXTRACTED]

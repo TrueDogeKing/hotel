@@ -1,28 +1,17 @@
 ---
 type: community
-cohesion: 0.31
-members: 13
+members: 4
 ---
 
 # CampCenter.Application / Services (4)
 
-**Cohesion:** 0.31 - loosely connected
-**Members:** 13 nodes
+**Members:** 4 nodes
 
 ## Members
-- [[.GetDayAsync()_2]] - code - src/CampCenter.Application/Services/HousekeepingService.cs
-- [[.GetJobsAsync()]] - code - src/CampCenter.Application/Services/HousekeepingService.cs
-- [[.GetRangeAsync()_1]] - code - src/CampCenter.Application/Services/HousekeepingService.cs
-- [[.SetStatusAsync()_5]] - code - src/CampCenter.Application/Services/HousekeepingService.cs
-- [[CancellationToken_57]] - code
-- [[DateOnly_21]] - code
-- [[Guid_47]] - code
-- [[HousekeepingService]] - code - src/CampCenter.Application/Services/HousekeepingService.cs
-- [[IClosureRepository_4]] - code
-- [[IRoomRepository_4]] - code
-- [[IRoomTaskRepository_2]] - code
-- [[List_27]] - code
-- [[Task_62]] - code
+- [[.Configure()_10]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/RoomTaskConfiguration.cs
+- [[EntityTypeBuilder_10]] - code
+- [[RoomTaskConfiguration]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/RoomTaskConfiguration.cs
+- [[RoomTaskConfiguration.cs]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/RoomTaskConfiguration.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -32,17 +21,12 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 11 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (2)]]
-- 6 edges to [[_COMMUNITY_CampCenter.Domain  Repositories (3)]]
-- 5 edges to [[_COMMUNITY_DTOs  AdminPanel]]
-- 4 edges to [[_COMMUNITY_CampCenter.Domain  Entities]]
-- 3 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (3)]]
-- 3 edges to [[_COMMUNITY_Admin Booking & Notifications (2)]]
-- 1 edge to [[_COMMUNITY_Application Namespaces & DTOs]]
+- 2 edges to [[_COMMUNITY_Room Task Management (1)]]
+- 1 edge to [[_COMMUNITY_Domain & Infra Namespaces]]
+- 1 edge to [[_COMMUNITY_Persistence  Configurations]]
+- 1 edge to [[_COMMUNITY_Validator Unit Tests]]
 
 ## Top bridge nodes
-- [[HousekeepingService]] - degree 14, connects to 6 communities
-- [[.GetRangeAsync()_1]] - degree 10, connects to 5 communities
-- [[.SetStatusAsync()_5]] - degree 17, connects to 4 communities
-- [[.GetDayAsync()_2]] - degree 13, connects to 4 communities
-- [[.GetJobsAsync()]] - degree 10, connects to 2 communities
+- [[RoomTaskConfiguration]] - degree 4, connects to 2 communities
+- [[RoomTaskConfiguration.cs]] - degree 3, connects to 2 communities
+- [[.Configure()_10]] - degree 3, connects to 1 community

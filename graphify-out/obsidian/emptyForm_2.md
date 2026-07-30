@@ -1,17 +1,17 @@
 ---
-source_file: "frontend/src/pages/admin/MealTimesPage.tsx"
+source_file: "frontend/src/pages/admin/RoomsPage.tsx"
 type: "code"
-community: "Frontend App Shell & i18n"
-location: "L26"
+community: "src / api (1)"
+location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Frontend_App_Shell__i18n
+  - community/src_/_api_1
 ---
 
 # emptyForm
 
 ## Connections
-- [[MealTimesPage.tsx]] - `contains` [EXTRACTED]
+- [[RoomsPage.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Frontend_App_Shell__i18n
+#graphify/code #graphify/EXTRACTED #community/src_/_api_1

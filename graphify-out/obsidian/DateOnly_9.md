@@ -1,17 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "Room Closure Management"
+community: "Room Management"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Closure_Management
+  - community/Room_Management
 ---
 
 # DateOnly
 
 ## Connections
-- [[.GetOverlappingAsync()_1]] - `references` [EXTRACTED]
-- [[.GetUpcomingCenterWideAsync()_1]] - `references` [EXTRACTED]
+- [[.GetAvailabilityAsync()_1]] - `references` [EXTRACTED]
+- [[.GetBlockedRoomIdsAsync()_1]] - `references` [EXTRACTED]
+- [[.GetCenterClosureReasonAsync()_1]] - `references` [EXTRACTED]
+- [[.GetFreeRoomsByCapacityAsync()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management
+#graphify/code #graphify/EXTRACTED #community/Room_Management

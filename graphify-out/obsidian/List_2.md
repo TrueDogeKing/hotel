@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Camp Session Management"
+community: "DTOs / Schedule (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Camp_Session_Management
+  - community/DTOs_/_Schedule_2
 ---
 
 # List
 
 ## Connections
-- [[.GetAllAsync()]] - `references` [EXTRACTED]
+- [[.GetAllAsync()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Camp_Session_Management
+#graphify/code #graphify/EXTRACTED #community/DTOs_/_Schedule_2

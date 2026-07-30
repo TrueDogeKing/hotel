@@ -1,32 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "Admin Booking & Notifications (2)"
+community: "Room Management"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Booking__Notifications_2
+  - community/Room_Management
 ---
 
 # Task
 
 ## Connections
-- [[.AddAssignmentAsync()]] - `references` [EXTRACTED]
-- [[.AddAsync()_9]] - `references` [EXTRACTED]
-- [[.AddPaymentAsync()]] - `references` [EXTRACTED]
-- [[.GetBookedRoomIdsInRangeAsync()]] - `references` [EXTRACTED]
-- [[.GetByIdAsync()_8]] - `references` [EXTRACTED]
-- [[.GetByTokenHashAsync()_2]] - `references` [EXTRACTED]
-- [[.GetCompletedPaymentKindsAsync()]] - `references` [EXTRACTED]
-- [[.GetConfirmedEndedAsync()]] - `references` [EXTRACTED]
-- [[.GetExpiredPendingAsync()]] - `references` [EXTRACTED]
-- [[.GetPaymentByP24SessionIdAsync()]] - `references` [EXTRACTED]
-- [[.GetPaymentsAsync()]] - `references` [EXTRACTED]
-- [[.ListAsync()_6]] - `references` [EXTRACTED]
-- [[.ListLiveChangingOverAsync()]] - `references` [EXTRACTED]
-- [[.ListLiveInRangeAsync()]] - `references` [EXTRACTED]
-- [[.ListLivePresentInAsync()]] - `references` [EXTRACTED]
-- [[.ListUpcomingAsync()]] - `references` [EXTRACTED]
-- [[.SaveChangesAsync()_11]] - `references` [EXTRACTED]
+- [[.GetAvailabilityAsync()_1]] - `references` [EXTRACTED]
+- [[.GetBlockedRoomIdsAsync()_1]] - `references` [EXTRACTED]
+- [[.GetCenterClosureReasonAsync()_1]] - `references` [EXTRACTED]
+- [[.GetFreeRoomsByCapacityAsync()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_2
+#graphify/code #graphify/EXTRACTED #community/Room_Management

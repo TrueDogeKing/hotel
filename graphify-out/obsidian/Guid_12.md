@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "Room Mix Calculator Tests"
+community: "DTOs / Schedule (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Mix_Calculator_Tests
+  - community/DTOs_/_Schedule_2
 ---
 
 # Guid
 
 ## Connections
-- [[.GetFreeRoomsByCapacityAsync()_1]] - `references` [EXTRACTED]
+- [[.DeleteAsync()_1]] - `references` [EXTRACTED]
+- [[.UpdateAsync()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Mix_Calculator_Tests
+#graphify/code #graphify/EXTRACTED #community/DTOs_/_Schedule_2

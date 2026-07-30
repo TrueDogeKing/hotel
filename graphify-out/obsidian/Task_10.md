@@ -1,16 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "OpenAPI Security Scheme"
+community: "Auth Controller (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/OpenAPI_Security_Scheme
+  - community/Auth_Controller_1
 ---
 
 # Task
 
 ## Connections
-- [[.TransformAsync()]] - `references` [EXTRACTED]
+- [[.Login()]] - `references` [EXTRACTED]
+- [[.Logout()]] - `references` [EXTRACTED]
+- [[.Refresh()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/OpenAPI_Security_Scheme
+#graphify/code #graphify/EXTRACTED #community/Auth_Controller_1

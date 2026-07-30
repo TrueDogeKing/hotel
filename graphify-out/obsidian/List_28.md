@@ -1,16 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.UnitTests / Services (1)"
+community: "Room Closure Management"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Services_1
+  - community/Room_Closure_Management
 ---
 
 # List
 
 ## Connections
-- [[.EffectiveSlots()]] - `references` [EXTRACTED]
+- [[.GetAllAsync()_9]] - `references` [EXTRACTED]
+- [[.GetOverlappingAsync()_1]] - `references` [EXTRACTED]
+- [[.GetUpcomingCenterWideAsync()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_1
+#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management

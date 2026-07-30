@@ -13,6 +13,6 @@ tags:
 
 ## Connections
 - [[Production Deployment (Caddy + Docker Compose)]] - `semantically_similar_to` [INFERRED]
-- [[Task Runner Rules (Mise vs Bun)]] - `references` [EXTRACTED]
+- [[Task Runner Rules]] - `references` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Docker__Project_Docs

@@ -1,16 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "Booking Persistence & Entities (3)"
+community: "CampCenter.UnitTests / Services (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Booking_Persistence__Entities_3
+  - community/CampCenterUnitTests_/_Services_1
 ---
 
 # Guid
 
 ## Connections
-- [[Payment]] - `references` [EXTRACTED]
+- [[.DeleteAsync()_5]] - `references` [EXTRACTED]
+- [[.GetOrThrowAsync()_2]] - `references` [EXTRACTED]
+- [[.UpdateAsync()_4]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Booking_Persistence__Entities_3
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_1

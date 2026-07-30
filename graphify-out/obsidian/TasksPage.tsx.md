@@ -13,7 +13,8 @@ tags:
 
 ## Connections
 - [[AdminLayout.tsx]] - `imports_from` [EXTRACTED]
-- [[RoomTask_1]] - `imports` [EXTRACTED]
+- [[App.tsx]] - `imports_from` [EXTRACTED]
+- [[RoomTask]] - `imports` [EXTRACTED]
 - [[TasksPage()]] - `contains` [EXTRACTED]
 - [[admin.ts]] - `imports_from` [EXTRACTED]
 - [[deleteTask()]] - `imports` [EXTRACTED]

@@ -1,24 +1,24 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Repositories/RoomCleaningRepository.cs"
 type: "code"
-community: "CampCenter.Infrastructure / Repositories (3)"
+community: "Integration Test Harness (2)"
 location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterInfrastructure_/_Repositories_3
+  - community/Integration_Test_Harness_2
 ---
 
 # RoomCleaningRepository
 
 ## Connections
-- [[.AddAsync()_16]] - `method` [EXTRACTED]
+- [[.AddAsync()_14]] - `method` [EXTRACTED]
 - [[.CountDoneByDateAsync()_1]] - `method` [EXTRACTED]
 - [[.GetAsync()_5]] - `method` [EXTRACTED]
 - [[.ListForDateAsync()_2]] - `method` [EXTRACTED]
-- [[.SaveChangesAsync()_18]] - `method` [EXTRACTED]
+- [[.SaveChangesAsync()_16]] - `method` [EXTRACTED]
 - [[AppDbContext]] - `references` [EXTRACTED]
 - [[IRoomCleaningRepository]] - `implements` [EXTRACTED]
 - [[RoomCleaningRepository.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterInfrastructure_/_Repositories_3
+#graphify/code #graphify/EXTRACTED #community/Integration_Test_Harness_2

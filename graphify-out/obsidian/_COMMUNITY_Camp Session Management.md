@@ -1,47 +1,27 @@
 ---
 type: community
-cohesion: 0.17
-members: 32
+members: 14
 ---
 
 # Camp Session Management
 
-**Cohesion:** 0.17 - loosely connected
-**Members:** 32 nodes
+**Members:** 14 nodes
 
 ## Members
-- [[.ArchiveAsync()]] - code - src/CampCenter.Application/Interfaces/ICampSessionService.cs
-- [[.ArchiveAsync()_1]] - code - src/CampCenter.Application/Services/CampSessionService.cs
-- [[.CreateAsync()]] - code - src/CampCenter.Application/Interfaces/ICampSessionService.cs
-- [[.CreateAsync()_3]] - code - src/CampCenter.Application/Services/CampSessionService.cs
-- [[.DeleteAsync()]] - code - src/CampCenter.Application/Interfaces/ICampSessionService.cs
-- [[.DeleteAsync()_3]] - code - src/CampCenter.Application/Services/CampSessionService.cs
-- [[.GetAllAsync()]] - code - src/CampCenter.Application/Interfaces/ICampSessionService.cs
-- [[.GetAllAsync()_2]] - code - src/CampCenter.Application/Services/CampSessionService.cs
-- [[.GetOrThrowAsync()]] - code - src/CampCenter.Application/Services/CampSessionService.cs
-- [[.PublishAsync()]] - code - src/CampCenter.Application/Interfaces/ICampSessionService.cs
-- [[.PublishAsync()_1]] - code - src/CampCenter.Application/Services/CampSessionService.cs
-- [[.SaveWithConcurrencyCheckAsync()]] - code - src/CampCenter.Application/Services/CampSessionService.cs
-- [[.ToDto()]] - code - src/CampCenter.Application/Services/CampSessionService.cs
-- [[.UpdateAsync()]] - code - src/CampCenter.Application/Interfaces/ICampSessionService.cs
-- [[.UpdateAsync()_2]] - code - src/CampCenter.Application/Services/CampSessionService.cs
-- [[CampCenter.Application.DTOs.Sessions]] - code - src/CampCenter.Application/DTOs/Sessions/CampSessionDtos.cs
-- [[CampSessionDto]] - code - src/CampCenter.Application/DTOs/Sessions/CampSessionDtos.cs
-- [[CampSessionDtos.cs]] - code - src/CampCenter.Application/DTOs/Sessions/CampSessionDtos.cs
-- [[CampSessionService]] - code - src/CampCenter.Application/Services/CampSessionService.cs
-- [[CancellationToken_16]] - code
-- [[CancellationToken_26]] - code
-- [[CreateCampSessionRequestDto]] - code - src/CampCenter.Application/DTOs/Sessions/CampSessionDtos.cs
-- [[Guid_7]] - code
-- [[Guid_14]] - code
-- [[ICampSessionRepository_3]] - code
-- [[ICampSessionService]] - code - src/CampCenter.Application/Interfaces/ICampSessionService.cs
-- [[ICampSessionService.cs]] - code - src/CampCenter.Application/Interfaces/ICampSessionService.cs
-- [[List_2]] - code
-- [[List_8]] - code
-- [[Task_15]] - code
-- [[Task_25]] - code
-- [[UpdateCampSessionRequestDto]] - code - src/CampCenter.Application/DTOs/Sessions/CampSessionDtos.cs
+- [[.NotificationSign()]] - code - src/CampCenter.Infrastructure/Payments/P24SignCalculator.cs
+- [[.NotificationSign_RoundTrips()]] - code - tests/CampCenter.UnitTests/Services/P24SignCalculatorTests.cs
+- [[.RegisterSign()]] - code - src/CampCenter.Infrastructure/Payments/P24SignCalculator.cs
+- [[.RegisterSign_MatchesDocumentedJsonShape()]] - code - tests/CampCenter.UnitTests/Services/P24SignCalculatorTests.cs
+- [[.Sha384()]] - code - src/CampCenter.Infrastructure/Payments/P24SignCalculator.cs
+- [[.Sha384()_1]] - code - tests/CampCenter.UnitTests/Services/P24SignCalculatorTests.cs
+- [[.VerifyNotificationSignature()]] - code - src/CampCenter.Application/Interfaces/IPaymentGateway.cs
+- [[.VerifyNotificationSignature()_1]] - code - src/CampCenter.Infrastructure/Payments/Przelewy24Client.cs
+- [[.VerifySign()]] - code - src/CampCenter.Infrastructure/Payments/P24SignCalculator.cs
+- [[.VerifySign_MatchesDocumentedJsonShape()]] - code - tests/CampCenter.UnitTests/Services/P24SignCalculatorTests.cs
+- [[Fact_9]] - code
+- [[GatewayNotification]] - code - src/CampCenter.Application/Interfaces/IPaymentGateway.cs
+- [[P24SignCalculator]] - code - src/CampCenter.Infrastructure/Payments/P24SignCalculator.cs
+- [[P24SignCalculatorTests]] - code - tests/CampCenter.UnitTests/Services/P24SignCalculatorTests.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -51,10 +31,17 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_Domain & Infra Namespaces]]
-- 1 edge to [[_COMMUNITY_Application Namespaces & DTOs]]
+- 3 edges to [[_COMMUNITY_Payment Gateway Integration Tests (1)]]
+- 3 edges to [[_COMMUNITY_Admin Booking & Notifications (2)]]
+- 2 edges to [[_COMMUNITY_Admin Booking & Notifications (4)]]
+- 2 edges to [[_COMMUNITY_Przelewy24 Payment Client]]
+- 1 edge to [[_COMMUNITY_Booking Persistence & Entities (2)]]
+- 1 edge to [[_COMMUNITY_CampCenter.UnitTests  Services (3)]]
+- 1 edge to [[_COMMUNITY_CampCenter.Domain  Repositories (1)]]
 
 ## Top bridge nodes
-- [[CampSessionService]] - degree 12, connects to 1 community
-- [[CampCenter.Application.DTOs.Sessions]] - degree 3, connects to 1 community
-- [[ICampSessionService.cs]] - degree 3, connects to 1 community
+- [[GatewayNotification]] - degree 9, connects to 5 communities
+- [[.VerifyNotificationSignature()]] - degree 3, connects to 2 communities
+- [[P24SignCalculator]] - degree 5, connects to 1 community
+- [[P24SignCalculatorTests]] - degree 5, connects to 1 community
+- [[.RegisterSign()]] - degree 4, connects to 1 community

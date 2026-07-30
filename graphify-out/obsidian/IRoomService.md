@@ -12,10 +12,10 @@ tags:
 # IRoomService
 
 ## Connections
-- [[.CreateAsync()_1]] - `method` [EXTRACTED]
-- [[.DeleteAsync()_1]] - `method` [EXTRACTED]
-- [[.GetAllAsync()_1]] - `method` [EXTRACTED]
-- [[.UpdateAsync()_1]] - `method` [EXTRACTED]
+- [[.CreateAsync()_4]] - `method` [EXTRACTED]
+- [[.DeleteAsync()_2]] - `method` [EXTRACTED]
+- [[.GetAllAsync()_2]] - `method` [EXTRACTED]
+- [[.UpdateAsync()_2]] - `method` [EXTRACTED]
 - [[IRoomService.cs]] - `contains` [EXTRACTED]
 - [[RoomService]] - `implements` [EXTRACTED]
 - [[RoomsController]] - `references` [EXTRACTED]

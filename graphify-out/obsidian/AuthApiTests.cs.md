@@ -1,12 +1,12 @@
 ---
 source_file: "tests/CampCenter.IntegrationTests/AuthApiTests.cs"
 type: "code"
-community: "Rate Limiting & Startup"
+community: "tests / CampCenter.IntegrationTests (1)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Rate_Limiting__Startup
+  - community/tests_/_CampCenterIntegrationTests_1
 ---
 
 # AuthApiTests.cs
@@ -16,4 +16,4 @@ tags:
 - [[CampCenter.Application.DTOs.Auth]] - `imports` [EXTRACTED]
 - [[CampCenter.IntegrationTests]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Rate_Limiting__Startup
+#graphify/code #graphify/EXTRACTED #community/tests_/_CampCenterIntegrationTests_1

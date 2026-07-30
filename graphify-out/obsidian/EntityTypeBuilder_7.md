@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Room Task Management (1)"
+community: "Persistence / Configurations"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Task_Management_1
+  - community/Persistence_/_Configurations
 ---
 
 # EntityTypeBuilder
 
 ## Connections
-- [[.Configure()_6]] - `references` [EXTRACTED]
+- [[.Configure()_7]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Task_Management_1
+#graphify/code #graphify/EXTRACTED #community/Persistence_/_Configurations

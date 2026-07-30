@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.Domain / Repositories (2)"
+community: "Admin Booking & Notifications (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterDomain_/_Repositories_2
+  - community/Admin_Booking__Notifications_1
 ---
 
 # DateTime
 
 ## Connections
-- [[BookingMealTime_1]] - `references` [EXTRACTED]
+- [[.GetExpiredPendingAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterDomain_/_Repositories_2
+#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_1

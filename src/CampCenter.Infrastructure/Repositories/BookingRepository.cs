@@ -231,16 +231,7 @@ public class BookingRepository : IBookingRepository
         {
             await _db.SaveChangesAsync(cancellationToken);
         }
-        catch (DbUpdateException ex)
-            when (ex.InnerException
-                is PostgresException
-                {
-                    SqlState: PostgresErrorCodes.UniqueViolation
-                        or PostgresErrorCodes.ExclusionViolation
-                        or PostgresErrorCodes.DeadlockDetected
-                        or PostgresErrorCodes.SerializationFailure
-                }
-            )
+        catch (Exception ex) when (IsRoomRace(ex))
         {
             // A concurrent booking grabbed one of the selected rooms for an
             // overlapping range first. The GiST exclusion constraint can surface
@@ -251,5 +242,34 @@ public class BookingRepository : IBookingRepository
                 "One of the selected rooms was just booked by someone else."
             );
         }
+    }
+
+    /// True when anywhere in the exception chain there is a Postgres error meaning
+    /// "another transaction took this room first". The chain must be walked rather
+    /// than matched on DbUpdateException.InnerException: transient states
+    /// (deadlock, serialization failure) are re-wrapped by the execution strategy
+    /// as InvalidOperationException("...likely due to a transient failure"), so the
+    /// PostgresException sits two levels down and a single-level match misses it —
+    /// which surfaced the race as a 500 instead of a 409.
+    private static bool IsRoomRace(Exception exception)
+    {
+        for (Exception? ex = exception; ex is not null; ex = ex.InnerException)
+        {
+            if (
+                ex
+                is PostgresException
+                {
+                    SqlState: PostgresErrorCodes.UniqueViolation
+                        or PostgresErrorCodes.ExclusionViolation
+                        or PostgresErrorCodes.DeadlockDetected
+                        or PostgresErrorCodes.SerializationFailure
+                }
+            )
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 }

@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/pages/admin/MealTimesPage.tsx"
 type: "code"
-community: "Frontend App Shell & i18n"
+community: "src / api (2)"
 location: "L37"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Frontend_App_Shell__i18n
+  - community/src_/_api_2
 ---
 
 # MealTimesPage()
@@ -16,4 +16,4 @@ tags:
 - [[getMealTimes()]] - `calls` [EXTRACTED]
 - [[toTimeInput()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Frontend_App_Shell__i18n
+#graphify/code #graphify/EXTRACTED #community/src_/_api_2

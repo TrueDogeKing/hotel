@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Models/AccessToken.cs"
 type: "code"
-community: "Rate Limiting & Startup"
+community: "CampCenter.UnitTests / Services (5)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Rate_Limiting__Startup
+  - community/CampCenterUnitTests_/_Services_5
 ---
 
 # CampCenter.Application.Models
@@ -17,6 +17,7 @@ tags:
 - [[AuthController.cs]] - `imports` [EXTRACTED]
 - [[AuthResult.cs]] - `contains` [EXTRACTED]
 - [[AuthService.cs]] - `imports` [EXTRACTED]
+- [[AvailabilityService.cs]] - `imports` [EXTRACTED]
 - [[BookingService.cs]] - `imports` [EXTRACTED]
 - [[BookingSettings.cs]] - `contains` [EXTRACTED]
 - [[IAuthService.cs]] - `imports` [EXTRACTED]
@@ -28,4 +29,4 @@ tags:
 - [[ScheduleService.cs]] - `imports` [EXTRACTED]
 - [[ScheduleSettings.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Rate_Limiting__Startup
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_5

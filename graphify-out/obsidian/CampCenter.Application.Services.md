@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Services/AdminBookingService.cs"
 type: "code"
-community: "CampCenter.UnitTests / Services (5)"
+community: "CampCenter.Application / Services (1)"
 location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Services_5
+  - community/CampCenterApplication_/_Services_1
 ---
 
 # CampCenter.Application.Services
@@ -17,7 +17,6 @@ tags:
 - [[AvailabilityService.cs]] - `contains` [EXTRACTED]
 - [[BookingMaintenanceService.cs]] - `imports` [EXTRACTED]
 - [[BookingService.cs]] - `contains` [EXTRACTED]
-- [[CampSessionService.cs]] - `contains` [EXTRACTED]
 - [[ClosureService.cs]] - `contains` [EXTRACTED]
 - [[DependencyInjection.cs]] - `imports` [EXTRACTED]
 - [[EmailTemplates.cs]] - `contains` [EXTRACTED]
@@ -36,4 +35,4 @@ tags:
 - [[ScheduleConflictTests.cs]] - `imports` [EXTRACTED]
 - [[ScheduleService.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_5
+#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_1

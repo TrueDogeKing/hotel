@@ -13,6 +13,6 @@ tags:
 
 ## Connections
 - [[Dev Quick Start]] - `semantically_similar_to` [INFERRED]
-- [[P24 Go-Live Checklist]] - `conceptually_related_to` [INFERRED]
+- [[P24 go-live checklist]] - `conceptually_related_to` [INFERRED]
 
 #graphify/concept #graphify/INFERRED #community/Docker__Project_Docs

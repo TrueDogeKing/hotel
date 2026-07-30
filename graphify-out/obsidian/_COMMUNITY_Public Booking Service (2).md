@@ -1,43 +1,28 @@
 ---
 type: community
-cohesion: 0.15
-members: 28
+members: 15
 ---
 
 # Public Booking Service (2)
 
-**Cohesion:** 0.15 - loosely connected
-**Members:** 28 nodes
+**Members:** 15 nodes
 
 ## Members
-- [[.AssignRooms()]] - code - src/CampCenter.Application/Services/BookingService.cs
-- [[.CancelByTokenAsync()_1]] - code - src/CampCenter.Application/Services/BookingService.cs
-- [[.CreateAsync()_11]] - code - src/CampCenter.Application/Services/BookingService.cs
-- [[.Detach()]] - code - src/CampCenter.Domain/Repositories/IBookingRepository.cs
-- [[.FinalDueDate()_1]] - code - src/CampCenter.Application/Services/BookingService.cs
-- [[.FindByTokenAsync()]] - code - src/CampCenter.Application/Services/BookingService.cs
-- [[.GetByTokenAsync()_1]] - code - src/CampCenter.Application/Services/BookingService.cs
-- [[.GetScheduleByTokenAsync()_1]] - code - src/CampCenter.Application/Services/BookingService.cs
-- [[.ManageUrl()]] - code - src/CampCenter.Application/Services/BookingService.cs
-- [[.PickRoomsAsync()]] - code - src/CampCenter.Application/Services/BookingService.cs
-- [[.RemoveAssignments()]] - code - src/CampCenter.Domain/Repositories/IBookingRepository.cs
-- [[.SendSafelyAsync()]] - code - src/CampCenter.Application/Services/BookingService.cs
-- [[.TryCreateAsync()]] - code - src/CampCenter.Application/Services/BookingService.cs
-- [[BookingDetailsDto_2]] - code
-- [[BookingService]] - code - src/CampCenter.Application/Services/BookingService.cs
-- [[BookingSettings_2]] - code
-- [[CancellationToken_25]] - code
-- [[CreateBookingRequestDto_3]] - code
-- [[CreateBookingResponseDto_2]] - code
-- [[DateOnly]] - code
-- [[EmailMessage_1]] - code
-- [[IAvailabilityService_3]] - code
-- [[IEmailSender_2]] - code
-- [[ILogger_3]] - code
-- [[IRoomRepository_2]] - code
-- [[ITokenService_2]] - code
-- [[List_7]] - code
-- [[Task_24]] - code
+- [[CampCenter.Api.Controllers.Public]] - code - src/CampCenter.Api/Controllers/Public/PublicAvailabilityController.cs
+- [[CampCenter.Api.Errors]] - code - src/CampCenter.Api/Errors/GlobalExceptionHandler.cs
+- [[CampCenter.Api.RateLimiting]] - code - src/CampCenter.Api/RateLimiting/RateLimitPolicies.cs
+- [[CampCenter.Infrastructure.Persistence.Seed]] - code - src/CampCenter.Infrastructure/Persistence/Seed/DataSeeder.cs
+- [[CampCenterApiFactory.cs]] - code - tests/CampCenter.IntegrationTests/CampCenterApiFactory.cs
+- [[DataSeeder.cs]] - code - src/CampCenter.Infrastructure/Persistence/Seed/DataSeeder.cs
+- [[GlobalExceptionHandler.cs]] - code - src/CampCenter.Api/Errors/GlobalExceptionHandler.cs
+- [[Program]] - code - src/CampCenter.Api/Program.cs
+- [[Program.cs]] - code - src/CampCenter.Api/Program.cs
+- [[PublicAvailabilityController.cs]] - code - src/CampCenter.Api/Controllers/Public/PublicAvailabilityController.cs
+- [[PublicBookingsController.cs]] - code - src/CampCenter.Api/Controllers/Public/PublicBookingsController.cs
+- [[PublicPaymentsController.cs]] - code - src/CampCenter.Api/Controllers/Public/PublicPaymentsController.cs
+- [[RateLimitPolicies]] - code - src/CampCenter.Api/RateLimiting/RateLimitPolicies.cs
+- [[RateLimitPolicies.cs]] - code - src/CampCenter.Api/RateLimiting/RateLimitPolicies.cs
+- [[string_1]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -47,17 +32,23 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 6 edges to [[_COMMUNITY_Admin Booking & Notifications (2)]]
-- 5 edges to [[_COMMUNITY_Booking Persistence & Entities (2)]]
-- 4 edges to [[_COMMUNITY_Admin Booking & Notifications (1)]]
-- 2 edges to [[_COMMUNITY_Public Booking Service (1)]]
-- 2 edges to [[_COMMUNITY_CampCenter.Domain  Repositories (1)]]
-- 1 edge to [[_COMMUNITY_Domain & Infra Namespaces]]
-- 1 edge to [[_COMMUNITY_CampCenter.Application  Services (2)]]
+- 5 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
+- 4 edges to [[_COMMUNITY_Domain & Infra Namespaces]]
+- 3 edges to [[_COMMUNITY_Integration Test Harness (1)]]
+- 3 edges to [[_COMMUNITY_tests  CampCenter.IntegrationTests (1)]]
+- 2 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (5)]]
+- 1 edge to [[_COMMUNITY_Room Closure Management]]
+- 1 edge to [[_COMMUNITY_Public Booking Service (1)]]
+- 1 edge to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
+- 1 edge to [[_COMMUNITY_Domain Exceptions]]
+- 1 edge to [[_COMMUNITY_Global Exception Handler]]
+- 1 edge to [[_COMMUNITY_OpenAPI Security Scheme]]
+- 1 edge to [[_COMMUNITY_CampCenter.Application  Services (1)]]
+- 1 edge to [[_COMMUNITY_Przelewy24 Payment Client]]
 
 ## Top bridge nodes
-- [[BookingService]] - degree 21, connects to 4 communities
-- [[.GetScheduleByTokenAsync()_1]] - degree 7, connects to 3 communities
-- [[.Detach()]] - degree 4, connects to 3 communities
-- [[.RemoveAssignments()]] - degree 4, connects to 3 communities
-- [[.TryCreateAsync()]] - degree 14, connects to 2 communities
+- [[Program.cs]] - degree 9, connects to 5 communities
+- [[PublicAvailabilityController.cs]] - degree 5, connects to 4 communities
+- [[PublicBookingsController.cs]] - degree 6, connects to 3 communities
+- [[DataSeeder.cs]] - degree 4, connects to 3 communities
+- [[CampCenterApiFactory.cs]] - degree 4, connects to 3 communities

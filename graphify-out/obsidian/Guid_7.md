@@ -1,19 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Camp Session Management"
+community: "Claims Principal Extensions"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Camp_Session_Management
+  - community/Claims_Principal_Extensions
 ---
 
 # Guid
 
 ## Connections
-- [[.ArchiveAsync()]] - `references` [EXTRACTED]
-- [[.DeleteAsync()]] - `references` [EXTRACTED]
-- [[.PublishAsync()]] - `references` [EXTRACTED]
-- [[.UpdateAsync()]] - `references` [EXTRACTED]
+- [[.GetUserId()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Camp_Session_Management
+#graphify/code #graphify/EXTRACTED #community/Claims_Principal_Extensions

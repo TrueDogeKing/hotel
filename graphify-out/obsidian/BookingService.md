@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Services/BookingService.cs"
 type: "code"
-community: "Public Booking Service (2)"
+community: "Public Booking Service (1)"
 location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public_Booking_Service_2
+  - community/Public_Booking_Service_1
 ---
 
 # BookingService
@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[.AssignRooms()]] - `method` [EXTRACTED]
 - [[.CancelByTokenAsync()_1]] - `method` [EXTRACTED]
-- [[.CreateAsync()_11]] - `method` [EXTRACTED]
+- [[.CreateAsync()_7]] - `method` [EXTRACTED]
 - [[.FinalDueDate()_1]] - `method` [EXTRACTED]
 - [[.FindByTokenAsync()]] - `method` [EXTRACTED]
 - [[.GetByTokenAsync()_1]] - `method` [EXTRACTED]
@@ -24,14 +24,14 @@ tags:
 - [[.SendSafelyAsync()]] - `method` [EXTRACTED]
 - [[.TryCreateAsync()]] - `method` [EXTRACTED]
 - [[BookingService.cs]] - `contains` [EXTRACTED]
-- [[BookingSettings_2]] - `references` [EXTRACTED]
-- [[IAvailabilityService_3]] - `references` [EXTRACTED]
+- [[BookingSettings]] - `references` [EXTRACTED]
+- [[IAvailabilityService]] - `references` [EXTRACTED]
 - [[IBookingRepository]] - `references` [EXTRACTED]
 - [[IBookingService]] - `implements` [EXTRACTED]
-- [[IEmailSender_2]] - `references` [EXTRACTED]
+- [[IEmailSender]] - `references` [EXTRACTED]
 - [[ILogger_3]] - `references` [EXTRACTED]
-- [[IRoomRepository_2]] - `references` [EXTRACTED]
+- [[IRoomRepository]] - `references` [EXTRACTED]
 - [[IScheduleEntryRepository]] - `references` [EXTRACTED]
-- [[ITokenService_2]] - `references` [EXTRACTED]
+- [[ITokenService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_2
+#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_1

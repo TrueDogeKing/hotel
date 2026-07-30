@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/components/admin/AddGroupForm.tsx"
 type: "code"
-community: "src / api (1)"
+community: "Frontend App Shell & i18n"
 location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/src_/_api_1
+  - community/Frontend_App_Shell__i18n
 ---
 
 # Props
@@ -15,4 +15,4 @@ tags:
 - [[AddGroupForm.tsx]] - `contains` [EXTRACTED]
 - [[AdminBooking]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/src_/_api_1
+#graphify/code #graphify/EXTRACTED #community/Frontend_App_Shell__i18n

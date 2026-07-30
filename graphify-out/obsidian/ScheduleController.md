@@ -28,7 +28,7 @@ tags:
 - [[.UpdateEntry()]] - `method` [EXTRACTED]
 - [[ControllerBase]] - `inherits` [EXTRACTED]
 - [[IScheduleService]] - `references` [EXTRACTED]
-- [[IValidator_7]] - `references` [EXTRACTED]
+- [[IValidator_4]] - `references` [EXTRACTED]
 - [[ScheduleController.cs]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/DTOs_/_Schedule_1

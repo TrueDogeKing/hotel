@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.UnitTests / Validators"
+community: "Room Closure Management"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Validators
+  - community/Room_Closure_Management
 ---
 
 # Guid
 
 ## Connections
-- [[.Delete()_2]] - `references` [EXTRACTED]
-- [[.Update()_2]] - `references` [EXTRACTED]
+- [[.GetByIdAsync()_2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Validators
+#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management

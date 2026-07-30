@@ -1,69 +1,27 @@
 ---
 type: community
-cohesion: 0.09
-members: 54
+members: 14
 ---
 
 # CampCenter.Application / Services (1)
 
-**Cohesion:** 0.09 - loosely connected
-**Members:** 54 nodes
+**Members:** 14 nodes
 
 ## Members
-- [[.Create()_2]] - code - src/CampCenter.Api/Controllers/Admin/ClosuresController.cs
-- [[.CreateAsync()_8]] - code - src/CampCenter.Application/Interfaces/IClosureService.cs
-- [[.CreateAsync()_12]] - code - src/CampCenter.Application/Services/ClosureService.cs
-- [[.Delete()_1]] - code - src/CampCenter.Api/Controllers/Admin/ClosuresController.cs
-- [[.DeleteAsync()_6]] - code - src/CampCenter.Application/Interfaces/IClosureService.cs
-- [[.DeleteAsync()_8]] - code - src/CampCenter.Application/Services/ClosureService.cs
-- [[.EmptyReason_Fails()]] - code - tests/CampCenter.UnitTests/Validators/ClosureValidatorsTests.cs
-- [[.EndBeforeStart_Fails()]] - code - tests/CampCenter.UnitTests/Validators/ClosureValidatorsTests.cs
-- [[.GetAll()_1]] - code - src/CampCenter.Api/Controllers/Admin/ClosuresController.cs
-- [[.GetAllAsync()_8]] - code - src/CampCenter.Application/Interfaces/IClosureService.cs
-- [[.GetAllAsync()_10]] - code - src/CampCenter.Application/Services/ClosureService.cs
-- [[.GetOrThrowAsync()_2]] - code - src/CampCenter.Application/Services/ClosureService.cs
-- [[.GuardNoLiveBookingsAsync()]] - code - src/CampCenter.Application/Services/ClosureService.cs
-- [[.GuardRoomExistsAsync()]] - code - src/CampCenter.Application/Services/ClosureService.cs
-- [[.SingleDayClosure_Passes()]] - code - tests/CampCenter.UnitTests/Validators/ClosureValidatorsTests.cs
-- [[.ToDto()_4]] - code - src/CampCenter.Application/Services/ClosureService.cs
-- [[.Update()_1]] - code - src/CampCenter.Api/Controllers/Admin/ClosuresController.cs
-- [[.UpdateAsync()_4]] - code - src/CampCenter.Application/Interfaces/IClosureService.cs
-- [[.UpdateAsync()_6]] - code - src/CampCenter.Application/Services/ClosureService.cs
-- [[.Valid()]] - code - tests/CampCenter.UnitTests/Validators/ClosureValidatorsTests.cs
-- [[.ValidClosure_Passes()]] - code - tests/CampCenter.UnitTests/Validators/ClosureValidatorsTests.cs
-- [[CancellationToken_46]] - code
-- [[CancellationToken_52]] - code
-- [[CancellationToken_56]] - code
-- [[ClosureDto]] - code - src/CampCenter.Application/DTOs/Closures/ClosureDtos.cs
-- [[ClosureDtos.cs]] - code - src/CampCenter.Application/DTOs/Closures/ClosureDtos.cs
-- [[ClosureService]] - code - src/CampCenter.Application/Services/ClosureService.cs
-- [[ClosureValidators.cs]] - code - src/CampCenter.Application/Validators/ClosureValidators.cs
-- [[ClosureValidatorsTests]] - code - tests/CampCenter.UnitTests/Validators/ClosureValidatorsTests.cs
-- [[ClosuresController]] - code - src/CampCenter.Api/Controllers/Admin/ClosuresController.cs
-- [[CreateClosureRequestDto]] - code - src/CampCenter.Application/DTOs/Closures/ClosureDtos.cs
-- [[CreateClosureRequestValidator]] - code - src/CampCenter.Application/Validators/ClosureValidators.cs
-- [[DateOnly_19]] - code
-- [[Fact_15]] - code
-- [[Guid_38]] - code
-- [[Guid_42]] - code
-- [[Guid_46]] - code
-- [[HttpDelete_3]] - code
-- [[HttpGet_7]] - code
-- [[HttpPost_7]] - code
-- [[HttpPut_3]] - code
-- [[IActionResult_9]] - code
-- [[IClosureRepository_3]] - code
-- [[IClosureService]] - code - src/CampCenter.Application/Interfaces/IClosureService.cs
-- [[IRoomRepository_3]] - code
-- [[IValidator_5]] - code
-- [[List_22]] - code
-- [[List_25]] - code
-- [[ProducesResponseType_9]] - code
-- [[Task_51]] - code
-- [[Task_57]] - code
-- [[Task_61]] - code
-- [[UpdateClosureRequestDto]] - code - src/CampCenter.Application/DTOs/Closures/ClosureDtos.cs
-- [[UpdateClosureRequestValidator]] - code - src/CampCenter.Application/Validators/ClosureValidators.cs
+- [[.AddApplication()]] - code - src/CampCenter.Application/DependencyInjection.cs
+- [[CampCenter.Application]] - code - src/CampCenter.Application/DependencyInjection.cs
+- [[CampCenter.Application.Services]] - code - src/CampCenter.Application/Services/AdminBookingService.cs
+- [[CampCenter.UnitTests.Services]] - code - tests/CampCenter.UnitTests/Services/HousekeepingPlannerTests.cs
+- [[DependencyInjection]] - code - src/CampCenter.Application/DependencyInjection.cs
+- [[DependencyInjection.cs]] - code - src/CampCenter.Application/DependencyInjection.cs
+- [[EmailTemplates.cs]] - code - src/CampCenter.Application/Services/EmailTemplates.cs
+- [[HousekeepingPlannerTests.cs]] - code - tests/CampCenter.UnitTests/Services/HousekeepingPlannerTests.cs
+- [[HousekeepingServiceTests.cs]] - code - tests/CampCenter.UnitTests/Services/HousekeepingServiceTests.cs
+- [[IServiceCollection]] - code
+- [[MealGenerationPlanner.cs]] - code - src/CampCenter.Application/Services/MealGenerationPlanner.cs
+- [[MealGenerationPlannerTests.cs]] - code - tests/CampCenter.UnitTests/Services/MealGenerationPlannerTests.cs
+- [[RoomMixCalculatorTests.cs]] - code - tests/CampCenter.UnitTests/Services/RoomMixCalculatorTests.cs
+- [[ScheduleConflictTests.cs]] - code - tests/CampCenter.UnitTests/Services/ScheduleConflictTests.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -73,17 +31,22 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_tests  CampCenter.IntegrationTests (2)]]
-- 2 edges to [[_COMMUNITY_Validator Unit Tests]]
-- 2 edges to [[_COMMUNITY_DTOs  Schedule (1)]]
-- 2 edges to [[_COMMUNITY_Admin Booking & Notifications (2)]]
-- 1 edge to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
-- 1 edge to [[_COMMUNITY_Application Namespaces & DTOs]]
-- 1 edge to [[_COMMUNITY_Domain & Infra Namespaces]]
+- 9 edges to [[_COMMUNITY_Domain & Infra Namespaces]]
+- 8 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
+- 4 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (5)]]
+- 3 edges to [[_COMMUNITY_Domain Exceptions]]
+- 3 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (2)]]
+- 3 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (1)]]
+- 2 edges to [[_COMMUNITY_Integration Test Harness (1)]]
+- 2 edges to [[_COMMUNITY_Room Mix Calculator Tests]]
+- 1 edge to [[_COMMUNITY_Public Booking Service (2)]]
+- 1 edge to [[_COMMUNITY_Public Booking Service (1)]]
+- 1 edge to [[_COMMUNITY_Przelewy24 Payment Client]]
+- 1 edge to [[_COMMUNITY_CampCenter.UnitTests  Services (4)]]
 
 ## Top bridge nodes
-- [[ClosureService]] - degree 13, connects to 2 communities
-- [[ClosuresController]] - degree 8, connects to 2 communities
-- [[ClosureValidators.cs]] - degree 4, connects to 2 communities
-- [[.GuardNoLiveBookingsAsync()]] - degree 8, connects to 1 community
-- [[IClosureService]] - degree 7, connects to 1 community
+- [[CampCenter.Application.Services]] - degree 22, connects to 7 communities
+- [[HousekeepingServiceTests.cs]] - degree 7, connects to 4 communities
+- [[ScheduleConflictTests.cs]] - degree 7, connects to 4 communities
+- [[EmailTemplates.cs]] - degree 4, connects to 3 communities
+- [[MealGenerationPlanner.cs]] - degree 4, connects to 2 communities

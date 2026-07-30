@@ -1,12 +1,10 @@
 ---
 type: community
-cohesion: 0.05
 members: 45
 ---
 
 # Project & NuGet Config
 
-**Cohesion:** 0.05 - loosely connected
 **Members:** 45 nodes
 
 ## Members

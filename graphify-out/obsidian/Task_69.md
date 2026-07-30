@@ -1,20 +1,37 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.Domain / Repositories (2)"
+community: "tests / CampCenter.IntegrationTests (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterDomain_/_Repositories_2
+  - community/tests_/_CampCenterIntegrationTests_1
 ---
 
 # Task
 
 ## Connections
-- [[.AddAsync()_13]] - `references` [EXTRACTED]
-- [[.GetAsync()_4]] - `references` [EXTRACTED]
-- [[.ListForBookingAsync()_2]] - `references` [EXTRACTED]
-- [[.ListForBookingsAsync()_1]] - `references` [EXTRACTED]
-- [[.SaveChangesAsync()_15]] - `references` [EXTRACTED]
+- [[.BookingMealTimes_DefaultToTheCenterTimes()]] - `references` [EXTRACTED]
+- [[.BreakfastsAsync()]] - `references` [EXTRACTED]
+- [[.BulkRetime_PreservesADayChangedIndividually()]] - `references` [EXTRACTED]
+- [[.Calendar_BarSpansFullStayInclusive()]] - `references` [EXTRACTED]
+- [[.CreateBookingAsync()]] - `references` [EXTRACTED]
+- [[.DayView_IncludesDepartingGroup()]] - `references` [EXTRACTED]
+- [[.DietaryNotes_AreStoredAndReturnedOnTheGroupSchedule()]] - `references` [EXTRACTED]
+- [[.GenerateMealsAsync()]] - `references` [EXTRACTED]
+- [[.GenerateMeals_CoversTheStay_AndIsIdempotent()]] - `references` [EXTRACTED]
+- [[.GenerateMeals_DoesNotResurrectADeletedMeal()]] - `references` [EXTRACTED]
+- [[.GenerationUsesTheGroupsOwnTimes_ForMealsAddedLater()]] - `references` [EXTRACTED]
+- [[.GetMealTimesAsync()]] - `references` [EXTRACTED]
+- [[.MealTimeDefaults_CrudRoundtrip_Works()]] - `references` [EXTRACTED]
+- [[.Meal_WithoutMealKind_IsRejected()]] - `references` [EXTRACTED]
+- [[.PublicSchedule_ByToken_ShowsMenu_ButHidesPrepNotes()]] - `references` [EXTRACTED]
+- [[.ResettingAGroupsMealTime_RestoresTheCenterTime()]] - `references` [EXTRACTED]
+- [[.ScheduleEndpoints_WithoutToken_ReturnUnauthorized()]] - `references` [EXTRACTED]
+- [[.ScheduleEntries_CrudRoundtrip_Works()]] - `references` [EXTRACTED]
+- [[.ScheduleEntry_EndBeforeStart_IsRejected()]] - `references` [EXTRACTED]
+- [[.ScheduleEntry_OnDepartureDay_IsAccepted_ButNotOutsideTheStay()]] - `references` [EXTRACTED]
+- [[.SettingAGroupsMealTime_RejectsEndBeforeStart_AndStaleRowVersion()]] - `references` [EXTRACTED]
+- [[.SettingAGroupsMealTime_RetimesTheWholeStay_ButNotOtherGroups()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterDomain_/_Repositories_2
+#graphify/code #graphify/EXTRACTED #community/tests_/_CampCenterIntegrationTests_1

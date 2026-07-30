@@ -12,13 +12,13 @@ tags:
 # RoomTaskRepository
 
 ## Connections
-- [[.AddAsync()_7]] - `method` [EXTRACTED]
+- [[.AddAsync()_16]] - `method` [EXTRACTED]
 - [[.CountOpenAsync()_1]] - `method` [EXTRACTED]
 - [[.CountOpenByRoomAsync()_1]] - `method` [EXTRACTED]
-- [[.GetByIdAsync()_7]] - `method` [EXTRACTED]
-- [[.ListAsync()_3]] - `method` [EXTRACTED]
-- [[.Remove()_5]] - `method` [EXTRACTED]
-- [[.SaveChangesAsync()_9]] - `method` [EXTRACTED]
+- [[.GetByIdAsync()_12]] - `method` [EXTRACTED]
+- [[.ListAsync()_7]] - `method` [EXTRACTED]
+- [[.Remove()_10]] - `method` [EXTRACTED]
+- [[.SaveChangesAsync()_18]] - `method` [EXTRACTED]
 - [[AppDbContext]] - `references` [EXTRACTED]
 - [[IRoomTaskRepository]] - `implements` [EXTRACTED]
 - [[RoomTaskRepository.cs]] - `contains` [EXTRACTED]

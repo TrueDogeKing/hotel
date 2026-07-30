@@ -13,6 +13,7 @@ tags:
 
 ## Connections
 - [[BookingWizardPage.tsx]] - `imports` [EXTRACTED]
+- [[getStoredLanguage()]] - `calls` [EXTRACTED]
 - [[public.ts]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Public_Booking_Frontend_1

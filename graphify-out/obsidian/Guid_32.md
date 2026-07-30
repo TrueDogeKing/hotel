@@ -1,19 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Booking Persistence & Entities (1)"
+community: "Refresh Token Repository"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Booking_Persistence__Entities_1
+  - community/Refresh_Token_Repository
 ---
 
 # Guid
 
 ## Connections
-- [[.GetBookedRoomIdsInRangeAsync()_1]] - `references` [EXTRACTED]
-- [[.GetByIdAsync()_11]] - `references` [EXTRACTED]
-- [[.GetCompletedPaymentKindsAsync()_1]] - `references` [EXTRACTED]
-- [[.GetPaymentsAsync()_1]] - `references` [EXTRACTED]
+- [[RefreshToken]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Booking_Persistence__Entities_1
+#graphify/code #graphify/EXTRACTED #community/Refresh_Token_Repository

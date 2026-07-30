@@ -1,13 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Unlabeled (23)"
+community: "Rate Limiting & Startup"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Unlabeled_23
+  - community/Rate_Limiting__Startup
 ---
 
 # IRuleBuilder
 
-#graphify/code #graphify/EXTRACTED #community/Unlabeled_23
+## Connections
+- [[.ValidPassword()]] - `references` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/Rate_Limiting__Startup
