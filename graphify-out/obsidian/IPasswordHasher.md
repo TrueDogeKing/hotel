@@ -11,21 +11,6 @@ tags:
 
 # IPasswordHasher
 
-## Context
-
-_Source: `src/CampCenter.Application/Interfaces/IPasswordHasher.cs` (defined near L3; showing L1–L8 of 8)._
-
-```csharp
-namespace CampCenter.Application.Interfaces;
-
-public interface IPasswordHasher
-{
-    string Hash(string password);
-
-    bool Verify(string password, string passwordHash);
-}
-```
-
 ## Connections
 - [[.Hash()]] - `method` [EXTRACTED]
 - [[.Verify()]] - `method` [EXTRACTED]

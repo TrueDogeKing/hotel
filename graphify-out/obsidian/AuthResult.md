@@ -11,22 +11,6 @@ tags:
 
 # AuthResult
 
-## Context
-
-_Source: `src/CampCenter.Application/Models/AuthResult.cs` (defined near L8; showing L6–L14 of 14)._
-
-```csharp
-/// <param name="RefreshToken">Plaintext refresh token value.</param>
-/// <param name="RefreshTokenExpiresAtUtc">Refresh token expiration time (UTC).</param>
-public record AuthResult(
-    string AccessToken,
-    DateTime AccessTokenExpiresAtUtc,
-    string Login,
-    string RefreshToken,
-    DateTime RefreshTokenExpiresAtUtc
-);
-```
-
 ## Connections
 - [[.IssueTokens()]] - `references` [EXTRACTED]
 - [[.IssueTokensAsync()]] - `references` [EXTRACTED]

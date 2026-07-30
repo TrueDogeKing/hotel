@@ -18,6 +18,10 @@ public class CreateScheduleEntryRequestValidator : AbstractValidator<CreateSched
         RuleFor(x => x.Menu).MaximumLength(2000);
         RuleFor(x => x.PrepNotes).MaximumLength(2000);
         RuleFor(x => x.Location).MaximumLength(200);
+        RuleFor(x => x.ParticipantCount)
+            .GreaterThan(0)
+            .When(x => x.ParticipantCount.HasValue)
+            .WithMessage(ScheduleRules.ParticipantCountMessage);
         RuleFor(x => x.EndTime)
             .GreaterThan(x => x.StartTime)
             .WithMessage(ScheduleRules.TimeOrderMessage);
@@ -37,6 +41,10 @@ public class UpdateScheduleEntryRequestValidator : AbstractValidator<UpdateSched
         RuleFor(x => x.Menu).MaximumLength(2000);
         RuleFor(x => x.PrepNotes).MaximumLength(2000);
         RuleFor(x => x.Location).MaximumLength(200);
+        RuleFor(x => x.ParticipantCount)
+            .GreaterThan(0)
+            .When(x => x.ParticipantCount.HasValue)
+            .WithMessage(ScheduleRules.ParticipantCountMessage);
         RuleFor(x => x.EndTime)
             .GreaterThan(x => x.StartTime)
             .WithMessage(ScheduleRules.TimeOrderMessage);
@@ -57,6 +65,7 @@ internal static class ScheduleRules
         "A meal must have a meal kind (Breakfast, Lunch, Dinner or Snack).";
     public const string TimeOrderMessage =
         "End time must be after the start time; an entry cannot cross midnight.";
+    public const string ParticipantCountMessage = "Participant count must be at least 1.";
 
     public static bool IsMeal(string? kind) =>
         string.Equals(kind, nameof(ScheduleEntryKind.Meal), StringComparison.OrdinalIgnoreCase);

@@ -1,20 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Auth Controller"
+community: "Auth Controller (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Auth_Controller
+  - community/Auth_Controller_1
 ---
 
 # DateTime
 
-## Context
-
-_Synthetic reference node from AST structural extraction. It has no source file of its own — it is an aggregate/type symbol defined entirely by the connections listed below._
-
 ## Connections
 - [[.SetRefreshTokenCookie()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Auth_Controller
+#graphify/code #graphify/EXTRACTED #community/Auth_Controller_1

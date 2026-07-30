@@ -11,22 +11,6 @@ tags:
 
 # noUnusedLocals
 
-## Context
-
-_Source: `frontend/tsconfig.app.json` (defined near L19; showing L17–L25 of 25)._
-
-```json
-
-    /* Linting */
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "erasableSyntaxOnly": true,
-    "noFallthroughCasesInSwitch": true
-  },
-  "include": ["src"]
-}
-```
-
 ## Connections
 - [[compilerOptions]] - `contains` [EXTRACTED]
 

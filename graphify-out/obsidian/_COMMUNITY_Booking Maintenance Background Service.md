@@ -29,8 +29,6 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 1 edge to [[_COMMUNITY_Domain & Infra Namespaces]]
-- 1 edge to [[_COMMUNITY_Admin Booking & Notifications]]
 
 ## Top bridge nodes
 - [[BookingMaintenanceService]] - degree 7, connects to 1 community
-- [[.SweepAsync()]] - degree 5, connects to 1 community

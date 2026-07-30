@@ -10,12 +10,8 @@ tags:
 
 # CancellationToken
 
-## Context
-
-_Synthetic reference node from AST structural extraction. It has no source file of its own — it is an aggregate/type symbol defined entirely by the connections listed below._
-
 ## Connections
-- [[.CreateAsync()_6]] - `references` [EXTRACTED]
+- [[.CreateAsync()_4]] - `references` [EXTRACTED]
 - [[.DeleteAsync()_4]] - `references` [EXTRACTED]
 - [[.GetAllAsync()_3]] - `references` [EXTRACTED]
 - [[.SaveWithConcurrencyCheckAsync()_1]] - `references` [EXTRACTED]

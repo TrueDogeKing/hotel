@@ -10,21 +10,21 @@ members: 35
 **Members:** 35 nodes
 
 ## Members
-- [[.AddAsync()_1]] - code - src/CampCenter.Domain/Repositories/IClosureRepository.cs
-- [[.AddAsync()_6]] - code - src/CampCenter.Infrastructure/Repositories/ClosureRepository.cs
-- [[.Configure()_3]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/ClosureConfiguration.cs
+- [[.AddAsync()]] - code - src/CampCenter.Domain/Repositories/IClosureRepository.cs
+- [[.AddAsync()_4]] - code - src/CampCenter.Infrastructure/Repositories/ClosureRepository.cs
+- [[.Configure()_2]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/ClosureConfiguration.cs
 - [[.GetAllAsync()_4]] - code - src/CampCenter.Domain/Repositories/IClosureRepository.cs
 - [[.GetAllAsync()_6]] - code - src/CampCenter.Infrastructure/Repositories/ClosureRepository.cs
-- [[.GetByIdAsync()_2]] - code - src/CampCenter.Domain/Repositories/IClosureRepository.cs
-- [[.GetByIdAsync()_7]] - code - src/CampCenter.Infrastructure/Repositories/ClosureRepository.cs
+- [[.GetByIdAsync()_1]] - code - src/CampCenter.Domain/Repositories/IClosureRepository.cs
+- [[.GetByIdAsync()_5]] - code - src/CampCenter.Infrastructure/Repositories/ClosureRepository.cs
 - [[.GetOverlappingAsync()]] - code - src/CampCenter.Domain/Repositories/IClosureRepository.cs
 - [[.GetOverlappingAsync()_1]] - code - src/CampCenter.Infrastructure/Repositories/ClosureRepository.cs
 - [[.GetUpcomingCenterWideAsync()]] - code - src/CampCenter.Domain/Repositories/IClosureRepository.cs
 - [[.GetUpcomingCenterWideAsync()_1]] - code - src/CampCenter.Infrastructure/Repositories/ClosureRepository.cs
 - [[.Remove()]] - code - src/CampCenter.Domain/Repositories/IClosureRepository.cs
 - [[.Remove()_3]] - code - src/CampCenter.Infrastructure/Repositories/ClosureRepository.cs
-- [[.SaveChangesAsync()_2]] - code - src/CampCenter.Domain/Repositories/IClosureRepository.cs
-- [[.SaveChangesAsync()_8]] - code - src/CampCenter.Infrastructure/Repositories/ClosureRepository.cs
+- [[.SaveChangesAsync()_1]] - code - src/CampCenter.Domain/Repositories/IClosureRepository.cs
+- [[.SaveChangesAsync()_6]] - code - src/CampCenter.Infrastructure/Repositories/ClosureRepository.cs
 - [[CancellationToken_32]] - code
 - [[CancellationToken_41]] - code
 - [[Closure]] - code - src/CampCenter.Domain/Entities/Closure.cs
@@ -55,12 +55,13 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 4 edges to [[_COMMUNITY_Domain & Infra Namespaces]]
-- 4 edges to [[_COMMUNITY_Booking Persistence & Entities]]
+- 2 edges to [[_COMMUNITY_Persistence  Configurations]]
 - 1 edge to [[_COMMUNITY_Room Management]]
+- 1 edge to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
 
 ## Top bridge nodes
-- [[Closure]] - degree 20, connects to 2 communities
 - [[ClosureRepository]] - degree 10, connects to 2 communities
 - [[ClosureConfiguration.cs]] - degree 3, connects to 2 communities
+- [[Closure]] - degree 19, connects to 1 community
 - [[IClosureRepository]] - degree 9, connects to 1 community
 - [[ClosureConfiguration]] - degree 4, connects to 1 community

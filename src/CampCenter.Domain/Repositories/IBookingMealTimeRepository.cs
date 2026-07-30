@@ -10,6 +10,13 @@ public interface IBookingMealTimeRepository
         CancellationToken cancellationToken = default
     );
 
+    /// Overrides for several groups at once — used when seating a new group against
+    /// the sittings the groups it overlaps have already taken.
+    Task<List<BookingMealTime>> ListForBookingsAsync(
+        IReadOnlyCollection<Guid> bookingIds,
+        CancellationToken cancellationToken = default
+    );
+
     Task<BookingMealTime?> GetAsync(
         Guid bookingId,
         Guid mealTimeDefaultId,

@@ -11,27 +11,6 @@ tags:
 
 # moduleDetection
 
-## Context
-
-_Source: `frontend/tsconfig.app.json` (defined near L14; showing L12–L25 of 25)._
-
-```json
-    "allowImportingTsExtensions": true,
-    "verbatimModuleSyntax": true,
-    "moduleDetection": "force",
-    "noEmit": true,
-    "jsx": "react-jsx",
-
-    /* Linting */
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "erasableSyntaxOnly": true,
-    "noFallthroughCasesInSwitch": true
-  },
-  "include": ["src"]
-}
-```
-
 ## Connections
 - [[compilerOptions]] - `contains` [EXTRACTED]
 

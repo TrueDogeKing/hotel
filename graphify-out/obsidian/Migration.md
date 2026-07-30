@@ -1,21 +1,24 @@
 ---
 source_file: ""
 type: "code"
-community: "EF Core Migrations"
+community: "EF Core Migrations (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EF_Core_Migrations
+  - community/EF_Core_Migrations_2
 ---
 
 # Migration
 
-## Context
-
-_Synthetic reference node from AST structural extraction. It has no source file of its own — it is an aggregate/type symbol defined entirely by the connections listed below._
-
 ## Connections
 - [[CoreDomain_1]] - `inherits` [EXTRACTED]
 - [[InitialAuth_1]] - `inherits` [EXTRACTED]
+- [[MealSittingDuration_1]] - `inherits` [EXTRACTED]
+- [[ParticipantCountOnScheduleEntry_1]] - `inherits` [EXTRACTED]
+- [[PerGroupMealTimes_1]] - `inherits` [EXTRACTED]
+- [[ReplaceSessionsWithClosures_1]] - `inherits` [EXTRACTED]
+- [[RoomCleanings_1]] - `inherits` [EXTRACTED]
+- [[ScheduleAndMealTimes_1]] - `inherits` [EXTRACTED]
+- [[SuppressDeletedGeneratedMeals_1]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EF_Core_Migrations
+#graphify/code #graphify/EXTRACTED #community/EF_Core_Migrations_2

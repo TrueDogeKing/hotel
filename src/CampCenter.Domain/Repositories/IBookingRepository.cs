@@ -44,6 +44,19 @@ public interface IBookingRepository
         CancellationToken cancellationToken = default
     );
 
+    /// Live bookings with an assignment that *starts or ends* somewhere in
+    /// [firstDay, lastDay], with assignments (incl. rooms) loaded — the changeovers in
+    /// that window, which is what housekeeping works from.
+    ///
+    /// Deliberately not ListLiveInRangeAsync: that one asks who is *staying* over a
+    /// half-open range and so excludes a group whose EndDate is the first day — exactly
+    /// the group whose rooms have to be cleaned that morning.
+    Task<List<Booking>> ListLiveChangingOverAsync(
+        DateOnly firstDay,
+        DateOnly lastDay,
+        CancellationToken cancellationToken = default
+    );
+
     /// Live bookings starting on/after <paramref name="from"/>, earliest first.
     Task<List<Booking>> ListUpcomingAsync(
         DateOnly from,

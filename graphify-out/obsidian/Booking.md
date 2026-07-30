@@ -1,111 +1,93 @@
 ---
 source_file: "src/CampCenter.Domain/Entities/Booking.cs"
 type: "code"
-community: "Booking Persistence & Entities"
+community: "Booking Persistence & Entities (2)"
 location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Booking_Persistence__Entities
+  - community/Booking_Persistence__Entities_2
 ---
 
 # Booking
 
-## Context
-
-_Source: `src/CampCenter.Domain/Entities/Booking.cs` (defined near L26; showing L24–L71 of 80)._
-
-```csharp
-/// A group booking for a chosen date range, made without an account. The booker
-/// manages it via an emailed link carrying a secret token (stored hashed).
-public class Booking
-{
-    public Guid Id { get; set; }
-
-    /// Arrival day (inclusive).
-    public DateOnly StartDate { get; set; }
-
-    /// Departure day (exclusive — the last night stayed is EndDate - 1).
-    public DateOnly EndDate { get; set; }
-
-    public required string OrganizationName { get; set; }
-
-    public required string ContactName { get; set; }
-
-    public required string Email { get; set; }
-
-    public required string Phone { get; set; }
-
-    /// Number of participants the group brings.
-    public int Headcount { get; set; }
-
-    public string? Notes { get; set; }
-
-    public BookingStatus Status { get; set; } = BookingStatus.PendingDeposit;
-
-    public BookingCancelReason? CancelReason { get; set; }
-
-    /// SHA-256 hash of the secret manage-link token; the plaintext is emailed once.
-    public required string ManageTokenHash { get; set; }
-
-    /// While PendingDeposit: rooms are released after this instant if the deposit
-    /// hasn't been paid. Null once confirmed.
-    public DateTime? HoldExpiresAt { get; set; }
-
-    /// Amounts snapshotted at creation so later price edits don't change existing bookings.
-    public long TotalGrosze { get; set; }
-
-    public long DepositGrosze { get; set; }
-
-    /// Requested room mix as JSON {"4": 40, "3": 2} (capacity → count). Historical
-    /// record that survives assignment deletion on cancel.
-    public required string RequestedRoomCounts { get; set; }
-
-    /// UI language at booking time ("pl"/"en"); drives email language and the P24 page.
-    public required string Language { get; set; }
-
-```
-
 ## Connections
-- [[.AddAsync()]] - `references` [EXTRACTED]
-- [[.AddAsync()_5]] - `references` [EXTRACTED]
+- [[.A_one_night_stay_is_an_arrival_on_one_day_and_a_departure_on_the_next()]] - `calls` [EXTRACTED]
+- [[.A_room_being_vacated_today_is_a_departure()]] - `calls` [EXTRACTED]
+- [[.A_room_nobody_has_touched_is_pending()]] - `calls` [EXTRACTED]
+- [[.A_room_occupied_through_the_day_is_left_alone()]] - `calls` [EXTRACTED]
+- [[.A_room_taken_today_by_a_group_is_an_arrival()]] - `calls` [EXTRACTED]
+- [[.A_turnaround_carries_both_groups_and_both_bed_counts()]] - `calls` [EXTRACTED]
+- [[.AddAsync()_9]] - `references` [EXTRACTED]
+- [[.AddAsync()_14]] - `references` [EXTRACTED]
+- [[.ApplyCancellationAsync()]] - `references` [EXTRACTED]
+- [[.AssignMealTimesAsync()]] - `references` [EXTRACTED]
 - [[.AssignRooms()]] - `references` [EXTRACTED]
+- [[.Booking()]] - `references` [EXTRACTED]
+- [[.Booking()_1]] - `references` [EXTRACTED]
 - [[.BookingCancelled()]] - `references` [EXTRACTED]
 - [[.BookingConfirmed()]] - `references` [EXTRACTED]
 - [[.BookingCreated()]] - `references` [EXTRACTED]
-- [[.Configure()_1]] - `references` [EXTRACTED]
+- [[.BuildAssignmentsAsync()]] - `references` [EXTRACTED]
+- [[.Configure()_7]] - `references` [EXTRACTED]
+- [[.Departures_and_unrelated_arrivals_on_one_day_are_separate_jobs()]] - `calls` [EXTRACTED]
 - [[.Detach()]] - `references` [EXTRACTED]
 - [[.Detach()_1]] - `references` [EXTRACTED]
+- [[.Each_room_of_a_multi_room_group_gets_its_own_job()]] - `calls` [EXTRACTED]
+- [[.FinalDueDate()]] - `references` [EXTRACTED]
+- [[.FinalDueDate()_1]] - `references` [EXTRACTED]
 - [[.FindByTokenAsync()]] - `references` [EXTRACTED]
-- [[.GetByIdAsync()_1]] - `references` [EXTRACTED]
-- [[.GetByIdAsync()_6]] - `references` [EXTRACTED]
-- [[.GetByTokenHashAsync()]] - `references` [EXTRACTED]
+- [[.ForDay()]] - `references` [EXTRACTED]
+- [[.GetBookingOrThrowAsync()]] - `references` [EXTRACTED]
+- [[.GetByIdAsync()_8]] - `references` [EXTRACTED]
+- [[.GetByIdAsync()_11]] - `references` [EXTRACTED]
 - [[.GetByTokenHashAsync()_2]] - `references` [EXTRACTED]
+- [[.GetByTokenHashAsync()_3]] - `references` [EXTRACTED]
 - [[.GetConfirmedEndedAsync()]] - `references` [EXTRACTED]
 - [[.GetConfirmedEndedAsync()_1]] - `references` [EXTRACTED]
 - [[.GetExpiredPendingAsync()]] - `references` [EXTRACTED]
 - [[.GetExpiredPendingAsync()_1]] - `references` [EXTRACTED]
-- [[.GetOrThrowAsync()]] - `references` [EXTRACTED]
-- [[.ListAsync()_4]] - `references` [EXTRACTED]
+- [[.GetOrThrowAsync()_1]] - `references` [EXTRACTED]
+- [[.GuardBookingIsLive()]] - `references` [EXTRACTED]
+- [[.GuardDateWithinStay()]] - `references` [EXTRACTED]
 - [[.ListAsync()_6]] - `references` [EXTRACTED]
+- [[.ListAsync()_7]] - `references` [EXTRACTED]
+- [[.ListLiveChangingOverAsync()]] - `references` [EXTRACTED]
+- [[.ListLiveChangingOverAsync()_1]] - `references` [EXTRACTED]
 - [[.ListLiveInRangeAsync()]] - `references` [EXTRACTED]
 - [[.ListLiveInRangeAsync()_1]] - `references` [EXTRACTED]
+- [[.ListLivePresentInAsync()]] - `references` [EXTRACTED]
+- [[.ListLivePresentInAsync()_1]] - `references` [EXTRACTED]
 - [[.ListUpcomingAsync()]] - `references` [EXTRACTED]
 - [[.ListUpcomingAsync()_1]] - `references` [EXTRACTED]
+- [[.Marking_a_room_done_creates_its_row_and_stamps_who_and_when()]] - `calls` [EXTRACTED]
+- [[.One_group_out_and_the_next_in_is_a_single_turnaround()]] - `calls` [EXTRACTED]
+- [[.Puts_turnarounds_before_departures_and_arrivals()]] - `calls` [EXTRACTED]
+- [[.Refuses_a_room_with_nothing_to_do_that_day()]] - `calls` [EXTRACTED]
+- [[.Rejects_an_unknown_status()]] - `calls` [EXTRACTED]
 - [[.RemoveAssignments()]] - `references` [EXTRACTED]
 - [[.RemoveAssignments()_1]] - `references` [EXTRACTED]
-- [[.ToDto()]] - `references` [EXTRACTED]
+- [[.Reopening_a_room_clears_who_finished_it()]] - `calls` [EXTRACTED]
+- [[.Stored_progress_is_merged_into_the_derived_list()]] - `calls` [EXTRACTED]
+- [[.The_day_before_a_departure_is_not_the_departure_day()]] - `calls` [EXTRACTED]
+- [[.The_day_strip_counts_rooms_and_rooms_done_per_day()]] - `calls` [EXTRACTED]
+- [[.ToCalendarDto()]] - `references` [EXTRACTED]
+- [[.ToDto()_3]] - `references` [EXTRACTED]
+- [[.ToDto()_6]] - `references` [EXTRACTED]
+- [[.ToPublicDto()]] - `references` [EXTRACTED]
 - [[AppDbContext]] - `references` [EXTRACTED]
 - [[Booking.cs]] - `contains` [EXTRACTED]
 - [[BookingCancelReason]] - `references` [EXTRACTED]
 - [[BookingConfiguration]] - `references` [EXTRACTED]
-- [[BookingRoomAssignment]] - `references` [EXTRACTED]
-- [[BookingStatus]] - `references` [EXTRACTED]
+- [[BookingMealTime_1]] - `references` [EXTRACTED]
+- [[BookingRoomAssignment_2]] - `references` [EXTRACTED]
+- [[BookingStatus_1]] - `references` [EXTRACTED]
 - [[DateOnly_3]] - `references` [EXTRACTED]
 - [[DateTime_4]] - `references` [EXTRACTED]
 - [[Guid_18]] - `references` [EXTRACTED]
 - [[List_12]] - `references` [EXTRACTED]
 - [[Payment]] - `references` [EXTRACTED]
-- [[RoomTask_1]] - `references` [EXTRACTED]
+- [[RoomTask]] - `references` [EXTRACTED]
+- [[ScheduleEntry_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Booking_Persistence__Entities
+#graphify/code #graphify/EXTRACTED #community/Booking_Persistence__Entities_2

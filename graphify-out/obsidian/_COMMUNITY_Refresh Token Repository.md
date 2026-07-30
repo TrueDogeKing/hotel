@@ -1,22 +1,30 @@
 ---
 type: community
-cohesion: 0.39
-members: 9
+cohesion: 0.18
+members: 17
 ---
 
 # Refresh Token Repository
 
-**Cohesion:** 0.39 - loosely connected
-**Members:** 9 nodes
+**Cohesion:** 0.18 - loosely connected
+**Members:** 17 nodes
 
 ## Members
-- [[.AddAsync()_7]] - code - src/CampCenter.Infrastructure/Repositories/RefreshTokenRepository.cs
-- [[.GetByTokenHashAsync()_3]] - code - src/CampCenter.Infrastructure/Repositories/RefreshTokenRepository.cs
+- [[.AddAsync()_5]] - code - src/CampCenter.Infrastructure/Repositories/RefreshTokenRepository.cs
+- [[.Configure()_4]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/RefreshTokenConfiguration.cs
+- [[.GetByTokenHashAsync()_1]] - code - src/CampCenter.Infrastructure/Repositories/RefreshTokenRepository.cs
 - [[.RevokeAllActiveForUserAsync()_1]] - code - src/CampCenter.Infrastructure/Repositories/RefreshTokenRepository.cs
-- [[.SaveChangesAsync()_9]] - code - src/CampCenter.Infrastructure/Repositories/RefreshTokenRepository.cs
+- [[.SaveChangesAsync()_7]] - code - src/CampCenter.Infrastructure/Repositories/RefreshTokenRepository.cs
 - [[CancellationToken_42]] - code
+- [[DateTime_7]] - code
 - [[DateTime_12]] - code
+- [[EntityTypeBuilder_5]] - code
+- [[Guid_22]] - code
 - [[Guid_34]] - code
+- [[RefreshToken]] - code - src/CampCenter.Domain/Entities/RefreshToken.cs
+- [[RefreshToken.cs]] - code - src/CampCenter.Domain/Entities/RefreshToken.cs
+- [[RefreshTokenConfiguration]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/RefreshTokenConfiguration.cs
+- [[RefreshTokenConfiguration.cs]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/RefreshTokenConfiguration.cs
 - [[RefreshTokenRepository]] - code - src/CampCenter.Infrastructure/Repositories/RefreshTokenRepository.cs
 - [[Task_41]] - code
 
@@ -28,12 +36,15 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_Refresh Token EF Config]]
-- 1 edge to [[_COMMUNITY_Refresh Token Contract]]
-- 1 edge to [[_COMMUNITY_Booking Persistence & Entities]]
-- 1 edge to [[_COMMUNITY_Domain & Infra Namespaces]]
+- 4 edges to [[_COMMUNITY_Auth Service & Tokens]]
+- 3 edges to [[_COMMUNITY_Domain & Infra Namespaces]]
+- 2 edges to [[_COMMUNITY_Persistence  Configurations]]
+- 1 edge to [[_COMMUNITY_Admin User & Token Config]]
+- 1 edge to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
 
 ## Top bridge nodes
 - [[RefreshTokenRepository]] - degree 7, connects to 3 communities
-- [[.AddAsync()_7]] - degree 4, connects to 1 community
-- [[.GetByTokenHashAsync()_3]] - degree 4, connects to 1 community
+- [[RefreshToken]] - degree 11, connects to 2 communities
+- [[RefreshTokenConfiguration.cs]] - degree 3, connects to 2 communities
+- [[RefreshTokenConfiguration]] - degree 4, connects to 1 community
+- [[RefreshToken.cs]] - degree 2, connects to 1 community

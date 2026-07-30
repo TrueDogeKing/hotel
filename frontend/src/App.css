@@ -1606,6 +1606,31 @@ p[role="alert"] {
   background: var(--accent-soft);
 }
 
+/* A link that carries a toolbar action and so should read as a button. Secondary
+   styling: it navigates to a settings page rather than changing anything here. */
+.toolbar-button {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.25rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  background: var(--bg-float);
+  color: var(--text-strong);
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    background-color var(--dur-fast) var(--ease-out),
+    border-color var(--dur-fast) var(--ease-out),
+    color var(--dur-fast) var(--ease-out);
+}
+.toolbar-button:hover {
+  background: var(--bg-active);
+  border-color: var(--border-strong);
+  color: var(--accent);
+  text-decoration: none;
+}
+
 .admin-form {
   display: flex;
   flex-wrap: wrap;
@@ -2706,6 +2731,18 @@ p[role="alert"] {
   font-variant-numeric: tabular-nums;
   color: var(--text-faint);
 }
+/* Measured, never read: one line of chip text, so the component can tell how many rows
+   a block of a given height fits at the reader's font size and zoom. Kept in the flow
+   with zero footprint rather than display:none, which would measure as 0. */
+.timetable-probe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  pointer-events: none;
+  font-size: 0.82rem;
+  line-height: 1.25;
+}
 .timetable-events {
   position: absolute;
   inset: 0 0 0 var(--tt-gutter);
@@ -2715,6 +2752,12 @@ p[role="alert"] {
 .timetable-chip {
   position: absolute;
   pointer-events: auto;
+  /* Lets the rows inside ask how wide this block ended up — see the @container rules. */
+  container-type: inline-size;
+  /* A block's height is its duration, full stop. Buttons carry a min-height for tap
+     targets, which would silently make short entries taller than the span they
+     represent — and taller than the height the row count was worked out from. */
+  min-height: 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -2733,9 +2776,97 @@ p[role="alert"] {
   /* Short entries must not spill their text over the block below. */
   overflow: hidden;
 }
-.timetable-chip:hover {
+/* A block only ever shows what its duration has room for; hovering opens it to its
+   full text instead of clipping it. It is absolutely positioned, so growing it
+   disturbs nothing around it. The stylesheet has to shout over the inline height. */
+.timetable-chip:hover,
+.timetable-chip:focus-visible {
   border-color: var(--accent);
-  z-index: 1;
+  height: auto !important;
+  min-height: var(--chip-h);
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0.25rem 0.5rem;
+  overflow: visible;
+  box-shadow: var(--shadow-md);
+  z-index: 3;
+}
+.timetable-chip:hover > *,
+.timetable-chip:focus-visible > * {
+  display: block;
+}
+.timetable-chip:hover .chip-head,
+.timetable-chip:focus-visible .chip-head,
+.timetable-chip:hover .chip-meta,
+.timetable-chip:focus-visible .chip-meta {
+  display: flex;
+  width: 100%;
+  /* A narrow block puts the time and the group on separate lines rather than
+     squeezing both onto one. */
+  flex-wrap: wrap;
+}
+/* An opened block grows downwards and its rows may wrap, so what a short or narrow
+   block dropped comes back — it is the one place the whole entry is readable in situ. */
+.timetable-chip:hover .chip-people,
+.timetable-chip:focus-visible .chip-people,
+.timetable-chip:hover .chip-time,
+.timetable-chip:focus-visible .chip-time {
+  display: inline;
+}
+/* Titles and group lists may wrap once opened — clipping them is exactly what hover
+   undoes. A long list of groups then pushes the block taller, which is the point. */
+.timetable-chip:hover .chip-head strong,
+.timetable-chip:focus-visible .chip-head strong,
+.timetable-chip:hover .chip-groups,
+.timetable-chip:focus-visible .chip-groups {
+  overflow: visible;
+  white-space: normal;
+}
+
+/* A block says as many rows as it has room for, measured by the component and passed
+   down as rows-N. What goes first is what a reader can recover elsewhere: the menu
+   (in the group panel), then the place, then the time (the block's own position on the
+   ruler). The group is last to go — it is what the day view is read for. */
+.timetable-chip.rows-3 .chip-menu {
+  display: none;
+}
+.timetable-chip.rows-2 .chip-where,
+.timetable-chip.rows-2 .chip-menu {
+  display: none;
+}
+/* One row: title, time and group side by side, each giving way in that order. */
+.timetable-chip.rows-1 {
+  flex-direction: row;
+  align-items: baseline;
+  gap: 0.375rem;
+  padding: 0.0625rem 0.5rem;
+}
+.timetable-chip.rows-1 .chip-head,
+.timetable-chip.rows-1 .chip-meta {
+  flex: 1 1 auto;
+  min-width: 0;
+  width: auto;
+}
+.timetable-chip.rows-1 .chip-people,
+.timetable-chip.rows-1 .chip-where,
+.timetable-chip.rows-1 .chip-menu {
+  display: none;
+}
+
+/* Overlapping entries share the width, so a block can be narrow whatever its height.
+   Each block asks about its own width rather than the viewport's: the same 09:00 entry
+   is full width on a quiet morning and a third of it on a busy one. */
+@container (max-width: 11rem) {
+  .chip-people {
+    display: none;
+  }
+}
+@container (max-width: 7rem) {
+  /* Down here the time and the group cannot both be read; the block's position on the
+     ruler already gives the time, and hover brings it back. */
+  .chip-time {
+    display: none;
+  }
 }
 .chip-head {
   display: flex;
@@ -2764,7 +2895,17 @@ p[role="alert"] {
   background: color-mix(in srgb, var(--secondary) 18%, var(--bg-float));
   border-color: color-mix(in srgb, var(--secondary) 40%, transparent);
 }
+/* Time and group on one line. The time keeps its width and the group takes the rest,
+   ellipsised — a merged sitting lists several groups, and hover shows them all. */
+.chip-meta {
+  display: flex;
+  align-items: baseline;
+  gap: 0.375rem;
+  width: 100%;
+  min-width: 0;
+}
 .timetable-chip .chip-time {
+  flex: 0 0 auto;
   font-variant-numeric: tabular-nums;
   color: var(--text-muted);
 }
@@ -2772,6 +2913,45 @@ p[role="alert"] {
 .timetable-chip .chip-menu {
   font-size: 0.76rem;
   color: var(--text-faint);
+}
+.timetable-chip .chip-groups {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* Where it happens — the field the same-place clash check compares. */
+.timetable-chip .chip-where {
+  font-size: 0.76rem;
+  color: var(--text-muted);
+}
+/* Two groups in one place, or two groups eating at once. The admin was warned before
+   saving and could go ahead, so the block keeps saying so. */
+/* Drawn as an inset ring rather than a thicker border, so flagging a block does not
+   change its padding and re-clip the text. */
+.timetable-chip.clashing {
+  border-color: var(--danger);
+  box-shadow: inset 0 0 0 1px var(--danger);
+}
+/* The ring has to survive hover, which otherwise takes the border and the shadow. */
+.timetable-chip.clashing:hover,
+.timetable-chip.clashing:focus-visible {
+  border-color: var(--danger);
+  box-shadow: inset 0 0 0 1px var(--danger), var(--shadow-md);
+}
+.chip-clash {
+  /* Pushed to the end of its row, so it reads the same whether the time beside it is
+     showing or a narrow block has dropped it. */
+  margin-left: auto;
+  flex: 0 0 auto;
+  padding: 0 0.25rem;
+  border-radius: var(--r-sm);
+  background: color-mix(in srgb, var(--danger) 22%, transparent);
+  color: var(--danger);
+  font-size: 0.7rem;
+  font-style: normal;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 /* --- Group programme panel --- */
@@ -2889,7 +3069,8 @@ p[role="alert"] {
   vertical-align: -0.1em;
 }
 .group-panel-entry .entry-location,
-.group-panel-entry .entry-menu {
+.group-panel-entry .entry-menu,
+.group-panel-entry .entry-participants {
   font-size: 0.8rem;
   color: var(--text-muted);
 }
@@ -3011,6 +3192,11 @@ p[role="alert"] {
   font-style: normal;
   font-weight: 500;
 }
+/* This group is seated past the window's close — more groups than it holds. */
+.gmt-badge-warn {
+  background: color-mix(in srgb, var(--warning) 30%, transparent);
+  color: var(--warning);
+}
 .gmt-times {
   display: flex;
   align-items: center;
@@ -3036,4 +3222,217 @@ p[role="alert"] {
   .group-meal-times-list li {
     align-items: flex-start;
   }
+}
+
+/* ==========================================================================
+   Housekeeping round — rooms to clean on one day
+   ========================================================================== */
+
+.hk-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+/* The days either side of the chosen one, so a heavy changeover is visible before
+   the morning it lands rather than on it. */
+.hk-strip {
+  list-style: none;
+  display: flex;
+  gap: 0.5rem;
+  padding: 0 0 0.25rem;
+  margin: 0 0 1.5rem;
+  /* More days than fit scroll sideways rather than wrapping into a second row that
+     pushes the list itself off the screen. */
+  overflow-x: auto;
+}
+.hk-strip-day {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.125rem;
+  min-width: 7.5rem;
+  padding: 0.5rem 0.625rem;
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  background: var(--bg-float);
+  color: var(--text);
+  text-align: left;
+  cursor: pointer;
+}
+.hk-strip-day.selected {
+  border-color: var(--accent);
+  background: var(--bg-selected);
+}
+/* Nothing to do, so nothing to draw the eye. */
+.hk-strip-day.empty {
+  color: var(--text-faint);
+}
+/* Every room done — the day is clear. */
+.hk-strip-day.clear .hk-strip-count {
+  color: var(--success);
+  font-weight: 600;
+}
+.hk-strip-date {
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+.hk-strip-count {
+  font-size: 0.95rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+
+.hk-summary {
+  font-weight: 600;
+}
+.hk-empty {
+  color: var(--text-muted);
+}
+
+.hk-section {
+  margin-top: 1.5rem;
+}
+.hk-section h2 {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+.hk-count {
+  padding: 0 0.4rem;
+  border-radius: var(--r-sm);
+  background: var(--bg-input);
+  font-size: 0.8rem;
+  font-variant-numeric: tabular-nums;
+}
+.hk-section-hint {
+  margin: 0 0 0.75rem;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.hk-rooms {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr));
+  gap: 0.75rem;
+  padding: 0;
+  margin: 0;
+}
+.hk-room {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  /* The kind is carried on the edge as well as in the heading, so a room stays
+     readable once someone has scrolled past its section header. */
+  border-left: 4px solid var(--border-strong);
+  border-radius: var(--r-md);
+  background: var(--bg-float);
+}
+.hk-room.turnaround {
+  border-left-color: var(--cta);
+}
+.hk-room.departure {
+  border-left-color: var(--secondary);
+}
+.hk-room.arrival {
+  border-left-color: var(--accent);
+}
+/* A finished room recedes rather than disappears: the round is easier to check when
+   what is left stands out against what is done. */
+.hk-room.status-done {
+  background: var(--success-soft);
+  opacity: 0.75;
+}
+
+.hk-room-head {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.hk-room-number {
+  font-size: 1.1rem;
+}
+.hk-room-beds {
+  color: var(--text-faint);
+  font-size: 0.8rem;
+}
+.hk-room-tasks,
+.hk-room-closed {
+  padding: 0 0.3rem;
+  border-radius: var(--r-sm);
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.hk-room-tasks {
+  background: color-mix(in srgb, var(--warning) 22%, transparent);
+  color: var(--warning);
+}
+.hk-room-closed {
+  background: color-mix(in srgb, var(--danger) 18%, transparent);
+  color: var(--danger);
+}
+
+.hk-room-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+  font-size: 0.85rem;
+}
+.hk-out {
+  color: var(--text-muted);
+}
+.hk-in {
+  color: var(--text-strong);
+  font-weight: 600;
+}
+.hk-room-note {
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--r-sm);
+  background: var(--bg-input);
+  font-size: 0.82rem;
+}
+
+.hk-room-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+/* One control cycling to-do → in progress → done: the round is worked through on a
+   phone, where three separate buttons per room is a lot of aiming. */
+.hk-status {
+  flex: 1 1 auto;
+  font-weight: 600;
+}
+.hk-status-pending {
+  background: var(--bg-input);
+  color: var(--text);
+}
+.hk-status-inprogress {
+  background: color-mix(in srgb, var(--cta) 45%, var(--bg-input));
+  color: var(--on-cta);
+}
+.hk-status-done {
+  background: var(--success);
+  color: var(--on-accent);
+}
+.hk-note-toggle {
+  flex: 0 0 auto;
+}
+.hk-note-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.hk-note-form input {
+  flex: 1 1 10rem;
+  min-width: 0;
 }

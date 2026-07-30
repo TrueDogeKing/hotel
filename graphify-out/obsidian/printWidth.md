@@ -11,16 +11,6 @@ tags:
 
 # printWidth
 
-## Context
-
-_Source: `frontend/.prettierrc.json` (defined near L2; showing L1–L3 of 3)._
-
-```json
-{
-  "printWidth": 100
-}
-```
-
 ## Connections
 - [[.prettierrc.json]] - `contains` [EXTRACTED]
 

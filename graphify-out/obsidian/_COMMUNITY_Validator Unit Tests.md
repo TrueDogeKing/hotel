@@ -1,54 +1,38 @@
 ---
 type: community
-cohesion: 0.07
-members: 39
+cohesion: 0.09
+members: 23
 ---
 
 # Validator Unit Tests
 
-**Cohesion:** 0.07 - loosely connected
-**Members:** 39 nodes
+**Cohesion:** 0.09 - loosely connected
+**Members:** 23 nodes
 
 ## Members
-- [[.AfterStart()]] - code - src/CampCenter.Application/Validators/CampSessionValidators.cs
-- [[.DepositAbovePrice_Fails()]] - code - tests/CampCenter.UnitTests/Validators/CampSessionValidatorsTests.cs
-- [[.EndDateNotAfterStart_Fails()]] - code - tests/CampCenter.UnitTests/Validators/CampSessionValidatorsTests.cs
+- [[.BeAMealKind()]] - code - src/CampCenter.Application/Validators/MealTimeValidators.cs
 - [[.MissingFields_Fail()]] - code - tests/CampCenter.UnitTests/Validators/LoginRequestValidatorTests.cs
-- [[.NonPositivePrice_Fails()]] - code - tests/CampCenter.UnitTests/Validators/CampSessionValidatorsTests.cs
-- [[.Valid()]] - code - tests/CampCenter.UnitTests/Validators/CampSessionValidatorsTests.cs
 - [[.ValidCredentials_Pass()]] - code - tests/CampCenter.UnitTests/Validators/LoginRequestValidatorTests.cs
 - [[.ValidPassword()]] - code - src/CampCenter.Application/Validators/PasswordRules.cs
-- [[.ValidSession_Passes()]] - code - tests/CampCenter.UnitTests/Validators/CampSessionValidatorsTests.cs
-- [[AbstractValidator]] - code
-- [[CampCenter.Application.Validators]] - code - src/CampCenter.Application/Validators/CampSessionValidators.cs
-- [[CampCenter.UnitTests.Validators]] - code - tests/CampCenter.UnitTests/Validators/CampSessionValidatorsTests.cs
-- [[CampSessionRules]] - code - src/CampCenter.Application/Validators/CampSessionValidators.cs
-- [[CampSessionValidators.cs]] - code - src/CampCenter.Application/Validators/CampSessionValidators.cs
-- [[CampSessionValidatorsTests]] - code - tests/CampCenter.UnitTests/Validators/CampSessionValidatorsTests.cs
-- [[CampSessionValidatorsTests.cs]] - code - tests/CampCenter.UnitTests/Validators/CampSessionValidatorsTests.cs
-- [[CreateBookingRequestValidator]] - code - src/CampCenter.Application/Validators/CreateBookingRequestValidator.cs
-- [[CreateBookingRequestValidator.cs]] - code - src/CampCenter.Application/Validators/CreateBookingRequestValidator.cs
-- [[CreateCampSessionRequestValidator]] - code - src/CampCenter.Application/Validators/CampSessionValidators.cs
-- [[DateOnly_2]] - code
-- [[Fact_7]] - code
+- [[AdminBookingValidators.cs]] - code - src/CampCenter.Application/Validators/AdminBookingValidators.cs
+- [[CampCenter.Application.Validators]] - code - src/CampCenter.Application/Validators/AdminBookingValidators.cs
+- [[ClosureValidatorsTests.cs]] - code - tests/CampCenter.UnitTests/Validators/ClosureValidatorsTests.cs
 - [[Fact_8]] - code
-- [[Func]] - code
-- [[IRuleBuilder]] - code
 - [[IRuleBuilder_1]] - code
-- [[IRuleBuilderOptions]] - code
 - [[IRuleBuilderOptions_1]] - code
-- [[InlineData]] - code
 - [[InlineData_1]] - code
 - [[LoginRequestValidator]] - code - src/CampCenter.Application/Validators/LoginRequestValidator.cs
 - [[LoginRequestValidator.cs]] - code - src/CampCenter.Application/Validators/LoginRequestValidator.cs
 - [[LoginRequestValidatorTests]] - code - tests/CampCenter.UnitTests/Validators/LoginRequestValidatorTests.cs
 - [[LoginRequestValidatorTests.cs]] - code - tests/CampCenter.UnitTests/Validators/LoginRequestValidatorTests.cs
+- [[MealTimeRules]] - code - src/CampCenter.Application/Validators/MealTimeValidators.cs
+- [[MealTimeValidators.cs]] - code - src/CampCenter.Application/Validators/MealTimeValidators.cs
 - [[PasswordRules]] - code - src/CampCenter.Application/Validators/PasswordRules.cs
 - [[PasswordRules.cs]] - code - src/CampCenter.Application/Validators/PasswordRules.cs
-- [[Theory]] - code
+- [[ScheduleValidatorsTests.cs]] - code - tests/CampCenter.UnitTests/Validators/ScheduleValidatorsTests.cs
 - [[Theory_1]] - code
-- [[UpdateCampSessionRequestValidator]] - code - src/CampCenter.Application/Validators/CampSessionValidators.cs
 - [[int]] - code
+- [[string_10]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -58,16 +42,21 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_Application DTO Namespaces]]
-- 3 edges to [[_COMMUNITY_Camp Session Management]]
-- 3 edges to [[_COMMUNITY_Room Management]]
-- 2 edges to [[_COMMUNITY_Auth DTOs & Models]]
-- 1 edge to [[_COMMUNITY_Auth Controller]]
-- 1 edge to [[_COMMUNITY_Public Booking Service]]
+- 4 edges to [[_COMMUNITY_DTOs  Schedule (1)]]
+- 3 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
+- 3 edges to [[_COMMUNITY_CampCenter.UnitTests  Validators]]
+- 2 edges to [[_COMMUNITY_Rate Limiting & Startup]]
+- 2 edges to [[_COMMUNITY_CampCenter.Application  Services (1)]]
+- 2 edges to [[_COMMUNITY_Domain & Infra Namespaces]]
+- 1 edge to [[_COMMUNITY_Auth Controller (2)]]
+- 1 edge to [[_COMMUNITY_Room Management]]
+- 1 edge to [[_COMMUNITY_tests  CampCenter.IntegrationTests (2)]]
+- 1 edge to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
+- 1 edge to [[_COMMUNITY_DTOs  Schedule (2)]]
 
 ## Top bridge nodes
-- [[CampCenter.Application.Validators]] - degree 7, connects to 1 community
-- [[AbstractValidator]] - degree 6, connects to 1 community
-- [[.Valid()]] - degree 6, connects to 1 community
-- [[CampSessionValidators.cs]] - degree 5, connects to 1 community
-- [[CreateCampSessionRequestValidator]] - degree 4, connects to 1 community
+- [[MealTimeValidators.cs]] - degree 7, connects to 5 communities
+- [[CampCenter.Application.Validators]] - degree 11, connects to 3 communities
+- [[AdminBookingValidators.cs]] - degree 4, connects to 3 communities
+- [[LoginRequestValidator]] - degree 4, connects to 2 communities
+- [[ScheduleValidatorsTests.cs]] - degree 4, connects to 2 communities

@@ -1,37 +1,33 @@
 ---
 type: community
-cohesion: 0.18
-members: 22
+cohesion: 0.13
+members: 18
 ---
 
 # Frontend App Shell & i18n
 
-**Cohesion:** 0.18 - loosely connected
-**Members:** 22 nodes
+**Cohesion:** 0.13 - loosely connected
+**Members:** 18 nodes
 
 ## Members
-- [[AdminDashboardPage()]] - code - frontend/src/pages/admin/AdminDashboardPage.tsx
-- [[AdminDashboardPage.tsx]] - code - frontend/src/pages/admin/AdminDashboardPage.tsx
-- [[AdminLayout()]] - code - frontend/src/components/admin/AdminLayout.tsx
-- [[AdminLayout.tsx]] - code - frontend/src/components/admin/AdminLayout.tsx
 - [[App()]] - code - frontend/src/App.tsx
 - [[App.tsx]] - code - frontend/src/App.tsx
-- [[Dashboard]] - code - frontend/src/api/admin.ts
+- [[FormState]] - code - frontend/src/pages/admin/MealTimesPage.tsx
 - [[Language]] - code - frontend/src/i18n/index.ts
-- [[LanguageSwitcher()]] - code - frontend/src/components/LanguageSwitcher.tsx
-- [[LanguageSwitcher.tsx]] - code - frontend/src/components/LanguageSwitcher.tsx
-- [[LoginPage()]] - code - frontend/src/pages/LoginPage.tsx
-- [[LoginPage.tsx]] - code - frontend/src/pages/LoginPage.tsx
-- [[ProtectedRoute()]] - code - frontend/src/auth/ProtectedRoute.tsx
-- [[ProtectedRoute.tsx]] - code - frontend/src/auth/ProtectedRoute.tsx
-- [[PublicHomePage()]] - code - frontend/src/pages/PublicHomePage.tsx
-- [[PublicHomePage.tsx]] - code - frontend/src/pages/PublicHomePage.tsx
-- [[getDashboard()]] - code - frontend/src/api/admin.ts
+- [[MealKind]] - code - frontend/src/api/admin.ts
+- [[MealTimeDefault]] - code - frontend/src/api/admin.ts
+- [[MealTimesPage()]] - code - frontend/src/pages/admin/MealTimesPage.tsx
+- [[MealTimesPage.tsx]] - code - frontend/src/pages/admin/MealTimesPage.tsx
+- [[createMealTime()]] - code - frontend/src/api/admin.ts
+- [[deleteMealTime()]] - code - frontend/src/api/admin.ts
+- [[emptyForm_2]] - code - frontend/src/pages/admin/MealTimesPage.tsx
+- [[getMealTimes()]] - code - frontend/src/api/admin.ts
 - [[getStoredLanguage()]] - code - frontend/src/i18n/index.ts
 - [[index.ts]] - code - frontend/src/i18n/index.ts
 - [[main.tsx]] - code - frontend/src/main.tsx
+- [[mealKinds]] - code - frontend/src/api/admin.ts
 - [[setLanguage()]] - code - frontend/src/i18n/index.ts
-- [[useAuth()]] - code - frontend/src/auth/AuthContext.tsx
+- [[updateMealTime()]] - code - frontend/src/api/admin.ts
 
 ## Live Query (requires Dataview plugin)
 
@@ -41,14 +37,18 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 12 edges to [[_COMMUNITY_Public Booking Frontend]]
-- 9 edges to [[_COMMUNITY_Admin Frontend Pages]]
-- 7 edges to [[_COMMUNITY_Frontend Auth & API Client]]
-- 4 edges to [[_COMMUNITY_Admin Tasks & Occupancy Pages]]
+- 10 edges to [[_COMMUNITY_src  api (1)]]
+- 4 edges to [[_COMMUNITY_components  admin]]
+- 3 edges to [[_COMMUNITY_Public Booking Frontend (1)]]
+- 3 edges to [[_COMMUNITY_Frontend Icon Components]]
+- 2 edges to [[_COMMUNITY_src  utils]]
+- 1 edge to [[_COMMUNITY_Admin Frontend Pages]]
+- 1 edge to [[_COMMUNITY_Admin Tasks & Occupancy Pages]]
+- 1 edge to [[_COMMUNITY_src  api (2)]]
 
 ## Top bridge nodes
-- [[App.tsx]] - degree 17, connects to 4 communities
-- [[AdminLayout.tsx]] - degree 11, connects to 3 communities
-- [[AdminDashboardPage.tsx]] - degree 8, connects to 2 communities
-- [[LanguageSwitcher.tsx]] - degree 11, connects to 1 community
-- [[useAuth()]] - degree 9, connects to 1 community
+- [[App.tsx]] - degree 13, connects to 6 communities
+- [[MealTimesPage.tsx]] - degree 16, connects to 5 communities
+- [[MealKind]] - degree 4, connects to 2 communities
+- [[mealKinds]] - degree 3, connects to 2 communities
+- [[getMealTimes()]] - degree 3, connects to 1 community

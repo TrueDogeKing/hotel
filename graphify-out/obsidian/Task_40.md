@@ -10,16 +10,12 @@ tags:
 
 # Task
 
-## Context
-
-_Synthetic reference node from AST structural extraction. It has no source file of its own — it is an aggregate/type symbol defined entirely by the connections listed below._
-
 ## Connections
-- [[.AddAsync()_6]] - `references` [EXTRACTED]
+- [[.AddAsync()_4]] - `references` [EXTRACTED]
 - [[.GetAllAsync()_6]] - `references` [EXTRACTED]
-- [[.GetByIdAsync()_7]] - `references` [EXTRACTED]
+- [[.GetByIdAsync()_5]] - `references` [EXTRACTED]
 - [[.GetOverlappingAsync()_1]] - `references` [EXTRACTED]
 - [[.GetUpcomingCenterWideAsync()_1]] - `references` [EXTRACTED]
-- [[.SaveChangesAsync()_8]] - `references` [EXTRACTED]
+- [[.SaveChangesAsync()_6]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Room_Closure_Management

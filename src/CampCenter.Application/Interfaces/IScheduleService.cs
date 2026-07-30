@@ -21,6 +21,18 @@ public interface IScheduleService
         CancellationToken cancellationToken = default
     );
 
+    /// What a proposed entry would run into: another group in the same place at the
+    /// same time, or another group eating when this meal would be served. Advisory —
+    /// the admin decides, so the write endpoints do not repeat the check.
+    Task<ScheduleConflictsDto> CheckConflictsAsync(
+        CheckScheduleConflictsRequestDto request,
+        CancellationToken cancellationToken = default
+    );
+
+    /// Places already used in the schedule (plus the configured meal location), for
+    /// the entry form's suggestions.
+    Task<ScheduleLocationsDto> GetLocationsAsync(CancellationToken cancellationToken = default);
+
     Task<ScheduleEntryDto> CreateEntryAsync(
         CreateScheduleEntryRequestDto request,
         CancellationToken cancellationToken = default
@@ -57,6 +69,16 @@ public interface IScheduleService
         Guid bookingId,
         Guid mealTimeDefaultId,
         bool applyToExisting,
+        CancellationToken cancellationToken = default
+    );
+
+    /// Drops every remaining meal of one slot from a group's programme in one go —
+    /// "this group takes no dinner here" — instead of deleting day by day. Suppressed
+    /// like a single delete, so generation will not recreate the series. Returns how
+    /// many meals were removed.
+    Task<int> DeleteBookingMealsAsync(
+        Guid bookingId,
+        Guid mealTimeDefaultId,
         CancellationToken cancellationToken = default
     );
 

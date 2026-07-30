@@ -1,25 +1,15 @@
 ---
 source_file: "src/CampCenter.Application/DTOs/Auth/LoginRequestDto.cs"
 type: "code"
-community: "Auth Controller"
+community: "Auth Controller (2)"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Auth_Controller
+  - community/Auth_Controller_2
 ---
 
 # LoginRequestDto
-
-## Context
-
-_Source: `src/CampCenter.Application/DTOs/Auth/LoginRequestDto.cs` (defined near L5; showing L3–L5 of 5)._
-
-```csharp
-/// <param name="Login">Unique sign-in identifier.</param>
-/// <param name="Password">Password in plain text.</param>
-public record LoginRequestDto(string Login, string Password);
-```
 
 ## Connections
 - [[.Login()]] - `references` [EXTRACTED]
@@ -28,4 +18,4 @@ public record LoginRequestDto(string Login, string Password);
 - [[LoginRequestDto.cs]] - `contains` [EXTRACTED]
 - [[LoginRequestValidator]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Auth_Controller
+#graphify/code #graphify/EXTRACTED #community/Auth_Controller_2

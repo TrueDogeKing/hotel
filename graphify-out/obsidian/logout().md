@@ -11,22 +11,6 @@ tags:
 
 # logout()
 
-## Context
-
-_Source: `frontend/src/api/auth.ts` (defined near L12; showing L10–L18 of 18)._
-
-```typescript
-
-// Logs out (revokes the refresh cookie) and clears the in-memory token regardless of the result.
-export async function logout(): Promise<void> {
-  try {
-    await api.post("/auth/logout");
-  } finally {
-    clearAccessToken();
-  }
-}
-```
-
 ## Connections
 - [[AuthContext.tsx]] - `imports` [EXTRACTED]
 - [[auth.ts]] - `contains` [EXTRACTED]

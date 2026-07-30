@@ -1,112 +1,115 @@
 ---
 source_file: "frontend/src/api/admin.ts"
 type: "code"
-community: "Admin Frontend Pages"
+community: "src / api (1)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Frontend_Pages
+  - community/src_/_api_1
 ---
 
 # admin.ts
 
-## Context
-
-_Source: `frontend/src/api/admin.ts` (defined near L1; showing L1–L46 of 254)._
-
-```typescript
-import { api } from "./client";
-
-// --- Rooms ---
-
-export interface Room {
-  id: string;
-  number: string;
-  capacity: number;
-  isActive: boolean;
-  description: string | null;
-  rowVersion: number;
-}
-
-export interface RoomInput {
-  number: string;
-  capacity: number;
-  description: string | null;
-}
-
-export async function getRooms(): Promise<Room[]> {
-  const { data } = await api.get<Room[]>("/admin/rooms");
-  return data;
-}
-
-export async function createRoom(input: RoomInput): Promise<Room> {
-  const { data } = await api.post<Room>("/admin/rooms", input);
-  return data;
-}
-
-export async function updateRoom(
-  id: string,
-  input: RoomInput & { isActive: boolean; rowVersion: number },
-): Promise<Room> {
-  const { data } = await api.put<Room>(`/admin/rooms/${id}`, input);
-  return data;
-}
-
-// Hard-deletes an unreferenced room; a room with booking history is deactivated instead.
-export async function deleteRoom(id: string): Promise<{ deleted: boolean }> {
-  const { data } = await api.delete<{ deleted: boolean }>(`/admin/rooms/${id}`);
-  return data;
-}
-
-// --- Camp sessions (turnusy) ---
-
-export type CampSessionStatus = "Draft" | "Published" | "Archived";
-```
-
 ## Connections
+- [[AddGroupForm.tsx]] - `imports_from` [EXTRACTED]
 - [[AdminAssignment]] - `contains` [EXTRACTED]
 - [[AdminBooking]] - `contains` [EXTRACTED]
 - [[AdminBookingsPage.tsx]] - `imports_from` [EXTRACTED]
 - [[AdminDashboardPage.tsx]] - `imports_from` [EXTRACTED]
+- [[ApplyBookingMealTimeResult]] - `contains` [EXTRACTED]
 - [[BookingManagePage.tsx]] - `imports_from` [EXTRACTED]
+- [[BookingMealTime]] - `contains` [EXTRACTED]
+- [[BookingSchedule]] - `contains` [EXTRACTED]
+- [[BookingScheduleDay]] - `contains` [EXTRACTED]
+- [[BookingStatus]] - `contains` [EXTRACTED]
 - [[BookingWizardPage.tsx]] - `imports_from` [EXTRACTED]
-- [[CampSession]] - `contains` [EXTRACTED]
-- [[CampSessionInput]] - `contains` [EXTRACTED]
-- [[CampSessionStatus]] - `contains` [EXTRACTED]
+- [[Closure_1]] - `contains` [EXTRACTED]
+- [[ClosureInput]] - `contains` [EXTRACTED]
+- [[ClosuresPage.tsx]] - `imports_from` [EXTRACTED]
+- [[CreateAdminBookingInput]] - `contains` [EXTRACTED]
 - [[Dashboard]] - `contains` [EXTRACTED]
-- [[DashboardSession]] - `contains` [EXTRACTED]
-- [[Room]] - `contains` [EXTRACTED]
+- [[DashboardBooking]] - `contains` [EXTRACTED]
+- [[DayTimetable.tsx]] - `imports_from` [EXTRACTED]
+- [[GroupMealTimes.tsx]] - `imports_from` [EXTRACTED]
+- [[GroupSchedulePanel.tsx]] - `imports_from` [EXTRACTED]
+- [[HousekeepingDay]] - `contains` [EXTRACTED]
+- [[HousekeepingDaySummary]] - `contains` [EXTRACTED]
+- [[HousekeepingPage.tsx]] - `imports_from` [EXTRACTED]
+- [[HousekeepingRange]] - `contains` [EXTRACTED]
+- [[HousekeepingRoom]] - `contains` [EXTRACTED]
+- [[MealKind]] - `contains` [EXTRACTED]
+- [[MealTimeDefault]] - `contains` [EXTRACTED]
+- [[MealTimeDefaultInput]] - `contains` [EXTRACTED]
+- [[MealTimesPage.tsx]] - `imports_from` [EXTRACTED]
+- [[NeighbourSitting]] - `contains` [EXTRACTED]
+- [[Occupancy]] - `contains` [EXTRACTED]
+- [[OccupancyPage.tsx]] - `imports_from` [EXTRACTED]
+- [[Room_1]] - `contains` [EXTRACTED]
+- [[RoomCleaningKind]] - `contains` [EXTRACTED]
+- [[RoomCleaningStatus]] - `contains` [EXTRACTED]
 - [[RoomInput]] - `contains` [EXTRACTED]
 - [[RoomOccupancy]] - `contains` [EXTRACTED]
-- [[RoomTask]] - `contains` [EXTRACTED]
+- [[RoomTask_1]] - `contains` [EXTRACTED]
 - [[RoomsPage.tsx]] - `imports_from` [EXTRACTED]
-- [[SessionOccupancy]] - `contains` [EXTRACTED]
-- [[SessionOccupancyPage.tsx]] - `imports_from` [EXTRACTED]
-- [[SessionsPage.tsx]] - `imports_from` [EXTRACTED]
+- [[ScheduleCalendar]] - `contains` [EXTRACTED]
+- [[ScheduleCalendarBooking]] - `contains` [EXTRACTED]
+- [[ScheduleCalendarDay]] - `contains` [EXTRACTED]
+- [[ScheduleConflict]] - `contains` [EXTRACTED]
+- [[ScheduleConflictReason]] - `contains` [EXTRACTED]
+- [[ScheduleConflicts]] - `contains` [EXTRACTED]
+- [[ScheduleDay]] - `contains` [EXTRACTED]
+- [[ScheduleDayGroup]] - `contains` [EXTRACTED]
+- [[ScheduleEntry]] - `contains` [EXTRACTED]
+- [[ScheduleEntryForm.tsx]] - `imports_from` [EXTRACTED]
+- [[ScheduleEntryInput]] - `contains` [EXTRACTED]
+- [[ScheduleEntryKind]] - `contains` [EXTRACTED]
+- [[ScheduleLocations]] - `contains` [EXTRACTED]
+- [[SchedulePage.tsx]] - `imports_from` [EXTRACTED]
 - [[TasksPage.tsx]] - `imports_from` [EXTRACTED]
-- [[api]] - `imports` [EXTRACTED]
-- [[archiveSession()]] - `contains` [EXTRACTED]
+- [[bookingStatuses]] - `contains` [EXTRACTED]
 - [[cancelAdminBooking()]] - `contains` [EXTRACTED]
-- [[client.ts]] - `imports_from` [EXTRACTED]
+- [[checkScheduleConflicts()]] - `contains` [EXTRACTED]
+- [[createAdminBooking()]] - `contains` [EXTRACTED]
+- [[createClosure()]] - `contains` [EXTRACTED]
+- [[createMealTime()]] - `contains` [EXTRACTED]
 - [[createRoom()]] - `contains` [EXTRACTED]
-- [[createSession()]] - `contains` [EXTRACTED]
+- [[createScheduleEntry()]] - `contains` [EXTRACTED]
 - [[createTask()]] - `contains` [EXTRACTED]
+- [[deleteBookingMeals()]] - `contains` [EXTRACTED]
+- [[deleteClosure()]] - `contains` [EXTRACTED]
+- [[deleteMealTime()]] - `contains` [EXTRACTED]
 - [[deleteRoom()]] - `contains` [EXTRACTED]
-- [[deleteSession()]] - `contains` [EXTRACTED]
+- [[deleteScheduleEntry()]] - `contains` [EXTRACTED]
 - [[deleteTask()]] - `contains` [EXTRACTED]
 - [[formatZl()]] - `contains` [EXTRACTED]
 - [[getAdminBookings()]] - `contains` [EXTRACTED]
+- [[getBookingMealTimes()]] - `contains` [EXTRACTED]
+- [[getBookingSchedule()]] - `contains` [EXTRACTED]
+- [[getClosures()]] - `contains` [EXTRACTED]
 - [[getDashboard()]] - `contains` [EXTRACTED]
+- [[getHousekeepingDay()]] - `contains` [EXTRACTED]
+- [[getHousekeepingRange()]] - `contains` [EXTRACTED]
+- [[getMealTimes()]] - `contains` [EXTRACTED]
 - [[getOccupancy()]] - `contains` [EXTRACTED]
 - [[getRooms()]] - `contains` [EXTRACTED]
-- [[getSessions()]] - `contains` [EXTRACTED]
+- [[getScheduleCalendar()]] - `contains` [EXTRACTED]
+- [[getScheduleDay()]] - `contains` [EXTRACTED]
+- [[getScheduleLocations()]] - `contains` [EXTRACTED]
 - [[getTasks()]] - `contains` [EXTRACTED]
 - [[groszeToZl()]] - `contains` [EXTRACTED]
-- [[publishSession()]] - `contains` [EXTRACTED]
+- [[mealKinds]] - `contains` [EXTRACTED]
+- [[resetBookingMealTime()]] - `contains` [EXTRACTED]
+- [[roomCleaningStatuses]] - `contains` [EXTRACTED]
+- [[setBookingMealTime()]] - `contains` [EXTRACTED]
+- [[setBookingStatus()]] - `contains` [EXTRACTED]
+- [[setRoomCleaning()]] - `contains` [EXTRACTED]
 - [[setTaskDone()]] - `contains` [EXTRACTED]
+- [[updateClosure()]] - `contains` [EXTRACTED]
+- [[updateDietaryNotes()]] - `contains` [EXTRACTED]
+- [[updateMealTime()]] - `contains` [EXTRACTED]
 - [[updateRoom()]] - `contains` [EXTRACTED]
-- [[updateSession()]] - `contains` [EXTRACTED]
+- [[updateScheduleEntry()]] - `contains` [EXTRACTED]
 - [[zlToGrosze()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Frontend_Pages
+#graphify/code #graphify/EXTRACTED #community/src_/_api_1

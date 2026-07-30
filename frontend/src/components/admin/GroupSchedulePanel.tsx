@@ -3,16 +3,20 @@ import { useTranslation } from "react-i18next";
 import { isAxiosError } from "axios";
 import {
   bookingStatuses,
+  checkScheduleConflicts,
   createScheduleEntry,
   deleteScheduleEntry,
   getBookingSchedule,
+  getScheduleLocations,
   setBookingStatus,
   updateDietaryNotes,
   updateScheduleEntry,
   type BookingSchedule,
   type BookingStatus,
+  type ScheduleConflict,
   type ScheduleEntry,
   type ScheduleEntryInput,
+  type ScheduleLocations,
 } from "../../api/admin";
 import { formatDate, toTimeInput } from "../../utils/dates";
 import { IconUtensils } from "../icons";
@@ -58,6 +62,16 @@ export default function GroupSchedulePanel({
   const [deleteTarget, setDeleteTarget] = useState<ScheduleEntry | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [notice, setNotice] = useState<string | null>(null);
+  const [locations, setLocations] = useState<ScheduleLocations>({
+    locations: [],
+    mealLocation: null,
+  });
+  /** A save held back because another group already has that place or sitting.
+   *  `run` is the save itself, so confirming lets exactly that write through. */
+  const [conflictPrompt, setConflictPrompt] = useState<{
+    details: string;
+    run: () => Promise<void>;
+  } | null>(null);
   // Held in a ref so an inline arrow from the parent cannot change the effects'
   // identity and re-trigger the fetch.
   const onLoadedRef = useRef(onLoaded);
@@ -99,6 +113,18 @@ export default function GroupSchedulePanel({
     };
   }, [bookingId, t]);
 
+  // Suggestions for the place field. Loaded once per group; a failure leaves the
+  // field a plain text input rather than blocking the panel.
+  useEffect(() => {
+    let cancelled = false;
+    void getScheduleLocations().then((data) => {
+      if (!cancelled) setLocations(data);
+    }, () => {});
+    return () => {
+      cancelled = true;
+    };
+  }, [bookingId]);
+
   function handleApiError(err: unknown) {
     if (isAxiosError(err) && err.response) {
       const detail = (err.response.data as { detail?: string } | undefined)?.detail;
@@ -123,6 +149,58 @@ export default function GroupSchedulePanel({
     } catch (err) {
       handleApiError(err);
     }
+  }
+
+  function describeConflict(conflict: ScheduleConflict, gap: number): string {
+    const when = `${toTimeInput(conflict.startTime)}–${toTimeInput(conflict.endTime)}`;
+    return conflict.reason === "Location"
+      ? t("schedule.conflict.location", {
+          location: conflict.location,
+          group: conflict.organizationName,
+          when,
+          title: conflict.title,
+        })
+      : t("schedule.conflict.meal", {
+          group: conflict.organizationName,
+          when,
+          title: conflict.title,
+          gap,
+        });
+  }
+
+  /**
+   * Warn before a save that would put this group where another one already is, or
+   * seat it while another is still eating — then save anyway if the admin confirms.
+   * Advisory by design: the server does not enforce it, and a failed check must never
+   * be what stops a legitimate save.
+   */
+  async function requestSave(input: ScheduleEntryInput, entry?: ScheduleEntry) {
+    const save = () => (entry ? handleUpdate(entry, input) : handleAdd(input));
+    setError(null);
+
+    try {
+      const { conflicts, mealGapMinutes } = await checkScheduleConflicts({
+        bookingId,
+        entryId: entry?.id,
+        kind: input.kind,
+        date: input.date,
+        startTime: input.startTime,
+        endTime: input.endTime,
+        location: input.location,
+      });
+
+      if (conflicts.length > 0) {
+        setConflictPrompt({
+          details: conflicts.map((c) => describeConflict(c, mealGapMinutes)).join(" "),
+          run: save,
+        });
+        return;
+      }
+    } catch {
+      // Nothing to warn about that we can prove — fall through to the save.
+    }
+
+    await save();
   }
 
   // The date travels inside `input` — ScheduleEntryForm sets it from the day
@@ -259,7 +337,10 @@ export default function GroupSchedulePanel({
                   <ScheduleEntryForm
                     date={day.date}
                     entry={entry}
-                    onSubmit={(input) => handleUpdate(entry, input)}
+                    groupHeadcount={schedule.headcount}
+                    locations={locations.locations}
+                    mealLocation={locations.mealLocation}
+                    onSubmit={(input) => requestSave(input, entry)}
                     onCancel={() => setEditing(null)}
                   />
                 </li>
@@ -285,6 +366,11 @@ export default function GroupSchedulePanel({
                     {entry.location && <span className="entry-location">{entry.location}</span>}
                     {entry.menu && <span className="entry-menu">{entry.menu}</span>}
                     {entry.prepNotes && <span className="entry-prep">{entry.prepNotes}</span>}
+                    {entry.participantCount != null && (
+                      <span className="entry-participants">
+                        {t("schedule.people", { count: entry.participantCount })}
+                      </span>
+                    )}
                   </span>
                   <span className="row-actions">
                     <button type="button" onClick={() => setEditing(entry)}>
@@ -306,7 +392,10 @@ export default function GroupSchedulePanel({
           {addingOn === day.date ? (
             <ScheduleEntryForm
               date={day.date}
-              onSubmit={handleAdd}
+              groupHeadcount={schedule.headcount}
+              locations={locations.locations}
+              mealLocation={locations.mealLocation}
+              onSubmit={(input) => requestSave(input)}
               onCancel={() => setAddingOn(null)}
             />
           ) : (
@@ -316,6 +405,21 @@ export default function GroupSchedulePanel({
           )}
         </section>
       ))}
+
+      {conflictPrompt && (
+        <ConfirmDialog
+          title={t("schedule.conflict.title")}
+          message={t("schedule.conflict.message", { details: conflictPrompt.details })}
+          confirmLabel={t("schedule.conflict.confirm")}
+          cancelLabel={t("schedule.conflict.cancel")}
+          onConfirm={() => {
+            const { run } = conflictPrompt;
+            setConflictPrompt(null);
+            void run();
+          }}
+          onCancel={() => setConflictPrompt(null)}
+        />
+      )}
 
       {deleteTarget && (
         <ConfirmDialog

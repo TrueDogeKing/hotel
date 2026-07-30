@@ -35,6 +35,7 @@ public static class DependencyInjection
         services.AddScoped<IRoomRepository, RoomRepository>();
         services.AddScoped<IBookingRepository, BookingRepository>();
         services.AddScoped<IRoomTaskRepository, RoomTaskRepository>();
+        services.AddScoped<IRoomCleaningRepository, RoomCleaningRepository>();
         services.AddScoped<IClosureRepository, ClosureRepository>();
         services.AddScoped<IMealTimeDefaultRepository, MealTimeDefaultRepository>();
         services.AddScoped<IScheduleEntryRepository, ScheduleEntryRepository>();

@@ -11,18 +11,6 @@ tags:
 
 # test:integration
 
-## Context
-
-_Source: `package.json` (defined near L20; showing L18–L22 of 22)._
-
-```json
-    "test": "dotnet test CampCenter.slnx",
-    "test:unit": "dotnet test tests/CampCenter.UnitTests/CampCenter.UnitTests.csproj",
-    "test:integration": "dotnet test tests/CampCenter.IntegrationTests/CampCenter.IntegrationTests.csproj"
-  }
-}
-```
-
 ## Connections
 - [[scripts_1]] - `contains` [EXTRACTED]
 

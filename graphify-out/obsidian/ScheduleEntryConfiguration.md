@@ -1,0 +1,20 @@
+---
+source_file: "src/CampCenter.Infrastructure/Persistence/Configurations/ScheduleEntryConfiguration.cs"
+type: "code"
+community: "Persistence / Configurations"
+location: "L7"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/Persistence_/_Configurations
+---
+
+# ScheduleEntryConfiguration
+
+## Connections
+- [[.Configure()_11]] - `method` [EXTRACTED]
+- [[IEntityTypeConfiguration]] - `implements` [EXTRACTED]
+- [[ScheduleEntry_1]] - `references` [EXTRACTED]
+- [[ScheduleEntryConfiguration.cs]] - `contains` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/Persistence_/_Configurations

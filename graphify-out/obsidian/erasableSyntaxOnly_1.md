@@ -11,20 +11,6 @@ tags:
 
 # erasableSyntaxOnly
 
-## Context
-
-_Source: `frontend/tsconfig.node.json` (defined near L20; showing L18–L24 of 24)._
-
-```json
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "erasableSyntaxOnly": true,
-    "noFallthroughCasesInSwitch": true
-  },
-  "include": ["vite.config.ts"]
-}
-```
-
 ## Connections
 - [[compilerOptions_1]] - `contains` [EXTRACTED]
 

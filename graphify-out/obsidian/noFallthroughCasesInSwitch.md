@@ -11,19 +11,6 @@ tags:
 
 # noFallthroughCasesInSwitch
 
-## Context
-
-_Source: `frontend/tsconfig.app.json` (defined near L22; showing L20–L25 of 25)._
-
-```json
-    "noUnusedParameters": true,
-    "erasableSyntaxOnly": true,
-    "noFallthroughCasesInSwitch": true
-  },
-  "include": ["src"]
-}
-```
-
 ## Connections
 - [[compilerOptions]] - `contains` [EXTRACTED]
 

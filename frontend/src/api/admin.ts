@@ -251,6 +251,83 @@ export async function deleteTask(id: string): Promise<void> {
   await api.delete(`/admin/tasks/${id}`);
 }
 
+// --- Housekeeping round (sprzątanie) ---
+
+/** Why a room is on the list: a group left it, a group is moving in, or both. */
+export type RoomCleaningKind = "Departure" | "Arrival" | "Turnaround";
+export type RoomCleaningStatus = "Pending" | "InProgress" | "Done";
+
+export const roomCleaningStatuses: RoomCleaningStatus[] = ["Pending", "InProgress", "Done"];
+
+export interface HousekeepingRoom {
+  roomId: string;
+  roomNumber: string;
+  capacity: number;
+  kind: RoomCleaningKind;
+  status: RoomCleaningStatus;
+  outgoingBookingId: string | null;
+  outgoingOrganizationName: string | null;
+  /** Beds to strip. */
+  outgoingPeopleCount: number | null;
+  incomingBookingId: string | null;
+  incomingOrganizationName: string | null;
+  /** Beds to make up. */
+  incomingPeopleCount: number | null;
+  note: string | null;
+  doneAt: string | null;
+  /** Open room tasks ("dostawić łóżko") — managed on the occupancy page. */
+  openTaskCount: number;
+  closed: boolean;
+  closureReason: string | null;
+  rowVersion: number;
+}
+
+export interface HousekeepingDay {
+  date: string;
+  /** Already ordered: turnarounds, then departures, then arrivals. */
+  rooms: HousekeepingRoom[];
+  turnaroundCount: number;
+  departureCount: number;
+  arrivalCount: number;
+  doneCount: number;
+}
+
+export interface HousekeepingDaySummary {
+  date: string;
+  roomCount: number;
+  doneCount: number;
+}
+
+export interface HousekeepingRange {
+  from: string;
+  to: string;
+  days: HousekeepingDaySummary[];
+}
+
+export async function getHousekeepingDay(date: string): Promise<HousekeepingDay> {
+  const { data } = await api.get<HousekeepingDay>(`/admin/housekeeping/day/${date}`);
+  return data;
+}
+
+export async function getHousekeepingRange(from: string, to: string): Promise<HousekeepingRange> {
+  const { data } = await api.get<HousekeepingRange>("/admin/housekeeping/range", {
+    params: { from, to },
+  });
+  return data;
+}
+
+export async function setRoomCleaning(
+  date: string,
+  roomId: string,
+  input: { status: RoomCleaningStatus; note: string | null },
+): Promise<HousekeepingRoom> {
+  const { data } = await api.put<HousekeepingRoom>(
+    `/admin/housekeeping/day/${date}/rooms/${roomId}`,
+    input,
+  );
+  return data;
+}
+
 // --- Dashboard ---
 
 export interface DashboardBooking {
@@ -298,6 +375,8 @@ export interface ScheduleEntry {
   menu: string | null;
   prepNotes: string | null;
   location: string | null;
+  /** Activity only. Null means "the whole group" (headcount above). */
+  participantCount: number | null;
   /** This entry's time was set for this one day; a bulk re-time will skip it. */
   timesCustomized: boolean;
   rowVersion: number;
@@ -379,6 +458,27 @@ export interface ScheduleEntryInput {
   menu: string | null;
   prepNotes: string | null;
   location: string | null;
+  participantCount: number | null;
+}
+
+/** Why a proposed entry clashes: the place is taken, or another group is eating. */
+export type ScheduleConflictReason = "Location" | "Meal";
+
+export interface ScheduleConflict {
+  entryId: string;
+  bookingId: string;
+  organizationName: string;
+  kind: ScheduleEntryKind;
+  title: string;
+  startTime: string;
+  endTime: string;
+  location: string | null;
+  reason: ScheduleConflictReason;
+}
+
+export interface ScheduleConflicts {
+  conflicts: ScheduleConflict[];
+  mealGapMinutes: number;
 }
 
 export async function getScheduleCalendar(start: string, end: string): Promise<ScheduleCalendar> {
@@ -413,29 +513,45 @@ export async function updateScheduleEntry(
   return data;
 }
 
+/** Advisory check run before saving an entry — never blocks the save itself.
+ *  `entryId` is passed when editing so an entry does not clash with itself. */
+export async function checkScheduleConflicts(input: {
+  bookingId: string;
+  entryId?: string;
+  kind: ScheduleEntryKind;
+  date: string;
+  startTime: string;
+  endTime: string;
+  location: string | null;
+}): Promise<ScheduleConflicts> {
+  const { data } = await api.post<ScheduleConflicts>(
+    "/admin/schedule/entries/check-conflicts",
+    input,
+  );
+  return data;
+}
+
+export interface ScheduleLocations {
+  locations: string[];
+  /** Where meals are served — pre-filled for a meal, so every sitting shares a place
+   *  and two groups eating at once show up as a place clash. */
+  mealLocation: string | null;
+}
+
+/** Places already used in the schedule — suggestions for the entry form, so the
+ *  same place is not typed two ways and silently stops clashing with itself. */
+export async function getScheduleLocations(): Promise<ScheduleLocations> {
+  const { data } = await api.get<ScheduleLocations>("/admin/schedule/locations");
+  return data;
+}
+
 export async function deleteScheduleEntry(id: string): Promise<void> {
   await api.delete(`/admin/schedule/entries/${id}`);
 }
 
-/** Idempotent — meals an admin deleted on purpose are not recreated. */
-export async function generateMealsForBooking(bookingId: string): Promise<{ created: number }> {
-  const { data } = await api.post<{ created: number }>(
-    `/admin/schedule/bookings/${bookingId}/generate-meals`,
-  );
-  return data;
-}
-
-export async function generateMissingMeals(
-  from: string,
-  to: string,
-): Promise<{ bookings: number; created: number }> {
-  const { data } = await api.post<{ bookings: number; created: number }>(
-    "/admin/schedule/generate-meals",
-    null,
-    { params: { from, to } },
-  );
-  return data;
-}
+// The two generate-meals endpoints still exist on the API, but nothing in the UI
+// calls them any more: a stay is seeded when the group is created, when its deposit
+// is confirmed, and whenever its meal times are applied.
 
 export async function updateDietaryNotes(
   bookingId: string,
@@ -454,8 +570,12 @@ export interface MealTimeDefault {
   id: string;
   mealKind: MealKind;
   label: string;
+  /** Start of the serving window — the first group's sitting. */
   startTime: string;
+  /** End of the window. Advisory: extra groups are seated past it. */
   endTime: string;
+  /** How long one group's sitting lasts. */
+  durationMinutes: number;
   sortOrder: number;
   isActive: boolean;
   rowVersion: number;
@@ -466,6 +586,7 @@ export interface MealTimeDefaultInput {
   label: string;
   startTime: string;
   endTime: string;
+  durationMinutes: number;
   sortOrder: number;
 }
 
@@ -495,6 +616,13 @@ export async function deleteMealTime(id: string): Promise<{ deleted: boolean }> 
 
 // --- Per-group meal times ---
 
+/** Another group's sitting in the same window. */
+export interface NeighbourSitting {
+  organizationName: string;
+  startTime: string;
+  endTime: string;
+}
+
 /** A center meal slot as it applies to one group. */
 export interface BookingMealTime {
   mealTimeDefaultId: string;
@@ -503,12 +631,21 @@ export interface BookingMealTime {
   sortOrder: number;
   defaultStartTime: string;
   defaultEndTime: string;
+  /** The window's sitting length. */
+  durationMinutes: number;
   startTime: string;
   endTime: string;
   isOverridden: boolean;
+  /** This group's sitting runs past the end of the serving window. */
+  exceedsWindow: boolean;
+  /** When the groups sharing the centre eat, so a clash can be flagged locally. */
+  neighbours: NeighbourSitting[];
   /** 0 when the group has no override row yet. */
   rowVersion: number;
 }
+
+/** Minutes the kitchen needs between two groups' sittings. */
+export const MEAL_GAP_MINUTES = 15;
 
 export interface ApplyBookingMealTimeResult {
   mealTime: BookingMealTime;
@@ -549,6 +686,20 @@ export async function resetBookingMealTime(
   const { data } = await api.delete<ApplyBookingMealTimeResult>(
     `/admin/schedule/bookings/${bookingId}/meal-times/${mealTimeDefaultId}`,
     { params: { applyToExisting } },
+  );
+  return data;
+}
+
+/**
+ * Drops this group's whole series of one meal — "no dinner for this group" — rather
+ * than deleting it day by day. Suppressed, so generation will not recreate them.
+ */
+export async function deleteBookingMeals(
+  bookingId: string,
+  mealTimeDefaultId: string,
+): Promise<{ deleted: number }> {
+  const { data } = await api.delete<{ deleted: number }>(
+    `/admin/schedule/bookings/${bookingId}/meal-times/${mealTimeDefaultId}/entries`,
   );
   return data;
 }

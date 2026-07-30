@@ -11,24 +11,6 @@ tags:
 
 # main.tsx
 
-## Context
-
-_Source: `frontend/src/main.tsx` (defined near L1; showing L1–L11 of 11)._
-
-```tsx
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
-import "./index.css";
-import "./i18n";
-import App from "./App.tsx";
-
-createRoot(document.getElementById("root")!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-);
-```
-
 ## Connections
 - [[App()]] - `imports` [EXTRACTED]
 - [[App.tsx]] - `imports_from` [EXTRACTED]

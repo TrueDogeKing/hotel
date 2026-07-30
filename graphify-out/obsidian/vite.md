@@ -11,18 +11,6 @@ tags:
 
 # vite
 
-## Context
-
-_Source: `frontend/package.json` (defined near L35; showing L33–L37 of 37)._
-
-```json
-    "typescript": "~6.0.2",
-    "typescript-eslint": "^8.59.2",
-    "vite": "^8.0.12"
-  }
-}
-```
-
 ## Connections
 - [[devDependencies]] - `contains` [EXTRACTED]
 - [[vite_1]] - `imports` [EXTRACTED]

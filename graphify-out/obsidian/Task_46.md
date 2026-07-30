@@ -1,18 +1,14 @@
 ---
 source_file: ""
 type: "code"
-community: "Integration Test Harness"
+community: "Integration Test Harness (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Integration_Test_Harness
+  - community/Integration_Test_Harness_2
 ---
 
 # Task
-
-## Context
-
-_Synthetic reference node from AST structural extraction. It has no source file of its own — it is an aggregate/type symbol defined entirely by the connections listed below._
 
 ## Connections
 - [[.Login_ExceedingRateLimit_ReturnsTooManyRequests()]] - `references` [EXTRACTED]
@@ -21,4 +17,4 @@ _Synthetic reference node from AST structural extraction. It has no source file 
 - [[.Login_WithValidAdminCredentials_ReturnsTokenAndSetsRefreshCookie()]] - `references` [EXTRACTED]
 - [[.Login_WithWrongPassword_ReturnsUnauthorized()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Integration_Test_Harness
+#graphify/code #graphify/EXTRACTED #community/Integration_Test_Harness_2

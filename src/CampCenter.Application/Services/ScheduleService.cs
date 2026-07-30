@@ -148,6 +148,90 @@ public class ScheduleService : IScheduleService
         );
     }
 
+    public async Task<ScheduleConflictsDto> CheckConflictsAsync(
+        CheckScheduleConflictsRequestDto request,
+        CancellationToken cancellationToken = default
+    )
+    {
+        var kind = ParseKind(request.Kind);
+        GuardTimes(request.StartTime, request.EndTime);
+        var location = Normalize(request.Location);
+
+        var start = Minutes(request.StartTime);
+        var end = Minutes(request.EndTime);
+        var conflicts = new List<ScheduleConflictDto>();
+
+        foreach (var other in await _entries.ListForDateAsync(request.Date, cancellationToken))
+        {
+            // Only other groups: two items of one group's own programme overlapping is
+            // that group's business, and the group panel already marks it.
+            if (other.Id == request.EntryId || other.BookingId == request.BookingId)
+            {
+                continue;
+            }
+
+            var samePlace =
+                location is not null
+                && other.Location is not null
+                && string.Equals(other.Location, location, StringComparison.OrdinalIgnoreCase);
+            var bothMeals =
+                kind == ScheduleEntryKind.Meal && other.Kind == ScheduleEntryKind.Meal;
+            if (!samePlace && !bothMeals)
+            {
+                continue;
+            }
+
+            // Sittings also need the changeover between them, so two meals that merely
+            // touch are still a clash. Everything else only has to not overlap.
+            var gap = bothMeals ? _settings.MealGapMinutes : 0;
+            if (start >= Minutes(other.EndTime) + gap || Minutes(other.StartTime) >= end + gap)
+            {
+                continue;
+            }
+
+            conflicts.Add(
+                new ScheduleConflictDto(
+                    other.Id,
+                    other.BookingId,
+                    other.Booking?.OrganizationName ?? string.Empty,
+                    other.Kind.ToString(),
+                    other.Title,
+                    other.StartTime,
+                    other.EndTime,
+                    other.Location,
+                    // The place is the more concrete complaint, so it wins when both hold.
+                    samePlace ? "Location" : "Meal"
+                )
+            );
+        }
+
+        return new ScheduleConflictsDto(
+            [.. conflicts.OrderBy(c => c.StartTime).ThenBy(c => c.OrganizationName)],
+            _settings.MealGapMinutes
+        );
+    }
+
+    public async Task<ScheduleLocationsDto> GetLocationsAsync(
+        CancellationToken cancellationToken = default
+    )
+    {
+        var used = await _entries.ListLocationsAsync(cancellationToken);
+
+        // Offered even before a single meal has been generated, so the canteen is
+        // spelled the same way from the very first entry.
+        var mealLocation = Normalize(_settings.MealLocation);
+        if (
+            mealLocation is not null
+            && !used.Contains(mealLocation, StringComparer.OrdinalIgnoreCase)
+        )
+        {
+            used.Add(mealLocation);
+            used.Sort(StringComparer.CurrentCulture);
+        }
+
+        return new ScheduleLocationsDto(used, mealLocation);
+    }
+
     // --- Writes -----------------------------------------------------------
 
     public async Task<ScheduleEntryDto> CreateEntryAsync(
@@ -176,6 +260,7 @@ public class ScheduleService : IScheduleService
             Menu = kind == ScheduleEntryKind.Meal ? Normalize(request.Menu) : null,
             PrepNotes = Normalize(request.PrepNotes),
             Location = Normalize(request.Location),
+            ParticipantCount = request.ParticipantCount,
             CreatedAt = DateTime.UtcNow,
         };
 
@@ -226,6 +311,7 @@ public class ScheduleService : IScheduleService
         entry.Menu = kind == ScheduleEntryKind.Meal ? Normalize(request.Menu) : null;
         entry.PrepNotes = Normalize(request.PrepNotes);
         entry.Location = Normalize(request.Location);
+        entry.ParticipantCount = request.ParticipantCount;
         entry.UpdatedAt = DateTime.UtcNow;
 
         await _entries.SaveChangesAsync(cancellationToken);
@@ -260,16 +346,68 @@ public class ScheduleService : IScheduleService
         CancellationToken cancellationToken = default
     )
     {
-        _ = await GetBookingOrThrowAsync(bookingId, cancellationToken);
+        var booking = await GetBookingOrThrowAsync(bookingId, cancellationToken);
         var defaults = await _mealTimes.GetActiveAsync(cancellationToken);
         var overrides = await _bookingMealTimes.ListForBookingAsync(bookingId, cancellationToken);
         var byDefaultId = overrides.ToDictionary(o => o.MealTimeDefaultId);
 
+        // The groups this one shares the centre with, and when they eat — the panel
+        // needs them to warn before a change seats two groups on top of each other.
+        var neighbours = (
+            await _bookings.ListLivePresentInAsync(
+                booking.StartDate,
+                booking.EndDate,
+                cancellationToken
+            )
+        )
+            .Where(b => b.Id != bookingId)
+            .ToList();
+        var neighbourTimes =
+            neighbours.Count == 0
+                ? []
+                : await _bookingMealTimes.ListForBookingsAsync(
+                    [.. neighbours.Select(b => b.Id)],
+                    cancellationToken
+                );
+        // Groups that dropped a meal entirely are not seated for it, so they are
+        // neither shown as neighbours nor counted as a clash.
+        var optedOut =
+            neighbours.Count == 0
+                ? []
+                : (
+                    await _entries.ListFullySuppressedSlotsAsync(
+                        [.. neighbours.Select(b => b.Id)],
+                        cancellationToken
+                    )
+                ).ToHashSet();
+
         return
         [
             .. defaults.Select(slot =>
-                ToDto(slot, byDefaultId.GetValueOrDefault(slot.Id))
-            ),
+            {
+                var bySlot = neighbourTimes
+                    .Where(t => t.MealTimeDefaultId == slot.Id)
+                    .ToDictionary(t => t.BookingId);
+                var sittings = neighbours
+                    .Where(n => !optedOut.Contains((n.Id, slot.Id)))
+                    .Select(n =>
+                        bySlot.TryGetValue(n.Id, out var own)
+                            ? new NeighbourSittingDto(
+                                n.OrganizationName,
+                                own.StartTime,
+                                own.EndTime
+                            )
+                            : new NeighbourSittingDto(
+                                n.OrganizationName,
+                                slot.StartTime,
+                                slot.EndTime
+                            )
+                    )
+                    .OrderBy(s => s.StartTime)
+                    .ToList();
+
+                return ToDto(slot, byDefaultId.GetValueOrDefault(slot.Id), sittings);
+            }),
         ];
     }
 
@@ -382,6 +520,37 @@ public class ScheduleService : IScheduleService
         return new ApplyBookingMealTimeResultDto(ToDto(slot, null), updated, skipped, created);
     }
 
+    public async Task<int> DeleteBookingMealsAsync(
+        Guid bookingId,
+        Guid mealTimeDefaultId,
+        CancellationToken cancellationToken = default
+    )
+    {
+        _ = await GetBookingOrThrowAsync(bookingId, cancellationToken);
+
+        // ListForBookingAsync already excludes suppressed rows, so this is exactly
+        // the meals still on the group's programme for this slot.
+        var entries = await _entries.ListForBookingAsync(bookingId, cancellationToken);
+        var fromSlot = entries.Where(e => e.MealTimeDefaultId == mealTimeDefaultId).ToList();
+        if (fromSlot.Count == 0)
+        {
+            return 0;
+        }
+
+        // Suppressed rather than removed, exactly as deleting one day's meal does:
+        // the (day, slot) pair stays occupied so generation will not bring the whole
+        // series straight back.
+        var now = DateTime.UtcNow;
+        foreach (var entry in fromSlot)
+        {
+            entry.IsSuppressed = true;
+            entry.UpdatedAt = now;
+        }
+
+        await _entries.SaveChangesAsync(cancellationToken);
+        return fromSlot.Count;
+    }
+
     /// Moves every meal this group has from one slot to new times in one go.
     /// Suppressed entries stay suppressed, and entries an admin moved for a single
     /// day are left untouched — that exception is the whole point of the flag.
@@ -427,6 +596,116 @@ public class ScheduleService : IScheduleService
         return (updated, skipped);
     }
 
+    /// Gives a group its own sitting in every meal window: the first one none of the
+    /// groups it shares the centre with has taken. Two groups therefore never eat at
+    /// once, and each is followed by the changeover gap.
+    ///
+    /// Only fills slots the group has no time for yet — a time an admin set by hand,
+    /// and a group already seated, are both left exactly as they are.
+    private async Task AssignMealTimesAsync(
+        Booking booking,
+        IReadOnlyList<MealTimeDefault> defaults,
+        CancellationToken cancellationToken
+    )
+    {
+        var own = await _bookingMealTimes.ListForBookingAsync(booking.Id, cancellationToken);
+        var unseated = defaults.Where(d => own.All(o => o.MealTimeDefaultId != d.Id)).ToList();
+        if (unseated.Count == 0)
+        {
+            return;
+        }
+
+        var neighbours = (
+            await _bookings.ListLivePresentInAsync(
+                booking.StartDate,
+                booking.EndDate,
+                cancellationToken
+            )
+        )
+            .Where(b => b.Id != booking.Id)
+            .ToList();
+        var neighbourTimes =
+            neighbours.Count == 0
+                ? []
+                : await _bookingMealTimes.ListForBookingsAsync(
+                    [.. neighbours.Select(b => b.Id)],
+                    cancellationToken
+                );
+        // A group whose meals for a slot were all deleted does not eat it, so it
+        // must stop holding that sitting — otherwise it leaves a hole the groups
+        // behind it are pushed past for no reason.
+        var optedOut =
+            neighbours.Count == 0
+                ? []
+                : (
+                    await _entries.ListFullySuppressedSlotsAsync(
+                        [.. neighbours.Select(b => b.Id)],
+                        cancellationToken
+                    )
+                ).ToHashSet();
+        // When a group eats is decided by the meals it actually has, not by the
+        // current window — the window may have been edited since they were generated.
+        var spans =
+            neighbours.Count == 0
+                ? []
+                : (
+                    await _entries.ListVisibleSlotSpansAsync(
+                        [.. neighbours.Select(b => b.Id)],
+                        cancellationToken
+                    )
+                ).ToDictionary(s => (s.BookingId, s.MealTimeDefaultId), s => (s.Start, s.End));
+
+        var now = DateTime.UtcNow;
+        foreach (var slot in unseated)
+        {
+            var bySlot = neighbourTimes
+                .Where(t => t.MealTimeDefaultId == slot.Id)
+                .ToDictionary(t => t.BookingId);
+
+            // Best available truth about when each neighbour eats, in order: the
+            // sitting it was given, else the meals it actually has on the programme,
+            // else the window's first sitting — where it would be seated.
+            //
+            // Reserving the *whole* window for an unseated group would block everyone
+            // behind it for hours: a 07:00–10:00 window would push the next group to
+            // 10:15 instead of seating it right behind.
+            var firstSitting = (
+                slot.StartTime,
+                slot.StartTime.AddMinutes(slot.DurationMinutes)
+            );
+            var taken = neighbours
+                .Where(n => !optedOut.Contains((n.Id, slot.Id)))
+                .Select(n =>
+                    bySlot.TryGetValue(n.Id, out var seated) ? (seated.StartTime, seated.EndTime)
+                    : spans.TryGetValue((n.Id, slot.Id), out var span) ? span
+                    : firstSitting
+                )
+                .ToList();
+
+            var (start, end) = MealGenerationPlanner.NextFreeSitting(
+                slot.StartTime,
+                taken,
+                slot.DurationMinutes,
+                _settings.MealGapMinutes
+            );
+
+            await _bookingMealTimes.AddAsync(
+                new BookingMealTime
+                {
+                    Id = Guid.NewGuid(),
+                    BookingId = booking.Id,
+                    MealTimeDefaultId = slot.Id,
+                    StartTime = start,
+                    EndTime = end,
+                    CreatedAt = now,
+                },
+                cancellationToken
+            );
+        }
+
+        await _bookingMealTimes.SaveChangesAsync(cancellationToken);
+    }
+
     // --- Meal generation --------------------------------------------------
 
     public async Task<int> GenerateMealsForBookingAsync(
@@ -446,6 +725,10 @@ public class ScheduleService : IScheduleService
             return 0;
         }
 
+        // Seat the group before generating, so the entries land on its own sitting
+        // rather than everyone eating at once.
+        await AssignMealTimesAsync(booking, defaults, cancellationToken);
+
         // Generate at the group's own times where it has them, so the travel-day
         // cutoffs are judged on the times this group actually eats.
         var overrides = await _bookingMealTimes.ListForBookingAsync(bookingId, cancellationToken);
@@ -459,6 +742,9 @@ public class ScheduleService : IScheduleService
 
         var now = DateTime.UtcNow;
         var created = new List<ScheduleEntry>();
+        // Meals are served in one place, so generation says where. That is what lets
+        // the same-place check catch two groups seated at once.
+        var mealLocation = Normalize(_settings.MealLocation);
 
         foreach (
             var (date, slot) in MealGenerationPlanner.Plan(
@@ -487,6 +773,7 @@ public class ScheduleService : IScheduleService
                     StartTime = slot.Start,
                     EndTime = slot.End,
                     Title = slot.Label,
+                    Location = mealLocation,
                     CreatedAt = now,
                 }
             );
@@ -534,6 +821,11 @@ public class ScheduleService : IScheduleService
     }
 
     // --- Guards and mapping ----------------------------------------------
+
+    /// Minutes from midnight. Clash arithmetic adds the changeover gap to a time, and
+    /// TimeOnly.AddMinutes wraps past midnight — which would turn "22:30 + 15 min" into
+    /// an early morning and hide the clash.
+    private static int Minutes(TimeOnly time) => time.Hour * 60 + time.Minute;
 
     private static void GuardTimes(TimeOnly start, TimeOnly end)
     {
@@ -615,19 +907,30 @@ public class ScheduleService : IScheduleService
             b.Status.ToString()
         );
 
-    private static BookingMealTimeDto ToDto(MealTimeDefault slot, BookingMealTime? own) =>
-        new(
+    private static BookingMealTimeDto ToDto(
+        MealTimeDefault slot,
+        BookingMealTime? own,
+        List<NeighbourSittingDto>? neighbours = null
+    )
+    {
+        var start = own?.StartTime ?? slot.StartTime;
+        var end = own?.EndTime ?? slot.EndTime;
+        return new BookingMealTimeDto(
             slot.Id,
             slot.MealKind.ToString(),
             slot.Label,
             slot.SortOrder,
             slot.StartTime,
             slot.EndTime,
-            own?.StartTime ?? slot.StartTime,
-            own?.EndTime ?? slot.EndTime,
+            slot.DurationMinutes,
+            start,
+            end,
             own is not null,
+            end > slot.EndTime,
+            neighbours ?? [],
             own?.RowVersion ?? 0
         );
+    }
 
     private static ScheduleEntryDto ToDto(ScheduleEntry e) => ToDto(e, e.Booking);
 
@@ -646,6 +949,7 @@ public class ScheduleService : IScheduleService
             e.Menu,
             e.PrepNotes,
             e.Location,
+            e.ParticipantCount,
             e.TimesCustomized,
             e.RowVersion
         );

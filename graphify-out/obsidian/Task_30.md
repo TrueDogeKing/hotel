@@ -1,34 +1,32 @@
 ---
 source_file: ""
 type: "code"
-community: "Admin Booking & Notifications"
+community: "Admin Booking & Notifications (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Booking__Notifications
+  - community/Admin_Booking__Notifications_2
 ---
 
 # Task
 
-## Context
-
-_Synthetic reference node from AST structural extraction. It has no source file of its own — it is an aggregate/type symbol defined entirely by the connections listed below._
-
 ## Connections
 - [[.AddAssignmentAsync()]] - `references` [EXTRACTED]
-- [[.AddAsync()]] - `references` [EXTRACTED]
+- [[.AddAsync()_9]] - `references` [EXTRACTED]
 - [[.AddPaymentAsync()]] - `references` [EXTRACTED]
 - [[.GetBookedRoomIdsInRangeAsync()]] - `references` [EXTRACTED]
-- [[.GetByIdAsync()_1]] - `references` [EXTRACTED]
-- [[.GetByTokenHashAsync()]] - `references` [EXTRACTED]
+- [[.GetByIdAsync()_8]] - `references` [EXTRACTED]
+- [[.GetByTokenHashAsync()_2]] - `references` [EXTRACTED]
 - [[.GetCompletedPaymentKindsAsync()]] - `references` [EXTRACTED]
 - [[.GetConfirmedEndedAsync()]] - `references` [EXTRACTED]
 - [[.GetExpiredPendingAsync()]] - `references` [EXTRACTED]
 - [[.GetPaymentByP24SessionIdAsync()]] - `references` [EXTRACTED]
 - [[.GetPaymentsAsync()]] - `references` [EXTRACTED]
-- [[.ListAsync()_4]] - `references` [EXTRACTED]
+- [[.ListAsync()_6]] - `references` [EXTRACTED]
+- [[.ListLiveChangingOverAsync()]] - `references` [EXTRACTED]
 - [[.ListLiveInRangeAsync()]] - `references` [EXTRACTED]
+- [[.ListLivePresentInAsync()]] - `references` [EXTRACTED]
 - [[.ListUpcomingAsync()]] - `references` [EXTRACTED]
-- [[.SaveChangesAsync()_1]] - `references` [EXTRACTED]
+- [[.SaveChangesAsync()_11]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications
+#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_2

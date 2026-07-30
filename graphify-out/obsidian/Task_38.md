@@ -1,22 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "Admin User Repository"
+community: "Admin User & Token Config"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_User_Repository
+  - community/Admin_User__Token_Config
 ---
 
 # Task
 
-## Context
-
-_Synthetic reference node from AST structural extraction. It has no source file of its own — it is an aggregate/type symbol defined entirely by the connections listed below._
-
 ## Connections
-- [[.GetByIdAsync()_5]] - `references` [EXTRACTED]
+- [[.GetByIdAsync()_4]] - `references` [EXTRACTED]
 - [[.GetByLoginAsync()_1]] - `references` [EXTRACTED]
-- [[.SaveChangesAsync()_6]] - `references` [EXTRACTED]
+- [[.SaveChangesAsync()_5]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_User_Repository
+#graphify/code #graphify/EXTRACTED #community/Admin_User__Token_Config

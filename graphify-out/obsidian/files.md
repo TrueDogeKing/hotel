@@ -11,17 +11,6 @@ tags:
 
 # files
 
-## Context
-
-_Source: `frontend/tsconfig.json` (defined near L2; showing L1–L4 of 4)._
-
-```json
-{
-  "files": [],
-  "references": [{ "path": "./tsconfig.app.json" }, { "path": "./tsconfig.node.json" }]
-}
-```
-
 ## Connections
 - [[tsconfig.json]] - `contains` [EXTRACTED]
 

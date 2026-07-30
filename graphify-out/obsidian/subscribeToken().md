@@ -11,19 +11,6 @@ tags:
 
 # subscribeToken()
 
-## Context
-
-_Source: `frontend/src/api/tokenStore.ts` (defined near L23; showing L21–L26 of 26)._
-
-```typescript
-
-// Subscribe to token changes (used by the auth state hook). Returns an unsubscribe function.
-export function subscribeToken(listener: Listener): () => void {
-  listeners.add(listener);
-  return () => listeners.delete(listener);
-}
-```
-
 ## Connections
 - [[AuthContext.tsx]] - `imports` [EXTRACTED]
 - [[AuthProvider()]] - `indirect_call` [INFERRED]

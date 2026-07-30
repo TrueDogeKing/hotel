@@ -23,9 +23,3 @@ members: 6
 TABLE source_file, type FROM #community/Claims_Principal_Extensions
 SORT file.name ASC
 ```
-
-## Connections to other communities
-- 1 edge to [[_COMMUNITY_Application Namespaces & DTOs]]
-
-## Top bridge nodes
-- [[CampCenter.Api.Extensions]] - degree 2, connects to 1 community

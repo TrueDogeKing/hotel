@@ -164,7 +164,8 @@
       "rooms": "Pokoje",
       "bookings": "Rezerwacje",
       "tasks": "Zadania",
-      "schedule": "Harmonogram"
+      "schedule": "Harmonogram",
+      "housekeeping": "Sprzątanie"
     }
   },
   "dashboard": {
@@ -217,6 +218,48 @@
     "empty": "Brak zadań.",
     "room": "Pokój",
     "delete": "Usuń"
+  },
+  "housekeeping": {
+    "title": "Sprzątanie pokoi",
+    "intro": "Pokoje do ogarnięcia w danym dniu: te, z których grupa właśnie wyjechała (sprawdzić i posprzątać), te, do których dziś wchodzi nowa grupa, oraz te, które trzeba zdążyć zrobić między jedną grupą a drugą.",
+    "previousDay": "‹ Poprzedni dzień",
+    "nextDay": "Następny dzień ›",
+    "today": "Dziś",
+    "stripNone": "brak",
+    "stripCount": "{{done}}/{{total}}",
+    "summary": "Zrobione: {{done}} z {{total}} pokoi.",
+    "outstanding": "zostało {{count}}",
+    "noRooms": "Tego dnia żadna grupa nie przyjeżdża ani nie wyjeżdża — nie ma pokoi do sprzątania.",
+    "beds": "{{count}} łóżek",
+    "openTasks": "zadania: {{count}}",
+    "openTasksHint": "Ten pokój ma {{count}} otwartych zadań (np. dostawka). Szczegóły w Obłożeniu.",
+    "closed": "zablokowany",
+    "outgoing": "Wyjeżdża: {{group}} ({{count}} os.)",
+    "incoming": "Wprowadza się: {{group}} ({{count}} os.)",
+    "advanceHint": "Kliknij, aby zmienić na: {{next}}",
+    "note": "Uwaga",
+    "addNote": "+ Uwaga",
+    "editNote": "Uwaga",
+    "notePlaceholder": "np. cieknie kaloryfer, brakuje ręczników",
+    "saveNote": "Zapisz",
+    "cancelNote": "Anuluj",
+    "loadError": "Nie udało się wczytać listy sprzątania.",
+    "saveError": "Nie udało się zapisać zmiany.",
+    "kinds": {
+      "Turnaround": "Zmiana grupy",
+      "Departure": "Po wyjeździe",
+      "Arrival": "Przed przyjazdem"
+    },
+    "kindHints": {
+      "Turnaround": "Jedna grupa wyjeżdża, druga wchodzi tego samego dnia — te pokoje robimy pierwsze.",
+      "Departure": "Grupa wyjechała: sprawdzić stan pokoju i posprzątać.",
+      "Arrival": "Pokój był wolny: przygotować przed przyjazdem grupy."
+    },
+    "statuses": {
+      "Pending": "Do zrobienia",
+      "InProgress": "W trakcie",
+      "Done": "Gotowe"
+    }
   },
   "adminBookings": {
     "title": "Rezerwacje",
@@ -321,10 +364,6 @@
     "dietarySaved": "Zapisano uwagi.",
     "status": "Status grupy",
     "statusChanged": "Zmieniono status na: {{status}}.",
-    "generateMeals": "Uzupełnij posiłki",
-    "mealsGenerated": "Dodano posiłków: {{count}}.",
-    "backfill": "Uzupełnij posiłki (widoczny zakres)",
-    "backfillDone": "Sprawdzono grup: {{bookings}}, dodano posiłków: {{created}}.",
     "mealTimesLink": "Domyślne pory posiłków",
     "deleteTitle": "Usunąć punkt programu?",
     "deleteMessage": "Czy na pewno usunąć „{{title}}”?",
@@ -351,6 +390,9 @@
       "prepNotes": "Do przygotowania",
       "prepNotesPlaceholder": "np. 2 porcje bezglutenowe",
       "location": "Miejsce",
+      "locationPlaceholder": "np. Stołówka, Sala A, Boisko",
+      "participantCount": "Liczba uczestników",
+      "participantCountWarning": "Grupa liczy {{count}} os. — liczba uczestników jest wyższa niż liczebność grupy.",
       "save": "Zapisz",
       "add": "Dodaj",
       "cancel": "Anuluj"
@@ -367,7 +409,30 @@
       "applied": "Przestawiono posiłków: {{updated}}.",
       "appliedWithExceptions": "Przestawiono posiłków: {{updated}}. Pominięto wyjątków (dni zmienione pojedynczo): {{skipped}}.",
       "alsoSeeded": "Uzupełniono brakujących posiłków: {{count}}.",
-      "loadError": "Nie udało się wczytać pór posiłków grupy."
+      "loadError": "Nie udało się wczytać pór posiłków grupy.",
+      "exceeds": "poza oknem",
+      "exceedsHint": "Ta grupa je po zamknięciu okna wydawania (do {{end}}) — jest więcej grup, niż okno pomieści.",
+      "deleteAll": "Usuń wszystkie",
+      "deleteAllHint": "Usuń wszystkie posiłki \"{{label}}\" tej grupy",
+      "deleteAllTitle": "Usunąć wszystkie: {{label}}?",
+      "deleteAllMessage": "Wszystkie posiłki \"{{label}}\" tej grupy zostaną usunięte z całego turnusu i nie zostaną odtworzone.",
+      "deleteAllConfirm": "Tak, usuń wszystkie",
+      "deletedAll": "Usunięto posiłków (\"{{label}}\"): {{count}}.",
+      "clashTitle": "Za mało czasu między grupami",
+      "clashMessage": "Ta pora nachodzi na: {{groups}}. Między grupami powinno być {{gap}} min przerwy. Zapisać mimo to?",
+      "clashConfirm": "Zapisz mimo to",
+      "clashCancel": "Wróć"
+    },
+    "conflict": {
+      "title": "Kolizja z inną grupą",
+      "message": "{{details}} Zapisać mimo to?",
+      "location": "Miejsce „{{location}}” jest już zajęte: {{group}}, {{when}} ({{title}}).",
+      "meal": "W tym czasie je już inna grupa: {{group}}, {{when}} ({{title}}) — między grupami powinno być {{gap}} min przerwy.",
+      "confirm": "Zapisz mimo to",
+      "cancel": "Wróć",
+      "badge": "kolizja",
+      "badgeLocation": "To samo miejsce zajmuje w tym czasie inna grupa.",
+      "badgeMeal": "W tym czasie je więcej niż jedna grupa."
     },
     "customTime": "wyjątek",
     "customTimeHint": "Godzina ustawiona tylko na ten dzień — zmiana pór grupy jej nie ruszy."
@@ -393,6 +458,9 @@
     "deactivate": "Dezaktywuj",
     "delete": "Usuń",
     "empty": "Brak zdefiniowanych pór posiłków.",
-    "genericError": "Operacja się nie powiodła. Spróbuj ponownie."
+    "genericError": "Operacja się nie powiodła. Spróbuj ponownie.",
+    "duration": "Czas trwania (min)",
+    "durationHint": "Ile trwa posiłek jednej grupy. Kolejne grupy siadają co ten czas plus 15 min przerwy.",
+    "minutes": "{{count}} min"
   }
 }

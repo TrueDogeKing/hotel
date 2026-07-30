@@ -30,6 +30,7 @@ public class MealTimeService : IMealTimeService
             Label = request.Label.Trim(),
             StartTime = request.StartTime,
             EndTime = request.EndTime,
+            DurationMinutes = request.DurationMinutes,
             SortOrder = request.SortOrder,
             IsActive = true,
             CreatedAt = DateTime.UtcNow,
@@ -62,6 +63,7 @@ public class MealTimeService : IMealTimeService
         mealTime.Label = request.Label.Trim();
         mealTime.StartTime = request.StartTime;
         mealTime.EndTime = request.EndTime;
+        mealTime.DurationMinutes = request.DurationMinutes;
         mealTime.SortOrder = request.SortOrder;
         mealTime.IsActive = request.IsActive;
 
@@ -117,6 +119,7 @@ public class MealTimeService : IMealTimeService
             m.Label,
             m.StartTime,
             m.EndTime,
+            m.DurationMinutes,
             m.SortOrder,
             m.IsActive,
             m.RowVersion

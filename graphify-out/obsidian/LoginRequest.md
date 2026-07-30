@@ -11,25 +11,6 @@ tags:
 
 # LoginRequest
 
-## Context
-
-_Source: `frontend/src/api/types.ts` (defined near L3; showing L1–L12 of 12)._
-
-```typescript
-// Shared API response/request shapes mirroring the backend DTOs.
-
-export interface LoginRequest {
-  login: string;
-  password: string;
-}
-
-export interface LoginResponse {
-  token: string;
-  expiresAtUtc: string;
-  login: string;
-}
-```
-
 ## Connections
 - [[AuthContext.tsx]] - `imports` [EXTRACTED]
 - [[AuthContextValue]] - `references` [EXTRACTED]

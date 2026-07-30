@@ -1,33 +1,35 @@
 ---
 type: community
-cohesion: 0.12
-members: 25
+cohesion: 0.09
+members: 27
 ---
 
 # Docker & Project Docs
 
-**Cohesion:** 0.12 - loosely connected
-**Members:** 25 nodes
+**Cohesion:** 0.09 - loosely connected
+**Members:** 27 nodes
 
 ## Members
-- [[Booking Flow (reserve turnus, deposit confirms)]] - concept - README.md
-- [[Bun (application task runner  frontend package manager)]] - concept - CLAUDE.md
+- [[Admin Panel (Rooms, Closures, Occupancy, Housekeeping)]] - concept - README.md
+- [[Build Environment (.NET SDK 10)]] - rationale - CLAUDE.md
 - [[CI Backend Job (build + tests)]] - concept - .github/workflows/ci.yml
 - [[CI Frontend Job (lint + typecheck + build)]] - concept - .github/workflows/ci.yml
 - [[CI Workflow]] - concept - .github/workflows/ci.yml
 - [[CampCenter Domain Model]] - concept - CLAUDE.md
-- [[CampCenter Project Instructions]] - document - CLAUDE.md
-- [[CampCenter README]] - document - README.md
-- [[Clean Architecture (DomainApplicationInfrastructureApi)]] - concept - CLAUDE.md
+- [[Closure Model Replaces Camp Sessions]] - rationale - CLAUDE.md
 - [[Dev Docker Compose Stack]] - concept - docker/docker-compose.dev.yml
-- [[Dev Quickstart]] - concept - README.md
+- [[Dev Quick Start]] - concept - README.md
+- [[GiST Exclusion Constraint Against Double Booking]] - rationale - CLAUDE.md
+- [[Guest Booking Flow]] - concept - README.md
 - [[Infra Docker Compose Stack]] - concept - docker/docker-compose.infra.yml
-- [[JWT + Refresh Token Auth (admin only)]] - concept - CLAUDE.md
-- [[Mise (infrastructure task runner)]] - concept - CLAUDE.md
+- [[Knowledge Graph  Obsidian Vault Workflow]] - rationale - CLAUDE.md
+- [[P24 Go-Live Checklist]] - concept - README.md
+- [[Production Deployment (Caddy + Docker Compose)]] - concept - README.md
 - [[Production Docker Compose Stack]] - concept - docker/docker-compose.prod.yml
-- [[Przelewy24 Payments Integration]] - concept - README.md
-- [[Przelewy24 Webhook Security (SHA-384 verify)]] - rationale - CLAUDE.md
+- [[Przelewy24 Payments and Webhook]] - concept - README.md
+- [[Security Requirements]] - concept - CLAUDE.md
 - [[Task Runner Rules (Mise vs Bun)]] - rationale - CLAUDE.md
+- [[Technology Stack]] - concept - README.md
 - [[campcenter-api (dev service)]] - concept - docker/docker-compose.dev.yml
 - [[campcenter-api (prod service)]] - concept - docker/docker-compose.prod.yml
 - [[campcenter-caddy (reverse proxy  TLS)]] - concept - docker/docker-compose.prod.yml

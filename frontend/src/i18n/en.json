@@ -164,7 +164,8 @@
       "rooms": "Rooms",
       "bookings": "Bookings",
       "tasks": "Tasks",
-      "schedule": "Schedule"
+      "schedule": "Schedule",
+      "housekeeping": "Housekeeping"
     }
   },
   "dashboard": {
@@ -217,6 +218,48 @@
     "empty": "No tasks.",
     "room": "Room",
     "delete": "Delete"
+  },
+  "housekeeping": {
+    "title": "Room cleaning",
+    "intro": "The rooms to deal with on a given day: the ones a group has just left (check and clean), the ones the next group moves into today, and the ones that have to be turned around between the two.",
+    "previousDay": "‹ Previous day",
+    "nextDay": "Next day ›",
+    "today": "Today",
+    "stripNone": "none",
+    "stripCount": "{{done}}/{{total}}",
+    "summary": "Done: {{done}} of {{total}} rooms.",
+    "outstanding": "{{count}} left",
+    "noRooms": "No group arrives or leaves on this day — nothing to clean.",
+    "beds": "{{count}} beds",
+    "openTasks": "tasks: {{count}}",
+    "openTasksHint": "This room has {{count}} open tasks (e.g. an extra bed). See Occupancy for details.",
+    "closed": "blocked",
+    "outgoing": "Leaving: {{group}} ({{count}} people)",
+    "incoming": "Moving in: {{group}} ({{count}} people)",
+    "advanceHint": "Click to change to: {{next}}",
+    "note": "Note",
+    "addNote": "+ Note",
+    "editNote": "Note",
+    "notePlaceholder": "e.g. radiator leaking, towels missing",
+    "saveNote": "Save",
+    "cancelNote": "Cancel",
+    "loadError": "Could not load the cleaning list.",
+    "saveError": "Could not save the change.",
+    "kinds": {
+      "Turnaround": "Group changeover",
+      "Departure": "After departure",
+      "Arrival": "Before arrival"
+    },
+    "kindHints": {
+      "Turnaround": "One group out and the next one in on the same day — these rooms come first.",
+      "Departure": "The group has left: check the room over and clean it.",
+      "Arrival": "The room was free: have it ready before the group arrives."
+    },
+    "statuses": {
+      "Pending": "To do",
+      "InProgress": "In progress",
+      "Done": "Done"
+    }
   },
   "adminBookings": {
     "title": "Bookings",
@@ -321,10 +364,6 @@
     "dietarySaved": "Notes saved.",
     "status": "Group status",
     "statusChanged": "Status changed to {{status}}.",
-    "generateMeals": "Generate missing meals",
-    "mealsGenerated": "Meals added: {{count}}.",
-    "backfill": "Generate missing meals (visible range)",
-    "backfillDone": "Groups checked: {{bookings}}, meals added: {{created}}.",
     "mealTimesLink": "Default meal times",
     "deleteTitle": "Delete programme item?",
     "deleteMessage": "Delete “{{title}}”?",
@@ -351,6 +390,9 @@
       "prepNotes": "To prepare",
       "prepNotesPlaceholder": "e.g. 2 gluten-free portions",
       "location": "Location",
+      "locationPlaceholder": "e.g. Canteen, Room A, Sports field",
+      "participantCount": "Number of participants",
+      "participantCountWarning": "The group has {{count}} people — the participant count is higher than the group's size.",
       "save": "Save",
       "add": "Add",
       "cancel": "Cancel"
@@ -367,7 +409,30 @@
       "applied": "Meals moved: {{updated}}.",
       "appliedWithExceptions": "Meals moved: {{updated}}. Exceptions kept (days changed individually): {{skipped}}.",
       "alsoSeeded": "Missing meals filled in: {{count}}.",
-      "loadError": "Could not load the group's meal times."
+      "loadError": "Could not load the group's meal times.",
+      "exceeds": "past window",
+      "exceedsHint": "This group eats after the serving window closes ({{end}}) — more groups than the window seats.",
+      "deleteAll": "Delete all",
+      "deleteAllHint": "Delete every \"{{label}}\" for this group",
+      "deleteAllTitle": "Delete all {{label}}?",
+      "deleteAllMessage": "Every \"{{label}}\" for this group will be removed for the whole stay and will not be regenerated.",
+      "deleteAllConfirm": "Yes, delete all",
+      "deletedAll": "Removed {{count}} × \"{{label}}\".",
+      "clashTitle": "Not enough time between groups",
+      "clashMessage": "This time clashes with: {{groups}}. Groups should have {{gap}} min between them. Save anyway?",
+      "clashConfirm": "Save anyway",
+      "clashCancel": "Go back"
+    },
+    "conflict": {
+      "title": "Clash with another group",
+      "message": "{{details}} Save anyway?",
+      "location": "\"{{location}}\" is already taken: {{group}}, {{when}} ({{title}}).",
+      "meal": "Another group is already eating then: {{group}}, {{when}} ({{title}}) — groups should have {{gap}} min between them.",
+      "confirm": "Save anyway",
+      "cancel": "Go back",
+      "badge": "clash",
+      "badgeLocation": "Another group has the same place at this time.",
+      "badgeMeal": "More than one group eats at this time."
     },
     "customTime": "exception",
     "customTimeHint": "Time set for this day only — re-timing the group's meals will skip it."
@@ -393,6 +458,9 @@
     "deactivate": "Deactivate",
     "delete": "Delete",
     "empty": "No meal slots defined yet.",
-    "genericError": "The operation failed. Please try again."
+    "genericError": "The operation failed. Please try again.",
+    "duration": "Sitting length (min)",
+    "durationHint": "How long one group eats. The next group is seated after this plus a 15 min changeover.",
+    "minutes": "{{count}} min"
   }
 }

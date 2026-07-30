@@ -1,0 +1,68 @@
+---
+type: community
+cohesion: 0.13
+members: 35
+---
+
+# CampCenter.UnitTests / Services (1)
+
+**Cohesion:** 0.13 - loosely connected
+**Members:** 35 nodes
+
+## Members
+- [[.ClashesWith()]] - code - src/CampCenter.Application/Services/MealGenerationPlanner.cs
+- [[.Default()]] - code - tests/CampCenter.UnitTests/Services/MealGenerationPlannerTests.cs
+- [[.EffectiveSlots()]] - code - src/CampCenter.Application/Services/MealGenerationPlanner.cs
+- [[.EffectiveSlots_AppliesTheGroupsOwnTimes_LeavingOtherSlotsAlone()]] - code - tests/CampCenter.UnitTests/Services/MealGenerationPlannerTests.cs
+- [[.EffectiveSlots_WithoutOverrides_UsesCenterTimes()]] - code - tests/CampCenter.UnitTests/Services/MealGenerationPlannerTests.cs
+- [[.FromDefault()]] - code - src/CampCenter.Application/Services/MealGenerationPlanner.cs
+- [[.FromOverride()]] - code - src/CampCenter.Application/Services/MealGenerationPlanner.cs
+- [[.NextFreeSitting()]] - code - src/CampCenter.Application/Services/MealGenerationPlanner.cs
+- [[.Plan()]] - code - src/CampCenter.Application/Services/MealGenerationPlanner.cs
+- [[.Plan_CoversDepartureDay_NotJustNightsStayed()]] - code - tests/CampCenter.UnitTests/Services/MealGenerationPlannerTests.cs
+- [[.Plan_FiveNightStay_GivesDinnerOnArrival_AllMiddleDays_BreakfastOnDeparture()]] - code - tests/CampCenter.UnitTests/Services/MealGenerationPlannerTests.cs
+- [[.Plan_NoActiveDefaults_YieldsNothing()]] - code - tests/CampCenter.UnitTests/Services/MealGenerationPlannerTests.cs
+- [[.Plan_OneNightStay_HasNoMiddleDays()]] - code - tests/CampCenter.UnitTests/Services/MealGenerationPlannerTests.cs
+- [[.Plan_OverrideCanRemoveTheArrivalDayMeal()]] - code - tests/CampCenter.UnitTests/Services/MealGenerationPlannerTests.cs
+- [[.Plan_SlotStraddlingBothCutoffs_IsSkippedOnArrivalAndDeparture()]] - code - tests/CampCenter.UnitTests/Services/MealGenerationPlannerTests.cs
+- [[.Plan_UsesOverriddenTimes_ForTheTravelDayCutoffs()]] - code - tests/CampCenter.UnitTests/Services/MealGenerationPlannerTests.cs
+- [[.SeededDefaults()]] - code - tests/CampCenter.UnitTests/Services/MealGenerationPlannerTests.cs
+- [[.SeededSlots()]] - code - tests/CampCenter.UnitTests/Services/MealGenerationPlannerTests.cs
+- [[Date]] - code
+- [[DateOnly_22]] - code
+- [[End]] - code
+- [[Fact_13]] - code
+- [[IEnumerable_1]] - code
+- [[IReadOnlyCollection_2]] - code
+- [[IReadOnlyList]] - code
+- [[List_28]] - code
+- [[List_40]] - code
+- [[MealGenerationPlanner]] - code - src/CampCenter.Application/Services/MealGenerationPlanner.cs
+- [[MealGenerationPlanner.cs]] - code - src/CampCenter.Application/Services/MealGenerationPlanner.cs
+- [[MealGenerationPlannerTests]] - code - tests/CampCenter.UnitTests/Services/MealGenerationPlannerTests.cs
+- [[MealSlot]] - code - src/CampCenter.Application/Services/MealGenerationPlanner.cs
+- [[Slot]] - code
+- [[Start]] - code
+- [[TimeOnly_1]] - code
+- [[TimeOnly_9]] - code
+
+## Live Query (requires Dataview plugin)
+
+```dataview
+TABLE source_file, type FROM #community/CampCenterUnitTests_/_Services_1
+SORT file.name ASC
+```
+
+## Connections to other communities
+- 6 edges to [[_COMMUNITY_CampCenter.Application  Services (3)]]
+- 3 edges to [[_COMMUNITY_CampCenter.Domain  Repositories (2)]]
+- 2 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (5)]]
+- 2 edges to [[_COMMUNITY_CampCenter.Application  Services (2)]]
+- 1 edge to [[_COMMUNITY_Domain & Infra Namespaces]]
+
+## Top bridge nodes
+- [[.EffectiveSlots()]] - degree 16, connects to 3 communities
+- [[MealGenerationPlanner.cs]] - degree 4, connects to 2 communities
+- [[.FromOverride()]] - degree 4, connects to 2 communities
+- [[.Plan()]] - degree 16, connects to 1 community
+- [[MealGenerationPlannerTests]] - degree 14, connects to 1 community

@@ -1,0 +1,18 @@
+---
+source_file: "src/CampCenter.Infrastructure/Persistence/Migrations/20260728105506_PerGroupMealTimes.Designer.cs"
+type: "code"
+community: "Persistence / Migrations (11)"
+location: "L14"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/Persistence_/_Migrations_11
+---
+
+# PerGroupMealTimes
+
+## Connections
+- [[.BuildTargetModel()_5]] - `method` [EXTRACTED]
+- [[20260728105506_PerGroupMealTimes.Designer.cs]] - `contains` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/Persistence_/_Migrations_11

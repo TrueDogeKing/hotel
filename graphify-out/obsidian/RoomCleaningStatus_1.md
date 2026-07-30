@@ -1,0 +1,19 @@
+---
+source_file: "src/CampCenter.Domain/Entities/RoomCleaning.cs"
+type: "code"
+community: "CampCenter.Domain / Entities"
+location: "L17"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/CampCenterDomain_/_Entities
+---
+
+# RoomCleaningStatus
+
+## Connections
+- [[.ParseStatus()_1]] - `references` [EXTRACTED]
+- [[RoomCleaning]] - `references` [EXTRACTED]
+- [[RoomCleaning.cs]] - `contains` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/CampCenterDomain_/_Entities

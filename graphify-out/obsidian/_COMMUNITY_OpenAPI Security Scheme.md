@@ -27,9 +27,3 @@ members: 10
 TABLE source_file, type FROM #community/OpenAPI_Security_Scheme
 SORT file.name ASC
 ```
-
-## Connections to other communities
-- 1 edge to [[_COMMUNITY_Rate Limiting & Startup]]
-
-## Top bridge nodes
-- [[CampCenter.Api.OpenApi]] - degree 2, connects to 1 community

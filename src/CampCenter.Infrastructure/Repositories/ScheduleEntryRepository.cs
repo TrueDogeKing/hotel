@@ -65,6 +65,59 @@ public class ScheduleEntryRepository : IScheduleEntryRepository
         return [.. rows.Select(r => (r.Date, r.MealTimeDefaultId))];
     }
 
+    public async Task<List<(Guid BookingId, Guid MealTimeDefaultId)>> ListFullySuppressedSlotsAsync(
+        IReadOnlyCollection<Guid> bookingIds,
+        CancellationToken cancellationToken = default
+    )
+    {
+        var rows = await _db
+            .ScheduleEntries.Where(e =>
+                bookingIds.Contains(e.BookingId) && e.MealTimeDefaultId != null
+            )
+            .GroupBy(e => new { e.BookingId, MealTimeDefaultId = e.MealTimeDefaultId!.Value })
+            .Select(g => new
+            {
+                g.Key.BookingId,
+                g.Key.MealTimeDefaultId,
+                Visible = g.Count(e => !e.IsSuppressed),
+            })
+            // Generated at some point, and nothing left on the programme.
+            .Where(x => x.Visible == 0)
+            .ToListAsync(cancellationToken);
+
+        return [.. rows.Select(r => (r.BookingId, r.MealTimeDefaultId))];
+    }
+
+    public async Task<List<(Guid BookingId, Guid MealTimeDefaultId, TimeOnly Start, TimeOnly End)>> ListVisibleSlotSpansAsync(
+        IReadOnlyCollection<Guid> bookingIds,
+        CancellationToken cancellationToken = default
+    )
+    {
+        var rows = await _db
+            .ScheduleEntries.Where(e =>
+                bookingIds.Contains(e.BookingId) && e.MealTimeDefaultId != null && !e.IsSuppressed
+            )
+            .GroupBy(e => new { e.BookingId, MealTimeDefaultId = e.MealTimeDefaultId!.Value })
+            .Select(g => new
+            {
+                g.Key.BookingId,
+                g.Key.MealTimeDefaultId,
+                Start = g.Min(e => e.StartTime),
+                End = g.Max(e => e.EndTime),
+            })
+            .ToListAsync(cancellationToken);
+
+        return [.. rows.Select(r => (r.BookingId, r.MealTimeDefaultId, r.Start, r.End))];
+    }
+
+    public Task<List<string>> ListLocationsAsync(CancellationToken cancellationToken = default) =>
+        _db
+            .ScheduleEntries.Where(e => e.Location != null && e.Location != "" && !e.IsSuppressed)
+            .Select(e => e.Location!)
+            .Distinct()
+            .OrderBy(location => location)
+            .ToListAsync(cancellationToken);
+
     public async Task<List<(DateOnly Date, ScheduleEntryKind Kind, int Count)>> CountByDateAndKindAsync(
         DateOnly start,
         DateOnly end,

@@ -11,24 +11,6 @@ tags:
 
 # LoginRequestValidator
 
-## Context
-
-_Source: `src/CampCenter.Application/Validators/LoginRequestValidator.cs` (defined near L6; showing L4–L14 of 14)._
-
-```csharp
-namespace CampCenter.Application.Validators;
-
-public class LoginRequestValidator : AbstractValidator<LoginRequestDto>
-{
-    public LoginRequestValidator()
-    {
-        RuleFor(x => x.Login).NotEmpty().WithMessage("Login is required.");
-
-        RuleFor(x => x.Password).NotEmpty().WithMessage("Password is required.");
-    }
-}
-```
-
 ## Connections
 - [[AbstractValidator]] - `inherits` [EXTRACTED]
 - [[LoginRequestDto]] - `references` [EXTRACTED]

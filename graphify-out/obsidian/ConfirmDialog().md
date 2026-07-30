@@ -1,68 +1,17 @@
 ---
 source_file: "frontend/src/components/ConfirmDialog.tsx"
 type: "code"
-community: "Public Booking Frontend"
+community: "Public Booking Frontend (2)"
 location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public_Booking_Frontend
+  - community/Public_Booking_Frontend_2
 ---
 
 # ConfirmDialog()
 
-## Context
-
-_Source: `frontend/src/components/ConfirmDialog.tsx` (defined near L15; showing L13–L54 of 54)._
-
-```tsx
-
-// Reusable modal confirmation dialog. Closes on overlay click or Escape.
-export default function ConfirmDialog({
-  title,
-  message,
-  confirmLabel = "Confirm",
-  cancelLabel = "Cancel",
-  busy = false,
-  onConfirm,
-  onCancel,
-}: Props) {
-  useEffect(() => {
-    function onKeyDown(event: KeyboardEvent) {
-      if (event.key === "Escape" && !busy) onCancel();
-    }
-    document.addEventListener("keydown", onKeyDown);
-    return () => document.removeEventListener("keydown", onKeyDown);
-  }, [busy, onCancel]);
-
-  return (
-    <div className="modal-overlay" role="presentation" onClick={() => !busy && onCancel()}>
-      <div
-        className="modal"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="confirm-title"
-        onClick={(e) => e.stopPropagation()}
-      >
-        <h2 id="confirm-title">{title}</h2>
-        <p>{message}</p>
-        <div className="modal-actions">
-          <button type="button" className="secondary" onClick={onCancel} disabled={busy}>
-            {cancelLabel}
-          </button>
-          <button type="button" className="danger" onClick={onConfirm} disabled={busy}>
-            {busy ? "Working…" : confirmLabel}
-          </button>
-        </div>
-      </div>
-    </div>
-  );
-}
-```
-
 ## Connections
-- [[AdminBookingsPage.tsx]] - `imports` [EXTRACTED]
-- [[BookingManagePage.tsx]] - `imports` [EXTRACTED]
 - [[ConfirmDialog.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public_Booking_Frontend
+#graphify/code #graphify/EXTRACTED #community/Public_Booking_Frontend_2

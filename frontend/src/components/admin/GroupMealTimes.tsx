@@ -2,12 +2,40 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { isAxiosError } from "axios";
 import {
+  deleteBookingMeals,
   getBookingMealTimes,
   resetBookingMealTime,
   setBookingMealTime,
+  MEAL_GAP_MINUTES,
   type BookingMealTime,
+  type NeighbourSitting,
 } from "../../api/admin";
 import { fromTimeInput, toTimeInput } from "../../utils/dates";
+import ConfirmDialog from "../ConfirmDialog";
+
+function minutesOf(time: string): number {
+  const [hours, mins] = time.split(":");
+  return Number(hours) * 60 + Number(mins);
+}
+
+/**
+ * Groups sharing the centre that this proposed sitting would crowd. Two sittings
+ * clash when either starts before the other has finished *and* had its changeover —
+ * the kitchen cannot seat a second group while the first is still at the tables.
+ */
+function clashingNeighbours(
+  start: string,
+  end: string,
+  neighbours: NeighbourSitting[],
+): NeighbourSitting[] {
+  const from = minutesOf(start);
+  const to = minutesOf(end);
+  return neighbours.filter((n) => {
+    const nFrom = minutesOf(n.startTime);
+    const nTo = minutesOf(n.endTime);
+    return from < nTo + MEAL_GAP_MINUTES && nFrom < to + MEAL_GAP_MINUTES;
+  });
+}
 
 interface Props {
   bookingId: string;
@@ -27,6 +55,12 @@ export default function GroupMealTimes({ bookingId, onChanged }: Props) {
   const [busyId, setBusyId] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [notice, setNotice] = useState<string | null>(null);
+  /** A save held back because it would crowd another group; confirming lets it through. */
+  const [clashPrompt, setClashPrompt] = useState<{
+    mealTime: BookingMealTime;
+    groups: string;
+  } | null>(null);
+  const [deleteTarget, setDeleteTarget] = useState<BookingMealTime | null>(null);
 
   function applyToState(list: BookingMealTime[]) {
     setMealTimes(list);
@@ -75,6 +109,26 @@ export default function GroupMealTimes({ bookingId, onChanged }: Props) {
     );
   }
 
+  /** Warn first when the new time would crowd another group — then save anyway if
+   *  the admin confirms. The server never blocks this; the check is advisory. */
+  function requestSave(mealTime: BookingMealTime) {
+    const draft = drafts[mealTime.mealTimeDefaultId];
+    if (!draft) return;
+
+    const clashes = clashingNeighbours(draft.start, draft.end, mealTime.neighbours);
+    if (clashes.length > 0) {
+      setClashPrompt({
+        mealTime,
+        groups: clashes
+          .map((c) => `${c.organizationName} (${toTimeInput(c.startTime)}–${toTimeInput(c.endTime)})`)
+          .join(", "),
+      });
+      return;
+    }
+
+    void save(mealTime);
+  }
+
   async function save(mealTime: BookingMealTime) {
     const draft = drafts[mealTime.mealTimeDefaultId];
     if (!draft) return;
@@ -114,6 +168,22 @@ export default function GroupMealTimes({ bookingId, onChanged }: Props) {
     }
   }
 
+  async function removeAll(mealTime: BookingMealTime) {
+    setError(null);
+    setNotice(null);
+    setBusyId(mealTime.mealTimeDefaultId);
+    try {
+      const { deleted } = await deleteBookingMeals(bookingId, mealTime.mealTimeDefaultId);
+      setNotice(t("schedule.mealTimes.deletedAll", { count: deleted, label: mealTime.label }));
+      onChanged();
+    } catch (err) {
+      handleApiError(err);
+    } finally {
+      setBusyId(null);
+      setDeleteTarget(null);
+    }
+  }
+
   if (!mealTimes) {
     return null;
   }
@@ -142,6 +212,17 @@ export default function GroupMealTimes({ bookingId, onChanged }: Props) {
                 {mealTime.isOverridden && (
                   <em className="gmt-badge" title={t("schedule.mealTimes.overriddenHint")}>
                     {t("schedule.mealTimes.overridden")}
+                  </em>
+                )}
+                {/* Seated past the window's close — more groups than it holds. */}
+                {mealTime.exceedsWindow && (
+                  <em
+                    className="gmt-badge gmt-badge-warn"
+                    title={t("schedule.mealTimes.exceedsHint", {
+                      end: toTimeInput(mealTime.defaultEndTime),
+                    })}
+                  >
+                    {t("schedule.mealTimes.exceeds")}
                   </em>
                 )}
               </span>
@@ -181,9 +262,17 @@ export default function GroupMealTimes({ bookingId, onChanged }: Props) {
                 <button
                   type="button"
                   disabled={!changed || busyId === mealTime.mealTimeDefaultId}
-                  onClick={() => void save(mealTime)}
+                  onClick={() => requestSave(mealTime)}
                 >
                   {t("schedule.mealTimes.apply")}
+                </button>
+                <button
+                  type="button"
+                  disabled={busyId === mealTime.mealTimeDefaultId}
+                  onClick={() => setDeleteTarget(mealTime)}
+                  title={t("schedule.mealTimes.deleteAllHint", { label: mealTime.label })}
+                >
+                  {t("schedule.mealTimes.deleteAll")}
                 </button>
                 {mealTime.isOverridden && (
                   <button
@@ -203,6 +292,35 @@ export default function GroupMealTimes({ bookingId, onChanged }: Props) {
           );
         })}
       </ul>
+
+      {clashPrompt && (
+        <ConfirmDialog
+          title={t("schedule.mealTimes.clashTitle")}
+          message={t("schedule.mealTimes.clashMessage", {
+            groups: clashPrompt.groups,
+            gap: MEAL_GAP_MINUTES,
+          })}
+          confirmLabel={t("schedule.mealTimes.clashConfirm")}
+          cancelLabel={t("schedule.mealTimes.clashCancel")}
+          onConfirm={() => {
+            const { mealTime } = clashPrompt;
+            setClashPrompt(null);
+            void save(mealTime);
+          }}
+          onCancel={() => setClashPrompt(null)}
+        />
+      )}
+
+      {deleteTarget && (
+        <ConfirmDialog
+          title={t("schedule.mealTimes.deleteAllTitle", { label: deleteTarget.label })}
+          message={t("schedule.mealTimes.deleteAllMessage", { label: deleteTarget.label })}
+          confirmLabel={t("schedule.mealTimes.deleteAllConfirm")}
+          cancelLabel={t("schedule.mealTimes.clashCancel")}
+          onConfirm={() => void removeAll(deleteTarget)}
+          onCancel={() => setDeleteTarget(null)}
+        />
+      )}
     </section>
   );
 }

@@ -10,15 +10,11 @@ tags:
 
 # Guid
 
-## Context
-
-_Synthetic reference node from AST structural extraction. It has no source file of its own — it is an aggregate/type symbol defined entirely by the connections listed below._
-
 ## Connections
 - [[.CancelAsync()]] - `references` [EXTRACTED]
 - [[.GetAsync()]] - `references` [EXTRACTED]
-- [[.GetOccupancyAsync()]] - `references` [EXTRACTED]
-- [[.ListAsync()]] - `references` [EXTRACTED]
 - [[.ReassignAsync()]] - `references` [EXTRACTED]
+- [[.SetStatusAsync()_2]] - `references` [EXTRACTED]
+- [[.UpdateDietaryNotesAsync()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Admin_Bookings_Controller__DTOs

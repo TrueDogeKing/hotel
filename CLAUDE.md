@@ -38,6 +38,48 @@ obsługi). Płatności online przez Przelewy24 (zaliczka + dopłata).
 * Payment — Deposit/Final, Pending/Completed/Failed, pola P24; częściowy
   unikalny indeks (BookingId, Kind) WHERE Completed
 
+## Knowledge graph / Obsidian vault (obowiązkowe)
+
+Projekt ma zbudowany graf wiedzy w `graphify-out/` (graf: `graph.json`,
+raport: `GRAPH_REPORT.md`, vault Obsidian: `graphify-out/obsidian/` —
+~1000 notatek, jedna na plik/symbol, z frontmatterem `source_file`,
+`community` i linkami `[[…]]`).
+
+### Eksploracja przez vault (oszczędność tokenów)
+
+Zanim zaczniesz czytać kod, orientuj się w projekcie przez graf — nie przez
+rekurencyjne `Glob`/`Grep`/czytanie całych plików:
+
+1. Pytanie o architekturę, przepływ danych, „gdzie jest X", „co wywołuje Y" →
+   najpierw `graphify query "<pytanie>"` (uruchamiane z `D:\hotel`).
+   Dla śledzenia konkretnej ścieżki: `graphify query "<pytanie>" --dfs`,
+   a przy ograniczaniu odpowiedzi `--budget <tokeny>`.
+2. Relacja między dwoma pojęciami: `graphify path "BookingService" "Payment"`.
+   Wyjaśnienie jednego węzła: `graphify explain "BookingRoomAssignment"`.
+   Analiza wpływu przed zmianą: `graphify affected "IBookingRepository"`.
+3. Przegląd całości: `graphify-out/GRAPH_REPORT.md` (społeczności, god nodes).
+4. Notatki w `graphify-out/obsidian/` czytaj punktowo (`Read`/`Grep` po tym
+   katalogu) — zawierają fragment kodu + kontekst, więc są tańsze niż pełne
+   pliki źródłowe.
+5. Dopiero gdy graf wskaże konkretne `source_file`, otwieraj prawdziwy plik —
+   i tylko te potrzebne fragmenty. Graf jest punktem wyjścia, nie źródłem
+   prawdy: przed twierdzeniem o zachowaniu kodu zweryfikuj w pliku źródłowym.
+
+### Aktualizacja po każdej zmianie (obowiązkowe)
+
+Po każdej zmianie w kodzie lub dokumentacji — zanim uznasz zadanie za
+zakończone — zaktualizuj graf i vault:
+
+```bash
+graphify update . && graphify export obsidian
+```
+
+`update` przelicza wyłącznie pliki nowe/zmienione (wg `manifest.json`) i nie
+wymaga LLM, więc jest tanie; `export obsidian` odświeża notatki vaulta w
+`graphify-out/obsidian/`. Dotyczy to również zmian w `CLAUDE.md` i `README.md`. Jeśli
+aktualizacja się nie powiedzie, zgłoś to użytkownikowi zamiast przemilczeć —
+nieaktualny vault jest gorszy niż jego brak.
+
 ## Wymagania bezpieczeństwa
 
 * Hasła bcrypt; JWT + rotacja refresh tokenów z detekcją ponownego użycia

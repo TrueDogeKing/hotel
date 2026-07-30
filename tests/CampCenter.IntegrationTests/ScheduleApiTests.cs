@@ -42,7 +42,8 @@ public class ScheduleApiTests : IntegrationTestBase
                 "Podwieczorek testowy",
                 new TimeOnly(16, 0),
                 new TimeOnly(16, 30),
-                9
+                DurationMinutes: 30,
+                SortOrder: 9
             )
         );
         Assert.Equal(HttpStatusCode.Created, create.StatusCode);
@@ -55,9 +56,10 @@ public class ScheduleApiTests : IntegrationTestBase
                 "Podwieczorek",
                 new TimeOnly(16, 0),
                 new TimeOnly(16, 45),
-                9,
-                true,
-                slot.RowVersion
+                DurationMinutes: 45,
+                SortOrder: 9,
+                IsActive: true,
+                RowVersion: slot.RowVersion
             )
         );
         Assert.Equal(HttpStatusCode.OK, update.StatusCode);
@@ -70,9 +72,10 @@ public class ScheduleApiTests : IntegrationTestBase
                 "Podwieczorek 2",
                 new TimeOnly(16, 0),
                 new TimeOnly(16, 45),
-                9,
-                true,
-                slot.RowVersion
+                DurationMinutes: 45,
+                SortOrder: 9,
+                IsActive: true,
+                RowVersion: slot.RowVersion
             )
         );
         Assert.Equal(HttpStatusCode.Conflict, stale.StatusCode);
@@ -102,7 +105,8 @@ public class ScheduleApiTests : IntegrationTestBase
                 "Spływ kajakowy",
                 null,
                 "Kamizelki dla 12 osób",
-                "Przystań"
+                "Przystań",
+                12
             )
         );
         Assert.Equal(HttpStatusCode.Created, create.StatusCode);
@@ -122,6 +126,7 @@ public class ScheduleApiTests : IntegrationTestBase
                 null,
                 "Kamizelki dla 12 osób",
                 "Przystań",
+                15,
                 entry.RowVersion
             )
         );
@@ -136,6 +141,7 @@ public class ScheduleApiTests : IntegrationTestBase
                 new TimeOnly(11, 0),
                 new TimeOnly(13, 0),
                 "Spływ kajakowy",
+                null,
                 null,
                 null,
                 null,
@@ -194,6 +200,7 @@ public class ScheduleApiTests : IntegrationTestBase
                 "Wehikuł czasu",
                 null,
                 null,
+                null,
                 null
             )
         );
@@ -217,6 +224,7 @@ public class ScheduleApiTests : IntegrationTestBase
                 new TimeOnly(19, 0),
                 "Kolacja",
                 "Kanapki",
+                null,
                 null,
                 null
             )
@@ -395,7 +403,8 @@ public class ScheduleApiTests : IntegrationTestBase
                 "Kolacja",
                 "Naleśniki z serem",
                 "SEKRETNA NOTATKA KUCHNI",
-                "Stołówka"
+                "Stołówka",
+                null
             )
         );
 
@@ -500,6 +509,7 @@ public class ScheduleApiTests : IntegrationTestBase
                 exception.Menu,
                 exception.PrepNotes,
                 exception.Location,
+                exception.ParticipantCount,
                 exception.RowVersion
             )
         );
@@ -700,6 +710,7 @@ public class ScheduleApiTests : IntegrationTestBase
             new TimeOnly(9, 0),
             new TimeOnly(10, 0),
             title,
+            null,
             null,
             null,
             null

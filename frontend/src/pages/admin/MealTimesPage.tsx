@@ -19,6 +19,7 @@ interface FormState {
   label: string;
   startTime: string;
   endTime: string;
+  durationMinutes: string;
   sortOrder: string;
 }
 
@@ -27,6 +28,7 @@ const emptyForm: FormState = {
   label: "",
   startTime: "08:00",
   endTime: "09:00",
+  durationMinutes: "30",
   sortOrder: "1",
 };
 
@@ -74,6 +76,7 @@ export default function MealTimesPage() {
       label: form.label.trim(),
       startTime: fromTimeInput(form.startTime),
       endTime: fromTimeInput(form.endTime),
+      durationMinutes: Number(form.durationMinutes) || 0,
       sortOrder: Number(form.sortOrder) || 0,
     };
     try {
@@ -101,6 +104,7 @@ export default function MealTimesPage() {
       label: mealTime.label,
       startTime: toTimeInput(mealTime.startTime),
       endTime: toTimeInput(mealTime.endTime),
+      durationMinutes: String(mealTime.durationMinutes),
       sortOrder: String(mealTime.sortOrder),
     });
   }
@@ -113,6 +117,7 @@ export default function MealTimesPage() {
         label: mealTime.label,
         startTime: mealTime.startTime,
         endTime: mealTime.endTime,
+        durationMinutes: mealTime.durationMinutes,
         sortOrder: mealTime.sortOrder,
         isActive: !mealTime.isActive,
         rowVersion: mealTime.rowVersion,
@@ -182,6 +187,18 @@ export default function MealTimesPage() {
             required
           />
         </label>
+        <label title={t("mealTimes.durationHint")}>
+          {t("mealTimes.duration")}
+          <input
+            type="number"
+            min={5}
+            max={480}
+            step={5}
+            value={form.durationMinutes}
+            onChange={(e) => setForm({ ...form, durationMinutes: e.target.value })}
+            required
+          />
+        </label>
         <label>
           {t("mealTimes.sortOrder")}
           <input
@@ -213,6 +230,7 @@ export default function MealTimesPage() {
             <th>{t("mealTimes.label")}</th>
             <th>{t("mealTimes.mealKind")}</th>
             <th>{t("mealTimes.time")}</th>
+            <th>{t("mealTimes.duration")}</th>
             <th>{t("mealTimes.status")}</th>
             <th />
           </tr>
@@ -225,6 +243,7 @@ export default function MealTimesPage() {
               <td>
                 {toTimeInput(mealTime.startTime)}–{toTimeInput(mealTime.endTime)}
               </td>
+              <td>{t("mealTimes.minutes", { count: mealTime.durationMinutes })}</td>
               <td>{mealTime.isActive ? t("mealTimes.active") : t("mealTimes.inactive")}</td>
               <td className="row-actions">
                 <button type="button" onClick={() => startEdit(mealTime)}>

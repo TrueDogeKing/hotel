@@ -1,74 +1,33 @@
 ---
-source_file: "frontend/src/api/admin.ts"
+source_file: "src/CampCenter.Domain/Entities/RoomTask.cs"
 type: "code"
-community: "Admin Tasks & Occupancy Pages"
-location: "L193"
+community: "Room Task Management (1)"
+location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Tasks__Occupancy_Pages
+  - community/Room_Task_Management_1
 ---
 
 # RoomTask
 
-## Context
-
-_Source: `frontend/src/api/admin.ts` (defined near L193; showing L191–L238 of 254)._
-
-```typescript
-// --- Housekeeping tasks ---
-
-export interface RoomTask {
-  id: string;
-  roomId: string;
-  roomNumber: string;
-  campSessionId: string | null;
-  bookingId: string | null;
-  text: string;
-  status: "Open" | "Done";
-  createdAt: string;
-  doneAt: string | null;
-}
-
-export async function getTasks(filters: {
-  status?: string;
-  sessionId?: string;
-}): Promise<RoomTask[]> {
-  const { data } = await api.get<RoomTask[]>("/admin/tasks", { params: filters });
-  return data;
-}
-
-export async function createTask(input: {
-  roomId: string;
-  text: string;
-  campSessionId: string | null;
-  bookingId: string | null;
-}): Promise<RoomTask> {
-  const { data } = await api.post<RoomTask>("/admin/tasks", input);
-  return data;
-}
-
-export async function setTaskDone(id: string, done: boolean): Promise<RoomTask> {
-  const { data } = await api.post<RoomTask>(`/admin/tasks/${id}/${done ? "done" : "reopen"}`);
-  return data;
-}
-
-export async function deleteTask(id: string): Promise<void> {
-  await api.delete(`/admin/tasks/${id}`);
-}
-
-// --- Dashboard ---
-
-export interface DashboardSession {
-  id: string;
-  name: string;
-  startDate: string;
-  endDate: string;
-```
-
 ## Connections
-- [[SessionOccupancyPage.tsx]] - `imports` [EXTRACTED]
-- [[TasksPage.tsx]] - `imports` [EXTRACTED]
-- [[admin.ts]] - `contains` [EXTRACTED]
+- [[.AddAsync()_3]] - `references` [EXTRACTED]
+- [[.AddAsync()_7]] - `references` [EXTRACTED]
+- [[.Configure()_6]] - `references` [EXTRACTED]
+- [[.GetByIdAsync()_3]] - `references` [EXTRACTED]
+- [[.GetByIdAsync()_7]] - `references` [EXTRACTED]
+- [[.ListAsync()_2]] - `references` [EXTRACTED]
+- [[.ListAsync()_3]] - `references` [EXTRACTED]
+- [[.Remove()_2]] - `references` [EXTRACTED]
+- [[.Remove()_5]] - `references` [EXTRACTED]
+- [[.ToDto()_2]] - `references` [EXTRACTED]
+- [[Booking]] - `references` [EXTRACTED]
+- [[DateTime_8]] - `references` [EXTRACTED]
+- [[Guid_24]] - `references` [EXTRACTED]
+- [[Room]] - `references` [EXTRACTED]
+- [[RoomTask.cs]] - `contains` [EXTRACTED]
+- [[RoomTaskConfiguration]] - `references` [EXTRACTED]
+- [[RoomTaskStatus]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Tasks__Occupancy_Pages
+#graphify/code #graphify/EXTRACTED #community/Room_Task_Management_1

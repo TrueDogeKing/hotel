@@ -1,67 +1,28 @@
 ---
-source_file: "src/CampCenter.Domain/Entities/Room.cs"
+source_file: "frontend/src/api/admin.ts"
 type: "code"
-community: "Room Management"
-location: "L6"
+community: "CampCenter.UnitTests / Services (2)"
+location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Management
+  - community/CampCenterUnitTests_/_Services_2
 ---
 
 # Room
 
-## Context
-
-_Source: `src/CampCenter.Domain/Entities/Room.cs` (defined near L6; showing L4–L23 of 23)._
-
-```csharp
-/// derived from assignment → booking → session dates (published sessions never
-/// overlap, so (session, room) fully determines when a room is occupied).
-public class Room
-{
-    public Guid Id { get; set; }
-
-    /// Human-readable room number, unique (e.g. "12", "A-3").
-    public required string Number { get; set; }
-
-    /// Number of beds (2/3/4…). Extra beds are handled as RoomTasks, not capacity changes.
-    public int Capacity { get; set; }
-
-    /// Soft-deactivation: inactive rooms are excluded from availability but keep
-    /// their history (rooms referenced by assignments are never hard-deleted).
-    public bool IsActive { get; set; } = true;
-
-    public string? Description { get; set; }
-
-    public uint RowVersion { get; set; }
-}
-```
-
 ## Connections
-- [[.AddAsync()_3]] - `references` [EXTRACTED]
-- [[.AddAsync()_8]] - `references` [EXTRACTED]
-- [[.AssignRooms()]] - `references` [EXTRACTED]
-- [[.Configure()_6]] - `references` [EXTRACTED]
-- [[.GetActiveAsync()]] - `references` [EXTRACTED]
-- [[.GetActiveAsync()_1]] - `references` [EXTRACTED]
-- [[.GetAllAsync()_5]] - `references` [EXTRACTED]
-- [[.GetAllAsync()_7]] - `references` [EXTRACTED]
-- [[.GetByIdAsync()_3]] - `references` [EXTRACTED]
-- [[.GetByIdAsync()_8]] - `references` [EXTRACTED]
-- [[.GetByNumberAsync()]] - `references` [EXTRACTED]
-- [[.GetByNumberAsync()_1]] - `references` [EXTRACTED]
-- [[.PickRoomsAsync()]] - `references` [EXTRACTED]
-- [[.Remove()_1]] - `references` [EXTRACTED]
-- [[.Remove()_4]] - `references` [EXTRACTED]
-- [[.SaveWithConcurrencyCheckAsync()_1]] - `references` [EXTRACTED]
-- [[.ToDto()_2]] - `references` [EXTRACTED]
-- [[AppDbContext]] - `references` [EXTRACTED]
-- [[BookingRoomAssignment]] - `references` [EXTRACTED]
-- [[Closure]] - `references` [EXTRACTED]
-- [[Guid_23]] - `references` [EXTRACTED]
-- [[Room.cs]] - `contains` [EXTRACTED]
-- [[RoomConfiguration]] - `references` [EXTRACTED]
-- [[RoomTask_1]] - `references` [EXTRACTED]
+- [[.A_room_nobody_has_touched_is_pending()]] - `calls` [EXTRACTED]
+- [[.A_turnaround_carries_both_groups_and_both_bed_counts()]] - `calls` [EXTRACTED]
+- [[.Marking_a_room_done_creates_its_row_and_stamps_who_and_when()]] - `calls` [EXTRACTED]
+- [[.Puts_turnarounds_before_departures_and_arrivals()]] - `calls` [EXTRACTED]
+- [[.Refuses_a_room_with_nothing_to_do_that_day()]] - `calls` [EXTRACTED]
+- [[.Rejects_an_unknown_status()]] - `calls` [EXTRACTED]
+- [[.Reopening_a_room_clears_who_finished_it()]] - `calls` [EXTRACTED]
+- [[.Stored_progress_is_merged_into_the_derived_list()]] - `calls` [EXTRACTED]
+- [[.The_day_strip_counts_rooms_and_rooms_done_per_day()]] - `calls` [EXTRACTED]
+- [[ClosuresPage.tsx]] - `imports` [EXTRACTED]
+- [[RoomsPage.tsx]] - `imports` [EXTRACTED]
+- [[admin.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Management
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_2

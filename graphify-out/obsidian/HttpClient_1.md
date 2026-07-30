@@ -1,21 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "Integration Test Harness"
+community: "Integration Test Harness (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Integration_Test_Harness
+  - community/Integration_Test_Harness_2
 ---
 
 # HttpClient
-
-## Context
-
-_Synthetic reference node from AST structural extraction. It has no source file of its own — it is an aggregate/type symbol defined entirely by the connections listed below._
 
 ## Connections
 - [[.CreateAuthenticatedClientAsync()]] - `references` [EXTRACTED]
 - [[.CreateClient()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Integration_Test_Harness
+#graphify/code #graphify/EXTRACTED #community/Integration_Test_Harness_2

@@ -1,25 +1,28 @@
 ---
 source_file: ""
 type: "code"
-community: "Validator Unit Tests"
+community: "DTOs / Schedule (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Validator_Unit_Tests
+  - community/DTOs_/_Schedule_1
 ---
 
 # AbstractValidator
 
-## Context
-
-_Synthetic reference node from AST structural extraction. It has no source file of its own — it is an aggregate/type symbol defined entirely by the connections listed below._
-
 ## Connections
+- [[CreateAdminBookingRequestValidator]] - `inherits` [EXTRACTED]
 - [[CreateBookingRequestValidator]] - `inherits` [EXTRACTED]
-- [[CreateCampSessionRequestValidator]] - `inherits` [EXTRACTED]
+- [[CreateClosureRequestValidator]] - `inherits` [EXTRACTED]
+- [[CreateMealTimeDefaultRequestValidator]] - `inherits` [EXTRACTED]
 - [[CreateRoomRequestValidator]] - `inherits` [EXTRACTED]
+- [[CreateScheduleEntryRequestValidator]] - `inherits` [EXTRACTED]
 - [[LoginRequestValidator]] - `inherits` [EXTRACTED]
-- [[UpdateCampSessionRequestValidator]] - `inherits` [EXTRACTED]
+- [[SetBookingMealTimeRequestValidator]] - `inherits` [EXTRACTED]
+- [[UpdateClosureRequestValidator]] - `inherits` [EXTRACTED]
+- [[UpdateDietaryNotesRequestValidator]] - `inherits` [EXTRACTED]
+- [[UpdateMealTimeDefaultRequestValidator]] - `inherits` [EXTRACTED]
 - [[UpdateRoomRequestValidator]] - `inherits` [EXTRACTED]
+- [[UpdateScheduleEntryRequestValidator]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Validator_Unit_Tests
+#graphify/code #graphify/EXTRACTED #community/DTOs_/_Schedule_1

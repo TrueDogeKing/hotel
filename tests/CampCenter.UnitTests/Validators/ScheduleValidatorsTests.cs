@@ -18,7 +18,8 @@ public class ScheduleEntryValidatorsTests
             "Spływ kajakowy",
             null,
             "Kamizelki dla 12 osób",
-            "Przystań"
+            "Przystań",
+            12
         );
 
     private static CreateScheduleEntryRequestDto ValidMeal() =>
@@ -111,6 +112,17 @@ public class ScheduleEntryValidatorsTests
         Assert.False(_validator.Validate(dto).IsValid);
     }
 
+    [Fact]
+    public void ZeroOrNegativeParticipantCount_Fails()
+    {
+        Assert.False(_validator.Validate(ValidActivity() with { ParticipantCount = 0 }).IsValid);
+        Assert.False(_validator.Validate(ValidActivity() with { ParticipantCount = -1 }).IsValid);
+    }
+
+    [Fact]
+    public void NullParticipantCount_Passes() =>
+        Assert.True(_validator.Validate(ValidActivity() with { ParticipantCount = null }).IsValid);
+
     /// The update validator must enforce the same rules as create, or a rule could
     /// be bypassed by creating a valid entry and then editing it.
     [Fact]
@@ -125,6 +137,7 @@ public class ScheduleEntryValidatorsTests
             new TimeOnly(14, 0),
             "Obiad",
             "Rosół",
+            null,
             null,
             null,
             RowVersion: 1
@@ -143,7 +156,7 @@ public class MealTimeValidatorsTests
     private readonly CreateMealTimeDefaultRequestValidator _validator = new();
 
     private static CreateMealTimeDefaultRequestDto Valid() =>
-        new("Breakfast", "Śniadanie", new TimeOnly(8, 0), new TimeOnly(9, 0), 1);
+        new("Breakfast", "Śniadanie", new TimeOnly(8, 0), new TimeOnly(9, 0), 30, 1);
 
     [Fact]
     public void ValidSlot_Passes() => Assert.True(_validator.Validate(Valid()).IsValid);
@@ -173,7 +186,8 @@ public class MealTimeValidatorsTests
             "Kolacja",
             new TimeOnly(18, 0),
             new TimeOnly(19, 0),
-            3,
+            DurationMinutes: 30,
+            SortOrder: 3,
             IsActive: true,
             RowVersion: 1
         );

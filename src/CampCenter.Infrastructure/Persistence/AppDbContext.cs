@@ -22,6 +22,8 @@ public class AppDbContext : DbContext
 
     public DbSet<RoomTask> RoomTasks => Set<RoomTask>();
 
+    public DbSet<RoomCleaning> RoomCleanings => Set<RoomCleaning>();
+
     public DbSet<Payment> Payments => Set<Payment>();
 
     public DbSet<MealTimeDefault> MealTimeDefaults => Set<MealTimeDefault>();

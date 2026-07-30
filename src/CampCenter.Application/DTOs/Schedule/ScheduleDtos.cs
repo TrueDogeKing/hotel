@@ -14,6 +14,8 @@ public record ScheduleEntryDto(
     string? Menu,
     string? PrepNotes,
     string? Location,
+    /// Null means "the whole group" (Headcount).
+    int? ParticipantCount,
     /// True when this entry's time was set for this one day, so a bulk re-time of
     /// the group's meal slot will leave it alone.
     bool TimesCustomized,
@@ -107,7 +109,8 @@ public record CreateScheduleEntryRequestDto(
     string Title,
     string? Menu,
     string? PrepNotes,
-    string? Location
+    string? Location,
+    int? ParticipantCount
 );
 
 /// BookingId is intentionally absent: moving an entry to another group is a
@@ -122,8 +125,46 @@ public record UpdateScheduleEntryRequestDto(
     string? Menu,
     string? PrepNotes,
     string? Location,
+    int? ParticipantCount,
     uint RowVersion
 );
+
+// --- Clash detection ------------------------------------------------------
+
+/// A proposed entry, checked against the rest of the day before it is saved.
+/// EntryId is set when editing, so an entry never clashes with itself.
+public record CheckScheduleConflictsRequestDto(
+    Guid BookingId,
+    Guid? EntryId,
+    string Kind,
+    DateOnly Date,
+    TimeOnly StartTime,
+    TimeOnly EndTime,
+    string? Location
+);
+
+public record ScheduleConflictDto(
+    Guid EntryId,
+    Guid BookingId,
+    string OrganizationName,
+    string Kind,
+    string Title,
+    TimeOnly StartTime,
+    TimeOnly EndTime,
+    string? Location,
+    /// "Location" — another group already has that place at that time.
+    /// "Meal" — another group is at the tables then, wherever it eats.
+    string Reason
+);
+
+/// Advisory only: the admin is warned and may save anyway, so this never blocks a
+/// write. MealGapMinutes travels along to explain why near-misses count as clashes.
+public record ScheduleConflictsDto(List<ScheduleConflictDto> Conflicts, int MealGapMinutes);
+
+/// Places to suggest in the entry form. MealLocation is called out separately so the
+/// form can pre-fill it for a meal — that is what keeps every sitting in one place and
+/// makes the same-place check flag two groups eating at once.
+public record ScheduleLocationsDto(List<string> Locations, string? MealLocation);
 
 public record GenerateMealsResultDto(int Created);
 

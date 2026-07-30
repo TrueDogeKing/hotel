@@ -11,20 +11,6 @@ tags:
 
 # erasableSyntaxOnly
 
-## Context
-
-_Source: `frontend/tsconfig.app.json` (defined near L21; showing L19–L25 of 25)._
-
-```json
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "erasableSyntaxOnly": true,
-    "noFallthroughCasesInSwitch": true
-  },
-  "include": ["src"]
-}
-```
-
 ## Connections
 - [[compilerOptions]] - `contains` [EXTRACTED]
 

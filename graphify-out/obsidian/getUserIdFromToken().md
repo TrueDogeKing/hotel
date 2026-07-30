@@ -11,19 +11,6 @@ tags:
 
 # getUserIdFromToken()
 
-## Context
-
-_Source: `frontend/src/api/jwt.ts` (defined near L41; showing L39–L44 of 44)._
-
-```typescript
-
-// The user id ("sub" claim); used to tell own messages/participants from others'.
-export function getUserIdFromToken(token: string | null): string | null {
-  if (!token) return null;
-  return decodeJWT(token)?.sub ?? null;
-}
-```
-
 ## Connections
 - [[decodeJWT()]] - `calls` [EXTRACTED]
 - [[jwt.ts]] - `contains` [EXTRACTED]

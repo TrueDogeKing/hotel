@@ -11,20 +11,6 @@ tags:
 
 # ForbiddenActionException
 
-## Context
-
-_Source: `src/CampCenter.Domain/Exceptions/ForbiddenActionException.cs` (defined near L5; showing L3–L9 of 9)._
-
-```csharp
-/// Signals that the authenticated caller is not allowed to perform the requested action
-/// (e.g. changing another account's password). Mapped to HTTP 403.
-public class ForbiddenActionException : Exception
-{
-    public ForbiddenActionException(string message)
-        : base(message) { }
-}
-```
-
 ## Connections
 - [[Exception_1]] - `inherits` [EXTRACTED]
 - [[ForbiddenActionException.cs]] - `contains` [EXTRACTED]

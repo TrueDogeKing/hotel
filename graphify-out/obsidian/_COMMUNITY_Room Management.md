@@ -1,21 +1,21 @@
 ---
 type: community
 cohesion: 0.06
-members: 76
+members: 75
 ---
 
 # Room Management
 
 **Cohesion:** 0.06 - loosely connected
-**Members:** 76 nodes
+**Members:** 75 nodes
 
 ## Members
-- [[.AddAsync()_3]] - code - src/CampCenter.Domain/Repositories/IRoomRepository.cs
-- [[.AddAsync()_8]] - code - src/CampCenter.Infrastructure/Repositories/RoomRepository.cs
-- [[.Configure()_6]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/RoomConfiguration.cs
+- [[.AddAsync()_2]] - code - src/CampCenter.Domain/Repositories/IRoomRepository.cs
+- [[.AddAsync()_6]] - code - src/CampCenter.Infrastructure/Repositories/RoomRepository.cs
+- [[.Configure()_5]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/RoomConfiguration.cs
 - [[.Create()]] - code - src/CampCenter.Api/Controllers/Admin/RoomsController.cs
-- [[.CreateAsync()_2]] - code - src/CampCenter.Application/Interfaces/IRoomService.cs
-- [[.CreateAsync()_6]] - code - src/CampCenter.Application/Services/RoomService.cs
+- [[.CreateAsync()_1]] - code - src/CampCenter.Application/Interfaces/IRoomService.cs
+- [[.CreateAsync()_4]] - code - src/CampCenter.Application/Services/RoomService.cs
 - [[.Delete()]] - code - src/CampCenter.Api/Controllers/Admin/RoomsController.cs
 - [[.DeleteAsync()_1]] - code - src/CampCenter.Application/Interfaces/IRoomService.cs
 - [[.DeleteAsync()_4]] - code - src/CampCenter.Application/Services/RoomService.cs
@@ -26,18 +26,18 @@ members: 76
 - [[.GetAllAsync()_3]] - code - src/CampCenter.Application/Services/RoomService.cs
 - [[.GetAllAsync()_5]] - code - src/CampCenter.Domain/Repositories/IRoomRepository.cs
 - [[.GetAllAsync()_7]] - code - src/CampCenter.Infrastructure/Repositories/RoomRepository.cs
-- [[.GetByIdAsync()_3]] - code - src/CampCenter.Domain/Repositories/IRoomRepository.cs
-- [[.GetByIdAsync()_8]] - code - src/CampCenter.Infrastructure/Repositories/RoomRepository.cs
+- [[.GetByIdAsync()_2]] - code - src/CampCenter.Domain/Repositories/IRoomRepository.cs
+- [[.GetByIdAsync()_6]] - code - src/CampCenter.Infrastructure/Repositories/RoomRepository.cs
 - [[.GetByNumberAsync()]] - code - src/CampCenter.Domain/Repositories/IRoomRepository.cs
 - [[.GetByNumberAsync()_1]] - code - src/CampCenter.Infrastructure/Repositories/RoomRepository.cs
 - [[.HasAssignmentsAsync()]] - code - src/CampCenter.Domain/Repositories/IRoomRepository.cs
 - [[.HasAssignmentsAsync()_1]] - code - src/CampCenter.Infrastructure/Repositories/RoomRepository.cs
 - [[.Remove()_1]] - code - src/CampCenter.Domain/Repositories/IRoomRepository.cs
 - [[.Remove()_4]] - code - src/CampCenter.Infrastructure/Repositories/RoomRepository.cs
-- [[.SaveChangesAsync()_4]] - code - src/CampCenter.Domain/Repositories/IRoomRepository.cs
-- [[.SaveChangesAsync()_10]] - code - src/CampCenter.Infrastructure/Repositories/RoomRepository.cs
+- [[.SaveChangesAsync()_3]] - code - src/CampCenter.Domain/Repositories/IRoomRepository.cs
+- [[.SaveChangesAsync()_8]] - code - src/CampCenter.Infrastructure/Repositories/RoomRepository.cs
 - [[.SaveWithConcurrencyCheckAsync()_1]] - code - src/CampCenter.Application/Services/RoomService.cs
-- [[.ToDto()_2]] - code - src/CampCenter.Application/Services/RoomService.cs
+- [[.ToDto()_1]] - code - src/CampCenter.Application/Services/RoomService.cs
 - [[.Update()]] - code - src/CampCenter.Api/Controllers/Admin/RoomsController.cs
 - [[.UpdateAsync()_1]] - code - src/CampCenter.Application/Interfaces/IRoomService.cs
 - [[.UpdateAsync()_3]] - code - src/CampCenter.Application/Services/RoomService.cs
@@ -62,14 +62,13 @@ members: 76
 - [[IActionResult_2]] - code
 - [[IRoomRepository]] - code - src/CampCenter.Domain/Repositories/IRoomRepository.cs
 - [[IRoomService]] - code - src/CampCenter.Application/Interfaces/IRoomService.cs
-- [[IRoomService.cs]] - code - src/CampCenter.Application/Interfaces/IRoomService.cs
 - [[IValidator]] - code
 - [[List_3]] - code
 - [[List_10]] - code
 - [[List_15]] - code
 - [[List_19]] - code
 - [[ProducesResponseType_2]] - code
-- [[Room_1]] - code - src/CampCenter.Domain/Entities/Room.cs
+- [[Room]] - code - src/CampCenter.Domain/Entities/Room.cs
 - [[Room.cs]] - code - src/CampCenter.Domain/Entities/Room.cs
 - [[RoomConfiguration]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/RoomConfiguration.cs
 - [[RoomConfiguration.cs]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/RoomConfiguration.cs
@@ -95,21 +94,21 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_Booking Persistence & Entities]]
-- 4 edges to [[_COMMUNITY_Application DTO Namespaces]]
-- 4 edges to [[_COMMUNITY_Admin Booking & Notifications]]
-- 4 edges to [[_COMMUNITY_Public Booking Service]]
+- 5 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
 - 4 edges to [[_COMMUNITY_Domain & Infra Namespaces]]
-- 3 edges to [[_COMMUNITY_Room Task Management]]
-- 3 edges to [[_COMMUNITY_Validator Unit Tests]]
-- 2 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
+- 3 edges to [[_COMMUNITY_Room Task Management (1)]]
 - 2 edges to [[_COMMUNITY_Room Mix Calculator Tests]]
+- 2 edges to [[_COMMUNITY_DTOs  Schedule (1)]]
+- 2 edges to [[_COMMUNITY_Persistence  Configurations]]
 - 1 edge to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
+- 1 edge to [[_COMMUNITY_Validator Unit Tests]]
+- 1 edge to [[_COMMUNITY_Booking Persistence & Entities (4)]]
 - 1 edge to [[_COMMUNITY_Room Closure Management]]
+- 1 edge to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
 
 ## Top bridge nodes
-- [[IRoomRepository]] - degree 15, connects to 5 communities
-- [[Room_1]] - degree 24, connects to 4 communities
-- [[.GetActiveAsync()]] - degree 8, connects to 3 communities
+- [[Room]] - degree 21, connects to 3 communities
+- [[IRoomRepository]] - degree 13, connects to 3 communities
 - [[RoomRepository]] - degree 11, connects to 2 communities
-- [[.GetByIdAsync()_3]] - degree 9, connects to 2 communities
+- [[RoomsController]] - degree 8, connects to 2 communities
+- [[RoomValidators.cs]] - degree 4, connects to 2 communities

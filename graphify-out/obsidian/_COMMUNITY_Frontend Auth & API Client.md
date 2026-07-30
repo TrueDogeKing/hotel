@@ -1,13 +1,13 @@
 ---
 type: community
-cohesion: 0.18
-members: 27
+cohesion: 0.15
+members: 30
 ---
 
 # Frontend Auth & API Client
 
-**Cohesion:** 0.18 - loosely connected
-**Members:** 27 nodes
+**Cohesion:** 0.15 - loosely connected
+**Members:** 30 nodes
 
 ## Members
 - [[AuthContext]] - code - frontend/src/auth/AuthContext.tsx
@@ -18,6 +18,8 @@ members: 27
 - [[Listener]] - code - frontend/src/api/tokenStore.ts
 - [[LoginRequest]] - code - frontend/src/api/types.ts
 - [[LoginResponse]] - code - frontend/src/api/types.ts
+- [[ProtectedRoute()]] - code - frontend/src/auth/ProtectedRoute.tsx
+- [[ProtectedRoute.tsx]] - code - frontend/src/auth/ProtectedRoute.tsx
 - [[RetriableConfig]] - code - frontend/src/api/client.ts
 - [[api]] - code - frontend/src/api/client.ts
 - [[auth.ts]] - code - frontend/src/api/auth.ts
@@ -37,6 +39,7 @@ members: 27
 - [[subscribeToken()]] - code - frontend/src/api/tokenStore.ts
 - [[tokenStore.ts]] - code - frontend/src/api/tokenStore.ts
 - [[types.ts]] - code - frontend/src/api/types.ts
+- [[useAuth()]] - code - frontend/src/auth/AuthContext.tsx
 
 ## Live Query (requires Dataview plugin)
 
@@ -44,14 +47,3 @@ members: 27
 TABLE source_file, type FROM #community/Frontend_Auth__API_Client
 SORT file.name ASC
 ```
-
-## Connections to other communities
-- 7 edges to [[_COMMUNITY_Frontend App Shell & i18n]]
-- 2 edges to [[_COMMUNITY_Admin Frontend Pages]]
-- 2 edges to [[_COMMUNITY_Public Booking Frontend]]
-
-## Top bridge nodes
-- [[client.ts]] - degree 13, connects to 2 communities
-- [[api]] - degree 4, connects to 2 communities
-- [[AuthContext.tsx]] - degree 22, connects to 1 community
-- [[AuthProvider()]] - degree 7, connects to 1 community

@@ -11,10 +11,16 @@ public class MealTimeDefaultConfiguration : IEntityTypeConfiguration<MealTimeDef
         builder.ToTable(
             "MealTimeDefaults",
             t =>
+            {
                 t.HasCheckConstraint(
                     "CK_MealTimeDefaults_TimeOrder",
                     "\"EndTime\" > \"StartTime\""
-                )
+                );
+                t.HasCheckConstraint(
+                    "CK_MealTimeDefaults_Duration",
+                    "\"DurationMinutes\" BETWEEN 5 AND 480"
+                );
+            }
         );
 
         builder.HasKey(x => x.Id);
@@ -22,6 +28,8 @@ public class MealTimeDefaultConfiguration : IEntityTypeConfiguration<MealTimeDef
         builder.Property(x => x.MealKind).HasConversion<string>().HasMaxLength(16);
 
         builder.Property(x => x.Label).IsRequired().HasMaxLength(128);
+
+        builder.Property(x => x.DurationMinutes).HasDefaultValue(60);
 
         builder.HasIndex(x => new { x.SortOrder, x.StartTime });
 

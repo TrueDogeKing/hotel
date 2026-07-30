@@ -74,6 +74,28 @@ public class BookingRepository : IBookingRepository
             .OrderBy(b => b.StartDate)
             .ToListAsync(cancellationToken);
 
+    public Task<List<Booking>> ListLiveChangingOverAsync(
+        DateOnly firstDay,
+        DateOnly lastDay,
+        CancellationToken cancellationToken = default
+    ) =>
+        // Filtered on the assignments' own dates rather than the booking's: they are
+        // denormalized copies, and an admin who moved one room to different days should
+        // see that room turn over on the day the room is really free.
+        _db
+            .Bookings.Include(b => b.RoomAssignments)
+                .ThenInclude(a => a.Room)
+            .Where(b =>
+                LiveStatuses.Contains(b.Status)
+                && b.RoomAssignments.Any(a =>
+                    (a.StartDate >= firstDay && a.StartDate <= lastDay)
+                    || (a.EndDate >= firstDay && a.EndDate <= lastDay)
+                )
+            )
+            .OrderBy(b => b.StartDate)
+            .ThenBy(b => b.OrganizationName)
+            .ToListAsync(cancellationToken);
+
     public Task<List<Booking>> ListLivePresentInAsync(
         DateOnly firstDay,
         DateOnly lastDay,

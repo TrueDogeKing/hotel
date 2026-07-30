@@ -1,27 +1,27 @@
 ---
 source_file: ""
 type: "code"
-community: "Booking Persistence & Entities"
+community: "Persistence / Configurations"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Booking_Persistence__Entities
+  - community/Persistence_/_Configurations
 ---
 
 # IEntityTypeConfiguration
 
-## Context
-
-_Synthetic reference node from AST structural extraction. It has no source file of its own — it is an aggregate/type symbol defined entirely by the connections listed below._
-
 ## Connections
 - [[AdminUserConfiguration]] - `implements` [EXTRACTED]
 - [[BookingConfiguration]] - `implements` [EXTRACTED]
+- [[BookingMealTimeConfiguration]] - `implements` [EXTRACTED]
 - [[BookingRoomAssignmentConfiguration]] - `implements` [EXTRACTED]
 - [[ClosureConfiguration]] - `implements` [EXTRACTED]
+- [[MealTimeDefaultConfiguration]] - `implements` [EXTRACTED]
 - [[PaymentConfiguration]] - `implements` [EXTRACTED]
 - [[RefreshTokenConfiguration]] - `implements` [EXTRACTED]
+- [[RoomCleaningConfiguration]] - `implements` [EXTRACTED]
 - [[RoomConfiguration]] - `implements` [EXTRACTED]
 - [[RoomTaskConfiguration]] - `implements` [EXTRACTED]
+- [[ScheduleEntryConfiguration]] - `implements` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Booking_Persistence__Entities
+#graphify/code #graphify/EXTRACTED #community/Persistence_/_Configurations

@@ -1,21 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "Public Booking Service"
+community: "Public Booking Service (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public_Booking_Service
+  - community/Public_Booking_Service_2
 ---
 
 # List
-
-## Context
-
-_Synthetic reference node from AST structural extraction. It has no source file of its own — it is an aggregate/type symbol defined entirely by the connections listed below._
 
 ## Connections
 - [[.AssignRooms()]] - `references` [EXTRACTED]
 - [[.PickRoomsAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service
+#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_2

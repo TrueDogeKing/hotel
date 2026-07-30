@@ -11,20 +11,6 @@ tags:
 
 # LoginResponse
 
-## Context
-
-_Source: `frontend/src/api/types.ts` (defined near L8; showing L6–L12 of 12)._
-
-```typescript
-}
-
-export interface LoginResponse {
-  token: string;
-  expiresAtUtc: string;
-  login: string;
-}
-```
-
 ## Connections
 - [[auth.ts]] - `imports` [EXTRACTED]
 - [[client.ts]] - `imports` [EXTRACTED]

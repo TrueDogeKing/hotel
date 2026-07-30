@@ -11,21 +11,6 @@ tags:
 
 # RegisterData
 
-## Context
-
-_Source: `src/CampCenter.Infrastructure/Payments/Przelewy24Client.cs` (defined near L133; showing L131–L138 of 138)._
-
-```csharp
-    }
-
-    private sealed class RegisterData
-    {
-        [JsonPropertyName("token")]
-        public string? Token { get; set; }
-    }
-}
-```
-
 ## Connections
 - [[Przelewy24Client.cs]] - `contains` [EXTRACTED]
 

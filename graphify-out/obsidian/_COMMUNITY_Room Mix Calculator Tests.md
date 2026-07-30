@@ -12,7 +12,6 @@ members: 47
 ## Members
 - [[.DistributePeople()]] - code - src/CampCenter.Application/Services/RoomMixCalculator.cs
 - [[.DistributePeople_FillsAllButLastRoom()]] - code - tests/CampCenter.UnitTests/Services/RoomMixCalculatorTests.cs
-- [[.Get()_2]] - code - src/CampCenter.Api/Controllers/Public/PublicSessionsController.cs
 - [[.GetFreeRoomsByCapacityAsync()]] - code - src/CampCenter.Application/Interfaces/IAvailabilityService.cs
 - [[.GetFreeRoomsByCapacityAsync()_1]] - code - src/CampCenter.Application/Services/AvailabilityService.cs
 - [[.GetPublicSessionsAsync()]] - code - src/CampCenter.Application/Interfaces/IAvailabilityService.cs
@@ -29,18 +28,20 @@ members: 47
 - [[.ValidateMix_RejectsOverAvailability()]] - code - tests/CampCenter.UnitTests/Services/RoomMixCalculatorTests.cs
 - [[.ValidateMix_RejectsRedundantRoom()]] - code - tests/CampCenter.UnitTests/Services/RoomMixCalculatorTests.cs
 - [[AvailabilityService]] - code - src/CampCenter.Application/Services/AvailabilityService.cs
-- [[CancellationToken_9]] - code
+- [[BookingDetailsDto]] - code - src/CampCenter.Application/DTOs/Public/PublicDtos.cs
+- [[BookingPaymentDto]] - code - src/CampCenter.Application/DTOs/Public/PublicDtos.cs
+- [[CampCenter.Application.DTOs.Public]] - code - src/CampCenter.Application/DTOs/Public/PublicDtos.cs
 - [[CancellationToken_14]] - code
 - [[CancellationToken_24]] - code
 - [[Capacity]] - code
+- [[CreateBookingRequestDto]] - code - src/CampCenter.Application/DTOs/Public/PublicDtos.cs
+- [[CreateBookingResponseDto]] - code - src/CampCenter.Application/DTOs/Public/PublicDtos.cs
 - [[Dictionary]] - code
 - [[Dictionary_1]] - code
 - [[Dictionary_2]] - code
 - [[Fact_6]] - code
 - [[Guid_6]] - code
 - [[Guid_12]] - code
-- [[HttpGet_6]] - code
-- [[IActionResult_8]] - code
 - [[IAvailabilityService]] - code - src/CampCenter.Application/Interfaces/IAvailabilityService.cs
 - [[IAvailabilityService.cs]] - code - src/CampCenter.Application/Interfaces/IAvailabilityService.cs
 - [[ICampSessionRepository_1]] - code
@@ -49,12 +50,11 @@ members: 47
 - [[List_6]] - code
 - [[List_9]] - code
 - [[PeopleCount]] - code
-- [[ProducesResponseType_8]] - code
+- [[PublicDtos.cs]] - code - src/CampCenter.Application/DTOs/Public/PublicDtos.cs
 - [[PublicSessionDto]] - code - src/CampCenter.Application/DTOs/Public/PublicDtos.cs
 - [[RoomMixCalculator]] - code - src/CampCenter.Application/Services/RoomMixCalculator.cs
 - [[RoomMixCalculator.cs]] - code - src/CampCenter.Application/Services/RoomMixCalculator.cs
 - [[RoomMixCalculatorTests]] - code - tests/CampCenter.UnitTests/Services/RoomMixCalculatorTests.cs
-- [[Task_9]] - code
 - [[Task_13]] - code
 - [[Task_23]] - code
 
@@ -66,17 +66,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_Public Booking Service]]
-- 3 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
-- 2 edges to [[_COMMUNITY_Application DTO Namespaces]]
+- 4 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (5)]]
 - 2 edges to [[_COMMUNITY_Room Management]]
-- 1 edge to [[_COMMUNITY_Auth DTOs & Models]]
-- 1 edge to [[_COMMUNITY_Admin Booking & Notifications]]
-- 1 edge to [[_COMMUNITY_Przelewy24 Payment Client]]
+- 1 edge to [[_COMMUNITY_Payment Gateway Integration Tests (1)]]
+- 1 edge to [[_COMMUNITY_Application Namespaces & DTOs]]
+- 1 edge to [[_COMMUNITY_Admin Booking & Notifications (2)]]
+- 1 edge to [[_COMMUNITY_Admin Booking & Notifications (1)]]
 
 ## Top bridge nodes
 - [[AvailabilityService]] - degree 7, connects to 3 communities
-- [[IAvailabilityService]] - degree 6, connects to 2 communities
-- [[IAvailabilityService.cs]] - degree 3, connects to 2 communities
+- [[CampCenter.Application.DTOs.Public]] - degree 4, connects to 2 communities
 - [[RoomMixCalculatorTests]] - degree 10, connects to 1 community
-- [[.ValidateMix()]] - degree 8, connects to 1 community
+- [[.GetFreeRoomsByCapacityAsync()_1]] - degree 7, connects to 1 community
+- [[IReadOnlyDictionary]] - degree 5, connects to 1 community

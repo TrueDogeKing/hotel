@@ -10,38 +10,6 @@ tags:
 
 # Microsoft.NET.Sdk
 
-## Context
-
-_Source: `tests/CampCenter.IntegrationTests/CampCenter.IntegrationTests.csproj` — full file embedded (25 lines)._
-
-```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFramework>net10.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-    <IsPackable>false</IsPackable>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="coverlet.collector" Version="6.0.4" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="10.0.9" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
-    <PackageReference Include="Testcontainers.PostgreSql" Version="4.12.0" />
-    <PackageReference Include="xunit" Version="2.9.3" />
-    <PackageReference Include="xunit.runner.visualstudio" Version="3.1.4" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Using Include="Xunit" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\src\CampCenter.Api\CampCenter.Api.csproj" />
-  </ItemGroup>
-</Project>
-```
-
 ## Connections
 - [[CampCenter.IntegrationTests.csproj]] - `references` [EXTRACTED]
 

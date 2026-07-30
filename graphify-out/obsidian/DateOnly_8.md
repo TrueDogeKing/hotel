@@ -1,23 +1,21 @@
 ---
 source_file: ""
 type: "code"
-community: "Booking Persistence & Entities"
+community: "Booking Persistence & Entities (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Booking_Persistence__Entities
+  - community/Booking_Persistence__Entities_1
 ---
 
 # DateOnly
 
-## Context
-
-_Synthetic reference node from AST structural extraction. It has no source file of its own — it is an aggregate/type symbol defined entirely by the connections listed below._
-
 ## Connections
 - [[.GetBookedRoomIdsInRangeAsync()_1]] - `references` [EXTRACTED]
 - [[.GetConfirmedEndedAsync()_1]] - `references` [EXTRACTED]
+- [[.ListLiveChangingOverAsync()_1]] - `references` [EXTRACTED]
 - [[.ListLiveInRangeAsync()_1]] - `references` [EXTRACTED]
+- [[.ListLivePresentInAsync()_1]] - `references` [EXTRACTED]
 - [[.ListUpcomingAsync()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Booking_Persistence__Entities
+#graphify/code #graphify/EXTRACTED #community/Booking_Persistence__Entities_1

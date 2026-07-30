@@ -1,65 +1,20 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Persistence/Configurations/RoomTaskConfiguration.cs"
 type: "code"
-community: "Booking Persistence & Entities"
+community: "Room Task Management (1)"
 location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Booking_Persistence__Entities
+  - community/Room_Task_Management_1
 ---
 
 # RoomTaskConfiguration
 
-## Context
-
-_Source: `src/CampCenter.Infrastructure/Persistence/Configurations/RoomTaskConfiguration.cs` (defined near L7; showing L5–L42 of 42)._
-
-```csharp
-namespace CampCenter.Infrastructure.Persistence.Configurations;
-
-public class RoomTaskConfiguration : IEntityTypeConfiguration<RoomTask>
-{
-    public void Configure(EntityTypeBuilder<RoomTask> builder)
-    {
-        builder.ToTable("RoomTasks");
-
-        builder.HasKey(x => x.Id);
-
-        builder.Property(x => x.Text).IsRequired().HasMaxLength(1000);
-
-        builder.Property(x => x.Status).HasConversion<string>().HasMaxLength(8);
-
-        // The housekeeping list filters by status.
-        builder.HasIndex(x => x.Status);
-
-        builder
-            .HasOne(x => x.Room)
-            .WithMany()
-            .HasForeignKey(x => x.RoomId)
-            .OnDelete(DeleteBehavior.Cascade);
-
-        builder
-            .HasOne(x => x.Booking)
-            .WithMany()
-            .HasForeignKey(x => x.BookingId)
-            .OnDelete(DeleteBehavior.SetNull);
-
-        // Optimistic concurrency via the PostgreSQL "xmin" system column.
-        builder
-            .Property(x => x.RowVersion)
-            .HasColumnName("xmin")
-            .HasColumnType("xid")
-            .ValueGeneratedOnAddOrUpdate()
-            .IsConcurrencyToken();
-    }
-}
-```
-
 ## Connections
-- [[.Configure()_7]] - `method` [EXTRACTED]
+- [[.Configure()_6]] - `method` [EXTRACTED]
 - [[IEntityTypeConfiguration]] - `implements` [EXTRACTED]
-- [[RoomTask_1]] - `references` [EXTRACTED]
+- [[RoomTask]] - `references` [EXTRACTED]
 - [[RoomTaskConfiguration.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Booking_Persistence__Entities
+#graphify/code #graphify/EXTRACTED #community/Room_Task_Management_1

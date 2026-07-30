@@ -1,63 +1,63 @@
 {
   "colorGroups": [
     {
-      "query": "tag:#community/Room_Management",
+      "query": "tag:#community/DTOs_/_Schedule_(1)",
       "color": {
         "a": 1,
         "rgb": 5142951
       }
     },
     {
-      "query": "tag:#community/Booking_Persistence_&_Entities",
+      "query": "tag:#community/Room_Management",
       "color": {
         "a": 1,
         "rgb": 15896107
       }
     },
     {
-      "query": "tag:#community/Admin_Booking_&_Notifications",
+      "query": "tag:#community/Admin_Bookings_Controller_&_DTOs",
       "color": {
         "a": 1,
         "rgb": 14767961
       }
     },
     {
-      "query": "tag:#community/Room_Task_Management",
+      "query": "tag:#community/src_/_api_(1)",
       "color": {
         "a": 1,
         "rgb": 7780274
       }
     },
     {
-      "query": "tag:#community/Payment_Gateway_Integration_Tests",
+      "query": "tag:#community/CampCenter.UnitTests_/_Validators",
       "color": {
         "a": 1,
         "rgb": 5873999
       }
     },
     {
-      "query": "tag:#community/Integration_Test_Harness",
+      "query": "tag:#community/Room_Task_Management_(1)",
       "color": {
         "a": 1,
         "rgb": 15583560
       }
     },
     {
-      "query": "tag:#community/Public_Booking_Service",
+      "query": "tag:#community/CampCenter.Application_/_Services_(1)",
       "color": {
         "a": 1,
         "rgb": 11565729
       }
     },
     {
-      "query": "tag:#community/Camp_Session_Management",
+      "query": "tag:#community/Room_Mix_Calculator_Tests",
       "color": {
         "a": 1,
         "rgb": 16752039
       }
     },
     {
-      "query": "tag:#community/Room_Mix_Calculator_Tests",
+      "query": "tag:#community/Payment_Gateway_Integration_Tests_(1)",
       "color": {
         "a": 1,
         "rgb": 10253663
@@ -71,35 +71,105 @@
       }
     },
     {
-      "query": "tag:#community/Admin_Bookings_Controller_&_DTOs",
+      "query": "tag:#community/Frontend_Icon_Components",
       "color": {
         "a": 1,
         "rgb": 5142951
       }
     },
     {
-      "query": "tag:#community/Validator_Unit_Tests",
+      "query": "tag:#community/CampCenter.Infrastructure_/_Repositories_(1)",
       "color": {
         "a": 1,
         "rgb": 15896107
       }
     },
     {
-      "query": "tag:#community/Room_Closure_Management",
+      "query": "tag:#community/CampCenter.Application_/_Services_(2)",
       "color": {
         "a": 1,
         "rgb": 14767961
       }
     },
     {
-      "query": "tag:#community/Admin_Frontend_Pages",
+      "query": "tag:#community/Public_Booking_Frontend_(1)",
       "color": {
         "a": 1,
         "rgb": 7780274
       }
     },
     {
-      "query": "tag:#community/Auth_Controller",
+      "query": "tag:#community/CampCenter.UnitTests_/_Services_(1)",
+      "color": {
+        "a": 1,
+        "rgb": 5873999
+      }
+    },
+    {
+      "query": "tag:#community/Admin_Booking_&_Notifications_(1)",
+      "color": {
+        "a": 1,
+        "rgb": 15583560
+      }
+    },
+    {
+      "query": "tag:#community/Room_Closure_Management",
+      "color": {
+        "a": 1,
+        "rgb": 11565729
+      }
+    },
+    {
+      "query": "tag:#community/tests_/_CampCenter.IntegrationTests_(1)",
+      "color": {
+        "a": 1,
+        "rgb": 16752039
+      }
+    },
+    {
+      "query": "tag:#community/Domain_&_Infra_Namespaces",
+      "color": {
+        "a": 1,
+        "rgb": 10253663
+      }
+    },
+    {
+      "query": "tag:#community/src_/_utils",
+      "color": {
+        "a": 1,
+        "rgb": 12234924
+      }
+    },
+    {
+      "query": "tag:#community/Integration_Test_Harness_(1)",
+      "color": {
+        "a": 1,
+        "rgb": 5142951
+      }
+    },
+    {
+      "query": "tag:#community/CampCenter.Application_/_Services_(3)",
+      "color": {
+        "a": 1,
+        "rgb": 15896107
+      }
+    },
+    {
+      "query": "tag:#community/CampCenter.Domain_/_Repositories_(1)",
+      "color": {
+        "a": 1,
+        "rgb": 14767961
+      }
+    },
+    {
+      "query": "tag:#community/Camp_Session_Management",
+      "color": {
+        "a": 1,
+        "rgb": 7780274
+      }
+    },
+    {
+      "query": "tag:#community/Integration_Test_Harness_(2)",
       "color": {
         "a": 1,
         "rgb": 5873999
@@ -113,175 +183,175 @@
       }
     },
     {
-      "query": "tag:#community/Docker_&_Project_Docs",
+      "query": "tag:#community/CampCenter.Domain_/_Repositories_(2)",
       "color": {
         "a": 1,
         "rgb": 11565729
       }
     },
     {
-      "query": "tag:#community/EF_Core_Migrations",
+      "query": "tag:#community/Booking_Persistence_&_Entities_(1)",
       "color": {
         "a": 1,
         "rgb": 16752039
-      }
-    },
-    {
-      "query": "tag:#community/Public_Booking_Frontend",
-      "color": {
-        "a": 1,
-        "rgb": 10253663
-      }
-    },
-    {
-      "query": "tag:#community/TypeScript_App_Config",
-      "color": {
-        "a": 1,
-        "rgb": 12234924
-      }
-    },
-    {
-      "query": "tag:#community/Frontend_App_Shell_&_i18n",
-      "color": {
-        "a": 1,
-        "rgb": 5142951
-      }
-    },
-    {
-      "query": "tag:#community/TypeScript_Node_Config",
-      "color": {
-        "a": 1,
-        "rgb": 15896107
-      }
-    },
-    {
-      "query": "tag:#community/Domain_&_Infra_Namespaces",
-      "color": {
-        "a": 1,
-        "rgb": 14767961
-      }
-    },
-    {
-      "query": "tag:#community/Root_Task-Runner_Scripts",
-      "color": {
-        "a": 1,
-        "rgb": 7780274
       }
     },
     {
       "query": "tag:#community/Application_Namespaces_&_DTOs",
       "color": {
         "a": 1,
-        "rgb": 5873999
-      }
-    },
-    {
-      "query": "tag:#community/Frontend_Icon_Components",
-      "color": {
-        "a": 1,
-        "rgb": 15583560
-      }
-    },
-    {
-      "query": "tag:#community/Auth_Service_&_Tokens",
-      "color": {
-        "a": 1,
-        "rgb": 11565729
-      }
-    },
-    {
-      "query": "tag:#community/API_Launch_Settings",
-      "color": {
-        "a": 1,
-        "rgb": 16752039
-      }
-    },
-    {
-      "query": "tag:#community/Rate_Limiting_&_Startup",
-      "color": {
-        "a": 1,
         "rgb": 10253663
       }
     },
     {
-      "query": "tag:#community/ESLint_Dev_Dependencies",
+      "query": "tag:#community/Admin_Booking_&_Notifications_(2)",
       "color": {
         "a": 1,
         "rgb": 12234924
       }
     },
     {
-      "query": "tag:#community/Domain_Exceptions",
+      "query": "tag:#community/Public_Booking_Service_(1)",
       "color": {
         "a": 1,
         "rgb": 5142951
       }
     },
     {
-      "query": "tag:#community/Frontend_Runtime_Deps",
+      "query": "tag:#community/Public_Booking_Service_(2)",
       "color": {
         "a": 1,
         "rgb": 15896107
       }
     },
     {
-      "query": "tag:#community/Global_Exception_Handler",
+      "query": "tag:#community/Payment_Gateway_Integration_Tests_(2)",
       "color": {
         "a": 1,
         "rgb": 14767961
       }
     },
     {
-      "query": "tag:#community/Auth_DTOs_&_Models",
+      "query": "tag:#community/Docker_&_Project_Docs",
       "color": {
         "a": 1,
         "rgb": 7780274
       }
     },
     {
-      "query": "tag:#community/Admin_Tasks_&_Occupancy_Pages",
+      "query": "tag:#community/Rate_Limiting_&_Startup",
       "color": {
         "a": 1,
         "rgb": 5873999
       }
     },
     {
-      "query": "tag:#community/Admin_User_&_Token_Config",
+      "query": "tag:#community/components_/_admin",
       "color": {
         "a": 1,
         "rgb": 15583560
       }
     },
     {
-      "query": "tag:#community/Application_DTO_Namespaces",
+      "query": "tag:#community/Validator_Unit_Tests",
       "color": {
         "a": 1,
         "rgb": 11565729
       }
     },
     {
-      "query": "tag:#community/OpenAPI_Security_Scheme",
+      "query": "tag:#community/CampCenter.UnitTests_/_Services_(2)",
       "color": {
         "a": 1,
         "rgb": 16752039
       }
     },
     {
-      "query": "tag:#community/Booking_Maintenance_Background_Service",
+      "query": "tag:#community/TypeScript_App_Config",
       "color": {
         "a": 1,
         "rgb": 10253663
       }
     },
     {
-      "query": "tag:#community/Przelewy24_Payment_Client",
+      "query": "tag:#community/Admin_User_&_Token_Config",
       "color": {
         "a": 1,
         "rgb": 12234924
       }
     },
     {
+      "query": "tag:#community/TypeScript_Node_Config",
+      "color": {
+        "a": 1,
+        "rgb": 5142951
+      }
+    },
+    {
+      "query": "tag:#community/Auth_Service_&_Tokens",
+      "color": {
+        "a": 1,
+        "rgb": 15896107
+      }
+    },
+    {
+      "query": "tag:#community/Root_Task-Runner_Scripts",
+      "color": {
+        "a": 1,
+        "rgb": 14767961
+      }
+    },
+    {
+      "query": "tag:#community/CampCenter.UnitTests_/_Services_(3)",
+      "color": {
+        "a": 1,
+        "rgb": 7780274
+      }
+    },
+    {
+      "query": "tag:#community/CampCenter.UnitTests_/_Services_(4)",
+      "color": {
+        "a": 1,
+        "rgb": 5873999
+      }
+    },
+    {
+      "query": "tag:#community/Booking_Persistence_&_Entities_(2)",
+      "color": {
+        "a": 1,
+        "rgb": 15583560
+      }
+    },
+    {
       "query": "tag:#community/JWT_Token_Service",
+      "color": {
+        "a": 1,
+        "rgb": 11565729
+      }
+    },
+    {
+      "query": "tag:#community/tests_/_CampCenter.IntegrationTests_(2)",
+      "color": {
+        "a": 1,
+        "rgb": 16752039
+      }
+    },
+    {
+      "query": "tag:#community/Frontend_App_Shell_&_i18n",
+      "color": {
+        "a": 1,
+        "rgb": 10253663
+      }
+    },
+    {
+      "query": "tag:#community/Auth_Controller_(1)",
+      "color": {
+        "a": 1,
+        "rgb": 12234924
+      }
+    },
+    {
+      "query": "tag:#community/Admin_Frontend_Pages",
       "color": {
         "a": 1,
         "rgb": 5142951
@@ -295,112 +365,392 @@
       }
     },
     {
-      "query": "tag:#community/Frontend_Theme_Toggle",
+      "query": "tag:#community/Admin_Booking_&_Notifications_(3)",
       "color": {
         "a": 1,
         "rgb": 14767961
       }
     },
     {
-      "query": "tag:#community/Refresh_Token_EF_Config",
+      "query": "tag:#community/Room_Task_Management_(2)",
       "color": {
         "a": 1,
         "rgb": 7780274
       }
     },
     {
-      "query": "tag:#community/Refresh_Token_Contract",
+      "query": "tag:#community/API_Launch_Settings",
       "color": {
         "a": 1,
         "rgb": 5873999
       }
     },
     {
-      "query": "tag:#community/Frontend_Build_Scripts",
+      "query": "tag:#community/Global_Exception_Handler",
       "color": {
         "a": 1,
         "rgb": 15583560
       }
     },
     {
-      "query": "tag:#community/Social_Icon_Sprite",
+      "query": "tag:#community/ESLint_Dev_Dependencies",
       "color": {
         "a": 1,
         "rgb": 11565729
       }
     },
     {
-      "query": "tag:#community/Password_Hashing_(bcrypt)",
+      "query": "tag:#community/Admin_Booking_&_Notifications_(4)",
       "color": {
         "a": 1,
         "rgb": 16752039
       }
     },
     {
-      "query": "tag:#community/Admin_User_Repository_Contract",
+      "query": "tag:#community/Persistence_/_Configurations",
       "color": {
         "a": 1,
         "rgb": 10253663
       }
     },
     {
-      "query": "tag:#community/Admin_User_Repository",
+      "query": "tag:#community/DTOs_/_AdminPanel",
       "color": {
         "a": 1,
         "rgb": 12234924
       }
     },
     {
-      "query": "tag:#community/Claims_Principal_Extensions",
+      "query": "tag:#community/Frontend_Runtime_Deps",
       "color": {
         "a": 1,
         "rgb": 5142951
       }
     },
     {
-      "query": "tag:#community/Application_DI_Registration",
+      "query": "tag:#community/CampCenter.Application_/_Services_(4)",
       "color": {
         "a": 1,
         "rgb": 15896107
       }
     },
     {
-      "query": "tag:#community/Frontend_Package_Manifest",
+      "query": "tag:#community/CampCenter.Domain_/_Entities",
       "color": {
         "a": 1,
         "rgb": 14767961
       }
     },
     {
-      "query": "tag:#community/Login_Normalizer",
+      "query": "tag:#community/Domain_Exceptions",
       "color": {
         "a": 1,
         "rgb": 7780274
       }
     },
     {
-      "query": "tag:#community/Frontend_API_Error_Handling",
+      "query": "tag:#community/src_/_api_(2)",
       "color": {
         "a": 1,
         "rgb": 5873999
       }
     },
     {
-      "query": "tag:#community/Select_Component",
+      "query": "tag:#community/Admin_Tasks_&_Occupancy_Pages",
       "color": {
         "a": 1,
         "rgb": 15583560
       }
     },
     {
-      "query": "tag:#community/Infrastructure_DI_Registration",
+      "query": "tag:#community/Controllers_/_Admin",
       "color": {
         "a": 1,
         "rgb": 11565729
       }
     },
     {
-      "query": "tag:#community/Frontend_Theme_Bootstrap",
+      "query": "tag:#community/CampCenter.Domain_/_Repositories_(3)",
+      "color": {
+        "a": 1,
+        "rgb": 16752039
+      }
+    },
+    {
+      "query": "tag:#community/CampCenter.Infrastructure_/_Repositories_(2)",
+      "color": {
+        "a": 1,
+        "rgb": 10253663
+      }
+    },
+    {
+      "query": "tag:#community/CampCenter.Infrastructure_/_Repositories_(3)",
+      "color": {
+        "a": 1,
+        "rgb": 12234924
+      }
+    },
+    {
+      "query": "tag:#community/OpenAPI_Security_Scheme",
+      "color": {
+        "a": 1,
+        "rgb": 5142951
+      }
+    },
+    {
+      "query": "tag:#community/EF_Core_Migrations_(1)",
+      "color": {
+        "a": 1,
+        "rgb": 15896107
+      }
+    },
+    {
+      "query": "tag:#community/Booking_Persistence_&_Entities_(3)",
+      "color": {
+        "a": 1,
+        "rgb": 14767961
+      }
+    },
+    {
+      "query": "tag:#community/Booking_Maintenance_Background_Service",
+      "color": {
+        "a": 1,
+        "rgb": 7780274
+      }
+    },
+    {
+      "query": "tag:#community/Admin_Booking_&_Notifications_(5)",
+      "color": {
+        "a": 1,
+        "rgb": 5873999
+      }
+    },
+    {
+      "query": "tag:#community/CampCenter.UnitTests_/_Services_(5)",
+      "color": {
+        "a": 1,
+        "rgb": 15583560
+      }
+    },
+    {
+      "query": "tag:#community/Auth_Controller_(2)",
+      "color": {
+        "a": 1,
+        "rgb": 11565729
+      }
+    },
+    {
+      "query": "tag:#community/Booking_Persistence_&_Entities_(4)",
+      "color": {
+        "a": 1,
+        "rgb": 16752039
+      }
+    },
+    {
+      "query": "tag:#community/Przelewy24_Payment_Client",
+      "color": {
+        "a": 1,
+        "rgb": 10253663
+      }
+    },
+    {
+      "query": "tag:#community/Frontend_Build_Scripts",
+      "color": {
+        "a": 1,
+        "rgb": 12234924
+      }
+    },
+    {
+      "query": "tag:#community/Social_Icon_Sprite",
+      "color": {
+        "a": 1,
+        "rgb": 5142951
+      }
+    },
+    {
+      "query": "tag:#community/Password_Hashing_(bcrypt)",
+      "color": {
+        "a": 1,
+        "rgb": 15896107
+      }
+    },
+    {
+      "query": "tag:#community/Claims_Principal_Extensions",
+      "color": {
+        "a": 1,
+        "rgb": 14767961
+      }
+    },
+    {
+      "query": "tag:#community/Frontend_Package_Manifest",
+      "color": {
+        "a": 1,
+        "rgb": 7780274
+      }
+    },
+    {
+      "query": "tag:#community/EF_Core_Migrations_(2)",
+      "color": {
+        "a": 1,
+        "rgb": 5873999
+      }
+    },
+    {
+      "query": "tag:#community/EF_Core_Migrations_(3)",
+      "color": {
+        "a": 1,
+        "rgb": 15583560
+      }
+    },
+    {
+      "query": "tag:#community/DTOs_/_Schedule_(2)",
+      "color": {
+        "a": 1,
+        "rgb": 11565729
+      }
+    },
+    {
+      "query": "tag:#community/EF_Core_Migrations_(4)",
+      "color": {
+        "a": 1,
+        "rgb": 16752039
+      }
+    },
+    {
+      "query": "tag:#community/Persistence_/_Migrations_(1)",
+      "color": {
+        "a": 1,
+        "rgb": 10253663
+      }
+    },
+    {
+      "query": "tag:#community/Persistence_/_Migrations_(2)",
+      "color": {
+        "a": 1,
+        "rgb": 12234924
+      }
+    },
+    {
+      "query": "tag:#community/Persistence_/_Migrations_(3)",
+      "color": {
+        "a": 1,
+        "rgb": 5142951
+      }
+    },
+    {
+      "query": "tag:#community/Persistence_/_Migrations_(4)",
+      "color": {
+        "a": 1,
+        "rgb": 15896107
+      }
+    },
+    {
+      "query": "tag:#community/Persistence_/_Migrations_(5)",
+      "color": {
+        "a": 1,
+        "rgb": 14767961
+      }
+    },
+    {
+      "query": "tag:#community/Persistence_/_Migrations_(6)",
+      "color": {
+        "a": 1,
+        "rgb": 7780274
+      }
+    },
+    {
+      "query": "tag:#community/Persistence_/_Migrations_(7)",
+      "color": {
+        "a": 1,
+        "rgb": 5873999
+      }
+    },
+    {
+      "query": "tag:#community/Login_Normalizer",
+      "color": {
+        "a": 1,
+        "rgb": 15583560
+      }
+    },
+    {
+      "query": "tag:#community/Frontend_API_Error_Handling",
+      "color": {
+        "a": 1,
+        "rgb": 11565729
+      }
+    },
+    {
+      "query": "tag:#community/Select_Component",
+      "color": {
+        "a": 1,
+        "rgb": 16752039
+      }
+    },
+    {
+      "query": "tag:#community/Infrastructure_DI_Registration",
+      "color": {
+        "a": 1,
+        "rgb": 10253663
+      }
+    },
+    {
+      "query": "tag:#community/EF_Core_Migrations_(5)",
+      "color": {
+        "a": 1,
+        "rgb": 12234924
+      }
+    },
+    {
+      "query": "tag:#community/Persistence_/_Migrations_(8)",
+      "color": {
+        "a": 1,
+        "rgb": 5142951
+      }
+    },
+    {
+      "query": "tag:#community/Persistence_/_Migrations_(9)",
+      "color": {
+        "a": 1,
+        "rgb": 15896107
+      }
+    },
+    {
+      "query": "tag:#community/Persistence_/_Migrations_(10)",
+      "color": {
+        "a": 1,
+        "rgb": 14767961
+      }
+    },
+    {
+      "query": "tag:#community/Persistence_/_Migrations_(11)",
+      "color": {
+        "a": 1,
+        "rgb": 7780274
+      }
+    },
+    {
+      "query": "tag:#community/Persistence_/_Migrations_(12)",
+      "color": {
+        "a": 1,
+        "rgb": 5873999
+      }
+    },
+    {
+      "query": "tag:#community/Persistence_/_Migrations_(13)",
+      "color": {
+        "a": 1,
+        "rgb": 15583560
+      }
+    },
+    {
+      "query": "tag:#community/frontend_(1)",
+      "color": {
+        "a": 1,
+        "rgb": 11565729
+      }
+    },
+    {
+      "query": "tag:#community/Public_Booking_Frontend_(2)",
       "color": {
         "a": 1,
         "rgb": 16752039
@@ -470,31 +820,262 @@
       }
     },
     {
-      "query": "tag:#community/ESLint_Config_File",
+      "query": "tag:#community/Unlabeled_(1)",
       "color": {
         "a": 1,
         "rgb": 16752039
       }
     },
     {
-      "query": "tag:#community/React_Logo_Asset",
+      "query": "tag:#community/frontend_(2)",
       "color": {
         "a": 1,
         "rgb": 10253663
       }
     },
     {
-      "query": "tag:#community/Vite_Logo_Asset",
+      "query": "tag:#community/frontend_(3)",
       "color": {
         "a": 1,
         "rgb": 12234924
       }
     },
     {
-      "query": "tag:#community/Vite_Config",
+      "query": "tag:#community/src_/_assets_(1)",
       "color": {
         "a": 1,
         "rgb": 5142951
+      }
+    },
+    {
+      "query": "tag:#community/src_/_assets_(2)",
+      "color": {
+        "a": 1,
+        "rgb": 15896107
+      }
+    },
+    {
+      "query": "tag:#community/frontend_(4)",
+      "color": {
+        "a": 1,
+        "rgb": 14767961
+      }
+    },
+    {
+      "query": "tag:#community/Unlabeled_(2)",
+      "color": {
+        "a": 1,
+        "rgb": 7780274
+      }
+    },
+    {
+      "query": "tag:#community/Unlabeled_(3)",
+      "color": {
+        "a": 1,
+        "rgb": 5873999
+      }
+    },
+    {
+      "query": "tag:#community/Unlabeled_(4)",
+      "color": {
+        "a": 1,
+        "rgb": 15583560
+      }
+    },
+    {
+      "query": "tag:#community/Unlabeled_(5)",
+      "color": {
+        "a": 1,
+        "rgb": 11565729
+      }
+    },
+    {
+      "query": "tag:#community/Unlabeled_(6)",
+      "color": {
+        "a": 1,
+        "rgb": 16752039
+      }
+    },
+    {
+      "query": "tag:#community/Unlabeled_(7)",
+      "color": {
+        "a": 1,
+        "rgb": 10253663
+      }
+    },
+    {
+      "query": "tag:#community/Unlabeled_(8)",
+      "color": {
+        "a": 1,
+        "rgb": 12234924
+      }
+    },
+    {
+      "query": "tag:#community/Unlabeled_(9)",
+      "color": {
+        "a": 1,
+        "rgb": 5142951
+      }
+    },
+    {
+      "query": "tag:#community/Unlabeled_(10)",
+      "color": {
+        "a": 1,
+        "rgb": 15896107
+      }
+    },
+    {
+      "query": "tag:#community/Unlabeled_(11)",
+      "color": {
+        "a": 1,
+        "rgb": 14767961
+      }
+    },
+    {
+      "query": "tag:#community/Unlabeled_(12)",
+      "color": {
+        "a": 1,
+        "rgb": 7780274
+      }
+    },
+    {
+      "query": "tag:#community/Unlabeled_(13)",
+      "color": {
+        "a": 1,
+        "rgb": 5873999
+      }
+    },
+    {
+      "query": "tag:#community/Unlabeled_(14)",
+      "color": {
+        "a": 1,
+        "rgb": 15583560
+      }
+    },
+    {
+      "query": "tag:#community/Unlabeled_(15)",
+      "color": {
+        "a": 1,
+        "rgb": 11565729
+      }
+    },
+    {
+      "query": "tag:#community/Unlabeled_(16)",
+      "color": {
+        "a": 1,
+        "rgb": 16752039
+      }
+    },
+    {
+      "query": "tag:#community/Unlabeled_(17)",
+      "color": {
+        "a": 1,
+        "rgb": 10253663
+      }
+    },
+    {
+      "query": "tag:#community/Unlabeled_(18)",
+      "color": {
+        "a": 1,
+        "rgb": 12234924
+      }
+    },
+    {
+      "query": "tag:#community/Unlabeled_(19)",
+      "color": {
+        "a": 1,
+        "rgb": 5142951
+      }
+    },
+    {
+      "query": "tag:#community/Unlabeled_(20)",
+      "color": {
+        "a": 1,
+        "rgb": 15896107
+      }
+    },
+    {
+      "query": "tag:#community/Unlabeled_(21)",
+      "color": {
+        "a": 1,
+        "rgb": 14767961
+      }
+    },
+    {
+      "query": "tag:#community/Unlabeled_(22)",
+      "color": {
+        "a": 1,
+        "rgb": 7780274
+      }
+    },
+    {
+      "query": "tag:#community/Unlabeled_(23)",
+      "color": {
+        "a": 1,
+        "rgb": 5873999
+      }
+    },
+    {
+      "query": "tag:#community/Unlabeled_(24)",
+      "color": {
+        "a": 1,
+        "rgb": 15583560
+      }
+    },
+    {
+      "query": "tag:#community/Unlabeled_(25)",
+      "color": {
+        "a": 1,
+        "rgb": 11565729
+      }
+    },
+    {
+      "query": "tag:#community/Unlabeled_(26)",
+      "color": {
+        "a": 1,
+        "rgb": 16752039
+      }
+    },
+    {
+      "query": "tag:#community/Unlabeled_(27)",
+      "color": {
+        "a": 1,
+        "rgb": 10253663
+      }
+    },
+    {
+      "query": "tag:#community/Unlabeled_(28)",
+      "color": {
+        "a": 1,
+        "rgb": 12234924
+      }
+    },
+    {
+      "query": "tag:#community/Unlabeled_(29)",
+      "color": {
+        "a": 1,
+        "rgb": 5142951
+      }
+    },
+    {
+      "query": "tag:#community/Unlabeled_(30)",
+      "color": {
+        "a": 1,
+        "rgb": 15896107
+      }
+    },
+    {
+      "query": "tag:#community/Unlabeled_(31)",
+      "color": {
+        "a": 1,
+        "rgb": 14767961
+      }
+    },
+    {
+      "query": "tag:#community/Unlabeled_(32)",
+      "color": {
+        "a": 1,
+        "rgb": 7780274
       }
     }
   ]

@@ -1,7 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { isAxiosError } from "axios";
 import AdminLayout from "../../components/admin/AdminLayout";
 import MonthCalendar, {
   type CalendarBar,
@@ -10,7 +9,6 @@ import MonthCalendar, {
 import DayTimetable from "../../components/admin/DayTimetable";
 import GroupSchedulePanel from "../../components/admin/GroupSchedulePanel";
 import {
-  generateMissingMeals,
   getScheduleCalendar,
   getScheduleDay,
   type ScheduleCalendar,
@@ -33,7 +31,6 @@ export default function SchedulePage() {
   const [day, setDay] = useState<ScheduleDay | null>(null);
   const [selectedBookingId, setSelectedBookingId] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const [notice, setNotice] = useState<string | null>(null);
   const timetableRef = useRef<HTMLDivElement>(null);
   const groupPanelRef = useRef<HTMLDivElement>(null);
   // Set when the user picks a day, cleared once that day's timetable has been
@@ -100,22 +97,6 @@ export default function SchedulePage() {
     if (selectedDate) setDay(await getScheduleDay(selectedDate));
   }
 
-  async function handleBackfill() {
-    setError(null);
-    try {
-      const { bookings, created } = await generateMissingMeals(gridStart, gridEnd);
-      setNotice(t("schedule.backfillDone", { bookings, created }));
-      await refreshAll();
-    } catch (err) {
-      if (isAxiosError(err) && err.response) {
-        const detail = (err.response.data as { detail?: string } | undefined)?.detail;
-        setError(detail ?? t("schedule.genericError"));
-      } else {
-        setError(t("schedule.genericError"));
-      }
-    }
-  }
-
   const bars: CalendarBar[] =
     calendar?.bookings.map((booking) => ({
       id: booking.bookingId,
@@ -145,15 +126,15 @@ export default function SchedulePage() {
           <p>{t("schedule.intro")}</p>
         </div>
         <div className="row-actions">
-          <button type="button" onClick={() => void handleBackfill()}>
-            {t("schedule.backfill")}
-          </button>
-          <Link to="/admin/posilki">{t("schedule.mealTimesLink")}</Link>
+          {/* A Link rather than a button — it navigates. Styled as one so it reads
+              as the section's action. */}
+          <Link className="toolbar-button" to="/admin/posilki">
+            {t("schedule.mealTimesLink")}
+          </Link>
         </div>
       </div>
 
       {error && <p role="alert">{error}</p>}
-      {notice && <p className="group-panel-notice">{notice}</p>}
 
       <div className="schedule-layout">
         <div className="schedule-main">

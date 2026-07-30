@@ -11,17 +11,6 @@ tags:
 
 # include
 
-## Context
-
-_Source: `frontend/tsconfig.app.json` (defined near L24; showing L22–L25 of 25)._
-
-```json
-    "noFallthroughCasesInSwitch": true
-  },
-  "include": ["src"]
-}
-```
-
 ## Connections
 - [[src]] - `extends` [EXTRACTED]
 - [[tsconfig.app.json]] - `contains` [EXTRACTED]

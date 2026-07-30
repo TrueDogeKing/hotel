@@ -1,20 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Booking Persistence & Entities"
+community: "CampCenter.Infrastructure / Repositories (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Booking_Persistence__Entities
+  - community/CampCenterInfrastructure_/_Repositories_1
 ---
 
 # IDesignTimeDbContextFactory
 
-## Context
-
-_Synthetic reference node from AST structural extraction. It has no source file of its own — it is an aggregate/type symbol defined entirely by the connections listed below._
-
 ## Connections
 - [[DesignTimeDbContextFactory]] - `implements` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Booking_Persistence__Entities
+#graphify/code #graphify/EXTRACTED #community/CampCenterInfrastructure_/_Repositories_1

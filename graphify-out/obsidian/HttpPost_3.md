@@ -1,22 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "Room Task Management"
+community: "Room Task Management (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Task_Management
+  - community/Room_Task_Management_2
 ---
 
 # HttpPost
 
-## Context
-
-_Synthetic reference node from AST structural extraction. It has no source file of its own — it is an aggregate/type symbol defined entirely by the connections listed below._
-
 ## Connections
-- [[.Create()_2]] - `references` [EXTRACTED]
+- [[.Create()_4]] - `references` [EXTRACTED]
 - [[.Done()]] - `references` [EXTRACTED]
 - [[.Reopen()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Task_Management
+#graphify/code #graphify/EXTRACTED #community/Room_Task_Management_2

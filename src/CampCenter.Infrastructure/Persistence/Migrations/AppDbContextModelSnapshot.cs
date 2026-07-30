@@ -268,6 +268,11 @@ namespace CampCenter.Infrastructure.Persistence.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("timestamp with time zone");
 
+                    b.Property<int>("DurationMinutes")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasDefaultValue(60);
+
                     b.Property<TimeOnly>("EndTime")
                         .HasColumnType("time without time zone");
 
@@ -302,6 +307,8 @@ namespace CampCenter.Infrastructure.Persistence.Migrations
 
                     b.ToTable("MealTimeDefaults", null, t =>
                         {
+                            t.HasCheckConstraint("CK_MealTimeDefaults_Duration", "\"DurationMinutes\" BETWEEN 5 AND 480");
+
                             t.HasCheckConstraint("CK_MealTimeDefaults_TimeOrder", "\"EndTime\" > \"StartTime\"");
                         });
                 });
@@ -436,6 +443,60 @@ namespace CampCenter.Infrastructure.Persistence.Migrations
                     b.ToTable("Rooms", (string)null);
                 });
 
+            modelBuilder.Entity("CampCenter.Domain.Entities.RoomCleaning", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<DateOnly>("Date")
+                        .HasColumnType("date");
+
+                    b.Property<DateTime?>("DoneAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<Guid?>("DoneByAdminUserId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Kind")
+                        .IsRequired()
+                        .HasMaxLength(16)
+                        .HasColumnType("character varying(16)");
+
+                    b.Property<string>("Note")
+                        .HasMaxLength(1000)
+                        .HasColumnType("character varying(1000)");
+
+                    b.Property<Guid>("RoomId")
+                        .HasColumnType("uuid");
+
+                    b.Property<uint>("RowVersion")
+                        .IsConcurrencyToken()
+                        .ValueGeneratedOnAddOrUpdate()
+                        .HasColumnType("xid")
+                        .HasColumnName("xmin");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasMaxLength(16)
+                        .HasColumnType("character varying(16)");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Date");
+
+                    b.HasIndex("RoomId", "Date")
+                        .IsUnique();
+
+                    b.ToTable("RoomCleanings", (string)null);
+                });
+
             modelBuilder.Entity("CampCenter.Domain.Entities.RoomTask", b =>
                 {
                     b.Property<Guid>("Id")
@@ -525,6 +586,9 @@ namespace CampCenter.Infrastructure.Persistence.Migrations
                         .HasMaxLength(2000)
                         .HasColumnType("character varying(2000)");
 
+                    b.Property<int?>("ParticipantCount")
+                        .HasColumnType("integer");
+
                     b.Property<string>("PrepNotes")
                         .HasMaxLength(2000)
                         .HasColumnType("character varying(2000)");
@@ -563,6 +627,8 @@ namespace CampCenter.Infrastructure.Persistence.Migrations
 
                     b.ToTable("ScheduleEntries", null, t =>
                         {
+                            t.HasCheckConstraint("CK_ScheduleEntries_ParticipantCount", "\"ParticipantCount\" IS NULL OR \"ParticipantCount\" > 0");
+
                             t.HasCheckConstraint("CK_ScheduleEntries_TimeOrder", "\"EndTime\" > \"StartTime\"");
                         });
                 });
@@ -635,6 +701,17 @@ namespace CampCenter.Infrastructure.Persistence.Migrations
                         .IsRequired();
 
                     b.Navigation("AdminUser");
+                });
+
+            modelBuilder.Entity("CampCenter.Domain.Entities.RoomCleaning", b =>
+                {
+                    b.HasOne("CampCenter.Domain.Entities.Room", "Room")
+                        .WithMany()
+                        .HasForeignKey("RoomId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Room");
                 });
 
             modelBuilder.Entity("CampCenter.Domain.Entities.RoomTask", b =>

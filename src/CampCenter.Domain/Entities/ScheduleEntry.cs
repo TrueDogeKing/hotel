@@ -62,6 +62,12 @@ public class ScheduleEntry
 
     public string? Location { get; set; }
 
+    /// How many of the group actually take part in this meal or activity —
+    /// defaults to the group's full Headcount but can be reduced (a subset opts
+    /// out) or raised (guests from another group join in). Null means "the whole
+    /// group"; auto-generated meals are left null until an admin overrides one.
+    public int? ParticipantCount { get; set; }
+
     /// Set when an admin moves this one entry to a different time. Re-timing the
     /// whole stay (via the group's meal times) deliberately skips these, so a
     /// one-off change — a trip day with an early lunch — survives a later bulk edit.

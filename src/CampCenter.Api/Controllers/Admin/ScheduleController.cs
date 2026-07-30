@@ -56,6 +56,23 @@ public class ScheduleController : ControllerBase
         CancellationToken cancellationToken
     ) => Ok(await _schedule.GetForBookingAsync(bookingId, cancellationToken));
 
+    /// What a proposed entry would clash with — another group in the same place, or
+    /// another group at the tables. The admin is warned and may still save, so this is
+    /// a separate advisory call rather than a rule on the write endpoints.
+    [HttpPost("entries/check-conflicts")]
+    [ProducesResponseType(typeof(ScheduleConflictsDto), StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    public async Task<IActionResult> CheckConflicts(
+        [FromBody] CheckScheduleConflictsRequestDto request,
+        CancellationToken cancellationToken
+    ) => Ok(await _schedule.CheckConflictsAsync(request, cancellationToken));
+
+    /// Places already in use, for the entry form's suggestions.
+    [HttpGet("locations")]
+    [ProducesResponseType(typeof(ScheduleLocationsDto), StatusCodes.Status200OK)]
+    public async Task<IActionResult> GetLocations(CancellationToken cancellationToken) =>
+        Ok(await _schedule.GetLocationsAsync(cancellationToken));
+
     [HttpPost("entries")]
     [ProducesResponseType(typeof(ScheduleEntryDto), StatusCodes.Status201Created)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -180,6 +197,27 @@ public class ScheduleController : ControllerBase
                 mealTimeDefaultId,
                 applyToExisting,
                 cancellationToken
+            )
+        );
+
+    /// Drops this group's whole series of one meal — "no dinner for this group" —
+    /// rather than deleting it day by day. Suppressed, so generation will not
+    /// recreate them.
+    [HttpDelete("bookings/{bookingId:guid}/meal-times/{mealTimeDefaultId:guid}/entries")]
+    [ProducesResponseType(typeof(DeleteBookingMealsResultDto), StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    public async Task<IActionResult> DeleteBookingMeals(
+        Guid bookingId,
+        Guid mealTimeDefaultId,
+        CancellationToken cancellationToken
+    ) =>
+        Ok(
+            new DeleteBookingMealsResultDto(
+                await _schedule.DeleteBookingMealsAsync(
+                    bookingId,
+                    mealTimeDefaultId,
+                    cancellationToken
+                )
             )
         );
 

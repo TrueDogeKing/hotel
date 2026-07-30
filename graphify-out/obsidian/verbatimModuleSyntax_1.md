@@ -11,27 +11,6 @@ tags:
 
 # verbatimModuleSyntax
 
-## Context
-
-_Source: `frontend/tsconfig.node.json` (defined near L13; showing L11–L24 of 24)._
-
-```json
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "verbatimModuleSyntax": true,
-    "moduleDetection": "force",
-    "noEmit": true,
-
-    /* Linting */
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "erasableSyntaxOnly": true,
-    "noFallthroughCasesInSwitch": true
-  },
-  "include": ["vite.config.ts"]
-}
-```
-
 ## Connections
 - [[compilerOptions_1]] - `contains` [EXTRACTED]
 

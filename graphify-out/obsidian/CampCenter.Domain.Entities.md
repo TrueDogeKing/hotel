@@ -11,33 +11,9 @@ tags:
 
 # CampCenter.Domain.Entities
 
-## Context
-
-_Source: `src/CampCenter.Domain/Entities/AdminUser.cs` (defined near L1; showing L1–L18 of 18)._
-
-```csharp
-namespace CampCenter.Domain.Entities;
-
-/// Administrator account. Admins are created by the data seeder — there is no
-/// public registration; bookers never have accounts.
-public class AdminUser
-{
-    public Guid Id { get; set; }
-
-    /// Unique sign-in identifier, stored lowercase.
-    public required string Login { get; set; }
-
-    public required string PasswordHash { get; set; }
-
-    /// Create date (UTC).
-    public DateTime CreatedAt { get; set; }
-
-    public uint RowVersion { get; set; }
-}
-```
-
 ## Connections
 - [[AdminBookingService.cs]] - `imports` [EXTRACTED]
+- [[AdminBookingValidators.cs]] - `imports` [EXTRACTED]
 - [[AdminUser.cs]] - `contains` [EXTRACTED]
 - [[AdminUserConfiguration.cs]] - `imports` [EXTRACTED]
 - [[AdminUserRepository.cs]] - `imports` [EXTRACTED]
@@ -46,27 +22,47 @@ public class AdminUser
 - [[Booking.cs]] - `contains` [EXTRACTED]
 - [[BookingConfiguration.cs]] - `imports` [EXTRACTED]
 - [[BookingMaintenanceService.cs]] - `imports` [EXTRACTED]
+- [[BookingMealTime.cs]] - `contains` [EXTRACTED]
+- [[BookingMealTimeConfiguration.cs]] - `imports` [EXTRACTED]
+- [[BookingMealTimeRepository.cs]] - `imports` [EXTRACTED]
 - [[BookingRepository.cs]] - `imports` [EXTRACTED]
 - [[BookingRoomAssignment.cs]] - `contains` [EXTRACTED]
 - [[BookingRoomAssignmentConfiguration.cs]] - `imports` [EXTRACTED]
 - [[BookingService.cs]] - `imports` [EXTRACTED]
+- [[BookingStatuses.cs]] - `contains` [EXTRACTED]
 - [[BookingsController.cs]] - `imports` [EXTRACTED]
 - [[CampSessionService.cs]] - `imports` [EXTRACTED]
 - [[Closure.cs]] - `contains` [EXTRACTED]
 - [[ClosureConfiguration.cs]] - `imports` [EXTRACTED]
 - [[ClosureRepository.cs]] - `imports` [EXTRACTED]
+- [[ClosureService.cs]] - `imports` [EXTRACTED]
 - [[DataSeeder.cs]] - `imports` [EXTRACTED]
 - [[EmailTemplates.cs]] - `imports` [EXTRACTED]
+- [[HousekeepingPlanner.cs]] - `imports` [EXTRACTED]
+- [[HousekeepingPlannerTests.cs]] - `imports` [EXTRACTED]
+- [[HousekeepingService.cs]] - `imports` [EXTRACTED]
+- [[HousekeepingServiceTests.cs]] - `imports` [EXTRACTED]
 - [[IAdminBookingService.cs]] - `imports` [EXTRACTED]
 - [[IAdminUserRepository.cs]] - `imports` [EXTRACTED]
+- [[IBookingMealTimeRepository.cs]] - `imports` [EXTRACTED]
 - [[IBookingRepository.cs]] - `imports` [EXTRACTED]
 - [[IClosureRepository.cs]] - `imports` [EXTRACTED]
+- [[IMealTimeDefaultRepository.cs]] - `imports` [EXTRACTED]
 - [[IRefreshTokenRepository.cs]] - `imports` [EXTRACTED]
+- [[IRoomCleaningRepository.cs]] - `imports` [EXTRACTED]
 - [[IRoomRepository.cs]] - `imports` [EXTRACTED]
 - [[IRoomTaskRepository.cs]] - `imports` [EXTRACTED]
 - [[IRoomTaskService.cs]] - `imports` [EXTRACTED]
+- [[IScheduleEntryRepository.cs]] - `imports` [EXTRACTED]
 - [[ITokenService.cs]] - `imports` [EXTRACTED]
 - [[JwtTokenService.cs]] - `imports` [EXTRACTED]
+- [[MealGenerationPlanner.cs]] - `imports` [EXTRACTED]
+- [[MealGenerationPlannerTests.cs]] - `imports` [EXTRACTED]
+- [[MealTimeDefault.cs]] - `contains` [EXTRACTED]
+- [[MealTimeDefaultConfiguration.cs]] - `imports` [EXTRACTED]
+- [[MealTimeDefaultRepository.cs]] - `imports` [EXTRACTED]
+- [[MealTimeService.cs]] - `imports` [EXTRACTED]
+- [[MealTimeValidators.cs]] - `imports` [EXTRACTED]
 - [[Payment.cs]] - `contains` [EXTRACTED]
 - [[PaymentConfiguration.cs]] - `imports` [EXTRACTED]
 - [[PaymentService.cs]] - `imports` [EXTRACTED]
@@ -74,6 +70,9 @@ public class AdminUser
 - [[RefreshTokenConfiguration.cs]] - `imports` [EXTRACTED]
 - [[RefreshTokenRepository.cs]] - `imports` [EXTRACTED]
 - [[Room.cs]] - `contains` [EXTRACTED]
+- [[RoomCleaning.cs]] - `contains` [EXTRACTED]
+- [[RoomCleaningConfiguration.cs]] - `imports` [EXTRACTED]
+- [[RoomCleaningRepository.cs]] - `imports` [EXTRACTED]
 - [[RoomConfiguration.cs]] - `imports` [EXTRACTED]
 - [[RoomRepository.cs]] - `imports` [EXTRACTED]
 - [[RoomService.cs]] - `imports` [EXTRACTED]
@@ -81,6 +80,12 @@ public class AdminUser
 - [[RoomTaskConfiguration.cs]] - `imports` [EXTRACTED]
 - [[RoomTaskRepository.cs]] - `imports` [EXTRACTED]
 - [[RoomTaskService.cs]] - `imports` [EXTRACTED]
+- [[ScheduleConflictTests.cs]] - `imports` [EXTRACTED]
+- [[ScheduleEntry.cs]] - `contains` [EXTRACTED]
+- [[ScheduleEntryConfiguration.cs]] - `imports` [EXTRACTED]
+- [[ScheduleEntryRepository.cs]] - `imports` [EXTRACTED]
+- [[ScheduleService.cs]] - `imports` [EXTRACTED]
+- [[ScheduleValidators.cs]] - `imports` [EXTRACTED]
 - [[TasksController.cs]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Domain__Infra_Namespaces

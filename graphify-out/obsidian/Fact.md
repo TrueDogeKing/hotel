@@ -1,20 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "Integration Test Harness"
+community: "Integration Test Harness (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Integration_Test_Harness
+  - community/Integration_Test_Harness_1
 ---
 
 # Fact
 
-## Context
-
-_Synthetic reference node from AST structural extraction. It has no source file of its own — it is an aggregate/type symbol defined entirely by the connections listed below._
-
 ## Connections
+- [[.Closure_BlocksRoom_InOccupancyGrid()]] - `references` [EXTRACTED]
 - [[.Occupancy_Reassign_Tasks_And_Dashboard_Work()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Integration_Test_Harness
+#graphify/code #graphify/EXTRACTED #community/Integration_Test_Harness_1

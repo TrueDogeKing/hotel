@@ -11,25 +11,6 @@ tags:
 
 # getUserLoginFromToken()
 
-## Context
-
-_Source: `frontend/src/api/jwt.ts` (defined near L35; showing L33–L44 of 44)._
-
-```typescript
-
-// The unique login ("preferred_username" claim).
-export function getUserLoginFromToken(token: string | null): string | null {
-  if (!token) return null;
-  return decodeJWT(token)?.preferred_username ?? null;
-}
-
-// The user id ("sub" claim); used to tell own messages/participants from others'.
-export function getUserIdFromToken(token: string | null): string | null {
-  if (!token) return null;
-  return decodeJWT(token)?.sub ?? null;
-}
-```
-
 ## Connections
 - [[AuthContext.tsx]] - `imports` [EXTRACTED]
 - [[AuthProvider()]] - `calls` [EXTRACTED]

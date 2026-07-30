@@ -12,7 +12,14 @@ public class ScheduleEntryConfiguration : IEntityTypeConfiguration<ScheduleEntry
         // snapshot stays in sync with the database.
         builder.ToTable(
             "ScheduleEntries",
-            t => t.HasCheckConstraint("CK_ScheduleEntries_TimeOrder", "\"EndTime\" > \"StartTime\"")
+            t =>
+            {
+                t.HasCheckConstraint("CK_ScheduleEntries_TimeOrder", "\"EndTime\" > \"StartTime\"");
+                t.HasCheckConstraint(
+                    "CK_ScheduleEntries_ParticipantCount",
+                    "\"ParticipantCount\" IS NULL OR \"ParticipantCount\" > 0"
+                );
+            }
         );
 
         builder.HasKey(x => x.Id);

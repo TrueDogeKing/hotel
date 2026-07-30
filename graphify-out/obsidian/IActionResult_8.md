@@ -1,20 +1,13 @@
 ---
 source_file: ""
 type: "code"
-community: "Room Mix Calculator Tests"
+community: "Unlabeled (16)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Mix_Calculator_Tests
+  - community/Unlabeled_16
 ---
 
 # IActionResult
 
-## Context
-
-_Synthetic reference node from AST structural extraction. It has no source file of its own — it is an aggregate/type symbol defined entirely by the connections listed below._
-
-## Connections
-- [[.Get()_2]] - `references` [EXTRACTED]
-
-#graphify/code #graphify/EXTRACTED #community/Room_Mix_Calculator_Tests
+#graphify/code #graphify/EXTRACTED #community/Unlabeled_16

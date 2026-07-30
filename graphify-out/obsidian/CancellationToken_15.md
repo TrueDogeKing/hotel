@@ -1,22 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "Public Booking Service"
+community: "Public Booking Service (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public_Booking_Service
+  - community/Public_Booking_Service_1
 ---
 
 # CancellationToken
 
-## Context
-
-_Synthetic reference node from AST structural extraction. It has no source file of its own — it is an aggregate/type symbol defined entirely by the connections listed below._
-
 ## Connections
 - [[.CancelByTokenAsync()]] - `references` [EXTRACTED]
-- [[.CreateAsync()]] - `references` [EXTRACTED]
+- [[.CreateAsync()_7]] - `references` [EXTRACTED]
 - [[.GetByTokenAsync()]] - `references` [EXTRACTED]
+- [[.GetScheduleByTokenAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service
+#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_1

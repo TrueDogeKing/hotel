@@ -36,6 +36,55 @@ public static class MealGenerationPlanner
         ];
     }
 
+    /// The earliest sitting from the window's start that clashes with nobody.
+    ///
+    /// Walks forward past each group already seated rather than counting fixed
+    /// slots: sittings are only on a regular grid while every group shares one
+    /// duration, and they do not — the slot's length can be edited after groups are
+    /// seated, and an admin can set a group's time by hand. Comparing real
+    /// start/end pairs is the only thing that actually guarantees no two groups eat
+    /// at once.
+    ///
+    /// Seating into the first free slot, rather than by position in some ordering,
+    /// is what keeps existing groups still: a new arrival slots in and nobody else's
+    /// mealtime moves.
+    public static (TimeOnly Start, TimeOnly End) NextFreeSitting(
+        TimeOnly windowStart,
+        IReadOnlyCollection<(TimeOnly Start, TimeOnly End)> taken,
+        int durationMinutes,
+        int gapMinutes
+    )
+    {
+        var start = windowStart;
+        // Each pass jumps past every sitting the candidate runs into; a clash can
+        // only ever push it later, so this settles after at most one pass per group.
+        for (var guard = 0; guard <= taken.Count; guard++)
+        {
+            var end = start.AddMinutes(durationMinutes);
+            var clashing = taken
+                .Where(t => ClashesWith(start, end, t.Start, t.End, gapMinutes))
+                .ToList();
+            if (clashing.Count == 0)
+            {
+                return (start, end);
+            }
+
+            start = clashing.Max(t => t.End).AddMinutes(gapMinutes);
+        }
+
+        return (start, start.AddMinutes(durationMinutes));
+    }
+
+    /// Two sittings need the changeover gap between them; anything less is a clash
+    /// the admin is warned about but still allowed to save.
+    public static bool ClashesWith(
+        TimeOnly startA,
+        TimeOnly endA,
+        TimeOnly startB,
+        TimeOnly endB,
+        int gapMinutes
+    ) => startA < endB.AddMinutes(gapMinutes) && startB < endA.AddMinutes(gapMinutes);
+
     /// Every (day, slot) pair a stay should get.
     ///
     /// Days run [start, end] INCLUSIVE: the departure day is a real schedule day
