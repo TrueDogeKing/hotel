@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Booking Maintenance Background Service"
+community: "WriteRequiresAdministratorHandler"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Booking_Maintenance_Background_Service
+  - community/WriteRequiresAdministratorHandler
 ---
 
 # Task
 
 ## Connections
-- [[.ExecuteAsync()]] - `references` [EXTRACTED]
-- [[.SweepAsync()]] - `references` [EXTRACTED]
+- [[.HandleRequirementAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Booking_Maintenance_Background_Service
+#graphify/code #graphify/EXTRACTED #community/WriteRequiresAdministratorHandler

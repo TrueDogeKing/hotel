@@ -1,19 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "Room Management"
+community: "Admin Booking & Notifications (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Management
+  - community/Admin_Booking__Notifications_2
 ---
 
 # CancellationToken
 
 ## Connections
-- [[.CreateAsync()_4]] - `references` [EXTRACTED]
-- [[.DeleteAsync()_2]] - `references` [EXTRACTED]
-- [[.GetAllAsync()_2]] - `references` [EXTRACTED]
-- [[.UpdateAsync()_2]] - `references` [EXTRACTED]
+- [[.HandleNotificationAsync()]] - `references` [EXTRACTED]
+- [[.InitiateAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Management
+#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_2

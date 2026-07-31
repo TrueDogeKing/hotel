@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Room Task Management (1)"
+community: "Room Management"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Task_Management_1
+  - community/Room_Management
 ---
 
 # List
 
 ## Connections
-- [[.ListAsync()_3]] - `references` [EXTRACTED]
+- [[.GetAllAsync()_5]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Task_Management_1
+#graphify/code #graphify/EXTRACTED #community/Room_Management

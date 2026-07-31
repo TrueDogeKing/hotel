@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "tests / CampCenter.IntegrationTests (1)"
+community: "Room Management"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/tests_/_CampCenterIntegrationTests_1
+  - community/Room_Management
 ---
 
 # List
 
 ## Connections
-- [[.BreakfastsAsync()]] - `references` [EXTRACTED]
-- [[.GetMealTimesAsync()]] - `references` [EXTRACTED]
+- [[.GetActiveAsync()_3]] - `references` [EXTRACTED]
+- [[.GetAllAsync()_11]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/tests_/_CampCenterIntegrationTests_1
+#graphify/code #graphify/EXTRACTED #community/Room_Management

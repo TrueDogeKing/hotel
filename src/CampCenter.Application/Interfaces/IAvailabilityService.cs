@@ -13,6 +13,19 @@ public interface IAvailabilityService
         CancellationToken cancellationToken = default
     );
 
+    /// Night-by-night availability over [start, end] — both ends inclusive,
+    /// because the caller is a calendar drawing those days, not a stay.
+    ///
+    /// Answers one question per night: could a group of this size sleep here?
+    /// Computed from one read of the rooms, closures and assignments rather than a
+    /// query per night, so a six-week grid costs the same as a single range.
+    Task<AvailabilityCalendarDto> GetCalendarAsync(
+        DateOnly start,
+        DateOnly end,
+        int? headcount,
+        CancellationToken cancellationToken = default
+    );
+
     /// Free (active, unassigned, not-closed) room counts by capacity for the
     /// stay [start, end). <paramref name="excludeBookingId"/> ignores one
     /// booking's own rooms (used when reassigning).

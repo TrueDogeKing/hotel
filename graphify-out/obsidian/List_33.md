@@ -1,22 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.Infrastructure / Repositories (1)"
+community: "MealTimeDefaultRepository"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterInfrastructure_/_Repositories_1
+  - community/MealTimeDefaultRepository
 ---
 
 # List
 
 ## Connections
-- [[.CountByDateAndKindAsync()_1]] - `references` [EXTRACTED]
-- [[.ListForBookingAsync()_3]] - `references` [EXTRACTED]
-- [[.ListForDateAsync()_3]] - `references` [EXTRACTED]
-- [[.ListFullySuppressedSlotsAsync()_1]] - `references` [EXTRACTED]
-- [[.ListGeneratedSlotsAsync()_1]] - `references` [EXTRACTED]
-- [[.ListLocationsAsync()_1]] - `references` [EXTRACTED]
-- [[.ListVisibleSlotSpansAsync()_1]] - `references` [EXTRACTED]
+- [[.GetActiveAsync()_2]] - `references` [EXTRACTED]
+- [[.GetAllAsync()_10]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterInfrastructure_/_Repositories_1
+#graphify/code #graphify/EXTRACTED #community/MealTimeDefaultRepository

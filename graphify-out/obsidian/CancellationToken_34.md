@@ -1,19 +1,23 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.UnitTests / Services (2)"
+community: "Public Booking Service (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Services_2
+  - community/Public_Booking_Service_1
 ---
 
 # CancellationToken
 
 ## Connections
-- [[.GetDayAsync()_2]] - `references` [EXTRACTED]
-- [[.GetJobsAsync()]] - `references` [EXTRACTED]
-- [[.GetRangeAsync()_1]] - `references` [EXTRACTED]
-- [[.SetStatusAsync()_4]] - `references` [EXTRACTED]
+- [[.CancelByTokenAsync()_1]] - `references` [EXTRACTED]
+- [[.CreateAsync()_8]] - `references` [EXTRACTED]
+- [[.FindByTokenAsync()]] - `references` [EXTRACTED]
+- [[.GetByTokenAsync()_1]] - `references` [EXTRACTED]
+- [[.GetScheduleByTokenAsync()_1]] - `references` [EXTRACTED]
+- [[.PickRoomsAsync()]] - `references` [EXTRACTED]
+- [[.SendSafelyAsync()]] - `references` [EXTRACTED]
+- [[.TryCreateAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_2
+#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_1

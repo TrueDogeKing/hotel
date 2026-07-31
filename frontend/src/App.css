@@ -2753,6 +2753,245 @@ p[role="alert"] {
   /* Bars bridge exactly this gap plus the two 1px tile borders it sits between. */
   --cal-gap: 4px;
 }
+
+/* --- Booking range calendar (public wizard) ---
+   Picks a stay as one band rather than two dates. The days are buttons so they
+   can be tabbed and explain themselves on hover; unavailable ones are greyed but
+   never `disabled`, since a disabled button fires no pointer events and so could
+   not say why it is out. */
+
+.range-cal {
+  /* The weekday header is shared with the admin calendar, which reads this. */
+  --cal-gap: 4px;
+  /* The wizard panel is a column flex with align-items: flex-start, so without
+     this the grid shrink-wraps to its content and the days come out too small to
+     read the bed count in. Capped so it does not sprawl on a wide screen. */
+  align-self: stretch;
+  width: 100%;
+  max-width: 30rem;
+  margin: 1rem 0;
+}
+/* Inside the popover the calendar sizes itself to the panel, which is already
+   capped — the wizard's stretch-to-fill would fight that. */
+.date-range-popover .range-cal {
+  margin: 0;
+  max-width: none;
+}
+
+/* --- The stay as one field, with the calendar folded behind it --- */
+
+.date-range-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.85rem;
+}
+.date-range-label {
+  color: var(--text-faint);
+}
+.date-range-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  /* Reads as a field, not as an action: the same surface and border as the inputs
+     it sits beside, so the row does not sprout a button in the middle of it. */
+  min-height: 2.4rem;
+  padding: 0.5rem 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  background: var(--bg-input);
+  color: var(--text-strong);
+  font: inherit;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+}
+.date-range-trigger:hover {
+  border-color: var(--accent);
+  background: var(--bg-input);
+  color: var(--text-strong);
+}
+.date-range-trigger.empty {
+  color: var(--text-faint);
+  font-weight: 400;
+}
+.date-range-nights {
+  padding: 0 0.4rem;
+  border-radius: var(--r-full);
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Top-layer panel: positioned from JS in viewport coordinates, so no ancestor's
+   overflow can clip it and no z-index has to be negotiated. */
+.date-range-popover {
+  position: fixed;
+  width: max-content;
+  max-width: min(30rem, calc(100vw - 1.5rem));
+  margin: 0;
+  padding: 0.875rem;
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  background: var(--bg-float);
+  color: var(--text);
+  box-shadow: var(--shadow-lg);
+}
+.date-range-popover::backdrop {
+  /* Light dismiss only — no scrim, this is a picker rather than a modal. */
+  background: transparent;
+}
+.range-cal.loading {
+  /* Availability is arriving; the grid stays usable, just visibly provisional. */
+  opacity: 0.65;
+}
+.range-cal-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.range-cal-header h2 {
+  flex: 1;
+  margin: 0;
+  font-size: 1.1rem;
+  text-align: center;
+  text-transform: capitalize;
+}
+.range-cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: var(--cal-gap);
+}
+
+.range-cal-day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.1rem;
+  min-height: 3rem;
+  padding: 0.25rem;
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  background: var(--bg-float);
+  color: var(--text);
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    background-color var(--dur-fast) var(--ease-out),
+    border-color var(--dur-fast) var(--ease-out);
+}
+.range-cal-day:hover {
+  border-color: var(--accent);
+}
+.range-cal-num {
+  font-variant-numeric: tabular-nums;
+}
+/* Beds left that night — "nearly full" should be visible before it becomes
+   "full", so a group can bring the dates forward rather than be refused. */
+.range-cal-beds {
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: var(--text-faint);
+}
+.range-cal-day.outside {
+  opacity: 0.4;
+}
+
+/* Out of reach: already gone, closed, or short of beds. Greyed rather than
+   hidden, because "why can't I pick that?" is the question a booking calendar
+   has to answer. */
+.range-cal-day.past,
+.range-cal-day.unavailable {
+  background: var(--bg-app);
+  border-color: transparent;
+  color: var(--text-faint);
+  cursor: not-allowed;
+}
+.range-cal-day.unavailable .range-cal-num {
+  text-decoration: line-through;
+}
+.range-cal-day.past:hover,
+.range-cal-day.unavailable:hover {
+  border-color: transparent;
+}
+
+/* The chosen stay, drawn as one band: caps at each end, a tint between. */
+.range-cal-day.in-range {
+  background: var(--accent-soft);
+  border-color: transparent;
+  color: var(--text-strong);
+}
+.range-cal-day.start,
+.range-cal-day.end {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--on-accent);
+}
+.range-cal-day.start .range-cal-beds,
+.range-cal-day.end .range-cal-beds {
+  color: var(--on-accent);
+  opacity: 0.75;
+}
+/* A hovered range that crosses something unbookable: shown, and shown as wrong,
+   rather than silently doing nothing on click. */
+.range-cal-day.invalid {
+  background: var(--danger-soft);
+  border-color: var(--danger);
+  color: var(--danger);
+}
+
+.range-cal-status {
+  margin: 0.75rem 0 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+.range-cal-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 0.5rem 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.8rem;
+  color: var(--text-faint);
+}
+.range-cal-legend li {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.range-cal-legend .swatch {
+  width: 0.85rem;
+  height: 0.85rem;
+  border-radius: var(--r-xs);
+  border: 1px solid var(--border);
+}
+.range-cal-legend .swatch.free {
+  background: var(--bg-float);
+}
+.range-cal-legend .swatch.unavailable {
+  background: var(--bg-app);
+  border-color: transparent;
+}
+.range-cal-legend .swatch.selected {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.wizard-chosen {
+  margin: 0.75rem 0 0;
+  font-weight: 600;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .range-cal-day {
+    transition: none;
+  }
+}
 .cal-weekdays {
   margin-bottom: 4px;
   font-size: 0.75rem;
@@ -2980,6 +3219,66 @@ p[role="alert"] {
   inset: 0 0 0 var(--tt-gutter);
   /* The ruler underneath stays clickable-through; each block re-enables itself. */
   pointer-events: none;
+}
+
+/* Click anywhere free on the grid to start an entry at that quarter-hour. Sits
+   under the blocks, so clicking one of those still opens its group. No hover fill
+   of its own: what the cursor is pointing at is shown by the block below, drawn
+   where the entry would actually land. */
+.timetable-canvas {
+  position: absolute;
+  inset: 0 0 0 var(--tt-gutter);
+  cursor: copy;
+}
+
+/* The slot a new entry would take. Dashed while it is only a hover; solid once
+   the form is open and it is a real proposal. */
+.timetable-preview {
+  position: absolute;
+  left: 2px;
+  right: 4px;
+  display: flex;
+  align-items: flex-start;
+  padding: 0.25rem 0.5rem;
+  border: 1px dashed var(--accent);
+  border-radius: var(--r-sm);
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 600;
+  /* Purely an indicator: the grid underneath has to keep receiving the clicks. */
+  pointer-events: none;
+}
+.timetable-preview.pending {
+  border-style: solid;
+  border-width: 2px;
+  background: color-mix(in oklch, var(--accent) 18%, transparent);
+}
+.timetable-preview-time {
+  font-variant-numeric: tabular-nums;
+}
+/* The dashed hover block is the affordance; the cursor move that draws it is the
+   animation, so it should not also fade in. */
+@media (prefers-reduced-motion: reduce) {
+  .timetable-preview {
+    transition: none;
+  }
+}
+.timetable-add {
+  margin-left: auto;
+}
+/* The form the grid opens, under the timetable rather than over it: the times and
+   the clashes stay in view while the entry is written. */
+.timetable-add-form {
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  background: var(--bg-float);
+}
+.timetable-add-form h3 {
+  margin: 0 0 0.75rem;
+  font-size: 0.95rem;
 }
 .timetable-chip {
   position: absolute;

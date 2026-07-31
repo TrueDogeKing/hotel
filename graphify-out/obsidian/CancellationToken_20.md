@@ -1,19 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "Room Closure Management"
+community: "Admin Booking & Notifications (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Closure_Management
+  - community/Admin_Booking__Notifications_2
 ---
 
 # CancellationToken
 
 ## Connections
-- [[.CreateAsync()_2]] - `references` [EXTRACTED]
-- [[.DeleteAsync()]] - `references` [EXTRACTED]
-- [[.GetAllAsync()]] - `references` [EXTRACTED]
-- [[.UpdateAsync()]] - `references` [EXTRACTED]
+- [[.CancelByTokenAsync()]] - `references` [EXTRACTED]
+- [[.CreateAsync()_1]] - `references` [EXTRACTED]
+- [[.GetByTokenAsync()]] - `references` [EXTRACTED]
+- [[.GetScheduleByTokenAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management
+#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_2

@@ -13,5 +13,6 @@ tags:
 ## Connections
 - [[.CreateAuthenticatedClientAsync()]] - `references` [EXTRACTED]
 - [[.CreateClient()]] - `references` [EXTRACTED]
+- [[.CreateClientForAsync()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/tests_/_CampCenterIntegrationTests_1

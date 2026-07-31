@@ -1,23 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "Admin Bookings Controller & DTOs"
+community: "Booking Maintenance Background Service"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Bookings_Controller__DTOs
+  - community/Booking_Maintenance_Background_Service
 ---
 
 # Task
 
 ## Connections
-- [[.AssignableRooms()]] - `references` [EXTRACTED]
-- [[.Cancel()]] - `references` [EXTRACTED]
-- [[.Create()]] - `references` [EXTRACTED]
-- [[.Get()]] - `references` [EXTRACTED]
-- [[.List()]] - `references` [EXTRACTED]
-- [[.Reassign()]] - `references` [EXTRACTED]
-- [[.SetStatus()]] - `references` [EXTRACTED]
-- [[.UpdateDietaryNotes()]] - `references` [EXTRACTED]
+- [[.ExecuteAsync()]] - `references` [EXTRACTED]
+- [[.SweepAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Bookings_Controller__DTOs
+#graphify/code #graphify/EXTRACTED #community/Booking_Maintenance_Background_Service

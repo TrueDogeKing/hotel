@@ -1,30 +1,19 @@
 ---
-source_file: "src/CampCenter.Domain/Entities/AdminUser.cs"
+source_file: "frontend/src/api/admin.ts"
 type: "code"
-community: "Admin User & Token Config"
-location: "L5"
+community: ".CreateWorkerAsync"
+location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_User__Token_Config
+  - community/CreateWorkerAsync
 ---
 
 # AdminUser
 
 ## Connections
-- [[.Configure()]] - `references` [EXTRACTED]
-- [[.CreateAccessToken()]] - `references` [EXTRACTED]
-- [[.CreateAccessToken()_1]] - `references` [EXTRACTED]
-- [[.GetByIdAsync()]] - `references` [EXTRACTED]
-- [[.GetByIdAsync()_7]] - `references` [EXTRACTED]
-- [[.GetByLoginAsync()]] - `references` [EXTRACTED]
-- [[.GetByLoginAsync()_1]] - `references` [EXTRACTED]
-- [[.IssueTokensAsync()]] - `references` [EXTRACTED]
-- [[AdminUser.cs]] - `contains` [EXTRACTED]
-- [[AdminUserConfiguration]] - `references` [EXTRACTED]
-- [[AppDbContext]] - `references` [EXTRACTED]
-- [[DateTime_4]] - `references` [EXTRACTED]
-- [[Guid_25]] - `references` [EXTRACTED]
-- [[RefreshToken]] - `references` [EXTRACTED]
+- [[UserRole]] - `references` [EXTRACTED]
+- [[UsersPage.tsx]] - `imports` [EXTRACTED]
+- [[admin.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_User__Token_Config
+#graphify/code #graphify/EXTRACTED #community/CreateWorkerAsync

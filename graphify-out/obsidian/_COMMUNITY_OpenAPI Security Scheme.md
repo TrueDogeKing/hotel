@@ -12,12 +12,12 @@ members: 10
 - [[BearerSecuritySchemeTransformer]] - code - src/CampCenter.Api/OpenApi/BearerSecuritySchemeTransformer.cs
 - [[BearerSecuritySchemeTransformer.cs]] - code - src/CampCenter.Api/OpenApi/BearerSecuritySchemeTransformer.cs
 - [[CampCenter.Api.OpenApi]] - code - src/CampCenter.Api/OpenApi/BearerSecuritySchemeTransformer.cs
-- [[CancellationToken_15]] - code
+- [[CancellationToken_16]] - code
 - [[IOpenApiDocumentTransformer]] - code
 - [[OpenApiDocument]] - code
 - [[OpenApiDocumentTransformerContext]] - code
-- [[Task_14]] - code
-- [[string]] - code
+- [[Task_16]] - code
+- [[string_1]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -27,7 +27,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_CampCenter.Application  Services (1)]]
+- 1 edge to [[_COMMUNITY_.CreateClient]]
 
 ## Top bridge nodes
 - [[CampCenter.Api.OpenApi]] - degree 2, connects to 1 community

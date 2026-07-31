@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/api/admin.ts"
 type: "code"
-community: "Room Task Management (2)"
-location: "L293"
+community: "src / api (1)"
+location: "L331"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Task_Management_2
+  - community/src_/_api_1
 ---
 
 # roomCleaningStatuses
@@ -15,4 +15,4 @@ tags:
 - [[HousekeepingPage.tsx]] - `imports` [EXTRACTED]
 - [[admin.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Task_Management_2
+#graphify/code #graphify/EXTRACTED #community/src_/_api_1

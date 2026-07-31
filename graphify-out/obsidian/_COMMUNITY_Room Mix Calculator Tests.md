@@ -23,9 +23,9 @@ members: 22
 - [[.ValidateMix_RejectsRedundantRoom()]] - code - tests/CampCenter.UnitTests/Services/RoomMixCalculatorTests.cs
 - [[Capacity]] - code
 - [[Dictionary_2]] - code
-- [[Fact_10]] - code
+- [[Fact_11]] - code
 - [[IReadOnlyDictionary_1]] - code
-- [[List_13]] - code
+- [[List_14]] - code
 - [[PeopleCount]] - code
 - [[RoomMixCalculator]] - code - src/CampCenter.Application/Services/RoomMixCalculator.cs
 - [[RoomMixCalculator.cs]] - code - src/CampCenter.Application/Services/RoomMixCalculator.cs
@@ -41,7 +41,7 @@ SORT file.name ASC
 ## Connections to other communities
 - 3 edges to [[_COMMUNITY_Admin Booking & Notifications (1)]]
 - 2 edges to [[_COMMUNITY_Domain & Infra Namespaces]]
-- 2 edges to [[_COMMUNITY_Room Closure Management]]
+- 2 edges to [[_COMMUNITY_Validator Unit Tests]]
 - 2 edges to [[_COMMUNITY_Public Booking Service (1)]]
 
 ## Top bridge nodes

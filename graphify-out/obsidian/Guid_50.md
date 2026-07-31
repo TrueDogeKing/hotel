@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Room Closure Management"
+community: "Admin User & Token Config"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Closure_Management
+  - community/Admin_User__Token_Config
 ---
 
 # Guid
 
 ## Connections
-- [[.GetByIdAsync()_9]] - `references` [EXTRACTED]
+- [[.GetByIdAsync()_7]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management
+#graphify/code #graphify/EXTRACTED #community/Admin_User__Token_Config

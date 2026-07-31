@@ -20,6 +20,14 @@ public class AdminUserConfiguration : IEntityTypeConfiguration<AdminUser>
 
         builder.Property(u => u.PasswordHash).IsRequired();
 
+        // Rola jako tekst — czytelna w bazie i odporna na zmianę kolejności enuma.
+        builder
+            .Property(u => u.Role)
+            .IsRequired()
+            .HasMaxLength(32)
+            .HasConversion<string>()
+            .HasDefaultValue(AdminUserRole.Administrator);
+
         builder.Property(u => u.CreatedAt).IsRequired();
 
         // Optimistic concurrency oparte o systemową kolumnę PostgreSQL "xmin".

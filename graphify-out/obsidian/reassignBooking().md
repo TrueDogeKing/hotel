@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/api/admin.ts"
 type: "code"
-community: "CampCenter.Application / Services (3)"
-location: "L168"
+community: "Admin Tasks & Occupancy Pages"
+location: "L206"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterApplication_/_Services_3
+  - community/Admin_Tasks__Occupancy_Pages
 ---
 
 # reassignBooking()
@@ -15,4 +15,4 @@ tags:
 - [[GroupRooms.tsx]] - `imports` [EXTRACTED]
 - [[admin.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_3
+#graphify/code #graphify/EXTRACTED #community/Admin_Tasks__Occupancy_Pages

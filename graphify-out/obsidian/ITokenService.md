@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Interfaces/ITokenService.cs"
 type: "code"
-community: "Auth Service & Tokens"
+community: "Admin Booking & Notifications (4)"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Auth_Service__Tokens
+  - community/Admin_Booking__Notifications_4
 ---
 
 # ITokenService
@@ -22,4 +22,4 @@ tags:
 - [[JwtTokenService]] - `implements` [EXTRACTED]
 - [[PaymentService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Auth_Service__Tokens
+#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_4

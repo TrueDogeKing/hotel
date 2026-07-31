@@ -13,11 +13,11 @@ tags:
 
 ## Connections
 - [[.CreateAsync()]] - `references` [EXTRACTED]
-- [[.CreateAsync()_6]] - `references` [EXTRACTED]
+- [[.CreateAsync()_7]] - `references` [EXTRACTED]
 - [[.GetAsync()]] - `references` [EXTRACTED]
 - [[.GetAsync()_1]] - `references` [EXTRACTED]
 - [[.ListAsync()]] - `references` [EXTRACTED]
-- [[.ListAsync()_2]] - `references` [EXTRACTED]
+- [[.ListAsync()_3]] - `references` [EXTRACTED]
 - [[.ReassignAsync()]] - `references` [EXTRACTED]
 - [[.ReassignAsync()_1]] - `references` [EXTRACTED]
 - [[.SetStatusAsync()]] - `references` [EXTRACTED]

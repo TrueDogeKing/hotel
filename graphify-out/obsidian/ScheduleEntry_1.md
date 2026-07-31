@@ -1,19 +1,19 @@
 ---
 source_file: "src/CampCenter.Domain/Entities/ScheduleEntry.cs"
 type: "code"
-community: "CampCenter.Application / Services (2)"
+community: "ScheduleEntry"
 location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterApplication_/_Services_2
+  - community/ScheduleEntry
 ---
 
 # ScheduleEntry
 
 ## Connections
-- [[.AddAsync()_8]] - `references` [EXTRACTED]
-- [[.AddAsync()_17]] - `references` [EXTRACTED]
+- [[.AddAsync()_9]] - `references` [EXTRACTED]
+- [[.AddAsync()_19]] - `references` [EXTRACTED]
 - [[.AddRangeAsync()]] - `references` [EXTRACTED]
 - [[.AddRangeAsync()_1]] - `references` [EXTRACTED]
 - [[.Configure()_11]] - `references` [EXTRACTED]
@@ -25,15 +25,15 @@ tags:
 - [[.ListForBookingAsync()_3]] - `references` [EXTRACTED]
 - [[.ListForDateAsync()_1]] - `references` [EXTRACTED]
 - [[.ListForDateAsync()_3]] - `references` [EXTRACTED]
-- [[.Remove()_5]] - `references` [EXTRACTED]
-- [[.Remove()_11]] - `references` [EXTRACTED]
+- [[.Remove()_6]] - `references` [EXTRACTED]
+- [[.Remove()_13]] - `references` [EXTRACTED]
 - [[.ToDto()_5]] - `references` [EXTRACTED]
 - [[.ToPublicDto()]] - `references` [EXTRACTED]
 - [[AppDbContext]] - `references` [EXTRACTED]
 - [[Booking]] - `references` [EXTRACTED]
 - [[DateOnly_21]] - `references` [EXTRACTED]
 - [[DateTime_13]] - `references` [EXTRACTED]
-- [[Guid_36]] - `references` [EXTRACTED]
+- [[Guid_39]] - `references` [EXTRACTED]
 - [[MealKind_1]] - `references` [EXTRACTED]
 - [[MealTimeDefault_1]] - `references` [EXTRACTED]
 - [[ScheduleEntry.cs]] - `contains` [EXTRACTED]
@@ -41,4 +41,4 @@ tags:
 - [[ScheduleEntryKind_1]] - `references` [EXTRACTED]
 - [[TimeOnly_6]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_2
+#graphify/code #graphify/EXTRACTED #community/ScheduleEntry

@@ -1,31 +1,21 @@
 ---
 type: community
-members: 18
+members: 8
 ---
 
 # Admin Tasks & Occupancy Pages
 
-**Members:** 18 nodes
+**Members:** 8 nodes
 
 ## Members
-- [[AdminDashboardPage()]] - code - frontend/src/pages/admin/AdminDashboardPage.tsx
-- [[AdminDashboardPage.tsx]] - code - frontend/src/pages/admin/AdminDashboardPage.tsx
-- [[AdminLayout()]] - code - frontend/src/components/admin/AdminLayout.tsx
-- [[AdminLayout.tsx]] - code - frontend/src/components/admin/AdminLayout.tsx
-- [[App()]] - code - frontend/src/App.tsx
-- [[App.tsx]] - code - frontend/src/App.tsx
-- [[Dashboard]] - code - frontend/src/api/admin.ts
-- [[IconSunSea()]] - code - frontend/src/components/icons.tsx
-- [[LoginPage()]] - code - frontend/src/pages/LoginPage.tsx
-- [[LoginPage.tsx]] - code - frontend/src/pages/LoginPage.tsx
-- [[ProtectedRoute()]] - code - frontend/src/auth/ProtectedRoute.tsx
-- [[ProtectedRoute.tsx]] - code - frontend/src/auth/ProtectedRoute.tsx
-- [[bookingGroupCategories]] - code - frontend/src/api/admin.ts
-- [[getDashboard()]] - code - frontend/src/api/admin.ts
-- [[main.tsx]] - code - frontend/src/main.tsx
-- [[scroll.ts]] - code - frontend/src/utils/scroll.ts
-- [[scrollPanelIntoView()]] - code - frontend/src/utils/scroll.ts
-- [[useAuth()]] - code - frontend/src/auth/AuthContext.tsx
+- [[AssignableRoom]] - code - frontend/src/api/admin.ts
+- [[Draft]] - code - frontend/src/components/admin/GroupRooms.tsx
+- [[GroupRooms()]] - code - frontend/src/components/admin/GroupRooms.tsx
+- [[GroupRooms.tsx]] - code - frontend/src/components/admin/GroupRooms.tsx
+- [[Props_7]] - code - frontend/src/components/admin/GroupRooms.tsx
+- [[getAdminBooking()]] - code - frontend/src/api/admin.ts
+- [[getAssignableRooms()]] - code - frontend/src/api/admin.ts
+- [[reassignBooking()]] - code - frontend/src/api/admin.ts
 
 ## Live Query (requires Dataview plugin)
 
@@ -35,19 +25,15 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 10 edges to [[_COMMUNITY_Frontend Icon Components]]
-- 8 edges to [[_COMMUNITY_Public Booking Frontend (1)]]
-- 7 edges to [[_COMMUNITY_Frontend Auth & API Client]]
-- 7 edges to [[_COMMUNITY_CampCenter.Application  Services (3)]]
-- 6 edges to [[_COMMUNITY_Frontend App Shell & i18n]]
-- 5 edges to [[_COMMUNITY_src  utils]]
-- 4 edges to [[_COMMUNITY_src  api (1)]]
-- 4 edges to [[_COMMUNITY_components  admin]]
-- 2 edges to [[_COMMUNITY_Room Task Management (2)]]
+- 5 edges to [[_COMMUNITY_src  api (1)]]
+- 2 edges to [[_COMMUNITY_useAuth]]
+- 1 edge to [[_COMMUNITY_Frontend App Shell & i18n]]
+- 1 edge to [[_COMMUNITY_Frontend Auth & API Client]]
+- 1 edge to [[_COMMUNITY_CampCenter.Application  Services (3)]]
 
 ## Top bridge nodes
-- [[App.tsx]] - degree 20, connects to 9 communities
-- [[AdminLayout.tsx]] - degree 18, connects to 9 communities
-- [[AdminDashboardPage.tsx]] - degree 17, connects to 4 communities
-- [[LoginPage.tsx]] - degree 10, connects to 3 communities
-- [[useAuth()]] - degree 9, connects to 1 community
+- [[GroupRooms.tsx]] - degree 12, connects to 5 communities
+- [[GroupRooms()]] - degree 4, connects to 1 community
+- [[getAdminBooking()]] - degree 3, connects to 1 community
+- [[getAssignableRooms()]] - degree 3, connects to 1 community
+- [[AssignableRoom]] - degree 2, connects to 1 community

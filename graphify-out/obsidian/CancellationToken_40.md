@@ -1,18 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "Admin User & Token Config"
+community: "Room Task Management (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_User__Token_Config
+  - community/Room_Task_Management_1
 ---
 
 # CancellationToken
 
 ## Connections
-- [[.GetByIdAsync()]] - `references` [EXTRACTED]
-- [[.GetByLoginAsync()]] - `references` [EXTRACTED]
-- [[.SaveChangesAsync()]] - `references` [EXTRACTED]
+- [[.CreateAsync()_12]] - `references` [EXTRACTED]
+- [[.DeleteAsync()_8]] - `references` [EXTRACTED]
+- [[.ListAsync()_4]] - `references` [EXTRACTED]
+- [[.SetStatusAsync()_5]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_User__Token_Config
+#graphify/code #graphify/EXTRACTED #community/Room_Task_Management_1

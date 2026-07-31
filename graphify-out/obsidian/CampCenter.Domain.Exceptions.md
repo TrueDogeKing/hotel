@@ -13,6 +13,7 @@ tags:
 
 ## Connections
 - [[AdminBookingService.cs]] - `imports` [EXTRACTED]
+- [[AvailabilityService.cs]] - `imports` [EXTRACTED]
 - [[BookingRepository.cs]] - `imports` [EXTRACTED]
 - [[BookingService.cs]] - `imports` [EXTRACTED]
 - [[BusinessRuleViolationException.cs]] - `contains` [EXTRACTED]
@@ -31,5 +32,6 @@ tags:
 - [[RoomTaskService.cs]] - `imports` [EXTRACTED]
 - [[ScheduleEntryRepository.cs]] - `imports` [EXTRACTED]
 - [[ScheduleService.cs]] - `imports` [EXTRACTED]
+- [[UserService.cs]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Domain__Infra_Namespaces

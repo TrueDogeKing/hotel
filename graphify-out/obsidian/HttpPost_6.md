@@ -1,18 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Auth Controller (1)"
+community: "Booking Persistence & Entities (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Auth_Controller_1
+  - community/Booking_Persistence__Entities_1
 ---
 
 # HttpPost
 
 ## Connections
-- [[.Login()]] - `references` [EXTRACTED]
-- [[.Logout()]] - `references` [EXTRACTED]
-- [[.Refresh()]] - `references` [EXTRACTED]
+- [[.Create()_5]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Auth_Controller_1
+#graphify/code #graphify/EXTRACTED #community/Booking_Persistence__Entities_1

@@ -12,7 +12,7 @@ tags:
 
 ## Connections
 - [[.GenerateMissingMealsAsync()_1]] - `references` [EXTRACTED]
-- [[.GetCalendarAsync()_1]] - `references` [EXTRACTED]
+- [[.GetCalendarAsync()_3]] - `references` [EXTRACTED]
 - [[.GetDayAsync()_3]] - `references` [EXTRACTED]
 - [[.GuardDateWithinStay()]] - `references` [EXTRACTED]
 

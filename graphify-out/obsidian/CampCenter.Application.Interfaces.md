@@ -44,6 +44,7 @@ tags:
 - [[IRoomTaskService.cs]] - `contains` [EXTRACTED]
 - [[IScheduleService.cs]] - `contains` [EXTRACTED]
 - [[ITokenService.cs]] - `contains` [EXTRACTED]
+- [[IUserService.cs]] - `contains` [EXTRACTED]
 - [[JwtTokenService.cs]] - `imports` [EXTRACTED]
 - [[MealTimeService.cs]] - `imports` [EXTRACTED]
 - [[MealTimesController.cs]] - `imports` [EXTRACTED]
@@ -63,5 +64,7 @@ tags:
 - [[ScheduleService.cs]] - `imports` [EXTRACTED]
 - [[SmtpEmailSender.cs]] - `imports` [EXTRACTED]
 - [[TasksController.cs]] - `imports` [EXTRACTED]
+- [[UserService.cs]] - `imports` [EXTRACTED]
+- [[UsersController.cs]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Application_Namespaces__DTOs

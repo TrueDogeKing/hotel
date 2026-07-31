@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/utils/dates.ts"
 type: "code"
-community: "CampCenter.Application / Services (3)"
+community: "Room Closure Management"
 location: "L116"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterApplication_/_Services_3
+  - community/Room_Closure_Management
 ---
 
 # formatTimeRange()
@@ -15,4 +15,4 @@ tags:
 - [[dates.ts]] - `contains` [EXTRACTED]
 - [[toTimeInput()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_3
+#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management

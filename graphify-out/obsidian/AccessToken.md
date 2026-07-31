@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Models/AccessToken.cs"
 type: "code"
-community: "JWT Token Service"
+community: "Admin User & Token Config"
 location: "L3"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/JWT_Token_Service
+  - community/Admin_User__Token_Config
 ---
 
 # AccessToken
@@ -16,4 +16,4 @@ tags:
 - [[.CreateAccessToken()_1]] - `references` [EXTRACTED]
 - [[AccessToken.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/JWT_Token_Service
+#graphify/code #graphify/EXTRACTED #community/Admin_User__Token_Config

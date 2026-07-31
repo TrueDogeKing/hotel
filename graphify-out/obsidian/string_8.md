@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Payment"
+community: "Auth Controller (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Payment
+  - community/Auth_Controller_1
 ---
 
 # string
 
 ## Connections
-- [[EmailSettings]] - `references` [EXTRACTED]
+- [[JwtTokenService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Payment
+#graphify/code #graphify/EXTRACTED #community/Auth_Controller_1

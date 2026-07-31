@@ -27,12 +27,17 @@ public abstract class IntegrationTestBase
     protected HttpClient CreateClient() => Factory.CreateClient();
 
     /// A client whose Authorization header carries a fresh admin access token.
-    protected async Task<HttpClient> CreateAuthenticatedClientAsync()
+    protected Task<HttpClient> CreateAuthenticatedClientAsync() =>
+        CreateClientForAsync(AdminLogin, AdminPassword);
+
+    /// A client signed in as some other account — used to exercise a role that is
+    /// not the seeded administrator's.
+    protected async Task<HttpClient> CreateClientForAsync(string login, string password)
     {
         var client = Factory.CreateClient();
         var response = await client.PostAsJsonAsync(
             "/api/auth/login",
-            new LoginRequestDto(AdminLogin, AdminPassword)
+            new LoginRequestDto(login, password)
         );
         response.EnsureSuccessStatusCode();
 

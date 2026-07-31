@@ -1,12 +1,12 @@
 ---
 source_file: "tests/CampCenter.UnitTests/Services/HousekeepingPlannerTests.cs"
 type: "code"
-community: "CampCenter.UnitTests / Validators"
+community: "Integration Test Harness (1)"
 location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Validators
+  - community/Integration_Test_Harness_1
 ---
 
 # HousekeepingPlannerTests
@@ -22,7 +22,7 @@ tags:
 - [[.One_group_out_and_the_next_in_is_a_single_turnaround()]] - `method` [EXTRACTED]
 - [[.The_day_before_a_departure_is_not_the_departure_day()]] - `method` [EXTRACTED]
 - [[DateOnly_33]] - `references` [EXTRACTED]
-- [[Guid_58]] - `references` [EXTRACTED]
+- [[Guid_61]] - `references` [EXTRACTED]
 - [[HousekeepingPlannerTests.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Validators
+#graphify/code #graphify/EXTRACTED #community/Integration_Test_Harness_1

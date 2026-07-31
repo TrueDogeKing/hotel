@@ -21,5 +21,6 @@ tags:
 - [[RoomsController.cs]] - `contains` [EXTRACTED]
 - [[ScheduleController.cs]] - `contains` [EXTRACTED]
 - [[TasksController.cs]] - `contains` [EXTRACTED]
+- [[UsersController.cs]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Application_Namespaces__DTOs

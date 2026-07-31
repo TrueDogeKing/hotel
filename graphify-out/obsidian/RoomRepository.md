@@ -12,13 +12,13 @@ tags:
 # RoomRepository
 
 ## Connections
-- [[.AddAsync()_15]] - `method` [EXTRACTED]
+- [[.AddAsync()_17]] - `method` [EXTRACTED]
 - [[.GetActiveAsync()_3]] - `method` [EXTRACTED]
 - [[.GetAllAsync()_11]] - `method` [EXTRACTED]
 - [[.GetByIdAsync()_11]] - `method` [EXTRACTED]
 - [[.GetByNumberAsync()_1]] - `method` [EXTRACTED]
 - [[.HasAssignmentsAsync()_1]] - `method` [EXTRACTED]
-- [[.Remove()_9]] - `method` [EXTRACTED]
+- [[.Remove()_11]] - `method` [EXTRACTED]
 - [[.SaveChangesAsync()_17]] - `method` [EXTRACTED]
 - [[AppDbContext]] - `references` [EXTRACTED]
 - [[IRoomRepository]] - `implements` [EXTRACTED]

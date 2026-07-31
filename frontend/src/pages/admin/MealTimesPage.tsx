@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { isAxiosError } from "axios";
 import AdminLayout from "../../components/admin/AdminLayout";
+import { useAuth } from "../../auth/AuthContext";
 import {
   createMealTime,
   deleteMealTime,
@@ -36,6 +37,8 @@ const emptyForm: FormState = {
 // slot per day of their stay; editing a slot affects future generation only.
 export default function MealTimesPage() {
   const { t } = useTranslation();
+  // Centre-wide settings: a worker reads them, an administrator changes them.
+  const { canEdit } = useAuth();
   const [mealTimes, setMealTimes] = useState<MealTimeDefault[]>([]);
   const [form, setForm] = useState<FormState>(emptyForm);
   const [editing, setEditing] = useState<MealTimeDefault | null>(null);
@@ -146,6 +149,7 @@ export default function MealTimesPage() {
         <Link to="/admin/harmonogram">{t("mealTimes.backToSchedule")}</Link>
       </p>
 
+      {canEdit && (
       <form className="admin-form" onSubmit={handleSubmit}>
         <label>
           {t("mealTimes.mealKind")}
@@ -221,6 +225,7 @@ export default function MealTimesPage() {
           </button>
         )}
       </form>
+      )}
 
       {error && <p role="alert">{error}</p>}
 
@@ -232,7 +237,7 @@ export default function MealTimesPage() {
             <th>{t("mealTimes.time")}</th>
             <th>{t("mealTimes.duration")}</th>
             <th>{t("mealTimes.status")}</th>
-            <th />
+            {canEdit && <th />}
           </tr>
         </thead>
         <tbody>
@@ -245,17 +250,19 @@ export default function MealTimesPage() {
               </td>
               <td>{t("mealTimes.minutes", { count: mealTime.durationMinutes })}</td>
               <td>{mealTime.isActive ? t("mealTimes.active") : t("mealTimes.inactive")}</td>
-              <td className="row-actions">
-                <button type="button" onClick={() => startEdit(mealTime)}>
-                  {t("mealTimes.edit")}
-                </button>
-                <button type="button" onClick={() => void toggleActive(mealTime)}>
-                  {mealTime.isActive ? t("mealTimes.deactivate") : t("mealTimes.activate")}
-                </button>
-                <button type="button" onClick={() => void remove(mealTime.id)}>
-                  {t("mealTimes.delete")}
-                </button>
-              </td>
+              {canEdit && (
+                <td className="row-actions">
+                  <button type="button" onClick={() => startEdit(mealTime)}>
+                    {t("mealTimes.edit")}
+                  </button>
+                  <button type="button" onClick={() => void toggleActive(mealTime)}>
+                    {mealTime.isActive ? t("mealTimes.deactivate") : t("mealTimes.activate")}
+                  </button>
+                  <button type="button" onClick={() => void remove(mealTime.id)}>
+                    {t("mealTimes.delete")}
+                  </button>
+                </td>
+              )}
             </tr>
           ))}
           {mealTimes.length === 0 && (

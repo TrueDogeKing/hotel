@@ -1,19 +1,18 @@
 ---
 type: community
-members: 6
+members: 5
 ---
 
 # PasswordRules
 
-**Members:** 6 nodes
+**Members:** 5 nodes
 
 ## Members
-- [[.ValidPassword()]] - code - src/CampCenter.Application/Validators/PasswordRules.cs
-- [[IRuleBuilder]] - code
-- [[IRuleBuilderOptions]] - code
-- [[PasswordRules]] - code - src/CampCenter.Application/Validators/PasswordRules.cs
-- [[PasswordRules.cs]] - code - src/CampCenter.Application/Validators/PasswordRules.cs
-- [[int_1]] - code
+- [[.ValidRole()]] - code - src/CampCenter.Application/Validators/UserValidators.cs
+- [[IRuleBuilder_1]] - code
+- [[IRuleBuilderOptions_1]] - code
+- [[RoleRules]] - code - src/CampCenter.Application/Validators/UserValidators.cs
+- [[UserValidators.cs]] - code - src/CampCenter.Application/Validators/UserValidators.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -23,7 +22,10 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_Rate Limiting & Startup]]
+- 2 edges to [[_COMMUNITY_tests  CampCenter.IntegrationTests (2)]]
+- 1 edge to [[_COMMUNITY_Application Namespaces & DTOs]]
+- 1 edge to [[_COMMUNITY_CampCenter.UnitTests  Validators]]
+- 1 edge to [[_COMMUNITY_Public Booking Service (2)]]
 
 ## Top bridge nodes
-- [[PasswordRules.cs]] - degree 2, connects to 1 community
+- [[UserValidators.cs]] - degree 6, connects to 4 communities

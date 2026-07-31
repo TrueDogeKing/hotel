@@ -1,28 +1,33 @@
 ---
 source_file: "frontend/src/components/admin/ScheduleEntryForm.tsx"
 type: "code"
-community: "CampCenter.Application / Services (3)"
+community: "Room Closure Management"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterApplication_/_Services_3
+  - community/Room_Closure_Management
 ---
 
 # ScheduleEntryForm.tsx
 
 ## Connections
+- [[EntryGroupOption]] - `contains` [EXTRACTED]
 - [[GroupSchedulePanel.tsx]] - `imports_from` [EXTRACTED]
+- [[HOUSE_LOCATIONS]] - `contains` [EXTRACTED]
 - [[MealKind]] - `imports` [EXTRACTED]
+- [[OTHER()]] - `contains` [EXTRACTED]
 - [[Props_9]] - `contains` [EXTRACTED]
 - [[ScheduleEntry]] - `imports` [EXTRACTED]
 - [[ScheduleEntryForm()]] - `contains` [EXTRACTED]
 - [[ScheduleEntryInput]] - `imports` [EXTRACTED]
 - [[ScheduleEntryKind]] - `imports` [EXTRACTED]
+- [[SchedulePage.tsx]] - `imports_from` [EXTRACTED]
 - [[admin.ts]] - `imports_from` [EXTRACTED]
 - [[dates.ts]] - `imports_from` [EXTRACTED]
 - [[fromTimeInput()]] - `imports` [EXTRACTED]
+- [[houseLocationKey()]] - `contains` [EXTRACTED]
 - [[mealKinds]] - `imports` [EXTRACTED]
 - [[toTimeInput()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_3
+#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management

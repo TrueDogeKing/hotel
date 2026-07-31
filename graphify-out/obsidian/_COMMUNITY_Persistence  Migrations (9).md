@@ -22,7 +22,7 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 1 edge to [[_COMMUNITY_Public Booking Service (2)]]
-- 1 edge to [[_COMMUNITY_EF Core Migrations (1)]]
+- 1 edge to [[_COMMUNITY_EF Core Migrations (3)]]
 
 ## Top bridge nodes
 - [[20260727123803_ScheduleAndMealTimes.Designer.cs]] - degree 3, connects to 2 communities

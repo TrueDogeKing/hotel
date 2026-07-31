@@ -3,6 +3,34 @@
     "appName": "Ośrodek CampCenter",
     "loading": "Ładowanie…"
   },
+  "roles": {
+    "Administrator": "Administrator",
+    "Worker": "Pracownik"
+  },
+  "adminUsers": {
+    "title": "Użytkownicy panelu",
+    "intro": "Konta do logowania w panelu. Administrator ma dostęp do wszystkiego, pracownik widzi te same sekcje, ale niczego w nich nie zmienia.",
+    "login": "Login",
+    "password": "Hasło",
+    "passwordHint": "Hasło: min. 8 znaków, w tym wielka litera i znak specjalny.",
+    "role": "Rola",
+    "created": "Utworzono",
+    "add": "Dodaj konto",
+    "delete": "Usuń",
+    "cancel": "Anuluj",
+    "you": "to Ty",
+    "deleteTitle": "Usunąć konto?",
+    "deleteMessage": "Konto {{login}} zostanie usunięte, a jego sesje zakończone. Tej operacji nie można cofnąć.",
+    "cannotDeleteSelf": "Nie możesz usunąć własnego konta.",
+    "lastAdministrator": "To ostatni administrator — najpierw awansuj inne konto.",
+    "addedNotice": "Dodano konto {{login}}.",
+    "roleChanged": "{{login}} ma teraz rolę: {{role}}. Sesje tego konta zostały zakończone.",
+    "deleted": "Konto {{login}} zostało usunięte.",
+    "loadError": "Nie udało się wczytać kont.",
+    "createError": "Nie udało się dodać konta.",
+    "roleError": "Nie udało się zmienić roli.",
+    "deleteError": "Nie udało się usunąć konta."
+  },
   "home": {
     "heroTitle": "Ośrodek kolonijny nad morzem",
     "heroSubtitle": "Rezerwacja w dowolnym terminie dla grup zorganizowanych — zakwaterowanie, wyżywienie i teren rekreacyjny w jednym miejscu.",
@@ -108,7 +136,24 @@
     "roomsTaken": "Któryś z wybranych pokoi został właśnie zarezerwowany — wróć i odśwież dostępność.",
     "invalidData": "Nieprawidłowe dane rezerwacji.",
     "loadError": "Nie udało się pobrać dostępności.",
-    "genericError": "Coś poszło nie tak. Spróbuj ponownie."
+    "genericError": "Coś poszło nie tak. Spróbuj ponownie.",
+    "calendar": {
+      "previousMonth": "Poprzedni miesiąc",
+      "nextMonth": "Następny miesiąc",
+      "pickArrival": "Wybierz dzień przyjazdu.",
+      "pickDeparture": "Wybierz dzień wyjazdu.",
+      "selected": "Wybrany termin: {{count}} nocy.",
+      "selected_one": "Wybrany termin: 1 noc.",
+      "selected_few": "Wybrany termin: {{count}} noce.",
+      "pastHint": "Termin już minął.",
+      "closedHint": "Ośrodek zamknięty.",
+      "fullHint": "Za mało wolnych miejsc ({{beds}}).",
+      "freeHint": "Wolnych miejsc: {{beds}}.",
+      "legendFree": "wolne",
+      "legendUnavailable": "niedostępne",
+      "legendSelected": "wybrany termin",
+      "loadError": "Nie udało się wczytać dostępności — możesz mimo to wybrać termin."
+    }
   },
   "manage": {
     "notFound": "Nie znaleziono rezerwacji. Sprawdź link z e-maila.",
@@ -200,6 +245,10 @@
       "mealTimes": {
         "name": "Pory posiłków",
         "description": "Domyślne godziny posiłków dla całego ośrodka."
+      },
+      "users": {
+        "name": "Użytkownicy",
+        "description": "Konta do logowania w panelu i ich role."
       }
     }
   },
@@ -236,7 +285,8 @@
     "status": "Status",
     "statusChanged": "Zmieniono status na: {{status}}.",
     "statusError": "Nie udało się zmienić statusu.",
-    "loadError": "Nie udało się pobrać pulpitu."
+    "loadError": "Nie udało się pobrać pulpitu.",
+    "stayDates": "Termin pobytu"
   },
   "occupancy": {
     "title": "Obłożenie",
@@ -445,7 +495,17 @@
       "participantCountWarning": "Grupa liczy {{count}} os. — liczba uczestników jest wyższa niż liczebność grupy.",
       "save": "Zapisz",
       "add": "Dodaj",
-      "cancel": "Anuluj"
+      "cancel": "Anuluj",
+      "group": "Grupa",
+      "locationNone": "— brak —",
+      "locationOther": "Inne…",
+      "locationOtherLabel": "Inne miejsce",
+      "locations": {
+        "pool": "Basen",
+        "sportsField": "Boisko",
+        "disco": "Dyskoteka",
+        "bowlingAlley": "Kręgielnia"
+      }
     },
     "mealTimes": {
       "title": "Pory posiłków tej grupy",
@@ -485,7 +545,10 @@
       "badgeMeal": "W tym czasie je więcej niż jedna grupa."
     },
     "customTime": "wyjątek",
-    "customTimeHint": "Godzina ustawiona tylko na ten dzień — zmiana pór grupy jej nie ruszy."
+    "customTimeHint": "Godzina ustawiona tylko na ten dzień — zmiana pór grupy jej nie ruszy.",
+    "addHere": "+ Dodaj zajęcia",
+    "addHereHint": "Kliknij godzinę, aby dodać zajęcia lub posiłek.",
+    "addAt": "Nowa pozycja o {{time}}"
   },
   "groupRooms": {
     "title": "Pokoje grupy",
@@ -538,5 +601,12 @@
     "duration": "Czas trwania (min)",
     "durationHint": "Ile trwa posiłek jednej grupy. Kolejne grupy siadają co ten czas plus 15 min przerwy.",
     "minutes": "{{count}} min"
+  },
+  "dateRange": {
+    "placeholder": "Wybierz termin…",
+    "nights_one": "1 noc",
+    "nights_few": "{{count}} noce",
+    "nights_many": "{{count}} nocy",
+    "nights_other": "{{count}} nocy"
   }
 }

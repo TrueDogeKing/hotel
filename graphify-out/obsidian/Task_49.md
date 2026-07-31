@@ -1,16 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "Payment"
+community: "CampCenter.UnitTests / Services (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Payment
+  - community/CampCenterUnitTests_/_Services_2
 ---
 
 # Task
 
 ## Connections
-- [[.SendAsync()_1]] - `references` [EXTRACTED]
+- [[.AddAsync()_6]] - `references` [EXTRACTED]
+- [[.CountDoneByDateAsync()]] - `references` [EXTRACTED]
+- [[.GetAsync()_3]] - `references` [EXTRACTED]
+- [[.ListForDateAsync()]] - `references` [EXTRACTED]
+- [[.SaveChangesAsync()_6]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Payment
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_2

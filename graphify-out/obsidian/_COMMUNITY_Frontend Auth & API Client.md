@@ -1,11 +1,11 @@
 ---
 type: community
-members: 27
+members: 28
 ---
 
 # Frontend Auth & API Client
 
-**Members:** 27 nodes
+**Members:** 28 nodes
 
 ## Members
 - [[AuthContext]] - code - frontend/src/auth/AuthContext.tsx
@@ -26,6 +26,7 @@ members: 27
 - [[getUserIdFromToken()]] - code - frontend/src/api/jwt.ts
 - [[getUserLoginFromToken()]] - code - frontend/src/api/jwt.ts
 - [[getUserNameFromToken()]] - code - frontend/src/api/jwt.ts
+- [[getUserRoleFromToken()]] - code - frontend/src/api/jwt.ts
 - [[jwt.ts]] - code - frontend/src/api/jwt.ts
 - [[listeners]] - code - frontend/src/api/tokenStore.ts
 - [[login()]] - code - frontend/src/api/auth.ts
@@ -44,12 +45,19 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 7 edges to [[_COMMUNITY_Admin Tasks & Occupancy Pages]]
+- 6 edges to [[_COMMUNITY_useAuth]]
+- 6 edges to [[_COMMUNITY_src  api (1)]]
+- 5 edges to [[_COMMUNITY_.CreateWorkerAsync]]
+- 3 edges to [[_COMMUNITY_Public Booking Frontend (1)]]
+- 3 edges to [[_COMMUNITY_Frontend App Shell & i18n]]
 - 2 edges to [[_COMMUNITY_CampCenter.Application  Services (3)]]
-- 2 edges to [[_COMMUNITY_Public Booking Frontend (1)]]
+- 1 edge to [[_COMMUNITY_Admin Tasks & Occupancy Pages]]
+- 1 edge to [[_COMMUNITY_Room Closure Management]]
+- 1 edge to [[_COMMUNITY_Frontend Icon Components]]
 
 ## Top bridge nodes
+- [[AuthContext.tsx]] - degree 36, connects to 9 communities
 - [[client.ts]] - degree 13, connects to 2 communities
+- [[jwt.ts]] - degree 10, connects to 2 communities
 - [[api]] - degree 4, connects to 2 communities
-- [[AuthContext.tsx]] - degree 22, connects to 1 community
-- [[AuthProvider()]] - degree 7, connects to 1 community
+- [[AuthProvider()]] - degree 8, connects to 1 community

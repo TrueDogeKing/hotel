@@ -1,32 +1,45 @@
 ---
 type: community
-members: 19
+members: 32
 ---
 
 # Integration Test Harness (1)
 
-**Members:** 19 nodes
+**Members:** 32 nodes
 
 ## Members
-- [[AdminPanelApiTests.cs]] - code - tests/CampCenter.IntegrationTests/AdminPanelApiTests.cs
-- [[CampCenter.Api.Controllers.Public]] - code - src/CampCenter.Api/Controllers/Public/PublicAvailabilityController.cs
-- [[CampCenter.Api.RateLimiting]] - code - src/CampCenter.Api/RateLimiting/RateLimitPolicies.cs
-- [[CampCenter.Application.DTOs.Closures]] - code - src/CampCenter.Application/DTOs/Closures/ClosureDtos.cs
-- [[CampCenter.Application.DTOs.Public]] - code - src/CampCenter.Application/DTOs/Public/PublicDtos.cs
-- [[CampCenter.Application.DTOs.Rooms]] - code - src/CampCenter.Application/DTOs/Rooms/RoomDtos.cs
-- [[CampCenter.IntegrationTests]] - code - tests/CampCenter.IntegrationTests/AdminPanelApiTests.cs
-- [[IAvailabilityService.cs]] - code - src/CampCenter.Application/Interfaces/IAvailabilityService.cs
-- [[PaymentsApiTests.cs]] - code - tests/CampCenter.IntegrationTests/PaymentsApiTests.cs
-- [[PublicAvailabilityController.cs]] - code - src/CampCenter.Api/Controllers/Public/PublicAvailabilityController.cs
-- [[PublicBookingApiTests.cs]] - code - tests/CampCenter.IntegrationTests/PublicBookingApiTests.cs
-- [[PublicBookingsController.cs]] - code - src/CampCenter.Api/Controllers/Public/PublicBookingsController.cs
-- [[PublicPaymentsController.cs]] - code - src/CampCenter.Api/Controllers/Public/PublicPaymentsController.cs
-- [[RateLimitPolicies]] - code - src/CampCenter.Api/RateLimiting/RateLimitPolicies.cs
-- [[RateLimitPolicies.cs]] - code - src/CampCenter.Api/RateLimiting/RateLimitPolicies.cs
-- [[RoomService.cs]] - code - src/CampCenter.Application/Services/RoomService.cs
-- [[RoomsAndClosuresApiTests.cs]] - code - tests/CampCenter.IntegrationTests/RoomsAndClosuresApiTests.cs
-- [[ScheduleApiTests.cs]] - code - tests/CampCenter.IntegrationTests/ScheduleApiTests.cs
-- [[string_1]] - code
+- [[.A_one_night_stay_is_an_arrival_on_one_day_and_a_departure_on_the_next()]] - code - tests/CampCenter.UnitTests/Services/HousekeepingPlannerTests.cs
+- [[.A_room_being_vacated_today_is_a_departure()]] - code - tests/CampCenter.UnitTests/Services/HousekeepingPlannerTests.cs
+- [[.A_room_occupied_through_the_day_is_left_alone()]] - code - tests/CampCenter.UnitTests/Services/HousekeepingPlannerTests.cs
+- [[.A_room_taken_today_by_a_group_is_an_arrival()]] - code - tests/CampCenter.UnitTests/Services/HousekeepingPlannerTests.cs
+- [[.Booking()]] - code - tests/CampCenter.UnitTests/Services/HousekeepingPlannerTests.cs
+- [[.Departures_and_unrelated_arrivals_on_one_day_are_separate_jobs()]] - code - tests/CampCenter.UnitTests/Services/HousekeepingPlannerTests.cs
+- [[.Detach()_1]] - code - src/CampCenter.Infrastructure/Repositories/BookingRepository.cs
+- [[.Each_room_of_a_multi_room_group_gets_its_own_job()]] - code - tests/CampCenter.UnitTests/Services/HousekeepingPlannerTests.cs
+- [[.ForDay()]] - code - src/CampCenter.Application/Services/HousekeepingPlanner.cs
+- [[.One_group_out_and_the_next_in_is_a_single_turnaround()]] - code - tests/CampCenter.UnitTests/Services/HousekeepingPlannerTests.cs
+- [[.RemoveAssignments()_1]] - code - src/CampCenter.Infrastructure/Repositories/BookingRepository.cs
+- [[.The_day_before_a_departure_is_not_the_departure_day()]] - code - tests/CampCenter.UnitTests/Services/HousekeepingPlannerTests.cs
+- [[Booking]] - code - src/CampCenter.Domain/Entities/Booking.cs
+- [[Booking.cs]] - code - src/CampCenter.Domain/Entities/Booking.cs
+- [[BookingCancelReason]] - code - src/CampCenter.Domain/Entities/Booking.cs
+- [[BookingStatus_1]] - code - src/CampCenter.Domain/Entities/Booking.cs
+- [[BookingStatuses_1]] - code - src/CampCenter.Domain/Entities/BookingStatuses.cs
+- [[BookingStatuses.cs]] - code - src/CampCenter.Domain/Entities/BookingStatuses.cs
+- [[DateOnly_13]] - code
+- [[DateOnly_17]] - code
+- [[DateOnly_33]] - code
+- [[DateTime_5]] - code
+- [[Fact_7]] - code
+- [[Guid_29]] - code
+- [[Guid_61]] - code
+- [[HousekeepingJob]] - code - src/CampCenter.Application/Services/HousekeepingPlanner.cs
+- [[HousekeepingPlanner]] - code - src/CampCenter.Application/Services/HousekeepingPlanner.cs
+- [[HousekeepingPlanner.cs]] - code - src/CampCenter.Application/Services/HousekeepingPlanner.cs
+- [[HousekeepingPlannerTests]] - code - tests/CampCenter.UnitTests/Services/HousekeepingPlannerTests.cs
+- [[IEnumerable]] - code
+- [[List_10]] - code
+- [[List_19]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -36,20 +49,28 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 13 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
-- 6 edges to [[_COMMUNITY_Public Booking Service (1)]]
-- 6 edges to [[_COMMUNITY_tests  CampCenter.IntegrationTests (1)]]
-- 4 edges to [[_COMMUNITY_Public Booking Service (2)]]
-- 4 edges to [[_COMMUNITY_Domain & Infra Namespaces]]
-- 4 edges to [[_COMMUNITY_Room Management]]
-- 3 edges to [[_COMMUNITY_CampCenter.Application  Services (1)]]
-- 3 edges to [[_COMMUNITY_Room Closure Management]]
-- 2 edges to [[_COMMUNITY_Rate Limiting & Startup]]
-- 2 edges to [[_COMMUNITY_Payment Gateway Integration Tests (1)]]
+- 15 edges to [[_COMMUNITY_CampCenter.Domain  Repositories (1)]]
+- 13 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (2)]]
+- 12 edges to [[_COMMUNITY_Integration Test Harness (2)]]
+- 7 edges to [[_COMMUNITY_Admin Booking & Notifications (1)]]
+- 5 edges to [[_COMMUNITY_Public Booking Service (1)]]
+- 5 edges to [[_COMMUNITY_CampCenter.Application  Services (2)]]
+- 4 edges to [[_COMMUNITY_Admin Booking & Notifications (4)]]
+- 3 edges to [[_COMMUNITY_Public Booking Service (2)]]
+- 2 edges to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
+- 2 edges to [[_COMMUNITY_Domain & Infra Namespaces]]
+- 2 edges to [[_COMMUNITY_BookingMealTime]]
+- 2 edges to [[_COMMUNITY_BookingConfiguration]]
+- 1 edge to [[_COMMUNITY_DTOs  Schedule (1)]]
+- 1 edge to [[_COMMUNITY_components  admin]]
+- 1 edge to [[_COMMUNITY_Payment]]
+- 1 edge to [[_COMMUNITY_Room Task Management (1)]]
+- 1 edge to [[_COMMUNITY_ScheduleEntry]]
+- 1 edge to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
 
 ## Top bridge nodes
-- [[CampCenter.Application.DTOs.Public]] - degree 13, connects to 4 communities
-- [[CampCenter.Application.DTOs.Closures]] - degree 8, connects to 4 communities
-- [[RoomService.cs]] - degree 7, connects to 4 communities
-- [[PublicAvailabilityController.cs]] - degree 5, connects to 3 communities
-- [[CampCenter.Application.DTOs.Rooms]] - degree 10, connects to 2 communities
+- [[Booking]] - degree 80, connects to 15 communities
+- [[BookingStatus_1]] - degree 10, connects to 4 communities
+- [[HousekeepingPlanner.cs]] - degree 4, connects to 2 communities
+- [[.ForDay()]] - degree 16, connects to 1 community
+- [[HousekeepingPlannerTests]] - degree 12, connects to 1 community

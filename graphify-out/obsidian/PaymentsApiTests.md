@@ -22,7 +22,7 @@ tags:
 - [[HttpClient_2]] - `references` [EXTRACTED]
 - [[IntegrationTestBase]] - `inherits` [EXTRACTED]
 - [[PaymentsApiTests.cs]] - `contains` [EXTRACTED]
-- [[int_3]] - `references` [EXTRACTED]
+- [[int_4]] - `references` [EXTRACTED]
 - [[long]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Payment_Gateway_Integration_Tests_1

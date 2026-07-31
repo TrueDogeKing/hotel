@@ -6,6 +6,7 @@ import {
   type AdminBooking,
   type BookingStatus,
 } from "../../api/admin";
+import DateRangeField from "../calendar/DateRangeField";
 
 interface Props {
   onCreated: (booking: AdminBooking) => void | Promise<void>;
@@ -99,24 +100,6 @@ export default function AddGroupForm({ onCreated, onError, onCancel }: Props) {
         />
       </label>
       <label>
-        {t("dashboard.from")}
-        <input
-          type="date"
-          value={startDate}
-          onChange={(e) => setStartDate(e.target.value)}
-          required
-        />
-      </label>
-      <label>
-        {t("dashboard.to")}
-        <input
-          type="date"
-          value={endDate}
-          onChange={(e) => setEndDate(e.target.value)}
-          required
-        />
-      </label>
-      <label>
         {t("dashboard.headcount")}
         <input
           type="number"
@@ -127,6 +110,22 @@ export default function AddGroupForm({ onCreated, onError, onCancel }: Props) {
           required
         />
       </label>
+
+      {/* The app's own calendar rather than a native date input, which renders its
+          picker in the browser's language and ignores the panel's. Folded behind
+          the field so the rest of the form keeps its compact single row. Past
+          dates stay pickable: staff backfill groups that already arrived. */}
+      <DateRangeField
+        label={t("dashboard.stayDates")}
+        startDate={startDate}
+        endDate={endDate}
+        headcount={Number(headcount) || 0}
+        allowPast
+        onChange={(range) => {
+          setStartDate(range.startDate);
+          setEndDate(range.endDate);
+        }}
+      />
       <label>
         {t("dashboard.status")}
         <select value={status} onChange={(e) => setStatus(e.target.value as BookingStatus)}>

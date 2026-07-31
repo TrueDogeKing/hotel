@@ -214,4 +214,103 @@ public class PublicBookingApiTests : IntegrationTestBase
 
         Assert.Equal(HttpStatusCode.NotFound, response.StatusCode);
     }
+
+    private static string CalendarUrl(DateOnly from, DateOnly to, int? headcount = null) =>
+        $"/api/public/availability/calendar?start={from:yyyy-MM-dd}&end={to:yyyy-MM-dd}"
+        + (headcount is null ? "" : $"&headcount={headcount}");
+
+    /// What the booking calendar greys out has to be exactly what the booking
+    /// endpoint would refuse: a closed night, and a night short of beds.
+    [Fact]
+    public async Task Calendar_MarksClosedAndBookedNights_PerNight()
+    {
+        var admin = await CreateAuthenticatedClientAsync();
+        var client = CreateClient();
+        // Capacity 17 is unique to this test (the room inventory is shared).
+        await SetUpRoomsAsync(admin, "CAL", [(17, 2)]);
+
+        var start = new DateOnly(2036, 6, 1);
+        var end = start.AddDays(9);
+
+        // Nothing booked yet: every night is open, both ends of the span included.
+        var empty = (
+            await client.GetFromJsonAsync<AvailabilityCalendarDto>(CalendarUrl(start, end))
+        )!;
+        Assert.Equal(10, empty.Days.Count);
+        Assert.Equal(start, empty.Days[0].Date);
+        Assert.Equal(end, empty.Days[^1].Date);
+        Assert.All(empty.Days, d => Assert.False(d.Closed));
+        // This test's own 34 beds, plus whatever other tests have left free.
+        Assert.All(empty.Days, d => Assert.True(d.FreeBeds >= 34));
+
+        // A group takes one of the two rooms for three nights…
+        var booking = await client.PostAsJsonAsync(
+            "/api/public/bookings",
+            BookingRequest(
+                start.AddDays(2),
+                start.AddDays(5),
+                17,
+                new Dictionary<int, int> { [17] = 1 },
+                "cal@example.com"
+            )
+        );
+        Assert.Equal(HttpStatusCode.Created, booking.StatusCode);
+
+        // …and the centre closes for two days later in the window.
+        var closure = await admin.PostAsJsonAsync(
+            "/api/admin/closures",
+            new CreateClosureRequestDto(
+                "Przerwa techniczna",
+                start.AddDays(7),
+                start.AddDays(8),
+                RoomId: null
+            )
+        );
+        Assert.Equal(HttpStatusCode.Created, closure.StatusCode);
+
+        var after = (
+            await client.GetFromJsonAsync<AvailabilityCalendarDto>(CalendarUrl(start, end, 17))
+        )!;
+        var byDate = after.Days.ToDictionary(d => d.Date);
+
+        // The closed days: no beds, nothing fits, and a reason to show on hover.
+        foreach (var day in new[] { start.AddDays(7), start.AddDays(8) })
+        {
+            Assert.True(byDate[day].Closed, $"{day:yyyy-MM-dd} should be closed");
+            Assert.Equal(0, byDate[day].FreeBeds);
+            Assert.False(byDate[day].Fits);
+            Assert.Equal("Przerwa techniczna", byDate[day].ClosureReason);
+        }
+
+        // The booked nights lost 17 beds; the checkout day did not, because a stay
+        // ends in the morning and the room is free again that night.
+        var beforeBooking = byDate[start.AddDays(1)].FreeBeds;
+        Assert.Equal(beforeBooking - 17, byDate[start.AddDays(2)].FreeBeds);
+        Assert.Equal(beforeBooking - 17, byDate[start.AddDays(4)].FreeBeds);
+        Assert.Equal(beforeBooking, byDate[start.AddDays(5)].FreeBeds);
+
+        // Headcount is what decides "fits": a group larger than anything left over
+        // fits on no night at all.
+        var huge = (
+            await client.GetFromJsonAsync<AvailabilityCalendarDto>(
+                CalendarUrl(start, end, beforeBooking + 1)
+            )
+        )!;
+        Assert.All(huge.Days, d => Assert.False(d.Fits));
+    }
+
+    /// An anonymous caller does not get to ask for a decade of nights, or for a
+    /// span that runs backwards.
+    [Fact]
+    public async Task Calendar_RefusesAnUnreasonableSpan()
+    {
+        var client = CreateClient();
+        var start = new DateOnly(2036, 1, 1);
+
+        var tooWide = await client.GetAsync(CalendarUrl(start, start.AddYears(5)));
+        Assert.Equal(HttpStatusCode.BadRequest, tooWide.StatusCode);
+
+        var backwards = await client.GetAsync(CalendarUrl(start, start.AddDays(-1)));
+        Assert.Equal(HttpStatusCode.BadRequest, backwards.StatusCode);
+    }
 }

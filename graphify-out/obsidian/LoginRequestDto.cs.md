@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/DTOs/Auth/LoginRequestDto.cs"
 type: "code"
-community: "Auth Controller (1)"
+community: "CampCenter.UnitTests / Validators"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Auth_Controller_1
+  - community/CampCenterUnitTests_/_Validators
 ---
 
 # LoginRequestDto.cs
@@ -15,4 +15,4 @@ tags:
 - [[CampCenter.Application.DTOs.Auth]] - `contains` [EXTRACTED]
 - [[LoginRequestDto]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Auth_Controller_1
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Validators

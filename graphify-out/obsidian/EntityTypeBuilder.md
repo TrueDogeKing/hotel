@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Admin User & Token Config"
+community: "IEntityTypeConfiguration"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_User__Token_Config
+  - community/IEntityTypeConfiguration
 ---
 
 # EntityTypeBuilder
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.Configure()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_User__Token_Config
+#graphify/code #graphify/EXTRACTED #community/IEntityTypeConfiguration

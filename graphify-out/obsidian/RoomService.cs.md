@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Services/RoomService.cs"
 type: "code"
-community: "Integration Test Harness (1)"
+community: "Public Booking Service (2)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Integration_Test_Harness_1
+  - community/Public_Booking_Service_2
 ---
 
 # RoomService.cs
@@ -20,4 +20,4 @@ tags:
 - [[CampCenter.Domain.Repositories]] - `imports` [EXTRACTED]
 - [[RoomService]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Integration_Test_Harness_1
+#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_2

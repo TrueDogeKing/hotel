@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/DTOs/Schedule/MealTimeDtos.cs"
 type: "code"
-community: "DTOs / Schedule (1)"
+community: "JWT Token Service"
 location: "L44"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DTOs_/_Schedule_1
+  - community/JWT_Token_Service
 ---
 
 # NeighbourSittingDto
@@ -15,4 +15,4 @@ tags:
 - [[.ToDto()_5]] - `references` [EXTRACTED]
 - [[MealTimeDtos.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DTOs_/_Schedule_1
+#graphify/code #graphify/EXTRACTED #community/JWT_Token_Service

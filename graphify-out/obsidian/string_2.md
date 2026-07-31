@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Admin Booking & Notifications (4)"
+community: ".CreateClient"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Booking__Notifications_4
+  - community/CreateClient
 ---
 
 # string
 
 ## Connections
-- [[BookingSettings]] - `references` [EXTRACTED]
+- [[RateLimitPolicies]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_4
+#graphify/code #graphify/EXTRACTED #community/CreateClient

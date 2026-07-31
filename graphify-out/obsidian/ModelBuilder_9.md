@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "EF Core Migrations (1)"
+community: "20260729224623_RoomCleanings.Designer.cs"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EF_Core_Migrations_1
+  - community/20260729224623_RoomCleaningsDesignercs
 ---
 
 # ModelBuilder
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.BuildTargetModel()_8]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EF_Core_Migrations_1
+#graphify/code #graphify/EXTRACTED #community/20260729224623_RoomCleaningsDesignercs

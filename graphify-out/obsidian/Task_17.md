@@ -1,19 +1,26 @@
 ---
 source_file: ""
 type: "code"
-community: "Public Booking Service (1)"
+community: "Admin Bookings Controller & DTOs"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public_Booking_Service_1
+  - community/Admin_Bookings_Controller__DTOs
 ---
 
 # Task
 
 ## Connections
-- [[.GetAvailabilityAsync()]] - `references` [EXTRACTED]
-- [[.GetBlockedRoomIdsAsync()]] - `references` [EXTRACTED]
-- [[.GetCenterClosureReasonAsync()]] - `references` [EXTRACTED]
-- [[.GetFreeRoomsByCapacityAsync()]] - `references` [EXTRACTED]
+- [[.CancelAsync()]] - `references` [EXTRACTED]
+- [[.CreateAsync()]] - `references` [EXTRACTED]
+- [[.GetAssignableRoomsAsync()]] - `references` [EXTRACTED]
+- [[.GetAsync()]] - `references` [EXTRACTED]
+- [[.GetDashboardAsync()]] - `references` [EXTRACTED]
+- [[.GetGroupPageAsync()]] - `references` [EXTRACTED]
+- [[.GetOccupancyAsync()]] - `references` [EXTRACTED]
+- [[.ListAsync()]] - `references` [EXTRACTED]
+- [[.ReassignAsync()]] - `references` [EXTRACTED]
+- [[.SetStatusAsync()]] - `references` [EXTRACTED]
+- [[.UpdateDietaryNotesAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_1
+#graphify/code #graphify/EXTRACTED #community/Admin_Bookings_Controller__DTOs

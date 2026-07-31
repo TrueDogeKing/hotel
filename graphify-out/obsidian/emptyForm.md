@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/pages/admin/ClosuresPage.tsx"
 type: "code"
-community: "src / api (1)"
-location: "L23"
+community: "useAuth"
+location: "L24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/src_/_api_1
+  - community/useAuth
 ---
 
 # emptyForm
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[ClosuresPage.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/src_/_api_1
+#graphify/code #graphify/EXTRACTED #community/useAuth

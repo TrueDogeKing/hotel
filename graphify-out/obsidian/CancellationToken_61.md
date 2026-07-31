@@ -1,21 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "Room Task Management (1)"
+community: "Refresh Token Repository"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Task_Management_1
+  - community/Refresh_Token_Repository
 ---
 
 # CancellationToken
 
 ## Connections
-- [[.AddAsync()_16]] - `references` [EXTRACTED]
-- [[.CountOpenAsync()_1]] - `references` [EXTRACTED]
-- [[.CountOpenByRoomAsync()_1]] - `references` [EXTRACTED]
-- [[.GetByIdAsync()_12]] - `references` [EXTRACTED]
-- [[.ListAsync()_7]] - `references` [EXTRACTED]
-- [[.SaveChangesAsync()_18]] - `references` [EXTRACTED]
+- [[.AddAsync()_15]] - `references` [EXTRACTED]
+- [[.GetByTokenHashAsync()_3]] - `references` [EXTRACTED]
+- [[.RevokeAllActiveForUserAsync()_1]] - `references` [EXTRACTED]
+- [[.SaveChangesAsync()_15]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Task_Management_1
+#graphify/code #graphify/EXTRACTED #community/Refresh_Token_Repository

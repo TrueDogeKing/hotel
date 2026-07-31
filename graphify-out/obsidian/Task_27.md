@@ -1,29 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "DTOs / Schedule (1)"
+community: "Room Management"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DTOs_/_Schedule_1
+  - community/Room_Management
 ---
 
 # Task
 
 ## Connections
-- [[.CheckConflictsAsync()]] - `references` [EXTRACTED]
-- [[.CreateEntryAsync()]] - `references` [EXTRACTED]
-- [[.DeleteBookingMealsAsync()]] - `references` [EXTRACTED]
-- [[.DeleteEntryAsync()]] - `references` [EXTRACTED]
-- [[.GenerateMealsForBookingAsync()]] - `references` [EXTRACTED]
-- [[.GenerateMissingMealsAsync()]] - `references` [EXTRACTED]
-- [[.GetBookingMealTimesAsync()]] - `references` [EXTRACTED]
-- [[.GetCalendarAsync()]] - `references` [EXTRACTED]
-- [[.GetDayAsync()_1]] - `references` [EXTRACTED]
-- [[.GetForBookingAsync()]] - `references` [EXTRACTED]
-- [[.GetLocationsAsync()]] - `references` [EXTRACTED]
-- [[.ResetBookingMealTimeAsync()]] - `references` [EXTRACTED]
-- [[.SetBookingMealTimeAsync()]] - `references` [EXTRACTED]
-- [[.UpdateEntryAsync()]] - `references` [EXTRACTED]
+- [[.CreateAsync()_4]] - `references` [EXTRACTED]
+- [[.DeleteAsync()_2]] - `references` [EXTRACTED]
+- [[.GetAllAsync()_2]] - `references` [EXTRACTED]
+- [[.UpdateAsync()_2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DTOs_/_Schedule_1
+#graphify/code #graphify/EXTRACTED #community/Room_Management

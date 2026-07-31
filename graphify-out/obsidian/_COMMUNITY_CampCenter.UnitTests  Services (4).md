@@ -24,10 +24,10 @@ members: 20
 - [[.Matches_places_case_insensitively()]] - code - tests/CampCenter.UnitTests/Services/ScheduleConflictTests.cs
 - [[.Reports_the_place_rather_than_the_meal_when_both_hold()]] - code - tests/CampCenter.UnitTests/Services/ScheduleConflictTests.cs
 - [[DateOnly_35]] - code
-- [[Fact_11]] - code
-- [[Guid_60]] - code
+- [[Fact_12]] - code
+- [[Guid_63]] - code
 - [[ScheduleConflictTests]] - code - tests/CampCenter.UnitTests/Services/ScheduleConflictTests.cs
-- [[Task_71]] - code
+- [[Task_76]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -37,12 +37,13 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 7 edges to [[_COMMUNITY_CampCenter.Application  Services (2)]]
+- 5 edges to [[_COMMUNITY_ScheduleEntry]]
+- 2 edges to [[_COMMUNITY_CampCenter.Application  Services (2)]]
 - 1 edge to [[_COMMUNITY_DTOs  Schedule (1)]]
 - 1 edge to [[_COMMUNITY_Domain & Infra Namespaces]]
 
 ## Top bridge nodes
-- [[ScheduleConflictTests]] - degree 20, connects to 2 communities
-- [[.CheckAsync()]] - degree 18, connects to 2 communities
+- [[ScheduleConflictTests]] - degree 20, connects to 3 communities
+- [[.CheckAsync()]] - degree 18, connects to 3 communities
 - [[.Entry()]] - degree 16, connects to 1 community
 - [[.DayHas()]] - degree 14, connects to 1 community

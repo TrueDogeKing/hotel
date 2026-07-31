@@ -12,8 +12,12 @@ tags:
 # AdminUserRepository
 
 ## Connections
+- [[.AddAsync()_10]] - `method` [EXTRACTED]
+- [[.CountByRoleAsync()_1]] - `method` [EXTRACTED]
 - [[.GetByIdAsync()_7]] - `method` [EXTRACTED]
 - [[.GetByLoginAsync()_1]] - `method` [EXTRACTED]
+- [[.ListAsync()_9]] - `method` [EXTRACTED]
+- [[.Remove()_7]] - `method` [EXTRACTED]
 - [[.SaveChangesAsync()_10]] - `method` [EXTRACTED]
 - [[AdminUserRepository.cs]] - `contains` [EXTRACTED]
 - [[AppDbContext]] - `references` [EXTRACTED]

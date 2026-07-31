@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/components/admin/ScheduleEntryForm.tsx"
 type: "code"
-community: "CampCenter.Application / Services (3)"
-location: "L12"
+community: "Room Closure Management"
+location: "L54"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterApplication_/_Services_3
+  - community/Room_Closure_Management
 ---
 
 # Props
@@ -17,4 +17,4 @@ tags:
 - [[ScheduleEntryInput]] - `references` [EXTRACTED]
 - [[ScheduleEntryKind]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_3
+#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management

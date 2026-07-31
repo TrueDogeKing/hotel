@@ -1,26 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.Application / Services (2)"
+community: "CampCenter.UnitTests / Services (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterApplication_/_Services_2
+  - community/CampCenterUnitTests_/_Services_2
 ---
 
 # CancellationToken
 
 ## Connections
-- [[.AddAsync()_8]] - `references` [EXTRACTED]
-- [[.AddRangeAsync()]] - `references` [EXTRACTED]
-- [[.CountByDateAndKindAsync()]] - `references` [EXTRACTED]
-- [[.GetByIdAsync()_6]] - `references` [EXTRACTED]
-- [[.ListForBookingAsync()_1]] - `references` [EXTRACTED]
-- [[.ListForDateAsync()_1]] - `references` [EXTRACTED]
-- [[.ListFullySuppressedSlotsAsync()]] - `references` [EXTRACTED]
-- [[.ListGeneratedSlotsAsync()]] - `references` [EXTRACTED]
-- [[.ListLocationsAsync()]] - `references` [EXTRACTED]
-- [[.ListVisibleSlotSpansAsync()]] - `references` [EXTRACTED]
-- [[.SaveChangesAsync()_9]] - `references` [EXTRACTED]
+- [[.AddAsync()_6]] - `references` [EXTRACTED]
+- [[.CountDoneByDateAsync()]] - `references` [EXTRACTED]
+- [[.GetAsync()_3]] - `references` [EXTRACTED]
+- [[.ListForDateAsync()]] - `references` [EXTRACTED]
+- [[.SaveChangesAsync()_6]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_2
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_2

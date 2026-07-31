@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Camp Session Management"
+community: "JWT Token Service"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Camp_Session_Management
+  - community/JWT_Token_Service
 ---
 
 # ProducesResponseType
@@ -16,4 +16,4 @@ tags:
 - [[.GetAll()_1]] - `references` [EXTRACTED]
 - [[.Update()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Camp_Session_Management
+#graphify/code #graphify/EXTRACTED #community/JWT_Token_Service

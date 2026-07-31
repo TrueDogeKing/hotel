@@ -44,6 +44,19 @@ public class PublicAvailabilityController : ControllerBase
         );
     }
 
+    /// Night-by-night availability for the booking calendar: which days can be
+    /// slept in, and how many beds are left. Both ends inclusive — these are the
+    /// days a calendar draws, not a stay.
+    [HttpGet("calendar")]
+    [ProducesResponseType(typeof(AvailabilityCalendarDto), StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    public async Task<IActionResult> Calendar(
+        [FromQuery] DateOnly start,
+        [FromQuery] DateOnly end,
+        [FromQuery] int? headcount,
+        CancellationToken cancellationToken
+    ) => Ok(await _availability.GetCalendarAsync(start, end, headcount, cancellationToken));
+
     /// Upcoming center-wide closures, for advertising closed periods on the site.
     [HttpGet("closures")]
     [ProducesResponseType(typeof(List<PublicClosureDto>), StatusCodes.Status200OK)]

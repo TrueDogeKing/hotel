@@ -1,26 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Integration Test Harness (2)"
+community: "Integration Test Harness (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Integration_Test_Harness_2
+  - community/Integration_Test_Harness_1
 ---
 
 # List
 
 ## Connections
-- [[.GetBookedRoomIdsInRangeAsync()]] - `references` [EXTRACTED]
-- [[.GetCompletedPaymentKindsAsync()]] - `references` [EXTRACTED]
-- [[.GetConfirmedEndedAsync()]] - `references` [EXTRACTED]
-- [[.GetExpiredPendingAsync()]] - `references` [EXTRACTED]
-- [[.GetPaymentsAsync()]] - `references` [EXTRACTED]
-- [[.ListAsync()_4]] - `references` [EXTRACTED]
-- [[.ListByCategoryAsync()]] - `references` [EXTRACTED]
-- [[.ListLiveChangingOverAsync()]] - `references` [EXTRACTED]
-- [[.ListLiveInRangeAsync()]] - `references` [EXTRACTED]
-- [[.ListLivePresentInAsync()]] - `references` [EXTRACTED]
-- [[.ListUpcomingAsync()]] - `references` [EXTRACTED]
+- [[Booking]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Integration_Test_Harness_2
+#graphify/code #graphify/EXTRACTED #community/Integration_Test_Harness_1

@@ -24,6 +24,7 @@ import ConfirmDialog from "../ConfirmDialog";
 import ScheduleEntryForm from "./ScheduleEntryForm";
 import GroupMealTimes from "./GroupMealTimes";
 import GroupRooms from "./GroupRooms";
+import { useAuth } from "../../auth/AuthContext";
 
 interface Props {
   bookingId: string;
@@ -56,6 +57,9 @@ export default function GroupSchedulePanel({
   onLoaded,
 }: Props) {
   const { t, i18n } = useTranslation();
+  // A worker reads this panel and changes nothing in it. The API refuses the
+  // writes either way; hiding them keeps the panel honest about what it offers.
+  const { canEdit } = useAuth();
   const [schedule, setSchedule] = useState<BookingSchedule | null>(null);
   const [dietaryNotes, setDietaryNotes] = useState("");
   const [addingOn, setAddingOn] = useState<string | null>(null);
@@ -269,18 +273,24 @@ export default function GroupSchedulePanel({
           <h2>{schedule.organizationName}</h2>
           {/* The status is editable here rather than only on the dashboard, so it
               can also be changed from the calendar, which opens this same panel. */}
-          <select
-            className={`group-panel-status status-${schedule.status.toLowerCase()}`}
-            value={schedule.status}
-            aria-label={t("schedule.status")}
-            onChange={(e) => void handleStatusChange(e.target.value as BookingStatus)}
-          >
-            {bookingStatuses.map((status) => (
-              <option key={status} value={status}>
-                {t(`adminBookings.statuses.${status}`)}
-              </option>
-            ))}
-          </select>
+          {canEdit ? (
+            <select
+              className={`group-panel-status status-${schedule.status.toLowerCase()}`}
+              value={schedule.status}
+              aria-label={t("schedule.status")}
+              onChange={(e) => void handleStatusChange(e.target.value as BookingStatus)}
+            >
+              {bookingStatuses.map((status) => (
+                <option key={status} value={status}>
+                  {t(`adminBookings.statuses.${status}`)}
+                </option>
+              ))}
+            </select>
+          ) : (
+            <p className={`group-panel-status status-${schedule.status.toLowerCase()}`}>
+              {t(`adminBookings.statuses.${schedule.status}`)}
+            </p>
+          )}
           <p className="group-panel-meta">
             {formatDate(schedule.startDate, i18n.language)} –{" "}
             {formatDate(schedule.endDate, i18n.language)} ·{" "}
@@ -299,33 +309,57 @@ export default function GroupSchedulePanel({
         </p>
       )}
 
-      <label className="group-panel-dietary">
-        {t("schedule.dietaryNotes")}
-        <textarea
-          value={dietaryNotes}
-          onChange={(e) => setDietaryNotes(e.target.value)}
-          rows={2}
-          maxLength={2000}
-          placeholder={t("schedule.dietaryPlaceholder")}
-        />
-      </label>
-      {/* No "generate meals" button here: a stay is seeded when the group is
-          created and again whenever its meal times are applied below. The schedule
-          page keeps a range-wide backfill for groups that predate that. */}
-      <div className="row-actions">
-        <button type="button" onClick={() => void handleSaveDietaryNotes()}>
-          {t("schedule.saveDietary")}
-        </button>
-      </div>
+      {canEdit ? (
+        <>
+          <label className="group-panel-dietary">
+            {t("schedule.dietaryNotes")}
+            <textarea
+              value={dietaryNotes}
+              onChange={(e) => setDietaryNotes(e.target.value)}
+              rows={2}
+              maxLength={2000}
+              placeholder={t("schedule.dietaryPlaceholder")}
+            />
+          </label>
+          {/* No "generate meals" button here: a stay is seeded when the group is
+              created and again whenever its meal times are applied below. The
+              schedule page keeps a range-wide backfill for groups that predate
+              that. */}
+          <div className="row-actions">
+            <button type="button" onClick={() => void handleSaveDietaryNotes()}>
+              {t("schedule.saveDietary")}
+            </button>
+          </div>
+        </>
+      ) : (
+        schedule.dietaryNotes && (
+          <p className="group-panel-note">
+            <strong>{t("schedule.dietaryNotes")}:</strong> {schedule.dietaryNotes}
+          </p>
+        )
+      )}
 
       {error && <p role="alert">{error}</p>}
       {notice && <p className="group-panel-notice">{notice}</p>}
 
       {/* Above the programme: where the group sleeps is the first thing asked when
-          something has to be moved, and a room change feeds housekeeping too. */}
-      <GroupRooms bookingId={bookingId} onChanged={() => void afterMutation()} />
+          something has to be moved, and a room change feeds housekeeping too. Both
+          render for a worker as well — read-only, like the rest of the panel. */}
+      {/* Keyed by group so switching to another one starts both sub-panels clean
+          instead of carrying over a half-finished edit — and keyed *distinctly*,
+          because keys have to be unique among siblings: two children sharing one
+          key is a reconciliation bug, not just a warning. */}
+      <GroupRooms
+        key={`rooms-${bookingId}`}
+        bookingId={bookingId}
+        onChanged={() => void afterMutation()}
+      />
 
-      <GroupMealTimes bookingId={bookingId} onChanged={() => void afterMutation()} />
+      <GroupMealTimes
+        key={`meal-times-${bookingId}`}
+        bookingId={bookingId}
+        onChanged={() => void afterMutation()}
+      />
 
       {schedule.days.map((day) => (
         <section className="group-panel-day" key={day.date}>
@@ -377,14 +411,16 @@ export default function GroupSchedulePanel({
                       </span>
                     )}
                   </span>
-                  <span className="row-actions">
-                    <button type="button" onClick={() => setEditing(entry)}>
-                      {t("schedule.edit")}
-                    </button>
-                    <button type="button" onClick={() => setDeleteTarget(entry)}>
-                      {t("schedule.delete")}
-                    </button>
-                  </span>
+                  {canEdit && (
+                    <span className="row-actions">
+                      <button type="button" onClick={() => setEditing(entry)}>
+                        {t("schedule.edit")}
+                      </button>
+                      <button type="button" onClick={() => setDeleteTarget(entry)}>
+                        {t("schedule.delete")}
+                      </button>
+                    </span>
+                  )}
                 </li>
               ),
             )}
@@ -394,20 +430,25 @@ export default function GroupSchedulePanel({
             )}
           </ul>
 
-          {addingOn === day.date ? (
-            <ScheduleEntryForm
-              date={day.date}
-              groupHeadcount={schedule.headcount}
-              locations={locations.locations}
-              mealLocation={locations.mealLocation}
-              onSubmit={(input) => requestSave(input)}
-              onCancel={() => setAddingOn(null)}
-            />
-          ) : (
-            <button type="button" className="group-panel-add" onClick={() => setAddingOn(day.date)}>
-              {t("schedule.addEntry")}
-            </button>
-          )}
+          {canEdit &&
+            (addingOn === day.date ? (
+              <ScheduleEntryForm
+                date={day.date}
+                groupHeadcount={schedule.headcount}
+                locations={locations.locations}
+                mealLocation={locations.mealLocation}
+                onSubmit={(input) => requestSave(input)}
+                onCancel={() => setAddingOn(null)}
+              />
+            ) : (
+              <button
+                type="button"
+                className="group-panel-add"
+                onClick={() => setAddingOn(day.date)}
+              >
+                {t("schedule.addEntry")}
+              </button>
+            ))}
         </section>
       ))}
 

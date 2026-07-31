@@ -1,17 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "Admin Bookings Controller & DTOs"
+community: "Camp Session Management"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Bookings_Controller__DTOs
+  - community/Camp_Session_Management
 ---
 
 # Task
 
 ## Connections
-- [[.Get()_1]] - `references` [EXTRACTED]
-- [[.Groups()]] - `references` [EXTRACTED]
+- [[.Create()_1]] - `references` [EXTRACTED]
+- [[.Delete()]] - `references` [EXTRACTED]
+- [[.GetAll()]] - `references` [EXTRACTED]
+- [[.Update()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Bookings_Controller__DTOs
+#graphify/code #graphify/EXTRACTED #community/Camp_Session_Management

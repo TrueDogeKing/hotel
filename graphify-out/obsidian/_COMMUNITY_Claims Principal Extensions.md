@@ -12,7 +12,7 @@ members: 5
 - [[ClaimsPrincipal]] - code
 - [[ClaimsPrincipalExtensions]] - code - src/CampCenter.Api/Extensions/ClaimsPrincipalExtensions.cs
 - [[ClaimsPrincipalExtensions.cs]] - code - src/CampCenter.Api/Extensions/ClaimsPrincipalExtensions.cs
-- [[Guid_7]] - code
+- [[Guid_8]] - code
 
 ## Live Query (requires Dataview plugin)
 

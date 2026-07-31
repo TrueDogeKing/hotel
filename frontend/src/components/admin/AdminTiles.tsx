@@ -9,6 +9,7 @@ import {
   IconGrid,
   IconLock,
   IconSparkles,
+  IconUsers,
   IconUtensils,
 } from "../icons";
 
@@ -20,21 +21,23 @@ interface Tile {
   /** Bento spans, as in the reference dashboard: the sections used daily get the
    *  bigger tiles, so the grid reads as a priority order rather than a list.
    *
-   *  One big (4 cells) + one wide (2) + six single tiles is 12 cells, which fills
-   *  the six-column grid in exactly two rows and the four-column one in three —
-   *  no ragged last row at either width. Adding a tile means re-checking that. */
+   *  Three wide (2 cells each) + six single is 12 cells, which fills the
+   *  six-column grid in exactly two rows and the four-column one in three — no
+   *  ragged last row at either width. Adding a tile means re-doing that sum; a
+   *  ninth tile is what cost the 2×2 the schedule used to have. */
   span?: "wide" | "tall" | "big";
 }
 
 const TILES: Tile[] = [
-  { key: "schedule", to: "/admin/harmonogram", Icon: IconCalendar, span: "big" },
+  { key: "schedule", to: "/admin/harmonogram", Icon: IconCalendar, span: "wide" },
   { key: "housekeeping", to: "/admin/sprzatanie", Icon: IconSparkles, span: "wide" },
-  { key: "bookings", to: "/admin/rezerwacje", Icon: IconClipboard },
+  { key: "bookings", to: "/admin/rezerwacje", Icon: IconClipboard, span: "wide" },
   { key: "occupancy", to: "/admin/oblozenie", Icon: IconGrid },
   { key: "rooms", to: "/admin/pokoje", Icon: IconBed },
   { key: "tasks", to: "/admin/zadania", Icon: IconCheckSquare },
   { key: "closures", to: "/admin/blokady", Icon: IconLock },
   { key: "mealTimes", to: "/admin/posilki", Icon: IconUtensils },
+  { key: "users", to: "/admin/uzytkownicy", Icon: IconUsers },
 ];
 
 /**

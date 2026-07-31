@@ -1,25 +1,23 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.UnitTests / Services (2)"
+community: "Integration Test Harness (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Services_2
+  - community/Integration_Test_Harness_1
 ---
 
 # Fact
 
 ## Connections
-- [[.A_room_nobody_has_touched_is_pending()]] - `references` [EXTRACTED]
-- [[.A_turnaround_carries_both_groups_and_both_bed_counts()]] - `references` [EXTRACTED]
-- [[.Marking_a_room_done_creates_its_row_and_stamps_who_and_when()]] - `references` [EXTRACTED]
-- [[.Puts_turnarounds_before_departures_and_arrivals()]] - `references` [EXTRACTED]
-- [[.Refuses_a_room_with_nothing_to_do_that_day()]] - `references` [EXTRACTED]
-- [[.Rejects_a_range_that_ends_before_it_starts()]] - `references` [EXTRACTED]
-- [[.Rejects_an_unknown_status()]] - `references` [EXTRACTED]
-- [[.Reopening_a_room_clears_who_finished_it()]] - `references` [EXTRACTED]
-- [[.Stored_progress_is_merged_into_the_derived_list()]] - `references` [EXTRACTED]
-- [[.The_day_strip_counts_rooms_and_rooms_done_per_day()]] - `references` [EXTRACTED]
+- [[.A_one_night_stay_is_an_arrival_on_one_day_and_a_departure_on_the_next()]] - `references` [EXTRACTED]
+- [[.A_room_being_vacated_today_is_a_departure()]] - `references` [EXTRACTED]
+- [[.A_room_occupied_through_the_day_is_left_alone()]] - `references` [EXTRACTED]
+- [[.A_room_taken_today_by_a_group_is_an_arrival()]] - `references` [EXTRACTED]
+- [[.Departures_and_unrelated_arrivals_on_one_day_are_separate_jobs()]] - `references` [EXTRACTED]
+- [[.Each_room_of_a_multi_room_group_gets_its_own_job()]] - `references` [EXTRACTED]
+- [[.One_group_out_and_the_next_in_is_a_single_turnaround()]] - `references` [EXTRACTED]
+- [[.The_day_before_a_departure_is_not_the_departure_day()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_2
+#graphify/code #graphify/EXTRACTED #community/Integration_Test_Harness_1

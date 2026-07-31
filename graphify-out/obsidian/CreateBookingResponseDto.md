@@ -2,7 +2,7 @@
 source_file: "src/CampCenter.Application/DTOs/Public/PublicDtos.cs"
 type: "code"
 community: "Public Booking Service (1)"
-location: "L40"
+location: "L66"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[.CreateAsync()_1]] - `references` [EXTRACTED]
-- [[.CreateAsync()_7]] - `references` [EXTRACTED]
+- [[.CreateAsync()_8]] - `references` [EXTRACTED]
 - [[.TryCreateAsync()]] - `references` [EXTRACTED]
 - [[PublicDtos.cs]] - `contains` [EXTRACTED]
 

@@ -12,7 +12,7 @@ tags:
 # IRoomCleaningRepository
 
 ## Connections
-- [[.AddAsync()_5]] - `method` [EXTRACTED]
+- [[.AddAsync()_6]] - `method` [EXTRACTED]
 - [[.CountDoneByDateAsync()]] - `method` [EXTRACTED]
 - [[.GetAsync()_3]] - `method` [EXTRACTED]
 - [[.ListForDateAsync()]] - `method` [EXTRACTED]

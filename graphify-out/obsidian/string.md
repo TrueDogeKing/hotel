@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "OpenAPI Security Scheme"
+community: "WriteRequiresAdministratorHandler"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/OpenAPI_Security_Scheme
+  - community/WriteRequiresAdministratorHandler
 ---
 
 # string
 
 ## Connections
-- [[BearerSecuritySchemeTransformer]] - `references` [EXTRACTED]
+- [[WriteRequiresAdministratorHandler]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/OpenAPI_Security_Scheme
+#graphify/code #graphify/EXTRACTED #community/WriteRequiresAdministratorHandler

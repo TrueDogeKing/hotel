@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Interfaces/IAvailabilityService.cs"
 type: "code"
-community: "Public Booking Service (1)"
+community: ".GetBlockedRoomIdsAsync"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public_Booking_Service_1
+  - community/GetBlockedRoomIdsAsync
 ---
 
 # IAvailabilityService
@@ -14,6 +14,7 @@ tags:
 ## Connections
 - [[.GetAvailabilityAsync()]] - `method` [EXTRACTED]
 - [[.GetBlockedRoomIdsAsync()]] - `method` [EXTRACTED]
+- [[.GetCalendarAsync()]] - `method` [EXTRACTED]
 - [[.GetCenterClosureReasonAsync()]] - `method` [EXTRACTED]
 - [[.GetFreeRoomsByCapacityAsync()]] - `method` [EXTRACTED]
 - [[AdminBookingService]] - `references` [EXTRACTED]
@@ -22,4 +23,4 @@ tags:
 - [[IAvailabilityService.cs]] - `contains` [EXTRACTED]
 - [[PublicAvailabilityController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_1
+#graphify/code #graphify/EXTRACTED #community/GetBlockedRoomIdsAsync

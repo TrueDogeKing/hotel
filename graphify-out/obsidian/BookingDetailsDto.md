@@ -2,7 +2,7 @@
 source_file: "src/CampCenter.Application/DTOs/Public/PublicDtos.cs"
 type: "code"
 community: "Public Booking Service (1)"
-location: "L51"
+location: "L77"
 tags:
   - graphify/code
   - graphify/EXTRACTED

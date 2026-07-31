@@ -17,6 +17,7 @@ tags:
 - [[CampCenter.Application.Interfaces]] - `imports` [EXTRACTED]
 - [[CampCenter.Application.Models]] - `imports` [EXTRACTED]
 - [[CampCenter.Application.Services]] - `contains` [EXTRACTED]
+- [[CampCenter.Domain.Exceptions]] - `imports` [EXTRACTED]
 - [[CampCenter.Domain.Repositories]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Domain__Infra_Namespaces

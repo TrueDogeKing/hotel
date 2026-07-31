@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Validator Unit Tests"
+community: "CampCenter.UnitTests / Services (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Validator_Unit_Tests
+  - community/CampCenterUnitTests_/_Services_1
 ---
 
 # List
 
 ## Connections
-- [[.GetAllAsync()_4]] - `references` [EXTRACTED]
+- [[.EffectiveSlots()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Validator_Unit_Tests
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_1

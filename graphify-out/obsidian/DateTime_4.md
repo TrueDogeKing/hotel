@@ -11,6 +11,6 @@ tags:
 # DateTime
 
 ## Connections
-- [[AdminUser]] - `references` [EXTRACTED]
+- [[AdminUser_1]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Admin_User__Token_Config

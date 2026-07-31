@@ -13,6 +13,7 @@ tags:
 
 ## Connections
 - [[AdminDashboardPage.tsx]] - `imports_from` [EXTRACTED]
+- [[AuthContext.tsx]] - `imports_from` [EXTRACTED]
 - [[BookingSchedule]] - `imports` [EXTRACTED]
 - [[BookingStatus]] - `imports` [EXTRACTED]
 - [[ConfirmDialog()]] - `imports` [EXTRACTED]
@@ -43,5 +44,6 @@ tags:
 - [[toTimeInput()]] - `imports` [EXTRACTED]
 - [[updateDietaryNotes()]] - `imports` [EXTRACTED]
 - [[updateScheduleEntry()]] - `imports` [EXTRACTED]
+- [[useAuth()]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_3

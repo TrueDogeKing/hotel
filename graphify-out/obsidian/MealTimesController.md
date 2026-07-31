@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Api/Controllers/Admin/MealTimesController.cs"
 type: "code"
-community: "Camp Session Management"
+community: "JWT Token Service"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Camp_Session_Management
+  - community/JWT_Token_Service
 ---
 
 # MealTimesController
@@ -21,4 +21,4 @@ tags:
 - [[IValidator_2]] - `references` [EXTRACTED]
 - [[MealTimesController.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Camp_Session_Management
+#graphify/code #graphify/EXTRACTED #community/JWT_Token_Service

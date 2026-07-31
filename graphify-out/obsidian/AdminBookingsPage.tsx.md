@@ -16,6 +16,7 @@ tags:
 - [[AdminBookingsPage()]] - `contains` [EXTRACTED]
 - [[AdminLayout.tsx]] - `imports_from` [EXTRACTED]
 - [[App.tsx]] - `imports_from` [EXTRACTED]
+- [[AuthContext.tsx]] - `imports_from` [EXTRACTED]
 - [[BookingStatus]] - `imports` [EXTRACTED]
 - [[ConfirmDialog()]] - `imports` [EXTRACTED]
 - [[ConfirmDialog.tsx]] - `imports_from` [EXTRACTED]
@@ -27,5 +28,6 @@ tags:
 - [[formatZl()]] - `imports` [EXTRACTED]
 - [[getAdminBookings()]] - `imports` [EXTRACTED]
 - [[setBookingStatus()]] - `imports` [EXTRACTED]
+- [[useAuth()]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Frontend_App_Shell__i18n

@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { isAxiosError } from "axios";
 import LanguageSwitcher from "../components/LanguageSwitcher";
+import RangeCalendar from "../components/calendar/RangeCalendar";
 import { formatZl } from "../api/admin";
 import { createBooking, getAvailability, validateMix, type Availability } from "../api/public";
 import { formatDate as formatIsoDate } from "../utils/dates";
@@ -145,26 +146,10 @@ export default function BookingWizardPage() {
         {step === "dates" && (
           <div className="wizard-panel">
             <h1>{t("wizard.datesTitle")}</h1>
+            {/* Headcount first: how many beds a night must have free is what
+                decides which days the calendar can offer, so asking for it after
+                the dates would grey out the wrong ones. */}
             <div className="form">
-              <label>
-                {t("wizard.arrival")}
-                <input
-                  type="date"
-                  value={startDate}
-                  onChange={(e) => setStartDate(e.target.value)}
-                  required
-                />
-              </label>
-              <label>
-                {t("wizard.departure")}
-                <input
-                  type="date"
-                  value={endDate}
-                  min={startDate || undefined}
-                  onChange={(e) => setEndDate(e.target.value)}
-                  required
-                />
-              </label>
               <label>
                 {t("wizard.headcountLabel")}
                 <input
@@ -176,6 +161,24 @@ export default function BookingWizardPage() {
                 />
               </label>
             </div>
+
+            <RangeCalendar
+              startDate={startDate}
+              endDate={endDate}
+              headcount={Number(headcountInput) || 0}
+              onChange={(range) => {
+                setStartDate(range.startDate);
+                setEndDate(range.endDate);
+                setError(null);
+              }}
+            />
+
+            {startDate !== "" && endDate !== "" && (
+              <p className="wizard-chosen">
+                {formatDate(startDate)} – {formatDate(endDate)}
+              </p>
+            )}
+
             <button type="button" disabled={busy || !datesValid} onClick={() => void submitDates()}>
               {t("wizard.checkAvailability")}
             </button>

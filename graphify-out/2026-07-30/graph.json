@@ -506,8 +506,8 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "frontend_package_devdependencies_types_react",
-      "community": 62,
-      "community_name": "CampCenter.Domain / Entities",
+      "community": 56,
+      "community_name": "ESLint Dev Dependencies",
       "norm_label": "@types/react"
     },
     {
@@ -517,8 +517,8 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "types_react",
-      "community": 62,
-      "community_name": "CampCenter.Domain / Entities",
+      "community": 56,
+      "community_name": "ESLint Dev Dependencies",
       "norm_label": "@types/react"
     },
     {
@@ -594,8 +594,8 @@
       "source_location": "L29",
       "_origin": "ast",
       "id": "frontend_package_devdependencies_eslint_plugin_react_hooks",
-      "community": 56,
-      "community_name": "ESLint Dev Dependencies",
+      "community": 59,
+      "community_name": "DTOs / AdminPanel",
       "norm_label": "eslint-plugin-react-hooks"
     },
     {
@@ -605,8 +605,8 @@
       "source_location": "L29",
       "_origin": "ast",
       "id": "eslint_plugin_react_hooks",
-      "community": 56,
-      "community_name": "ESLint Dev Dependencies",
+      "community": 59,
+      "community_name": "DTOs / AdminPanel",
       "norm_label": "eslint-plugin-react-hooks"
     },
     {
@@ -968,8 +968,8 @@
       "source_location": "L136",
       "_origin": "ast",
       "id": "frontend_src_api_admin_getadminbookings",
-      "community": 13,
-      "community_name": "Public Booking Frontend (1)",
+      "community": 48,
+      "community_name": "Frontend App Shell & i18n",
       "norm_label": "getadminbookings()"
     },
     {
@@ -979,8 +979,8 @@
       "source_location": "L141",
       "_origin": "ast",
       "id": "frontend_src_api_admin_getadminbooking",
-      "community": 43,
-      "community_name": "CampCenter.UnitTests / Services (3)",
+      "community": 21,
+      "community_name": "CampCenter.Application / Services (3)",
       "norm_label": "getadminbooking()"
     },
     {
@@ -990,8 +990,8 @@
       "source_location": "L146",
       "_origin": "ast",
       "id": "frontend_src_api_admin_canceladminbooking",
-      "community": 13,
-      "community_name": "Public Booking Frontend (1)",
+      "community": 48,
+      "community_name": "Frontend App Shell & i18n",
       "norm_label": "canceladminbooking()"
     },
     {
@@ -1001,8 +1001,8 @@
       "source_location": "L152",
       "_origin": "ast",
       "id": "frontend_src_api_admin_assignableroom",
-      "community": 43,
-      "community_name": "CampCenter.UnitTests / Services (3)",
+      "community": 21,
+      "community_name": "CampCenter.Application / Services (3)",
       "norm_label": "assignableroom"
     },
     {
@@ -1012,8 +1012,8 @@
       "source_location": "L159",
       "_origin": "ast",
       "id": "frontend_src_api_admin_getassignablerooms",
-      "community": 43,
-      "community_name": "CampCenter.UnitTests / Services (3)",
+      "community": 21,
+      "community_name": "CampCenter.Application / Services (3)",
       "norm_label": "getassignablerooms()"
     },
     {
@@ -1023,8 +1023,8 @@
       "source_location": "L168",
       "_origin": "ast",
       "id": "frontend_src_api_admin_reassignbooking",
-      "community": 43,
-      "community_name": "CampCenter.UnitTests / Services (3)",
+      "community": 21,
+      "community_name": "CampCenter.Application / Services (3)",
       "norm_label": "reassignbooking()"
     },
     {
@@ -1078,8 +1078,8 @@
       "source_location": "L211",
       "_origin": "ast",
       "id": "frontend_src_api_admin_setbookingstatus",
-      "community": 13,
-      "community_name": "Public Booking Frontend (1)",
+      "community": 48,
+      "community_name": "Frontend App Shell & i18n",
       "norm_label": "setbookingstatus()"
     },
     {
@@ -2387,8 +2387,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "frontend_src_components_confirmdialog",
-      "community": 13,
-      "community_name": "Public Booking Frontend (1)",
+      "community": 48,
+      "community_name": "Frontend App Shell & i18n",
       "norm_label": "confirmdialog.tsx"
     },
     {
@@ -2398,8 +2398,8 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "frontend_src_components_confirmdialog_props",
-      "community": 13,
-      "community_name": "Public Booking Frontend (1)",
+      "community": 48,
+      "community_name": "Frontend App Shell & i18n",
       "norm_label": "props"
     },
     {
@@ -2409,8 +2409,8 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "frontend_src_components_confirmdialog_confirmdialog",
-      "community": 13,
-      "community_name": "Public Booking Frontend (1)",
+      "community": 48,
+      "community_name": "Frontend App Shell & i18n",
       "norm_label": "confirmdialog()"
     },
     {
@@ -2860,8 +2860,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "frontend_src_components_admin_grouprooms",
-      "community": 43,
-      "community_name": "CampCenter.UnitTests / Services (3)",
+      "community": 21,
+      "community_name": "CampCenter.Application / Services (3)",
       "norm_label": "grouprooms.tsx"
     },
     {
@@ -2871,8 +2871,8 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "frontend_src_components_admin_grouprooms_props",
-      "community": 43,
-      "community_name": "CampCenter.UnitTests / Services (3)",
+      "community": 21,
+      "community_name": "CampCenter.Application / Services (3)",
       "norm_label": "props"
     },
     {
@@ -2882,8 +2882,8 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "frontend_src_components_admin_grouprooms_draft",
-      "community": 43,
-      "community_name": "CampCenter.UnitTests / Services (3)",
+      "community": 21,
+      "community_name": "CampCenter.Application / Services (3)",
       "norm_label": "draft"
     },
     {
@@ -2893,8 +2893,8 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "frontend_src_components_admin_grouprooms_grouprooms",
-      "community": 43,
-      "community_name": "CampCenter.UnitTests / Services (3)",
+      "community": 21,
+      "community_name": "CampCenter.Application / Services (3)",
       "norm_label": "grouprooms()"
     },
     {
@@ -3316,21 +3316,21 @@
       "norm_label": "iconchevrondown()"
     },
     {
-      "label": "IconLandscape()",
+      "label": "IconSunSea()",
       "file_type": "code",
       "source_file": "frontend/src/components/icons.tsx",
-      "source_location": "L187",
+      "source_location": "L192",
       "_origin": "ast",
-      "id": "frontend_src_components_icons_iconlandscape",
+      "id": "frontend_src_components_icons_iconsunsea",
       "community": 65,
       "community_name": "Admin Tasks & Occupancy Pages",
-      "norm_label": "iconlandscape()"
+      "norm_label": "iconsunsea()"
     },
     {
       "label": "IconBed()",
       "file_type": "code",
       "source_file": "frontend/src/components/icons.tsx",
-      "source_location": "L195",
+      "source_location": "L201",
       "_origin": "ast",
       "id": "frontend_src_components_icons_iconbed",
       "community": 10,
@@ -3341,7 +3341,7 @@
       "label": "IconUtensils()",
       "file_type": "code",
       "source_file": "frontend/src/components/icons.tsx",
-      "source_location": "L206",
+      "source_location": "L212",
       "_origin": "ast",
       "id": "frontend_src_components_icons_iconutensils",
       "community": 10,
@@ -3352,7 +3352,7 @@
       "label": "IconWaves()",
       "file_type": "code",
       "source_file": "frontend/src/components/icons.tsx",
-      "source_location": "L216",
+      "source_location": "L222",
       "_origin": "ast",
       "id": "frontend_src_components_icons_iconwaves",
       "community": 10,
@@ -3363,7 +3363,7 @@
       "label": "IconArrowRight()",
       "file_type": "code",
       "source_file": "frontend/src/components/icons.tsx",
-      "source_location": "L226",
+      "source_location": "L232",
       "_origin": "ast",
       "id": "frontend_src_components_icons_iconarrowright",
       "community": 10,
@@ -3374,7 +3374,7 @@
       "label": "IconMapPin()",
       "file_type": "code",
       "source_file": "frontend/src/components/icons.tsx",
-      "source_location": "L235",
+      "source_location": "L241",
       "_origin": "ast",
       "id": "frontend_src_components_icons_iconmappin",
       "community": 10,
@@ -3385,7 +3385,7 @@
       "label": "IconMail()",
       "file_type": "code",
       "source_file": "frontend/src/components/icons.tsx",
-      "source_location": "L244",
+      "source_location": "L250",
       "_origin": "ast",
       "id": "frontend_src_components_icons_iconmail",
       "community": 10,
@@ -3396,7 +3396,7 @@
       "label": "IconMap()",
       "file_type": "code",
       "source_file": "frontend/src/components/icons.tsx",
-      "source_location": "L253",
+      "source_location": "L259",
       "_origin": "ast",
       "id": "frontend_src_components_icons_iconmap",
       "community": 10,
@@ -3407,7 +3407,7 @@
       "label": "IconCalendar()",
       "file_type": "code",
       "source_file": "frontend/src/components/icons.tsx",
-      "source_location": "L265",
+      "source_location": "L271",
       "_origin": "ast",
       "id": "frontend_src_components_icons_iconcalendar",
       "community": 10,
@@ -3418,7 +3418,7 @@
       "label": "IconSparkles()",
       "file_type": "code",
       "source_file": "frontend/src/components/icons.tsx",
-      "source_location": "L276",
+      "source_location": "L282",
       "_origin": "ast",
       "id": "frontend_src_components_icons_iconsparkles",
       "community": 10,
@@ -3429,7 +3429,7 @@
       "label": "IconGrid()",
       "file_type": "code",
       "source_file": "frontend/src/components/icons.tsx",
-      "source_location": "L285",
+      "source_location": "L291",
       "_origin": "ast",
       "id": "frontend_src_components_icons_icongrid",
       "community": 10,
@@ -3440,7 +3440,7 @@
       "label": "IconLock()",
       "file_type": "code",
       "source_file": "frontend/src/components/icons.tsx",
-      "source_location": "L296",
+      "source_location": "L302",
       "_origin": "ast",
       "id": "frontend_src_components_icons_iconlock",
       "community": 10,
@@ -3451,7 +3451,7 @@
       "label": "IconClipboard()",
       "file_type": "code",
       "source_file": "frontend/src/components/icons.tsx",
-      "source_location": "L305",
+      "source_location": "L311",
       "_origin": "ast",
       "id": "frontend_src_components_icons_iconclipboard",
       "community": 10,
@@ -3462,7 +3462,7 @@
       "label": "IconCheckSquare()",
       "file_type": "code",
       "source_file": "frontend/src/components/icons.tsx",
-      "source_location": "L316",
+      "source_location": "L322",
       "_origin": "ast",
       "id": "frontend_src_components_icons_iconchecksquare",
       "community": 10,
@@ -3696,8 +3696,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "frontend_src_pages_admin_adminbookingspage",
-      "community": 13,
-      "community_name": "Public Booking Frontend (1)",
+      "community": 48,
+      "community_name": "Frontend App Shell & i18n",
       "norm_label": "adminbookingspage.tsx"
     },
     {
@@ -3707,8 +3707,8 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "frontend_src_pages_admin_adminbookingspage_adminbookingspage",
-      "community": 13,
-      "community_name": "Public Booking Frontend (1)",
+      "community": 48,
+      "community_name": "Frontend App Shell & i18n",
       "norm_label": "adminbookingspage()"
     },
     {
@@ -12128,8 +12128,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_campcenter_application_models_accesstoken",
-      "community": 39,
-      "community_name": "Admin User & Token Config",
+      "community": 46,
+      "community_name": "JWT Token Service",
       "norm_label": "accesstoken.cs"
     },
     {
@@ -12161,8 +12161,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_application_models_accesstoken_campcenter_application_models_accesstoken",
-      "community": 39,
-      "community_name": "Admin User & Token Config",
+      "community": 46,
+      "community_name": "JWT Token Service",
       "norm_label": "accesstoken"
     },
     {
@@ -12239,8 +12239,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_campcenter_application_models_refreshtokeninfo",
-      "community": 46,
-      "community_name": "JWT Token Service",
+      "community": 41,
+      "community_name": "Auth Service & Tokens",
       "norm_label": "refreshtokeninfo.cs"
     },
     {
@@ -12256,8 +12256,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_application_models_refreshtokeninfo_campcenter_application_models_refreshtokeninfo",
-      "community": 46,
-      "community_name": "JWT Token Service",
+      "community": 41,
+      "community_name": "Auth Service & Tokens",
       "norm_label": "refreshtokeninfo"
     },
     {
@@ -19792,8 +19792,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_auth_jwttokenservice_campcenter_infrastructure_auth_jwttokenservice_createaccesstoken",
-      "community": 39,
-      "community_name": "Admin User & Token Config",
+      "community": 46,
+      "community_name": "JWT Token Service",
       "norm_label": ".createaccesstoken()"
     },
     {
@@ -20584,8 +20584,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_persistence_configurations_adminuserconfiguration",
-      "community": 39,
-      "community_name": "Admin User & Token Config",
+      "community": 58,
+      "community_name": "Persistence / Configurations",
       "norm_label": "adminuserconfiguration.cs"
     },
     {
@@ -21339,8 +21339,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_persistence_migrations_20260719142059_initialauth_designer",
-      "community": 59,
-      "community_name": "DTOs / AdminPanel",
+      "community": 71,
+      "community_name": "EF Core Migrations (1)",
       "norm_label": "20260719142059_initialauth.designer.cs"
     },
     {
@@ -21372,8 +21372,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_persistence_migrations_20260719142059_initialauth_designer_campcenter_infrastructure_persistence_migrations_initialauth",
-      "community": 59,
-      "community_name": "DTOs / AdminPanel",
+      "community": 71,
+      "community_name": "EF Core Migrations (1)",
       "norm_label": "initialauth"
     },
     {
@@ -21389,8 +21389,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_persistence_migrations_20260719142059_initialauth_designer_campcenter_infrastructure_persistence_migrations_initialauth_buildtargetmodel",
-      "community": 59,
-      "community_name": "DTOs / AdminPanel",
+      "community": 71,
+      "community_name": "EF Core Migrations (1)",
       "norm_label": ".buildtargetmodel()"
     },
     {
@@ -21400,8 +21400,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_persistence_migrations_20260719142059_initialauth_designer_cs_modelbuilder",
-      "community": 59,
-      "community_name": "DTOs / AdminPanel",
+      "community": 71,
+      "community_name": "EF Core Migrations (1)",
       "norm_label": "modelbuilder"
     },
     {
@@ -21624,8 +21624,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_persistence_migrations_20260721111400_replacesessionswithclosures_designer",
-      "community": 71,
-      "community_name": "EF Core Migrations (1)",
+      "community": 43,
+      "community_name": "CampCenter.UnitTests / Services (3)",
       "norm_label": "20260721111400_replacesessionswithclosures.designer.cs"
     },
     {
@@ -21641,8 +21641,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_persistence_migrations_20260721111400_replacesessionswithclosures_designer_campcenter_infrastructure_persistence_migrations_replacesessionswithclosures",
-      "community": 71,
-      "community_name": "EF Core Migrations (1)",
+      "community": 43,
+      "community_name": "CampCenter.UnitTests / Services (3)",
       "norm_label": "replacesessionswithclosures"
     },
     {
@@ -21658,8 +21658,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_persistence_migrations_20260721111400_replacesessionswithclosures_designer_campcenter_infrastructure_persistence_migrations_replacesessionswithclosures_buildtargetmodel",
-      "community": 71,
-      "community_name": "EF Core Migrations (1)",
+      "community": 43,
+      "community_name": "CampCenter.UnitTests / Services (3)",
       "norm_label": ".buildtargetmodel()"
     },
     {
@@ -21669,8 +21669,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_persistence_migrations_20260721111400_replacesessionswithclosures_designer_cs_modelbuilder",
-      "community": 71,
-      "community_name": "EF Core Migrations (1)",
+      "community": 43,
+      "community_name": "CampCenter.UnitTests / Services (3)",
       "norm_label": "modelbuilder"
     },
     {
@@ -36276,7 +36276,7 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "frontend_src_components_admin_adminlayout",
-      "target": "frontend_src_components_icons_iconlandscape",
+      "target": "frontend_src_components_icons_iconsunsea",
       "confidence_score": 1.0
     },
     {
@@ -37817,7 +37817,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/components/icons.tsx",
-      "source_location": "L226",
+      "source_location": "L232",
       "weight": 1.0,
       "_origin": "ast",
       "source": "frontend_src_components_icons",
@@ -37828,7 +37828,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/components/icons.tsx",
-      "source_location": "L195",
+      "source_location": "L201",
       "weight": 1.0,
       "_origin": "ast",
       "source": "frontend_src_components_icons",
@@ -37839,7 +37839,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/components/icons.tsx",
-      "source_location": "L265",
+      "source_location": "L271",
       "weight": 1.0,
       "_origin": "ast",
       "source": "frontend_src_components_icons",
@@ -37872,7 +37872,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/components/icons.tsx",
-      "source_location": "L316",
+      "source_location": "L322",
       "weight": 1.0,
       "_origin": "ast",
       "source": "frontend_src_components_icons",
@@ -37905,7 +37905,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/components/icons.tsx",
-      "source_location": "L305",
+      "source_location": "L311",
       "weight": 1.0,
       "_origin": "ast",
       "source": "frontend_src_components_icons",
@@ -37927,7 +37927,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/components/icons.tsx",
-      "source_location": "L285",
+      "source_location": "L291",
       "weight": 1.0,
       "_origin": "ast",
       "source": "frontend_src_components_icons",
@@ -37949,18 +37949,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/components/icons.tsx",
-      "source_location": "L187",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "frontend_src_components_icons",
-      "target": "frontend_src_components_icons_iconlandscape",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/components/icons.tsx",
-      "source_location": "L296",
+      "source_location": "L302",
       "weight": 1.0,
       "_origin": "ast",
       "source": "frontend_src_components_icons",
@@ -37982,7 +37971,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/components/icons.tsx",
-      "source_location": "L244",
+      "source_location": "L250",
       "weight": 1.0,
       "_origin": "ast",
       "source": "frontend_src_components_icons",
@@ -37993,7 +37982,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/components/icons.tsx",
-      "source_location": "L253",
+      "source_location": "L259",
       "weight": 1.0,
       "_origin": "ast",
       "source": "frontend_src_components_icons",
@@ -38004,7 +37993,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/components/icons.tsx",
-      "source_location": "L235",
+      "source_location": "L241",
       "weight": 1.0,
       "_origin": "ast",
       "source": "frontend_src_components_icons",
@@ -38103,7 +38092,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/components/icons.tsx",
-      "source_location": "L276",
+      "source_location": "L282",
       "weight": 1.0,
       "_origin": "ast",
       "source": "frontend_src_components_icons",
@@ -38125,6 +38114,17 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/components/icons.tsx",
+      "source_location": "L192",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_components_icons",
+      "target": "frontend_src_components_icons_iconsunsea",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/icons.tsx",
       "source_location": "L74",
       "weight": 1.0,
       "_origin": "ast",
@@ -38136,7 +38136,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/components/icons.tsx",
-      "source_location": "L206",
+      "source_location": "L212",
       "weight": 1.0,
       "_origin": "ast",
       "source": "frontend_src_components_icons",
@@ -38147,7 +38147,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/components/icons.tsx",
-      "source_location": "L216",
+      "source_location": "L222",
       "weight": 1.0,
       "_origin": "ast",
       "source": "frontend_src_components_icons",
@@ -38199,7 +38199,7 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "frontend_src_pages_loginpage",
-      "target": "frontend_src_components_icons_iconlandscape",
+      "target": "frontend_src_components_icons_iconsunsea",
       "confidence_score": 1.0
     },
     {
@@ -38211,7 +38211,7 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "frontend_src_pages_publichomepage",
-      "target": "frontend_src_components_icons_iconlandscape",
+      "target": "frontend_src_components_icons_iconsunsea",
       "confidence_score": 1.0
     },
     {

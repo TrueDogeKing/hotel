@@ -12,7 +12,7 @@ tags:
 # RefreshTokenRepository
 
 ## Connections
-- [[.AddAsync()_13]] - `method` [EXTRACTED]
+- [[.AddAsync()_15]] - `method` [EXTRACTED]
 - [[.GetByTokenHashAsync()_3]] - `method` [EXTRACTED]
 - [[.RevokeAllActiveForUserAsync()_1]] - `method` [EXTRACTED]
 - [[.SaveChangesAsync()_15]] - `method` [EXTRACTED]

@@ -2,6 +2,7 @@ import { useEffect, useState, type FormEvent } from "react";
 import { useTranslation } from "react-i18next";
 import { isAxiosError } from "axios";
 import AdminLayout from "../../components/admin/AdminLayout";
+import { useAuth } from "../../auth/AuthContext";
 import {
   createClosure,
   deleteClosure,
@@ -29,6 +30,9 @@ const emptyForm: ClosureFormState = {
 
 export default function ClosuresPage() {
   const { t, i18n } = useTranslation();
+  // Read-only for a worker: the API refuses these writes, so the page does not
+  // offer them.
+  const { canEdit } = useAuth();
   const [closures, setClosures] = useState<Closure[]>([]);
   const [rooms, setRooms] = useState<Room[]>([]);
   const [form, setForm] = useState<ClosureFormState>(emptyForm);
@@ -111,6 +115,7 @@ export default function ClosuresPage() {
       <h1>{t("adminClosures.title")}</h1>
       <p>{t("adminClosures.intro")}</p>
 
+      {canEdit && (
       <form className="admin-form" onSubmit={handleSubmit}>
         <label>
           {t("adminClosures.reason")}
@@ -166,6 +171,7 @@ export default function ClosuresPage() {
           </button>
         )}
       </form>
+      )}
 
       {error && <p role="alert">{error}</p>}
 
@@ -175,7 +181,7 @@ export default function ClosuresPage() {
             <th>{t("adminClosures.reason")}</th>
             <th>{t("adminClosures.dates")}</th>
             <th>{t("adminClosures.scope")}</th>
-            <th />
+            {canEdit && <th />}
           </tr>
         </thead>
         <tbody>
@@ -190,14 +196,16 @@ export default function ClosuresPage() {
                   ? t("adminClosures.roomScope", { number: closure.roomNumber })
                   : t("adminClosures.wholeCenter")}
               </td>
-              <td className="row-actions">
-                <button type="button" onClick={() => startEdit(closure)}>
-                  {t("adminClosures.edit")}
-                </button>
-                <button type="button" onClick={() => void remove(closure.id)}>
-                  {t("adminClosures.delete")}
-                </button>
-              </td>
+              {canEdit && (
+                <td className="row-actions">
+                  <button type="button" onClick={() => startEdit(closure)}>
+                    {t("adminClosures.edit")}
+                  </button>
+                  <button type="button" onClick={() => void remove(closure.id)}>
+                    {t("adminClosures.delete")}
+                  </button>
+                </td>
+              )}
             </tr>
           ))}
           {closures.length === 0 && (

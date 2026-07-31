@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/components/icons.tsx"
 type: "code"
-community: "Admin Tasks & Occupancy Pages"
+community: "Frontend Icon Components"
 location: "L192"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Tasks__Occupancy_Pages
+  - community/Frontend_Icon_Components
 ---
 
 # IconSunSea()
@@ -17,4 +17,4 @@ tags:
 - [[PublicHomePage.tsx]] - `imports` [EXTRACTED]
 - [[icons.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Tasks__Occupancy_Pages
+#graphify/code #graphify/EXTRACTED #community/Frontend_Icon_Components

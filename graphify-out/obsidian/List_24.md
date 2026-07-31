@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "Room Task Management (1)"
+community: "CampCenter.Domain / Repositories (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Task_Management_1
+  - community/CampCenterDomain_/_Repositories_2
 ---
 
 # List
 
 ## Connections
-- [[.ListAsync()_5]] - `references` [EXTRACTED]
+- [[.GetActiveAsync()]] - `references` [EXTRACTED]
+- [[.GetAllAsync()_7]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Task_Management_1
+#graphify/code #graphify/EXTRACTED #community/CampCenterDomain_/_Repositories_2

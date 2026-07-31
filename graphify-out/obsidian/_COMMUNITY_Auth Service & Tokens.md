@@ -1,19 +1,18 @@
 ---
 type: community
-members: 27
+members: 25
 ---
 
 # Auth Service & Tokens
 
-**Members:** 27 nodes
+**Members:** 25 nodes
 
 ## Members
-- [[.AddAsync()_4]] - code - src/CampCenter.Domain/Repositories/IRefreshTokenRepository.cs
+- [[.AddAsync()_5]] - code - src/CampCenter.Domain/Repositories/IRefreshTokenRepository.cs
 - [[.CreateAccessToken()]] - code - src/CampCenter.Application/Interfaces/ITokenService.cs
 - [[.CreateTokenEntity()]] - code - src/CampCenter.Application/Services/AuthService.cs
 - [[.GenerateRefreshToken()]] - code - src/CampCenter.Application/Interfaces/ITokenService.cs
 - [[.GetByTokenHashAsync()_1]] - code - src/CampCenter.Domain/Repositories/IRefreshTokenRepository.cs
-- [[.HashRefreshToken()]] - code - src/CampCenter.Application/Interfaces/ITokenService.cs
 - [[.IssueTokensAsync()]] - code - src/CampCenter.Application/Services/AuthService.cs
 - [[.LoginAsync()_1]] - code - src/CampCenter.Application/Services/AuthService.cs
 - [[.LogoutAsync()_1]] - code - src/CampCenter.Application/Services/AuthService.cs
@@ -23,18 +22,17 @@ members: 27
 - [[AuthResult]] - code - src/CampCenter.Application/Models/AuthResult.cs
 - [[AuthResult.cs]] - code - src/CampCenter.Application/Models/AuthResult.cs
 - [[AuthService]] - code - src/CampCenter.Application/Services/AuthService.cs
-- [[CancellationToken_30]] - code
-- [[CancellationToken_45]] - code
+- [[CancellationToken_32]] - code
+- [[CancellationToken_48]] - code
 - [[DateTime_2]] - code
 - [[DateTime_15]] - code
-- [[Guid_17]] - code
-- [[Guid_42]] - code
+- [[Guid_19]] - code
+- [[Guid_45]] - code
 - [[IRefreshTokenRepository]] - code - src/CampCenter.Domain/Repositories/IRefreshTokenRepository.cs
-- [[ITokenService]] - code - src/CampCenter.Application/Interfaces/ITokenService.cs
 - [[RefreshTokenInfo]] - code - src/CampCenter.Application/Models/RefreshTokenInfo.cs
 - [[RefreshTokenInfo.cs]] - code - src/CampCenter.Application/Models/RefreshTokenInfo.cs
-- [[Task_29]] - code
-- [[Task_44]] - code
+- [[Task_32]] - code
+- [[Task_48]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -45,21 +43,22 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 5 edges to [[_COMMUNITY_Auth Controller (1)]]
-- 4 edges to [[_COMMUNITY_Admin User & Token Config]]
+- 5 edges to [[_COMMUNITY_Admin Booking & Notifications (4)]]
 - 4 edges to [[_COMMUNITY_Refresh Token Repository]]
+- 3 edges to [[_COMMUNITY_Admin User & Token Config]]
 - 3 edges to [[_COMMUNITY_Domain & Infra Namespaces]]
-- 3 edges to [[_COMMUNITY_Public Booking Service (1)]]
-- 3 edges to [[_COMMUNITY_JWT Token Service]]
+- 3 edges to [[_COMMUNITY_tests  CampCenter.IntegrationTests (2)]]
 - 2 edges to [[_COMMUNITY_Password Hashing (bcrypt)]]
-- 2 edges to [[_COMMUNITY_Admin Booking & Notifications (1)]]
-- 2 edges to [[_COMMUNITY_Admin Booking & Notifications (4)]]
-- 1 edge to [[_COMMUNITY_Login Normalizer]]
-- 1 edge to [[_COMMUNITY_Rate Limiting & Startup]]
+- 2 edges to [[_COMMUNITY_CampCenter.Application  Services (1)]]
+- 1 edge to [[_COMMUNITY_eslint]]
+- 1 edge to [[_COMMUNITY_CampCenter.UnitTests  Validators]]
+- 1 edge to [[_COMMUNITY_Admin Booking & Notifications (1)]]
+- 1 edge to [[_COMMUNITY_Public Booking Service (1)]]
 - 1 edge to [[_COMMUNITY_Public Booking Service (2)]]
 
 ## Top bridge nodes
-- [[ITokenService]] - degree 9, connects to 5 communities
-- [[AuthService]] - degree 11, connects to 4 communities
+- [[AuthService]] - degree 11, connects to 5 communities
 - [[.LoginAsync()_1]] - degree 9, connects to 4 communities
-- [[IRefreshTokenRepository]] - degree 7, connects to 2 communities
-- [[.GenerateRefreshToken()]] - degree 6, connects to 2 communities
+- [[IRefreshTokenRepository]] - degree 8, connects to 3 communities
+- [[.GenerateRefreshToken()]] - degree 6, connects to 3 communities
+- [[.CreateAccessToken()]] - degree 5, connects to 2 communities

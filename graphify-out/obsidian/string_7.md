@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "JWT Token Service"
+community: "Auth Controller (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/JWT_Token_Service
+  - community/Auth_Controller_1
 ---
 
 # string
 
 ## Connections
-- [[RefreshTokenSettings]] - `references` [EXTRACTED]
+- [[JwtSettings]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/JWT_Token_Service
+#graphify/code #graphify/EXTRACTED #community/Auth_Controller_1

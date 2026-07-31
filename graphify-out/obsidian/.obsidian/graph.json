@@ -316,7 +316,7 @@
       }
     },
     {
-      "query": "tag:#community/Booking_Persistence_&_Entities_(2)",
+      "query": "tag:#community/ScheduleEntry",
       "color": {
         "a": 1,
         "rgb": 15583560
@@ -351,7 +351,7 @@
       }
     },
     {
-      "query": "tag:#community/Admin_Frontend_Pages",
+      "query": "tag:#community/.CreateWorkerAsync",
       "color": {
         "a": 1,
         "rgb": 5142951
@@ -365,14 +365,14 @@
       }
     },
     {
-      "query": "tag:#community/Admin_Booking_&_Notifications_(3)",
+      "query": "tag:#community/BookingMealTime",
       "color": {
         "a": 1,
         "rgb": 14767961
       }
     },
     {
-      "query": "tag:#community/Room_Task_Management_(2)",
+      "query": "tag:#community/useAuth",
       "color": {
         "a": 1,
         "rgb": 7780274
@@ -414,7 +414,7 @@
       }
     },
     {
-      "query": "tag:#community/DTOs_/_AdminPanel",
+      "query": "tag:#community/MealTimeDefaultRepository",
       "color": {
         "a": 1,
         "rgb": 12234924
@@ -428,14 +428,21 @@
       }
     },
     {
-      "query": "tag:#community/CampCenter.Application_/_Services_(4)",
+      "query": "tag:#community/.GetBlockedRoomIdsAsync",
       "color": {
         "a": 1,
         "rgb": 15896107
       }
     },
     {
-      "query": "tag:#community/Domain_Exceptions",
+      "query": "tag:#community/RoomCleaningRepository",
+      "color": {
+        "a": 1,
+        "rgb": 14767961
+      }
+    },
+    {
+      "query": "tag:#community/.CreateClient",
       "color": {
         "a": 1,
         "rgb": 7780274
@@ -470,6 +477,20 @@
       }
     },
     {
+      "query": "tag:#community/WriteRequiresAdministratorHandler",
+      "color": {
+        "a": 1,
+        "rgb": 10253663
+      }
+    },
+    {
+      "query": "tag:#community/IEntityTypeConfiguration",
+      "color": {
+        "a": 1,
+        "rgb": 12234924
+      }
+    },
+    {
       "query": "tag:#community/OpenAPI_Security_Scheme",
       "color": {
         "a": 1,
@@ -484,6 +505,13 @@
       }
     },
     {
+      "query": "tag:#community/ScheduleSettings",
+      "color": {
+        "a": 1,
+        "rgb": 14767961
+      }
+    },
+    {
       "query": "tag:#community/Booking_Maintenance_Background_Service",
       "color": {
         "a": 1,
@@ -495,6 +523,34 @@
       "color": {
         "a": 1,
         "rgb": 5873999
+      }
+    },
+    {
+      "query": "tag:#community/SmtpEmailSender",
+      "color": {
+        "a": 1,
+        "rgb": 15583560
+      }
+    },
+    {
+      "query": "tag:#community/CampCenter.Application.DTOs.Public",
+      "color": {
+        "a": 1,
+        "rgb": 11565729
+      }
+    },
+    {
+      "query": "tag:#community/BookingConfiguration",
+      "color": {
+        "a": 1,
+        "rgb": 16752039
+      }
+    },
+    {
+      "query": "tag:#community/BookingRoomAssignmentConfiguration",
+      "color": {
+        "a": 1,
+        "rgb": 10253663
       }
     },
     {
@@ -544,6 +600,13 @@
       "color": {
         "a": 1,
         "rgb": 15583560
+      }
+    },
+    {
+      "query": "tag:#community/AdminUserRole",
+      "color": {
+        "a": 1,
+        "rgb": 11565729
       }
     },
     {
@@ -603,7 +666,7 @@
       }
     },
     {
-      "query": "tag:#community/Login_Normalizer",
+      "query": "tag:#community/MealTimeDefaultConfiguration",
       "color": {
         "a": 1,
         "rgb": 15583560
@@ -624,10 +687,24 @@
       }
     },
     {
+      "query": "tag:#community/20260729224623_RoomCleanings.Designer.cs",
+      "color": {
+        "a": 1,
+        "rgb": 10253663
+      }
+    },
+    {
       "query": "tag:#community/EF_Core_Migrations_(5)",
       "color": {
         "a": 1,
         "rgb": 12234924
+      }
+    },
+    {
+      "query": "tag:#community/20260730211855_AdminUserRole.Designer.cs",
+      "color": {
+        "a": 1,
+        "rgb": 5142951
       }
     },
     {
@@ -645,7 +722,14 @@
       }
     },
     {
-      "query": "tag:#community/Persistence_/_Migrations_(12)",
+      "query": "tag:#community/@types/react",
+      "color": {
+        "a": 1,
+        "rgb": 7780274
+      }
+    },
+    {
+      "query": "tag:#community/PaymentConfiguration",
       "color": {
         "a": 1,
         "rgb": 5873999
@@ -666,10 +750,24 @@
       }
     },
     {
+      "query": "tag:#community/RoomConfiguration",
+      "color": {
+        "a": 1,
+        "rgb": 16752039
+      }
+    },
+    {
       "query": "tag:#community/Root_TS_Config",
       "color": {
         "a": 1,
         "rgb": 10253663
+      }
+    },
+    {
+      "query": "tag:#community/ScheduleEntryConfiguration",
+      "color": {
+        "a": 1,
+        "rgb": 12234924
       }
     },
     {
@@ -715,6 +813,13 @@
       }
     },
     {
+      "query": "tag:#community/Payment",
+      "color": {
+        "a": 1,
+        "rgb": 16752039
+      }
+    },
+    {
       "query": "tag:#community/frontend_(2)",
       "color": {
         "a": 1,
@@ -747,6 +852,20 @@
       "color": {
         "a": 1,
         "rgb": 14767961
+      }
+    },
+    {
+      "query": "tag:#community/eslint",
+      "color": {
+        "a": 1,
+        "rgb": 5873999
+      }
+    },
+    {
+      "query": "tag:#community/eslint-plugin-react-hooks",
+      "color": {
+        "a": 1,
+        "rgb": 15583560
       }
     }
   ]

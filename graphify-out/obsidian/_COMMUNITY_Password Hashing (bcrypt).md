@@ -25,11 +25,13 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 2 edges to [[_COMMUNITY_Auth Service & Tokens]]
+- 2 edges to [[_COMMUNITY_tests  CampCenter.IntegrationTests (2)]]
 - 1 edge to [[_COMMUNITY_Application Namespaces & DTOs]]
-- 1 edge to [[_COMMUNITY_CampCenter.Application  Services (1)]]
+- 1 edge to [[_COMMUNITY_.CreateClient]]
 
 ## Top bridge nodes
-- [[IPasswordHasher]] - degree 5, connects to 1 community
+- [[IPasswordHasher]] - degree 6, connects to 2 communities
 - [[BcryptPasswordHasher]] - degree 4, connects to 1 community
 - [[IPasswordHasher.cs]] - degree 2, connects to 1 community
+- [[.Hash()]] - degree 2, connects to 1 community
 - [[.Verify()]] - degree 2, connects to 1 community

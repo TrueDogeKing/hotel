@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Email/EmailSettings.cs"
 type: "code"
-community: "Payment"
+community: "SmtpEmailSender"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Payment
+  - community/SmtpEmailSender
 ---
 
 # CampCenter.Infrastructure.Email
@@ -16,4 +16,4 @@ tags:
 - [[EmailSettings.cs]] - `contains` [EXTRACTED]
 - [[SmtpEmailSender.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Payment
+#graphify/code #graphify/EXTRACTED #community/SmtpEmailSender

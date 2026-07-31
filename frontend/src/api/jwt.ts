@@ -42,3 +42,13 @@ export function getUserIdFromToken(token: string | null): string | null {
   if (!token) return null;
   return decodeJWT(token)?.sub ?? null;
 }
+
+/** What the account may do. The API is the one that enforces this — the panel
+ *  reads it only to avoid offering controls whose request would be refused. */
+export type UserRole = "Administrator" | "Worker";
+
+export function getUserRoleFromToken(token: string | null): UserRole | null {
+  if (!token) return null;
+  const role = decodeJWT(token)?.role;
+  return role === "Administrator" || role === "Worker" ? role : null;
+}

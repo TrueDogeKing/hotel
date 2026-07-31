@@ -1,21 +1,21 @@
 ---
 source_file: ""
 type: "code"
-community: "Admin Booking & Notifications (2)"
+community: "CampCenter.Application / Services (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Booking__Notifications_2
+  - community/CampCenterApplication_/_Services_1
 ---
 
 # Task
 
 ## Connections
-- [[.AddAsync()_3]] - `references` [EXTRACTED]
-- [[.GetActiveAsync()]] - `references` [EXTRACTED]
-- [[.GetAllAsync()_7]] - `references` [EXTRACTED]
-- [[.GetByIdAsync()_3]] - `references` [EXTRACTED]
-- [[.IsReferencedAsync()]] - `references` [EXTRACTED]
-- [[.SaveChangesAsync()_4]] - `references` [EXTRACTED]
+- [[.AddAsync()]] - `references` [EXTRACTED]
+- [[.CountByRoleAsync()]] - `references` [EXTRACTED]
+- [[.GetByIdAsync()]] - `references` [EXTRACTED]
+- [[.GetByLoginAsync()]] - `references` [EXTRACTED]
+- [[.ListAsync()_6]] - `references` [EXTRACTED]
+- [[.SaveChangesAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_2
+#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_1

@@ -8,6 +8,11 @@ namespace CampCenter.Api.Controllers.Admin;
 
 /// The camp schedule: the month calendar of group stays, the hour-by-hour day
 /// timetable, and each group's programme of meals and activities.
+///
+/// Plain [Authorize], as everywhere in the panel: the default policy already
+/// denies every write to anyone who is not an administrator, so the reads below
+/// are open to both roles and the writes are not, without either being restated
+/// per action.
 [ApiController]
 [Authorize]
 [Route("api/admin/schedule")]

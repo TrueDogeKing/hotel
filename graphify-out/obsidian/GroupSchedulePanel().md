@@ -2,7 +2,7 @@
 source_file: "frontend/src/components/admin/GroupSchedulePanel.tsx"
 type: "code"
 community: "CampCenter.Application / Services (3)"
-location: "L52"
+location: "L53"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -18,5 +18,6 @@ tags:
 - [[getScheduleLocations()]] - `calls` [EXTRACTED]
 - [[overlaps()]] - `calls` [EXTRACTED]
 - [[toTimeInput()]] - `calls` [EXTRACTED]
+- [[useAuth()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_3

@@ -14,6 +14,7 @@ tags:
 ## Connections
 - [[.CreateAuthenticatedClientAsync()]] - `method` [EXTRACTED]
 - [[.CreateClient()]] - `method` [EXTRACTED]
+- [[.CreateClientForAsync()]] - `method` [EXTRACTED]
 - [[AdminPanelApiTests]] - `inherits` [EXTRACTED]
 - [[ApiCollection.cs]] - `contains` [EXTRACTED]
 - [[AuthApiTests]] - `inherits` [EXTRACTED]
@@ -22,6 +23,7 @@ tags:
 - [[PublicBookingApiTests]] - `inherits` [EXTRACTED]
 - [[RoomsAndClosuresApiTests]] - `inherits` [EXTRACTED]
 - [[ScheduleApiTests]] - `inherits` [EXTRACTED]
-- [[string_11]] - `references` [EXTRACTED]
+- [[UsersAndRolesApiTests]] - `inherits` [EXTRACTED]
+- [[string_13]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/tests_/_CampCenterIntegrationTests_1

@@ -1,16 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "Admin Bookings Controller & DTOs"
+community: "JWT Token Service"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Bookings_Controller__DTOs
+  - community/JWT_Token_Service
 ---
 
 # Task
 
 ## Connections
-- [[.Get()_2]] - `references` [EXTRACTED]
+- [[.Create()_2]] - `references` [EXTRACTED]
+- [[.Delete()_1]] - `references` [EXTRACTED]
+- [[.GetAll()_1]] - `references` [EXTRACTED]
+- [[.Update()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Bookings_Controller__DTOs
+#graphify/code #graphify/EXTRACTED #community/JWT_Token_Service

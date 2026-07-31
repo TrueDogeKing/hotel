@@ -1,16 +1,22 @@
 ---
 source_file: ""
 type: "code"
-community: "Payment"
+community: "Room Management"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Payment
+  - community/Room_Management
 ---
 
 # CancellationToken
 
 ## Connections
-- [[.SendAsync()_1]] - `references` [EXTRACTED]
+- [[.AddAsync()_7]] - `references` [EXTRACTED]
+- [[.GetActiveAsync()_1]] - `references` [EXTRACTED]
+- [[.GetAllAsync()_8]] - `references` [EXTRACTED]
+- [[.GetByIdAsync()_4]] - `references` [EXTRACTED]
+- [[.GetByNumberAsync()]] - `references` [EXTRACTED]
+- [[.HasAssignmentsAsync()]] - `references` [EXTRACTED]
+- [[.SaveChangesAsync()_7]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Payment
+#graphify/code #graphify/EXTRACTED #community/Room_Management

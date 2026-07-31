@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/pages/admin/MealTimesPage.tsx"
 type: "code"
-community: "CampCenter.Application / Services (3)"
+community: "Room Closure Management"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterApplication_/_Services_3
+  - community/Room_Closure_Management
 ---
 
 # MealTimesPage.tsx
@@ -14,6 +14,7 @@ tags:
 ## Connections
 - [[AdminLayout.tsx]] - `imports_from` [EXTRACTED]
 - [[App.tsx]] - `imports_from` [EXTRACTED]
+- [[AuthContext.tsx]] - `imports_from` [EXTRACTED]
 - [[FormState]] - `contains` [EXTRACTED]
 - [[MealKind]] - `imports` [EXTRACTED]
 - [[MealTimeDefault]] - `imports` [EXTRACTED]
@@ -28,5 +29,6 @@ tags:
 - [[mealKinds]] - `imports` [EXTRACTED]
 - [[toTimeInput()]] - `imports` [EXTRACTED]
 - [[updateMealTime()]] - `imports` [EXTRACTED]
+- [[useAuth()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_3
+#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management

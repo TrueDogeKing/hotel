@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/auth/ProtectedRoute.tsx"
 type: "code"
-community: "Admin Tasks & Occupancy Pages"
+community: "useAuth"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Tasks__Occupancy_Pages
+  - community/useAuth
 ---
 
 # ProtectedRoute.tsx
@@ -17,4 +17,4 @@ tags:
 - [[ProtectedRoute()]] - `contains` [EXTRACTED]
 - [[useAuth()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Tasks__Occupancy_Pages
+#graphify/code #graphify/EXTRACTED #community/useAuth

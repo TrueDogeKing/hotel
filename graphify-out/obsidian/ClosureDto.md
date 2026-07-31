@@ -1,19 +1,19 @@
 ---
 source_file: "src/CampCenter.Application/DTOs/Closures/ClosureDtos.cs"
 type: "code"
-community: "Room Closure Management"
+community: "Validator Unit Tests"
 location: "L3"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Closure_Management
+  - community/Validator_Unit_Tests
 ---
 
 # ClosureDto
 
 ## Connections
 - [[.CreateAsync()_2]] - `references` [EXTRACTED]
-- [[.CreateAsync()_8]] - `references` [EXTRACTED]
+- [[.CreateAsync()_9]] - `references` [EXTRACTED]
 - [[.GetAllAsync()]] - `references` [EXTRACTED]
 - [[.GetAllAsync()_3]] - `references` [EXTRACTED]
 - [[.ToDto()_1]] - `references` [EXTRACTED]
@@ -21,4 +21,4 @@ tags:
 - [[.UpdateAsync()_3]] - `references` [EXTRACTED]
 - [[ClosureDtos.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management
+#graphify/code #graphify/EXTRACTED #community/Validator_Unit_Tests

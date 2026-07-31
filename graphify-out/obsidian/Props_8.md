@@ -2,7 +2,7 @@
 source_file: "frontend/src/components/admin/GroupSchedulePanel.tsx"
 type: "code"
 community: "CampCenter.Application / Services (3)"
-location: "L28"
+location: "L29"
 tags:
   - graphify/code
   - graphify/EXTRACTED

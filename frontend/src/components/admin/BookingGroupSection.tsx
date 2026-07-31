@@ -8,6 +8,7 @@ import {
   type DashboardBooking,
 } from "../../api/admin";
 import { formatDate as formatIsoDate } from "../../utils/dates";
+import { useAuth } from "../../auth/AuthContext";
 
 /** Rows per request. Enough to fill the fold on a laptop without a second round
  *  trip, small enough that opening a fold is cheap on a long history. */
@@ -41,6 +42,7 @@ export default function BookingGroupSection({
   refreshToken,
 }: Props) {
   const { t, i18n } = useTranslation();
+  const { canEdit } = useAuth();
   const [open, setOpen] = useState(defaultOpen);
   const [rows, setRows] = useState<DashboardBooking[]>([]);
   const [total, setTotal] = useState<number | null>(null);
@@ -73,32 +75,23 @@ export default function BookingGroupSection({
     [category, t],
   );
 
-  // The first page lands when the fold is opened, not before. Closing keeps what
-  // was loaded, so re-opening is instant.
-  useEffect(() => {
-    if (!open || rows.length > 0 || total !== null) return;
-    void loadPage(0);
-  }, [open, rows.length, total, loadPage]);
+  /** The refresh token whose data this fold currently holds. A mutation elsewhere
+   *  on the page bumps the token; the fold notices the next time it is open and
+   *  re-reads its first page. A closed fold does nothing until it is opened —
+   *  which is the whole point of loading these on demand. */
+  const loadedToken = useRef(refreshToken);
 
-  // After a mutation elsewhere on the page, refresh only what is on screen: the
-  // first page, which is all a closed fold has anyway.
-  const firstRender = useRef(true);
+  // The first page lands when the fold is opened, not before, and again after a
+  // mutation has invalidated what it holds. loadPage(0) replaces the rows
+  // outright, so a group that a status change moved to another category cannot
+  // linger here.
   useEffect(() => {
-    if (firstRender.current) {
-      firstRender.current = false;
-      return;
-    }
-    if (!open) {
-      // Drop what was loaded so re-opening re-fetches rather than showing a list
-      // that a status change may have moved rows out of.
-      setRows([]);
-      setTotal(null);
-      return;
-    }
-    // Back to a single page: loadPage(0) replaces the rows outright, so a group a
-    // status change moved into another category cannot linger here.
+    if (!open) return;
+    const stale = loadedToken.current !== refreshToken;
+    if (!stale && (rows.length > 0 || total !== null)) return;
+    loadedToken.current = refreshToken;
     void loadPage(0);
-  }, [refreshToken]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [open, refreshToken, rows.length, total, loadPage]);
 
   const hasMore = total !== null && rows.length < total;
 
@@ -168,22 +161,27 @@ export default function BookingGroupSection({
                     <td>{t("dashboard.beds", { count: booking.occupiedBeds })}</td>
                     <td>
                       {/* Stop propagation so picking a status doesn't also toggle
-                          the row's programme panel. */}
-                      <select
-                        value={booking.status}
-                        aria-label={t("dashboard.status")}
-                        onClick={(e) => e.stopPropagation()}
-                        onChange={(e) => {
-                          e.stopPropagation();
-                          void onStatusChange(booking.id, e.target.value as BookingStatus);
-                        }}
-                      >
-                        {bookingStatuses.map((status) => (
-                          <option key={status} value={status}>
-                            {t(`adminBookings.statuses.${status}`)}
-                          </option>
-                        ))}
-                      </select>
+                          the row's programme panel. A worker reads the status
+                          instead of choosing it. */}
+                      {canEdit ? (
+                        <select
+                          value={booking.status}
+                          aria-label={t("dashboard.status")}
+                          onClick={(e) => e.stopPropagation()}
+                          onChange={(e) => {
+                            e.stopPropagation();
+                            void onStatusChange(booking.id, e.target.value as BookingStatus);
+                          }}
+                        >
+                          {bookingStatuses.map((status) => (
+                            <option key={status} value={status}>
+                              {t(`adminBookings.statuses.${status}`)}
+                            </option>
+                          ))}
+                        </select>
+                      ) : (
+                        t(`adminBookings.statuses.${booking.status}`)
+                      )}
                     </td>
                   </tr>
                 ))}

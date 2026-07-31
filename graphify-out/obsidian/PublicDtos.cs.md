@@ -12,6 +12,8 @@ tags:
 # PublicDtos.cs
 
 ## Connections
+- [[AvailabilityCalendarDto]] - `contains` [EXTRACTED]
+- [[AvailabilityDayDto]] - `contains` [EXTRACTED]
 - [[AvailabilityDto]] - `contains` [EXTRACTED]
 - [[BookingDetailsDto]] - `contains` [EXTRACTED]
 - [[BookingPaymentDto]] - `contains` [EXTRACTED]

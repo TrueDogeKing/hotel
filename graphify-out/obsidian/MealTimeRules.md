@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Validators/MealTimeValidators.cs"
 type: "code"
-community: "Rate Limiting & Startup"
+community: "Camp Session Management"
 location: "L49"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Rate_Limiting__Startup
+  - community/Camp_Session_Management
 ---
 
 # MealTimeRules
@@ -14,6 +14,6 @@ tags:
 ## Connections
 - [[.BeAMealKind()]] - `method` [EXTRACTED]
 - [[MealTimeValidators.cs]] - `contains` [EXTRACTED]
-- [[string_4]] - `references` [EXTRACTED]
+- [[string_5]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Rate_Limiting__Startup
+#graphify/code #graphify/EXTRACTED #community/Camp_Session_Management

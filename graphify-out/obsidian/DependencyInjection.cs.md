@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/DependencyInjection.cs"
 type: "code"
-community: "CampCenter.Application / Services (1)"
+community: ".CreateClient"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterApplication_/_Services_1
+  - community/CreateClient
 ---
 
 # DependencyInjection.cs
@@ -17,4 +17,4 @@ tags:
 - [[CampCenter.Application.Services]] - `imports` [EXTRACTED]
 - [[DependencyInjection]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_1
+#graphify/code #graphify/EXTRACTED #community/CreateClient

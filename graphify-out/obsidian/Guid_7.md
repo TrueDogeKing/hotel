@@ -1,16 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "Claims Principal Extensions"
+community: "Booking Persistence & Entities (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Claims_Principal_Extensions
+  - community/Booking_Persistence__Entities_1
 ---
 
 # Guid
 
 ## Connections
-- [[.GetUserId()]] - `references` [EXTRACTED]
+- [[.Delete()_4]] - `references` [EXTRACTED]
+- [[.SetRole()]] - `references` [EXTRACTED]
+- [[UsersController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Claims_Principal_Extensions
+#graphify/code #graphify/EXTRACTED #community/Booking_Persistence__Entities_1

@@ -24,5 +24,6 @@ tags:
 - [[RoomsController]] - `inherits` [EXTRACTED]
 - [[ScheduleController]] - `inherits` [EXTRACTED]
 - [[TasksController]] - `inherits` [EXTRACTED]
+- [[UsersController]] - `inherits` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Admin_Bookings_Controller__DTOs

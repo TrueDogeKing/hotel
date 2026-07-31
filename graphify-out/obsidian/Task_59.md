@@ -1,22 +1,21 @@
 ---
 source_file: ""
 type: "code"
-community: "Room Management"
+community: "Validator Unit Tests"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Management
+  - community/Validator_Unit_Tests
 ---
 
 # Task
 
 ## Connections
-- [[.AddAsync()_15]] - `references` [EXTRACTED]
-- [[.GetActiveAsync()_3]] - `references` [EXTRACTED]
-- [[.GetAllAsync()_11]] - `references` [EXTRACTED]
-- [[.GetByIdAsync()_11]] - `references` [EXTRACTED]
-- [[.GetByNumberAsync()_1]] - `references` [EXTRACTED]
-- [[.HasAssignmentsAsync()_1]] - `references` [EXTRACTED]
-- [[.SaveChangesAsync()_17]] - `references` [EXTRACTED]
+- [[.AddAsync()_13]] - `references` [EXTRACTED]
+- [[.GetAllAsync()_9]] - `references` [EXTRACTED]
+- [[.GetByIdAsync()_9]] - `references` [EXTRACTED]
+- [[.GetOverlappingAsync()_1]] - `references` [EXTRACTED]
+- [[.GetUpcomingCenterWideAsync()_1]] - `references` [EXTRACTED]
+- [[.SaveChangesAsync()_13]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Management
+#graphify/code #graphify/EXTRACTED #community/Validator_Unit_Tests

@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/package.json"
 type: "concept"
-community: "Domain Exceptions"
+community: "ESLint Dev Dependencies"
 location: "L28"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Domain_Exceptions
+  - community/ESLint_Dev_Dependencies
 ---
 
 # eslint
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[eslint]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Domain_Exceptions
+#graphify/concept #graphify/EXTRACTED #community/ESLint_Dev_Dependencies

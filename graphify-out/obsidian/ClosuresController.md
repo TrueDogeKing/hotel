@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Api/Controllers/Admin/ClosuresController.cs"
 type: "code"
-community: "Room Closure Management"
+community: "Camp Session Management"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Closure_Management
+  - community/Camp_Session_Management
 ---
 
 # ClosuresController
@@ -21,4 +21,4 @@ tags:
 - [[IClosureService]] - `references` [EXTRACTED]
 - [[IValidator_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management
+#graphify/code #graphify/EXTRACTED #community/Camp_Session_Management

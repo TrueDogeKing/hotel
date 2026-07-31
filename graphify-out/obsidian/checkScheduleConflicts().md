@@ -2,7 +2,7 @@
 source_file: "frontend/src/api/admin.ts"
 type: "code"
 community: "CampCenter.Application / Services (3)"
-location: "L576"
+location: "L614"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,6 +13,7 @@ tags:
 
 ## Connections
 - [[GroupSchedulePanel.tsx]] - `imports` [EXTRACTED]
+- [[SchedulePage.tsx]] - `imports` [EXTRACTED]
 - [[admin.ts]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_3

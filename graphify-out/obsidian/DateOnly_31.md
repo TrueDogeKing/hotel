@@ -13,5 +13,6 @@ tags:
 ## Connections
 - [[.AvailabilityUrl()]] - `references` [EXTRACTED]
 - [[.BookingRequest()]] - `references` [EXTRACTED]
+- [[.CalendarUrl()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/tests_/_CampCenterIntegrationTests_1

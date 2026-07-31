@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[.AddAssignmentAsync()_1]] - `method` [EXTRACTED]
-- [[.AddAsync()_10]] - `method` [EXTRACTED]
+- [[.AddAsync()_12]] - `method` [EXTRACTED]
 - [[.AddPaymentAsync()_1]] - `method` [EXTRACTED]
 - [[.Detach()_1]] - `method` [EXTRACTED]
 - [[.GetBookedRoomIdsInRangeAsync()_1]] - `method` [EXTRACTED]
@@ -25,7 +25,8 @@ tags:
 - [[.GetPaymentByP24SessionIdAsync()_1]] - `method` [EXTRACTED]
 - [[.GetPaymentsAsync()_1]] - `method` [EXTRACTED]
 - [[.IsRoomRace()]] - `method` [EXTRACTED]
-- [[.ListAsync()_6]] - `method` [EXTRACTED]
+- [[.ListAssignmentsInRangeAsync()_1]] - `method` [EXTRACTED]
+- [[.ListAsync()_10]] - `method` [EXTRACTED]
 - [[.ListByCategoryAsync()_1]] - `method` [EXTRACTED]
 - [[.ListLiveChangingOverAsync()_1]] - `method` [EXTRACTED]
 - [[.ListLiveInRangeAsync()_1]] - `method` [EXTRACTED]

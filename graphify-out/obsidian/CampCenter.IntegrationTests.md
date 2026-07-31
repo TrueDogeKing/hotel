@@ -1,12 +1,12 @@
 ---
 source_file: "tests/CampCenter.IntegrationTests/AdminPanelApiTests.cs"
 type: "code"
-community: "Integration Test Harness (1)"
+community: "CampCenter.Application.DTOs.Public"
 location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Integration_Test_Harness_1
+  - community/CampCenterApplicationDTOsPublic
 ---
 
 # CampCenter.IntegrationTests
@@ -20,5 +20,6 @@ tags:
 - [[PublicBookingApiTests.cs]] - `contains` [EXTRACTED]
 - [[RoomsAndClosuresApiTests.cs]] - `contains` [EXTRACTED]
 - [[ScheduleApiTests.cs]] - `contains` [EXTRACTED]
+- [[UsersAndRolesApiTests.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Integration_Test_Harness_1
+#graphify/code #graphify/EXTRACTED #community/CampCenterApplicationDTOsPublic

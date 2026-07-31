@@ -21,6 +21,7 @@ tags:
 - [[IconGrid()]] - `imports` [EXTRACTED]
 - [[IconLock()]] - `imports` [EXTRACTED]
 - [[IconSparkles()]] - `imports` [EXTRACTED]
+- [[IconUsers()]] - `imports` [EXTRACTED]
 - [[IconUtensils()]] - `imports` [EXTRACTED]
 - [[TILES]] - `contains` [EXTRACTED]
 - [[Tile]] - `contains` [EXTRACTED]

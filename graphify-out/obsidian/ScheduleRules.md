@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Validators/ScheduleValidators.cs"
 type: "code"
-community: "DTOs / Schedule (1)"
+community: "CampCenter.UnitTests / Validators"
 location: "L61"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DTOs_/_Schedule_1
+  - community/CampCenterUnitTests_/_Validators
 ---
 
 # ScheduleRules
@@ -16,6 +16,6 @@ tags:
 - [[.BeAMealKind()_1]] - `method` [EXTRACTED]
 - [[.IsMeal()]] - `method` [EXTRACTED]
 - [[ScheduleValidators.cs]] - `contains` [EXTRACTED]
-- [[string_5]] - `references` [EXTRACTED]
+- [[string_6]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DTOs_/_Schedule_1
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Validators

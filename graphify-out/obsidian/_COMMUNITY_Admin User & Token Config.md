@@ -1,34 +1,32 @@
 ---
 type: community
-members: 21
+members: 19
 ---
 
 # Admin User & Token Config
 
-**Members:** 21 nodes
+**Members:** 19 nodes
 
 ## Members
-- [[.Configure()]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/AdminUserConfiguration.cs
-- [[.GetByIdAsync()]] - code - src/CampCenter.Domain/Repositories/IAdminUserRepository.cs
+- [[.AddAsync()_10]] - code - src/CampCenter.Infrastructure/Repositories/AdminUserRepository.cs
+- [[.CountByRoleAsync()_1]] - code - src/CampCenter.Infrastructure/Repositories/AdminUserRepository.cs
+- [[.CreateAccessToken()_1]] - code - src/CampCenter.Infrastructure/Auth/JwtTokenService.cs
 - [[.GetByIdAsync()_7]] - code - src/CampCenter.Infrastructure/Repositories/AdminUserRepository.cs
-- [[.GetByLoginAsync()]] - code - src/CampCenter.Domain/Repositories/IAdminUserRepository.cs
 - [[.GetByLoginAsync()_1]] - code - src/CampCenter.Infrastructure/Repositories/AdminUserRepository.cs
-- [[.SaveChangesAsync()]] - code - src/CampCenter.Domain/Repositories/IAdminUserRepository.cs
+- [[.ListAsync()_9]] - code - src/CampCenter.Infrastructure/Repositories/AdminUserRepository.cs
+- [[.Remove()_7]] - code - src/CampCenter.Infrastructure/Repositories/AdminUserRepository.cs
 - [[.SaveChangesAsync()_10]] - code - src/CampCenter.Infrastructure/Repositories/AdminUserRepository.cs
-- [[AdminUser]] - code - src/CampCenter.Domain/Entities/AdminUser.cs
+- [[AccessToken]] - code - src/CampCenter.Application/Models/AccessToken.cs
+- [[AccessToken.cs]] - code - src/CampCenter.Application/Models/AccessToken.cs
+- [[AdminUser_1]] - code - src/CampCenter.Domain/Entities/AdminUser.cs
 - [[AdminUser.cs]] - code - src/CampCenter.Domain/Entities/AdminUser.cs
-- [[AdminUserConfiguration]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/AdminUserConfiguration.cs
 - [[AdminUserRepository]] - code - src/CampCenter.Infrastructure/Repositories/AdminUserRepository.cs
-- [[CancellationToken_40]] - code
-- [[CancellationToken_53]] - code
+- [[CancellationToken_56]] - code
 - [[DateTime_4]] - code
-- [[EntityTypeBuilder]] - code
-- [[Guid_25]] - code
-- [[Guid_37]] - code
-- [[Guid_47]] - code
-- [[IAdminUserRepository]] - code - src/CampCenter.Domain/Repositories/IAdminUserRepository.cs
-- [[Task_39]] - code
-- [[Task_52]] - code
+- [[Guid_28]] - code
+- [[Guid_50]] - code
+- [[List_29]] - code
+- [[Task_56]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -38,16 +36,19 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_Auth Service & Tokens]]
-- 3 edges to [[_COMMUNITY_Public Booking Service (2)]]
-- 2 edges to [[_COMMUNITY_Booking Persistence & Entities (1)]]
-- 2 edges to [[_COMMUNITY_Persistence  Configurations]]
+- 8 edges to [[_COMMUNITY_CampCenter.Application  Services (1)]]
+- 3 edges to [[_COMMUNITY_Auth Service & Tokens]]
+- 2 edges to [[_COMMUNITY_tests  CampCenter.IntegrationTests (2)]]
+- 2 edges to [[_COMMUNITY_Public Booking Service (2)]]
+- 2 edges to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
+- 2 edges to [[_COMMUNITY_IEntityTypeConfiguration]]
+- 1 edge to [[_COMMUNITY_Domain & Infra Namespaces]]
 - 1 edge to [[_COMMUNITY_Refresh Token Repository]]
-- 1 edge to [[_COMMUNITY_JWT Token Service]]
+- 1 edge to [[_COMMUNITY_Auth Controller (1)]]
 
 ## Top bridge nodes
-- [[AdminUser]] - degree 14, connects to 4 communities
-- [[IAdminUserRepository]] - degree 6, connects to 2 communities
-- [[AdminUserRepository]] - degree 6, connects to 2 communities
-- [[.GetByLoginAsync()]] - degree 5, connects to 1 community
-- [[AdminUserConfiguration]] - degree 4, connects to 1 community
+- [[AdminUser_1]] - degree 23, connects to 6 communities
+- [[AdminUserRepository]] - degree 10, connects to 3 communities
+- [[.CountByRoleAsync()_1]] - degree 4, connects to 1 community
+- [[AccessToken]] - degree 3, connects to 1 community
+- [[.CreateAccessToken()_1]] - degree 3, connects to 1 community

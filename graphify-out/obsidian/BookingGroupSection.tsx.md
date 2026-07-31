@@ -13,6 +13,7 @@ tags:
 
 ## Connections
 - [[AdminDashboardPage.tsx]] - `imports_from` [EXTRACTED]
+- [[AuthContext.tsx]] - `imports_from` [EXTRACTED]
 - [[BookingGroupCategory]] - `imports` [EXTRACTED]
 - [[BookingGroupSection()]] - `contains` [EXTRACTED]
 - [[BookingStatus]] - `imports` [EXTRACTED]
@@ -23,5 +24,6 @@ tags:
 - [[dates.ts]] - `imports_from` [EXTRACTED]
 - [[formatDate()]] - `imports` [EXTRACTED]
 - [[getBookingGroupPage()]] - `imports` [EXTRACTED]
+- [[useAuth()]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Frontend_App_Shell__i18n

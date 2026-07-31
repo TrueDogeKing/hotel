@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/components/admin/GroupRooms.tsx"
 type: "code"
-community: "CampCenter.Application / Services (3)"
-location: "L12"
+community: "Admin Tasks & Occupancy Pages"
+location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterApplication_/_Services_3
+  - community/Admin_Tasks__Occupancy_Pages
 ---
 
 # Props
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[GroupRooms.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_3
+#graphify/code #graphify/EXTRACTED #community/Admin_Tasks__Occupancy_Pages

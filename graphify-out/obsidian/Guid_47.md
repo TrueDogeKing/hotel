@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "Admin User & Token Config"
+community: "Room Management"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_User__Token_Config
+  - community/Room_Management
 ---
 
 # Guid
 
 ## Connections
-- [[.GetByIdAsync()_7]] - `references` [EXTRACTED]
+- [[.GetByIdAsync()_4]] - `references` [EXTRACTED]
+- [[.HasAssignmentsAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_User__Token_Config
+#graphify/code #graphify/EXTRACTED #community/Room_Management

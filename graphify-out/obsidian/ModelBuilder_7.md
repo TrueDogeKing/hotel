@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Persistence / Migrations (12)"
+community: "EF Core Migrations (3)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Persistence_/_Migrations_12
+  - community/EF_Core_Migrations_3
 ---
 
 # ModelBuilder
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.BuildTargetModel()_6]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Persistence_/_Migrations_12
+#graphify/code #graphify/EXTRACTED #community/EF_Core_Migrations_3

@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { isAxiosError } from "axios";
 import AdminLayout from "../../components/admin/AdminLayout";
+import { useAuth } from "../../auth/AuthContext";
 import ConfirmDialog from "../../components/ConfirmDialog";
 import {
   bookingStatuses,
@@ -16,6 +17,7 @@ import { formatDate as formatIsoDate } from "../../utils/dates";
 
 export default function AdminBookingsPage() {
   const { t, i18n } = useTranslation();
+  const { canEdit } = useAuth();
   const [bookings, setBookings] = useState<AdminBooking[]>([]);
   const [statusFilter, setStatusFilter] = useState("");
   const [expanded, setExpanded] = useState<string | null>(null);
@@ -124,22 +126,29 @@ export default function AdminBookingsPage() {
                 <td>{formatZl(booking.totalGrosze)}</td>
                 <td>{paymentBadge(booking)}</td>
                 <td className="row-actions">
-                  <select
-                    value={booking.status}
-                    aria-label={t("adminBookings.status")}
-                    onClick={(e) => e.stopPropagation()}
-                    onChange={(e) => {
-                      e.stopPropagation();
-                      void handleStatusChange(booking.id, e.target.value as BookingStatus);
-                    }}
-                  >
-                    {bookingStatuses.map((status) => (
-                      <option key={status} value={status}>
-                        {t(`adminBookings.statuses.${status}`)}
-                      </option>
-                    ))}
-                  </select>
-                  {(booking.status === "PendingDeposit" || booking.status === "Confirmed") && (
+                  {/* A worker reads the status; setting it and cancelling are writes. */}
+                  {canEdit ? (
+                    <select
+                      value={booking.status}
+                      aria-label={t("adminBookings.status")}
+                      onClick={(e) => e.stopPropagation()}
+                      onChange={(e) => {
+                        e.stopPropagation();
+                        void handleStatusChange(booking.id, e.target.value as BookingStatus);
+                      }}
+                    >
+                      {bookingStatuses.map((status) => (
+                        <option key={status} value={status}>
+                          {t(`adminBookings.statuses.${status}`)}
+                        </option>
+                      ))}
+                    </select>
+                  ) : (
+                    t(`adminBookings.statuses.${booking.status}`)
+                  )}
+                  {canEdit &&
+                    (booking.status === "PendingDeposit" ||
+                      booking.status === "Confirmed") && (
                     <button
                       type="button"
                       onClick={(e) => {

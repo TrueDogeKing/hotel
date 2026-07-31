@@ -15,7 +15,7 @@ members: 9
 - [[CancellationToken]] - code
 - [[ILogger]] - code
 - [[IServiceScopeFactory]] - code
-- [[Task]] - code
+- [[Task_1]] - code
 - [[TimeSpan]] - code
 
 ## Live Query (requires Dataview plugin)

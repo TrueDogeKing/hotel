@@ -28,6 +28,37 @@ export async function getAvailability(
   return data;
 }
 
+/** One night as the booking calendar draws it. `date` is the night starting on
+ *  it — a stay's departure day is not a night, so a day that is unavailable can
+ *  still be a valid checkout. */
+export interface AvailabilityDay {
+  date: string;
+  closed: boolean;
+  closureReason: string | null;
+  freeBeds: number;
+  /** Enough free beds for the headcount asked about. */
+  fits: boolean;
+}
+
+export interface AvailabilityCalendar {
+  start: string;
+  end: string;
+  headcount: number | null;
+  days: AvailabilityDay[];
+}
+
+/** Both ends inclusive: these are the days a calendar draws, not a stay. */
+export async function getAvailabilityCalendar(
+  start: string,
+  end: string,
+  headcount?: number,
+): Promise<AvailabilityCalendar> {
+  const { data } = await api.get<AvailabilityCalendar>("/public/availability/calendar", {
+    params: { start, end, ...(headcount ? { headcount } : {}) },
+  });
+  return data;
+}
+
 export interface PublicClosure {
   reason: string;
   startDate: string;

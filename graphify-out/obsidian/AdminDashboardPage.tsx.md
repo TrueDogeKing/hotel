@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/pages/admin/AdminDashboardPage.tsx"
 type: "code"
-community: "Admin Tasks & Occupancy Pages"
+community: "Frontend App Shell & i18n"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Tasks__Occupancy_Pages
+  - community/Frontend_App_Shell__i18n
 ---
 
 # AdminDashboardPage.tsx
@@ -30,4 +30,4 @@ tags:
 - [[setBookingStatus()]] - `imports` [EXTRACTED]
 - [[useAuth()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Tasks__Occupancy_Pages
+#graphify/code #graphify/EXTRACTED #community/Frontend_App_Shell__i18n

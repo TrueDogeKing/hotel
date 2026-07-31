@@ -2,7 +2,7 @@
 source_file: "frontend/src/components/admin/AdminTiles.tsx"
 type: "code"
 community: "Frontend Icon Components"
-location: "L29"
+location: "L31"
 tags:
   - graphify/code
   - graphify/EXTRACTED

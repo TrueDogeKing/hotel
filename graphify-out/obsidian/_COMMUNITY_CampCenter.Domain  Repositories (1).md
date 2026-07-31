@@ -1,15 +1,15 @@
 ---
 type: community
-members: 33
+members: 32
 ---
 
 # CampCenter.Domain / Repositories (1)
 
-**Members:** 33 nodes
+**Members:** 32 nodes
 
 ## Members
 - [[.AddAssignmentAsync()_1]] - code - src/CampCenter.Infrastructure/Repositories/BookingRepository.cs
-- [[.AddAsync()_10]] - code - src/CampCenter.Infrastructure/Repositories/BookingRepository.cs
+- [[.AddAsync()_12]] - code - src/CampCenter.Infrastructure/Repositories/BookingRepository.cs
 - [[.AddPaymentAsync()_1]] - code - src/CampCenter.Infrastructure/Repositories/BookingRepository.cs
 - [[.GetBookedRoomIdsInRangeAsync()_1]] - code - src/CampCenter.Infrastructure/Repositories/BookingRepository.cs
 - [[.GetByIdAsync()_8]] - code - src/CampCenter.Infrastructure/Repositories/BookingRepository.cs
@@ -20,26 +20,25 @@ members: 33
 - [[.GetPaymentByP24SessionIdAsync()_1]] - code - src/CampCenter.Infrastructure/Repositories/BookingRepository.cs
 - [[.GetPaymentsAsync()_1]] - code - src/CampCenter.Infrastructure/Repositories/BookingRepository.cs
 - [[.IsRoomRace()]] - code - src/CampCenter.Infrastructure/Repositories/BookingRepository.cs
-- [[.ListAsync()_6]] - code - src/CampCenter.Infrastructure/Repositories/BookingRepository.cs
+- [[.ListAssignmentsInRangeAsync()_1]] - code - src/CampCenter.Infrastructure/Repositories/BookingRepository.cs
+- [[.ListAsync()_10]] - code - src/CampCenter.Infrastructure/Repositories/BookingRepository.cs
 - [[.ListByCategoryAsync()_1]] - code - src/CampCenter.Infrastructure/Repositories/BookingRepository.cs
 - [[.ListLiveChangingOverAsync()_1]] - code - src/CampCenter.Infrastructure/Repositories/BookingRepository.cs
 - [[.ListLiveInRangeAsync()_1]] - code - src/CampCenter.Infrastructure/Repositories/BookingRepository.cs
 - [[.ListLivePresentInAsync()_1]] - code - src/CampCenter.Infrastructure/Repositories/BookingRepository.cs
 - [[.ListUpcomingAsync()_1]] - code - src/CampCenter.Infrastructure/Repositories/BookingRepository.cs
 - [[.SaveChangesAsync()_12]] - code - src/CampCenter.Infrastructure/Repositories/BookingRepository.cs
-- [[BookingGroupCategory_1]] - code - src/CampCenter.Domain/Entities/BookingGroupCategory.cs
-- [[BookingGroupCategory.cs]] - code - src/CampCenter.Domain/Entities/BookingGroupCategory.cs
 - [[BookingRepository]] - code - src/CampCenter.Infrastructure/Repositories/BookingRepository.cs
-- [[CancellationToken_55]] - code
+- [[CancellationToken_58]] - code
 - [[DateOnly_26]] - code
 - [[DateTime_16]] - code
 - [[Dictionary_6]] - code
 - [[Exception_2]] - code
-- [[Guid_49]] - code
+- [[Guid_52]] - code
 - [[IReadOnlyCollection_5]] - code
 - [[Items_1]] - code
-- [[List_27]] - code
-- [[Task_54]] - code
+- [[List_31]] - code
+- [[Task_58]] - code
 - [[Total_1]] - code
 
 ## Live Query (requires Dataview plugin)
@@ -50,18 +49,17 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 15 edges to [[_COMMUNITY_CampCenter.UnitTests  Validators]]
-- 4 edges to [[_COMMUNITY_Admin Frontend Pages]]
-- 2 edges to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
-- 2 edges to [[_COMMUNITY_Public Booking Service (2)]]
-- 2 edges to [[_COMMUNITY_Integration Test Harness (2)]]
-- 2 edges to [[_COMMUNITY_tests  CampCenter.IntegrationTests (2)]]
-- 1 edge to [[_COMMUNITY_Admin Booking & Notifications (1)]]
-- 1 edge to [[_COMMUNITY_Booking Persistence & Entities (1)]]
+- 15 edges to [[_COMMUNITY_Integration Test Harness (1)]]
+- 4 edges to [[_COMMUNITY_Payment]]
+- 3 edges to [[_COMMUNITY_components  admin]]
+- 1 edge to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
+- 1 edge to [[_COMMUNITY_Integration Test Harness (2)]]
+- 1 edge to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
+- 1 edge to [[_COMMUNITY_Public Booking Service (2)]]
 
 ## Top bridge nodes
-- [[BookingRepository]] - degree 26, connects to 5 communities
-- [[BookingGroupCategory_1]] - degree 6, connects to 3 communities
-- [[.ListByCategoryAsync()_1]] - degree 9, connects to 1 community
+- [[BookingRepository]] - degree 27, connects to 5 communities
+- [[.ListByCategoryAsync()_1]] - degree 9, connects to 2 communities
 - [[.GetCompletedPaymentKindsAsync()_1]] - degree 8, connects to 1 community
-- [[.AddAsync()_10]] - degree 6, connects to 1 community
+- [[.AddAsync()_12]] - degree 6, connects to 1 community
+- [[.ListAsync()_10]] - degree 6, connects to 1 community

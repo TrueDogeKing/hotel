@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "Room Closure Management"
+community: "Public Booking Service (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Closure_Management
+  - community/Public_Booking_Service_1
 ---
 
 # List
 
 ## Connections
-- [[.GetAllAsync()_3]] - `references` [EXTRACTED]
+- [[.AssignRooms()]] - `references` [EXTRACTED]
+- [[.PickRoomsAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management
+#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_1

@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Api/Controllers/AuthController.cs"
 type: "code"
-community: "CampCenter.Application / Services (1)"
+community: ".CreateClient"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterApplication_/_Services_1
+  - community/CreateClient
 ---
 
 # CampCenter.Api.Controllers
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[AuthController.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_1
+#graphify/code #graphify/EXTRACTED #community/CreateClient

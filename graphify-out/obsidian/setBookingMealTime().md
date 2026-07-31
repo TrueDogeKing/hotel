@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/api/admin.ts"
 type: "code"
-community: "CampCenter.Application / Services (3)"
-location: "L727"
+community: "src / api (1)"
+location: "L765"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterApplication_/_Services_3
+  - community/src_/_api_1
 ---
 
 # setBookingMealTime()
@@ -15,4 +15,4 @@ tags:
 - [[GroupMealTimes.tsx]] - `imports` [EXTRACTED]
 - [[admin.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_3
+#graphify/code #graphify/EXTRACTED #community/src_/_api_1

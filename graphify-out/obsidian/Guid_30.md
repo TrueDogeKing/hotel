@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Admin Booking & Notifications (3)"
+community: "BookingMealTime"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Booking__Notifications_3
+  - community/BookingMealTime
 ---
 
 # Guid
 
 ## Connections
-- [[MealTimeDefault_1]] - `references` [EXTRACTED]
+- [[BookingMealTime_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_3
+#graphify/code #graphify/EXTRACTED #community/BookingMealTime

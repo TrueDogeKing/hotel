@@ -1,21 +1,21 @@
 ---
 source_file: ""
 type: "code"
-community: "Admin Booking & Notifications (3)"
+community: "Admin User & Token Config"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Booking__Notifications_3
+  - community/Admin_User__Token_Config
 ---
 
 # Task
 
 ## Connections
-- [[.AddAsync()_12]] - `references` [EXTRACTED]
-- [[.GetActiveAsync()_2]] - `references` [EXTRACTED]
-- [[.GetAllAsync()_10]] - `references` [EXTRACTED]
-- [[.GetByIdAsync()_10]] - `references` [EXTRACTED]
-- [[.IsReferencedAsync()_1]] - `references` [EXTRACTED]
-- [[.SaveChangesAsync()_14]] - `references` [EXTRACTED]
+- [[.AddAsync()_10]] - `references` [EXTRACTED]
+- [[.CountByRoleAsync()_1]] - `references` [EXTRACTED]
+- [[.GetByIdAsync()_7]] - `references` [EXTRACTED]
+- [[.GetByLoginAsync()_1]] - `references` [EXTRACTED]
+- [[.ListAsync()_9]] - `references` [EXTRACTED]
+- [[.SaveChangesAsync()_10]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_3
+#graphify/code #graphify/EXTRACTED #community/Admin_User__Token_Config

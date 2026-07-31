@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "Room Management"
+community: "MealTimeDefaultRepository"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Management
+  - community/MealTimeDefaultRepository
 ---
 
 # Guid
 
 ## Connections
-- [[.GetByIdAsync()_11]] - `references` [EXTRACTED]
-- [[.HasAssignmentsAsync()_1]] - `references` [EXTRACTED]
+- [[.GetByIdAsync()_10]] - `references` [EXTRACTED]
+- [[.IsReferencedAsync()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Management
+#graphify/code #graphify/EXTRACTED #community/MealTimeDefaultRepository

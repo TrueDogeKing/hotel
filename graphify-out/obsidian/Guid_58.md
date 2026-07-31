@@ -1,16 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.UnitTests / Validators"
+community: "Room Task Management (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Validators
+  - community/Room_Task_Management_1
 ---
 
 # Guid
 
 ## Connections
-- [[HousekeepingPlannerTests]] - `references` [EXTRACTED]
+- [[.CountOpenByRoomAsync()_1]] - `references` [EXTRACTED]
+- [[.GetByIdAsync()_12]] - `references` [EXTRACTED]
+- [[.ListAsync()_11]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Validators
+#graphify/code #graphify/EXTRACTED #community/Room_Task_Management_1

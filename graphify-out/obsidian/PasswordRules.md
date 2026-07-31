@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Validators/PasswordRules.cs"
 type: "code"
-community: "PasswordRules"
+community: "CampCenter.UnitTests / Validators"
 location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PasswordRules
+  - community/CampCenterUnitTests_/_Validators
 ---
 
 # PasswordRules
@@ -14,6 +14,6 @@ tags:
 ## Connections
 - [[.ValidPassword()]] - `method` [EXTRACTED]
 - [[PasswordRules.cs]] - `contains` [EXTRACTED]
-- [[int_1]] - `references` [EXTRACTED]
+- [[int_2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PasswordRules
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Validators

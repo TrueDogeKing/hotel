@@ -13,6 +13,7 @@ tags:
 ## Connections
 - [[.GetBookedRoomIdsInRangeAsync()]] - `references` [EXTRACTED]
 - [[.GetConfirmedEndedAsync()]] - `references` [EXTRACTED]
+- [[.ListAssignmentsInRangeAsync()]] - `references` [EXTRACTED]
 - [[.ListByCategoryAsync()]] - `references` [EXTRACTED]
 - [[.ListLiveChangingOverAsync()]] - `references` [EXTRACTED]
 - [[.ListLiveInRangeAsync()]] - `references` [EXTRACTED]

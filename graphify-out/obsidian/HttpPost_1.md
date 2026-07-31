@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Room Closure Management"
+community: "Camp Session Management"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Closure_Management
+  - community/Camp_Session_Management
 ---
 
 # HttpPost
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.Create()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management
+#graphify/code #graphify/EXTRACTED #community/Camp_Session_Management

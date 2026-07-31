@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/components/admin/GroupRooms.tsx"
 type: "code"
-community: "CampCenter.Application / Services (3)"
+community: "Admin Tasks & Occupancy Pages"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterApplication_/_Services_3
+  - community/Admin_Tasks__Occupancy_Pages
 ---
 
 # GroupRooms.tsx
@@ -14,6 +14,7 @@ tags:
 ## Connections
 - [[AdminBooking]] - `imports` [EXTRACTED]
 - [[AssignableRoom]] - `imports` [EXTRACTED]
+- [[AuthContext.tsx]] - `imports_from` [EXTRACTED]
 - [[Draft]] - `contains` [EXTRACTED]
 - [[GroupRooms()]] - `contains` [EXTRACTED]
 - [[GroupSchedulePanel.tsx]] - `imports_from` [EXTRACTED]
@@ -22,5 +23,6 @@ tags:
 - [[getAdminBooking()]] - `imports` [EXTRACTED]
 - [[getAssignableRooms()]] - `imports` [EXTRACTED]
 - [[reassignBooking()]] - `imports` [EXTRACTED]
+- [[useAuth()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_3
+#graphify/code #graphify/EXTRACTED #community/Admin_Tasks__Occupancy_Pages

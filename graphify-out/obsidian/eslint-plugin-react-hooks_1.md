@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/package.json"
 type: "concept"
-community: "DTOs / AdminPanel"
+community: "eslint-plugin-react-hooks"
 location: "L29"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/DTOs_/_AdminPanel
+  - community/eslint-plugin-react-hooks
 ---
 
 # eslint-plugin-react-hooks
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[eslint-plugin-react-hooks]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/DTOs_/_AdminPanel
+#graphify/concept #graphify/EXTRACTED #community/eslint-plugin-react-hooks

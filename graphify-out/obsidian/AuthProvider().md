@@ -2,7 +2,7 @@
 source_file: "frontend/src/auth/AuthContext.tsx"
 type: "code"
 community: "Frontend Auth & API Client"
-location: "L27"
+location: "L32"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -17,6 +17,7 @@ tags:
 - [[getAccessToken()]] - `indirect_call` [INFERRED]
 - [[getUserLoginFromToken()]] - `calls` [EXTRACTED]
 - [[getUserNameFromToken()]] - `calls` [EXTRACTED]
+- [[getUserRoleFromToken()]] - `calls` [EXTRACTED]
 - [[refreshAccessToken()]] - `calls` [EXTRACTED]
 - [[subscribeToken()]] - `indirect_call` [INFERRED]
 

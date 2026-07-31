@@ -1,19 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "Room Closure Management"
+community: ".GetBlockedRoomIdsAsync"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Closure_Management
+  - community/GetBlockedRoomIdsAsync
 ---
 
 # Task
 
 ## Connections
-- [[.CreateAsync()_2]] - `references` [EXTRACTED]
-- [[.DeleteAsync()]] - `references` [EXTRACTED]
-- [[.GetAllAsync()]] - `references` [EXTRACTED]
-- [[.UpdateAsync()]] - `references` [EXTRACTED]
+- [[.GetAvailabilityAsync()]] - `references` [EXTRACTED]
+- [[.GetBlockedRoomIdsAsync()]] - `references` [EXTRACTED]
+- [[.GetCalendarAsync()]] - `references` [EXTRACTED]
+- [[.GetCenterClosureReasonAsync()]] - `references` [EXTRACTED]
+- [[.GetFreeRoomsByCapacityAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management
+#graphify/code #graphify/EXTRACTED #community/GetBlockedRoomIdsAsync

@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/components/admin/GroupMealTimes.tsx"
 type: "code"
-community: "CampCenter.Application / Services (3)"
-location: "L26"
+community: "src / api (1)"
+location: "L27"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterApplication_/_Services_3
+  - community/src_/_api_1
 ---
 
 # clashingNeighbours()
@@ -15,4 +15,4 @@ tags:
 - [[GroupMealTimes.tsx]] - `contains` [EXTRACTED]
 - [[minutesOf()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_3
+#graphify/code #graphify/EXTRACTED #community/src_/_api_1

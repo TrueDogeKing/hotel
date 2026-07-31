@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Services/HousekeepingPlanner.cs"
 type: "code"
-community: "CampCenter.Application / Services (4)"
+community: "Integration Test Harness (1)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterApplication_/_Services_4
+  - community/Integration_Test_Harness_1
 ---
 
 # HousekeepingPlanner.cs
@@ -17,4 +17,4 @@ tags:
 - [[HousekeepingJob]] - `contains` [EXTRACTED]
 - [[HousekeepingPlanner]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_4
+#graphify/code #graphify/EXTRACTED #community/Integration_Test_Harness_1

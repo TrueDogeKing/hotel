@@ -22,6 +22,7 @@ public static class DependencyInjection
         services.AddScoped<IPaymentService, PaymentService>();
         services.AddScoped<IMealTimeService, MealTimeService>();
         services.AddScoped<IScheduleService, ScheduleService>();
+        services.AddScoped<IUserService, UserService>();
         services.AddValidatorsFromAssembly(typeof(DependencyInjection).Assembly);
 
         return services;

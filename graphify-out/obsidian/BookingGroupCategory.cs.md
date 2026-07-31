@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Domain/Entities/BookingGroupCategory.cs"
 type: "code"
-community: "CampCenter.Domain / Repositories (1)"
+community: "Admin Bookings Controller & DTOs"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterDomain_/_Repositories_1
+  - community/Admin_Bookings_Controller__DTOs
 ---
 
 # BookingGroupCategory.cs
@@ -15,4 +15,4 @@ tags:
 - [[BookingGroupCategory_1]] - `contains` [EXTRACTED]
 - [[CampCenter.Domain.Entities]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterDomain_/_Repositories_1
+#graphify/code #graphify/EXTRACTED #community/Admin_Bookings_Controller__DTOs

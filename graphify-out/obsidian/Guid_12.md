@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Camp Session Management"
+community: "CampCenter.UnitTests / Services (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Camp_Session_Management
+  - community/CampCenterUnitTests_/_Services_2
 ---
 
 # Guid
 
 ## Connections
-- [[.DeleteAsync()_1]] - `references` [EXTRACTED]
-- [[.UpdateAsync()_1]] - `references` [EXTRACTED]
+- [[.SetStatusAsync()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Camp_Session_Management
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_2

@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "Admin Booking & Notifications (2)"
+community: "BookingMealTime"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Booking__Notifications_2
+  - community/BookingMealTime
 ---
 
 # List
 
 ## Connections
-- [[.GetActiveAsync()]] - `references` [EXTRACTED]
-- [[.GetAllAsync()_7]] - `references` [EXTRACTED]
+- [[.ListForBookingAsync()]] - `references` [EXTRACTED]
+- [[.ListForBookingsAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_2
+#graphify/code #graphify/EXTRACTED #community/BookingMealTime

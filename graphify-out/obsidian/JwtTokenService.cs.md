@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Auth/JwtTokenService.cs"
 type: "code"
-community: "CampCenter.Application / Services (1)"
+community: ".CreateClient"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterApplication_/_Services_1
+  - community/CreateClient
 ---
 
 # JwtTokenService.cs
@@ -18,4 +18,4 @@ tags:
 - [[CampCenter.Infrastructure.Auth]] - `contains` [EXTRACTED]
 - [[JwtTokenService]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_1
+#graphify/code #graphify/EXTRACTED #community/CreateClient

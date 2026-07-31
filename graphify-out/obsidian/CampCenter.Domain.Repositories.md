@@ -48,5 +48,6 @@ tags:
 - [[ScheduleConflictTests.cs]] - `imports` [EXTRACTED]
 - [[ScheduleEntryRepository.cs]] - `imports` [EXTRACTED]
 - [[ScheduleService.cs]] - `imports` [EXTRACTED]
+- [[UserService.cs]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_2

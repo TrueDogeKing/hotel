@@ -7,7 +7,8 @@ import {
   type ReactNode,
 } from "react";
 import { getAccessToken, subscribeToken } from "../api/tokenStore";
-import { getUserLoginFromToken, getUserNameFromToken } from "../api/jwt";
+import { getUserLoginFromToken, getUserNameFromToken, getUserRoleFromToken } from "../api/jwt";
+import type { UserRole } from "../api/jwt";
 import { refreshAccessToken } from "../api/client";
 import { login as apiLogin, logout as apiLogout } from "../api/auth";
 import type { LoginRequest } from "../api/types";
@@ -16,6 +17,10 @@ interface AuthContextValue {
   isAuthenticated: boolean;
   userName: string | null;
   userLogin: string | null;
+  role: UserRole | null;
+  /** Convenience for the many places that only care whether anything may be
+   *  changed. A worker sees the schedule and edits nothing. */
+  canEdit: boolean;
   // True until the initial silent refresh resolves; used to avoid premature redirects.
   isBooting: boolean;
   login: (credentials: LoginRequest) => Promise<void>;
@@ -33,10 +38,13 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     refreshAccessToken().finally(() => setIsBooting(false));
   }, []);
 
+  const role = getUserRoleFromToken(token);
   const value: AuthContextValue = {
     isAuthenticated: token !== null,
     userName: getUserNameFromToken(token),
     userLogin: getUserLoginFromToken(token),
+    role,
+    canEdit: role === "Administrator",
     isBooting,
     login: (credentials) => apiLogin(credentials),
     logout: () => apiLogout(),

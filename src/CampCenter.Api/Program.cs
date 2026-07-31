@@ -10,6 +10,7 @@ using CampCenter.Infrastructure.Auth;
 using CampCenter.Infrastructure.Persistence;
 using CampCenter.Infrastructure.Persistence.Seed;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -88,6 +89,10 @@ builder
     .Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
+        // Off, or the handler rewrites the short claim names it knows — "role"
+        // among them — into their WS-Federation URIs on the way in, and the
+        // RoleClaimType below would then match nothing.
+        options.MapInboundClaims = false;
         options.TokenValidationParameters = new TokenValidationParameters
         {
             ValidateIssuer = true,
@@ -98,9 +103,26 @@ builder
             ValidAudience = jwtSettings.Audience,
             IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings.Key)),
             ClockSkew = TimeSpan.Zero,
+            // Matches the short claim JwtTokenService writes, so [Authorize(Roles = …)]
+            // and the panel read the same one.
+            RoleClaimType = JwtTokenService.RoleClaim,
         };
     });
-builder.Services.AddAuthorization();
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddSingleton<
+    IAuthorizationHandler,
+    CampCenter.Api.Auth.WriteRequiresAdministratorHandler
+>();
+builder.Services.AddAuthorization(options =>
+{
+    // Every [Authorize] endpoint: signed in, and — unless the request is a read —
+    // an administrator. Workers are read-only everywhere by construction, so a
+    // write endpoint added later is covered without anyone remembering to say so.
+    options.DefaultPolicy = new AuthorizationPolicyBuilder()
+        .RequireAuthenticatedUser()
+        .AddRequirements(new CampCenter.Api.Auth.WriteRequiresAdministratorRequirement())
+        .Build();
+});
 
 // Rate limiting: brute-force protection for the authentication endpoints, partitioned by client IP.
 // Behind a reverse proxy/ingress, configure forwarded headers so RemoteIpAddress is the real client.

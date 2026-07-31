@@ -1,19 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "Room Management"
+community: "Payment Gateway Integration Tests (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Management
+  - community/Payment_Gateway_Integration_Tests_1
 ---
 
 # Task
 
 ## Connections
-- [[.CreateAsync()_4]] - `references` [EXTRACTED]
-- [[.DeleteAsync()_2]] - `references` [EXTRACTED]
-- [[.GetAllAsync()_2]] - `references` [EXTRACTED]
-- [[.UpdateAsync()_2]] - `references` [EXTRACTED]
+- [[.RegisterTransactionAsync()]] - `references` [EXTRACTED]
+- [[.VerifyTransactionAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Management
+#graphify/code #graphify/EXTRACTED #community/Payment_Gateway_Integration_Tests_1

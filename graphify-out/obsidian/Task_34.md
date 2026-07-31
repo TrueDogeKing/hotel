@@ -1,20 +1,23 @@
 ---
 source_file: ""
 type: "code"
-community: "Validator Unit Tests"
+community: "Public Booking Service (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Validator_Unit_Tests
+  - community/Public_Booking_Service_1
 ---
 
 # Task
 
 ## Connections
-- [[.CreateAsync()_9]] - `references` [EXTRACTED]
-- [[.DeleteAsync()_5]] - `references` [EXTRACTED]
-- [[.GetAllAsync()_4]] - `references` [EXTRACTED]
-- [[.GetOrThrowAsync()_2]] - `references` [EXTRACTED]
-- [[.UpdateAsync()_4]] - `references` [EXTRACTED]
+- [[.CancelByTokenAsync()_1]] - `references` [EXTRACTED]
+- [[.CreateAsync()_8]] - `references` [EXTRACTED]
+- [[.FindByTokenAsync()]] - `references` [EXTRACTED]
+- [[.GetByTokenAsync()_1]] - `references` [EXTRACTED]
+- [[.GetScheduleByTokenAsync()_1]] - `references` [EXTRACTED]
+- [[.PickRoomsAsync()]] - `references` [EXTRACTED]
+- [[.SendSafelyAsync()]] - `references` [EXTRACTED]
+- [[.TryCreateAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Validator_Unit_Tests
+#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_1

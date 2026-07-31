@@ -17,5 +17,6 @@ tags:
 - [[AuthService]] - `references` [EXTRACTED]
 - [[BcryptPasswordHasher]] - `implements` [EXTRACTED]
 - [[IPasswordHasher.cs]] - `contains` [EXTRACTED]
+- [[UserService]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Password_Hashing_bcrypt

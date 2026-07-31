@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Persistence / Configurations"
+community: "IEntityTypeConfiguration"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Persistence_/_Configurations
+  - community/IEntityTypeConfiguration
 ---
 
 # IEntityTypeConfiguration
@@ -24,4 +24,4 @@ tags:
 - [[RoomTaskConfiguration]] - `implements` [EXTRACTED]
 - [[ScheduleEntryConfiguration]] - `implements` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Persistence_/_Configurations
+#graphify/code #graphify/EXTRACTED #community/IEntityTypeConfiguration

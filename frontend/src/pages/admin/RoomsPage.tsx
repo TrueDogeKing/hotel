@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { isAxiosError } from "axios";
 import AdminLayout from "../../components/admin/AdminLayout";
 import { createRoom, deleteRoom, getRooms, updateRoom, type Room } from "../../api/admin";
+import { useAuth } from "../../auth/AuthContext";
 
 interface RoomFormState {
   number: string;
@@ -14,6 +15,9 @@ const emptyForm: RoomFormState = { number: "", capacity: "4", description: "" };
 
 export default function RoomsPage() {
   const { t } = useTranslation();
+  // A worker sees this page and everything on it; only the controls that would
+  // write are withheld, because the API refuses those anyway.
+  const { canEdit } = useAuth();
   const [rooms, setRooms] = useState<Room[]>([]);
   const [form, setForm] = useState<RoomFormState>(emptyForm);
   const [editing, setEditing] = useState<Room | null>(null);
@@ -109,6 +113,7 @@ export default function RoomsPage() {
     <AdminLayout>
       <h1>{t("adminRooms.title")}</h1>
 
+      {canEdit && (
       <form className="admin-form" onSubmit={handleSubmit}>
         <label>
           {t("adminRooms.number")}
@@ -151,6 +156,7 @@ export default function RoomsPage() {
           </button>
         )}
       </form>
+      )}
 
       {error && <p role="alert">{error}</p>}
 
@@ -161,7 +167,7 @@ export default function RoomsPage() {
             <th>{t("adminRooms.capacity")}</th>
             <th>{t("adminRooms.status")}</th>
             <th>{t("adminRooms.description")}</th>
-            <th />
+            {canEdit && <th />}
           </tr>
         </thead>
         <tbody>
@@ -171,17 +177,19 @@ export default function RoomsPage() {
               <td>{room.capacity}</td>
               <td>{room.isActive ? t("adminRooms.active") : t("adminRooms.inactive")}</td>
               <td>{room.description}</td>
-              <td className="row-actions">
-                <button type="button" onClick={() => startEdit(room)}>
-                  {t("adminRooms.edit")}
-                </button>
-                <button type="button" onClick={() => void toggleActive(room)}>
-                  {room.isActive ? t("adminRooms.deactivate") : t("adminRooms.activate")}
-                </button>
-                <button type="button" onClick={() => void remove(room)}>
-                  {t("adminRooms.delete")}
-                </button>
-              </td>
+              {canEdit && (
+                <td className="row-actions">
+                  <button type="button" onClick={() => startEdit(room)}>
+                    {t("adminRooms.edit")}
+                  </button>
+                  <button type="button" onClick={() => void toggleActive(room)}>
+                    {room.isActive ? t("adminRooms.deactivate") : t("adminRooms.activate")}
+                  </button>
+                  <button type="button" onClick={() => void remove(room)}>
+                    {t("adminRooms.delete")}
+                  </button>
+                </td>
+              )}
             </tr>
           ))}
         </tbody>

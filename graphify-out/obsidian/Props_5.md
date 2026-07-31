@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/components/admin/DayTimetable.tsx"
 type: "code"
-community: "src / api (2)"
+community: "Room Closure Management"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/src_/_api_2
+  - community/Room_Closure_Management
 ---
 
 # Props
@@ -15,4 +15,4 @@ tags:
 - [[DayTimetable.tsx]] - `contains` [EXTRACTED]
 - [[ScheduleDay]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/src_/_api_2
+#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management

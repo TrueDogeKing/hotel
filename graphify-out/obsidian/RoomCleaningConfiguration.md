@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Persistence/Configurations/RoomCleaningConfiguration.cs"
 type: "code"
-community: "CampCenter.UnitTests / Services (2)"
+community: "src / api (2)"
 location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Services_2
+  - community/src_/_api_2
 ---
 
 # RoomCleaningConfiguration
@@ -17,4 +17,4 @@ tags:
 - [[RoomCleaning]] - `references` [EXTRACTED]
 - [[RoomCleaningConfiguration.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_2
+#graphify/code #graphify/EXTRACTED #community/src_/_api_2

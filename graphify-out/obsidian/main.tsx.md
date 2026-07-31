@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/main.tsx"
 type: "code"
-community: "Admin Tasks & Occupancy Pages"
+community: "useAuth"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Tasks__Occupancy_Pages
+  - community/useAuth
 ---
 
 # main.tsx
@@ -16,4 +16,4 @@ tags:
 - [[App.tsx]] - `imports_from` [EXTRACTED]
 - [[index.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Tasks__Occupancy_Pages
+#graphify/code #graphify/EXTRACTED #community/useAuth

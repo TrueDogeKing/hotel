@@ -1,20 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Room Closure Management"
+community: "Auth Service & Tokens"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Closure_Management
+  - community/Auth_Service__Tokens
 ---
 
 # Guid
 
 ## Connections
-- [[.DeleteAsync()_4]] - `references` [EXTRACTED]
-- [[.GetOrThrowAsync()_1]] - `references` [EXTRACTED]
-- [[.GuardNoLiveBookingsAsync()]] - `references` [EXTRACTED]
-- [[.GuardRoomExistsAsync()]] - `references` [EXTRACTED]
-- [[.UpdateAsync()_3]] - `references` [EXTRACTED]
+- [[.CreateTokenEntity()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management
+#graphify/code #graphify/EXTRACTED #community/Auth_Service__Tokens

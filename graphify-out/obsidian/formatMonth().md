@@ -14,6 +14,8 @@ tags:
 ## Connections
 - [[MonthCalendar()]] - `calls` [EXTRACTED]
 - [[MonthCalendar.tsx]] - `imports` [EXTRACTED]
+- [[RangeCalendar()]] - `calls` [EXTRACTED]
+- [[RangeCalendar.tsx]] - `imports` [EXTRACTED]
 - [[dates.ts]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/src_/_utils

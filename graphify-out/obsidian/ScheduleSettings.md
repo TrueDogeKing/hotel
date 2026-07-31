@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Models/ScheduleSettings.cs"
 type: "code"
-community: "CampCenter.Application / Services (2)"
+community: "ScheduleSettings"
 location: "L4"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterApplication_/_Services_2
+  - community/ScheduleSettings
 ---
 
 # ScheduleSettings
@@ -15,6 +15,6 @@ tags:
 - [[ScheduleService]] - `references` [EXTRACTED]
 - [[ScheduleSettings.cs]] - `contains` [EXTRACTED]
 - [[TimeOnly]] - `references` [EXTRACTED]
-- [[string_3]] - `references` [EXTRACTED]
+- [[string_4]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_2
+#graphify/code #graphify/EXTRACTED #community/ScheduleSettings

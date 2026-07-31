@@ -1,28 +1,82 @@
 ---
 type: community
-members: 15
+members: 69
 ---
 
 # Validator Unit Tests
 
-**Members:** 15 nodes
+**Members:** 69 nodes
 
 ## Members
-- [[.CreateAsync()_9]] - code - src/CampCenter.Application/Services/MealTimeService.cs
-- [[.DeleteAsync()_5]] - code - src/CampCenter.Application/Services/MealTimeService.cs
-- [[.GetAllAsync()_4]] - code - src/CampCenter.Application/Services/MealTimeService.cs
-- [[.GetOrThrowAsync()_2]] - code - src/CampCenter.Application/Services/MealTimeService.cs
-- [[.GuardTimes()]] - code - src/CampCenter.Application/Services/MealTimeService.cs
-- [[.ParseMealKind()]] - code - src/CampCenter.Application/Services/MealTimeService.cs
-- [[.ToDto()_2]] - code - src/CampCenter.Application/Services/MealTimeService.cs
-- [[.UpdateAsync()_4]] - code - src/CampCenter.Application/Services/MealTimeService.cs
+- [[.AddAsync()_3]] - code - src/CampCenter.Domain/Repositories/IClosureRepository.cs
+- [[.AddAsync()_13]] - code - src/CampCenter.Infrastructure/Repositories/ClosureRepository.cs
+- [[.Calendar()]] - code - src/CampCenter.Api/Controllers/Public/PublicAvailabilityController.cs
+- [[.Closures()]] - code - src/CampCenter.Api/Controllers/Public/PublicAvailabilityController.cs
+- [[.CreateAsync()_9]] - code - src/CampCenter.Application/Services/ClosureService.cs
+- [[.DeleteAsync()_5]] - code - src/CampCenter.Application/Services/ClosureService.cs
+- [[.Get()_3]] - code - src/CampCenter.Api/Controllers/Public/PublicAvailabilityController.cs
+- [[.GetAllAsync()_3]] - code - src/CampCenter.Application/Services/ClosureService.cs
+- [[.GetAllAsync()_6]] - code - src/CampCenter.Domain/Repositories/IClosureRepository.cs
+- [[.GetAllAsync()_9]] - code - src/CampCenter.Infrastructure/Repositories/ClosureRepository.cs
+- [[.GetAvailabilityAsync()_1]] - code - src/CampCenter.Application/Services/AvailabilityService.cs
+- [[.GetBlockedRoomIdsAsync()_1]] - code - src/CampCenter.Application/Services/AvailabilityService.cs
+- [[.GetByIdAsync()_2]] - code - src/CampCenter.Domain/Repositories/IClosureRepository.cs
+- [[.GetByIdAsync()_9]] - code - src/CampCenter.Infrastructure/Repositories/ClosureRepository.cs
+- [[.GetCalendarAsync()_2]] - code - src/CampCenter.Application/Services/AvailabilityService.cs
+- [[.GetCenterClosureReasonAsync()_1]] - code - src/CampCenter.Application/Services/AvailabilityService.cs
+- [[.GetFreeRoomsByCapacityAsync()_1]] - code - src/CampCenter.Application/Services/AvailabilityService.cs
+- [[.GetOrThrowAsync()_1]] - code - src/CampCenter.Application/Services/ClosureService.cs
+- [[.GetOverlappingAsync()]] - code - src/CampCenter.Domain/Repositories/IClosureRepository.cs
+- [[.GetOverlappingAsync()_1]] - code - src/CampCenter.Infrastructure/Repositories/ClosureRepository.cs
+- [[.GetUpcomingCenterWideAsync()]] - code - src/CampCenter.Domain/Repositories/IClosureRepository.cs
+- [[.GetUpcomingCenterWideAsync()_1]] - code - src/CampCenter.Infrastructure/Repositories/ClosureRepository.cs
+- [[.GuardNoLiveBookingsAsync()]] - code - src/CampCenter.Application/Services/ClosureService.cs
+- [[.GuardRoomExistsAsync()]] - code - src/CampCenter.Application/Services/ClosureService.cs
+- [[.Remove()_2]] - code - src/CampCenter.Domain/Repositories/IClosureRepository.cs
+- [[.Remove()_9]] - code - src/CampCenter.Infrastructure/Repositories/ClosureRepository.cs
+- [[.SaveChangesAsync()_3]] - code - src/CampCenter.Domain/Repositories/IClosureRepository.cs
+- [[.SaveChangesAsync()_13]] - code - src/CampCenter.Infrastructure/Repositories/ClosureRepository.cs
+- [[.ToDto()_1]] - code - src/CampCenter.Application/Services/ClosureService.cs
+- [[.UpdateAsync()_3]] - code - src/CampCenter.Application/Services/ClosureService.cs
+- [[AvailabilityService]] - code - src/CampCenter.Application/Services/AvailabilityService.cs
+- [[CancellationToken_12]] - code
+- [[CancellationToken_33]] - code
 - [[CancellationToken_35]] - code
+- [[CancellationToken_46]] - code
+- [[CancellationToken_59]] - code
+- [[Closure_1]] - code - src/CampCenter.Domain/Entities/Closure.cs
+- [[Closure.cs]] - code - src/CampCenter.Domain/Entities/Closure.cs
+- [[ClosureDto]] - code - src/CampCenter.Application/DTOs/Closures/ClosureDtos.cs
+- [[ClosureRepository]] - code - src/CampCenter.Infrastructure/Repositories/ClosureRepository.cs
+- [[ClosureService]] - code - src/CampCenter.Application/Services/ClosureService.cs
+- [[DateOnly_3]] - code
+- [[DateOnly_9]] - code
+- [[DateOnly_11]] - code
+- [[DateOnly_19]] - code
+- [[DateOnly_23]] - code
+- [[DateOnly_27]] - code
+- [[DateTime_7]] - code
+- [[Dictionary_1]] - code
+- [[Guid_20]] - code
 - [[Guid_21]] - code
-- [[List_12]] - code
-- [[MealTimeDefaultDto]] - code - src/CampCenter.Application/DTOs/Schedule/MealTimeDtos.cs
-- [[MealTimeService]] - code - src/CampCenter.Application/Services/MealTimeService.cs
-- [[Task_34]] - code
-- [[TimeOnly_2]] - code
+- [[Guid_32]] - code
+- [[Guid_43]] - code
+- [[Guid_53]] - code
+- [[HashSet_1]] - code
+- [[HttpGet_10]] - code
+- [[IActionResult_11]] - code
+- [[IClosureRepository]] - code - src/CampCenter.Domain/Repositories/IClosureRepository.cs
+- [[List_9]] - code
+- [[List_23]] - code
+- [[List_32]] - code
+- [[ProducesResponseType_11]] - code
+- [[PublicAvailabilityController]] - code - src/CampCenter.Api/Controllers/Public/PublicAvailabilityController.cs
+- [[Task_13]] - code
+- [[Task_33]] - code
+- [[Task_35]] - code
+- [[Task_46]] - code
+- [[Task_59]] - code
+- [[int_1]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -32,15 +86,24 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 8 edges to [[_COMMUNITY_Admin Booking & Notifications (2)]]
-- 6 edges to [[_COMMUNITY_Camp Session Management]]
-- 4 edges to [[_COMMUNITY_Admin Booking & Notifications (3)]]
-- 2 edges to [[_COMMUNITY_DTOs  Schedule (1)]]
-- 1 edge to [[_COMMUNITY_Application Namespaces & DTOs]]
+- 7 edges to [[_COMMUNITY_Camp Session Management]]
+- 7 edges to [[_COMMUNITY_Room Management]]
+- 6 edges to [[_COMMUNITY_.GetBlockedRoomIdsAsync]]
+- 5 edges to [[_COMMUNITY_Integration Test Harness (2)]]
+- 4 edges to [[_COMMUNITY_Public Booking Service (2)]]
+- 3 edges to [[_COMMUNITY_Admin Booking & Notifications (1)]]
+- 3 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (2)]]
+- 2 edges to [[_COMMUNITY_Room Mix Calculator Tests]]
+- 2 edges to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
+- 2 edges to [[_COMMUNITY_IEntityTypeConfiguration]]
+- 1 edge to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
+- 1 edge to [[_COMMUNITY_CampCenter.Application.DTOs.Public]]
+- 1 edge to [[_COMMUNITY_Admin Booking & Notifications (4)]]
+- 1 edge to [[_COMMUNITY_Domain & Infra Namespaces]]
 
 ## Top bridge nodes
-- [[MealTimeService]] - degree 11, connects to 3 communities
-- [[.DeleteAsync()_5]] - degree 9, connects to 3 communities
-- [[.UpdateAsync()_4]] - degree 11, connects to 2 communities
-- [[.CreateAsync()_9]] - degree 10, connects to 2 communities
-- [[MealTimeDefaultDto]] - degree 8, connects to 2 communities
+- [[AvailabilityService]] - degree 12, connects to 5 communities
+- [[ClosureService]] - degree 13, connects to 4 communities
+- [[Closure_1]] - degree 22, connects to 3 communities
+- [[IClosureRepository]] - degree 15, connects to 3 communities
+- [[.GetCalendarAsync()_2]] - degree 8, connects to 3 communities

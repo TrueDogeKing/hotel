@@ -1,21 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "Admin Booking & Notifications (2)"
+community: "BookingMealTime"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Booking__Notifications_2
+  - community/BookingMealTime
 ---
 
 # CancellationToken
 
 ## Connections
-- [[.AddAsync()_3]] - `references` [EXTRACTED]
-- [[.GetActiveAsync()]] - `references` [EXTRACTED]
-- [[.GetAllAsync()_7]] - `references` [EXTRACTED]
-- [[.GetByIdAsync()_3]] - `references` [EXTRACTED]
-- [[.IsReferencedAsync()]] - `references` [EXTRACTED]
-- [[.SaveChangesAsync()_4]] - `references` [EXTRACTED]
+- [[.AddAsync()_1]] - `references` [EXTRACTED]
+- [[.GetAsync()_2]] - `references` [EXTRACTED]
+- [[.ListForBookingAsync()]] - `references` [EXTRACTED]
+- [[.ListForBookingsAsync()]] - `references` [EXTRACTED]
+- [[.SaveChangesAsync()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_2
+#graphify/code #graphify/EXTRACTED #community/BookingMealTime

@@ -15,5 +15,6 @@ tags:
 - [[ClaimsPrincipalExtensions.cs]] - `contains` [EXTRACTED]
 - [[HousekeepingController.cs]] - `imports` [EXTRACTED]
 - [[TasksController.cs]] - `imports` [EXTRACTED]
+- [[UsersController.cs]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Application_Namespaces__DTOs

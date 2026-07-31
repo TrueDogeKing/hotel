@@ -17,6 +17,6 @@ tags:
 - [[BookingService]] - `references` [EXTRACTED]
 - [[BookingSettings.cs]] - `contains` [EXTRACTED]
 - [[PaymentService]] - `references` [EXTRACTED]
-- [[string_2]] - `references` [EXTRACTED]
+- [[string_3]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_4

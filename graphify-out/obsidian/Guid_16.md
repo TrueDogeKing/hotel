@@ -1,22 +1,23 @@
 ---
 source_file: ""
 type: "code"
-community: "Admin Booking & Notifications (1)"
+community: "DTOs / Schedule (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Booking__Notifications_1
+  - community/DTOs_/_Schedule_1
 ---
 
 # Guid
 
 ## Connections
-- [[.CancelAsync()_1]] - `references` [EXTRACTED]
-- [[.GetAssignableRoomsAsync()_1]] - `references` [EXTRACTED]
-- [[.GetAsync()_1]] - `references` [EXTRACTED]
-- [[.GetOrThrowAsync()]] - `references` [EXTRACTED]
-- [[.ReassignAsync()_1]] - `references` [EXTRACTED]
-- [[.SetStatusAsync()_3]] - `references` [EXTRACTED]
-- [[.UpdateDietaryNotesAsync()_1]] - `references` [EXTRACTED]
+- [[.DeleteBookingMealsAsync()]] - `references` [EXTRACTED]
+- [[.DeleteEntryAsync()]] - `references` [EXTRACTED]
+- [[.GenerateMealsForBookingAsync()]] - `references` [EXTRACTED]
+- [[.GetBookingMealTimesAsync()]] - `references` [EXTRACTED]
+- [[.GetForBookingAsync()]] - `references` [EXTRACTED]
+- [[.ResetBookingMealTimeAsync()]] - `references` [EXTRACTED]
+- [[.SetBookingMealTimeAsync()]] - `references` [EXTRACTED]
+- [[.UpdateEntryAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_1
+#graphify/code #graphify/EXTRACTED #community/DTOs_/_Schedule_1

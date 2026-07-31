@@ -8,6 +8,18 @@ interface Props {
   onSelectGroup: (bookingId: string) => void;
   /** Step the shown day by whole days. Omitted when there is nowhere to step to. */
   onChangeDay?: (delta: number) => void;
+  /**
+   * Start an entry at this time ("HH:mm"). Given the hour that was clicked in the
+   * grid, or the first free-looking hour when the button in the header is used.
+   * Omitted for a reader who may not add anything.
+   */
+  onAddAt?: (startTime: string) => void;
+  /**
+   * The entry being written in the form below, as "HH:mm" times. Drawn in place on
+   * the grid so its slot — and whatever it would sit next to — stays visible while
+   * it is filled in, and it moves as the times in the form are edited.
+   */
+  pending?: { startTime: string; endTime: string } | null;
 }
 
 /** Height of one hour row, in px. Blocks are positioned against this; a one-hour
@@ -185,11 +197,35 @@ function placeChips(chips: Chip[]): PlacedChip[] {
   return placed;
 }
 
-export default function DayTimetable({ day, onSelectGroup, onChangeDay }: Props) {
+/** Clicks land on whichever quarter-hour they are nearest — finer than that is
+ *  noise at 84px an hour, and the form can still be typed into. */
+const SNAP_MINUTES = 15;
+
+/** How long a new entry runs until the form says otherwise. Exported so the
+ *  preview drawn under the cursor and the form's own default cannot drift. */
+export const NEW_ENTRY_MINUTES = 60;
+
+function formatTime(totalMinutes: number): string {
+  const clamped = Math.max(0, Math.min(23 * 60 + 45, totalMinutes));
+  const hours = Math.floor(clamped / 60);
+  const minutes = clamped % 60;
+  return `${String(hours).padStart(2, "0")}:${String(minutes).padStart(2, "0")}`;
+}
+
+export default function DayTimetable({
+  day,
+  onSelectGroup,
+  onChangeDay,
+  onAddAt,
+  pending = null,
+}: Props) {
   const { t, i18n } = useTranslation();
   const chips = buildChips(day.entries);
   const placed = placeChips(chips);
   const clashes = findClashes(chips);
+  // Quarter-hour under the cursor while the grid is being pointed at, so the slot
+  // a click would take is shown before the click rather than after it.
+  const [hoverMin, setHoverMin] = useState<number | null>(null);
 
   // How tall one row of a block's text actually is, measured from a hidden line
   // styled exactly like a block rather than assumed. Font size, zoom and a late
@@ -247,6 +283,12 @@ export default function DayTimetable({ day, onSelectGroup, onChangeDay }: Props)
     firstHour = Math.min(firstHour, Math.floor(chip.startMin / 60));
     lastHour = Math.max(lastHour, Math.ceil(chip.endMin / 60));
   }
+  // The entry being written counts too, or a 23:00 start typed into the form would
+  // draw its block past the bottom of a ruler that stops at 22:00.
+  if (pending) {
+    firstHour = Math.min(firstHour, Math.floor(minutesOf(pending.startTime) / 60));
+    lastHour = Math.max(lastHour, Math.ceil(minutesOf(pending.endTime) / 60));
+  }
   const hours = Array.from({ length: lastHour - firstHour + 1 }, (_, i) => firstHour + i);
   const dayStartMin = firstHour * 60;
 
@@ -277,6 +319,17 @@ export default function DayTimetable({ day, onSelectGroup, onChangeDay }: Props)
             onClick={() => onChangeDay(1)}
           >
             ›
+          </button>
+        )}
+        {/* Clicking the grid is the quick way in, but it is mouse-only; this is the
+            same action for anyone on a keyboard, and it names the affordance. */}
+        {onAddAt && day.groups.length > 0 && (
+          <button
+            type="button"
+            className="timetable-add"
+            onClick={() => onAddAt(formatTime(Math.max(dayStartMin, 9 * 60)))}
+          >
+            {t("schedule.addHere")}
           </button>
         )}
       </header>
@@ -317,7 +370,64 @@ export default function DayTimetable({ day, onSelectGroup, onChangeDay }: Props)
           ))}
         </div>
 
+        {/* The grid itself starts an entry: click an empty stretch and the form
+            opens on that quarter-hour. Behind the blocks, so a click on one still
+            opens that group rather than adding on top of it. */}
+        {onAddAt && day.groups.length > 0 && (
+          <div
+            className="timetable-canvas"
+            title={t("schedule.addHereHint")}
+            onMouseMove={(event) => {
+              const top = event.currentTarget.getBoundingClientRect().top;
+              const minutes = dayStartMin + ((event.clientY - top) / HOUR_HEIGHT) * 60;
+              const snapped = Math.round(minutes / SNAP_MINUTES) * SNAP_MINUTES;
+              // Only on a real change: this fires on every pixel of movement, and
+              // a re-render per pixel to redraw the same block is waste.
+              setHoverMin((current) => (current === snapped ? current : snapped));
+            }}
+            onMouseLeave={() => setHoverMin(null)}
+            onClick={(event) => {
+              // Computed from the click itself rather than from the hover state:
+              // a tap arrives without a mousemove before it, and would otherwise
+              // land on whatever the last hovered slot was — or on nothing.
+              const top = event.currentTarget.getBoundingClientRect().top;
+              const minutes = dayStartMin + ((event.clientY - top) / HOUR_HEIGHT) * 60;
+              onAddAt(formatTime(Math.round(minutes / SNAP_MINUTES) * SNAP_MINUTES));
+            }}
+          />
+        )}
+
         <div className="timetable-events">
+          {/* The slot the new entry would take, drawn where it would land: solid
+              once the form is open and following the times typed into it, dashed
+              while it is only the hover under the cursor. Never a hit target — it
+              sits over the grid that opens the form. */}
+          {(() => {
+            const preview = pending
+              ? { startMin: minutesOf(pending.startTime), endMin: minutesOf(pending.endTime) }
+              : hoverMin !== null
+                ? { startMin: hoverMin, endMin: hoverMin + NEW_ENTRY_MINUTES }
+                : null;
+            if (!preview) return null;
+
+            const top = ((preview.startMin - dayStartMin) / 60) * HOUR_HEIGHT;
+            const height = Math.max(
+              ((preview.endMin - preview.startMin) / 60) * HOUR_HEIGHT,
+              MIN_BLOCK_HEIGHT,
+            );
+            return (
+              <div
+                className={`timetable-preview${pending ? " pending" : ""}`}
+                style={{ top: `${top}px`, height: `${height}px` }}
+                aria-hidden="true"
+              >
+                <span className="timetable-preview-time">
+                  {formatTime(preview.startMin)}–{formatTime(preview.endMin)}
+                </span>
+              </div>
+            );
+          })()}
+
           {placed.map((chip) => {
             const people = chip.entries.reduce(
               (sum, entry) => sum + (entry.participantCount ?? entry.headcount),

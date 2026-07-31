@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Persistence/AppDbContext.cs"
 type: "code"
-community: "Booking Persistence & Entities (1)"
+community: "CampCenter.Infrastructure / Repositories (1)"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Booking_Persistence__Entities_1
+  - community/CampCenterInfrastructure_/_Repositories_1
 ---
 
 # AppDbContext
@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[.CreateDbContext()]] - `references` [EXTRACTED]
 - [[.OnModelCreating()]] - `method` [EXTRACTED]
-- [[AdminUser]] - `references` [EXTRACTED]
+- [[AdminUser_1]] - `references` [EXTRACTED]
 - [[AdminUserRepository]] - `references` [EXTRACTED]
 - [[AppDbContext.cs]] - `contains` [EXTRACTED]
 - [[Booking]] - `references` [EXTRACTED]
@@ -41,4 +41,4 @@ tags:
 - [[ScheduleEntry_1]] - `references` [EXTRACTED]
 - [[ScheduleEntryRepository]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Booking_Persistence__Entities_1
+#graphify/code #graphify/EXTRACTED #community/CampCenterInfrastructure_/_Repositories_1

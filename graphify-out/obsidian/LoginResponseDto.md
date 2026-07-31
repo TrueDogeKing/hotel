@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/DTOs/Auth/LoginResponseDto.cs"
 type: "code"
-community: "Rate Limiting & Startup"
+community: "CampCenter.UnitTests / Validators"
 location: "L4"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Rate_Limiting__Startup
+  - community/CampCenterUnitTests_/_Validators
 ---
 
 # LoginResponseDto
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[LoginResponseDto.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Rate_Limiting__Startup
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Validators

@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/DTOs/Rooms/RoomDtos.cs"
 type: "code"
-community: "Integration Test Harness (1)"
+community: "CampCenter.Application.DTOs.Public"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Integration_Test_Harness_1
+  - community/CampCenterApplicationDTOsPublic
 ---
 
 # CampCenter.Application.DTOs.Rooms
@@ -23,4 +23,4 @@ tags:
 - [[RoomsController.cs]] - `imports` [EXTRACTED]
 - [[ScheduleApiTests.cs]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Integration_Test_Harness_1
+#graphify/code #graphify/EXTRACTED #community/CampCenterApplicationDTOsPublic

@@ -19,7 +19,8 @@ import { scrollPanelIntoView } from "../../utils/scroll";
 
 export default function AdminDashboardPage() {
   const { t } = useTranslation();
-  const { userLogin } = useAuth();
+  // A worker reads the dashboard; adding a group and changing a status are writes.
+  const { userLogin, canEdit } = useAuth();
   const [dashboard, setDashboard] = useState<Dashboard | null>(null);
   const [selectedBookingId, setSelectedBookingId] = useState<string | null>(null);
   const [adding, setAdding] = useState(false);
@@ -107,15 +108,17 @@ export default function AdminDashboardPage() {
 
           <div className="schedule-toolbar">
             <h2>{t("dashboard.groups.title")}</h2>
-            <button type="button" onClick={() => setAdding((open) => !open)}>
-              {adding ? t("dashboard.addGroupCancel") : t("dashboard.addGroup")}
-            </button>
+            {canEdit && (
+              <button type="button" onClick={() => setAdding((open) => !open)}>
+                {adding ? t("dashboard.addGroupCancel") : t("dashboard.addGroup")}
+              </button>
+            )}
           </div>
 
           {error && <p role="alert">{error}</p>}
           {notice && <p className="group-panel-notice">{notice}</p>}
 
-          {adding && (
+          {canEdit && adding && (
             <AddGroupForm
               onCreated={async (booking) => {
                 setAdding(false);

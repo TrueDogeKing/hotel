@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/components/admin/AdminLayout.tsx"
 type: "code"
-community: "Admin Tasks & Occupancy Pages"
+community: "Public Booking Frontend (1)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Tasks__Occupancy_Pages
+  - community/Public_Booking_Frontend_1
 ---
 
 # AdminLayout.tsx
@@ -28,7 +28,8 @@ tags:
 - [[TasksPage.tsx]] - `imports_from` [EXTRACTED]
 - [[ThemeToggle()]] - `imports` [EXTRACTED]
 - [[ThemeToggle.tsx]] - `imports_from` [EXTRACTED]
+- [[UsersPage.tsx]] - `imports_from` [EXTRACTED]
 - [[icons.tsx]] - `imports_from` [EXTRACTED]
 - [[useAuth()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Tasks__Occupancy_Pages
+#graphify/code #graphify/EXTRACTED #community/Public_Booking_Frontend_1

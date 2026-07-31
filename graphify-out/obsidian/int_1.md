@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "PasswordRules"
+community: "Validator Unit Tests"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PasswordRules
+  - community/Validator_Unit_Tests
 ---
 
 # int
 
 ## Connections
-- [[PasswordRules]] - `references` [EXTRACTED]
+- [[AvailabilityService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PasswordRules
+#graphify/code #graphify/EXTRACTED #community/Validator_Unit_Tests

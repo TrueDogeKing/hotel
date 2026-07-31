@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[.Create()_3]] - `references` [EXTRACTED]
 - [[.CreateAsync()_4]] - `references` [EXTRACTED]
-- [[.CreateAsync()_10]] - `references` [EXTRACTED]
+- [[.CreateAsync()_11]] - `references` [EXTRACTED]
 - [[CreateRoomRequestValidator]] - `references` [EXTRACTED]
 - [[RoomDtos.cs]] - `contains` [EXTRACTED]
 

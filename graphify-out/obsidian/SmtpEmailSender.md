@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Email/SmtpEmailSender.cs"
 type: "code"
-community: "Payment"
+community: "SmtpEmailSender"
 location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Payment
+  - community/SmtpEmailSender
 ---
 
 # SmtpEmailSender
@@ -17,4 +17,4 @@ tags:
 - [[IEmailSender]] - `implements` [EXTRACTED]
 - [[SmtpEmailSender.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Payment
+#graphify/code #graphify/EXTRACTED #community/SmtpEmailSender

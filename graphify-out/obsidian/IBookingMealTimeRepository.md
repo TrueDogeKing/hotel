@@ -1,25 +1,25 @@
 ---
 source_file: "src/CampCenter.Domain/Repositories/IBookingMealTimeRepository.cs"
 type: "code"
-community: "CampCenter.Application / Services (2)"
+community: "BookingMealTime"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterApplication_/_Services_2
+  - community/BookingMealTime
 ---
 
 # IBookingMealTimeRepository
 
 ## Connections
-- [[.AddAsync()]] - `method` [EXTRACTED]
+- [[.AddAsync()_1]] - `method` [EXTRACTED]
 - [[.GetAsync()_2]] - `method` [EXTRACTED]
 - [[.ListForBookingAsync()]] - `method` [EXTRACTED]
 - [[.ListForBookingsAsync()]] - `method` [EXTRACTED]
-- [[.Remove()]] - `method` [EXTRACTED]
+- [[.Remove()_1]] - `method` [EXTRACTED]
 - [[.SaveChangesAsync()_1]] - `method` [EXTRACTED]
 - [[BookingMealTimeRepository]] - `implements` [EXTRACTED]
 - [[IBookingMealTimeRepository.cs]] - `contains` [EXTRACTED]
 - [[ScheduleService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_2
+#graphify/code #graphify/EXTRACTED #community/BookingMealTime

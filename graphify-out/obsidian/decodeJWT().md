@@ -15,6 +15,7 @@ tags:
 - [[getUserIdFromToken()]] - `calls` [EXTRACTED]
 - [[getUserLoginFromToken()]] - `calls` [EXTRACTED]
 - [[getUserNameFromToken()]] - `calls` [EXTRACTED]
+- [[getUserRoleFromToken()]] - `calls` [EXTRACTED]
 - [[jwt.ts]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Frontend_Auth__API_Client

@@ -12,6 +12,7 @@ import {
 } from "../../api/admin";
 import { fromTimeInput, toTimeInput } from "../../utils/dates";
 import ConfirmDialog from "../ConfirmDialog";
+import { useAuth } from "../../auth/AuthContext";
 
 function minutesOf(time: string): number {
   const [hours, mins] = time.split(":");
@@ -50,6 +51,8 @@ interface Props {
  */
 export default function GroupMealTimes({ bookingId, onChanged }: Props) {
   const { t } = useTranslation();
+  // Sittings are readable by both roles; re-timing them is a write.
+  const { canEdit } = useAuth();
   const [mealTimes, setMealTimes] = useState<BookingMealTime[] | null>(null);
   const [drafts, setDrafts] = useState<Record<string, { start: string; end: string }>>({});
   const [busyId, setBusyId] = useState<string | null>(null);
@@ -231,6 +234,7 @@ export default function GroupMealTimes({ bookingId, onChanged }: Props) {
                 <input
                   type="time"
                   aria-label={t("schedule.form.startTime")}
+                  readOnly={!canEdit}
                   value={draft?.start ?? ""}
                   onChange={(e) =>
                     setDrafts({
@@ -245,6 +249,7 @@ export default function GroupMealTimes({ bookingId, onChanged }: Props) {
                 <input
                   type="time"
                   aria-label={t("schedule.form.endTime")}
+                  readOnly={!canEdit}
                   value={draft?.end ?? ""}
                   onChange={(e) =>
                     setDrafts({
@@ -258,6 +263,7 @@ export default function GroupMealTimes({ bookingId, onChanged }: Props) {
                 />
               </span>
 
+              {canEdit && (
               <span className="row-actions">
                 <button
                   type="button"
@@ -288,6 +294,7 @@ export default function GroupMealTimes({ bookingId, onChanged }: Props) {
                   </button>
                 )}
               </span>
+              )}
             </li>
           );
         })}

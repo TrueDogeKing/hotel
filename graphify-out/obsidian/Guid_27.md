@@ -1,16 +1,21 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.Domain / Repositories (2)"
+community: "tests / CampCenter.IntegrationTests (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterDomain_/_Repositories_2
+  - community/tests_/_CampCenterIntegrationTests_2
 ---
 
 # Guid
 
 ## Connections
-- [[BookingMealTime_1]] - `references` [EXTRACTED]
+- [[.CreateAsync()_13]] - `references` [EXTRACTED]
+- [[.DeleteAsync()_9]] - `references` [EXTRACTED]
+- [[.GetOrThrowAsync()_3]] - `references` [EXTRACTED]
+- [[.ListAsync()_5]] - `references` [EXTRACTED]
+- [[.SetRoleAsync()_1]] - `references` [EXTRACTED]
+- [[.ToDto()_6]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterDomain_/_Repositories_2
+#graphify/code #graphify/EXTRACTED #community/tests_/_CampCenterIntegrationTests_2

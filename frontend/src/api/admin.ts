@@ -1,4 +1,42 @@
 import { api } from "./client";
+import type { UserRole } from "./jwt";
+
+// --- Panel accounts (administrator only) ---
+
+export const userRoles: UserRole[] = ["Administrator", "Worker"];
+
+export interface AdminUser {
+  id: string;
+  login: string;
+  role: UserRole;
+  createdAt: string;
+  /** The account making the request — it may not delete or demote itself. */
+  isSelf: boolean;
+}
+
+export async function getUsers(): Promise<AdminUser[]> {
+  const { data } = await api.get<AdminUser[]>("/admin/users");
+  return data;
+}
+
+export async function createUser(input: {
+  login: string;
+  password: string;
+  role: UserRole;
+}): Promise<AdminUser> {
+  const { data } = await api.post<AdminUser>("/admin/users", input);
+  return data;
+}
+
+/** Ends that account's sessions — the role lives in its access token. */
+export async function setUserRole(id: string, role: UserRole): Promise<AdminUser> {
+  const { data } = await api.put<AdminUser>(`/admin/users/${id}/role`, { role });
+  return data;
+}
+
+export async function deleteUser(id: string): Promise<void> {
+  await api.delete(`/admin/users/${id}`);
+}
 
 // --- Rooms ---
 

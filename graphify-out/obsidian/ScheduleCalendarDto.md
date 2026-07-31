@@ -12,8 +12,8 @@ tags:
 # ScheduleCalendarDto
 
 ## Connections
-- [[.GetCalendarAsync()]] - `references` [EXTRACTED]
 - [[.GetCalendarAsync()_1]] - `references` [EXTRACTED]
+- [[.GetCalendarAsync()_3]] - `references` [EXTRACTED]
 - [[ScheduleDtos.cs]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/DTOs_/_Schedule_1

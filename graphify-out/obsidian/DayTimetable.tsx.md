@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/components/admin/DayTimetable.tsx"
 type: "code"
-community: "src / api (2)"
+community: "Room Closure Management"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/src_/_api_2
+  - community/Room_Closure_Management
 ---
 
 # DayTimetable.tsx
@@ -25,10 +25,11 @@ tags:
 - [[dates.ts]] - `imports_from` [EXTRACTED]
 - [[findClashes()]] - `contains` [EXTRACTED]
 - [[formatDate()]] - `imports` [EXTRACTED]
+- [[formatTime()]] - `contains` [EXTRACTED]
 - [[groupsOf()]] - `contains` [EXTRACTED]
 - [[minutesOf()]] - `contains` [EXTRACTED]
 - [[placeChips()]] - `contains` [EXTRACTED]
 - [[placesOf()]] - `contains` [EXTRACTED]
 - [[toTimeInput()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/src_/_api_2
+#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management

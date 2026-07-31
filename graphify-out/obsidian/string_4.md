@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Rate Limiting & Startup"
+community: "ScheduleSettings"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Rate_Limiting__Startup
+  - community/ScheduleSettings
 ---
 
 # string
 
 ## Connections
-- [[MealTimeRules]] - `references` [EXTRACTED]
+- [[ScheduleSettings]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Rate_Limiting__Startup
+#graphify/code #graphify/EXTRACTED #community/ScheduleSettings

@@ -1,19 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Camp Session Management"
+community: "Admin Booking & Notifications (4)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Camp_Session_Management
+  - community/Admin_Booking__Notifications_4
 ---
 
 # Task
 
 ## Connections
-- [[.CreateAsync()_3]] - `references` [EXTRACTED]
-- [[.DeleteAsync()_1]] - `references` [EXTRACTED]
-- [[.GetAllAsync()_1]] - `references` [EXTRACTED]
-- [[.UpdateAsync()_1]] - `references` [EXTRACTED]
+- [[.SendAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Camp_Session_Management
+#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_4

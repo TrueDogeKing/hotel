@@ -1,18 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "Auth Controller (1)"
+community: "Room Task Management (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Auth_Controller_1
+  - community/Room_Task_Management_1
 ---
 
 # Task
 
 ## Connections
-- [[.Login()]] - `references` [EXTRACTED]
-- [[.Logout()]] - `references` [EXTRACTED]
-- [[.Refresh()]] - `references` [EXTRACTED]
+- [[.Create()_4]] - `references` [EXTRACTED]
+- [[.Delete()_3]] - `references` [EXTRACTED]
+- [[.Done()]] - `references` [EXTRACTED]
+- [[.List()_1]] - `references` [EXTRACTED]
+- [[.Reopen()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Auth_Controller_1
+#graphify/code #graphify/EXTRACTED #community/Room_Task_Management_1

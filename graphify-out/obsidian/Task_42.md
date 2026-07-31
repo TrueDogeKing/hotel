@@ -1,21 +1,21 @@
 ---
 source_file: ""
 type: "code"
-community: "Room Closure Management"
+community: "tests / CampCenter.IntegrationTests (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Closure_Management
+  - community/tests_/_CampCenterIntegrationTests_2
 ---
 
 # Task
 
 ## Connections
-- [[.AddAsync()_2]] - `references` [EXTRACTED]
-- [[.GetAllAsync()_6]] - `references` [EXTRACTED]
-- [[.GetByIdAsync()_2]] - `references` [EXTRACTED]
-- [[.GetOverlappingAsync()]] - `references` [EXTRACTED]
-- [[.GetUpcomingCenterWideAsync()]] - `references` [EXTRACTED]
-- [[.SaveChangesAsync()_3]] - `references` [EXTRACTED]
+- [[.CreateAsync()_13]] - `references` [EXTRACTED]
+- [[.DeleteAsync()_9]] - `references` [EXTRACTED]
+- [[.GetOrThrowAsync()_3]] - `references` [EXTRACTED]
+- [[.GuardLastAdministratorAsync()]] - `references` [EXTRACTED]
+- [[.ListAsync()_5]] - `references` [EXTRACTED]
+- [[.SetRoleAsync()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management
+#graphify/code #graphify/EXTRACTED #community/tests_/_CampCenterIntegrationTests_2

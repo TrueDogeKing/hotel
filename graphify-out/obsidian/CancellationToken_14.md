@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Global Exception Handler"
+community: "Admin Booking & Notifications (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Global_Exception_Handler
+  - community/Admin_Booking__Notifications_2
 ---
 
 # CancellationToken
 
 ## Connections
-- [[.TryHandleAsync()]] - `references` [EXTRACTED]
+- [[.P24Status()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Global_Exception_Handler
+#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_2

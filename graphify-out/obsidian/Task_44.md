@@ -1,19 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "Auth Service & Tokens"
+community: "BookingMealTime"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Auth_Service__Tokens
+  - community/BookingMealTime
 ---
 
 # Task
 
 ## Connections
-- [[.AddAsync()_4]] - `references` [EXTRACTED]
-- [[.GetByTokenHashAsync()_1]] - `references` [EXTRACTED]
-- [[.RevokeAllActiveForUserAsync()]] - `references` [EXTRACTED]
-- [[.SaveChangesAsync()_5]] - `references` [EXTRACTED]
+- [[.AddAsync()_1]] - `references` [EXTRACTED]
+- [[.GetAsync()_2]] - `references` [EXTRACTED]
+- [[.ListForBookingAsync()]] - `references` [EXTRACTED]
+- [[.ListForBookingsAsync()]] - `references` [EXTRACTED]
+- [[.SaveChangesAsync()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Auth_Service__Tokens
+#graphify/code #graphify/EXTRACTED #community/BookingMealTime

@@ -1,20 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.Domain / Repositories (2)"
+community: "Payment Gateway Integration Tests (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterDomain_/_Repositories_2
+  - community/Payment_Gateway_Integration_Tests_1
 ---
 
 # CancellationToken
 
 ## Connections
-- [[.AddAsync()_9]] - `references` [EXTRACTED]
-- [[.GetAsync()_4]] - `references` [EXTRACTED]
-- [[.ListForBookingAsync()_2]] - `references` [EXTRACTED]
-- [[.ListForBookingsAsync()_1]] - `references` [EXTRACTED]
-- [[.SaveChangesAsync()_11]] - `references` [EXTRACTED]
+- [[.RegisterTransactionAsync()_1]] - `references` [EXTRACTED]
+- [[.VerifyTransactionAsync()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterDomain_/_Repositories_2
+#graphify/code #graphify/EXTRACTED #community/Payment_Gateway_Integration_Tests_1

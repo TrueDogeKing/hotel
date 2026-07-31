@@ -12,8 +12,8 @@ tags:
 # RoomService
 
 ## Connections
-- [[.CreateAsync()_10]] - `method` [EXTRACTED]
-- [[.DeleteAsync()_6]] - `method` [EXTRACTED]
+- [[.CreateAsync()_11]] - `method` [EXTRACTED]
+- [[.DeleteAsync()_7]] - `method` [EXTRACTED]
 - [[.GetAllAsync()_5]] - `method` [EXTRACTED]
 - [[.SaveWithConcurrencyCheckAsync()]] - `method` [EXTRACTED]
 - [[.ToDto()_3]] - `method` [EXTRACTED]

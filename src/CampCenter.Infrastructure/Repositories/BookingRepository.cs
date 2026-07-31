@@ -126,6 +126,21 @@ public class BookingRepository : IBookingRepository
             .Take(take)
             .ToListAsync(cancellationToken);
 
+    public Task<List<BookingRoomAssignment>> ListAssignmentsInRangeAsync(
+        DateOnly start,
+        DateOnly end,
+        CancellationToken cancellationToken = default
+    ) =>
+        // Same half-open overlap as the double-booking guard: a.Start < end && start < a.End.
+        _db
+            .BookingRoomAssignments.Where(a =>
+                a.StartDate < end
+                && start < a.EndDate
+                && a.Booking != null
+                && LiveStatuses.Contains(a.Booking.Status)
+            )
+            .ToListAsync(cancellationToken);
+
     public async Task<(List<Booking> Items, int Total)> ListByCategoryAsync(
         BookingGroupCategory category,
         DateOnly today,

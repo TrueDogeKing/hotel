@@ -1,19 +1,19 @@
 ---
 source_file: "src/CampCenter.Application/Services/ClosureService.cs"
 type: "code"
-community: "Room Closure Management"
+community: "Validator Unit Tests"
 location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Closure_Management
+  - community/Validator_Unit_Tests
 ---
 
 # ClosureService
 
 ## Connections
-- [[.CreateAsync()_8]] - `method` [EXTRACTED]
-- [[.DeleteAsync()_4]] - `method` [EXTRACTED]
+- [[.CreateAsync()_9]] - `method` [EXTRACTED]
+- [[.DeleteAsync()_5]] - `method` [EXTRACTED]
 - [[.GetAllAsync()_3]] - `method` [EXTRACTED]
 - [[.GetOrThrowAsync()_1]] - `method` [EXTRACTED]
 - [[.GuardNoLiveBookingsAsync()]] - `method` [EXTRACTED]
@@ -26,4 +26,4 @@ tags:
 - [[IClosureService]] - `implements` [EXTRACTED]
 - [[IRoomRepository]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management
+#graphify/code #graphify/EXTRACTED #community/Validator_Unit_Tests

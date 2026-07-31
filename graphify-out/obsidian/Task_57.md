@@ -1,19 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "Refresh Token Repository"
+community: "BookingMealTime"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Refresh_Token_Repository
+  - community/BookingMealTime
 ---
 
 # Task
 
 ## Connections
-- [[.AddAsync()_13]] - `references` [EXTRACTED]
-- [[.GetByTokenHashAsync()_3]] - `references` [EXTRACTED]
-- [[.RevokeAllActiveForUserAsync()_1]] - `references` [EXTRACTED]
-- [[.SaveChangesAsync()_15]] - `references` [EXTRACTED]
+- [[.AddAsync()_11]] - `references` [EXTRACTED]
+- [[.GetAsync()_4]] - `references` [EXTRACTED]
+- [[.ListForBookingAsync()_2]] - `references` [EXTRACTED]
+- [[.ListForBookingsAsync()_1]] - `references` [EXTRACTED]
+- [[.SaveChangesAsync()_11]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Refresh_Token_Repository
+#graphify/code #graphify/EXTRACTED #community/BookingMealTime

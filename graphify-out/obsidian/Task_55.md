@@ -1,21 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "Room Closure Management"
+community: "Payment Gateway Integration Tests (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Closure_Management
+  - community/Payment_Gateway_Integration_Tests_2
 ---
 
 # Task
 
 ## Connections
-- [[.AddAsync()_11]] - `references` [EXTRACTED]
-- [[.GetAllAsync()_9]] - `references` [EXTRACTED]
-- [[.GetByIdAsync()_9]] - `references` [EXTRACTED]
-- [[.GetOverlappingAsync()_1]] - `references` [EXTRACTED]
-- [[.GetUpcomingCenterWideAsync()_1]] - `references` [EXTRACTED]
-- [[.SaveChangesAsync()_13]] - `references` [EXTRACTED]
+- [[.SeedAdminUserAsync()]] - `references` [EXTRACTED]
+- [[.SeedMealTimeDefaultsAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management
+#graphify/code #graphify/EXTRACTED #community/Payment_Gateway_Integration_Tests_2

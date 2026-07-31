@@ -1,26 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Admin Bookings Controller & DTOs"
+community: "Admin Booking & Notifications (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Bookings_Controller__DTOs
+  - community/Admin_Booking__Notifications_2
 ---
 
 # Task
 
 ## Connections
-- [[.CancelAsync()]] - `references` [EXTRACTED]
-- [[.CreateAsync()]] - `references` [EXTRACTED]
-- [[.GetAssignableRoomsAsync()]] - `references` [EXTRACTED]
-- [[.GetAsync()]] - `references` [EXTRACTED]
-- [[.GetDashboardAsync()]] - `references` [EXTRACTED]
-- [[.GetGroupPageAsync()]] - `references` [EXTRACTED]
-- [[.GetOccupancyAsync()]] - `references` [EXTRACTED]
-- [[.ListAsync()]] - `references` [EXTRACTED]
-- [[.ReassignAsync()]] - `references` [EXTRACTED]
-- [[.SetStatusAsync()]] - `references` [EXTRACTED]
-- [[.UpdateDietaryNotesAsync()]] - `references` [EXTRACTED]
+- [[.P24Status()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Bookings_Controller__DTOs
+#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_2

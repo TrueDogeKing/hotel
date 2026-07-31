@@ -1,20 +1,34 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.UnitTests / Services (2)"
+community: "Integration Test Harness (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Services_2
+  - community/Integration_Test_Harness_2
 ---
 
 # Task
 
 ## Connections
-- [[.AddAsync()_5]] - `references` [EXTRACTED]
-- [[.CountDoneByDateAsync()]] - `references` [EXTRACTED]
-- [[.GetAsync()_3]] - `references` [EXTRACTED]
-- [[.ListForDateAsync()]] - `references` [EXTRACTED]
-- [[.SaveChangesAsync()_6]] - `references` [EXTRACTED]
+- [[.AddAssignmentAsync()]] - `references` [EXTRACTED]
+- [[.AddAsync()_2]] - `references` [EXTRACTED]
+- [[.AddPaymentAsync()]] - `references` [EXTRACTED]
+- [[.GetBookedRoomIdsInRangeAsync()]] - `references` [EXTRACTED]
+- [[.GetByIdAsync()_1]] - `references` [EXTRACTED]
+- [[.GetByTokenHashAsync()]] - `references` [EXTRACTED]
+- [[.GetCompletedPaymentKindsAsync()]] - `references` [EXTRACTED]
+- [[.GetConfirmedEndedAsync()]] - `references` [EXTRACTED]
+- [[.GetExpiredPendingAsync()]] - `references` [EXTRACTED]
+- [[.GetPaymentByP24SessionIdAsync()]] - `references` [EXTRACTED]
+- [[.GetPaymentsAsync()]] - `references` [EXTRACTED]
+- [[.ListAssignmentsInRangeAsync()]] - `references` [EXTRACTED]
+- [[.ListAsync()_7]] - `references` [EXTRACTED]
+- [[.ListByCategoryAsync()]] - `references` [EXTRACTED]
+- [[.ListLiveChangingOverAsync()]] - `references` [EXTRACTED]
+- [[.ListLiveInRangeAsync()]] - `references` [EXTRACTED]
+- [[.ListLivePresentInAsync()]] - `references` [EXTRACTED]
+- [[.ListUpcomingAsync()]] - `references` [EXTRACTED]
+- [[.SaveChangesAsync()_2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_2
+#graphify/code #graphify/EXTRACTED #community/Integration_Test_Harness_2

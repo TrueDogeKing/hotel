@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Integration Test Harness (1)"
+community: "OpenAPI Security Scheme"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Integration_Test_Harness_1
+  - community/OpenAPI_Security_Scheme
 ---
 
 # string
 
 ## Connections
-- [[RateLimitPolicies]] - `references` [EXTRACTED]
+- [[BearerSecuritySchemeTransformer]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Integration_Test_Harness_1
+#graphify/code #graphify/EXTRACTED #community/OpenAPI_Security_Scheme

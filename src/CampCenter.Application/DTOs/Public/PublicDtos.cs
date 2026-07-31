@@ -23,6 +23,32 @@ public record AvailabilityDto(
 /// A center-wide closure as the public site advertises it.
 public record PublicClosureDto(string Reason, DateOnly StartDate, DateOnly EndDate);
 
+/// One night, as the booking calendar needs to draw it: whether a group could
+/// sleep here, and why not when it could not.
+///
+/// The date is the night *starting* on it. A stay's departure day is not a night,
+/// so the calendar may accept a closed day as a checkout even though it is
+/// unavailable as an arrival.
+public record AvailabilityDayDto(
+    DateOnly Date,
+    /// The whole center is closed that night; nothing can be booked.
+    bool Closed,
+    string? ClosureReason,
+    /// Beds in rooms that are neither booked nor blocked that night.
+    int FreeBeds,
+    /// Enough free beds for the headcount asked about. True for any open night
+    /// with a bed left when no headcount was given.
+    bool Fits
+);
+
+/// Night-by-night availability over a span, for the booking calendar.
+public record AvailabilityCalendarDto(
+    DateOnly Start,
+    DateOnly End,
+    int? Headcount,
+    List<AvailabilityDayDto> Days
+);
+
 public record CreateBookingRequestDto(
     DateOnly StartDate,
     DateOnly EndDate,

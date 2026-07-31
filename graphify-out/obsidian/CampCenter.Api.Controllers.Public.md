@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Api/Controllers/Public/PublicAvailabilityController.cs"
 type: "code"
-community: "Integration Test Harness (1)"
+community: "CampCenter.Application.DTOs.Public"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Integration_Test_Harness_1
+  - community/CampCenterApplicationDTOsPublic
 ---
 
 # CampCenter.Api.Controllers.Public
@@ -16,4 +16,4 @@ tags:
 - [[PublicBookingsController.cs]] - `contains` [EXTRACTED]
 - [[PublicPaymentsController.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Integration_Test_Harness_1
+#graphify/code #graphify/EXTRACTED #community/CampCenterApplicationDTOsPublic

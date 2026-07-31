@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Booking Persistence & Entities (1)"
+community: "CampCenter.Infrastructure / Repositories (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Booking_Persistence__Entities_1
+  - community/CampCenterInfrastructure_/_Repositories_1
 ---
 
 # DbSet
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[AppDbContext]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Booking_Persistence__Entities_1
+#graphify/code #graphify/EXTRACTED #community/CampCenterInfrastructure_/_Repositories_1

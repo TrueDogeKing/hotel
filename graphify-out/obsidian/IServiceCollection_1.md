@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Payment"
+community: "Rate Limiting & Startup"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Payment
+  - community/Rate_Limiting__Startup
 ---
 
 # IServiceCollection
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.AddInfrastructure()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Payment
+#graphify/code #graphify/EXTRACTED #community/Rate_Limiting__Startup

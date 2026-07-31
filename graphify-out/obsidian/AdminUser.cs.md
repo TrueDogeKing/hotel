@@ -12,7 +12,7 @@ tags:
 # AdminUser.cs
 
 ## Connections
-- [[AdminUser]] - `contains` [EXTRACTED]
+- [[AdminUser_1]] - `contains` [EXTRACTED]
 - [[CampCenter.Domain.Entities]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Admin_User__Token_Config

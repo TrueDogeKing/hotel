@@ -1,19 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "Auth Service & Tokens"
+community: "Booking Persistence & Entities (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Auth_Service__Tokens
+  - community/Booking_Persistence__Entities_1
 ---
 
 # CancellationToken
 
 ## Connections
-- [[.IssueTokensAsync()]] - `references` [EXTRACTED]
-- [[.LoginAsync()_1]] - `references` [EXTRACTED]
-- [[.LogoutAsync()_1]] - `references` [EXTRACTED]
-- [[.RefreshAsync()_1]] - `references` [EXTRACTED]
+- [[.CreateAsync()_6]] - `references` [EXTRACTED]
+- [[.DeleteAsync()_4]] - `references` [EXTRACTED]
+- [[.ListAsync()_2]] - `references` [EXTRACTED]
+- [[.SetRoleAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Auth_Service__Tokens
+#graphify/code #graphify/EXTRACTED #community/Booking_Persistence__Entities_1

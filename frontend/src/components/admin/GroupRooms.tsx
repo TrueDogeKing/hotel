@@ -8,6 +8,7 @@ import {
   type AdminBooking,
   type AssignableRoom,
 } from "../../api/admin";
+import { useAuth } from "../../auth/AuthContext";
 
 interface Props {
   bookingId: string;
@@ -32,6 +33,8 @@ interface Draft {
  */
 export default function GroupRooms({ bookingId, onChanged }: Props) {
   const { t } = useTranslation();
+  // A worker sees which rooms the group is in; moving it between them is a write.
+  const { canEdit } = useAuth();
   const [booking, setBooking] = useState<AdminBooking | null>(null);
   const [rooms, setRooms] = useState<AssignableRoom[]>([]);
   const [drafts, setDrafts] = useState<Draft[] | null>(null);
@@ -39,10 +42,11 @@ export default function GroupRooms({ bookingId, onChanged }: Props) {
   const [error, setError] = useState<string | null>(null);
   const [notice, setNotice] = useState<string | null>(null);
 
+  // No resetting of drafts here: the panel keys this component by bookingId, so
+  // another group gets a fresh instance rather than one carrying the last group's
+  // half-finished edit.
   useEffect(() => {
     let cancelled = false;
-    setDrafts(null);
-    setNotice(null);
     void Promise.all([getAdminBooking(bookingId), getAssignableRooms(bookingId)])
       .then(([bookingData, roomData]) => {
         if (cancelled) return;
@@ -131,9 +135,11 @@ export default function GroupRooms({ bookingId, onChanged }: Props) {
   const duplicated = drafts ? new Set(drafts.map((d) => d.roomId)).size !== drafts.length : false;
   const canSave = !!drafts && drafts.length > 0 && balanced && !duplicated && !saving;
   const roomsLeftToAdd = drafts ? !!firstUnusedRoom(drafts) : false;
-  // Rooms that were free when the panel loaded, so a stale list is visible as such
-  // rather than only surfacing when the save is rejected.
-  const editable = booking.status !== "Cancelled" && booking.status !== "Completed";
+  // Two separate reasons the rooms may not be changed: the booking is over, or
+  // the reader is a worker. Only the first one is worth explaining — a worker is
+  // not being blocked from something they were offered.
+  const editable =
+    canEdit && booking.status !== "Cancelled" && booking.status !== "Completed";
 
   return (
     <section className="group-rooms">
@@ -172,7 +178,7 @@ export default function GroupRooms({ bookingId, onChanged }: Props) {
               </button>
             </div>
           ) : (
-            <p className="group-rooms-hint">{t("groupRooms.notEditable")}</p>
+            canEdit && <p className="group-rooms-hint">{t("groupRooms.notEditable")}</p>
           )}
         </>
       ) : (

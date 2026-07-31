@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/components/ConfirmDialog.tsx"
 type: "code"
-community: "Frontend App Shell & i18n"
+community: "CampCenter.Application / Services (3)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Frontend_App_Shell__i18n
+  - community/CampCenterApplication_/_Services_3
 ---
 
 # ConfirmDialog.tsx
@@ -18,5 +18,7 @@ tags:
 - [[GroupMealTimes.tsx]] - `imports_from` [EXTRACTED]
 - [[GroupSchedulePanel.tsx]] - `imports_from` [EXTRACTED]
 - [[Props_1]] - `contains` [EXTRACTED]
+- [[SchedulePage.tsx]] - `imports_from` [EXTRACTED]
+- [[UsersPage.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Frontend_App_Shell__i18n
+#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_3

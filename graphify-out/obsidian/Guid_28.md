@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "tests / CampCenter.IntegrationTests (2)"
+community: "Admin User & Token Config"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/tests_/_CampCenterIntegrationTests_2
+  - community/Admin_User__Token_Config
 ---
 
 # Guid
 
 ## Connections
-- [[BookingRoomAssignment]] - `references` [EXTRACTED]
+- [[AdminUser_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/tests_/_CampCenterIntegrationTests_2
+#graphify/code #graphify/EXTRACTED #community/Admin_User__Token_Config

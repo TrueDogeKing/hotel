@@ -1,19 +1,21 @@
 ---
 type: community
-members: 27
+members: 34
 ---
 
 # CampCenter.UnitTests / Services (1)
 
-**Members:** 27 nodes
+**Members:** 34 nodes
 
 ## Members
+- [[.ClashesWith()]] - code - src/CampCenter.Application/Services/MealGenerationPlanner.cs
 - [[.Default()]] - code - tests/CampCenter.UnitTests/Services/MealGenerationPlannerTests.cs
 - [[.EffectiveSlots()]] - code - src/CampCenter.Application/Services/MealGenerationPlanner.cs
 - [[.EffectiveSlots_AppliesTheGroupsOwnTimes_LeavingOtherSlotsAlone()]] - code - tests/CampCenter.UnitTests/Services/MealGenerationPlannerTests.cs
 - [[.EffectiveSlots_WithoutOverrides_UsesCenterTimes()]] - code - tests/CampCenter.UnitTests/Services/MealGenerationPlannerTests.cs
 - [[.FromDefault()]] - code - src/CampCenter.Application/Services/MealGenerationPlanner.cs
 - [[.FromOverride()]] - code - src/CampCenter.Application/Services/MealGenerationPlanner.cs
+- [[.NextFreeSitting()]] - code - src/CampCenter.Application/Services/MealGenerationPlanner.cs
 - [[.Plan()]] - code - src/CampCenter.Application/Services/MealGenerationPlanner.cs
 - [[.Plan_CoversDepartureDay_NotJustNightsStayed()]] - code - tests/CampCenter.UnitTests/Services/MealGenerationPlannerTests.cs
 - [[.Plan_FiveNightStay_GivesDinnerOnArrival_AllMiddleDays_BreakfastOnDeparture()]] - code - tests/CampCenter.UnitTests/Services/MealGenerationPlannerTests.cs
@@ -26,14 +28,19 @@ members: 27
 - [[.SeededSlots()]] - code - tests/CampCenter.UnitTests/Services/MealGenerationPlannerTests.cs
 - [[Date]] - code
 - [[DateOnly_15]] - code
-- [[Fact_8]] - code
+- [[End]] - code
+- [[Fact_9]] - code
 - [[IEnumerable_1]] - code
+- [[IReadOnlyCollection]] - code
 - [[IReadOnlyList]] - code
-- [[List_11]] - code
-- [[List_36]] - code
+- [[List_12]] - code
+- [[List_40]] - code
+- [[MealGenerationPlanner]] - code - src/CampCenter.Application/Services/MealGenerationPlanner.cs
 - [[MealGenerationPlannerTests]] - code - tests/CampCenter.UnitTests/Services/MealGenerationPlannerTests.cs
 - [[MealSlot]] - code - src/CampCenter.Application/Services/MealGenerationPlanner.cs
 - [[Slot]] - code
+- [[Start]] - code
+- [[TimeOnly_1]] - code
 - [[TimeOnly_9]] - code
 
 ## Live Query (requires Dataview plugin)
@@ -44,15 +51,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 6 edges to [[_COMMUNITY_Admin Booking & Notifications (3)]]
-- 4 edges to [[_COMMUNITY_Booking Persistence & Entities (2)]]
-- 2 edges to [[_COMMUNITY_Domain & Infra Namespaces]]
-- 2 edges to [[_COMMUNITY_CampCenter.Domain  Repositories (2)]]
+- 6 edges to [[_COMMUNITY_CampCenter.Domain  Repositories (2)]]
+- 3 edges to [[_COMMUNITY_Domain & Infra Namespaces]]
+- 3 edges to [[_COMMUNITY_BookingMealTime]]
 - 2 edges to [[_COMMUNITY_CampCenter.Application  Services (2)]]
 
 ## Top bridge nodes
-- [[.EffectiveSlots()]] - degree 16, connects to 4 communities
-- [[.Plan()]] - degree 16, connects to 2 communities
+- [[.EffectiveSlots()]] - degree 16, connects to 3 communities
 - [[.FromOverride()]] - degree 4, connects to 2 communities
+- [[.Plan()]] - degree 16, connects to 1 community
 - [[MealGenerationPlannerTests]] - degree 14, connects to 1 community
 - [[.SeededDefaults()]] - degree 9, connects to 1 community

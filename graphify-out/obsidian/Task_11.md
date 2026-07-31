@@ -1,17 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "Public Booking Service (1)"
+community: "Booking Persistence & Entities (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public_Booking_Service_1
+  - community/Booking_Persistence__Entities_1
 ---
 
 # Task
 
 ## Connections
-- [[.Closures()]] - `references` [EXTRACTED]
-- [[.Get()_3]] - `references` [EXTRACTED]
+- [[.Create()_5]] - `references` [EXTRACTED]
+- [[.Delete()_4]] - `references` [EXTRACTED]
+- [[.List()_2]] - `references` [EXTRACTED]
+- [[.SetRole()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_1
+#graphify/code #graphify/EXTRACTED #community/Booking_Persistence__Entities_1

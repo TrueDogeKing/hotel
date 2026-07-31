@@ -18,6 +18,7 @@ tags:
 - [[ContactForm]] - `contains` [EXTRACTED]
 - [[LanguageSwitcher()]] - `imports` [EXTRACTED]
 - [[LanguageSwitcher.tsx]] - `imports_from` [EXTRACTED]
+- [[RangeCalendar.tsx]] - `imports_from` [EXTRACTED]
 - [[Step]] - `contains` [EXTRACTED]
 - [[admin.ts]] - `imports_from` [EXTRACTED]
 - [[createBooking()]] - `imports` [EXTRACTED]

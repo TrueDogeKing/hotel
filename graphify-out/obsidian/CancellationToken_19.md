@@ -1,19 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "Public Booking Service (1)"
+community: ".GetBlockedRoomIdsAsync"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public_Booking_Service_1
+  - community/GetBlockedRoomIdsAsync
 ---
 
 # CancellationToken
 
 ## Connections
-- [[.CancelByTokenAsync()]] - `references` [EXTRACTED]
-- [[.CreateAsync()_1]] - `references` [EXTRACTED]
-- [[.GetByTokenAsync()]] - `references` [EXTRACTED]
-- [[.GetScheduleByTokenAsync()]] - `references` [EXTRACTED]
+- [[.GetAvailabilityAsync()]] - `references` [EXTRACTED]
+- [[.GetBlockedRoomIdsAsync()]] - `references` [EXTRACTED]
+- [[.GetCalendarAsync()]] - `references` [EXTRACTED]
+- [[.GetCenterClosureReasonAsync()]] - `references` [EXTRACTED]
+- [[.GetFreeRoomsByCapacityAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_1
+#graphify/code #graphify/EXTRACTED #community/GetBlockedRoomIdsAsync

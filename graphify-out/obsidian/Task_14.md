@@ -1,16 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "OpenAPI Security Scheme"
+community: "Admin Booking & Notifications (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/OpenAPI_Security_Scheme
+  - community/Admin_Booking__Notifications_2
 ---
 
 # Task
 
 ## Connections
-- [[.TransformAsync()]] - `references` [EXTRACTED]
+- [[.Cancel()_1]] - `references` [EXTRACTED]
+- [[.Create()_6]] - `references` [EXTRACTED]
+- [[.GetByToken()]] - `references` [EXTRACTED]
+- [[.GetScheduleByToken()]] - `references` [EXTRACTED]
+- [[.InitiatePayment()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/OpenAPI_Security_Scheme
+#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_2

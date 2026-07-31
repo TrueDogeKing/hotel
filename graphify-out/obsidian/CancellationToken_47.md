@@ -1,22 +1,21 @@
 ---
 source_file: ""
 type: "code"
-community: "Room Management"
+community: "CampCenter.Domain / Repositories (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Management
+  - community/CampCenterDomain_/_Repositories_2
 ---
 
 # CancellationToken
 
 ## Connections
-- [[.AddAsync()_6]] - `references` [EXTRACTED]
-- [[.GetActiveAsync()_1]] - `references` [EXTRACTED]
-- [[.GetAllAsync()_8]] - `references` [EXTRACTED]
-- [[.GetByIdAsync()_4]] - `references` [EXTRACTED]
-- [[.GetByNumberAsync()]] - `references` [EXTRACTED]
-- [[.HasAssignmentsAsync()]] - `references` [EXTRACTED]
-- [[.SaveChangesAsync()_7]] - `references` [EXTRACTED]
+- [[.AddAsync()_4]] - `references` [EXTRACTED]
+- [[.GetActiveAsync()]] - `references` [EXTRACTED]
+- [[.GetAllAsync()_7]] - `references` [EXTRACTED]
+- [[.GetByIdAsync()_3]] - `references` [EXTRACTED]
+- [[.IsReferencedAsync()]] - `references` [EXTRACTED]
+- [[.SaveChangesAsync()_4]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Management
+#graphify/code #graphify/EXTRACTED #community/CampCenterDomain_/_Repositories_2

@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/api/admin.ts"
 type: "code"
-community: "src / utils"
-location: "L462"
+community: "CampCenter.Application / Services (3)"
+location: "L500"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/src_/_utils
+  - community/CampCenterApplication_/_Services_3
 ---
 
 # ScheduleCalendar
@@ -15,4 +15,4 @@ tags:
 - [[SchedulePage.tsx]] - `imports` [EXTRACTED]
 - [[admin.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/src_/_utils
+#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_3

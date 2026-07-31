@@ -16,6 +16,7 @@ tags:
 - [[HousekeepingPage.tsx]] - `imports` [EXTRACTED]
 - [[OccupancyPage()]] - `calls` [EXTRACTED]
 - [[OccupancyPage.tsx]] - `imports` [EXTRACTED]
+- [[RangeCalendar.tsx]] - `imports` [EXTRACTED]
 - [[SchedulePage.tsx]] - `imports` [EXTRACTED]
 - [[dates.ts]] - `contains` [EXTRACTED]
 - [[dayNumber()]] - `calls` [EXTRACTED]

@@ -1,19 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "Room Closure Management"
+community: "Booking Persistence & Entities (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Closure_Management
+  - community/Booking_Persistence__Entities_1
 ---
 
 # Task
 
 ## Connections
-- [[.GetAvailabilityAsync()_1]] - `references` [EXTRACTED]
-- [[.GetBlockedRoomIdsAsync()_1]] - `references` [EXTRACTED]
-- [[.GetCenterClosureReasonAsync()_1]] - `references` [EXTRACTED]
-- [[.GetFreeRoomsByCapacityAsync()_1]] - `references` [EXTRACTED]
+- [[.CreateAsync()_6]] - `references` [EXTRACTED]
+- [[.DeleteAsync()_4]] - `references` [EXTRACTED]
+- [[.ListAsync()_2]] - `references` [EXTRACTED]
+- [[.SetRoleAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management
+#graphify/code #graphify/EXTRACTED #community/Booking_Persistence__Entities_1

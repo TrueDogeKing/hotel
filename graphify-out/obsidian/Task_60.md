@@ -1,21 +1,21 @@
 ---
 source_file: ""
 type: "code"
-community: "Room Task Management (1)"
+community: "MealTimeDefaultRepository"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Task_Management_1
+  - community/MealTimeDefaultRepository
 ---
 
 # Task
 
 ## Connections
-- [[.AddAsync()_16]] - `references` [EXTRACTED]
-- [[.CountOpenAsync()_1]] - `references` [EXTRACTED]
-- [[.CountOpenByRoomAsync()_1]] - `references` [EXTRACTED]
-- [[.GetByIdAsync()_12]] - `references` [EXTRACTED]
-- [[.ListAsync()_7]] - `references` [EXTRACTED]
-- [[.SaveChangesAsync()_18]] - `references` [EXTRACTED]
+- [[.AddAsync()_14]] - `references` [EXTRACTED]
+- [[.GetActiveAsync()_2]] - `references` [EXTRACTED]
+- [[.GetAllAsync()_10]] - `references` [EXTRACTED]
+- [[.GetByIdAsync()_10]] - `references` [EXTRACTED]
+- [[.IsReferencedAsync()_1]] - `references` [EXTRACTED]
+- [[.SaveChangesAsync()_14]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Task_Management_1
+#graphify/code #graphify/EXTRACTED #community/MealTimeDefaultRepository

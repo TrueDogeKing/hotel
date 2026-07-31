@@ -1,18 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Admin User & Token Config"
+community: "SmtpEmailSender"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_User__Token_Config
+  - community/SmtpEmailSender
 ---
 
 # CancellationToken
 
 ## Connections
-- [[.GetByIdAsync()_7]] - `references` [EXTRACTED]
-- [[.GetByLoginAsync()_1]] - `references` [EXTRACTED]
-- [[.SaveChangesAsync()_10]] - `references` [EXTRACTED]
+- [[.SendAsync()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_User__Token_Config
+#graphify/code #graphify/EXTRACTED #community/SmtpEmailSender

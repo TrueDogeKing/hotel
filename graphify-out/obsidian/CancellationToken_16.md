@@ -1,26 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Admin Bookings Controller & DTOs"
+community: "OpenAPI Security Scheme"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Bookings_Controller__DTOs
+  - community/OpenAPI_Security_Scheme
 ---
 
 # CancellationToken
 
 ## Connections
-- [[.CancelAsync()]] - `references` [EXTRACTED]
-- [[.CreateAsync()]] - `references` [EXTRACTED]
-- [[.GetAssignableRoomsAsync()]] - `references` [EXTRACTED]
-- [[.GetAsync()]] - `references` [EXTRACTED]
-- [[.GetDashboardAsync()]] - `references` [EXTRACTED]
-- [[.GetGroupPageAsync()]] - `references` [EXTRACTED]
-- [[.GetOccupancyAsync()]] - `references` [EXTRACTED]
-- [[.ListAsync()]] - `references` [EXTRACTED]
-- [[.ReassignAsync()]] - `references` [EXTRACTED]
-- [[.SetStatusAsync()]] - `references` [EXTRACTED]
-- [[.UpdateDietaryNotesAsync()]] - `references` [EXTRACTED]
+- [[.TransformAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Bookings_Controller__DTOs
+#graphify/code #graphify/EXTRACTED #community/OpenAPI_Security_Scheme

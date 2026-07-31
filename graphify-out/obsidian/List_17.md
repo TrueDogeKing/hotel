@@ -1,16 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.UnitTests / Validators"
+community: "CampCenter.Application / Services (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Validators
+  - community/CampCenterApplication_/_Services_2
 ---
 
 # List
 
 ## Connections
-- [[Booking]] - `references` [EXTRACTED]
+- [[.GetBookingMealTimesAsync()_1]] - `references` [EXTRACTED]
+- [[.ToDto()_5]] - `references` [EXTRACTED]
+- [[.ToPublicDto()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Validators
+#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_2

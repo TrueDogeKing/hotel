@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "tests / CampCenter.IntegrationTests (2)"
+community: "components / admin"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/tests_/_CampCenterIntegrationTests_2
+  - community/components_/_admin
 ---
 
 # DateOnly
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[BookingRoomAssignment]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/tests_/_CampCenterIntegrationTests_2
+#graphify/code #graphify/EXTRACTED #community/components_/_admin

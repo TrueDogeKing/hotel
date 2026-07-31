@@ -1,17 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "Payment Gateway Integration Tests (1)"
+community: "JWT Token Service"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Payment_Gateway_Integration_Tests_1
+  - community/JWT_Token_Service
 ---
 
 # CancellationToken
 
 ## Connections
-- [[.RegisterTransactionAsync()]] - `references` [EXTRACTED]
-- [[.VerifyTransactionAsync()]] - `references` [EXTRACTED]
+- [[.CreateAsync()_3]] - `references` [EXTRACTED]
+- [[.DeleteAsync()_1]] - `references` [EXTRACTED]
+- [[.GetAllAsync()_1]] - `references` [EXTRACTED]
+- [[.UpdateAsync()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Payment_Gateway_Integration_Tests_1
+#graphify/code #graphify/EXTRACTED #community/JWT_Token_Service

@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Auth/RefreshTokenSettings.cs"
 type: "code"
-community: "JWT Token Service"
+community: "Auth Controller (1)"
 location: "L3"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/JWT_Token_Service
+  - community/Auth_Controller_1
 ---
 
 # RefreshTokenSettings
@@ -15,6 +15,6 @@ tags:
 - [[AuthController]] - `references` [EXTRACTED]
 - [[JwtTokenService]] - `references` [EXTRACTED]
 - [[RefreshTokenSettings.cs]] - `contains` [EXTRACTED]
-- [[string_7]] - `references` [EXTRACTED]
+- [[string_9]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/JWT_Token_Service
+#graphify/code #graphify/EXTRACTED #community/Auth_Controller_1

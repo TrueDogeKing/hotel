@@ -1,33 +1,33 @@
 ---
 source_file: ""
 type: "code"
-community: "Integration Test Harness (2)"
+community: "CampCenter.Application / Services (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Integration_Test_Harness_2
+  - community/CampCenterApplication_/_Services_2
 ---
 
 # Task
 
 ## Connections
-- [[.AddAssignmentAsync()]] - `references` [EXTRACTED]
-- [[.AddAsync()_1]] - `references` [EXTRACTED]
-- [[.AddPaymentAsync()]] - `references` [EXTRACTED]
-- [[.GetBookedRoomIdsInRangeAsync()]] - `references` [EXTRACTED]
-- [[.GetByIdAsync()_1]] - `references` [EXTRACTED]
-- [[.GetByTokenHashAsync()]] - `references` [EXTRACTED]
-- [[.GetCompletedPaymentKindsAsync()]] - `references` [EXTRACTED]
-- [[.GetConfirmedEndedAsync()]] - `references` [EXTRACTED]
-- [[.GetExpiredPendingAsync()]] - `references` [EXTRACTED]
-- [[.GetPaymentByP24SessionIdAsync()]] - `references` [EXTRACTED]
-- [[.GetPaymentsAsync()]] - `references` [EXTRACTED]
-- [[.ListAsync()_4]] - `references` [EXTRACTED]
-- [[.ListByCategoryAsync()]] - `references` [EXTRACTED]
-- [[.ListLiveChangingOverAsync()]] - `references` [EXTRACTED]
-- [[.ListLiveInRangeAsync()]] - `references` [EXTRACTED]
-- [[.ListLivePresentInAsync()]] - `references` [EXTRACTED]
-- [[.ListUpcomingAsync()]] - `references` [EXTRACTED]
-- [[.SaveChangesAsync()_2]] - `references` [EXTRACTED]
+- [[.AssignMealTimesAsync()]] - `references` [EXTRACTED]
+- [[.CheckConflictsAsync()_1]] - `references` [EXTRACTED]
+- [[.CreateEntryAsync()_1]] - `references` [EXTRACTED]
+- [[.DeleteBookingMealsAsync()_1]] - `references` [EXTRACTED]
+- [[.DeleteEntryAsync()_1]] - `references` [EXTRACTED]
+- [[.GenerateMealsForBookingAsync()_1]] - `references` [EXTRACTED]
+- [[.GenerateMissingMealsAsync()_1]] - `references` [EXTRACTED]
+- [[.GetBookingMealTimesAsync()_1]] - `references` [EXTRACTED]
+- [[.GetBookingOrThrowAsync()]] - `references` [EXTRACTED]
+- [[.GetCalendarAsync()_3]] - `references` [EXTRACTED]
+- [[.GetDayAsync()_3]] - `references` [EXTRACTED]
+- [[.GetEntryOrThrowAsync()]] - `references` [EXTRACTED]
+- [[.GetForBookingAsync()_1]] - `references` [EXTRACTED]
+- [[.GetLocationsAsync()_1]] - `references` [EXTRACTED]
+- [[.ResetBookingMealTimeAsync()_1]] - `references` [EXTRACTED]
+- [[.RetimeGeneratedMealsAsync()]] - `references` [EXTRACTED]
+- [[.SetBookingMealTimeAsync()_1]] - `references` [EXTRACTED]
+- [[.UpdateEntryAsync()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Integration_Test_Harness_2
+#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_2

@@ -1,21 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Admin Bookings Controller & DTOs"
+community: "Claims Principal Extensions"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Bookings_Controller__DTOs
+  - community/Claims_Principal_Extensions
 ---
 
 # Guid
 
 ## Connections
-- [[.CancelAsync()]] - `references` [EXTRACTED]
-- [[.GetAssignableRoomsAsync()]] - `references` [EXTRACTED]
-- [[.GetAsync()]] - `references` [EXTRACTED]
-- [[.ReassignAsync()]] - `references` [EXTRACTED]
-- [[.SetStatusAsync()]] - `references` [EXTRACTED]
-- [[.UpdateDietaryNotesAsync()]] - `references` [EXTRACTED]
+- [[.GetUserId()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Bookings_Controller__DTOs
+#graphify/code #graphify/EXTRACTED #community/Claims_Principal_Extensions

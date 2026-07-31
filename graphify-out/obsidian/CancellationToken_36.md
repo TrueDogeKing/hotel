@@ -1,18 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "Admin Booking & Notifications (4)"
+community: "CampCenter.UnitTests / Services (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Booking__Notifications_4
+  - community/CampCenterUnitTests_/_Services_2
 ---
 
 # CancellationToken
 
 ## Connections
-- [[.HandleNotificationAsync()_1]] - `references` [EXTRACTED]
-- [[.InitiateAsync()_1]] - `references` [EXTRACTED]
-- [[.SendSafelyAsync()_1]] - `references` [EXTRACTED]
+- [[.GetDayAsync()_2]] - `references` [EXTRACTED]
+- [[.GetJobsAsync()]] - `references` [EXTRACTED]
+- [[.GetRangeAsync()_1]] - `references` [EXTRACTED]
+- [[.SetStatusAsync()_4]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_4
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_2

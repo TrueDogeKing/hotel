@@ -1,18 +1,26 @@
 ---
 source_file: ""
 type: "code"
-community: "Admin User & Token Config"
+community: "ScheduleEntry"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_User__Token_Config
+  - community/ScheduleEntry
 ---
 
 # Task
 
 ## Connections
-- [[.GetByIdAsync()_7]] - `references` [EXTRACTED]
-- [[.GetByLoginAsync()_1]] - `references` [EXTRACTED]
-- [[.SaveChangesAsync()_10]] - `references` [EXTRACTED]
+- [[.AddAsync()_9]] - `references` [EXTRACTED]
+- [[.AddRangeAsync()]] - `references` [EXTRACTED]
+- [[.CountByDateAndKindAsync()]] - `references` [EXTRACTED]
+- [[.GetByIdAsync()_6]] - `references` [EXTRACTED]
+- [[.ListForBookingAsync()_1]] - `references` [EXTRACTED]
+- [[.ListForDateAsync()_1]] - `references` [EXTRACTED]
+- [[.ListFullySuppressedSlotsAsync()]] - `references` [EXTRACTED]
+- [[.ListGeneratedSlotsAsync()]] - `references` [EXTRACTED]
+- [[.ListLocationsAsync()]] - `references` [EXTRACTED]
+- [[.ListVisibleSlotSpansAsync()]] - `references` [EXTRACTED]
+- [[.SaveChangesAsync()_9]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_User__Token_Config
+#graphify/code #graphify/EXTRACTED #community/ScheduleEntry

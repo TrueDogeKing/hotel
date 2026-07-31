@@ -1,0 +1,22 @@
+---
+source_file: "src/CampCenter.Application/Validators/UserValidators.cs"
+type: "code"
+community: "PasswordRules"
+location: "L1"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/PasswordRules
+---
+
+# UserValidators.cs
+
+## Connections
+- [[CampCenter.Application.DTOs.Users]] - `imports` [EXTRACTED]
+- [[CampCenter.Application.Validators]] - `contains` [EXTRACTED]
+- [[CampCenter.Domain.Entities]] - `imports` [EXTRACTED]
+- [[CreateUserRequestValidator]] - `contains` [EXTRACTED]
+- [[RoleRules]] - `contains` [EXTRACTED]
+- [[SetUserRoleRequestValidator]] - `contains` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/PasswordRules

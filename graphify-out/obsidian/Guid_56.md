@@ -1,21 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.Infrastructure / Repositories (1)"
+community: "RoomCleaningRepository"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterInfrastructure_/_Repositories_1
+  - community/RoomCleaningRepository
 ---
 
 # Guid
 
 ## Connections
-- [[.CountByDateAndKindAsync()_1]] - `references` [EXTRACTED]
-- [[.GetByIdAsync()_13]] - `references` [EXTRACTED]
-- [[.ListForBookingAsync()_3]] - `references` [EXTRACTED]
-- [[.ListFullySuppressedSlotsAsync()_1]] - `references` [EXTRACTED]
-- [[.ListGeneratedSlotsAsync()_1]] - `references` [EXTRACTED]
-- [[.ListVisibleSlotSpansAsync()_1]] - `references` [EXTRACTED]
+- [[.GetAsync()_5]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterInfrastructure_/_Repositories_1
+#graphify/code #graphify/EXTRACTED #community/RoomCleaningRepository

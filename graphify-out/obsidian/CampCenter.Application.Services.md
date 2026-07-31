@@ -34,5 +34,6 @@ tags:
 - [[RoomTaskService.cs]] - `contains` [EXTRACTED]
 - [[ScheduleConflictTests.cs]] - `imports` [EXTRACTED]
 - [[ScheduleService.cs]] - `contains` [EXTRACTED]
+- [[UserService.cs]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Domain__Infra_Namespaces

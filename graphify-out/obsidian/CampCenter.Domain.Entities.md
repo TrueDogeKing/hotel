@@ -17,6 +17,7 @@ tags:
 - [[AdminUser.cs]] - `contains` [EXTRACTED]
 - [[AdminUserConfiguration.cs]] - `imports` [EXTRACTED]
 - [[AdminUserRepository.cs]] - `imports` [EXTRACTED]
+- [[AdminUserRole.cs]] - `contains` [EXTRACTED]
 - [[AppDbContext.cs]] - `imports` [EXTRACTED]
 - [[AuthService.cs]] - `imports` [EXTRACTED]
 - [[Booking.cs]] - `contains` [EXTRACTED]
@@ -88,5 +89,9 @@ tags:
 - [[ScheduleService.cs]] - `imports` [EXTRACTED]
 - [[ScheduleValidators.cs]] - `imports` [EXTRACTED]
 - [[TasksController.cs]] - `imports` [EXTRACTED]
+- [[UserService.cs]] - `imports` [EXTRACTED]
+- [[UserValidators.cs]] - `imports` [EXTRACTED]
+- [[UsersController.cs]] - `imports` [EXTRACTED]
+- [[WriteRequiresAdministrator.cs]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_2

@@ -1,19 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "tests / CampCenter.IntegrationTests (1)"
+community: "RoomCleaningRepository"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/tests_/_CampCenterIntegrationTests_1
+  - community/RoomCleaningRepository
 ---
 
 # Task
 
 ## Connections
-- [[.AssignableRooms_OffersOwnAndFreeRooms_ButNotTakenOrClosedOnes()]] - `references` [EXTRACTED]
-- [[.Closure_BlocksRoom_InOccupancyGrid()]] - `references` [EXTRACTED]
-- [[.DashboardGroups_SplitByCategory_AndPage()]] - `references` [EXTRACTED]
-- [[.Occupancy_Reassign_Tasks_And_Dashboard_Work()]] - `references` [EXTRACTED]
+- [[.AddAsync()_16]] - `references` [EXTRACTED]
+- [[.CountDoneByDateAsync()_1]] - `references` [EXTRACTED]
+- [[.GetAsync()_5]] - `references` [EXTRACTED]
+- [[.ListForDateAsync()_2]] - `references` [EXTRACTED]
+- [[.SaveChangesAsync()_16]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/tests_/_CampCenterIntegrationTests_1
+#graphify/code #graphify/EXTRACTED #community/RoomCleaningRepository

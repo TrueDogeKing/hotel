@@ -2,7 +2,7 @@
 source_file: "frontend/src/pages/BookingWizardPage.tsx"
 type: "code"
 community: "Public Booking Frontend (1)"
-location: "L10"
+location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED

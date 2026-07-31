@@ -11,6 +11,7 @@ tags:
 # Migration
 
 ## Connections
+- [[AdminUserRole_2]] - `inherits` [EXTRACTED]
 - [[CoreDomain_1]] - `inherits` [EXTRACTED]
 - [[InitialAuth_1]] - `inherits` [EXTRACTED]
 - [[MealSittingDuration_1]] - `inherits` [EXTRACTED]

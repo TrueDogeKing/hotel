@@ -2,7 +2,7 @@
 source_file: "src/CampCenter.Application/DTOs/Public/PublicDtos.cs"
 type: "code"
 community: "Public Booking Service (1)"
-location: "L26"
+location: "L52"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -14,9 +14,9 @@ tags:
 ## Connections
 - [[.AssignRooms()]] - `references` [EXTRACTED]
 - [[.BookingRequest()]] - `references` [EXTRACTED]
-- [[.Create()_5]] - `references` [EXTRACTED]
+- [[.Create()_6]] - `references` [EXTRACTED]
 - [[.CreateAsync()_1]] - `references` [EXTRACTED]
-- [[.CreateAsync()_7]] - `references` [EXTRACTED]
+- [[.CreateAsync()_8]] - `references` [EXTRACTED]
 - [[.PickRoomsAsync()]] - `references` [EXTRACTED]
 - [[.TryCreateAsync()]] - `references` [EXTRACTED]
 - [[CreateBookingRequestValidator]] - `references` [EXTRACTED]

@@ -1,37 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "tests / CampCenter.IntegrationTests (1)"
+community: "Payment Gateway Integration Tests (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/tests_/_CampCenterIntegrationTests_1
+  - community/Payment_Gateway_Integration_Tests_2
 ---
 
 # Task
 
 ## Connections
-- [[.BookingMealTimes_DefaultToTheCenterTimes()]] - `references` [EXTRACTED]
-- [[.BreakfastsAsync()]] - `references` [EXTRACTED]
-- [[.BulkRetime_PreservesADayChangedIndividually()]] - `references` [EXTRACTED]
-- [[.Calendar_BarSpansFullStayInclusive()]] - `references` [EXTRACTED]
-- [[.CreateBookingAsync()]] - `references` [EXTRACTED]
-- [[.DayView_IncludesDepartingGroup()]] - `references` [EXTRACTED]
-- [[.DietaryNotes_AreStoredAndReturnedOnTheGroupSchedule()]] - `references` [EXTRACTED]
-- [[.GenerateMealsAsync()]] - `references` [EXTRACTED]
-- [[.GenerateMeals_CoversTheStay_AndIsIdempotent()]] - `references` [EXTRACTED]
-- [[.GenerateMeals_DoesNotResurrectADeletedMeal()]] - `references` [EXTRACTED]
-- [[.GenerationUsesTheGroupsOwnTimes_ForMealsAddedLater()]] - `references` [EXTRACTED]
-- [[.GetMealTimesAsync()]] - `references` [EXTRACTED]
-- [[.MealTimeDefaults_CrudRoundtrip_Works()]] - `references` [EXTRACTED]
-- [[.Meal_WithoutMealKind_IsRejected()]] - `references` [EXTRACTED]
-- [[.PublicSchedule_ByToken_ShowsMenu_ButHidesPrepNotes()]] - `references` [EXTRACTED]
-- [[.ResettingAGroupsMealTime_RestoresTheCenterTime()]] - `references` [EXTRACTED]
-- [[.ScheduleEndpoints_WithoutToken_ReturnUnauthorized()]] - `references` [EXTRACTED]
-- [[.ScheduleEntries_CrudRoundtrip_Works()]] - `references` [EXTRACTED]
-- [[.ScheduleEntry_EndBeforeStart_IsRejected()]] - `references` [EXTRACTED]
-- [[.ScheduleEntry_OnDepartureDay_IsAccepted_ButNotOutsideTheStay()]] - `references` [EXTRACTED]
-- [[.SettingAGroupsMealTime_RejectsEndBeforeStart_AndStaleRowVersion()]] - `references` [EXTRACTED]
-- [[.SettingAGroupsMealTime_RetimesTheWholeStay_ButNotOtherGroups()]] - `references` [EXTRACTED]
+- [[.DisposeAsync()]] - `references` [EXTRACTED]
+- [[.InitializeAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/tests_/_CampCenterIntegrationTests_1
+#graphify/code #graphify/EXTRACTED #community/Payment_Gateway_Integration_Tests_2

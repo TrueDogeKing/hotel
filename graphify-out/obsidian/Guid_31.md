@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Admin Frontend Pages"
+community: "components / admin"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Frontend_Pages
+  - community/components_/_admin
 ---
 
 # Guid
 
 ## Connections
-- [[Payment]] - `references` [EXTRACTED]
+- [[BookingRoomAssignment]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Frontend_Pages
+#graphify/code #graphify/EXTRACTED #community/components_/_admin

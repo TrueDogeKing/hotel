@@ -1,18 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Room Task Management (1)"
+community: "Auth Service & Tokens"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Task_Management_1
+  - community/Auth_Service__Tokens
 ---
 
 # Guid
 
 ## Connections
-- [[.CountOpenByRoomAsync()]] - `references` [EXTRACTED]
-- [[.GetByIdAsync()_5]] - `references` [EXTRACTED]
-- [[.ListAsync()_5]] - `references` [EXTRACTED]
+- [[.RevokeAllActiveForUserAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Task_Management_1
+#graphify/code #graphify/EXTRACTED #community/Auth_Service__Tokens

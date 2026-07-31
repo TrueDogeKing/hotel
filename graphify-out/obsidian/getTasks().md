@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/api/admin.ts"
 type: "code"
-community: "components / admin"
-location: "L261"
+community: "src / api (1)"
+location: "L299"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/components_/_admin
+  - community/src_/_api_1
 ---
 
 # getTasks()
@@ -17,4 +17,4 @@ tags:
 - [[TasksPage.tsx]] - `imports` [EXTRACTED]
 - [[admin.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/components_/_admin
+#graphify/code #graphify/EXTRACTED #community/src_/_api_1

@@ -64,6 +64,15 @@ public interface IBookingRepository
         CancellationToken cancellationToken = default
     );
 
+    /// Live room assignments touching [start, end) — room, and the nights it is
+    /// taken for. Enough to work out night by night which rooms are free, without
+    /// a query per night: the booking calendar asks about six weeks at a time.
+    Task<List<BookingRoomAssignment>> ListAssignmentsInRangeAsync(
+        DateOnly start,
+        DateOnly end,
+        CancellationToken cancellationToken = default
+    );
+
     /// One page of the bookings in a category, with the category's total so the
     /// caller knows how much is left. Paged in the database rather than filtered in
     /// memory: the dashboard opens these lists on demand and the inactive one grows

@@ -1,18 +1,18 @@
 ---
 source_file: "src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs"
 type: "code"
-community: "CampCenter.Application / Services (2)"
+community: "ScheduleEntry"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterApplication_/_Services_2
+  - community/ScheduleEntry
 ---
 
 # IScheduleEntryRepository
 
 ## Connections
-- [[.AddAsync()_8]] - `method` [EXTRACTED]
+- [[.AddAsync()_9]] - `method` [EXTRACTED]
 - [[.AddRangeAsync()]] - `method` [EXTRACTED]
 - [[.CountByDateAndKindAsync()]] - `method` [EXTRACTED]
 - [[.GetByIdAsync()_6]] - `method` [EXTRACTED]
@@ -22,7 +22,7 @@ tags:
 - [[.ListGeneratedSlotsAsync()]] - `method` [EXTRACTED]
 - [[.ListLocationsAsync()]] - `method` [EXTRACTED]
 - [[.ListVisibleSlotSpansAsync()]] - `method` [EXTRACTED]
-- [[.Remove()_5]] - `method` [EXTRACTED]
+- [[.Remove()_6]] - `method` [EXTRACTED]
 - [[.SaveChangesAsync()_9]] - `method` [EXTRACTED]
 - [[BookingService]] - `references` [EXTRACTED]
 - [[IScheduleEntryRepository.cs]] - `contains` [EXTRACTED]
@@ -30,4 +30,4 @@ tags:
 - [[ScheduleEntryRepository]] - `implements` [EXTRACTED]
 - [[ScheduleService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_2
+#graphify/code #graphify/EXTRACTED #community/ScheduleEntry

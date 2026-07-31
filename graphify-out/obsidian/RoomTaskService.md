@@ -12,9 +12,9 @@ tags:
 # RoomTaskService
 
 ## Connections
-- [[.CreateAsync()_11]] - `method` [EXTRACTED]
-- [[.DeleteAsync()_7]] - `method` [EXTRACTED]
-- [[.ListAsync()_3]] - `method` [EXTRACTED]
+- [[.CreateAsync()_12]] - `method` [EXTRACTED]
+- [[.DeleteAsync()_8]] - `method` [EXTRACTED]
+- [[.ListAsync()_4]] - `method` [EXTRACTED]
 - [[.SetStatusAsync()_5]] - `method` [EXTRACTED]
 - [[.ToDto()_4]] - `method` [EXTRACTED]
 - [[IRoomRepository]] - `references` [EXTRACTED]

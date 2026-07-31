@@ -1,17 +1,21 @@
 ---
 source_file: ""
 type: "code"
-community: "Payment Gateway Integration Tests (2)"
+community: "Room Task Management (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Payment_Gateway_Integration_Tests_2
+  - community/Room_Task_Management_1
 ---
 
 # Task
 
 ## Connections
-- [[.SeedAdminUserAsync()]] - `references` [EXTRACTED]
-- [[.SeedMealTimeDefaultsAsync()]] - `references` [EXTRACTED]
+- [[.AddAsync()_8]] - `references` [EXTRACTED]
+- [[.CountOpenAsync()]] - `references` [EXTRACTED]
+- [[.CountOpenByRoomAsync()]] - `references` [EXTRACTED]
+- [[.GetByIdAsync()_5]] - `references` [EXTRACTED]
+- [[.ListAsync()_8]] - `references` [EXTRACTED]
+- [[.SaveChangesAsync()_8]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Payment_Gateway_Integration_Tests_2
+#graphify/code #graphify/EXTRACTED #community/Room_Task_Management_1

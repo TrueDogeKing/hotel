@@ -14,6 +14,10 @@ namespace CampCenter.Infrastructure.Auth;
 /// and cryptographically random refresh tokens.
 public class JwtTokenService : ITokenService
 {
+    /// Claim carrying <see cref="AdminUserRole"/>. Must match the API's
+    /// TokenValidationParameters.RoleClaimType.
+    public const string RoleClaim = "role";
+
     private const int RefreshTokenBytes = 32;
 
     private readonly JwtSettings _settings;
@@ -37,6 +41,12 @@ public class JwtTokenService : ITokenService
         {
             new(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
             new("preferred_username", user.Login),
+            // Short "role" rather than the ClaimTypes URI: the panel decodes this
+            // token itself to decide what to show, and a WS-Federation schema URL in
+            // the payload is a poor thing to make the frontend match on. The API
+            // pairs this with RoleClaimType = "role" so [Authorize(Roles = ...)]
+            // reads the same claim.
+            new(RoleClaim, user.Role.ToString()),
             new(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
         };
 

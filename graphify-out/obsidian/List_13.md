@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Room Mix Calculator Tests"
+community: "CampCenter.Domain / Repositories (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Mix_Calculator_Tests
+  - community/CampCenterDomain_/_Repositories_2
 ---
 
 # List
 
 ## Connections
-- [[.DistributePeople()]] - `references` [EXTRACTED]
+- [[.GetAllAsync()_4]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Mix_Calculator_Tests
+#graphify/code #graphify/EXTRACTED #community/CampCenterDomain_/_Repositories_2

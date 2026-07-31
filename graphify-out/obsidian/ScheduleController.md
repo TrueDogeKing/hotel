@@ -2,7 +2,7 @@
 source_file: "src/CampCenter.Api/Controllers/Admin/ScheduleController.cs"
 type: "code"
 community: "DTOs / Schedule (1)"
-location: "L11"
+location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED

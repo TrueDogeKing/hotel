@@ -12,13 +12,13 @@ tags:
 # IRoomRepository
 
 ## Connections
-- [[.AddAsync()_6]] - `method` [EXTRACTED]
+- [[.AddAsync()_7]] - `method` [EXTRACTED]
 - [[.GetActiveAsync()_1]] - `method` [EXTRACTED]
 - [[.GetAllAsync()_8]] - `method` [EXTRACTED]
 - [[.GetByIdAsync()_4]] - `method` [EXTRACTED]
 - [[.GetByNumberAsync()]] - `method` [EXTRACTED]
 - [[.HasAssignmentsAsync()]] - `method` [EXTRACTED]
-- [[.Remove()_3]] - `method` [EXTRACTED]
+- [[.Remove()_4]] - `method` [EXTRACTED]
 - [[.SaveChangesAsync()_7]] - `method` [EXTRACTED]
 - [[AdminBookingService]] - `references` [EXTRACTED]
 - [[AvailabilityService]] - `references` [EXTRACTED]

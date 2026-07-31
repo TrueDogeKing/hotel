@@ -15,6 +15,6 @@ tags:
 - [[.TransformAsync()]] - `method` [EXTRACTED]
 - [[BearerSecuritySchemeTransformer.cs]] - `contains` [EXTRACTED]
 - [[IOpenApiDocumentTransformer]] - `implements` [EXTRACTED]
-- [[string]] - `references` [EXTRACTED]
+- [[string_1]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/OpenAPI_Security_Scheme

@@ -1,19 +1,21 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.Domain / Repositories (1)"
+community: "ScheduleEntry"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterDomain_/_Repositories_1
+  - community/ScheduleEntry
 ---
 
 # Guid
 
 ## Connections
-- [[.GetBookedRoomIdsInRangeAsync()_1]] - `references` [EXTRACTED]
-- [[.GetByIdAsync()_8]] - `references` [EXTRACTED]
-- [[.GetCompletedPaymentKindsAsync()_1]] - `references` [EXTRACTED]
-- [[.GetPaymentsAsync()_1]] - `references` [EXTRACTED]
+- [[.CountByDateAndKindAsync()]] - `references` [EXTRACTED]
+- [[.GetByIdAsync()_6]] - `references` [EXTRACTED]
+- [[.ListForBookingAsync()_1]] - `references` [EXTRACTED]
+- [[.ListFullySuppressedSlotsAsync()]] - `references` [EXTRACTED]
+- [[.ListGeneratedSlotsAsync()]] - `references` [EXTRACTED]
+- [[.ListVisibleSlotSpansAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterDomain_/_Repositories_1
+#graphify/code #graphify/EXTRACTED #community/ScheduleEntry

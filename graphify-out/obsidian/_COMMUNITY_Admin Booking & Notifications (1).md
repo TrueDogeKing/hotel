@@ -12,7 +12,7 @@ members: 30
 - [[.BuildAssignmentsAsync()]] - code - src/CampCenter.Application/Services/AdminBookingService.cs
 - [[.CancelAsync()_1]] - code - src/CampCenter.Application/Services/AdminBookingService.cs
 - [[.ComputeHoldExpiry()]] - code - src/CampCenter.Application/Services/AdminBookingService.cs
-- [[.CreateAsync()_6]] - code - src/CampCenter.Application/Services/AdminBookingService.cs
+- [[.CreateAsync()_7]] - code - src/CampCenter.Application/Services/AdminBookingService.cs
 - [[.FinalDueDate()]] - code - src/CampCenter.Application/Services/AdminBookingService.cs
 - [[.GetAssignableRoomsAsync()_1]] - code - src/CampCenter.Application/Services/AdminBookingService.cs
 - [[.GetAsync()_1]] - code - src/CampCenter.Application/Services/AdminBookingService.cs
@@ -20,7 +20,7 @@ members: 30
 - [[.GetGroupPageAsync()_1]] - code - src/CampCenter.Application/Services/AdminBookingService.cs
 - [[.GetOccupancyAsync()_1]] - code - src/CampCenter.Application/Services/AdminBookingService.cs
 - [[.GetOrThrowAsync()]] - code - src/CampCenter.Application/Services/AdminBookingService.cs
-- [[.ListAsync()_2]] - code - src/CampCenter.Application/Services/AdminBookingService.cs
+- [[.ListAsync()_3]] - code - src/CampCenter.Application/Services/AdminBookingService.cs
 - [[.ParseStatus()]] - code - src/CampCenter.Application/Services/AdminBookingService.cs
 - [[.ReassignAsync()_1]] - code - src/CampCenter.Application/Services/AdminBookingService.cs
 - [[.SaveChangesAsync()_2]] - code - src/CampCenter.Domain/Repositories/IBookingRepository.cs
@@ -29,14 +29,14 @@ members: 30
 - [[.UpdateDietaryNotesAsync()_1]] - code - src/CampCenter.Application/Services/AdminBookingService.cs
 - [[AdminBookingDto]] - code - src/CampCenter.Application/DTOs/AdminPanel/AdminPanelDtos.cs
 - [[AdminBookingService]] - code - src/CampCenter.Application/Services/AdminBookingService.cs
-- [[CancellationToken_29]] - code
+- [[CancellationToken_31]] - code
 - [[DateOnly_8]] - code
 - [[DateTime_1]] - code
-- [[Guid_16]] - code
+- [[Guid_18]] - code
 - [[ILogger_2]] - code
 - [[IReadOnlyDictionary]] - code
-- [[List_6]] - code
-- [[Task_28]] - code
+- [[List_7]] - code
+- [[Task_31]] - code
 - [[int]] - code
 
 ## Live Query (requires Dataview plugin)
@@ -47,25 +47,25 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
+- 17 edges to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
 - 17 edges to [[_COMMUNITY_Integration Test Harness (2)]]
-- 15 edges to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
-- 10 edges to [[_COMMUNITY_Public Booking Service (1)]]
-- 7 edges to [[_COMMUNITY_CampCenter.UnitTests  Validators]]
-- 6 edges to [[_COMMUNITY_Admin Booking & Notifications (4)]]
+- 7 edges to [[_COMMUNITY_Admin Booking & Notifications (4)]]
+- 7 edges to [[_COMMUNITY_Integration Test Harness (1)]]
+- 6 edges to [[_COMMUNITY_.GetBlockedRoomIdsAsync]]
 - 5 edges to [[_COMMUNITY_Room Management]]
-- 3 edges to [[_COMMUNITY_DTOs  Schedule (1)]]
-- 3 edges to [[_COMMUNITY_Room Closure Management]]
+- 4 edges to [[_COMMUNITY_Public Booking Service (1)]]
+- 3 edges to [[_COMMUNITY_Validator Unit Tests]]
 - 3 edges to [[_COMMUNITY_Room Task Management (1)]]
 - 3 edges to [[_COMMUNITY_Room Mix Calculator Tests]]
-- 2 edges to [[_COMMUNITY_Auth Service & Tokens]]
-- 2 edges to [[_COMMUNITY_tests  CampCenter.IntegrationTests (2)]]
+- 2 edges to [[_COMMUNITY_DTOs  Schedule (1)]]
+- 2 edges to [[_COMMUNITY_components  admin]]
+- 1 edge to [[_COMMUNITY_Auth Service & Tokens]]
 - 1 edge to [[_COMMUNITY_Domain & Infra Namespaces]]
-- 1 edge to [[_COMMUNITY_CampCenter.Domain  Repositories (1)]]
-- 1 edge to [[_COMMUNITY_Admin Frontend Pages]]
+- 1 edge to [[_COMMUNITY_Payment]]
 
 ## Top bridge nodes
-- [[AdminBookingService]] - degree 31, connects to 10 communities
-- [[.CreateAsync()_6]] - degree 17, connects to 6 communities
+- [[AdminBookingService]] - degree 31, connects to 9 communities
+- [[.CreateAsync()_7]] - degree 17, connects to 7 communities
 - [[.BuildAssignmentsAsync()]] - degree 13, connects to 5 communities
 - [[.ReassignAsync()_1]] - degree 13, connects to 5 communities
 - [[.GetOccupancyAsync()_1]] - degree 9, connects to 5 communities

@@ -1,16 +1,27 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.UnitTests / Services (2)"
+community: "Integration Test Harness (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Services_2
+  - community/Integration_Test_Harness_2
 ---
 
 # List
 
 ## Connections
-- [[.ListForDateAsync()]] - `references` [EXTRACTED]
+- [[.GetBookedRoomIdsInRangeAsync()]] - `references` [EXTRACTED]
+- [[.GetCompletedPaymentKindsAsync()]] - `references` [EXTRACTED]
+- [[.GetConfirmedEndedAsync()]] - `references` [EXTRACTED]
+- [[.GetExpiredPendingAsync()]] - `references` [EXTRACTED]
+- [[.GetPaymentsAsync()]] - `references` [EXTRACTED]
+- [[.ListAssignmentsInRangeAsync()]] - `references` [EXTRACTED]
+- [[.ListAsync()_7]] - `references` [EXTRACTED]
+- [[.ListByCategoryAsync()]] - `references` [EXTRACTED]
+- [[.ListLiveChangingOverAsync()]] - `references` [EXTRACTED]
+- [[.ListLiveInRangeAsync()]] - `references` [EXTRACTED]
+- [[.ListLivePresentInAsync()]] - `references` [EXTRACTED]
+- [[.ListUpcomingAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_2
+#graphify/code #graphify/EXTRACTED #community/Integration_Test_Harness_2

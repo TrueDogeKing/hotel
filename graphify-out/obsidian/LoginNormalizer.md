@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Common/LoginNormalizer.cs"
 type: "code"
-community: "Login Normalizer"
+community: "eslint"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Login_Normalizer
+  - community/eslint
 ---
 
 # LoginNormalizer
@@ -15,4 +15,4 @@ tags:
 - [[.Normalize()]] - `method` [EXTRACTED]
 - [[LoginNormalizer.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Login_Normalizer
+#graphify/code #graphify/EXTRACTED #community/eslint

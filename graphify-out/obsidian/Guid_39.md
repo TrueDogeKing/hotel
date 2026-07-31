@@ -1,19 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Integration Test Harness (2)"
+community: "ScheduleEntry"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Integration_Test_Harness_2
+  - community/ScheduleEntry
 ---
 
 # Guid
 
 ## Connections
-- [[.GetBookedRoomIdsInRangeAsync()]] - `references` [EXTRACTED]
-- [[.GetByIdAsync()_1]] - `references` [EXTRACTED]
-- [[.GetCompletedPaymentKindsAsync()]] - `references` [EXTRACTED]
-- [[.GetPaymentsAsync()]] - `references` [EXTRACTED]
+- [[ScheduleEntry_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Integration_Test_Harness_2
+#graphify/code #graphify/EXTRACTED #community/ScheduleEntry

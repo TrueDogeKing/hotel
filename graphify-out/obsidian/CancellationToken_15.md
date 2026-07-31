@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "OpenAPI Security Scheme"
+community: "Global Exception Handler"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/OpenAPI_Security_Scheme
+  - community/Global_Exception_Handler
 ---
 
 # CancellationToken
 
 ## Connections
-- [[.TransformAsync()]] - `references` [EXTRACTED]
+- [[.TryHandleAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/OpenAPI_Security_Scheme
+#graphify/code #graphify/EXTRACTED #community/Global_Exception_Handler

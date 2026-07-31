@@ -1,19 +1,29 @@
 ---
 source_file: ""
 type: "code"
-community: "Room Closure Management"
+community: "Admin Booking & Notifications (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Closure_Management
+  - community/Admin_Booking__Notifications_1
 ---
 
 # CancellationToken
 
 ## Connections
-- [[.GetAvailabilityAsync()_1]] - `references` [EXTRACTED]
-- [[.GetBlockedRoomIdsAsync()_1]] - `references` [EXTRACTED]
-- [[.GetCenterClosureReasonAsync()_1]] - `references` [EXTRACTED]
-- [[.GetFreeRoomsByCapacityAsync()_1]] - `references` [EXTRACTED]
+- [[.ApplyCancellationAsync()]] - `references` [EXTRACTED]
+- [[.BuildAssignmentsAsync()]] - `references` [EXTRACTED]
+- [[.CancelAsync()_1]] - `references` [EXTRACTED]
+- [[.CreateAsync()_7]] - `references` [EXTRACTED]
+- [[.GetAssignableRoomsAsync()_1]] - `references` [EXTRACTED]
+- [[.GetAsync()_1]] - `references` [EXTRACTED]
+- [[.GetDashboardAsync()_1]] - `references` [EXTRACTED]
+- [[.GetGroupPageAsync()_1]] - `references` [EXTRACTED]
+- [[.GetOccupancyAsync()_1]] - `references` [EXTRACTED]
+- [[.GetOrThrowAsync()]] - `references` [EXTRACTED]
+- [[.ListAsync()_3]] - `references` [EXTRACTED]
+- [[.ReassignAsync()_1]] - `references` [EXTRACTED]
+- [[.SetStatusAsync()_3]] - `references` [EXTRACTED]
+- [[.UpdateDietaryNotesAsync()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management
+#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_1

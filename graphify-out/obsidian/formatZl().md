@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/api/admin.ts"
 type: "code"
-community: "Public Booking Frontend (1)"
-location: "L86"
+community: "Frontend App Shell & i18n"
+location: "L124"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public_Booking_Frontend_1
+  - community/Frontend_App_Shell__i18n
 ---
 
 # formatZl()
@@ -20,4 +20,4 @@ tags:
 - [[BookingWizardPage.tsx]] - `imports` [EXTRACTED]
 - [[admin.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public_Booking_Frontend_1
+#graphify/code #graphify/EXTRACTED #community/Frontend_App_Shell__i18n

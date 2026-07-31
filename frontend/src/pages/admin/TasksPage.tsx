@@ -2,10 +2,13 @@ import { useCallback, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import AdminLayout from "../../components/admin/AdminLayout";
 import { deleteTask, getTasks, setTaskDone, type RoomTask } from "../../api/admin";
+import { useAuth } from "../../auth/AuthContext";
 
 // Housekeeping worklist: open tasks first, one-click done/reopen.
 export default function TasksPage() {
   const { t } = useTranslation();
+  // A worker reads the list. Ticking a task off and deleting one are both writes.
+  const { canEdit } = useAuth();
   const [tasks, setTasks] = useState<RoomTask[]>([]);
   const [showDone, setShowDone] = useState(false);
 
@@ -41,6 +44,7 @@ export default function TasksPage() {
               <input
                 type="checkbox"
                 checked={task.status === "Done"}
+                disabled={!canEdit}
                 onChange={() => void setTaskDone(task.id, task.status === "Open").then(reload)}
               />
               <strong>
@@ -48,9 +52,11 @@ export default function TasksPage() {
               </strong>{" "}
               {task.text}
             </label>
-            <button type="button" onClick={() => void deleteTask(task.id).then(reload)}>
-              {t("tasks.delete")}
-            </button>
+            {canEdit && (
+              <button type="button" onClick={() => void deleteTask(task.id).then(reload)}>
+                {t("tasks.delete")}
+              </button>
+            )}
           </li>
         ))}
       </ul>

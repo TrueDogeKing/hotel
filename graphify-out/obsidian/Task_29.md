@@ -1,19 +1,29 @@
 ---
 source_file: ""
 type: "code"
-community: "Auth Service & Tokens"
+community: "DTOs / Schedule (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Auth_Service__Tokens
+  - community/DTOs_/_Schedule_1
 ---
 
 # Task
 
 ## Connections
-- [[.IssueTokensAsync()]] - `references` [EXTRACTED]
-- [[.LoginAsync()_1]] - `references` [EXTRACTED]
-- [[.LogoutAsync()_1]] - `references` [EXTRACTED]
-- [[.RefreshAsync()_1]] - `references` [EXTRACTED]
+- [[.CheckConflictsAsync()]] - `references` [EXTRACTED]
+- [[.CreateEntryAsync()]] - `references` [EXTRACTED]
+- [[.DeleteBookingMealsAsync()]] - `references` [EXTRACTED]
+- [[.DeleteEntryAsync()]] - `references` [EXTRACTED]
+- [[.GenerateMealsForBookingAsync()]] - `references` [EXTRACTED]
+- [[.GenerateMissingMealsAsync()]] - `references` [EXTRACTED]
+- [[.GetBookingMealTimesAsync()]] - `references` [EXTRACTED]
+- [[.GetCalendarAsync()_1]] - `references` [EXTRACTED]
+- [[.GetDayAsync()_1]] - `references` [EXTRACTED]
+- [[.GetForBookingAsync()]] - `references` [EXTRACTED]
+- [[.GetLocationsAsync()]] - `references` [EXTRACTED]
+- [[.ResetBookingMealTimeAsync()]] - `references` [EXTRACTED]
+- [[.SetBookingMealTimeAsync()]] - `references` [EXTRACTED]
+- [[.UpdateEntryAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Auth_Service__Tokens
+#graphify/code #graphify/EXTRACTED #community/DTOs_/_Schedule_1

@@ -3,6 +3,34 @@
     "appName": "CampCenter",
     "loading": "Loading…"
   },
+  "roles": {
+    "Administrator": "Administrator",
+    "Worker": "Worker"
+  },
+  "adminUsers": {
+    "title": "Panel accounts",
+    "intro": "Accounts that can sign in to the panel. An administrator can do everything; a worker sees the same sections and changes nothing in them.",
+    "login": "Login",
+    "password": "Password",
+    "passwordHint": "Password: at least 8 characters, including an uppercase letter and a special character.",
+    "role": "Role",
+    "created": "Created",
+    "add": "Add account",
+    "delete": "Delete",
+    "cancel": "Cancel",
+    "you": "you",
+    "deleteTitle": "Delete this account?",
+    "deleteMessage": "The account {{login}} will be removed and its sessions ended. This cannot be undone.",
+    "cannotDeleteSelf": "You cannot delete your own account.",
+    "lastAdministrator": "This is the last administrator — promote another account first.",
+    "addedNotice": "Added the account {{login}}.",
+    "roleChanged": "{{login}} is now a {{role}}. That account's sessions have been ended.",
+    "deleted": "The account {{login}} has been deleted.",
+    "loadError": "Could not load the accounts.",
+    "createError": "Could not add the account.",
+    "roleError": "Could not change the role.",
+    "deleteError": "Could not delete the account."
+  },
   "home": {
     "heroTitle": "Summer camp centre by the sea",
     "heroSubtitle": "Book any dates for your organized group — accommodation, meals and recreation grounds in one place.",
@@ -108,7 +136,23 @@
     "roomsTaken": "One of the selected rooms was just booked — go back and refresh availability.",
     "invalidData": "Invalid booking data.",
     "loadError": "Failed to load availability.",
-    "genericError": "Something went wrong. Try again."
+    "genericError": "Something went wrong. Try again.",
+    "calendar": {
+      "previousMonth": "Previous month",
+      "nextMonth": "Next month",
+      "pickArrival": "Pick an arrival day.",
+      "pickDeparture": "Pick a departure day.",
+      "selected": "Selected: {{count}} nights.",
+      "selected_one": "Selected: 1 night.",
+      "pastHint": "This date has passed.",
+      "closedHint": "The centre is closed.",
+      "fullHint": "Not enough free beds ({{beds}}).",
+      "freeHint": "{{beds}} beds free.",
+      "legendFree": "free",
+      "legendUnavailable": "unavailable",
+      "legendSelected": "your stay",
+      "loadError": "Could not load availability — you can still pick dates."
+    }
   },
   "manage": {
     "notFound": "Booking not found. Check the link from your email.",
@@ -200,6 +244,10 @@
       "mealTimes": {
         "name": "Meal times",
         "description": "The centre's default meal slots."
+      },
+      "users": {
+        "name": "Users",
+        "description": "Panel sign-in accounts and their roles."
       }
     }
   },
@@ -236,7 +284,8 @@
     "status": "Status",
     "statusChanged": "Status changed to {{status}}.",
     "statusError": "Could not change the status.",
-    "loadError": "Could not load the dashboard."
+    "loadError": "Could not load the dashboard.",
+    "stayDates": "Stay dates"
   },
   "occupancy": {
     "title": "Occupancy",
@@ -445,7 +494,17 @@
       "participantCountWarning": "The group has {{count}} people — the participant count is higher than the group's size.",
       "save": "Save",
       "add": "Add",
-      "cancel": "Cancel"
+      "cancel": "Cancel",
+      "group": "Group",
+      "locationNone": "— none —",
+      "locationOther": "Other…",
+      "locationOtherLabel": "Other place",
+      "locations": {
+        "pool": "Swimming pool",
+        "sportsField": "Sports field",
+        "disco": "Disco",
+        "bowlingAlley": "Bowling alley"
+      }
     },
     "mealTimes": {
       "title": "This group's meal times",
@@ -485,7 +544,10 @@
       "badgeMeal": "More than one group eats at this time."
     },
     "customTime": "exception",
-    "customTimeHint": "Time set for this day only — re-timing the group's meals will skip it."
+    "customTimeHint": "Time set for this day only — re-timing the group's meals will skip it.",
+    "addHere": "+ Add activity",
+    "addHereHint": "Click an hour to add an activity or a meal.",
+    "addAt": "New entry at {{time}}"
   },
   "groupRooms": {
     "title": "The group's rooms",
@@ -538,5 +600,10 @@
     "duration": "Sitting length (min)",
     "durationHint": "How long one group eats. The next group is seated after this plus a 15 min changeover.",
     "minutes": "{{count}} min"
+  },
+  "dateRange": {
+    "placeholder": "Pick dates…",
+    "nights_one": "1 night",
+    "nights_other": "{{count}} nights"
   }
 }

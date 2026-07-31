@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Payment Gateway Integration Tests (1)"
+community: "RoomCleaningRepository"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Payment_Gateway_Integration_Tests_1
+  - community/RoomCleaningRepository
 ---
 
 # List
 
 ## Connections
-- [[FakePaymentGateway]] - `references` [EXTRACTED]
+- [[.ListForDateAsync()_2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Payment_Gateway_Integration_Tests_1
+#graphify/code #graphify/EXTRACTED #community/RoomCleaningRepository

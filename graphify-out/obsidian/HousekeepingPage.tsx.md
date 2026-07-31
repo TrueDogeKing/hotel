@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/pages/admin/HousekeepingPage.tsx"
 type: "code"
-community: "Room Task Management (2)"
+community: "src / api (1)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Task_Management_2
+  - community/src_/_api_1
 ---
 
 # HousekeepingPage.tsx
@@ -14,6 +14,7 @@ tags:
 ## Connections
 - [[AdminLayout.tsx]] - `imports_from` [EXTRACTED]
 - [[App.tsx]] - `imports_from` [EXTRACTED]
+- [[AuthContext.tsx]] - `imports_from` [EXTRACTED]
 - [[HousekeepingDay]] - `imports` [EXTRACTED]
 - [[HousekeepingPage()]] - `contains` [EXTRACTED]
 - [[HousekeepingRange]] - `imports` [EXTRACTED]
@@ -29,5 +30,6 @@ tags:
 - [[roomCleaningStatuses]] - `imports` [EXTRACTED]
 - [[setRoomCleaning()]] - `imports` [EXTRACTED]
 - [[todayIso()]] - `imports` [EXTRACTED]
+- [[useAuth()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Task_Management_2
+#graphify/code #graphify/EXTRACTED #community/src_/_api_1

@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Domain/Entities/Booking.cs"
 type: "code"
-community: "CampCenter.UnitTests / Validators"
+community: "Integration Test Harness (1)"
 location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Validators
+  - community/Integration_Test_Harness_1
 ---
 
 # Booking
@@ -18,8 +18,8 @@ tags:
 - [[.A_room_occupied_through_the_day_is_left_alone()]] - `calls` [EXTRACTED]
 - [[.A_room_taken_today_by_a_group_is_an_arrival()]] - `calls` [EXTRACTED]
 - [[.A_turnaround_carries_both_groups_and_both_bed_counts()]] - `calls` [EXTRACTED]
-- [[.AddAsync()_1]] - `references` [EXTRACTED]
-- [[.AddAsync()_10]] - `references` [EXTRACTED]
+- [[.AddAsync()_2]] - `references` [EXTRACTED]
+- [[.AddAsync()_12]] - `references` [EXTRACTED]
 - [[.ApplyCancellationAsync()]] - `references` [EXTRACTED]
 - [[.AssignMealTimesAsync()]] - `references` [EXTRACTED]
 - [[.AssignRooms()]] - `references` [EXTRACTED]
@@ -50,8 +50,8 @@ tags:
 - [[.GetOrThrowAsync()]] - `references` [EXTRACTED]
 - [[.GuardBookingIsLive()]] - `references` [EXTRACTED]
 - [[.GuardDateWithinStay()]] - `references` [EXTRACTED]
-- [[.ListAsync()_4]] - `references` [EXTRACTED]
-- [[.ListAsync()_6]] - `references` [EXTRACTED]
+- [[.ListAsync()_7]] - `references` [EXTRACTED]
+- [[.ListAsync()_10]] - `references` [EXTRACTED]
 - [[.ListByCategoryAsync()]] - `references` [EXTRACTED]
 - [[.ListByCategoryAsync()_1]] - `references` [EXTRACTED]
 - [[.ListLiveChangingOverAsync()]] - `references` [EXTRACTED]
@@ -87,10 +87,10 @@ tags:
 - [[BookingStatus_1]] - `references` [EXTRACTED]
 - [[DateOnly_17]] - `references` [EXTRACTED]
 - [[DateTime_5]] - `references` [EXTRACTED]
-- [[Guid_26]] - `references` [EXTRACTED]
-- [[List_17]] - `references` [EXTRACTED]
+- [[Guid_29]] - `references` [EXTRACTED]
+- [[List_19]] - `references` [EXTRACTED]
 - [[Payment]] - `references` [EXTRACTED]
 - [[RoomTask_1]] - `references` [EXTRACTED]
 - [[ScheduleEntry_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Validators
+#graphify/code #graphify/EXTRACTED #community/Integration_Test_Harness_1

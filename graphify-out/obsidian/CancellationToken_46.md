@@ -1,20 +1,21 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.UnitTests / Services (2)"
+community: "Validator Unit Tests"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Services_2
+  - community/Validator_Unit_Tests
 ---
 
 # CancellationToken
 
 ## Connections
-- [[.AddAsync()_5]] - `references` [EXTRACTED]
-- [[.CountDoneByDateAsync()]] - `references` [EXTRACTED]
-- [[.GetAsync()_3]] - `references` [EXTRACTED]
-- [[.ListForDateAsync()]] - `references` [EXTRACTED]
-- [[.SaveChangesAsync()_6]] - `references` [EXTRACTED]
+- [[.AddAsync()_3]] - `references` [EXTRACTED]
+- [[.GetAllAsync()_6]] - `references` [EXTRACTED]
+- [[.GetByIdAsync()_2]] - `references` [EXTRACTED]
+- [[.GetOverlappingAsync()]] - `references` [EXTRACTED]
+- [[.GetUpcomingCenterWideAsync()]] - `references` [EXTRACTED]
+- [[.SaveChangesAsync()_3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_2
+#graphify/code #graphify/EXTRACTED #community/Validator_Unit_Tests

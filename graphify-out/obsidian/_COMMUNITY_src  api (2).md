@@ -1,26 +1,24 @@
 ---
 type: community
-members: 13
+members: 11
 ---
 
 # src / api (2)
 
-**Members:** 13 nodes
+**Members:** 11 nodes
 
 ## Members
-- [[Chip]] - code - frontend/src/components/admin/DayTimetable.tsx
-- [[ClashReason]] - code - frontend/src/components/admin/DayTimetable.tsx
-- [[DayTimetable()]] - code - frontend/src/components/admin/DayTimetable.tsx
-- [[DayTimetable.tsx]] - code - frontend/src/components/admin/DayTimetable.tsx
-- [[PlacedChip]] - code - frontend/src/components/admin/DayTimetable.tsx
-- [[Props_5]] - code - frontend/src/components/admin/DayTimetable.tsx
-- [[ScheduleDay]] - code - frontend/src/api/admin.ts
-- [[buildChips()]] - code - frontend/src/components/admin/DayTimetable.tsx
-- [[findClashes()]] - code - frontend/src/components/admin/DayTimetable.tsx
-- [[groupsOf()]] - code - frontend/src/components/admin/DayTimetable.tsx
-- [[minutesOf()]] - code - frontend/src/components/admin/DayTimetable.tsx
-- [[placeChips()]] - code - frontend/src/components/admin/DayTimetable.tsx
-- [[placesOf()]] - code - frontend/src/components/admin/DayTimetable.tsx
+- [[.Configure()_8]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/RoomCleaningConfiguration.cs
+- [[DateOnly_20]] - code
+- [[DateTime_11]] - code
+- [[EntityTypeBuilder_8]] - code
+- [[Guid_37]] - code
+- [[RoomCleaning]] - code - src/CampCenter.Domain/Entities/RoomCleaning.cs
+- [[RoomCleaning.cs]] - code - src/CampCenter.Domain/Entities/RoomCleaning.cs
+- [[RoomCleaningConfiguration]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/RoomCleaningConfiguration.cs
+- [[RoomCleaningConfiguration.cs]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/RoomCleaningConfiguration.cs
+- [[RoomCleaningKind_1]] - code - src/CampCenter.Domain/Entities/RoomCleaning.cs
+- [[RoomCleaningStatus_1]] - code - src/CampCenter.Domain/Entities/RoomCleaning.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -30,12 +28,17 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 6 edges to [[_COMMUNITY_CampCenter.Application  Services (3)]]
-- 3 edges to [[_COMMUNITY_src  utils]]
-- 2 edges to [[_COMMUNITY_Public Booking Frontend (1)]]
+- 5 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (2)]]
+- 3 edges to [[_COMMUNITY_RoomCleaningRepository]]
+- 2 edges to [[_COMMUNITY_Public Booking Service (2)]]
+- 1 edge to [[_COMMUNITY_Room Management]]
+- 1 edge to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
+- 1 edge to [[_COMMUNITY_Persistence  Configurations]]
+- 1 edge to [[_COMMUNITY_IEntityTypeConfiguration]]
 
 ## Top bridge nodes
-- [[DayTimetable.tsx]] - degree 18, connects to 3 communities
-- [[DayTimetable()]] - degree 7, connects to 2 communities
-- [[ScheduleDay]] - degree 4, connects to 2 communities
-- [[Chip]] - degree 3, connects to 1 community
+- [[RoomCleaning]] - degree 16, connects to 4 communities
+- [[RoomCleaningConfiguration.cs]] - degree 3, connects to 2 communities
+- [[RoomCleaning.cs]] - degree 4, connects to 1 community
+- [[RoomCleaningConfiguration]] - degree 4, connects to 1 community
+- [[RoomCleaningKind_1]] - degree 3, connects to 1 community

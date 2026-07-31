@@ -1,17 +1,18 @@
 ---
 source_file: "frontend/src/components/admin/GroupMealTimes.tsx"
 type: "code"
-community: "CampCenter.Application / Services (3)"
+community: "src / api (1)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterApplication_/_Services_3
+  - community/src_/_api_1
 ---
 
 # GroupMealTimes.tsx
 
 ## Connections
+- [[AuthContext.tsx]] - `imports_from` [EXTRACTED]
 - [[BookingMealTime]] - `imports` [EXTRACTED]
 - [[ConfirmDialog()]] - `imports` [EXTRACTED]
 - [[ConfirmDialog.tsx]] - `imports_from` [EXTRACTED]
@@ -29,5 +30,6 @@ tags:
 - [[resetBookingMealTime()]] - `imports` [EXTRACTED]
 - [[setBookingMealTime()]] - `imports` [EXTRACTED]
 - [[toTimeInput()]] - `imports` [EXTRACTED]
+- [[useAuth()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_3
+#graphify/code #graphify/EXTRACTED #community/src_/_api_1

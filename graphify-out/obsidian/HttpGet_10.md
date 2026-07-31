@@ -1,17 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "Public Booking Service (1)"
+community: "Validator Unit Tests"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public_Booking_Service_1
+  - community/Validator_Unit_Tests
 ---
 
 # HttpGet
 
 ## Connections
-- [[.GetByToken()]] - `references` [EXTRACTED]
-- [[.GetScheduleByToken()]] - `references` [EXTRACTED]
+- [[.Calendar()]] - `references` [EXTRACTED]
+- [[.Closures()]] - `references` [EXTRACTED]
+- [[.Get()_3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_1
+#graphify/code #graphify/EXTRACTED #community/Validator_Unit_Tests

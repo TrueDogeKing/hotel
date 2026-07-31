@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/api/admin.ts"
 type: "code"
-community: "CampCenter.Application / Services (3)"
+community: "src / api (1)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterApplication_/_Services_3
+  - community/src_/_api_1
 ---
 
 # admin.ts
@@ -17,6 +17,7 @@ tags:
 - [[AdminBooking]] - `contains` [EXTRACTED]
 - [[AdminBookingsPage.tsx]] - `imports_from` [EXTRACTED]
 - [[AdminDashboardPage.tsx]] - `imports_from` [EXTRACTED]
+- [[AdminUser]] - `contains` [EXTRACTED]
 - [[ApplyBookingMealTimeResult]] - `contains` [EXTRACTED]
 - [[AssignableRoom]] - `contains` [EXTRACTED]
 - [[BookingGroupCategory]] - `contains` [EXTRACTED]
@@ -72,6 +73,8 @@ tags:
 - [[ScheduleLocations]] - `contains` [EXTRACTED]
 - [[SchedulePage.tsx]] - `imports_from` [EXTRACTED]
 - [[TasksPage.tsx]] - `imports_from` [EXTRACTED]
+- [[UserRole]] - `imports` [EXTRACTED]
+- [[UsersPage.tsx]] - `imports_from` [EXTRACTED]
 - [[api]] - `imports` [EXTRACTED]
 - [[bookingGroupCategories]] - `contains` [EXTRACTED]
 - [[bookingStatuses]] - `contains` [EXTRACTED]
@@ -84,12 +87,14 @@ tags:
 - [[createRoom()]] - `contains` [EXTRACTED]
 - [[createScheduleEntry()]] - `contains` [EXTRACTED]
 - [[createTask()]] - `contains` [EXTRACTED]
+- [[createUser()]] - `contains` [EXTRACTED]
 - [[deleteBookingMeals()]] - `contains` [EXTRACTED]
 - [[deleteClosure()]] - `contains` [EXTRACTED]
 - [[deleteMealTime()]] - `contains` [EXTRACTED]
 - [[deleteRoom()]] - `contains` [EXTRACTED]
 - [[deleteScheduleEntry()]] - `contains` [EXTRACTED]
 - [[deleteTask()]] - `contains` [EXTRACTED]
+- [[deleteUser()]] - `contains` [EXTRACTED]
 - [[formatZl()]] - `contains` [EXTRACTED]
 - [[getAdminBooking()]] - `contains` [EXTRACTED]
 - [[getAdminBookings()]] - `contains` [EXTRACTED]
@@ -108,7 +113,9 @@ tags:
 - [[getScheduleDay()]] - `contains` [EXTRACTED]
 - [[getScheduleLocations()]] - `contains` [EXTRACTED]
 - [[getTasks()]] - `contains` [EXTRACTED]
+- [[getUsers()]] - `contains` [EXTRACTED]
 - [[groszeToZl()]] - `contains` [EXTRACTED]
+- [[jwt.ts]] - `imports_from` [EXTRACTED]
 - [[mealKinds]] - `contains` [EXTRACTED]
 - [[reassignBooking()]] - `contains` [EXTRACTED]
 - [[resetBookingMealTime()]] - `contains` [EXTRACTED]
@@ -117,11 +124,13 @@ tags:
 - [[setBookingStatus()]] - `contains` [EXTRACTED]
 - [[setRoomCleaning()]] - `contains` [EXTRACTED]
 - [[setTaskDone()]] - `contains` [EXTRACTED]
+- [[setUserRole()]] - `contains` [EXTRACTED]
 - [[updateClosure()]] - `contains` [EXTRACTED]
 - [[updateDietaryNotes()]] - `contains` [EXTRACTED]
 - [[updateMealTime()]] - `contains` [EXTRACTED]
 - [[updateRoom()]] - `contains` [EXTRACTED]
 - [[updateScheduleEntry()]] - `contains` [EXTRACTED]
+- [[userRoles]] - `contains` [EXTRACTED]
 - [[zlToGrosze()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_3
+#graphify/code #graphify/EXTRACTED #community/src_/_api_1

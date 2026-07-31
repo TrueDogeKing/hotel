@@ -13,9 +13,9 @@ tags:
 
 ## Connections
 - [[.CreateAsync()_5]] - `references` [EXTRACTED]
-- [[.CreateAsync()_11]] - `references` [EXTRACTED]
+- [[.CreateAsync()_12]] - `references` [EXTRACTED]
 - [[.ListAsync()_1]] - `references` [EXTRACTED]
-- [[.ListAsync()_3]] - `references` [EXTRACTED]
+- [[.ListAsync()_4]] - `references` [EXTRACTED]
 - [[.SetStatusAsync()_2]] - `references` [EXTRACTED]
 - [[.SetStatusAsync()_5]] - `references` [EXTRACTED]
 - [[.ToDto()_4]] - `references` [EXTRACTED]

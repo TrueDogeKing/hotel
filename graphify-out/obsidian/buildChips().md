@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/components/admin/DayTimetable.tsx"
 type: "code"
-community: "src / api (2)"
-location: "L116"
+community: "Room Closure Management"
+location: "L128"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/src_/_api_2
+  - community/Room_Closure_Management
 ---
 
 # buildChips()
@@ -16,4 +16,4 @@ tags:
 - [[DayTimetable.tsx]] - `contains` [EXTRACTED]
 - [[minutesOf()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/src_/_api_2
+#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management

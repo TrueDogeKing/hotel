@@ -1,25 +1,19 @@
 ---
 type: community
-members: 12
+members: 6
 ---
 
 # components / admin
 
-**Members:** 12 nodes
+**Members:** 6 nodes
 
 ## Members
-- [[Occupancy]] - code - frontend/src/api/admin.ts
-- [[OccupancyPage()]] - code - frontend/src/pages/admin/OccupancyPage.tsx
-- [[OccupancyPage.tsx]] - code - frontend/src/pages/admin/OccupancyPage.tsx
-- [[RoomOccupancy]] - code - frontend/src/api/admin.ts
-- [[RoomTask]] - code - frontend/src/api/admin.ts
-- [[TasksPage()]] - code - frontend/src/pages/admin/TasksPage.tsx
-- [[TasksPage.tsx]] - code - frontend/src/pages/admin/TasksPage.tsx
-- [[createTask()]] - code - frontend/src/api/admin.ts
-- [[deleteTask()]] - code - frontend/src/api/admin.ts
-- [[getOccupancy()]] - code - frontend/src/api/admin.ts
-- [[getTasks()]] - code - frontend/src/api/admin.ts
-- [[setTaskDone()]] - code - frontend/src/api/admin.ts
+- [[.RemoveAssignment()]] - code - src/CampCenter.Domain/Repositories/IBookingRepository.cs
+- [[.RemoveAssignment()_1]] - code - src/CampCenter.Infrastructure/Repositories/BookingRepository.cs
+- [[BookingRoomAssignment]] - code - src/CampCenter.Domain/Entities/BookingRoomAssignment.cs
+- [[BookingRoomAssignment.cs]] - code - src/CampCenter.Domain/Entities/BookingRoomAssignment.cs
+- [[DateOnly_18]] - code
+- [[Guid_31]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -29,13 +23,17 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 10 edges to [[_COMMUNITY_CampCenter.Application  Services (3)]]
-- 5 edges to [[_COMMUNITY_src  utils]]
-- 4 edges to [[_COMMUNITY_Admin Tasks & Occupancy Pages]]
+- 3 edges to [[_COMMUNITY_Integration Test Harness (2)]]
+- 3 edges to [[_COMMUNITY_CampCenter.Domain  Repositories (1)]]
+- 2 edges to [[_COMMUNITY_Admin Booking & Notifications (1)]]
+- 2 edges to [[_COMMUNITY_BookingRoomAssignmentConfiguration]]
+- 1 edge to [[_COMMUNITY_Public Booking Service (2)]]
+- 1 edge to [[_COMMUNITY_Integration Test Harness (1)]]
+- 1 edge to [[_COMMUNITY_Room Management]]
+- 1 edge to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
 
 ## Top bridge nodes
-- [[OccupancyPage.tsx]] - degree 14, connects to 3 communities
-- [[TasksPage.tsx]] - degree 8, connects to 2 communities
-- [[getTasks()]] - degree 4, connects to 1 community
-- [[setTaskDone()]] - degree 4, connects to 1 community
-- [[OccupancyPage()]] - degree 4, connects to 1 community
+- [[BookingRoomAssignment]] - degree 15, connects to 7 communities
+- [[.RemoveAssignment()]] - degree 3, connects to 2 communities
+- [[BookingRoomAssignment.cs]] - degree 2, connects to 1 community
+- [[.RemoveAssignment()_1]] - degree 2, connects to 1 community

@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/components/admin/AdminLayout.tsx"
 type: "code"
-community: "Admin Tasks & Occupancy Pages"
+community: "useAuth"
 location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Tasks__Occupancy_Pages
+  - community/useAuth
 ---
 
 # AdminLayout()
@@ -15,4 +15,4 @@ tags:
 - [[AdminLayout.tsx]] - `contains` [EXTRACTED]
 - [[useAuth()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Tasks__Occupancy_Pages
+#graphify/code #graphify/EXTRACTED #community/useAuth

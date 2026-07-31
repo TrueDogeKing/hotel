@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Room Management"
+community: "CampCenter.Domain / Repositories (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Management
+  - community/CampCenterDomain_/_Repositories_2
 ---
 
 # Guid
 
 ## Connections
-- [[Room_1]] - `references` [EXTRACTED]
+- [[MealTimeDefault_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Management
+#graphify/code #graphify/EXTRACTED #community/CampCenterDomain_/_Repositories_2

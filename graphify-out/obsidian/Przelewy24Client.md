@@ -19,6 +19,6 @@ tags:
 - [[IPaymentGateway]] - `implements` [EXTRACTED]
 - [[P24Settings]] - `references` [EXTRACTED]
 - [[Przelewy24Client.cs]] - `contains` [EXTRACTED]
-- [[string_10]] - `references` [EXTRACTED]
+- [[string_12]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Payment_Gateway_Integration_Tests_1

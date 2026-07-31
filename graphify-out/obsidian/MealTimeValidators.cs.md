@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Validators/MealTimeValidators.cs"
 type: "code"
-community: "Rate Limiting & Startup"
+community: "Camp Session Management"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Rate_Limiting__Startup
+  - community/Camp_Session_Management
 ---
 
 # MealTimeValidators.cs
@@ -20,4 +20,4 @@ tags:
 - [[SetBookingMealTimeRequestValidator]] - `contains` [EXTRACTED]
 - [[UpdateMealTimeDefaultRequestValidator]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Rate_Limiting__Startup
+#graphify/code #graphify/EXTRACTED #community/Camp_Session_Management

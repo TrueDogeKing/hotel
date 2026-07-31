@@ -15,6 +15,6 @@ tags:
 - [[ApiCollection.cs]] - `contains` [EXTRACTED]
 - [[CampCenterApiFactory]] - `references` [EXTRACTED]
 - [[ICollectionFixture]] - `implements` [EXTRACTED]
-- [[string_11]] - `references` [EXTRACTED]
+- [[string_13]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/tests_/_CampCenterIntegrationTests_1

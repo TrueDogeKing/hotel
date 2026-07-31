@@ -1,23 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "Public Booking Service (1)"
+community: "Auth Service & Tokens"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public_Booking_Service_1
+  - community/Auth_Service__Tokens
 ---
 
 # CancellationToken
 
 ## Connections
-- [[.CancelByTokenAsync()_1]] - `references` [EXTRACTED]
-- [[.CreateAsync()_7]] - `references` [EXTRACTED]
-- [[.FindByTokenAsync()]] - `references` [EXTRACTED]
-- [[.GetByTokenAsync()_1]] - `references` [EXTRACTED]
-- [[.GetScheduleByTokenAsync()_1]] - `references` [EXTRACTED]
-- [[.PickRoomsAsync()]] - `references` [EXTRACTED]
-- [[.SendSafelyAsync()]] - `references` [EXTRACTED]
-- [[.TryCreateAsync()]] - `references` [EXTRACTED]
+- [[.IssueTokensAsync()]] - `references` [EXTRACTED]
+- [[.LoginAsync()_1]] - `references` [EXTRACTED]
+- [[.LogoutAsync()_1]] - `references` [EXTRACTED]
+- [[.RefreshAsync()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_1
+#graphify/code #graphify/EXTRACTED #community/Auth_Service__Tokens
