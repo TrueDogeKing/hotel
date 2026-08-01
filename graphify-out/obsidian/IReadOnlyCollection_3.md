@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "ScheduleEntry"
+community: "CampCenter.Application / Services (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ScheduleEntry
+  - community/CampCenterApplication_/_Services_2
 ---
 
 # IReadOnlyCollection
@@ -16,4 +16,4 @@ tags:
 - [[.ListFullySuppressedSlotsAsync()]] - `references` [EXTRACTED]
 - [[.ListVisibleSlotSpansAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ScheduleEntry
+#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_2

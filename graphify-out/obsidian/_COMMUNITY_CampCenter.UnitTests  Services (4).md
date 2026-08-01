@@ -37,13 +37,12 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_ScheduleEntry]]
-- 2 edges to [[_COMMUNITY_CampCenter.Application  Services (2)]]
+- 7 edges to [[_COMMUNITY_CampCenter.Application  Services (2)]]
 - 1 edge to [[_COMMUNITY_DTOs  Schedule (1)]]
 - 1 edge to [[_COMMUNITY_Domain & Infra Namespaces]]
 
 ## Top bridge nodes
-- [[ScheduleConflictTests]] - degree 20, connects to 3 communities
-- [[.CheckAsync()]] - degree 18, connects to 3 communities
+- [[ScheduleConflictTests]] - degree 20, connects to 2 communities
+- [[.CheckAsync()]] - degree 18, connects to 2 communities
 - [[.Entry()]] - degree 16, connects to 1 community
 - [[.DayHas()]] - degree 14, connects to 1 community

@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/pages/admin/ClosuresPage.tsx"
 type: "code"
-community: "useAuth"
+community: "src / api (1)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/useAuth
+  - community/src_/_api_1
 ---
 
 # ClosuresPage.tsx
@@ -30,4 +30,4 @@ tags:
 - [[updateClosure()]] - `imports` [EXTRACTED]
 - [[useAuth()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/useAuth
+#graphify/code #graphify/EXTRACTED #community/src_/_api_1

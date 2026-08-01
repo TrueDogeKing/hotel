@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/DTOs/Users/UserDtos.cs"
 type: "code"
-community: "tests / CampCenter.IntegrationTests (2)"
+community: "Booking Persistence & Entities (1)"
 location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/tests_/_CampCenterIntegrationTests_2
+  - community/Booking_Persistence__Entities_1
 ---
 
 # CreateUserRequestDto
@@ -18,4 +18,4 @@ tags:
 - [[CreateUserRequestValidator]] - `references` [EXTRACTED]
 - [[UserDtos.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/tests_/_CampCenterIntegrationTests_2
+#graphify/code #graphify/EXTRACTED #community/Booking_Persistence__Entities_1

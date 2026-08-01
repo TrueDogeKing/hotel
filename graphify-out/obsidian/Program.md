@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Api/Program.cs"
 type: "code"
-community: ".CreateClient"
+community: "Payment Gateway Integration Tests (2)"
 location: "L242"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateClient
+  - community/Payment_Gateway_Integration_Tests_2
 ---
 
 # Program
@@ -15,4 +15,4 @@ tags:
 - [[CampCenterApiFactory]] - `references` [EXTRACTED]
 - [[Program.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateClient
+#graphify/code #graphify/EXTRACTED #community/Payment_Gateway_Integration_Tests_2

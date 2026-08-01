@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Persistence/Configurations/AdminUserConfiguration.cs"
 type: "code"
-community: "Persistence / Configurations"
+community: "IEntityTypeConfiguration"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Persistence_/_Configurations
+  - community/IEntityTypeConfiguration
 ---
 
 # CampCenter.Infrastructure.Persistence.Configurations
@@ -25,4 +25,4 @@ tags:
 - [[RoomTaskConfiguration.cs]] - `contains` [EXTRACTED]
 - [[ScheduleEntryConfiguration.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Persistence_/_Configurations
+#graphify/code #graphify/EXTRACTED #community/IEntityTypeConfiguration

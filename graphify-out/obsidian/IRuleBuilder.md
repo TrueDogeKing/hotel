@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.UnitTests / Validators"
+community: "ScheduleEntry"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Validators
+  - community/ScheduleEntry
 ---
 
 # IRuleBuilder
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.ValidPassword()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Validators
+#graphify/code #graphify/EXTRACTED #community/ScheduleEntry

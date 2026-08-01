@@ -1,15 +1,16 @@
 ---
 type: community
-members: 103
+members: 104
 ---
 
 # tests / CampCenter.IntegrationTests (1)
 
-**Members:** 103 nodes
+**Members:** 104 nodes
 
 ## Members
 - [[.AdminEndpoints_WithoutToken_ReturnUnauthorized()]] - code - tests/CampCenter.IntegrationTests/RoomsAndClosuresApiTests.cs
 - [[.Administrator_CanAdd_ChangeRole_AndDelete_Accounts()]] - code - tests/CampCenter.IntegrationTests/UsersAndRolesApiTests.cs
+- [[.Administrator_CanResetAPassword_AndItEndsThatAccountsSessions()]] - code - tests/CampCenter.IntegrationTests/UsersAndRolesApiTests.cs
 - [[.AssignableRooms_OffersOwnAndFreeRooms_ButNotTakenOrClosedOnes()]] - code - tests/CampCenter.IntegrationTests/AdminPanelApiTests.cs
 - [[.AvailabilityUrl()]] - code - tests/CampCenter.IntegrationTests/PublicBookingApiTests.cs
 - [[.BookingFlow_AvailabilityShrinks_AndCancelFreesRooms()]] - code - tests/CampCenter.IntegrationTests/PublicBookingApiTests.cs
@@ -128,7 +129,7 @@ SORT file.name ASC
 - 1 edge to [[_COMMUNITY_Camp Session Management]]
 - 1 edge to [[_COMMUNITY_tests  CampCenter.IntegrationTests (2)]]
 - 1 edge to [[_COMMUNITY_Payment Gateway Integration Tests (1)]]
-- 1 edge to [[_COMMUNITY_Application Namespaces & DTOs]]
+- 1 edge to [[_COMMUNITY_PasswordRules]]
 
 ## Top bridge nodes
 - [[IntegrationTestBase]] - degree 13, connects to 2 communities

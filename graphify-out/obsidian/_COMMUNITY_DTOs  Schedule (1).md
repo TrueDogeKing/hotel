@@ -34,7 +34,6 @@ members: 66
 - [[.ResetBookingMealTimeAsync()]] - code - src/CampCenter.Application/Interfaces/IScheduleService.cs
 - [[.SetBookingMealTime()]] - code - src/CampCenter.Api/Controllers/Admin/ScheduleController.cs
 - [[.SetBookingMealTimeAsync()]] - code - src/CampCenter.Application/Interfaces/IScheduleService.cs
-- [[.ToCalendarDto()]] - code - src/CampCenter.Application/Services/ScheduleService.cs
 - [[.UpdateEntry()]] - code - src/CampCenter.Api/Controllers/Admin/ScheduleController.cs
 - [[.UpdateEntryAsync()]] - code - src/CampCenter.Application/Interfaces/IScheduleService.cs
 - [[ApplyBookingMealTimeResultDto]] - code - src/CampCenter.Application/DTOs/Schedule/MealTimeDtos.cs
@@ -45,6 +44,7 @@ members: 66
 - [[CheckScheduleConflictsRequestDto]] - code - src/CampCenter.Application/DTOs/Schedule/ScheduleDtos.cs
 - [[DateOnly_2]] - code
 - [[DateOnly_7]] - code
+- [[DeleteBookingMealsResultDto]] - code - src/CampCenter.Application/DTOs/Schedule/MealTimeDtos.cs
 - [[GenerateMealsResultDto]] - code - src/CampCenter.Application/DTOs/Schedule/ScheduleDtos.cs
 - [[GenerateMissingMealsResultDto]] - code - src/CampCenter.Application/DTOs/Schedule/ScheduleDtos.cs
 - [[Guid_5]] - code
@@ -57,10 +57,11 @@ members: 66
 - [[IScheduleService]] - code - src/CampCenter.Application/Interfaces/IScheduleService.cs
 - [[IValidator_4]] - code
 - [[List_5]] - code
+- [[MealTimeDtos.cs]] - code - src/CampCenter.Application/DTOs/Schedule/MealTimeDtos.cs
+- [[NeighbourSittingDto]] - code - src/CampCenter.Application/DTOs/Schedule/MealTimeDtos.cs
 - [[ProducesResponseType_7]] - code
 - [[PublicScheduleDayDto]] - code - src/CampCenter.Application/DTOs/Schedule/ScheduleDtos.cs
 - [[PublicScheduleEntryDto]] - code - src/CampCenter.Application/DTOs/Schedule/ScheduleDtos.cs
-- [[ScheduleCalendarBookingDto]] - code - src/CampCenter.Application/DTOs/Schedule/ScheduleDtos.cs
 - [[ScheduleCalendarDayDto]] - code - src/CampCenter.Application/DTOs/Schedule/ScheduleDtos.cs
 - [[ScheduleCalendarDto]] - code - src/CampCenter.Application/DTOs/Schedule/ScheduleDtos.cs
 - [[ScheduleConflictDto]] - code - src/CampCenter.Application/DTOs/Schedule/ScheduleDtos.cs
@@ -70,10 +71,9 @@ members: 66
 - [[ScheduleDayGroupDto]] - code - src/CampCenter.Application/DTOs/Schedule/ScheduleDtos.cs
 - [[ScheduleDtos.cs]] - code - src/CampCenter.Application/DTOs/Schedule/ScheduleDtos.cs
 - [[ScheduleLocationsDto]] - code - src/CampCenter.Application/DTOs/Schedule/ScheduleDtos.cs
+- [[SetBookingMealTimeRequestDto]] - code - src/CampCenter.Application/DTOs/Schedule/MealTimeDtos.cs
 - [[Task_9]] - code
 - [[Task_29]] - code
-- [[UpdateScheduleEntryRequestDto]] - code - src/CampCenter.Application/DTOs/Schedule/ScheduleDtos.cs
-- [[UpdateScheduleEntryRequestValidator]] - code - src/CampCenter.Application/Validators/ScheduleValidators.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -83,21 +83,21 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 16 edges to [[_COMMUNITY_CampCenter.Application  Services (2)]]
-- 4 edges to [[_COMMUNITY_Camp Session Management]]
-- 3 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
-- 3 edges to [[_COMMUNITY_JWT Token Service]]
-- 2 edges to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
+- 17 edges to [[_COMMUNITY_CampCenter.Application  Services (2)]]
+- 6 edges to [[_COMMUNITY_CampCenter.UnitTests  Validators]]
+- 5 edges to [[_COMMUNITY_Camp Session Management]]
+- 4 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
 - 2 edges to [[_COMMUNITY_Admin Booking & Notifications (1)]]
 - 2 edges to [[_COMMUNITY_Admin Booking & Notifications (4)]]
+- 1 edge to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
+- 1 edge to [[_COMMUNITY_CampCenter.UnitTests  Services (1)]]
 - 1 edge to [[_COMMUNITY_Admin Booking & Notifications (2)]]
-- 1 edge to [[_COMMUNITY_CampCenter.UnitTests  Services (4)]]
 - 1 edge to [[_COMMUNITY_Integration Test Harness (1)]]
-- 1 edge to [[_COMMUNITY_CampCenter.UnitTests  Validators]]
+- 1 edge to [[_COMMUNITY_CampCenter.UnitTests  Services (4)]]
 
 ## Top bridge nodes
-- [[ScheduleDtos.cs]] - degree 21, connects to 5 communities
+- [[ScheduleDtos.cs]] - degree 21, connects to 6 communities
+- [[MealTimeDtos.cs]] - degree 10, connects to 5 communities
 - [[IScheduleService]] - degree 19, connects to 4 communities
 - [[ScheduleController]] - degree 18, connects to 2 communities
-- [[.GenerateMealsForBookingAsync()]] - degree 7, connects to 2 communities
-- [[.CreateEntryAsync()]] - degree 6, connects to 2 communities
+- [[.UpdateEntryAsync()]] - degree 7, connects to 2 communities

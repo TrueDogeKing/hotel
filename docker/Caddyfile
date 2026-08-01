@@ -1,10 +1,14 @@
-# Reverse proxy + automatic HTTPS (Let's Encrypt) for the whole app.
-# DOMAIN comes from .env; Caddy provisions and renews the certificate itself.
-{$DOMAIN} {
+# Reverse proxy behind a Cloudflare Tunnel: Cloudflare's edge already terminates
+# TLS for visitors, and with no port forwarded in, Caddy could never complete its
+# own Let's Encrypt HTTP-01 challenge anyway — so this listens on plain HTTP and
+# leaves certificates to Cloudflare. cloudflared talks to this over the Docker
+# network, not the public internet.
+#
+# Moving to a host with a real public IP (a VPS) instead of a tunnel? Swap the
+# `:80 { ... }` block below back to `{$DOMAIN} { ... }` (see git history) to let
+# Caddy obtain its own certificate again, and add back the HSTS header.
+:80 {
 	encode zstd gzip
-
-	# TLS terminates here, so HSTS is set here (nginx intentionally leaves it to the proxy).
-	header Strict-Transport-Security "max-age=31536000; includeSubDomains"
 
 	# REST API.
 	handle /api/* {

@@ -15,6 +15,7 @@ tags:
 - [[.DeleteAsync()_9]] - `references` [EXTRACTED]
 - [[.GetOrThrowAsync()_3]] - `references` [EXTRACTED]
 - [[.ListAsync()_5]] - `references` [EXTRACTED]
+- [[.SetPasswordAsync()_1]] - `references` [EXTRACTED]
 - [[.SetRoleAsync()_1]] - `references` [EXTRACTED]
 - [[.ToDto()_6]] - `references` [EXTRACTED]
 

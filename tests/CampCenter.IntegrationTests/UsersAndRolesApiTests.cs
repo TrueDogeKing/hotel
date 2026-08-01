@@ -267,4 +267,56 @@ public class UsersAndRolesApiTests : IntegrationTestBase
 
         await admin.DeleteAsync($"/api/admin/users/{account.Id}");
     }
+
+    /// An administrator can reset any account's password, including its own —
+    /// and doing so ends that account's sessions, the same as a role change.
+    [Fact]
+    public async Task Administrator_CanResetAPassword_AndItEndsThatAccountsSessions()
+    {
+        var (admin, account) = await CreateWorkerAsync("pwd");
+        var worker = await CreateClientForAsync(account.Login, Password);
+        var today = DateOnly.FromDateTime(DateTime.UtcNow);
+        Assert.Equal(
+            HttpStatusCode.OK,
+            (await worker.GetAsync($"/api/admin/schedule/day/{today:yyyy-MM-dd}")).StatusCode
+        );
+
+        const string NewPassword = "NewWorker456!";
+        var reset = await admin.PutAsJsonAsync(
+            $"/api/admin/users/{account.Id}/password",
+            new SetUserPasswordRequestDto(NewPassword)
+        );
+        Assert.True(
+            reset.StatusCode == HttpStatusCode.OK,
+            $"Reset failed: {reset.StatusCode} {await reset.Content.ReadAsStringAsync()}"
+        );
+
+        // The old refresh cookie no longer works…
+        var refresh = await worker.PostAsync("/api/auth/refresh", null);
+        Assert.Equal(HttpStatusCode.Unauthorized, refresh.StatusCode);
+
+        // …the old password no longer signs in…
+        var loginWithOldPassword = await CreateClient()
+            .PostAsJsonAsync(
+                "/api/auth/login",
+                new CampCenter.Application.DTOs.Auth.LoginRequestDto(account.Login, Password)
+            );
+        Assert.Equal(HttpStatusCode.Unauthorized, loginWithOldPassword.StatusCode);
+
+        // …and the new one does.
+        var signedInAgain = await CreateClientForAsync(account.Login, NewPassword);
+        Assert.Equal(
+            HttpStatusCode.OK,
+            (await signedInAgain.GetAsync($"/api/admin/schedule/day/{today:yyyy-MM-dd}")).StatusCode
+        );
+
+        // A weak replacement is refused, same policy as creating an account.
+        var weak = await admin.PutAsJsonAsync(
+            $"/api/admin/users/{account.Id}/password",
+            new SetUserPasswordRequestDto("short")
+        );
+        Assert.Equal(HttpStatusCode.BadRequest, weak.StatusCode);
+
+        await admin.DeleteAsync($"/api/admin/users/{account.Id}");
+    }
 }

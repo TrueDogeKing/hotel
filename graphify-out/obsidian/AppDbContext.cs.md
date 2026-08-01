@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Persistence/AppDbContext.cs"
 type: "code"
-community: "CampCenter.Infrastructure / Repositories (1)"
+community: "Public Booking Service (2)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterInfrastructure_/_Repositories_1
+  - community/Public_Booking_Service_2
 ---
 
 # AppDbContext.cs
@@ -16,4 +16,4 @@ tags:
 - [[CampCenter.Domain.Entities]] - `imports` [EXTRACTED]
 - [[CampCenter.Infrastructure.Persistence]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterInfrastructure_/_Repositories_1
+#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_2

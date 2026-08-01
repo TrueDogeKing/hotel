@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/DTOs/Schedule/MealTimeDtos.cs"
 type: "code"
-community: "JWT Token Service"
+community: "Camp Session Management"
 location: "L38"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/JWT_Token_Service
+  - community/Camp_Session_Management
 ---
 
 # DeleteMealTimeDefaultResultDto
@@ -16,4 +16,4 @@ tags:
 - [[.DeleteAsync()_6]] - `references` [EXTRACTED]
 - [[MealTimeDtos.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/JWT_Token_Service
+#graphify/code #graphify/EXTRACTED #community/Camp_Session_Management

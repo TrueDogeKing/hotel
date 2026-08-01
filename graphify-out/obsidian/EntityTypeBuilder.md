@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "IEntityTypeConfiguration"
+community: "JWT Token Service"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/IEntityTypeConfiguration
+  - community/JWT_Token_Service
 ---
 
 # EntityTypeBuilder
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.Configure()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/IEntityTypeConfiguration
+#graphify/code #graphify/EXTRACTED #community/JWT_Token_Service

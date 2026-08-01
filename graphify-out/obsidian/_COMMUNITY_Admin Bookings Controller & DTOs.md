@@ -1,11 +1,11 @@
 ---
 type: community
-members: 70
+members: 67
 ---
 
 # Admin Bookings Controller & DTOs
 
-**Members:** 70 nodes
+**Members:** 67 nodes
 
 ## Members
 - [[.AssignableRooms()]] - code - src/CampCenter.Api/Controllers/Admin/BookingsController.cs
@@ -44,7 +44,6 @@ members: 70
 - [[ControllerBase]] - code
 - [[CreateAdminBookingRequestDto]] - code - src/CampCenter.Application/DTOs/AdminPanel/AdminPanelDtos.cs
 - [[CreateAdminBookingRequestValidator]] - code - src/CampCenter.Application/Validators/AdminBookingValidators.cs
-- [[CreateRoomTaskRequestDto]] - code - src/CampCenter.Application/DTOs/AdminPanel/AdminPanelDtos.cs
 - [[DashboardBookingDto]] - code - src/CampCenter.Application/DTOs/AdminPanel/AdminPanelDtos.cs
 - [[DashboardController]] - code - src/CampCenter.Api/Controllers/Admin/DashboardController.cs
 - [[DashboardDto]] - code - src/CampCenter.Application/DTOs/AdminPanel/AdminPanelDtos.cs
@@ -76,8 +75,6 @@ members: 70
 - [[Task_4]] - code
 - [[Task_7]] - code
 - [[Task_17]] - code
-- [[UpdateDietaryNotesRequestDto]] - code - src/CampCenter.Application/DTOs/Schedule/ScheduleDtos.cs
-- [[UpdateDietaryNotesRequestValidator]] - code - src/CampCenter.Application/Validators/ScheduleValidators.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -87,26 +84,25 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 17 edges to [[_COMMUNITY_Admin Booking & Notifications (1)]]
+- 16 edges to [[_COMMUNITY_Admin Booking & Notifications (1)]]
 - 5 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
-- 5 edges to [[_COMMUNITY_Room Task Management (1)]]
-- 3 edges to [[_COMMUNITY_Camp Session Management]]
-- 2 edges to [[_COMMUNITY_DTOs  Schedule (1)]]
+- 4 edges to [[_COMMUNITY_CampCenter.UnitTests  Validators]]
+- 3 edges to [[_COMMUNITY_Room Task Management (1)]]
+- 2 edges to [[_COMMUNITY_Validator Unit Tests]]
 - 2 edges to [[_COMMUNITY_Admin Booking & Notifications (2)]]
 - 2 edges to [[_COMMUNITY_Integration Test Harness (1)]]
-- 2 edges to [[_COMMUNITY_CampCenter.UnitTests  Validators]]
 - 1 edge to [[_COMMUNITY_CampCenter.UnitTests  Services (2)]]
-- 1 edge to [[_COMMUNITY_JWT Token Service]]
+- 1 edge to [[_COMMUNITY_Camp Session Management]]
 - 1 edge to [[_COMMUNITY_Room Management]]
+- 1 edge to [[_COMMUNITY_DTOs  Schedule (1)]]
 - 1 edge to [[_COMMUNITY_Booking Persistence & Entities (1)]]
 - 1 edge to [[_COMMUNITY_Auth Controller (1)]]
-- 1 edge to [[_COMMUNITY_Validator Unit Tests]]
 - 1 edge to [[_COMMUNITY_Public Booking Service (2)]]
 - 1 edge to [[_COMMUNITY_Integration Test Harness (2)]]
 - 1 edge to [[_COMMUNITY_CampCenter.Domain  Repositories (1)]]
 
 ## Top bridge nodes
-- [[ControllerBase]] - degree 14, connects to 10 communities
+- [[ControllerBase]] - degree 14, connects to 9 communities
 - [[AdminPanelDtos.cs]] - degree 15, connects to 3 communities
 - [[BookingGroupCategory_1]] - degree 6, connects to 3 communities
 - [[IAdminBookingService]] - degree 16, connects to 2 communities

@@ -38,6 +38,12 @@ export async function deleteUser(id: string): Promise<void> {
   await api.delete(`/admin/users/${id}`);
 }
 
+/** Ends that account's sessions, its own included. */
+export async function setUserPassword(id: string, password: string): Promise<AdminUser> {
+  const { data } = await api.put<AdminUser>(`/admin/users/${id}/password`, { password });
+  return data;
+}
+
 // --- Rooms ---
 
 export interface Room {

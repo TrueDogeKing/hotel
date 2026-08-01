@@ -30,12 +30,12 @@ members: 31
 - [[HousekeepingPlannerTests.cs]] - code - tests/CampCenter.UnitTests/Services/HousekeepingPlannerTests.cs
 - [[HousekeepingServiceTests.cs]] - code - tests/CampCenter.UnitTests/Services/HousekeepingServiceTests.cs
 - [[ITokenService.cs]] - code - src/CampCenter.Application/Interfaces/ITokenService.cs
-- [[MealGenerationPlanner.cs]] - code - src/CampCenter.Application/Services/MealGenerationPlanner.cs
 - [[MealGenerationPlannerTests.cs]] - code - tests/CampCenter.UnitTests/Services/MealGenerationPlannerTests.cs
 - [[NotFoundException]] - code - src/CampCenter.Domain/Exceptions/NotFoundException.cs
 - [[NotFoundException.cs]] - code - src/CampCenter.Domain/Exceptions/NotFoundException.cs
 - [[PaymentService.cs]] - code - src/CampCenter.Application/Services/PaymentService.cs
 - [[RoomMixCalculatorTests.cs]] - code - tests/CampCenter.UnitTests/Services/RoomMixCalculatorTests.cs
+- [[RoomService.cs]] - code - src/CampCenter.Application/Services/RoomService.cs
 - [[ScheduleConflictTests.cs]] - code - tests/CampCenter.UnitTests/Services/ScheduleConflictTests.cs
 - [[ScheduleService.cs]] - code - src/CampCenter.Application/Services/ScheduleService.cs
 - [[UserService.cs]] - code - src/CampCenter.Application/Services/UserService.cs
@@ -48,31 +48,31 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 32 edges to [[_COMMUNITY_Public Booking Service (2)]]
-- 20 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
+- 27 edges to [[_COMMUNITY_Public Booking Service (2)]]
+- 22 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
+- 5 edges to [[_COMMUNITY_CampCenter.Application.DTOs.Public]]
 - 4 edges to [[_COMMUNITY_.CreateClient]]
-- 4 edges to [[_COMMUNITY_Admin Booking & Notifications (4)]]
-- 3 edges to [[_COMMUNITY_Auth Service & Tokens]]
-- 3 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (1)]]
+- 4 edges to [[_COMMUNITY_Auth Service & Tokens]]
+- 3 edges to [[_COMMUNITY_Admin Booking & Notifications (4)]]
 - 2 edges to [[_COMMUNITY_CampCenter.UnitTests  Validators]]
-- 2 edges to [[_COMMUNITY_CampCenter.Application.DTOs.Public]]
+- 2 edges to [[_COMMUNITY_CampCenter.Application  Services (2)]]
 - 2 edges to [[_COMMUNITY_Integration Test Harness (1)]]
+- 2 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (1)]]
 - 2 edges to [[_COMMUNITY_Room Mix Calculator Tests]]
+- 2 edges to [[_COMMUNITY_Room Management]]
 - 1 edge to [[_COMMUNITY_eslint]]
-- 1 edge to [[_COMMUNITY_Admin User & Token Config]]
-- 1 edge to [[_COMMUNITY_ScheduleSettings]]
+- 1 edge to [[_COMMUNITY_PasswordRules]]
+- 1 edge to [[_COMMUNITY_CampCenter.Application  Services (1)]]
 - 1 edge to [[_COMMUNITY_Admin Booking & Notifications (1)]]
-- 1 edge to [[_COMMUNITY_Validator Unit Tests]]
 - 1 edge to [[_COMMUNITY_Public Booking Service (1)]]
-- 1 edge to [[_COMMUNITY_CampCenter.Application  Services (2)]]
 - 1 edge to [[_COMMUNITY_tests  CampCenter.IntegrationTests (2)]]
 - 1 edge to [[_COMMUNITY_Payment_1]]
 - 1 edge to [[_COMMUNITY_CampCenter.UnitTests  Services (2)]]
 - 1 edge to [[_COMMUNITY_CampCenter.UnitTests  Services (4)]]
 
 ## Top bridge nodes
+- [[CampCenter.Application.Services]] - degree 23, connects to 7 communities
 - [[CampCenter.Application.Models]] - degree 16, connects to 6 communities
-- [[CampCenter.Application.Services]] - degree 23, connects to 5 communities
+- [[CampCenter.Domain.Exceptions]] - degree 21, connects to 4 communities
 - [[BookingService.cs]] - degree 9, connects to 4 communities
 - [[AuthService.cs]] - degree 8, connects to 4 communities
-- [[AvailabilityService.cs]] - degree 7, connects to 4 communities

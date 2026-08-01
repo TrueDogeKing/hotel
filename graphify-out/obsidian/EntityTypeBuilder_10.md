@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Persistence / Configurations"
+community: ".CreateWorkerAsync"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Persistence_/_Configurations
+  - community/CreateWorkerAsync
 ---
 
 # EntityTypeBuilder
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.Configure()_10]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Persistence_/_Configurations
+#graphify/code #graphify/EXTRACTED #community/CreateWorkerAsync

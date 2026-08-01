@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/pages/admin/OccupancyPage.tsx"
 type: "code"
-community: "src / api (1)"
+community: "useAuth"
 location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/src_/_api_1
+  - community/useAuth
 ---
 
 # OccupancyPage()
@@ -17,4 +17,4 @@ tags:
 - [[getOccupancy()]] - `calls` [EXTRACTED]
 - [[todayIso()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/src_/_api_1
+#graphify/code #graphify/EXTRACTED #community/useAuth

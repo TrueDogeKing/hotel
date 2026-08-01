@@ -2,7 +2,7 @@
 source_file: "frontend/src/api/admin.ts"
 type: "code"
 community: "CampCenter.Application / Services (3)"
-location: "L597"
+location: "L603"
 tags:
   - graphify/code
   - graphify/EXTRACTED

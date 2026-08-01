@@ -17,6 +17,7 @@ tags:
 - [[CampCenter.Domain.Entities]] - `imports` [EXTRACTED]
 - [[CreateUserRequestValidator]] - `contains` [EXTRACTED]
 - [[RoleRules]] - `contains` [EXTRACTED]
+- [[SetUserPasswordRequestValidator]] - `contains` [EXTRACTED]
 - [[SetUserRoleRequestValidator]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/PasswordRules

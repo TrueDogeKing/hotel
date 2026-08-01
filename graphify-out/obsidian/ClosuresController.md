@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Api/Controllers/Admin/ClosuresController.cs"
 type: "code"
-community: "Camp Session Management"
+community: "Validator Unit Tests"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Camp_Session_Management
+  - community/Validator_Unit_Tests
 ---
 
 # ClosuresController
@@ -21,4 +21,4 @@ tags:
 - [[IClosureService]] - `references` [EXTRACTED]
 - [[IValidator_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Camp_Session_Management
+#graphify/code #graphify/EXTRACTED #community/Validator_Unit_Tests

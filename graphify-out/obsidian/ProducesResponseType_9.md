@@ -14,6 +14,7 @@ tags:
 - [[.Create()_5]] - `references` [EXTRACTED]
 - [[.Delete()_4]] - `references` [EXTRACTED]
 - [[.List()_2]] - `references` [EXTRACTED]
+- [[.SetPassword()]] - `references` [EXTRACTED]
 - [[.SetRole()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Booking_Persistence__Entities_1

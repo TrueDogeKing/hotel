@@ -124,6 +124,7 @@ tags:
 - [[setBookingStatus()]] - `contains` [EXTRACTED]
 - [[setRoomCleaning()]] - `contains` [EXTRACTED]
 - [[setTaskDone()]] - `contains` [EXTRACTED]
+- [[setUserPassword()]] - `contains` [EXTRACTED]
 - [[setUserRole()]] - `contains` [EXTRACTED]
 - [[updateClosure()]] - `contains` [EXTRACTED]
 - [[updateDietaryNotes()]] - `contains` [EXTRACTED]

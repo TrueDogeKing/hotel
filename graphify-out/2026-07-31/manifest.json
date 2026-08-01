@@ -115,8 +115,8 @@
     "semantic_hash": ""
   },
   "frontend/src/i18n/en.json": {
-    "mtime": 1785492219.2700508,
-    "ast_hash": "5df6173c9640402ee4c0bcf772069d7a",
+    "mtime": 1785507834.7768023,
+    "ast_hash": "5406d77c632a54468322c871d83fffb8",
     "semantic_hash": ""
   },
   "frontend/src/i18n/index.ts": {
@@ -125,8 +125,8 @@
     "semantic_hash": "2c62823bcdad775ae76fa3a6db453826"
   },
   "frontend/src/i18n/pl.json": {
-    "mtime": 1785492219.2690814,
-    "ast_hash": "3f8fd3fafa7d6f17dae21343faf84111",
+    "mtime": 1785507834.7738,
+    "ast_hash": "af4ac8fd39bc44a3b421031543150d80",
     "semantic_hash": ""
   },
   "frontend/src/main.tsx": {
@@ -875,8 +875,8 @@
     "semantic_hash": "7916b580c72388874cc01e0176d28e3b"
   },
   "frontend/src/components/admin/AddGroupForm.tsx": {
-    "mtime": 1785506716.9446602,
-    "ast_hash": "7a692aa51be4af1e09473feca351f8ce",
+    "mtime": 1785507813.6540325,
+    "ast_hash": "5fb916b00014678db2483676563eb5af",
     "semantic_hash": ""
   },
   "frontend/src/components/admin/DayTimetable.tsx": {
@@ -1352,6 +1352,11 @@
   "frontend/src/components/calendar/RangeCalendar.tsx": {
     "mtime": 1785506677.2578878,
     "ast_hash": "bc100e54a1499466cd3d588092bcfa46",
+    "semantic_hash": ""
+  },
+  "frontend/src/components/calendar/DateRangeField.tsx": {
+    "mtime": 1785507978.5274143,
+    "ast_hash": "fddc2dd69da17a4542569d5b656f5f40",
     "semantic_hash": ""
   }
 }

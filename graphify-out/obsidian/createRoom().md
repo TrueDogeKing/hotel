@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/api/admin.ts"
 type: "code"
-community: "useAuth"
-location: "L63"
+community: "src / api (1)"
+location: "L69"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/useAuth
+  - community/src_/_api_1
 ---
 
 # createRoom()
@@ -15,4 +15,4 @@ tags:
 - [[RoomsPage.tsx]] - `imports` [EXTRACTED]
 - [[admin.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/useAuth
+#graphify/code #graphify/EXTRACTED #community/src_/_api_1

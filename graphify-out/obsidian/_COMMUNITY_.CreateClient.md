@@ -1,11 +1,11 @@
 ---
 type: community
-members: 22
+members: 21
 ---
 
 # .CreateClient
 
-**Members:** 22 nodes
+**Members:** 21 nodes
 
 ## Members
 - [[.AddApplication()]] - code - src/CampCenter.Application/DependencyInjection.cs
@@ -25,7 +25,6 @@ members: 22
 - [[GlobalExceptionHandler.cs]] - code - src/CampCenter.Api/Errors/GlobalExceptionHandler.cs
 - [[IServiceCollection]] - code
 - [[JwtTokenService.cs]] - code - src/CampCenter.Infrastructure/Auth/JwtTokenService.cs
-- [[Program]] - code - src/CampCenter.Api/Program.cs
 - [[Program.cs]] - code - src/CampCenter.Api/Program.cs
 - [[RateLimitPolicies]] - code - src/CampCenter.Api/RateLimiting/RateLimitPolicies.cs
 - [[RateLimitPolicies.cs]] - code - src/CampCenter.Api/RateLimiting/RateLimitPolicies.cs
@@ -39,20 +38,21 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
+- 6 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
 - 6 edges to [[_COMMUNITY_Public Booking Service (2)]]
-- 5 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
 - 4 edges to [[_COMMUNITY_Domain & Infra Namespaces]]
-- 4 edges to [[_COMMUNITY_Auth Controller (1)]]
 - 3 edges to [[_COMMUNITY_Payment Gateway Integration Tests (2)]]
-- 2 edges to [[_COMMUNITY_CampCenter.Application.DTOs.Public]]
+- 3 edges to [[_COMMUNITY_CampCenter.Application  Services (1)]]
 - 1 edge to [[_COMMUNITY_CampCenter.UnitTests  Validators]]
+- 1 edge to [[_COMMUNITY_Auth Controller (1)]]
 - 1 edge to [[_COMMUNITY_Global Exception Handler]]
 - 1 edge to [[_COMMUNITY_OpenAPI Security Scheme]]
 - 1 edge to [[_COMMUNITY_Password Hashing (bcrypt)]]
+- 1 edge to [[_COMMUNITY_CampCenter.Application.DTOs.Public]]
 
 ## Top bridge nodes
 - [[AuthController.cs]] - degree 7, connects to 4 communities
 - [[JwtTokenService.cs]] - degree 5, connects to 4 communities
+- [[Program.cs]] - degree 9, connects to 3 communities
 - [[DataSeeder.cs]] - degree 4, connects to 3 communities
 - [[CampCenterApiFactory.cs]] - degree 4, connects to 3 communities
-- [[Program.cs]] - degree 9, connects to 2 communities

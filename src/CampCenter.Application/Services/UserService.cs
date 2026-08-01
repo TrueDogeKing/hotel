@@ -92,6 +92,30 @@ public class UserService : IUserService
         return ToDto(user, callerId);
     }
 
+    public async Task<AdminUserDto> SetPasswordAsync(
+        Guid id,
+        SetUserPasswordRequestDto request,
+        Guid callerId,
+        CancellationToken cancellationToken = default
+    )
+    {
+        var user = await GetOrThrowAsync(id, cancellationToken);
+        user.PasswordHash = _passwordHasher.Hash(request.Password);
+
+        // Same reasoning as a role change: revoked before the save, so the new
+        // password and the session wipe land in one transaction. Every session
+        // ends, the caller's own included — a password reset that left the old
+        // sessions alive would defeat the point of one (an admin rotating a
+        // credential they suspect is compromised needs the old session gone too).
+        await _refreshTokens.RevokeAllActiveForUserAsync(
+            user.Id,
+            DateTime.UtcNow,
+            cancellationToken
+        );
+        await _users.SaveChangesAsync(cancellationToken);
+        return ToDto(user, callerId);
+    }
+
     public async Task DeleteAsync(
         Guid id,
         Guid callerId,

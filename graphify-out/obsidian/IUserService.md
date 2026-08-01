@@ -15,6 +15,7 @@ tags:
 - [[.CreateAsync()_6]] - `method` [EXTRACTED]
 - [[.DeleteAsync()_4]] - `method` [EXTRACTED]
 - [[.ListAsync()_2]] - `method` [EXTRACTED]
+- [[.SetPasswordAsync()]] - `method` [EXTRACTED]
 - [[.SetRoleAsync()]] - `method` [EXTRACTED]
 - [[IUserService.cs]] - `contains` [EXTRACTED]
 - [[UserService]] - `implements` [EXTRACTED]

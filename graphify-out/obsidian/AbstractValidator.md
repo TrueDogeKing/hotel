@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Camp Session Management"
+community: "CampCenter.UnitTests / Validators"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Camp_Session_Management
+  - community/CampCenterUnitTests_/_Validators
 ---
 
 # AbstractValidator
@@ -20,6 +20,7 @@ tags:
 - [[CreateUserRequestValidator]] - `inherits` [EXTRACTED]
 - [[LoginRequestValidator]] - `inherits` [EXTRACTED]
 - [[SetBookingMealTimeRequestValidator]] - `inherits` [EXTRACTED]
+- [[SetUserPasswordRequestValidator]] - `inherits` [EXTRACTED]
 - [[SetUserRoleRequestValidator]] - `inherits` [EXTRACTED]
 - [[UpdateClosureRequestValidator]] - `inherits` [EXTRACTED]
 - [[UpdateDietaryNotesRequestValidator]] - `inherits` [EXTRACTED]
@@ -27,4 +28,4 @@ tags:
 - [[UpdateRoomRequestValidator]] - `inherits` [EXTRACTED]
 - [[UpdateScheduleEntryRequestValidator]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Camp_Session_Management
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Validators

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Refresh Token Repository"
+community: "ScheduleEntryConfiguration"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Refresh_Token_Repository
+  - community/ScheduleEntryConfiguration
 ---
 
 # EntityTypeBuilder
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.Configure()_7]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Refresh_Token_Repository
+#graphify/code #graphify/EXTRACTED #community/ScheduleEntryConfiguration

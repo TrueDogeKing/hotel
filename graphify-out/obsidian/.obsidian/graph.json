@@ -365,13 +365,6 @@
       }
     },
     {
-      "query": "tag:#community/BookingMealTime",
-      "color": {
-        "a": 1,
-        "rgb": 14767961
-      }
-    },
-    {
       "query": "tag:#community/useAuth",
       "color": {
         "a": 1,
@@ -411,13 +404,6 @@
       "color": {
         "a": 1,
         "rgb": 10253663
-      }
-    },
-    {
-      "query": "tag:#community/MealTimeDefaultRepository",
-      "color": {
-        "a": 1,
-        "rgb": 12234924
       }
     },
     {
@@ -502,13 +488,6 @@
       "color": {
         "a": 1,
         "rgb": 15896107
-      }
-    },
-    {
-      "query": "tag:#community/ScheduleSettings",
-      "color": {
-        "a": 1,
-        "rgb": 14767961
       }
     },
     {
@@ -663,13 +642,6 @@
       "color": {
         "a": 1,
         "rgb": 5873999
-      }
-    },
-    {
-      "query": "tag:#community/MealTimeDefaultConfiguration",
-      "color": {
-        "a": 1,
-        "rgb": 15583560
       }
     },
     {

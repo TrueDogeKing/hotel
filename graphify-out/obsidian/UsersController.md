@@ -15,6 +15,7 @@ tags:
 - [[.Create()_5]] - `method` [EXTRACTED]
 - [[.Delete()_4]] - `method` [EXTRACTED]
 - [[.List()_2]] - `method` [EXTRACTED]
+- [[.SetPassword()]] - `method` [EXTRACTED]
 - [[.SetRole()]] - `method` [EXTRACTED]
 - [[ControllerBase]] - `inherits` [EXTRACTED]
 - [[Guid_7]] - `references` [EXTRACTED]

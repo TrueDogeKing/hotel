@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Domain/Entities/AdminUserRole.cs"
 type: "code"
-community: "CampCenter.Application / Services (1)"
+community: "Admin User & Token Config"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterApplication_/_Services_1
+  - community/Admin_User__Token_Config
 ---
 
 # AdminUserRole
@@ -18,4 +18,4 @@ tags:
 - [[AdminUser_1]] - `references` [EXTRACTED]
 - [[AdminUserRole.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_1
+#graphify/code #graphify/EXTRACTED #community/Admin_User__Token_Config

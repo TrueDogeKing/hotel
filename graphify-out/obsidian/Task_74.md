@@ -12,6 +12,7 @@ tags:
 
 ## Connections
 - [[.Administrator_CanAdd_ChangeRole_AndDelete_Accounts()]] - `references` [EXTRACTED]
+- [[.Administrator_CanResetAPassword_AndItEndsThatAccountsSessions()]] - `references` [EXTRACTED]
 - [[.CreateWorkerAsync()]] - `references` [EXTRACTED]
 - [[.DuplicateLogin_AndWeakPassword_AreRejected()]] - `references` [EXTRACTED]
 - [[.RoleChange_EndsTheAffectedAccountsSessions()]] - `references` [EXTRACTED]

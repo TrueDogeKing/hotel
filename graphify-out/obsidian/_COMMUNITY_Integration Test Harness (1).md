@@ -1,11 +1,11 @@
 ---
 type: community
-members: 32
+members: 34
 ---
 
 # Integration Test Harness (1)
 
-**Members:** 32 nodes
+**Members:** 34 nodes
 
 ## Members
 - [[.A_one_night_stay_is_an_arrival_on_one_day_and_a_departure_on_the_next()]] - code - tests/CampCenter.UnitTests/Services/HousekeepingPlannerTests.cs
@@ -20,6 +20,7 @@ members: 32
 - [[.One_group_out_and_the_next_in_is_a_single_turnaround()]] - code - tests/CampCenter.UnitTests/Services/HousekeepingPlannerTests.cs
 - [[.RemoveAssignments()_1]] - code - src/CampCenter.Infrastructure/Repositories/BookingRepository.cs
 - [[.The_day_before_a_departure_is_not_the_departure_day()]] - code - tests/CampCenter.UnitTests/Services/HousekeepingPlannerTests.cs
+- [[.ToCalendarDto()]] - code - src/CampCenter.Application/Services/ScheduleService.cs
 - [[Booking]] - code - src/CampCenter.Domain/Entities/Booking.cs
 - [[Booking.cs]] - code - src/CampCenter.Domain/Entities/Booking.cs
 - [[BookingCancelReason]] - code - src/CampCenter.Domain/Entities/Booking.cs
@@ -40,6 +41,7 @@ members: 32
 - [[IEnumerable]] - code
 - [[List_10]] - code
 - [[List_19]] - code
+- [[ScheduleCalendarBookingDto]] - code - src/CampCenter.Application/DTOs/Schedule/ScheduleDtos.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -52,24 +54,22 @@ SORT file.name ASC
 - 15 edges to [[_COMMUNITY_CampCenter.Domain  Repositories (1)]]
 - 13 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (2)]]
 - 12 edges to [[_COMMUNITY_Integration Test Harness (2)]]
+- 9 edges to [[_COMMUNITY_CampCenter.Application  Services (2)]]
 - 7 edges to [[_COMMUNITY_Admin Booking & Notifications (1)]]
 - 5 edges to [[_COMMUNITY_Public Booking Service (1)]]
-- 5 edges to [[_COMMUNITY_CampCenter.Application  Services (2)]]
 - 4 edges to [[_COMMUNITY_Admin Booking & Notifications (4)]]
 - 3 edges to [[_COMMUNITY_Public Booking Service (2)]]
 - 2 edges to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
 - 2 edges to [[_COMMUNITY_Domain & Infra Namespaces]]
-- 2 edges to [[_COMMUNITY_BookingMealTime]]
 - 2 edges to [[_COMMUNITY_BookingConfiguration]]
 - 1 edge to [[_COMMUNITY_DTOs  Schedule (1)]]
 - 1 edge to [[_COMMUNITY_components  admin]]
 - 1 edge to [[_COMMUNITY_Payment]]
 - 1 edge to [[_COMMUNITY_Room Task Management (1)]]
-- 1 edge to [[_COMMUNITY_ScheduleEntry]]
 - 1 edge to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
 
 ## Top bridge nodes
-- [[Booking]] - degree 80, connects to 15 communities
+- [[Booking]] - degree 80, connects to 12 communities
 - [[BookingStatus_1]] - degree 10, connects to 4 communities
 - [[HousekeepingPlanner.cs]] - degree 4, connects to 2 communities
 - [[.ForDay()]] - degree 16, connects to 1 community

@@ -70,11 +70,10 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 8 edges to [[_COMMUNITY_Public Booking Frontend (1)]]
-- 4 edges to [[_COMMUNITY_useAuth]]
+- 9 edges to [[_COMMUNITY_useAuth]]
+- 4 edges to [[_COMMUNITY_Public Booking Frontend (1)]]
 - 2 edges to [[_COMMUNITY_CampCenter.Application  Services (3)]]
 - 1 edge to [[_COMMUNITY_Frontend Auth & API Client]]
-- 1 edge to [[_COMMUNITY_Frontend App Shell & i18n]]
 
 ## Top bridge nodes
 - [[LoginPage.tsx]] - degree 10, connects to 3 communities

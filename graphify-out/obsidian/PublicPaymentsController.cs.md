@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Api/Controllers/Public/PublicPaymentsController.cs"
 type: "code"
-community: "CampCenter.Application.DTOs.Public"
+community: "Application Namespaces & DTOs"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterApplicationDTOsPublic
+  - community/Application_Namespaces__DTOs
 ---
 
 # PublicPaymentsController.cs
@@ -16,4 +16,4 @@ tags:
 - [[CampCenter.Application.Interfaces]] - `imports` [EXTRACTED]
 - [[PublicPaymentsController]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterApplicationDTOsPublic
+#graphify/code #graphify/EXTRACTED #community/Application_Namespaces__DTOs

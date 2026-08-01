@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "ScheduleEntry"
+community: "CampCenter.Application / Services (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ScheduleEntry
+  - community/CampCenterApplication_/_Services_2
 ---
 
 # Kind
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.CountByDateAndKindAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ScheduleEntry
+#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_2

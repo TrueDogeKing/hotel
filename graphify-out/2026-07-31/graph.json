@@ -748,8 +748,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "frontend_src_app",
-      "community": 65,
-      "community_name": "Admin Tasks & Occupancy Pages",
+      "community": 53,
+      "community_name": "useAuth",
       "norm_label": "app.tsx"
     },
     {
@@ -759,8 +759,8 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "frontend_src_app_app",
-      "community": 65,
-      "community_name": "Admin Tasks & Occupancy Pages",
+      "community": 53,
+      "community_name": "useAuth",
       "norm_label": "app()"
     },
     {
@@ -847,8 +847,8 @@
       "source_location": "L43",
       "_origin": "ast",
       "id": "frontend_src_api_admin_room",
-      "community": 3,
-      "community_name": "src / api (1)",
+      "community": 53,
+      "community_name": "useAuth",
       "norm_label": "room"
     },
     {
@@ -869,8 +869,8 @@
       "source_location": "L58",
       "_origin": "ast",
       "id": "frontend_src_api_admin_getrooms",
-      "community": 3,
-      "community_name": "src / api (1)",
+      "community": 53,
+      "community_name": "useAuth",
       "norm_label": "getrooms()"
     },
     {
@@ -880,8 +880,8 @@
       "source_location": "L63",
       "_origin": "ast",
       "id": "frontend_src_api_admin_createroom",
-      "community": 3,
-      "community_name": "src / api (1)",
+      "community": 53,
+      "community_name": "useAuth",
       "norm_label": "createroom()"
     },
     {
@@ -891,8 +891,8 @@
       "source_location": "L68",
       "_origin": "ast",
       "id": "frontend_src_api_admin_updateroom",
-      "community": 3,
-      "community_name": "src / api (1)",
+      "community": 53,
+      "community_name": "useAuth",
       "norm_label": "updateroom()"
     },
     {
@@ -902,8 +902,8 @@
       "source_location": "L77",
       "_origin": "ast",
       "id": "frontend_src_api_admin_deleteroom",
-      "community": 3,
-      "community_name": "src / api (1)",
+      "community": 53,
+      "community_name": "useAuth",
       "norm_label": "deleteroom()"
     },
     {
@@ -913,8 +913,8 @@
       "source_location": "L84",
       "_origin": "ast",
       "id": "frontend_src_api_admin_closure",
-      "community": 3,
-      "community_name": "src / api (1)",
+      "community": 53,
+      "community_name": "useAuth",
       "norm_label": "closure"
     },
     {
@@ -935,8 +935,8 @@
       "source_location": "L101",
       "_origin": "ast",
       "id": "frontend_src_api_admin_getclosures",
-      "community": 3,
-      "community_name": "src / api (1)",
+      "community": 53,
+      "community_name": "useAuth",
       "norm_label": "getclosures()"
     },
     {
@@ -946,8 +946,8 @@
       "source_location": "L106",
       "_origin": "ast",
       "id": "frontend_src_api_admin_createclosure",
-      "community": 3,
-      "community_name": "src / api (1)",
+      "community": 53,
+      "community_name": "useAuth",
       "norm_label": "createclosure()"
     },
     {
@@ -957,8 +957,8 @@
       "source_location": "L111",
       "_origin": "ast",
       "id": "frontend_src_api_admin_updateclosure",
-      "community": 3,
-      "community_name": "src / api (1)",
+      "community": 53,
+      "community_name": "useAuth",
       "norm_label": "updateclosure()"
     },
     {
@@ -968,8 +968,8 @@
       "source_location": "L119",
       "_origin": "ast",
       "id": "frontend_src_api_admin_deleteclosure",
-      "community": 3,
-      "community_name": "src / api (1)",
+      "community": 53,
+      "community_name": "useAuth",
       "norm_label": "deleteclosure()"
     },
     {
@@ -979,8 +979,8 @@
       "source_location": "L124",
       "_origin": "ast",
       "id": "frontend_src_api_admin_formatzl",
-      "community": 13,
-      "community_name": "Public Booking Frontend (1)",
+      "community": 48,
+      "community_name": "Frontend App Shell & i18n",
       "norm_label": "formatzl()"
     },
     {
@@ -1155,8 +1155,8 @@
       "source_location": "L259",
       "_origin": "ast",
       "id": "frontend_src_api_admin_roomoccupancy",
-      "community": 19,
-      "community_name": "src / utils",
+      "community": 3,
+      "community_name": "src / api (1)",
       "norm_label": "roomoccupancy"
     },
     {
@@ -1166,8 +1166,8 @@
       "source_location": "L273",
       "_origin": "ast",
       "id": "frontend_src_api_admin_occupancy",
-      "community": 19,
-      "community_name": "src / utils",
+      "community": 3,
+      "community_name": "src / api (1)",
       "norm_label": "occupancy"
     },
     {
@@ -1177,8 +1177,8 @@
       "source_location": "L281",
       "_origin": "ast",
       "id": "frontend_src_api_admin_getoccupancy",
-      "community": 19,
-      "community_name": "src / utils",
+      "community": 3,
+      "community_name": "src / api (1)",
       "norm_label": "getoccupancy()"
     },
     {
@@ -1188,8 +1188,8 @@
       "source_location": "L288",
       "_origin": "ast",
       "id": "frontend_src_api_admin_roomtask",
-      "community": 65,
-      "community_name": "Admin Tasks & Occupancy Pages",
+      "community": 3,
+      "community_name": "src / api (1)",
       "norm_label": "roomtask"
     },
     {
@@ -1199,8 +1199,8 @@
       "source_location": "L299",
       "_origin": "ast",
       "id": "frontend_src_api_admin_gettasks",
-      "community": 65,
-      "community_name": "Admin Tasks & Occupancy Pages",
+      "community": 3,
+      "community_name": "src / api (1)",
       "norm_label": "gettasks()"
     },
     {
@@ -1210,8 +1210,8 @@
       "source_location": "L307",
       "_origin": "ast",
       "id": "frontend_src_api_admin_createtask",
-      "community": 19,
-      "community_name": "src / utils",
+      "community": 3,
+      "community_name": "src / api (1)",
       "norm_label": "createtask()"
     },
     {
@@ -1221,8 +1221,8 @@
       "source_location": "L316",
       "_origin": "ast",
       "id": "frontend_src_api_admin_settaskdone",
-      "community": 65,
-      "community_name": "Admin Tasks & Occupancy Pages",
+      "community": 3,
+      "community_name": "src / api (1)",
       "norm_label": "settaskdone()"
     },
     {
@@ -1232,8 +1232,8 @@
       "source_location": "L321",
       "_origin": "ast",
       "id": "frontend_src_api_admin_deletetask",
-      "community": 65,
-      "community_name": "Admin Tasks & Occupancy Pages",
+      "community": 3,
+      "community_name": "src / api (1)",
       "norm_label": "deletetask()"
     },
     {
@@ -1463,8 +1463,8 @@
       "source_location": "L459",
       "_origin": "ast",
       "id": "frontend_src_api_admin_scheduleentry",
-      "community": 64,
-      "community_name": "src / api (2)",
+      "community": 16,
+      "community_name": "Room Closure Management",
       "norm_label": "scheduleentry"
     },
     {
@@ -1518,8 +1518,8 @@
       "source_location": "L517",
       "_origin": "ast",
       "id": "frontend_src_api_admin_scheduleday",
-      "community": 64,
-      "community_name": "src / api (2)",
+      "community": 16,
+      "community_name": "Room Closure Management",
       "norm_label": "scheduleday"
     },
     {
@@ -2090,8 +2090,8 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "frontend_src_api_public_availabilityday",
-      "community": 19,
-      "community_name": "src / utils",
+      "community": 13,
+      "community_name": "Public Booking Frontend (1)",
       "norm_label": "availabilityday"
     },
     {
@@ -2442,8 +2442,8 @@
       "source_location": "L58",
       "_origin": "ast",
       "id": "frontend_src_auth_authcontext_useauth",
-      "community": 65,
-      "community_name": "Admin Tasks & Occupancy Pages",
+      "community": 53,
+      "community_name": "useAuth",
       "norm_label": "useauth()"
     },
     {
@@ -2453,8 +2453,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "frontend_src_auth_protectedroute",
-      "community": 65,
-      "community_name": "Admin Tasks & Occupancy Pages",
+      "community": 53,
+      "community_name": "useAuth",
       "norm_label": "protectedroute.tsx"
     },
     {
@@ -2464,8 +2464,8 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "frontend_src_auth_protectedroute_protectedroute",
-      "community": 65,
-      "community_name": "Admin Tasks & Occupancy Pages",
+      "community": 53,
+      "community_name": "useAuth",
       "norm_label": "protectedroute()"
     },
     {
@@ -2706,8 +2706,8 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "frontend_src_components_admin_adminlayout_adminlayout",
-      "community": 65,
-      "community_name": "Admin Tasks & Occupancy Pages",
+      "community": 53,
+      "community_name": "useAuth",
       "norm_label": "adminlayout()"
     },
     {
@@ -2794,8 +2794,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "frontend_src_components_admin_daytimetable",
-      "community": 64,
-      "community_name": "src / api (2)",
+      "community": 16,
+      "community_name": "Room Closure Management",
       "norm_label": "daytimetable.tsx"
     },
     {
@@ -2805,8 +2805,8 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "frontend_src_components_admin_daytimetable_props",
-      "community": 64,
-      "community_name": "src / api (2)",
+      "community": 16,
+      "community_name": "Room Closure Management",
       "norm_label": "props"
     },
     {
@@ -2816,8 +2816,8 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "frontend_src_components_admin_daytimetable_chip",
-      "community": 64,
-      "community_name": "src / api (2)",
+      "community": 16,
+      "community_name": "Room Closure Management",
       "norm_label": "chip"
     },
     {
@@ -2827,8 +2827,8 @@
       "source_location": "L60",
       "_origin": "ast",
       "id": "frontend_src_components_admin_daytimetable_clashreason",
-      "community": 64,
-      "community_name": "src / api (2)",
+      "community": 16,
+      "community_name": "Room Closure Management",
       "norm_label": "clashreason"
     },
     {
@@ -2838,8 +2838,8 @@
       "source_location": "L62",
       "_origin": "ast",
       "id": "frontend_src_components_admin_daytimetable_placesof",
-      "community": 64,
-      "community_name": "src / api (2)",
+      "community": 16,
+      "community_name": "Room Closure Management",
       "norm_label": "placesof()"
     },
     {
@@ -2849,8 +2849,8 @@
       "source_location": "L66",
       "_origin": "ast",
       "id": "frontend_src_components_admin_daytimetable_groupsof",
-      "community": 64,
-      "community_name": "src / api (2)",
+      "community": 16,
+      "community_name": "Room Closure Management",
       "norm_label": "groupsof()"
     },
     {
@@ -2860,8 +2860,8 @@
       "source_location": "L78",
       "_origin": "ast",
       "id": "frontend_src_components_admin_daytimetable_findclashes",
-      "community": 64,
-      "community_name": "src / api (2)",
+      "community": 16,
+      "community_name": "Room Closure Management",
       "norm_label": "findclashes()"
     },
     {
@@ -2871,8 +2871,8 @@
       "source_location": "L118",
       "_origin": "ast",
       "id": "frontend_src_components_admin_daytimetable_placedchip",
-      "community": 64,
-      "community_name": "src / api (2)",
+      "community": 16,
+      "community_name": "Room Closure Management",
       "norm_label": "placedchip"
     },
     {
@@ -2882,8 +2882,8 @@
       "source_location": "L123",
       "_origin": "ast",
       "id": "frontend_src_components_admin_daytimetable_minutesof",
-      "community": 64,
-      "community_name": "src / api (2)",
+      "community": 16,
+      "community_name": "Room Closure Management",
       "norm_label": "minutesof()"
     },
     {
@@ -2893,8 +2893,8 @@
       "source_location": "L128",
       "_origin": "ast",
       "id": "frontend_src_components_admin_daytimetable_buildchips",
-      "community": 64,
-      "community_name": "src / api (2)",
+      "community": 16,
+      "community_name": "Room Closure Management",
       "norm_label": "buildchips()"
     },
     {
@@ -2904,8 +2904,8 @@
       "source_location": "L167",
       "_origin": "ast",
       "id": "frontend_src_components_admin_daytimetable_placechips",
-      "community": 64,
-      "community_name": "src / api (2)",
+      "community": 16,
+      "community_name": "Room Closure Management",
       "norm_label": "placechips()"
     },
     {
@@ -2915,8 +2915,8 @@
       "source_location": "L208",
       "_origin": "ast",
       "id": "frontend_src_components_admin_daytimetable_formattime",
-      "community": 64,
-      "community_name": "src / api (2)",
+      "community": 16,
+      "community_name": "Room Closure Management",
       "norm_label": "formattime()"
     },
     {
@@ -2926,8 +2926,8 @@
       "source_location": "L215",
       "_origin": "ast",
       "id": "frontend_src_components_admin_daytimetable_daytimetable",
-      "community": 64,
-      "community_name": "src / api (2)",
+      "community": 16,
+      "community_name": "Room Closure Management",
       "norm_label": "daytimetable()"
     },
     {
@@ -3182,6 +3182,39 @@
       "community": 19,
       "community_name": "src / utils",
       "norm_label": "calendartile()"
+    },
+    {
+      "label": "DateRangeField.tsx",
+      "file_type": "code",
+      "source_file": "frontend/src/components/calendar/DateRangeField.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "frontend_src_components_calendar_daterangefield",
+      "community": 13,
+      "community_name": "Public Booking Frontend (1)",
+      "norm_label": "daterangefield.tsx"
+    },
+    {
+      "label": "Props",
+      "file_type": "code",
+      "source_file": "frontend/src/components/calendar/DateRangeField.tsx",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "frontend_src_components_calendar_daterangefield_props",
+      "community": 13,
+      "community_name": "Public Booking Frontend (1)",
+      "norm_label": "props"
+    },
+    {
+      "label": "DateRangeField()",
+      "file_type": "code",
+      "source_file": "frontend/src/components/calendar/DateRangeField.tsx",
+      "source_location": "L33",
+      "_origin": "ast",
+      "id": "frontend_src_components_calendar_daterangefield_daterangefield",
+      "community": 13,
+      "community_name": "Public Booking Frontend (1)",
+      "norm_label": "daterangefield()"
     },
     {
       "label": "MonthCalendar.tsx",
@@ -3729,8 +3762,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "frontend_src_main",
-      "community": 65,
-      "community_name": "Admin Tasks & Occupancy Pages",
+      "community": 53,
+      "community_name": "useAuth",
       "norm_label": "main.tsx"
     },
     {
@@ -3949,8 +3982,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "frontend_src_pages_admin_closurespage",
-      "community": 3,
-      "community_name": "src / api (1)",
+      "community": 53,
+      "community_name": "useAuth",
       "norm_label": "closurespage.tsx"
     },
     {
@@ -3960,8 +3993,8 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "frontend_src_pages_admin_closurespage_closureformstate",
-      "community": 3,
-      "community_name": "src / api (1)",
+      "community": 53,
+      "community_name": "useAuth",
       "norm_label": "closureformstate"
     },
     {
@@ -3971,8 +4004,8 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "frontend_src_pages_admin_closurespage_emptyform",
-      "community": 3,
-      "community_name": "src / api (1)",
+      "community": 53,
+      "community_name": "useAuth",
       "norm_label": "emptyform"
     },
     {
@@ -3982,8 +4015,8 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "frontend_src_pages_admin_closurespage_closurespage",
-      "community": 3,
-      "community_name": "src / api (1)",
+      "community": 53,
+      "community_name": "useAuth",
       "norm_label": "closurespage()"
     },
     {
@@ -4070,8 +4103,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "frontend_src_pages_admin_occupancypage",
-      "community": 19,
-      "community_name": "src / utils",
+      "community": 3,
+      "community_name": "src / api (1)",
       "norm_label": "occupancypage.tsx"
     },
     {
@@ -4081,8 +4114,8 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "frontend_src_pages_admin_occupancypage_occupancypage",
-      "community": 19,
-      "community_name": "src / utils",
+      "community": 3,
+      "community_name": "src / api (1)",
       "norm_label": "occupancypage()"
     },
     {
@@ -4092,8 +4125,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "frontend_src_pages_admin_roomspage",
-      "community": 3,
-      "community_name": "src / api (1)",
+      "community": 53,
+      "community_name": "useAuth",
       "norm_label": "roomspage.tsx"
     },
     {
@@ -4103,8 +4136,8 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "frontend_src_pages_admin_roomspage_roomformstate",
-      "community": 3,
-      "community_name": "src / api (1)",
+      "community": 53,
+      "community_name": "useAuth",
       "norm_label": "roomformstate"
     },
     {
@@ -4114,8 +4147,8 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "frontend_src_pages_admin_roomspage_emptyform",
-      "community": 3,
-      "community_name": "src / api (1)",
+      "community": 53,
+      "community_name": "useAuth",
       "norm_label": "emptyform"
     },
     {
@@ -4125,8 +4158,8 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "frontend_src_pages_admin_roomspage_roomspage",
-      "community": 3,
-      "community_name": "src / api (1)",
+      "community": 53,
+      "community_name": "useAuth",
       "norm_label": "roomspage()"
     },
     {
@@ -4180,8 +4213,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "frontend_src_pages_admin_taskspage",
-      "community": 65,
-      "community_name": "Admin Tasks & Occupancy Pages",
+      "community": 3,
+      "community_name": "src / api (1)",
       "norm_label": "taskspage.tsx"
     },
     {
@@ -4191,8 +4224,8 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "frontend_src_pages_admin_taskspage_taskspage",
-      "community": 65,
-      "community_name": "Admin Tasks & Occupancy Pages",
+      "community": 3,
+      "community_name": "src / api (1)",
       "norm_label": "taskspage()"
     },
     {
@@ -4499,8 +4532,8 @@
       "source_location": "L106",
       "_origin": "ast",
       "id": "frontend_src_utils_dates_totimeinput",
-      "community": 13,
-      "community_name": "Public Booking Frontend (1)",
+      "community": 16,
+      "community_name": "Room Closure Management",
       "norm_label": "totimeinput()"
     },
     {
@@ -4521,8 +4554,8 @@
       "source_location": "L116",
       "_origin": "ast",
       "id": "frontend_src_utils_dates_formattimerange",
-      "community": 19,
-      "community_name": "src / utils",
+      "community": 16,
+      "community_name": "Room Closure Management",
       "norm_label": "formattimerange()"
     },
     {
@@ -5974,8 +6007,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_api_controllers_admin_closurescontroller_campcenter_api_controllers_admin_closurescontroller",
-      "community": 36,
-      "community_name": "Validator Unit Tests",
+      "community": 23,
+      "community_name": "Camp Session Management",
       "norm_label": "closurescontroller"
     },
     {
@@ -5985,8 +6018,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_api_controllers_admin_closurescontroller_cs_ivalidator",
-      "community": 36,
-      "community_name": "Validator Unit Tests",
+      "community": 23,
+      "community_name": "Camp Session Management",
       "norm_label": "ivalidator"
     },
     {
@@ -6002,8 +6035,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_api_controllers_admin_closurescontroller_campcenter_api_controllers_admin_closurescontroller_getall",
-      "community": 36,
-      "community_name": "Validator Unit Tests",
+      "community": 23,
+      "community_name": "Camp Session Management",
       "norm_label": ".getall()"
     },
     {
@@ -6013,8 +6046,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_api_controllers_admin_closurescontroller_cs_cancellationtoken",
-      "community": 36,
-      "community_name": "Validator Unit Tests",
+      "community": 23,
+      "community_name": "Camp Session Management",
       "norm_label": "cancellationtoken"
     },
     {
@@ -6024,8 +6057,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_api_controllers_admin_closurescontroller_cs_task",
-      "community": 36,
-      "community_name": "Validator Unit Tests",
+      "community": 23,
+      "community_name": "Camp Session Management",
       "norm_label": "task"
     },
     {
@@ -6035,8 +6068,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_api_controllers_admin_closurescontroller_cs_iactionresult",
-      "community": 36,
-      "community_name": "Validator Unit Tests",
+      "community": 23,
+      "community_name": "Camp Session Management",
       "norm_label": "iactionresult"
     },
     {
@@ -6046,8 +6079,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_api_controllers_admin_closurescontroller_cs_httpget",
-      "community": 36,
-      "community_name": "Validator Unit Tests",
+      "community": 23,
+      "community_name": "Camp Session Management",
       "norm_label": "httpget"
     },
     {
@@ -6057,8 +6090,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_api_controllers_admin_closurescontroller_cs_producesresponsetype",
-      "community": 36,
-      "community_name": "Validator Unit Tests",
+      "community": 23,
+      "community_name": "Camp Session Management",
       "norm_label": "producesresponsetype"
     },
     {
@@ -6074,8 +6107,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_api_controllers_admin_closurescontroller_campcenter_api_controllers_admin_closurescontroller_create",
-      "community": 36,
-      "community_name": "Validator Unit Tests",
+      "community": 23,
+      "community_name": "Camp Session Management",
       "norm_label": ".create()"
     },
     {
@@ -6085,8 +6118,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_api_controllers_admin_closurescontroller_cs_httppost",
-      "community": 36,
-      "community_name": "Validator Unit Tests",
+      "community": 23,
+      "community_name": "Camp Session Management",
       "norm_label": "httppost"
     },
     {
@@ -6102,8 +6135,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_api_controllers_admin_closurescontroller_campcenter_api_controllers_admin_closurescontroller_update",
-      "community": 36,
-      "community_name": "Validator Unit Tests",
+      "community": 23,
+      "community_name": "Camp Session Management",
       "norm_label": ".update()"
     },
     {
@@ -6113,8 +6146,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_api_controllers_admin_closurescontroller_cs_guid",
-      "community": 36,
-      "community_name": "Validator Unit Tests",
+      "community": 23,
+      "community_name": "Camp Session Management",
       "norm_label": "guid"
     },
     {
@@ -6124,8 +6157,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_api_controllers_admin_closurescontroller_cs_httpput",
-      "community": 36,
-      "community_name": "Validator Unit Tests",
+      "community": 23,
+      "community_name": "Camp Session Management",
       "norm_label": "httpput"
     },
     {
@@ -6141,8 +6174,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_api_controllers_admin_closurescontroller_campcenter_api_controllers_admin_closurescontroller_delete",
-      "community": 36,
-      "community_name": "Validator Unit Tests",
+      "community": 23,
+      "community_name": "Camp Session Management",
       "norm_label": ".delete()"
     },
     {
@@ -6152,8 +6185,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_api_controllers_admin_closurescontroller_cs_httpdelete",
-      "community": 36,
-      "community_name": "Validator Unit Tests",
+      "community": 23,
+      "community_name": "Camp Session Management",
       "norm_label": "httpdelete"
     },
     {
@@ -6464,8 +6497,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_api_controllers_admin_mealtimescontroller_campcenter_api_controllers_admin_mealtimescontroller",
-      "community": 23,
-      "community_name": "Camp Session Management",
+      "community": 46,
+      "community_name": "JWT Token Service",
       "norm_label": "mealtimescontroller"
     },
     {
@@ -6475,8 +6508,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_api_controllers_admin_mealtimescontroller_cs_ivalidator",
-      "community": 23,
-      "community_name": "Camp Session Management",
+      "community": 46,
+      "community_name": "JWT Token Service",
       "norm_label": "ivalidator"
     },
     {
@@ -6492,8 +6525,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_api_controllers_admin_mealtimescontroller_campcenter_api_controllers_admin_mealtimescontroller_getall",
-      "community": 23,
-      "community_name": "Camp Session Management",
+      "community": 46,
+      "community_name": "JWT Token Service",
       "norm_label": ".getall()"
     },
     {
@@ -6503,8 +6536,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_api_controllers_admin_mealtimescontroller_cs_cancellationtoken",
-      "community": 23,
-      "community_name": "Camp Session Management",
+      "community": 46,
+      "community_name": "JWT Token Service",
       "norm_label": "cancellationtoken"
     },
     {
@@ -6514,8 +6547,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_api_controllers_admin_mealtimescontroller_cs_task",
-      "community": 23,
-      "community_name": "Camp Session Management",
+      "community": 46,
+      "community_name": "JWT Token Service",
       "norm_label": "task"
     },
     {
@@ -6525,8 +6558,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_api_controllers_admin_mealtimescontroller_cs_iactionresult",
-      "community": 23,
-      "community_name": "Camp Session Management",
+      "community": 46,
+      "community_name": "JWT Token Service",
       "norm_label": "iactionresult"
     },
     {
@@ -6536,8 +6569,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_api_controllers_admin_mealtimescontroller_cs_httpget",
-      "community": 23,
-      "community_name": "Camp Session Management",
+      "community": 46,
+      "community_name": "JWT Token Service",
       "norm_label": "httpget"
     },
     {
@@ -6547,8 +6580,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_api_controllers_admin_mealtimescontroller_cs_producesresponsetype",
-      "community": 23,
-      "community_name": "Camp Session Management",
+      "community": 46,
+      "community_name": "JWT Token Service",
       "norm_label": "producesresponsetype"
     },
     {
@@ -6564,8 +6597,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_api_controllers_admin_mealtimescontroller_campcenter_api_controllers_admin_mealtimescontroller_create",
-      "community": 23,
-      "community_name": "Camp Session Management",
+      "community": 46,
+      "community_name": "JWT Token Service",
       "norm_label": ".create()"
     },
     {
@@ -6575,8 +6608,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_api_controllers_admin_mealtimescontroller_cs_httppost",
-      "community": 23,
-      "community_name": "Camp Session Management",
+      "community": 46,
+      "community_name": "JWT Token Service",
       "norm_label": "httppost"
     },
     {
@@ -6592,8 +6625,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_api_controllers_admin_mealtimescontroller_campcenter_api_controllers_admin_mealtimescontroller_update",
-      "community": 23,
-      "community_name": "Camp Session Management",
+      "community": 46,
+      "community_name": "JWT Token Service",
       "norm_label": ".update()"
     },
     {
@@ -6603,8 +6636,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_api_controllers_admin_mealtimescontroller_cs_guid",
-      "community": 23,
-      "community_name": "Camp Session Management",
+      "community": 46,
+      "community_name": "JWT Token Service",
       "norm_label": "guid"
     },
     {
@@ -6614,8 +6647,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_api_controllers_admin_mealtimescontroller_cs_httpput",
-      "community": 23,
-      "community_name": "Camp Session Management",
+      "community": 46,
+      "community_name": "JWT Token Service",
       "norm_label": "httpput"
     },
     {
@@ -6631,8 +6664,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_api_controllers_admin_mealtimescontroller_campcenter_api_controllers_admin_mealtimescontroller_delete",
-      "community": 23,
-      "community_name": "Camp Session Management",
+      "community": 46,
+      "community_name": "JWT Token Service",
       "norm_label": ".delete()"
     },
     {
@@ -6642,8 +6675,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_api_controllers_admin_mealtimescontroller_cs_httpdelete",
-      "community": 23,
-      "community_name": "Camp Session Management",
+      "community": 46,
+      "community_name": "JWT Token Service",
       "norm_label": "httpdelete"
     },
     {
@@ -7781,8 +7814,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_campcenter_api_controllers_authcontroller",
-      "community": 4,
-      "community_name": "CampCenter.UnitTests / Validators",
+      "community": 63,
+      "community_name": ".CreateClient",
       "norm_label": "authcontroller.cs"
     },
     {
@@ -7797,8 +7830,8 @@
       },
       "_origin": "ast",
       "id": "csharp_namespace:61fdb44198677c26",
-      "community": 4,
-      "community_name": "CampCenter.UnitTests / Validators",
+      "community": 63,
+      "community_name": ".CreateClient",
       "norm_label": "campcenter.api.controllers"
     },
     {
@@ -9101,8 +9134,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_campcenter_api_ratelimiting_ratelimitpolicies",
-      "community": 76,
-      "community_name": "CampCenter.Application.DTOs.Public",
+      "community": 63,
+      "community_name": ".CreateClient",
       "norm_label": "ratelimitpolicies.cs"
     },
     {
@@ -9117,8 +9150,8 @@
       },
       "_origin": "ast",
       "id": "csharp_namespace:2f55917646692924",
-      "community": 76,
-      "community_name": "CampCenter.Application.DTOs.Public",
+      "community": 63,
+      "community_name": ".CreateClient",
       "norm_label": "campcenter.api.ratelimiting"
     },
     {
@@ -9134,8 +9167,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_api_ratelimiting_ratelimitpolicies_campcenter_api_ratelimiting_ratelimitpolicies",
-      "community": 76,
-      "community_name": "CampCenter.Application.DTOs.Public",
+      "community": 63,
+      "community_name": ".CreateClient",
       "norm_label": "ratelimitpolicies"
     },
     {
@@ -9145,8 +9178,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_api_ratelimiting_ratelimitpolicies_cs_string",
-      "community": 76,
-      "community_name": "CampCenter.Application.DTOs.Public",
+      "community": 63,
+      "community_name": ".CreateClient",
       "norm_label": "string"
     },
     {
@@ -9390,8 +9423,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_application_dtos_adminpanel_adminpaneldtos_campcenter_application_dtos_adminpanel_createroomtaskrequestdto",
-      "community": 5,
-      "community_name": "Room Task Management (1)",
+      "community": 2,
+      "community_name": "Admin Bookings Controller & DTOs",
       "norm_label": "createroomtaskrequestdto"
     },
     {
@@ -9705,8 +9738,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_campcenter_application_dtos_closures_closuredtos",
-      "community": 36,
-      "community_name": "Validator Unit Tests",
+      "community": 23,
+      "community_name": "Camp Session Management",
       "norm_label": "closuredtos.cs"
     },
     {
@@ -9755,8 +9788,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_application_dtos_closures_closuredtos_campcenter_application_dtos_closures_createclosurerequestdto",
-      "community": 36,
-      "community_name": "Validator Unit Tests",
+      "community": 23,
+      "community_name": "Camp Session Management",
       "norm_label": "createclosurerequestdto"
     },
     {
@@ -9772,8 +9805,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_application_dtos_closures_closuredtos_campcenter_application_dtos_closures_updateclosurerequestdto",
-      "community": 36,
-      "community_name": "Validator Unit Tests",
+      "community": 23,
+      "community_name": "Camp Session Management",
       "norm_label": "updateclosurerequestdto"
     },
     {
@@ -10024,8 +10057,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_campcenter_application_dtos_schedule_mealtimedtos",
-      "community": 0,
-      "community_name": "DTOs / Schedule (1)",
+      "community": 46,
+      "community_name": "JWT Token Service",
       "norm_label": "mealtimedtos.cs"
     },
     {
@@ -10057,8 +10090,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_application_dtos_schedule_mealtimedtos_campcenter_application_dtos_schedule_mealtimedefaultdto",
-      "community": 14,
-      "community_name": "CampCenter.UnitTests / Services (1)",
+      "community": 26,
+      "community_name": "CampCenter.Domain / Repositories (2)",
       "norm_label": "mealtimedefaultdto"
     },
     {
@@ -10074,8 +10107,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_application_dtos_schedule_mealtimedtos_campcenter_application_dtos_schedule_createmealtimedefaultrequestdto",
-      "community": 23,
-      "community_name": "Camp Session Management",
+      "community": 46,
+      "community_name": "JWT Token Service",
       "norm_label": "createmealtimedefaultrequestdto"
     },
     {
@@ -10091,8 +10124,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_application_dtos_schedule_mealtimedtos_campcenter_application_dtos_schedule_updatemealtimedefaultrequestdto",
-      "community": 74,
-      "community_name": "PasswordRules",
+      "community": 46,
+      "community_name": "JWT Token Service",
       "norm_label": "updatemealtimedefaultrequestdto"
     },
     {
@@ -10108,8 +10141,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_application_dtos_schedule_mealtimedtos_campcenter_application_dtos_schedule_deletemealtimedefaultresultdto",
-      "community": 23,
-      "community_name": "Camp Session Management",
+      "community": 46,
+      "community_name": "JWT Token Service",
       "norm_label": "deletemealtimedefaultresultdto"
     },
     {
@@ -10125,8 +10158,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_application_dtos_schedule_mealtimedtos_campcenter_application_dtos_schedule_neighboursittingdto",
-      "community": 0,
-      "community_name": "DTOs / Schedule (1)",
+      "community": 46,
+      "community_name": "JWT Token Service",
       "norm_label": "neighboursittingdto"
     },
     {
@@ -10159,8 +10192,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_application_dtos_schedule_mealtimedtos_campcenter_application_dtos_schedule_setbookingmealtimerequestdto",
-      "community": 0,
-      "community_name": "DTOs / Schedule (1)",
+      "community": 46,
+      "community_name": "JWT Token Service",
       "norm_label": "setbookingmealtimerequestdto"
     },
     {
@@ -10176,8 +10209,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_application_dtos_schedule_mealtimedtos_campcenter_application_dtos_schedule_deletebookingmealsresultdto",
-      "community": 0,
-      "community_name": "DTOs / Schedule (1)",
+      "community": 46,
+      "community_name": "JWT Token Service",
       "norm_label": "deletebookingmealsresultdto"
     },
     {
@@ -10374,8 +10407,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_application_dtos_schedule_scheduledtos_campcenter_application_dtos_schedule_updatescheduleentryrequestdto",
-      "community": 74,
-      "community_name": "PasswordRules",
+      "community": 0,
+      "community_name": "DTOs / Schedule (1)",
       "norm_label": "updatescheduleentryrequestdto"
     },
     {
@@ -10493,8 +10526,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_application_dtos_schedule_scheduledtos_campcenter_application_dtos_schedule_updatedietarynotesrequestdto",
-      "community": 74,
-      "community_name": "PasswordRules",
+      "community": 2,
+      "community_name": "Admin Bookings Controller & DTOs",
       "norm_label": "updatedietarynotesrequestdto"
     },
     {
@@ -10555,8 +10588,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_campcenter_application_dtos_users_userdtos",
-      "community": 27,
-      "community_name": "Booking Persistence & Entities (1)",
+      "community": 47,
+      "community_name": "tests / CampCenter.IntegrationTests (2)",
       "norm_label": "userdtos.cs"
     },
     {
@@ -10605,8 +10638,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_application_dtos_users_userdtos_campcenter_application_dtos_users_createuserrequestdto",
-      "community": 27,
-      "community_name": "Booking Persistence & Entities (1)",
+      "community": 47,
+      "community_name": "tests / CampCenter.IntegrationTests (2)",
       "norm_label": "createuserrequestdto"
     },
     {
@@ -10622,8 +10655,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_application_dtos_users_userdtos_campcenter_application_dtos_users_setuserrolerequestdto",
-      "community": 27,
-      "community_name": "Booking Persistence & Entities (1)",
+      "community": 47,
+      "community_name": "tests / CampCenter.IntegrationTests (2)",
       "norm_label": "setuserrolerequestdto"
     },
     {
@@ -11389,8 +11422,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_campcenter_application_interfaces_iclosureservice",
-      "community": 36,
-      "community_name": "Validator Unit Tests",
+      "community": 23,
+      "community_name": "Camp Session Management",
       "norm_label": "iclosureservice.cs"
     },
     {
@@ -11406,8 +11439,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_application_interfaces_iclosureservice_campcenter_application_interfaces_iclosureservice",
-      "community": 36,
-      "community_name": "Validator Unit Tests",
+      "community": 23,
+      "community_name": "Camp Session Management",
       "norm_label": "iclosureservice"
     },
     {
@@ -11423,8 +11456,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_application_interfaces_iclosureservice_campcenter_application_interfaces_iclosureservice_getallasync",
-      "community": 36,
-      "community_name": "Validator Unit Tests",
+      "community": 23,
+      "community_name": "Camp Session Management",
       "norm_label": ".getallasync()"
     },
     {
@@ -11434,8 +11467,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_application_interfaces_iclosureservice_cs_cancellationtoken",
-      "community": 36,
-      "community_name": "Validator Unit Tests",
+      "community": 23,
+      "community_name": "Camp Session Management",
       "norm_label": "cancellationtoken"
     },
     {
@@ -11445,8 +11478,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_application_interfaces_iclosureservice_cs_task",
-      "community": 36,
-      "community_name": "Validator Unit Tests",
+      "community": 23,
+      "community_name": "Camp Session Management",
       "norm_label": "task"
     },
     {
@@ -11456,8 +11489,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_application_interfaces_iclosureservice_cs_list",
-      "community": 36,
-      "community_name": "Validator Unit Tests",
+      "community": 23,
+      "community_name": "Camp Session Management",
       "norm_label": "list"
     },
     {
@@ -11473,8 +11506,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_application_interfaces_iclosureservice_campcenter_application_interfaces_iclosureservice_createasync",
-      "community": 36,
-      "community_name": "Validator Unit Tests",
+      "community": 23,
+      "community_name": "Camp Session Management",
       "norm_label": ".createasync()"
     },
     {
@@ -11490,8 +11523,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_application_interfaces_iclosureservice_campcenter_application_interfaces_iclosureservice_updateasync",
-      "community": 36,
-      "community_name": "Validator Unit Tests",
+      "community": 23,
+      "community_name": "Camp Session Management",
       "norm_label": ".updateasync()"
     },
     {
@@ -11501,8 +11534,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_application_interfaces_iclosureservice_cs_guid",
-      "community": 36,
-      "community_name": "Validator Unit Tests",
+      "community": 23,
+      "community_name": "Camp Session Management",
       "norm_label": "guid"
     },
     {
@@ -11518,8 +11551,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_application_interfaces_iclosureservice_campcenter_application_interfaces_iclosureservice_deleteasync",
-      "community": 36,
-      "community_name": "Validator Unit Tests",
+      "community": 23,
+      "community_name": "Camp Session Management",
       "norm_label": ".deleteasync()"
     },
     {
@@ -11753,8 +11786,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_application_interfaces_imealtimeservice_campcenter_application_interfaces_imealtimeservice",
-      "community": 23,
-      "community_name": "Camp Session Management",
+      "community": 46,
+      "community_name": "JWT Token Service",
       "norm_label": "imealtimeservice"
     },
     {
@@ -11770,8 +11803,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_application_interfaces_imealtimeservice_campcenter_application_interfaces_imealtimeservice_getallasync",
-      "community": 23,
-      "community_name": "Camp Session Management",
+      "community": 46,
+      "community_name": "JWT Token Service",
       "norm_label": ".getallasync()"
     },
     {
@@ -11781,8 +11814,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_application_interfaces_imealtimeservice_cs_cancellationtoken",
-      "community": 23,
-      "community_name": "Camp Session Management",
+      "community": 46,
+      "community_name": "JWT Token Service",
       "norm_label": "cancellationtoken"
     },
     {
@@ -11792,8 +11825,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_application_interfaces_imealtimeservice_cs_task",
-      "community": 23,
-      "community_name": "Camp Session Management",
+      "community": 46,
+      "community_name": "JWT Token Service",
       "norm_label": "task"
     },
     {
@@ -11803,8 +11836,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_application_interfaces_imealtimeservice_cs_list",
-      "community": 23,
-      "community_name": "Camp Session Management",
+      "community": 46,
+      "community_name": "JWT Token Service",
       "norm_label": "list"
     },
     {
@@ -11820,8 +11853,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_application_interfaces_imealtimeservice_campcenter_application_interfaces_imealtimeservice_createasync",
-      "community": 23,
-      "community_name": "Camp Session Management",
+      "community": 46,
+      "community_name": "JWT Token Service",
       "norm_label": ".createasync()"
     },
     {
@@ -11837,8 +11870,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_application_interfaces_imealtimeservice_campcenter_application_interfaces_imealtimeservice_updateasync",
-      "community": 23,
-      "community_name": "Camp Session Management",
+      "community": 46,
+      "community_name": "JWT Token Service",
       "norm_label": ".updateasync()"
     },
     {
@@ -11848,8 +11881,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_application_interfaces_imealtimeservice_cs_guid",
-      "community": 23,
-      "community_name": "Camp Session Management",
+      "community": 46,
+      "community_name": "JWT Token Service",
       "norm_label": "guid"
     },
     {
@@ -11865,8 +11898,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_application_interfaces_imealtimeservice_campcenter_application_interfaces_imealtimeservice_deleteasync",
-      "community": 23,
-      "community_name": "Camp Session Management",
+      "community": 46,
+      "community_name": "JWT Token Service",
       "norm_label": ".deleteasync()"
     },
     {
@@ -12826,8 +12859,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_application_interfaces_itokenservice_campcenter_application_interfaces_itokenservice",
-      "community": 41,
-      "community_name": "Auth Service & Tokens",
+      "community": 57,
+      "community_name": "Admin Booking & Notifications (4)",
       "norm_label": "itokenservice"
     },
     {
@@ -12877,8 +12910,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_application_interfaces_itokenservice_campcenter_application_interfaces_itokenservice_hashrefreshtoken",
-      "community": 41,
-      "community_name": "Auth Service & Tokens",
+      "community": 57,
+      "community_name": "Admin Booking & Notifications (4)",
       "norm_label": ".hashrefreshtoken()"
     },
     {
@@ -13028,8 +13061,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_campcenter_application_models_accesstoken",
-      "community": 46,
-      "community_name": "JWT Token Service",
+      "community": 39,
+      "community_name": "Admin User & Token Config",
       "norm_label": "accesstoken.cs"
     },
     {
@@ -13061,8 +13094,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_application_models_accesstoken_campcenter_application_models_accesstoken",
-      "community": 46,
-      "community_name": "JWT Token Service",
+      "community": 39,
+      "community_name": "Admin User & Token Config",
       "norm_label": "accesstoken"
     },
     {
@@ -13167,8 +13200,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_campcenter_application_models_schedulesettings",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 72,
+      "community_name": "ScheduleSettings",
       "norm_label": "schedulesettings.cs"
     },
     {
@@ -13184,8 +13217,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_application_models_schedulesettings_campcenter_application_models_schedulesettings",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 72,
+      "community_name": "ScheduleSettings",
       "norm_label": "schedulesettings"
     },
     {
@@ -13195,8 +13228,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_application_models_schedulesettings_cs_string",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 72,
+      "community_name": "ScheduleSettings",
       "norm_label": "string"
     },
     {
@@ -13206,8 +13239,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_application_models_schedulesettings_cs_timeonly",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 72,
+      "community_name": "ScheduleSettings",
       "norm_label": "timeonly"
     },
     {
@@ -13840,8 +13873,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_application_services_availabilityservice_campcenter_application_services_availabilityservice",
-      "community": 1,
-      "community_name": "Room Management",
+      "community": 36,
+      "community_name": "Validator Unit Tests",
       "norm_label": "availabilityservice"
     },
     {
@@ -13857,8 +13890,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_application_services_availabilityservice_campcenter_application_services_availabilityservice_getavailabilityasync",
-      "community": 1,
-      "community_name": "Room Management",
+      "community": 36,
+      "community_name": "Validator Unit Tests",
       "norm_label": ".getavailabilityasync()"
     },
     {
@@ -13868,8 +13901,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_application_services_availabilityservice_cs_dateonly",
-      "community": 1,
-      "community_name": "Room Management",
+      "community": 36,
+      "community_name": "Validator Unit Tests",
       "norm_label": "dateonly"
     },
     {
@@ -13879,8 +13912,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_application_services_availabilityservice_cs_cancellationtoken",
-      "community": 1,
-      "community_name": "Room Management",
+      "community": 36,
+      "community_name": "Validator Unit Tests",
       "norm_label": "cancellationtoken"
     },
     {
@@ -13890,8 +13923,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_application_services_availabilityservice_cs_task",
-      "community": 1,
-      "community_name": "Room Management",
+      "community": 36,
+      "community_name": "Validator Unit Tests",
       "norm_label": "task"
     },
     {
@@ -13901,8 +13934,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_application_services_availabilityservice_cs_int",
-      "community": 1,
-      "community_name": "Room Management",
+      "community": 36,
+      "community_name": "Validator Unit Tests",
       "norm_label": "int"
     },
     {
@@ -13918,8 +13951,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_application_services_availabilityservice_campcenter_application_services_availabilityservice_getcalendarasync",
-      "community": 1,
-      "community_name": "Room Management",
+      "community": 36,
+      "community_name": "Validator Unit Tests",
       "norm_label": ".getcalendarasync()"
     },
     {
@@ -13935,8 +13968,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_application_services_availabilityservice_campcenter_application_services_availabilityservice_getfreeroomsbycapacityasync",
-      "community": 1,
-      "community_name": "Room Management",
+      "community": 36,
+      "community_name": "Validator Unit Tests",
       "norm_label": ".getfreeroomsbycapacityasync()"
     },
     {
@@ -13946,8 +13979,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_application_services_availabilityservice_cs_guid",
-      "community": 1,
-      "community_name": "Room Management",
+      "community": 36,
+      "community_name": "Validator Unit Tests",
       "norm_label": "guid"
     },
     {
@@ -13957,8 +13990,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_application_services_availabilityservice_cs_dictionary",
-      "community": 1,
-      "community_name": "Room Management",
+      "community": 36,
+      "community_name": "Validator Unit Tests",
       "norm_label": "dictionary"
     },
     {
@@ -13974,8 +14007,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_application_services_availabilityservice_campcenter_application_services_availabilityservice_getcenterclosurereasonasync",
-      "community": 1,
-      "community_name": "Room Management",
+      "community": 36,
+      "community_name": "Validator Unit Tests",
       "norm_label": ".getcenterclosurereasonasync()"
     },
     {
@@ -13991,8 +14024,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_application_services_availabilityservice_campcenter_application_services_availabilityservice_getblockedroomidsasync",
-      "community": 1,
-      "community_name": "Room Management",
+      "community": 36,
+      "community_name": "Validator Unit Tests",
       "norm_label": ".getblockedroomidsasync()"
     },
     {
@@ -14002,8 +14035,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_application_services_availabilityservice_cs_hashset",
-      "community": 1,
-      "community_name": "Room Management",
+      "community": 36,
+      "community_name": "Validator Unit Tests",
       "norm_label": "hashset"
     },
     {
@@ -14951,8 +14984,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_campcenter_application_services_mealgenerationplanner",
-      "community": 14,
-      "community_name": "CampCenter.UnitTests / Services (1)",
+      "community": 18,
+      "community_name": "Domain & Infra Namespaces",
       "norm_label": "mealgenerationplanner.cs"
     },
     {
@@ -15208,8 +15241,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_campcenter_application_services_mealtimeservice",
-      "community": 28,
-      "community_name": "Application Namespaces & DTOs",
+      "community": 31,
+      "community_name": "Public Booking Service (2)",
       "norm_label": "mealtimeservice.cs"
     },
     {
@@ -15225,8 +15258,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_application_services_mealtimeservice_campcenter_application_services_mealtimeservice",
-      "community": 14,
-      "community_name": "CampCenter.UnitTests / Services (1)",
+      "community": 26,
+      "community_name": "CampCenter.Domain / Repositories (2)",
       "norm_label": "mealtimeservice"
     },
     {
@@ -15242,8 +15275,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_application_services_mealtimeservice_campcenter_application_services_mealtimeservice_getallasync",
-      "community": 14,
-      "community_name": "CampCenter.UnitTests / Services (1)",
+      "community": 26,
+      "community_name": "CampCenter.Domain / Repositories (2)",
       "norm_label": ".getallasync()"
     },
     {
@@ -15253,8 +15286,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_application_services_mealtimeservice_cs_cancellationtoken",
-      "community": 14,
-      "community_name": "CampCenter.UnitTests / Services (1)",
+      "community": 26,
+      "community_name": "CampCenter.Domain / Repositories (2)",
       "norm_label": "cancellationtoken"
     },
     {
@@ -15264,8 +15297,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_application_services_mealtimeservice_cs_task",
-      "community": 14,
-      "community_name": "CampCenter.UnitTests / Services (1)",
+      "community": 26,
+      "community_name": "CampCenter.Domain / Repositories (2)",
       "norm_label": "task"
     },
     {
@@ -15275,8 +15308,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_application_services_mealtimeservice_cs_list",
-      "community": 14,
-      "community_name": "CampCenter.UnitTests / Services (1)",
+      "community": 26,
+      "community_name": "CampCenter.Domain / Repositories (2)",
       "norm_label": "list"
     },
     {
@@ -15292,8 +15325,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_application_services_mealtimeservice_campcenter_application_services_mealtimeservice_createasync",
-      "community": 14,
-      "community_name": "CampCenter.UnitTests / Services (1)",
+      "community": 26,
+      "community_name": "CampCenter.Domain / Repositories (2)",
       "norm_label": ".createasync()"
     },
     {
@@ -15309,8 +15342,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_application_services_mealtimeservice_campcenter_application_services_mealtimeservice_updateasync",
-      "community": 14,
-      "community_name": "CampCenter.UnitTests / Services (1)",
+      "community": 26,
+      "community_name": "CampCenter.Domain / Repositories (2)",
       "norm_label": ".updateasync()"
     },
     {
@@ -15320,8 +15353,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_application_services_mealtimeservice_cs_guid",
-      "community": 14,
-      "community_name": "CampCenter.UnitTests / Services (1)",
+      "community": 26,
+      "community_name": "CampCenter.Domain / Repositories (2)",
       "norm_label": "guid"
     },
     {
@@ -15337,8 +15370,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_application_services_mealtimeservice_campcenter_application_services_mealtimeservice_deleteasync",
-      "community": 14,
-      "community_name": "CampCenter.UnitTests / Services (1)",
+      "community": 26,
+      "community_name": "CampCenter.Domain / Repositories (2)",
       "norm_label": ".deleteasync()"
     },
     {
@@ -15354,8 +15387,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_application_services_mealtimeservice_campcenter_application_services_mealtimeservice_guardtimes",
-      "community": 14,
-      "community_name": "CampCenter.UnitTests / Services (1)",
+      "community": 26,
+      "community_name": "CampCenter.Domain / Repositories (2)",
       "norm_label": ".guardtimes()"
     },
     {
@@ -15365,8 +15398,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_application_services_mealtimeservice_cs_timeonly",
-      "community": 14,
-      "community_name": "CampCenter.UnitTests / Services (1)",
+      "community": 26,
+      "community_name": "CampCenter.Domain / Repositories (2)",
       "norm_label": "timeonly"
     },
     {
@@ -15382,8 +15415,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_application_services_mealtimeservice_campcenter_application_services_mealtimeservice_parsemealkind",
-      "community": 14,
-      "community_name": "CampCenter.UnitTests / Services (1)",
+      "community": 26,
+      "community_name": "CampCenter.Domain / Repositories (2)",
       "norm_label": ".parsemealkind()"
     },
     {
@@ -15399,8 +15432,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_application_services_mealtimeservice_campcenter_application_services_mealtimeservice_getorthrowasync",
-      "community": 14,
-      "community_name": "CampCenter.UnitTests / Services (1)",
+      "community": 26,
+      "community_name": "CampCenter.Domain / Repositories (2)",
       "norm_label": ".getorthrowasync()"
     },
     {
@@ -15416,8 +15449,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_application_services_mealtimeservice_campcenter_application_services_mealtimeservice_todto",
-      "community": 14,
-      "community_name": "CampCenter.UnitTests / Services (1)",
+      "community": 26,
+      "community_name": "CampCenter.Domain / Repositories (2)",
       "norm_label": ".todto()"
     },
     {
@@ -15690,8 +15723,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_campcenter_application_services_roomservice",
-      "community": 18,
-      "community_name": "Domain & Infra Namespaces",
+      "community": 31,
+      "community_name": "Public Booking Service (2)",
       "norm_label": "roomservice.cs"
     },
     {
@@ -16364,8 +16397,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_application_services_scheduleservice_campcenter_application_services_scheduleservice_assignmealtimesasync",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 52,
+      "community_name": "BookingMealTime",
       "norm_label": ".assignmealtimesasync()"
     },
     {
@@ -16375,8 +16408,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_application_services_scheduleservice_cs_ireadonlylist",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 52,
+      "community_name": "BookingMealTime",
       "norm_label": "ireadonlylist"
     },
     {
@@ -16832,8 +16865,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_campcenter_application_validators_adminbookingvalidators",
-      "community": 74,
-      "community_name": "PasswordRules",
+      "community": 4,
+      "community_name": "CampCenter.UnitTests / Validators",
       "norm_label": "adminbookingvalidators.cs"
     },
     {
@@ -16848,8 +16881,8 @@
       },
       "_origin": "ast",
       "id": "csharp_namespace:42489816556698a6",
-      "community": 74,
-      "community_name": "PasswordRules",
+      "community": 4,
+      "community_name": "CampCenter.UnitTests / Validators",
       "norm_label": "campcenter.application.validators"
     },
     {
@@ -16876,8 +16909,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "abstractvalidator",
-      "community": 74,
-      "community_name": "PasswordRules",
+      "community": 23,
+      "community_name": "Camp Session Management",
       "norm_label": "abstractvalidator"
     },
     {
@@ -16887,8 +16920,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_campcenter_application_validators_closurevalidators",
-      "community": 74,
-      "community_name": "PasswordRules",
+      "community": 23,
+      "community_name": "Camp Session Management",
       "norm_label": "closurevalidators.cs"
     },
     {
@@ -16904,8 +16937,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_application_validators_closurevalidators_campcenter_application_validators_createclosurerequestvalidator",
-      "community": 36,
-      "community_name": "Validator Unit Tests",
+      "community": 23,
+      "community_name": "Camp Session Management",
       "norm_label": "createclosurerequestvalidator"
     },
     {
@@ -16921,8 +16954,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_application_validators_closurevalidators_campcenter_application_validators_updateclosurerequestvalidator",
-      "community": 74,
-      "community_name": "PasswordRules",
+      "community": 23,
+      "community_name": "Camp Session Management",
       "norm_label": "updateclosurerequestvalidator"
     },
     {
@@ -16932,8 +16965,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_campcenter_application_validators_createbookingrequestvalidator",
-      "community": 74,
-      "community_name": "PasswordRules",
+      "community": 4,
+      "community_name": "CampCenter.UnitTests / Validators",
       "norm_label": "createbookingrequestvalidator.cs"
     },
     {
@@ -16949,8 +16982,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_application_validators_createbookingrequestvalidator_campcenter_application_validators_createbookingrequestvalidator",
-      "community": 74,
-      "community_name": "PasswordRules",
+      "community": 4,
+      "community_name": "CampCenter.UnitTests / Validators",
       "norm_label": "createbookingrequestvalidator"
     },
     {
@@ -16988,8 +17021,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_campcenter_application_validators_mealtimevalidators",
-      "community": 74,
-      "community_name": "PasswordRules",
+      "community": 23,
+      "community_name": "Camp Session Management",
       "norm_label": "mealtimevalidators.cs"
     },
     {
@@ -17022,8 +17055,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_application_validators_mealtimevalidators_campcenter_application_validators_updatemealtimedefaultrequestvalidator",
-      "community": 74,
-      "community_name": "PasswordRules",
+      "community": 23,
+      "community_name": "Camp Session Management",
       "norm_label": "updatemealtimedefaultrequestvalidator"
     },
     {
@@ -17039,8 +17072,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_application_validators_mealtimevalidators_campcenter_application_validators_setbookingmealtimerequestvalidator",
-      "community": 0,
-      "community_name": "DTOs / Schedule (1)",
+      "community": 23,
+      "community_name": "Camp Session Management",
       "norm_label": "setbookingmealtimerequestvalidator"
     },
     {
@@ -17056,8 +17089,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_application_validators_mealtimevalidators_campcenter_application_validators_mealtimerules",
-      "community": 74,
-      "community_name": "PasswordRules",
+      "community": 23,
+      "community_name": "Camp Session Management",
       "norm_label": "mealtimerules"
     },
     {
@@ -17067,8 +17100,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_application_validators_mealtimevalidators_cs_string",
-      "community": 74,
-      "community_name": "PasswordRules",
+      "community": 23,
+      "community_name": "Camp Session Management",
       "norm_label": "string"
     },
     {
@@ -17084,8 +17117,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_application_validators_mealtimevalidators_campcenter_application_validators_mealtimerules_beamealkind",
-      "community": 74,
-      "community_name": "PasswordRules",
+      "community": 23,
+      "community_name": "Camp Session Management",
       "norm_label": ".beamealkind()"
     },
     {
@@ -17095,8 +17128,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_campcenter_application_validators_passwordrules",
-      "community": 26,
-      "community_name": "CampCenter.Domain / Repositories (2)",
+      "community": 4,
+      "community_name": "CampCenter.UnitTests / Validators",
       "norm_label": "passwordrules.cs"
     },
     {
@@ -17112,8 +17145,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_application_validators_passwordrules_campcenter_application_validators_passwordrules",
-      "community": 26,
-      "community_name": "CampCenter.Domain / Repositories (2)",
+      "community": 4,
+      "community_name": "CampCenter.UnitTests / Validators",
       "norm_label": "passwordrules"
     },
     {
@@ -17123,8 +17156,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_application_validators_passwordrules_cs_int",
-      "community": 26,
-      "community_name": "CampCenter.Domain / Repositories (2)",
+      "community": 4,
+      "community_name": "CampCenter.UnitTests / Validators",
       "norm_label": "int"
     },
     {
@@ -17140,8 +17173,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_application_validators_passwordrules_campcenter_application_validators_passwordrules_validpassword",
-      "community": 26,
-      "community_name": "CampCenter.Domain / Repositories (2)",
+      "community": 4,
+      "community_name": "CampCenter.UnitTests / Validators",
       "norm_label": ".validpassword()"
     },
     {
@@ -17151,8 +17184,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_application_validators_passwordrules_cs_irulebuilder",
-      "community": 26,
-      "community_name": "CampCenter.Domain / Repositories (2)",
+      "community": 4,
+      "community_name": "CampCenter.UnitTests / Validators",
       "norm_label": "irulebuilder"
     },
     {
@@ -17162,8 +17195,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_application_validators_passwordrules_cs_irulebuilderoptions",
-      "community": 26,
-      "community_name": "CampCenter.Domain / Repositories (2)",
+      "community": 4,
+      "community_name": "CampCenter.UnitTests / Validators",
       "norm_label": "irulebuilderoptions"
     },
     {
@@ -17173,8 +17206,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_campcenter_application_validators_roomvalidators",
-      "community": 74,
-      "community_name": "PasswordRules",
+      "community": 1,
+      "community_name": "Room Management",
       "norm_label": "roomvalidators.cs"
     },
     {
@@ -17190,8 +17223,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_application_validators_roomvalidators_campcenter_application_validators_createroomrequestvalidator",
-      "community": 74,
-      "community_name": "PasswordRules",
+      "community": 1,
+      "community_name": "Room Management",
       "norm_label": "createroomrequestvalidator"
     },
     {
@@ -17218,8 +17251,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_campcenter_application_validators_schedulevalidators",
-      "community": 74,
-      "community_name": "PasswordRules",
+      "community": 4,
+      "community_name": "CampCenter.UnitTests / Validators",
       "norm_label": "schedulevalidators.cs"
     },
     {
@@ -17235,8 +17268,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_application_validators_schedulevalidators_campcenter_application_validators_createscheduleentryrequestvalidator",
-      "community": 74,
-      "community_name": "PasswordRules",
+      "community": 23,
+      "community_name": "Camp Session Management",
       "norm_label": "createscheduleentryrequestvalidator"
     },
     {
@@ -17252,8 +17285,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_application_validators_schedulevalidators_campcenter_application_validators_updatescheduleentryrequestvalidator",
-      "community": 74,
-      "community_name": "PasswordRules",
+      "community": 0,
+      "community_name": "DTOs / Schedule (1)",
       "norm_label": "updatescheduleentryrequestvalidator"
     },
     {
@@ -17269,8 +17302,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_application_validators_schedulevalidators_campcenter_application_validators_updatedietarynotesrequestvalidator",
-      "community": 74,
-      "community_name": "PasswordRules",
+      "community": 2,
+      "community_name": "Admin Bookings Controller & DTOs",
       "norm_label": "updatedietarynotesrequestvalidator"
     },
     {
@@ -17286,8 +17319,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_application_validators_schedulevalidators_campcenter_application_validators_schedulerules",
-      "community": 74,
-      "community_name": "PasswordRules",
+      "community": 4,
+      "community_name": "CampCenter.UnitTests / Validators",
       "norm_label": "schedulerules"
     },
     {
@@ -17297,8 +17330,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_application_validators_schedulevalidators_cs_string",
-      "community": 74,
-      "community_name": "PasswordRules",
+      "community": 4,
+      "community_name": "CampCenter.UnitTests / Validators",
       "norm_label": "string"
     },
     {
@@ -17314,8 +17347,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_application_validators_schedulevalidators_campcenter_application_validators_schedulerules_ismeal",
-      "community": 74,
-      "community_name": "PasswordRules",
+      "community": 4,
+      "community_name": "CampCenter.UnitTests / Validators",
       "norm_label": ".ismeal()"
     },
     {
@@ -17331,8 +17364,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_application_validators_schedulevalidators_campcenter_application_validators_schedulerules_beakind",
-      "community": 74,
-      "community_name": "PasswordRules",
+      "community": 4,
+      "community_name": "CampCenter.UnitTests / Validators",
       "norm_label": ".beakind()"
     },
     {
@@ -17348,8 +17381,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_application_validators_schedulevalidators_campcenter_application_validators_schedulerules_beamealkind",
-      "community": 74,
-      "community_name": "PasswordRules",
+      "community": 4,
+      "community_name": "CampCenter.UnitTests / Validators",
       "norm_label": ".beamealkind()"
     },
     {
@@ -17376,8 +17409,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_application_validators_uservalidators_campcenter_application_validators_createuserrequestvalidator",
-      "community": 74,
-      "community_name": "PasswordRules",
+      "community": 47,
+      "community_name": "tests / CampCenter.IntegrationTests (2)",
       "norm_label": "createuserrequestvalidator"
     },
     {
@@ -17393,8 +17426,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_application_validators_uservalidators_campcenter_application_validators_setuserrolerequestvalidator",
-      "community": 27,
-      "community_name": "Booking Persistence & Entities (1)",
+      "community": 47,
+      "community_name": "tests / CampCenter.IntegrationTests (2)",
       "norm_label": "setuserrolerequestvalidator"
     },
     {
@@ -17548,8 +17581,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_campcenter_domain_entities_adminuserrole",
-      "community": 39,
-      "community_name": "Admin User & Token Config",
+      "community": 6,
+      "community_name": "CampCenter.Application / Services (1)",
       "norm_label": "adminuserrole.cs"
     },
     {
@@ -17565,8 +17598,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_domain_entities_adminuserrole_campcenter_domain_entities_adminuserrole",
-      "community": 39,
-      "community_name": "Admin User & Token Config",
+      "community": 6,
+      "community_name": "CampCenter.Application / Services (1)",
       "norm_label": "adminuserrole"
     },
     {
@@ -17682,8 +17715,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_campcenter_domain_entities_bookinggroupcategory",
-      "community": 22,
-      "community_name": "CampCenter.Domain / Repositories (1)",
+      "community": 2,
+      "community_name": "Admin Bookings Controller & DTOs",
       "norm_label": "bookinggroupcategory.cs"
     },
     {
@@ -17699,8 +17732,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_domain_entities_bookinggroupcategory_campcenter_domain_entities_bookinggroupcategory",
-      "community": 22,
-      "community_name": "CampCenter.Domain / Repositories (1)",
+      "community": 2,
+      "community_name": "Admin Bookings Controller & DTOs",
       "norm_label": "bookinggroupcategory"
     },
     {
@@ -17710,8 +17743,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_campcenter_domain_entities_bookingmealtime",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 31,
+      "community_name": "Public Booking Service (2)",
       "norm_label": "bookingmealtime.cs"
     },
     {
@@ -17727,8 +17760,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_domain_entities_bookingmealtime_campcenter_domain_entities_bookingmealtime",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 52,
+      "community_name": "BookingMealTime",
       "norm_label": "bookingmealtime"
     },
     {
@@ -17738,8 +17771,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_domain_entities_bookingmealtime_cs_guid",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 52,
+      "community_name": "BookingMealTime",
       "norm_label": "guid"
     },
     {
@@ -17749,8 +17782,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_domain_entities_bookingmealtime_cs_timeonly",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 52,
+      "community_name": "BookingMealTime",
       "norm_label": "timeonly"
     },
     {
@@ -17760,8 +17793,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_domain_entities_bookingmealtime_cs_datetime",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 52,
+      "community_name": "BookingMealTime",
       "norm_label": "datetime"
     },
     {
@@ -17821,8 +17854,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_campcenter_domain_entities_bookingstatuses",
-      "community": 31,
-      "community_name": "Public Booking Service (2)",
+      "community": 20,
+      "community_name": "Integration Test Harness (1)",
       "norm_label": "bookingstatuses.cs"
     },
     {
@@ -17838,8 +17871,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_domain_entities_bookingstatuses_campcenter_domain_entities_bookingstatuses",
-      "community": 31,
-      "community_name": "Public Booking Service (2)",
+      "community": 20,
+      "community_name": "Integration Test Harness (1)",
       "norm_label": "bookingstatuses"
     },
     {
@@ -17910,8 +17943,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_campcenter_domain_entities_mealtimedefault",
-      "community": 14,
-      "community_name": "CampCenter.UnitTests / Services (1)",
+      "community": 26,
+      "community_name": "CampCenter.Domain / Repositories (2)",
       "norm_label": "mealtimedefault.cs"
     },
     {
@@ -17927,8 +17960,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_domain_entities_mealtimedefault_campcenter_domain_entities_mealkind",
-      "community": 14,
-      "community_name": "CampCenter.UnitTests / Services (1)",
+      "community": 26,
+      "community_name": "CampCenter.Domain / Repositories (2)",
       "norm_label": "mealkind"
     },
     {
@@ -17944,8 +17977,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_domain_entities_mealtimedefault_campcenter_domain_entities_mealtimedefault",
-      "community": 14,
-      "community_name": "CampCenter.UnitTests / Services (1)",
+      "community": 26,
+      "community_name": "CampCenter.Domain / Repositories (2)",
       "norm_label": "mealtimedefault"
     },
     {
@@ -17955,8 +17988,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_domain_entities_mealtimedefault_cs_guid",
-      "community": 14,
-      "community_name": "CampCenter.UnitTests / Services (1)",
+      "community": 26,
+      "community_name": "CampCenter.Domain / Repositories (2)",
       "norm_label": "guid"
     },
     {
@@ -17966,8 +17999,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_domain_entities_mealtimedefault_cs_timeonly",
-      "community": 14,
-      "community_name": "CampCenter.UnitTests / Services (1)",
+      "community": 26,
+      "community_name": "CampCenter.Domain / Repositories (2)",
       "norm_label": "timeonly"
     },
     {
@@ -17977,8 +18010,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_domain_entities_mealtimedefault_cs_datetime",
-      "community": 14,
-      "community_name": "CampCenter.UnitTests / Services (1)",
+      "community": 26,
+      "community_name": "CampCenter.Domain / Repositories (2)",
       "norm_label": "datetime"
     },
     {
@@ -18161,8 +18194,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_campcenter_domain_entities_roomcleaning",
-      "community": 37,
-      "community_name": "CampCenter.UnitTests / Services (2)",
+      "community": 64,
+      "community_name": "src / api (2)",
       "norm_label": "roomcleaning.cs"
     },
     {
@@ -18178,8 +18211,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_domain_entities_roomcleaning_campcenter_domain_entities_roomcleaningkind",
-      "community": 37,
-      "community_name": "CampCenter.UnitTests / Services (2)",
+      "community": 64,
+      "community_name": "src / api (2)",
       "norm_label": "roomcleaningkind"
     },
     {
@@ -18195,8 +18228,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_domain_entities_roomcleaning_campcenter_domain_entities_roomcleaningstatus",
-      "community": 37,
-      "community_name": "CampCenter.UnitTests / Services (2)",
+      "community": 64,
+      "community_name": "src / api (2)",
       "norm_label": "roomcleaningstatus"
     },
     {
@@ -18212,8 +18245,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_domain_entities_roomcleaning_campcenter_domain_entities_roomcleaning",
-      "community": 37,
-      "community_name": "CampCenter.UnitTests / Services (2)",
+      "community": 64,
+      "community_name": "src / api (2)",
       "norm_label": "roomcleaning"
     },
     {
@@ -18223,8 +18256,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_domain_entities_roomcleaning_cs_guid",
-      "community": 37,
-      "community_name": "CampCenter.UnitTests / Services (2)",
+      "community": 64,
+      "community_name": "src / api (2)",
       "norm_label": "guid"
     },
     {
@@ -18234,8 +18267,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_domain_entities_roomcleaning_cs_dateonly",
-      "community": 37,
-      "community_name": "CampCenter.UnitTests / Services (2)",
+      "community": 64,
+      "community_name": "src / api (2)",
       "norm_label": "dateonly"
     },
     {
@@ -18245,8 +18278,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_domain_entities_roomcleaning_cs_datetime",
-      "community": 37,
-      "community_name": "CampCenter.UnitTests / Services (2)",
+      "community": 64,
+      "community_name": "src / api (2)",
       "norm_label": "datetime"
     },
     {
@@ -18323,8 +18356,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_campcenter_domain_entities_scheduleentry",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 45,
+      "community_name": "ScheduleEntry",
       "norm_label": "scheduleentry.cs"
     },
     {
@@ -18340,8 +18373,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_domain_entities_scheduleentry_campcenter_domain_entities_scheduleentrykind",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 45,
+      "community_name": "ScheduleEntry",
       "norm_label": "scheduleentrykind"
     },
     {
@@ -18357,8 +18390,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_domain_entities_scheduleentry_campcenter_domain_entities_scheduleentry",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 45,
+      "community_name": "ScheduleEntry",
       "norm_label": "scheduleentry"
     },
     {
@@ -18368,8 +18401,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_domain_entities_scheduleentry_cs_guid",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 45,
+      "community_name": "ScheduleEntry",
       "norm_label": "guid"
     },
     {
@@ -18379,8 +18412,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_domain_entities_scheduleentry_cs_dateonly",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 45,
+      "community_name": "ScheduleEntry",
       "norm_label": "dateonly"
     },
     {
@@ -18390,8 +18423,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_domain_entities_scheduleentry_cs_timeonly",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 45,
+      "community_name": "ScheduleEntry",
       "norm_label": "timeonly"
     },
     {
@@ -18401,8 +18434,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_domain_entities_scheduleentry_cs_datetime",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 45,
+      "community_name": "ScheduleEntry",
       "norm_label": "datetime"
     },
     {
@@ -18758,8 +18791,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_domain_repositories_iadminuserrepository_campcenter_domain_repositories_iadminuserrepository_remove",
-      "community": 39,
-      "community_name": "Admin User & Token Config",
+      "community": 6,
+      "community_name": "CampCenter.Application / Services (1)",
       "norm_label": ".remove()"
     },
     {
@@ -18775,8 +18808,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_domain_repositories_iadminuserrepository_campcenter_domain_repositories_iadminuserrepository_savechangesasync",
-      "community": 6,
-      "community_name": "CampCenter.Application / Services (1)",
+      "community": 47,
+      "community_name": "tests / CampCenter.IntegrationTests (2)",
       "norm_label": ".savechangesasync()"
     },
     {
@@ -18803,8 +18836,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_domain_repositories_ibookingmealtimerepository_campcenter_domain_repositories_ibookingmealtimerepository",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 52,
+      "community_name": "BookingMealTime",
       "norm_label": "ibookingmealtimerepository"
     },
     {
@@ -18820,8 +18853,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_domain_repositories_ibookingmealtimerepository_campcenter_domain_repositories_ibookingmealtimerepository_listforbookingasync",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 52,
+      "community_name": "BookingMealTime",
       "norm_label": ".listforbookingasync()"
     },
     {
@@ -18831,8 +18864,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_domain_repositories_ibookingmealtimerepository_cs_guid",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 52,
+      "community_name": "BookingMealTime",
       "norm_label": "guid"
     },
     {
@@ -18842,8 +18875,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_domain_repositories_ibookingmealtimerepository_cs_cancellationtoken",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 52,
+      "community_name": "BookingMealTime",
       "norm_label": "cancellationtoken"
     },
     {
@@ -18853,8 +18886,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_domain_repositories_ibookingmealtimerepository_cs_task",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 52,
+      "community_name": "BookingMealTime",
       "norm_label": "task"
     },
     {
@@ -18864,8 +18897,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_domain_repositories_ibookingmealtimerepository_cs_list",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 52,
+      "community_name": "BookingMealTime",
       "norm_label": "list"
     },
     {
@@ -18881,8 +18914,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_domain_repositories_ibookingmealtimerepository_campcenter_domain_repositories_ibookingmealtimerepository_listforbookingsasync",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 52,
+      "community_name": "BookingMealTime",
       "norm_label": ".listforbookingsasync()"
     },
     {
@@ -18892,8 +18925,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_domain_repositories_ibookingmealtimerepository_cs_ireadonlycollection",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 52,
+      "community_name": "BookingMealTime",
       "norm_label": "ireadonlycollection"
     },
     {
@@ -18909,8 +18942,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_domain_repositories_ibookingmealtimerepository_campcenter_domain_repositories_ibookingmealtimerepository_getasync",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 52,
+      "community_name": "BookingMealTime",
       "norm_label": ".getasync()"
     },
     {
@@ -18926,8 +18959,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_domain_repositories_ibookingmealtimerepository_campcenter_domain_repositories_ibookingmealtimerepository_addasync",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 52,
+      "community_name": "BookingMealTime",
       "norm_label": ".addasync()"
     },
     {
@@ -18943,8 +18976,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_domain_repositories_ibookingmealtimerepository_campcenter_domain_repositories_ibookingmealtimerepository_remove",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 52,
+      "community_name": "BookingMealTime",
       "norm_label": ".remove()"
     },
     {
@@ -18960,8 +18993,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_domain_repositories_ibookingmealtimerepository_campcenter_domain_repositories_ibookingmealtimerepository_savechangesasync",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 52,
+      "community_name": "BookingMealTime",
       "norm_label": ".savechangesasync()"
     },
     {
@@ -19702,8 +19735,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_domain_repositories_imealtimedefaultrepository_campcenter_domain_repositories_imealtimedefaultrepository",
-      "community": 14,
-      "community_name": "CampCenter.UnitTests / Services (1)",
+      "community": 26,
+      "community_name": "CampCenter.Domain / Repositories (2)",
       "norm_label": "imealtimedefaultrepository"
     },
     {
@@ -19719,8 +19752,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_domain_repositories_imealtimedefaultrepository_campcenter_domain_repositories_imealtimedefaultrepository_getallasync",
-      "community": 14,
-      "community_name": "CampCenter.UnitTests / Services (1)",
+      "community": 26,
+      "community_name": "CampCenter.Domain / Repositories (2)",
       "norm_label": ".getallasync()"
     },
     {
@@ -19730,8 +19763,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_domain_repositories_imealtimedefaultrepository_cs_cancellationtoken",
-      "community": 14,
-      "community_name": "CampCenter.UnitTests / Services (1)",
+      "community": 26,
+      "community_name": "CampCenter.Domain / Repositories (2)",
       "norm_label": "cancellationtoken"
     },
     {
@@ -19741,8 +19774,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_domain_repositories_imealtimedefaultrepository_cs_task",
-      "community": 14,
-      "community_name": "CampCenter.UnitTests / Services (1)",
+      "community": 26,
+      "community_name": "CampCenter.Domain / Repositories (2)",
       "norm_label": "task"
     },
     {
@@ -19752,8 +19785,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_domain_repositories_imealtimedefaultrepository_cs_list",
-      "community": 14,
-      "community_name": "CampCenter.UnitTests / Services (1)",
+      "community": 26,
+      "community_name": "CampCenter.Domain / Repositories (2)",
       "norm_label": "list"
     },
     {
@@ -19769,8 +19802,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_domain_repositories_imealtimedefaultrepository_campcenter_domain_repositories_imealtimedefaultrepository_getactiveasync",
-      "community": 14,
-      "community_name": "CampCenter.UnitTests / Services (1)",
+      "community": 26,
+      "community_name": "CampCenter.Domain / Repositories (2)",
       "norm_label": ".getactiveasync()"
     },
     {
@@ -19786,8 +19819,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_domain_repositories_imealtimedefaultrepository_campcenter_domain_repositories_imealtimedefaultrepository_getbyidasync",
-      "community": 14,
-      "community_name": "CampCenter.UnitTests / Services (1)",
+      "community": 26,
+      "community_name": "CampCenter.Domain / Repositories (2)",
       "norm_label": ".getbyidasync()"
     },
     {
@@ -19797,8 +19830,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_domain_repositories_imealtimedefaultrepository_cs_guid",
-      "community": 14,
-      "community_name": "CampCenter.UnitTests / Services (1)",
+      "community": 26,
+      "community_name": "CampCenter.Domain / Repositories (2)",
       "norm_label": "guid"
     },
     {
@@ -19814,8 +19847,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_domain_repositories_imealtimedefaultrepository_campcenter_domain_repositories_imealtimedefaultrepository_isreferencedasync",
-      "community": 14,
-      "community_name": "CampCenter.UnitTests / Services (1)",
+      "community": 26,
+      "community_name": "CampCenter.Domain / Repositories (2)",
       "norm_label": ".isreferencedasync()"
     },
     {
@@ -19831,8 +19864,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_domain_repositories_imealtimedefaultrepository_campcenter_domain_repositories_imealtimedefaultrepository_addasync",
-      "community": 14,
-      "community_name": "CampCenter.UnitTests / Services (1)",
+      "community": 26,
+      "community_name": "CampCenter.Domain / Repositories (2)",
       "norm_label": ".addasync()"
     },
     {
@@ -19848,8 +19881,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_domain_repositories_imealtimedefaultrepository_campcenter_domain_repositories_imealtimedefaultrepository_remove",
-      "community": 14,
-      "community_name": "CampCenter.UnitTests / Services (1)",
+      "community": 26,
+      "community_name": "CampCenter.Domain / Repositories (2)",
       "norm_label": ".remove()"
     },
     {
@@ -19865,8 +19898,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_domain_repositories_imealtimedefaultrepository_campcenter_domain_repositories_imealtimedefaultrepository_savechangesasync",
-      "community": 14,
-      "community_name": "CampCenter.UnitTests / Services (1)",
+      "community": 26,
+      "community_name": "CampCenter.Domain / Repositories (2)",
       "norm_label": ".savechangesasync()"
     },
     {
@@ -20622,8 +20655,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_domain_repositories_ischeduleentryrepository_campcenter_domain_repositories_ischeduleentryrepository",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 45,
+      "community_name": "ScheduleEntry",
       "norm_label": "ischeduleentryrepository"
     },
     {
@@ -20639,8 +20672,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_domain_repositories_ischeduleentryrepository_campcenter_domain_repositories_ischeduleentryrepository_getbyidasync",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 45,
+      "community_name": "ScheduleEntry",
       "norm_label": ".getbyidasync()"
     },
     {
@@ -20650,8 +20683,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_domain_repositories_ischeduleentryrepository_cs_guid",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 45,
+      "community_name": "ScheduleEntry",
       "norm_label": "guid"
     },
     {
@@ -20661,8 +20694,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_domain_repositories_ischeduleentryrepository_cs_cancellationtoken",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 45,
+      "community_name": "ScheduleEntry",
       "norm_label": "cancellationtoken"
     },
     {
@@ -20672,8 +20705,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_domain_repositories_ischeduleentryrepository_cs_task",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 45,
+      "community_name": "ScheduleEntry",
       "norm_label": "task"
     },
     {
@@ -20689,8 +20722,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_domain_repositories_ischeduleentryrepository_campcenter_domain_repositories_ischeduleentryrepository_listfordateasync",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 45,
+      "community_name": "ScheduleEntry",
       "norm_label": ".listfordateasync()"
     },
     {
@@ -20700,8 +20733,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_domain_repositories_ischeduleentryrepository_cs_dateonly",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 45,
+      "community_name": "ScheduleEntry",
       "norm_label": "dateonly"
     },
     {
@@ -20711,8 +20744,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_domain_repositories_ischeduleentryrepository_cs_list",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 45,
+      "community_name": "ScheduleEntry",
       "norm_label": "list"
     },
     {
@@ -20728,8 +20761,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_domain_repositories_ischeduleentryrepository_campcenter_domain_repositories_ischeduleentryrepository_listforbookingasync",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 45,
+      "community_name": "ScheduleEntry",
       "norm_label": ".listforbookingasync()"
     },
     {
@@ -20745,8 +20778,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_domain_repositories_ischeduleentryrepository_campcenter_domain_repositories_ischeduleentryrepository_listgeneratedslotsasync",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 45,
+      "community_name": "ScheduleEntry",
       "norm_label": ".listgeneratedslotsasync()"
     },
     {
@@ -20756,8 +20789,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_domain_repositories_ischeduleentryrepository_cs_date",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 45,
+      "community_name": "ScheduleEntry",
       "norm_label": "date"
     },
     {
@@ -20767,8 +20800,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_domain_repositories_ischeduleentryrepository_cs_mealtimedefaultid",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 45,
+      "community_name": "ScheduleEntry",
       "norm_label": "mealtimedefaultid"
     },
     {
@@ -20784,8 +20817,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_domain_repositories_ischeduleentryrepository_campcenter_domain_repositories_ischeduleentryrepository_listfullysuppressedslotsasync",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 45,
+      "community_name": "ScheduleEntry",
       "norm_label": ".listfullysuppressedslotsasync()"
     },
     {
@@ -20795,8 +20828,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_domain_repositories_ischeduleentryrepository_cs_ireadonlycollection",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 45,
+      "community_name": "ScheduleEntry",
       "norm_label": "ireadonlycollection"
     },
     {
@@ -20806,8 +20839,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_domain_repositories_ischeduleentryrepository_cs_bookingid",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 45,
+      "community_name": "ScheduleEntry",
       "norm_label": "bookingid"
     },
     {
@@ -20823,8 +20856,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_domain_repositories_ischeduleentryrepository_campcenter_domain_repositories_ischeduleentryrepository_listvisibleslotspansasync",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 45,
+      "community_name": "ScheduleEntry",
       "norm_label": ".listvisibleslotspansasync()"
     },
     {
@@ -20834,8 +20867,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_domain_repositories_ischeduleentryrepository_cs_timeonly",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 45,
+      "community_name": "ScheduleEntry",
       "norm_label": "timeonly"
     },
     {
@@ -20845,8 +20878,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_domain_repositories_ischeduleentryrepository_cs_start",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 45,
+      "community_name": "ScheduleEntry",
       "norm_label": "start"
     },
     {
@@ -20856,8 +20889,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_domain_repositories_ischeduleentryrepository_cs_end",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 45,
+      "community_name": "ScheduleEntry",
       "norm_label": "end"
     },
     {
@@ -20873,8 +20906,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_domain_repositories_ischeduleentryrepository_campcenter_domain_repositories_ischeduleentryrepository_listlocationsasync",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 45,
+      "community_name": "ScheduleEntry",
       "norm_label": ".listlocationsasync()"
     },
     {
@@ -20890,8 +20923,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_domain_repositories_ischeduleentryrepository_campcenter_domain_repositories_ischeduleentryrepository_countbydateandkindasync",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 45,
+      "community_name": "ScheduleEntry",
       "norm_label": ".countbydateandkindasync()"
     },
     {
@@ -20901,8 +20934,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_domain_repositories_ischeduleentryrepository_cs_kind",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 45,
+      "community_name": "ScheduleEntry",
       "norm_label": "kind"
     },
     {
@@ -20912,8 +20945,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_domain_repositories_ischeduleentryrepository_cs_count",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 45,
+      "community_name": "ScheduleEntry",
       "norm_label": "count"
     },
     {
@@ -20929,8 +20962,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_domain_repositories_ischeduleentryrepository_campcenter_domain_repositories_ischeduleentryrepository_addrangeasync",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 45,
+      "community_name": "ScheduleEntry",
       "norm_label": ".addrangeasync()"
     },
     {
@@ -20946,8 +20979,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_domain_repositories_ischeduleentryrepository_campcenter_domain_repositories_ischeduleentryrepository_addasync",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 45,
+      "community_name": "ScheduleEntry",
       "norm_label": ".addasync()"
     },
     {
@@ -20963,8 +20996,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_domain_repositories_ischeduleentryrepository_campcenter_domain_repositories_ischeduleentryrepository_remove",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 45,
+      "community_name": "ScheduleEntry",
       "norm_label": ".remove()"
     },
     {
@@ -21069,8 +21102,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_auth_jwtsettings",
-      "community": 46,
-      "community_name": "JWT Token Service",
+      "community": 49,
+      "community_name": "Auth Controller (1)",
       "norm_label": "jwtsettings.cs"
     },
     {
@@ -21086,8 +21119,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_auth_jwtsettings_campcenter_infrastructure_auth_jwtsettings",
-      "community": 46,
-      "community_name": "JWT Token Service",
+      "community": 49,
+      "community_name": "Auth Controller (1)",
       "norm_label": "jwtsettings"
     },
     {
@@ -21097,8 +21130,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_auth_jwtsettings_cs_string",
-      "community": 46,
-      "community_name": "JWT Token Service",
+      "community": 49,
+      "community_name": "Auth Controller (1)",
       "norm_label": "string"
     },
     {
@@ -21125,8 +21158,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_auth_jwttokenservice_campcenter_infrastructure_auth_jwttokenservice",
-      "community": 46,
-      "community_name": "JWT Token Service",
+      "community": 49,
+      "community_name": "Auth Controller (1)",
       "norm_label": "jwttokenservice"
     },
     {
@@ -21136,8 +21169,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_auth_jwttokenservice_cs_string",
-      "community": 46,
-      "community_name": "JWT Token Service",
+      "community": 49,
+      "community_name": "Auth Controller (1)",
       "norm_label": "string"
     },
     {
@@ -21147,8 +21180,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_auth_jwttokenservice_cs_int",
-      "community": 46,
-      "community_name": "JWT Token Service",
+      "community": 49,
+      "community_name": "Auth Controller (1)",
       "norm_label": "int"
     },
     {
@@ -21164,8 +21197,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_auth_jwttokenservice_campcenter_infrastructure_auth_jwttokenservice_createaccesstoken",
-      "community": 46,
-      "community_name": "JWT Token Service",
+      "community": 39,
+      "community_name": "Admin User & Token Config",
       "norm_label": ".createaccesstoken()"
     },
     {
@@ -21181,8 +21214,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_auth_jwttokenservice_campcenter_infrastructure_auth_jwttokenservice_generaterefreshtoken",
-      "community": 46,
-      "community_name": "JWT Token Service",
+      "community": 49,
+      "community_name": "Auth Controller (1)",
       "norm_label": ".generaterefreshtoken()"
     },
     {
@@ -21198,8 +21231,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_auth_jwttokenservice_campcenter_infrastructure_auth_jwttokenservice_hashrefreshtoken",
-      "community": 46,
-      "community_name": "JWT Token Service",
+      "community": 49,
+      "community_name": "Auth Controller (1)",
       "norm_label": ".hashrefreshtoken()"
     },
     {
@@ -21209,8 +21242,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_auth_refreshtokensettings",
-      "community": 46,
-      "community_name": "JWT Token Service",
+      "community": 49,
+      "community_name": "Auth Controller (1)",
       "norm_label": "refreshtokensettings.cs"
     },
     {
@@ -21226,8 +21259,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_auth_refreshtokensettings_campcenter_infrastructure_auth_refreshtokensettings",
-      "community": 46,
-      "community_name": "JWT Token Service",
+      "community": 49,
+      "community_name": "Auth Controller (1)",
       "norm_label": "refreshtokensettings"
     },
     {
@@ -21237,8 +21270,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_auth_refreshtokensettings_cs_string",
-      "community": 46,
-      "community_name": "JWT Token Service",
+      "community": 49,
+      "community_name": "Auth Controller (1)",
       "norm_label": "string"
     },
     {
@@ -21956,8 +21989,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_persistence_configurations_adminuserconfiguration",
-      "community": 39,
-      "community_name": "Admin User & Token Config",
+      "community": 58,
+      "community_name": "Persistence / Configurations",
       "norm_label": "adminuserconfiguration.cs"
     },
     {
@@ -21989,8 +22022,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_persistence_configurations_adminuserconfiguration_campcenter_infrastructure_persistence_configurations_adminuserconfiguration",
-      "community": 39,
-      "community_name": "Admin User & Token Config",
+      "community": 69,
+      "community_name": "IEntityTypeConfiguration",
       "norm_label": "adminuserconfiguration"
     },
     {
@@ -22000,8 +22033,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "ientitytypeconfiguration",
-      "community": 58,
-      "community_name": "Persistence / Configurations",
+      "community": 69,
+      "community_name": "IEntityTypeConfiguration",
       "norm_label": "ientitytypeconfiguration"
     },
     {
@@ -22017,8 +22050,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_persistence_configurations_adminuserconfiguration_campcenter_infrastructure_persistence_configurations_adminuserconfiguration_configure",
-      "community": 39,
-      "community_name": "Admin User & Token Config",
+      "community": 69,
+      "community_name": "IEntityTypeConfiguration",
       "norm_label": ".configure()"
     },
     {
@@ -22028,8 +22061,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_persistence_configurations_adminuserconfiguration_cs_entitytypebuilder",
-      "community": 39,
-      "community_name": "Admin User & Token Config",
+      "community": 69,
+      "community_name": "IEntityTypeConfiguration",
       "norm_label": "entitytypebuilder"
     },
     {
@@ -22039,8 +22072,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_persistence_configurations_bookingconfiguration",
-      "community": 58,
-      "community_name": "Persistence / Configurations",
+      "community": 77,
+      "community_name": "BookingConfiguration",
       "norm_label": "bookingconfiguration.cs"
     },
     {
@@ -22056,8 +22089,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_persistence_configurations_bookingconfiguration_campcenter_infrastructure_persistence_configurations_bookingconfiguration",
-      "community": 58,
-      "community_name": "Persistence / Configurations",
+      "community": 77,
+      "community_name": "BookingConfiguration",
       "norm_label": "bookingconfiguration"
     },
     {
@@ -22073,8 +22106,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_persistence_configurations_bookingconfiguration_campcenter_infrastructure_persistence_configurations_bookingconfiguration_configure",
-      "community": 58,
-      "community_name": "Persistence / Configurations",
+      "community": 77,
+      "community_name": "BookingConfiguration",
       "norm_label": ".configure()"
     },
     {
@@ -22084,8 +22117,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_persistence_configurations_bookingconfiguration_cs_entitytypebuilder",
-      "community": 58,
-      "community_name": "Persistence / Configurations",
+      "community": 77,
+      "community_name": "BookingConfiguration",
       "norm_label": "entitytypebuilder"
     },
     {
@@ -22151,8 +22184,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_persistence_configurations_bookingroomassignmentconfiguration",
-      "community": 58,
-      "community_name": "Persistence / Configurations",
+      "community": 78,
+      "community_name": "BookingRoomAssignmentConfiguration",
       "norm_label": "bookingroomassignmentconfiguration.cs"
     },
     {
@@ -22168,8 +22201,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_persistence_configurations_bookingroomassignmentconfiguration_campcenter_infrastructure_persistence_configurations_bookingroomassignmentconfiguration",
-      "community": 58,
-      "community_name": "Persistence / Configurations",
+      "community": 78,
+      "community_name": "BookingRoomAssignmentConfiguration",
       "norm_label": "bookingroomassignmentconfiguration"
     },
     {
@@ -22185,8 +22218,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_persistence_configurations_bookingroomassignmentconfiguration_campcenter_infrastructure_persistence_configurations_bookingroomassignmentconfiguration_configure",
-      "community": 58,
-      "community_name": "Persistence / Configurations",
+      "community": 78,
+      "community_name": "BookingRoomAssignmentConfiguration",
       "norm_label": ".configure()"
     },
     {
@@ -22196,8 +22229,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_persistence_configurations_bookingroomassignmentconfiguration_cs_entitytypebuilder",
-      "community": 58,
-      "community_name": "Persistence / Configurations",
+      "community": 78,
+      "community_name": "BookingRoomAssignmentConfiguration",
       "norm_label": "entitytypebuilder"
     },
     {
@@ -22207,8 +22240,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_persistence_configurations_closureconfiguration",
-      "community": 58,
-      "community_name": "Persistence / Configurations",
+      "community": 69,
+      "community_name": "IEntityTypeConfiguration",
       "norm_label": "closureconfiguration.cs"
     },
     {
@@ -22224,8 +22257,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_persistence_configurations_closureconfiguration_campcenter_infrastructure_persistence_configurations_closureconfiguration",
-      "community": 58,
-      "community_name": "Persistence / Configurations",
+      "community": 69,
+      "community_name": "IEntityTypeConfiguration",
       "norm_label": "closureconfiguration"
     },
     {
@@ -22241,8 +22274,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_persistence_configurations_closureconfiguration_campcenter_infrastructure_persistence_configurations_closureconfiguration_configure",
-      "community": 58,
-      "community_name": "Persistence / Configurations",
+      "community": 69,
+      "community_name": "IEntityTypeConfiguration",
       "norm_label": ".configure()"
     },
     {
@@ -22252,8 +22285,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_persistence_configurations_closureconfiguration_cs_entitytypebuilder",
-      "community": 58,
-      "community_name": "Persistence / Configurations",
+      "community": 69,
+      "community_name": "IEntityTypeConfiguration",
       "norm_label": "entitytypebuilder"
     },
     {
@@ -22263,8 +22296,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_persistence_configurations_mealtimedefaultconfiguration",
-      "community": 58,
-      "community_name": "Persistence / Configurations",
+      "community": 95,
+      "community_name": "MealTimeDefaultConfiguration",
       "norm_label": "mealtimedefaultconfiguration.cs"
     },
     {
@@ -22280,8 +22313,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_persistence_configurations_mealtimedefaultconfiguration_campcenter_infrastructure_persistence_configurations_mealtimedefaultconfiguration",
-      "community": 58,
-      "community_name": "Persistence / Configurations",
+      "community": 95,
+      "community_name": "MealTimeDefaultConfiguration",
       "norm_label": "mealtimedefaultconfiguration"
     },
     {
@@ -22297,8 +22330,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_persistence_configurations_mealtimedefaultconfiguration_campcenter_infrastructure_persistence_configurations_mealtimedefaultconfiguration_configure",
-      "community": 58,
-      "community_name": "Persistence / Configurations",
+      "community": 95,
+      "community_name": "MealTimeDefaultConfiguration",
       "norm_label": ".configure()"
     },
     {
@@ -22308,8 +22341,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_persistence_configurations_mealtimedefaultconfiguration_cs_entitytypebuilder",
-      "community": 58,
-      "community_name": "Persistence / Configurations",
+      "community": 95,
+      "community_name": "MealTimeDefaultConfiguration",
       "norm_label": "entitytypebuilder"
     },
     {
@@ -22319,8 +22352,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_persistence_configurations_paymentconfiguration",
-      "community": 58,
-      "community_name": "Persistence / Configurations",
+      "community": 104,
+      "community_name": "PaymentConfiguration",
       "norm_label": "paymentconfiguration.cs"
     },
     {
@@ -22336,8 +22369,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_persistence_configurations_paymentconfiguration_campcenter_infrastructure_persistence_configurations_paymentconfiguration",
-      "community": 58,
-      "community_name": "Persistence / Configurations",
+      "community": 104,
+      "community_name": "PaymentConfiguration",
       "norm_label": "paymentconfiguration"
     },
     {
@@ -22353,8 +22386,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_persistence_configurations_paymentconfiguration_campcenter_infrastructure_persistence_configurations_paymentconfiguration_configure",
-      "community": 58,
-      "community_name": "Persistence / Configurations",
+      "community": 104,
+      "community_name": "PaymentConfiguration",
       "norm_label": ".configure()"
     },
     {
@@ -22364,8 +22397,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_persistence_configurations_paymentconfiguration_cs_entitytypebuilder",
-      "community": 58,
-      "community_name": "Persistence / Configurations",
+      "community": 104,
+      "community_name": "PaymentConfiguration",
       "norm_label": "entitytypebuilder"
     },
     {
@@ -22375,8 +22408,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_persistence_configurations_refreshtokenconfiguration",
-      "community": 58,
-      "community_name": "Persistence / Configurations",
+      "community": 51,
+      "community_name": "Refresh Token Repository",
       "norm_label": "refreshtokenconfiguration.cs"
     },
     {
@@ -22392,8 +22425,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_persistence_configurations_refreshtokenconfiguration_campcenter_infrastructure_persistence_configurations_refreshtokenconfiguration",
-      "community": 58,
-      "community_name": "Persistence / Configurations",
+      "community": 51,
+      "community_name": "Refresh Token Repository",
       "norm_label": "refreshtokenconfiguration"
     },
     {
@@ -22409,8 +22442,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_persistence_configurations_refreshtokenconfiguration_campcenter_infrastructure_persistence_configurations_refreshtokenconfiguration_configure",
-      "community": 58,
-      "community_name": "Persistence / Configurations",
+      "community": 51,
+      "community_name": "Refresh Token Repository",
       "norm_label": ".configure()"
     },
     {
@@ -22420,8 +22453,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_persistence_configurations_refreshtokenconfiguration_cs_entitytypebuilder",
-      "community": 58,
-      "community_name": "Persistence / Configurations",
+      "community": 51,
+      "community_name": "Refresh Token Repository",
       "norm_label": "entitytypebuilder"
     },
     {
@@ -22431,8 +22464,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_persistence_configurations_roomcleaningconfiguration",
-      "community": 37,
-      "community_name": "CampCenter.UnitTests / Services (2)",
+      "community": 64,
+      "community_name": "src / api (2)",
       "norm_label": "roomcleaningconfiguration.cs"
     },
     {
@@ -22448,8 +22481,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_persistence_configurations_roomcleaningconfiguration_campcenter_infrastructure_persistence_configurations_roomcleaningconfiguration",
-      "community": 37,
-      "community_name": "CampCenter.UnitTests / Services (2)",
+      "community": 64,
+      "community_name": "src / api (2)",
       "norm_label": "roomcleaningconfiguration"
     },
     {
@@ -22465,8 +22498,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_persistence_configurations_roomcleaningconfiguration_campcenter_infrastructure_persistence_configurations_roomcleaningconfiguration_configure",
-      "community": 37,
-      "community_name": "CampCenter.UnitTests / Services (2)",
+      "community": 64,
+      "community_name": "src / api (2)",
       "norm_label": ".configure()"
     },
     {
@@ -22476,8 +22509,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_persistence_configurations_roomcleaningconfiguration_cs_entitytypebuilder",
-      "community": 37,
-      "community_name": "CampCenter.UnitTests / Services (2)",
+      "community": 64,
+      "community_name": "src / api (2)",
       "norm_label": "entitytypebuilder"
     },
     {
@@ -22487,8 +22520,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_persistence_configurations_roomconfiguration",
-      "community": 58,
-      "community_name": "Persistence / Configurations",
+      "community": 107,
+      "community_name": "RoomConfiguration",
       "norm_label": "roomconfiguration.cs"
     },
     {
@@ -22504,8 +22537,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_persistence_configurations_roomconfiguration_campcenter_infrastructure_persistence_configurations_roomconfiguration",
-      "community": 58,
-      "community_name": "Persistence / Configurations",
+      "community": 107,
+      "community_name": "RoomConfiguration",
       "norm_label": "roomconfiguration"
     },
     {
@@ -22521,8 +22554,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_persistence_configurations_roomconfiguration_campcenter_infrastructure_persistence_configurations_roomconfiguration_configure",
-      "community": 58,
-      "community_name": "Persistence / Configurations",
+      "community": 107,
+      "community_name": "RoomConfiguration",
       "norm_label": ".configure()"
     },
     {
@@ -22532,8 +22565,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_persistence_configurations_roomconfiguration_cs_entitytypebuilder",
-      "community": 58,
-      "community_name": "Persistence / Configurations",
+      "community": 107,
+      "community_name": "RoomConfiguration",
       "norm_label": "entitytypebuilder"
     },
     {
@@ -22599,8 +22632,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_persistence_configurations_scheduleentryconfiguration",
-      "community": 58,
-      "community_name": "Persistence / Configurations",
+      "community": 109,
+      "community_name": "ScheduleEntryConfiguration",
       "norm_label": "scheduleentryconfiguration.cs"
     },
     {
@@ -22616,8 +22649,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_persistence_configurations_scheduleentryconfiguration_campcenter_infrastructure_persistence_configurations_scheduleentryconfiguration",
-      "community": 58,
-      "community_name": "Persistence / Configurations",
+      "community": 109,
+      "community_name": "ScheduleEntryConfiguration",
       "norm_label": "scheduleentryconfiguration"
     },
     {
@@ -22633,8 +22666,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_persistence_configurations_scheduleentryconfiguration_campcenter_infrastructure_persistence_configurations_scheduleentryconfiguration_configure",
-      "community": 58,
-      "community_name": "Persistence / Configurations",
+      "community": 109,
+      "community_name": "ScheduleEntryConfiguration",
       "norm_label": ".configure()"
     },
     {
@@ -22644,8 +22677,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_persistence_configurations_scheduleentryconfiguration_cs_entitytypebuilder",
-      "community": 58,
-      "community_name": "Persistence / Configurations",
+      "community": 109,
+      "community_name": "ScheduleEntryConfiguration",
       "norm_label": "entitytypebuilder"
     },
     {
@@ -24430,8 +24463,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_repositories_bookingmealtimerepository_campcenter_infrastructure_repositories_bookingmealtimerepository",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 52,
+      "community_name": "BookingMealTime",
       "norm_label": "bookingmealtimerepository"
     },
     {
@@ -24447,8 +24480,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_repositories_bookingmealtimerepository_campcenter_infrastructure_repositories_bookingmealtimerepository_listforbookingasync",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 52,
+      "community_name": "BookingMealTime",
       "norm_label": ".listforbookingasync()"
     },
     {
@@ -24458,8 +24491,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_repositories_bookingmealtimerepository_cs_guid",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 52,
+      "community_name": "BookingMealTime",
       "norm_label": "guid"
     },
     {
@@ -24469,8 +24502,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_repositories_bookingmealtimerepository_cs_cancellationtoken",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 52,
+      "community_name": "BookingMealTime",
       "norm_label": "cancellationtoken"
     },
     {
@@ -24480,8 +24513,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_repositories_bookingmealtimerepository_cs_task",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 52,
+      "community_name": "BookingMealTime",
       "norm_label": "task"
     },
     {
@@ -24491,8 +24524,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_repositories_bookingmealtimerepository_cs_list",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 52,
+      "community_name": "BookingMealTime",
       "norm_label": "list"
     },
     {
@@ -24508,8 +24541,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_repositories_bookingmealtimerepository_campcenter_infrastructure_repositories_bookingmealtimerepository_listforbookingsasync",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 52,
+      "community_name": "BookingMealTime",
       "norm_label": ".listforbookingsasync()"
     },
     {
@@ -24519,8 +24552,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_repositories_bookingmealtimerepository_cs_ireadonlycollection",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 52,
+      "community_name": "BookingMealTime",
       "norm_label": "ireadonlycollection"
     },
     {
@@ -24536,8 +24569,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_repositories_bookingmealtimerepository_campcenter_infrastructure_repositories_bookingmealtimerepository_getasync",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 52,
+      "community_name": "BookingMealTime",
       "norm_label": ".getasync()"
     },
     {
@@ -24553,8 +24586,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_repositories_bookingmealtimerepository_campcenter_infrastructure_repositories_bookingmealtimerepository_addasync",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 52,
+      "community_name": "BookingMealTime",
       "norm_label": ".addasync()"
     },
     {
@@ -24570,8 +24603,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_repositories_bookingmealtimerepository_campcenter_infrastructure_repositories_bookingmealtimerepository_remove",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 52,
+      "community_name": "BookingMealTime",
       "norm_label": ".remove()"
     },
     {
@@ -24587,8 +24620,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_repositories_bookingmealtimerepository_campcenter_infrastructure_repositories_bookingmealtimerepository_savechangesasync",
-      "community": 12,
-      "community_name": "CampCenter.Application / Services (2)",
+      "community": 52,
+      "community_name": "BookingMealTime",
       "norm_label": ".savechangesasync()"
     },
     {
@@ -25357,8 +25390,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_repositories_mealtimedefaultrepository_campcenter_infrastructure_repositories_mealtimedefaultrepository",
-      "community": 14,
-      "community_name": "CampCenter.UnitTests / Services (1)",
+      "community": 59,
+      "community_name": "MealTimeDefaultRepository",
       "norm_label": "mealtimedefaultrepository"
     },
     {
@@ -25374,8 +25407,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_repositories_mealtimedefaultrepository_campcenter_infrastructure_repositories_mealtimedefaultrepository_getallasync",
-      "community": 14,
-      "community_name": "CampCenter.UnitTests / Services (1)",
+      "community": 59,
+      "community_name": "MealTimeDefaultRepository",
       "norm_label": ".getallasync()"
     },
     {
@@ -25385,8 +25418,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_repositories_mealtimedefaultrepository_cs_cancellationtoken",
-      "community": 14,
-      "community_name": "CampCenter.UnitTests / Services (1)",
+      "community": 59,
+      "community_name": "MealTimeDefaultRepository",
       "norm_label": "cancellationtoken"
     },
     {
@@ -25396,8 +25429,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_repositories_mealtimedefaultrepository_cs_task",
-      "community": 14,
-      "community_name": "CampCenter.UnitTests / Services (1)",
+      "community": 59,
+      "community_name": "MealTimeDefaultRepository",
       "norm_label": "task"
     },
     {
@@ -25407,8 +25440,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_repositories_mealtimedefaultrepository_cs_list",
-      "community": 14,
-      "community_name": "CampCenter.UnitTests / Services (1)",
+      "community": 59,
+      "community_name": "MealTimeDefaultRepository",
       "norm_label": "list"
     },
     {
@@ -25424,8 +25457,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_repositories_mealtimedefaultrepository_campcenter_infrastructure_repositories_mealtimedefaultrepository_getactiveasync",
-      "community": 14,
-      "community_name": "CampCenter.UnitTests / Services (1)",
+      "community": 59,
+      "community_name": "MealTimeDefaultRepository",
       "norm_label": ".getactiveasync()"
     },
     {
@@ -25441,8 +25474,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_repositories_mealtimedefaultrepository_campcenter_infrastructure_repositories_mealtimedefaultrepository_getbyidasync",
-      "community": 14,
-      "community_name": "CampCenter.UnitTests / Services (1)",
+      "community": 59,
+      "community_name": "MealTimeDefaultRepository",
       "norm_label": ".getbyidasync()"
     },
     {
@@ -25452,8 +25485,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_repositories_mealtimedefaultrepository_cs_guid",
-      "community": 14,
-      "community_name": "CampCenter.UnitTests / Services (1)",
+      "community": 59,
+      "community_name": "MealTimeDefaultRepository",
       "norm_label": "guid"
     },
     {
@@ -25469,8 +25502,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_repositories_mealtimedefaultrepository_campcenter_infrastructure_repositories_mealtimedefaultrepository_isreferencedasync",
-      "community": 14,
-      "community_name": "CampCenter.UnitTests / Services (1)",
+      "community": 59,
+      "community_name": "MealTimeDefaultRepository",
       "norm_label": ".isreferencedasync()"
     },
     {
@@ -25486,8 +25519,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_repositories_mealtimedefaultrepository_campcenter_infrastructure_repositories_mealtimedefaultrepository_addasync",
-      "community": 14,
-      "community_name": "CampCenter.UnitTests / Services (1)",
+      "community": 59,
+      "community_name": "MealTimeDefaultRepository",
       "norm_label": ".addasync()"
     },
     {
@@ -25503,8 +25536,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_repositories_mealtimedefaultrepository_campcenter_infrastructure_repositories_mealtimedefaultrepository_remove",
-      "community": 14,
-      "community_name": "CampCenter.UnitTests / Services (1)",
+      "community": 59,
+      "community_name": "MealTimeDefaultRepository",
       "norm_label": ".remove()"
     },
     {
@@ -25520,8 +25553,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_repositories_mealtimedefaultrepository_campcenter_infrastructure_repositories_mealtimedefaultrepository_savechangesasync",
-      "community": 14,
-      "community_name": "CampCenter.UnitTests / Services (1)",
+      "community": 59,
+      "community_name": "MealTimeDefaultRepository",
       "norm_label": ".savechangesasync()"
     },
     {
@@ -25688,8 +25721,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_repositories_roomcleaningrepository_campcenter_infrastructure_repositories_roomcleaningrepository",
-      "community": 37,
-      "community_name": "CampCenter.UnitTests / Services (2)",
+      "community": 62,
+      "community_name": "RoomCleaningRepository",
       "norm_label": "roomcleaningrepository"
     },
     {
@@ -25705,8 +25738,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_repositories_roomcleaningrepository_campcenter_infrastructure_repositories_roomcleaningrepository_listfordateasync",
-      "community": 37,
-      "community_name": "CampCenter.UnitTests / Services (2)",
+      "community": 62,
+      "community_name": "RoomCleaningRepository",
       "norm_label": ".listfordateasync()"
     },
     {
@@ -25716,8 +25749,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_repositories_roomcleaningrepository_cs_dateonly",
-      "community": 37,
-      "community_name": "CampCenter.UnitTests / Services (2)",
+      "community": 62,
+      "community_name": "RoomCleaningRepository",
       "norm_label": "dateonly"
     },
     {
@@ -25727,8 +25760,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_repositories_roomcleaningrepository_cs_cancellationtoken",
-      "community": 37,
-      "community_name": "CampCenter.UnitTests / Services (2)",
+      "community": 62,
+      "community_name": "RoomCleaningRepository",
       "norm_label": "cancellationtoken"
     },
     {
@@ -25738,8 +25771,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_repositories_roomcleaningrepository_cs_task",
-      "community": 37,
-      "community_name": "CampCenter.UnitTests / Services (2)",
+      "community": 62,
+      "community_name": "RoomCleaningRepository",
       "norm_label": "task"
     },
     {
@@ -25749,8 +25782,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_repositories_roomcleaningrepository_cs_list",
-      "community": 37,
-      "community_name": "CampCenter.UnitTests / Services (2)",
+      "community": 62,
+      "community_name": "RoomCleaningRepository",
       "norm_label": "list"
     },
     {
@@ -25766,8 +25799,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_repositories_roomcleaningrepository_campcenter_infrastructure_repositories_roomcleaningrepository_countdonebydateasync",
-      "community": 37,
-      "community_name": "CampCenter.UnitTests / Services (2)",
+      "community": 62,
+      "community_name": "RoomCleaningRepository",
       "norm_label": ".countdonebydateasync()"
     },
     {
@@ -25777,8 +25810,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_repositories_roomcleaningrepository_cs_dictionary",
-      "community": 37,
-      "community_name": "CampCenter.UnitTests / Services (2)",
+      "community": 62,
+      "community_name": "RoomCleaningRepository",
       "norm_label": "dictionary"
     },
     {
@@ -25794,8 +25827,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_repositories_roomcleaningrepository_campcenter_infrastructure_repositories_roomcleaningrepository_getasync",
-      "community": 37,
-      "community_name": "CampCenter.UnitTests / Services (2)",
+      "community": 62,
+      "community_name": "RoomCleaningRepository",
       "norm_label": ".getasync()"
     },
     {
@@ -25805,8 +25838,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_repositories_roomcleaningrepository_cs_guid",
-      "community": 37,
-      "community_name": "CampCenter.UnitTests / Services (2)",
+      "community": 62,
+      "community_name": "RoomCleaningRepository",
       "norm_label": "guid"
     },
     {
@@ -25822,8 +25855,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_repositories_roomcleaningrepository_campcenter_infrastructure_repositories_roomcleaningrepository_addasync",
-      "community": 37,
-      "community_name": "CampCenter.UnitTests / Services (2)",
+      "community": 62,
+      "community_name": "RoomCleaningRepository",
       "norm_label": ".addasync()"
     },
     {
@@ -25839,8 +25872,8 @@
       },
       "_origin": "ast",
       "id": "src_campcenter_infrastructure_repositories_roomcleaningrepository_campcenter_infrastructure_repositories_roomcleaningrepository_savechangesasync",
-      "community": 37,
-      "community_name": "CampCenter.UnitTests / Services (2)",
+      "community": 62,
+      "community_name": "RoomCleaningRepository",
       "norm_label": ".savechangesasync()"
     },
     {
@@ -30316,8 +30349,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_campcenter_unittests_validators_closurevalidatorstests",
-      "community": 74,
-      "community_name": "PasswordRules",
+      "community": 4,
+      "community_name": "CampCenter.UnitTests / Validators",
       "norm_label": "closurevalidatorstests.cs"
     },
     {
@@ -30332,8 +30365,8 @@
       },
       "_origin": "ast",
       "id": "csharp_namespace:c69d240c5723dcda",
-      "community": 74,
-      "community_name": "PasswordRules",
+      "community": 4,
+      "community_name": "CampCenter.UnitTests / Validators",
       "norm_label": "campcenter.unittests.validators"
     },
     {
@@ -30349,8 +30382,8 @@
       },
       "_origin": "ast",
       "id": "tests_campcenter_unittests_validators_closurevalidatorstests_campcenter_unittests_validators_closurevalidatorstests",
-      "community": 36,
-      "community_name": "Validator Unit Tests",
+      "community": 23,
+      "community_name": "Camp Session Management",
       "norm_label": "closurevalidatorstests"
     },
     {
@@ -30366,8 +30399,8 @@
       },
       "_origin": "ast",
       "id": "tests_campcenter_unittests_validators_closurevalidatorstests_campcenter_unittests_validators_closurevalidatorstests_valid",
-      "community": 36,
-      "community_name": "Validator Unit Tests",
+      "community": 23,
+      "community_name": "Camp Session Management",
       "norm_label": ".valid()"
     },
     {
@@ -30383,8 +30416,8 @@
       },
       "_origin": "ast",
       "id": "tests_campcenter_unittests_validators_closurevalidatorstests_campcenter_unittests_validators_closurevalidatorstests_validclosure_passes",
-      "community": 36,
-      "community_name": "Validator Unit Tests",
+      "community": 23,
+      "community_name": "Camp Session Management",
       "norm_label": ".validclosure_passes()"
     },
     {
@@ -30394,8 +30427,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "tests_campcenter_unittests_validators_closurevalidatorstests_cs_fact",
-      "community": 36,
-      "community_name": "Validator Unit Tests",
+      "community": 23,
+      "community_name": "Camp Session Management",
       "norm_label": "fact"
     },
     {
@@ -30411,8 +30444,8 @@
       },
       "_origin": "ast",
       "id": "tests_campcenter_unittests_validators_closurevalidatorstests_campcenter_unittests_validators_closurevalidatorstests_singledayclosure_passes",
-      "community": 36,
-      "community_name": "Validator Unit Tests",
+      "community": 23,
+      "community_name": "Camp Session Management",
       "norm_label": ".singledayclosure_passes()"
     },
     {
@@ -30428,8 +30461,8 @@
       },
       "_origin": "ast",
       "id": "tests_campcenter_unittests_validators_closurevalidatorstests_campcenter_unittests_validators_closurevalidatorstests_endbeforestart_fails",
-      "community": 36,
-      "community_name": "Validator Unit Tests",
+      "community": 23,
+      "community_name": "Camp Session Management",
       "norm_label": ".endbeforestart_fails()"
     },
     {
@@ -30445,8 +30478,8 @@
       },
       "_origin": "ast",
       "id": "tests_campcenter_unittests_validators_closurevalidatorstests_campcenter_unittests_validators_closurevalidatorstests_emptyreason_fails",
-      "community": 36,
-      "community_name": "Validator Unit Tests",
+      "community": 23,
+      "community_name": "Camp Session Management",
       "norm_label": ".emptyreason_fails()"
     },
     {
@@ -30456,8 +30489,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_campcenter_unittests_validators_loginrequestvalidatortests",
-      "community": 74,
-      "community_name": "PasswordRules",
+      "community": 4,
+      "community_name": "CampCenter.UnitTests / Validators",
       "norm_label": "loginrequestvalidatortests.cs"
     },
     {
@@ -30551,8 +30584,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_campcenter_unittests_validators_schedulevalidatorstests",
-      "community": 74,
-      "community_name": "PasswordRules",
+      "community": 4,
+      "community_name": "CampCenter.UnitTests / Validators",
       "norm_label": "schedulevalidatorstests.cs"
     },
     {
@@ -39080,7 +39113,7 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "frontend_src_components_admin_addgroupform",
-      "target": "frontend_src_components_calendar_rangecalendar",
+      "target": "frontend_src_components_calendar_daterangefield",
       "confidence_score": 1.0
     },
     {
@@ -40522,6 +40555,100 @@
       "_origin": "ast",
       "source": "frontend_src_components_calendar_calendartile_calendartile",
       "target": "frontend_src_utils_dates_todayiso"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/calendar/DateRangeField.tsx",
+      "source_location": "L33",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_components_calendar_daterangefield",
+      "target": "frontend_src_components_calendar_daterangefield_daterangefield",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/calendar/DateRangeField.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_components_calendar_daterangefield",
+      "target": "frontend_src_components_calendar_daterangefield_props",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/calendar/DateRangeField.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_components_calendar_daterangefield",
+      "target": "frontend_src_components_calendar_rangecalendar",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/calendar/DateRangeField.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_components_calendar_daterangefield",
+      "target": "frontend_src_utils_dates",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/calendar/DateRangeField.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_components_calendar_daterangefield",
+      "target": "frontend_src_utils_dates_daynumber",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/calendar/DateRangeField.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_components_calendar_daterangefield",
+      "target": "frontend_src_utils_dates_formatdate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/src/components/calendar/DateRangeField.tsx",
+      "source_location": "L91",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_components_calendar_daterangefield_daterangefield",
+      "target": "frontend_src_utils_dates_daynumber"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/src/components/calendar/DateRangeField.tsx",
+      "source_location": "L94",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_components_calendar_daterangefield_daterangefield",
+      "target": "frontend_src_utils_dates_formatdate"
     },
     {
       "relation": "imports_from",

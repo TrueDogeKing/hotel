@@ -23,16 +23,19 @@ public class UsersController : ControllerBase
     private readonly IUserService _users;
     private readonly IValidator<CreateUserRequestDto> _createValidator;
     private readonly IValidator<SetUserRoleRequestDto> _roleValidator;
+    private readonly IValidator<SetUserPasswordRequestDto> _passwordValidator;
 
     public UsersController(
         IUserService users,
         IValidator<CreateUserRequestDto> createValidator,
-        IValidator<SetUserRoleRequestDto> roleValidator
+        IValidator<SetUserRoleRequestDto> roleValidator,
+        IValidator<SetUserPasswordRequestDto> passwordValidator
     )
     {
         _users = users;
         _createValidator = createValidator;
         _roleValidator = roleValidator;
+        _passwordValidator = passwordValidator;
     }
 
     /// The signed-in account's id, from the token itself. The two self-lockout
@@ -92,6 +95,32 @@ public class UsersController : ControllerBase
         }
 
         return Ok(await _users.SetRoleAsync(id, request, CallerId, cancellationToken));
+    }
+
+    /// Resets an account's password. Ends its sessions, its own included — see
+    /// IUserService.SetPasswordAsync for why.
+    [HttpPut("{id:guid}/password")]
+    [ProducesResponseType(typeof(AdminUserDto), StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    public async Task<IActionResult> SetPassword(
+        Guid id,
+        [FromBody] SetUserPasswordRequestDto request,
+        CancellationToken cancellationToken
+    )
+    {
+        var validation = await _passwordValidator.ValidateAsync(request, cancellationToken);
+        if (!validation.IsValid)
+        {
+            foreach (var error in validation.Errors)
+            {
+                ModelState.AddModelError(error.PropertyName, error.ErrorMessage);
+            }
+
+            return ValidationProblem(ModelState);
+        }
+
+        return Ok(await _users.SetPasswordAsync(id, request, CallerId, cancellationToken));
     }
 
     [HttpDelete("{id:guid}")]

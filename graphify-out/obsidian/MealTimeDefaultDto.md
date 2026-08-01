@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/DTOs/Schedule/MealTimeDtos.cs"
 type: "code"
-community: "CampCenter.Domain / Repositories (2)"
+community: "CampCenter.UnitTests / Services (1)"
 location: "L3"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterDomain_/_Repositories_2
+  - community/CampCenterUnitTests_/_Services_1
 ---
 
 # MealTimeDefaultDto
@@ -21,4 +21,4 @@ tags:
 - [[.UpdateAsync()_4]] - `references` [EXTRACTED]
 - [[MealTimeDtos.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterDomain_/_Repositories_2
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_1

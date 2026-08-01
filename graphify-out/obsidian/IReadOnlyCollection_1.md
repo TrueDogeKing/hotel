@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "BookingMealTime"
+community: "CampCenter.Application / Services (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/BookingMealTime
+  - community/CampCenterApplication_/_Services_2
 ---
 
 # IReadOnlyCollection
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.ListForBookingsAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/BookingMealTime
+#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_2

@@ -2,7 +2,7 @@
 source_file: "frontend/src/api/admin.ts"
 type: "code"
 community: "Room Closure Management"
-location: "L547"
+location: "L553"
 tags:
   - graphify/code
   - graphify/EXTRACTED

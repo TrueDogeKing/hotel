@@ -29,7 +29,12 @@
     "loadError": "Nie udało się wczytać kont.",
     "createError": "Nie udało się dodać konta.",
     "roleError": "Nie udało się zmienić roli.",
-    "deleteError": "Nie udało się usunąć konta."
+    "deleteError": "Nie udało się usunąć konta.",
+    "changePassword": "Zmień hasło",
+    "changePasswordTitle": "Zmiana hasła: {{login}}",
+    "passwordChanged": "Hasło konta {{login}} zostało zmienione. Sesje tego konta zostały zakończone.",
+    "passwordError": "Nie udało się zmienić hasła.",
+    "saving": "Zapisywanie…"
   },
   "home": {
     "heroTitle": "Ośrodek kolonijny nad morzem",

@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/pages/admin/RoomsPage.tsx"
 type: "code"
-community: "useAuth"
+community: "src / api (1)"
 location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/useAuth
+  - community/src_/_api_1
 ---
 
 # emptyForm
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[RoomsPage.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/useAuth
+#graphify/code #graphify/EXTRACTED #community/src_/_api_1

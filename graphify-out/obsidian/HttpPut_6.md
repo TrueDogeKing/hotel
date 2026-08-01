@@ -11,6 +11,7 @@ tags:
 # HttpPut
 
 ## Connections
+- [[.SetPassword()]] - `references` [EXTRACTED]
 - [[.SetRole()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Booking_Persistence__Entities_1

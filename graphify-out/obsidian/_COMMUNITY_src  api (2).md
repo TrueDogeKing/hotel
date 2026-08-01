@@ -33,8 +33,8 @@ SORT file.name ASC
 - 2 edges to [[_COMMUNITY_Public Booking Service (2)]]
 - 1 edge to [[_COMMUNITY_Room Management]]
 - 1 edge to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
-- 1 edge to [[_COMMUNITY_Persistence  Configurations]]
 - 1 edge to [[_COMMUNITY_IEntityTypeConfiguration]]
+- 1 edge to [[_COMMUNITY_ScheduleEntryConfiguration]]
 
 ## Top bridge nodes
 - [[RoomCleaning]] - degree 16, connects to 4 communities

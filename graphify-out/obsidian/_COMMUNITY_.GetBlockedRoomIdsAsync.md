@@ -31,13 +31,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 6 edges to [[_COMMUNITY_Validator Unit Tests]]
 - 6 edges to [[_COMMUNITY_Public Booking Service (1)]]
 - 6 edges to [[_COMMUNITY_Admin Booking & Notifications (1)]]
+- 3 edges to [[_COMMUNITY_Validator Unit Tests]]
+- 3 edges to [[_COMMUNITY_Room Management]]
 - 1 edge to [[_COMMUNITY_CampCenter.Application.DTOs.Public]]
 
 ## Top bridge nodes
-- [[IAvailabilityService]] - degree 10, connects to 4 communities
+- [[IAvailabilityService]] - degree 10, connects to 5 communities
 - [[.GetBlockedRoomIdsAsync()]] - degree 10, connects to 2 communities
 - [[.GetFreeRoomsByCapacityAsync()]] - degree 8, connects to 2 communities
 - [[.GetCenterClosureReasonAsync()]] - degree 6, connects to 2 communities

@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/utils/scroll.ts"
 type: "code"
-community: "Frontend App Shell & i18n"
+community: "useAuth"
 location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Frontend_App_Shell__i18n
+  - community/useAuth
 ---
 
 # scrollPanelIntoView()
@@ -18,4 +18,4 @@ tags:
 - [[SchedulePage.tsx]] - `imports` [EXTRACTED]
 - [[scroll.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Frontend_App_Shell__i18n
+#graphify/code #graphify/EXTRACTED #community/useAuth

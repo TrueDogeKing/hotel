@@ -1,11 +1,11 @@
 ---
 type: community
-members: 37
+members: 35
 ---
 
 # CampCenter.Infrastructure / Repositories (1)
 
-**Members:** 37 nodes
+**Members:** 35 nodes
 
 ## Members
 - [[.AddAsync()_19]] - code - src/CampCenter.Infrastructure/Repositories/ScheduleEntryRepository.cs
@@ -20,10 +20,8 @@ members: 37
 - [[.ListLocationsAsync()_1]] - code - src/CampCenter.Infrastructure/Repositories/ScheduleEntryRepository.cs
 - [[.ListVisibleSlotSpansAsync()_1]] - code - src/CampCenter.Infrastructure/Repositories/ScheduleEntryRepository.cs
 - [[.OnModelCreating()]] - code - src/CampCenter.Infrastructure/Persistence/AppDbContext.cs
-- [[.Remove()_13]] - code - src/CampCenter.Infrastructure/Repositories/ScheduleEntryRepository.cs
 - [[.SaveChangesAsync()_19]] - code - src/CampCenter.Infrastructure/Repositories/ScheduleEntryRepository.cs
 - [[AppDbContext]] - code - src/CampCenter.Infrastructure/Persistence/AppDbContext.cs
-- [[AppDbContext.cs]] - code - src/CampCenter.Infrastructure/Persistence/AppDbContext.cs
 - [[BookingId_1]] - code
 - [[CancellationToken_65]] - code
 - [[Count_1]] - code
@@ -54,25 +52,23 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 9 edges to [[_COMMUNITY_ScheduleEntry]]
-- 4 edges to [[_COMMUNITY_Public Booking Service (2)]]
+- 11 edges to [[_COMMUNITY_CampCenter.Application  Services (2)]]
+- 3 edges to [[_COMMUNITY_Public Booking Service (2)]]
 - 2 edges to [[_COMMUNITY_Admin User & Token Config]]
-- 2 edges to [[_COMMUNITY_BookingMealTime]]
 - 2 edges to [[_COMMUNITY_Validator Unit Tests]]
+- 2 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (1)]]
 - 2 edges to [[_COMMUNITY_Refresh Token Repository]]
 - 2 edges to [[_COMMUNITY_Room Management]]
 - 2 edges to [[_COMMUNITY_Room Task Management (1)]]
 - 1 edge to [[_COMMUNITY_Integration Test Harness (1)]]
 - 1 edge to [[_COMMUNITY_components  admin]]
-- 1 edge to [[_COMMUNITY_CampCenter.Domain  Repositories (2)]]
 - 1 edge to [[_COMMUNITY_Payment]]
 - 1 edge to [[_COMMUNITY_src  api (2)]]
 - 1 edge to [[_COMMUNITY_CampCenter.Domain  Repositories (1)]]
-- 1 edge to [[_COMMUNITY_MealTimeDefaultRepository]]
 - 1 edge to [[_COMMUNITY_RoomCleaningRepository]]
 
 ## Top bridge nodes
-- [[AppDbContext]] - degree 28, connects to 15 communities
+- [[AppDbContext]] - degree 28, connects to 14 communities
 - [[ScheduleEntryRepository]] - degree 15, connects to 2 communities
 - [[.CountByDateAndKindAsync()_1]] - degree 11, connects to 1 community
 - [[.ListForDateAsync()_3]] - degree 6, connects to 1 community

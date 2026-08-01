@@ -1,16 +1,16 @@
 # Graph Report - hotel  (2026-07-31)
 
 ## Corpus Check
-- 262 files · ~93,300 words
+- 262 files · ~94,049 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 2344 nodes · 5656 edges · 124 communities (84 shown, 40 thin omitted)
-- Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 338 edges (avg confidence: 0.8)
+- 2351 nodes · 5694 edges · 120 communities (79 shown, 41 thin omitted)
+- Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 344 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `fc391ed6`
+- Built from commit: `30bee631`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -67,14 +67,12 @@
 - Auth Controller (1)
 - .CreateWorkerAsync
 - Refresh Token Repository
-- BookingMealTime
 - useAuth
 - API Launch Settings
 - Global Exception Handler
 - ESLint Dev Dependencies
 - Admin Booking & Notifications (4)
 - Persistence / Configurations
-- MealTimeDefaultRepository
 - Frontend Runtime Deps
 - .GetBlockedRoomIdsAsync
 - RoomCleaningRepository
@@ -87,7 +85,6 @@
 - IEntityTypeConfiguration
 - OpenAPI Security Scheme
 - EF Core Migrations (1)
-- ScheduleSettings
 - Booking Maintenance Background Service
 - PasswordRules
 - SmtpEmailSender
@@ -110,7 +107,6 @@
 - Persistence / Migrations (5)
 - Persistence / Migrations (6)
 - Persistence / Migrations (7)
-- MealTimeDefaultConfiguration
 - Frontend API Error Handling
 - Select Component
 - 20260729224623_RoomCleanings.Designer.cs
@@ -155,12 +151,12 @@
   tests/CampCenter.IntegrationTests/CampCenterApiFactory.cs → src/CampCenter.Api/Program.cs
 - `ScheduleConflictTests` --references--> `ScheduleService`  [EXTRACTED]
   tests/CampCenter.UnitTests/Services/ScheduleConflictTests.cs → src/CampCenter.Application/Services/ScheduleService.cs
+- `ScheduleEntryValidatorsTests` --references--> `CreateScheduleEntryRequestValidator`  [EXTRACTED]
+  tests/CampCenter.UnitTests/Validators/ScheduleValidatorsTests.cs → src/CampCenter.Application/Validators/ScheduleValidators.cs
 - `HousekeepingServiceTests` --references--> `IBookingRepository`  [EXTRACTED]
   tests/CampCenter.UnitTests/Services/HousekeepingServiceTests.cs → src/CampCenter.Domain/Repositories/IBookingRepository.cs
 - `HousekeepingServiceTests` --references--> `IClosureRepository`  [EXTRACTED]
   tests/CampCenter.UnitTests/Services/HousekeepingServiceTests.cs → src/CampCenter.Domain/Repositories/IClosureRepository.cs
-- `HousekeepingServiceTests` --references--> `IRoomRepository`  [EXTRACTED]
-  tests/CampCenter.UnitTests/Services/HousekeepingServiceTests.cs → src/CampCenter.Domain/Repositories/IRoomRepository.cs
 
 ## Import Cycles
 - None detected.
@@ -171,35 +167,35 @@
 - **Production Stack (Caddy -> frontend/api -> PostgreSQL)** — docker_docker_compose_prod_caddy, docker_docker_compose_prod_api, docker_docker_compose_prod_postgres [EXTRACTED 1.00]
 - **CI Validation Pipeline (backend + frontend)** — github_workflows_ci_workflow, github_workflows_ci_backend_job, github_workflows_ci_frontend_job [EXTRACTED 1.00]
 
-## Communities (124 total, 40 thin omitted)
+## Communities (120 total, 41 thin omitted)
 
 ### Community 0 - "DTOs / Schedule (1)"
 Cohesion: 0.09
 Nodes (36): ScheduleController, CancellationToken, DateOnly, Guid, HttpDelete, HttpGet, HttpPost, HttpPut (+28 more)
 
 ### Community 1 - "Room Management"
-Cohesion: 0.07
-Nodes (38): RoomsController, CancellationToken, Guid, HttpDelete, HttpGet, HttpPost, HttpPut, IActionResult (+30 more)
+Cohesion: 0.06
+Nodes (46): RoomsController, CancellationToken, Guid, HttpDelete, HttpGet, HttpPost, HttpPut, IActionResult (+38 more)
 
 ### Community 2 - "Admin Bookings Controller & DTOs"
 Cohesion: 0.07
-Nodes (46): ControllerBase, BookingsController, CancellationToken, Guid, HttpGet, HttpPost, HttpPut, IActionResult (+38 more)
+Nodes (43): ControllerBase, BookingsController, CancellationToken, Guid, HttpGet, HttpPost, HttpPut, IActionResult (+35 more)
 
 ### Community 3 - "src / api (1)"
-Cohesion: 0.06
-Nodes (45): AdminAssignment, ApplyBookingMealTimeResult, BookingGroupPage, BookingMealTime, BookingScheduleDay, ClosureInput, CreateAdminBookingInput, createTask() (+37 more)
+Cohesion: 0.05
+Nodes (53): AdminAssignment, AdminUser, ApplyBookingMealTimeResult, BookingGroupPage, BookingScheduleDay, Closure, ClosureInput, CreateAdminBookingInput (+45 more)
 
 ### Community 4 - "CampCenter.UnitTests / Validators"
-Cohesion: 0.07
-Nodes (17): CampCenter.Application.Validators, CampCenter.Application.DTOs.Auth, CampCenter.UnitTests.Validators, InlineData, LoginRequestDto, LoginResponseDto, CreateBookingRequestValidator, LoginRequestValidator (+9 more)
+Cohesion: 0.06
+Nodes (23): AbstractValidator, CampCenter.Application.Validators, CampCenter.Application.DTOs.Auth, CampCenter.UnitTests.Validators, InlineData, LoginResponseDto, UpdateMealTimeDefaultRequestDto, UpdateDietaryNotesRequestDto (+15 more)
 
 ### Community 5 - "Room Task Management (1)"
 Cohesion: 0.08
-Nodes (36): TasksController, CancellationToken, Guid, HttpDelete, HttpGet, HttpPost, IActionResult, ProducesResponseType (+28 more)
+Nodes (37): TasksController, CancellationToken, Guid, HttpDelete, HttpGet, HttpPost, IActionResult, ProducesResponseType (+29 more)
 
 ### Community 6 - "CampCenter.Application / Services (1)"
-Cohesion: 0.26
-Nodes (6): AdminUserRole, IAdminUserRepository, CancellationToken, Guid, List, Task
+Cohesion: 0.15
+Nodes (8): AccessToken, JwtSettings, string, JwtTokenService, int, string, RefreshTokenSettings, string
 
 ### Community 7 - "Room Mix Calculator Tests"
 Cohesion: 0.18
@@ -218,20 +214,20 @@ Cohesion: 0.06
 Nodes (31): Tile, TILES, IconArrowRight(), IconBed(), IconCalendar(), IconCheckSquare(), IconClipboard(), IconGrid() (+23 more)
 
 ### Community 11 - "CampCenter.Infrastructure / Repositories (1)"
-Cohesion: 0.12
+Cohesion: 0.13
 Nodes (21): DbContext, DbSet, IDesignTimeDbContextFactory, AppDbContext, ModelBuilder, DesignTimeDbContextFactory, ScheduleEntryRepository, BookingId (+13 more)
 
 ### Community 12 - "CampCenter.Application / Services (2)"
-Cohesion: 0.19
-Nodes (11): Skipped, BookingMealTimeDto, ScheduleEntryDto, ScheduleService, CancellationToken, DateOnly, Guid, List (+3 more)
+Cohesion: 0.06
+Nodes (52): Skipped, BookingMealTimeDto, ScheduleEntryDto, ScheduleSettings, string, TimeOnly, ScheduleService, CancellationToken (+44 more)
 
 ### Community 13 - "Public Booking Frontend (1)"
 Cohesion: 0.08
-Nodes (32): Availability, AvailabilityCalendar, AvailabilityDay, BookingDetails, BookingPayment, cancelBooking(), createBooking(), CreateBookingInput (+24 more)
+Nodes (33): formatZl(), Availability, AvailabilityCalendar, AvailabilityDay, BookingDetails, BookingPayment, cancelBooking(), createBooking() (+25 more)
 
 ### Community 14 - "CampCenter.UnitTests / Services (1)"
-Cohesion: 0.13
-Nodes (16): Slot, MealGenerationPlanner, MealSlot, Date, DateOnly, End, IEnumerable, IReadOnlyCollection (+8 more)
+Cohesion: 0.06
+Nodes (38): Slot, MealTimeDefaultDto, MealGenerationPlanner, MealSlot, Date, DateOnly, End, IEnumerable (+30 more)
 
 ### Community 15 - "Admin Booking & Notifications (1)"
 Cohesion: 0.23
@@ -250,24 +246,24 @@ Cohesion: 0.11
 Nodes (11): CampCenter.Application.Models, CampCenter.Domain.Exceptions, CampCenter.Application.Common, CampCenter.Application.Services, CampCenter.UnitTests.Services, Exception, BusinessRuleViolationException, ConcurrencyConflictException (+3 more)
 
 ### Community 19 - "src / utils"
-Cohesion: 0.18
-Nodes (25): getAvailabilityCalendar(), CalendarTile(), Props, groupHue(), LaneEvent, packLanes(), CalendarBar, CalendarDayBadge (+17 more)
+Cohesion: 0.15
+Nodes (30): getScheduleCalendar(), getScheduleDay(), getAvailabilityCalendar(), CalendarTile(), Props, groupHue(), LaneEvent, packLanes() (+22 more)
 
 ### Community 20 - "Integration Test Harness (1)"
-Cohesion: 0.12
-Nodes (17): HousekeepingJob, HousekeepingPlanner, DateOnly, IEnumerable, List, Booking, BookingCancelReason, BookingStatus (+9 more)
+Cohesion: 0.11
+Nodes (18): ScheduleCalendarBookingDto, HousekeepingJob, HousekeepingPlanner, DateOnly, IEnumerable, List, Booking, BookingCancelReason (+10 more)
 
 ### Community 21 - "CampCenter.Application / Services (3)"
-Cohesion: 0.14
-Nodes (21): BookingSchedule, checkScheduleConflicts(), createScheduleEntry(), deleteScheduleEntry(), getBookingSchedule(), getScheduleCalendar(), getScheduleDay(), getScheduleLocations() (+13 more)
+Cohesion: 0.18
+Nodes (13): BookingSchedule, checkScheduleConflicts(), createScheduleEntry(), deleteScheduleEntry(), getBookingSchedule(), getScheduleLocations(), ScheduleConflict, ScheduleLocations (+5 more)
 
 ### Community 22 - "CampCenter.Domain / Repositories (1)"
 Cohesion: 0.18
 Nodes (12): BookingRepository, CancellationToken, DateOnly, DateTime, Dictionary, Exception, Guid, IReadOnlyCollection (+4 more)
 
 ### Community 23 - "Camp Session Management"
-Cohesion: 0.06
-Nodes (33): AbstractValidator, ClosuresController, CancellationToken, Guid, HttpDelete, HttpGet, HttpPost, HttpPut (+25 more)
+Cohesion: 0.08
+Nodes (23): MealTimesController, CancellationToken, Guid, HttpDelete, HttpGet, HttpPost, HttpPut, IActionResult (+15 more)
 
 ### Community 24 - "Integration Test Harness (2)"
 Cohesion: 0.20
@@ -278,16 +274,16 @@ Cohesion: 0.17
 Nodes (22): login(), logout(), api, refreshAccessToken(), RetriableConfig, decodeJWT(), getUserIdFromToken(), getUserLoginFromToken() (+14 more)
 
 ### Community 26 - "CampCenter.Domain / Repositories (2)"
-Cohesion: 0.15
-Nodes (17): MealTimeDefaultDto, MealTimeService, CancellationToken, Guid, List, Task, TimeOnly, MealKind (+9 more)
+Cohesion: 0.22
+Nodes (10): BookingMealTime, deleteBookingMeals(), getBookingMealTimes(), NeighbourSitting, resetBookingMealTime(), setBookingMealTime(), clashingNeighbours(), GroupMealTimes() (+2 more)
 
 ### Community 27 - "Booking Persistence & Entities (1)"
-Cohesion: 0.18
-Nodes (16): UsersController, CancellationToken, Guid, HttpDelete, HttpGet, HttpPost, HttpPut, IActionResult (+8 more)
+Cohesion: 0.14
+Nodes (22): UsersController, CancellationToken, Guid, HttpDelete, HttpGet, HttpPost, HttpPut, IActionResult (+14 more)
 
 ### Community 28 - "Application Namespaces & DTOs"
-Cohesion: 0.15
-Nodes (7): CampCenter.Application.DTOs.Users, CampCenter.Api.Controllers.Admin, CampCenter.Application.DTOs.AdminPanel, CampCenter.Application.Interfaces, CampCenter.Application.DTOs.Schedule, CampCenter.Api.Extensions, RoomDeleteResultDto
+Cohesion: 0.14
+Nodes (7): CampCenter.Api.Controllers.Admin, CampCenter.Api.Controllers.Public, CampCenter.Application.DTOs.AdminPanel, CampCenter.Application.Interfaces, CampCenter.Application.DTOs.Schedule, CampCenter.Api.Extensions, RoomDeleteResultDto
 
 ### Community 29 - "Admin Booking & Notifications (2)"
 Cohesion: 0.11
@@ -298,12 +294,12 @@ Cohesion: 0.18
 Nodes (12): AvailabilityDayDto, BookingDetailsDto, BookingPaymentDto, CreateBookingRequestDto, CreateBookingResponseDto, PublicClosureDto, BookingService, CancellationToken (+4 more)
 
 ### Community 31 - "Public Booking Service (2)"
-Cohesion: 0.16
+Cohesion: 0.18
 Nodes (5): CampCenter.Api.Background, CampCenter.Infrastructure.Repositories, CampCenter.Domain.Entities, CampCenter.Domain.Repositories, CampCenter.Infrastructure.Persistence
 
 ### Community 32 - "Payment Gateway Integration Tests (2)"
-Cohesion: 0.18
-Nodes (10): IAsyncLifetime, IServiceProvider, IWebHostBuilder, PostgreSqlContainer, DataSeeder, CancellationToken, Task, CampCenterApiFactory (+2 more)
+Cohesion: 0.17
+Nodes (11): IAsyncLifetime, IServiceProvider, IWebHostBuilder, PostgreSqlContainer, Program, DataSeeder, CancellationToken, Task (+3 more)
 
 ### Community 33 - "Docker & Project Docs"
 Cohesion: 0.05
@@ -318,8 +314,8 @@ Cohesion: 0.33
 Nodes (3): BookingRoomAssignment, DateOnly, Guid
 
 ### Community 36 - "Validator Unit Tests"
-Cohesion: 0.07
-Nodes (38): PublicAvailabilityController, CancellationToken, DateOnly, HttpGet, IActionResult, ProducesResponseType, Task, ClosureDto (+30 more)
+Cohesion: 0.05
+Nodes (52): ClosuresController, CancellationToken, Guid, HttpDelete, HttpGet, HttpPost, HttpPut, IActionResult (+44 more)
 
 ### Community 37 - "CampCenter.UnitTests / Services (2)"
 Cohesion: 0.08
@@ -330,8 +326,8 @@ Cohesion: 0.09
 Nodes (22): compilerOptions, allowImportingTsExtensions, erasableSyntaxOnly, jsx, lib, module, moduleDetection, moduleResolution (+14 more)
 
 ### Community 39 - "Admin User & Token Config"
-Cohesion: 0.19
-Nodes (9): AccessToken, AdminUser, DateTime, Guid, AdminUserRepository, CancellationToken, Guid, List (+1 more)
+Cohesion: 0.14
+Nodes (14): AdminUser, DateTime, Guid, AdminUserRole, IAdminUserRepository, CancellationToken, Guid, List (+6 more)
 
 ### Community 40 - "TypeScript Node Config"
 Cohesion: 0.10
@@ -339,7 +335,7 @@ Nodes (20): compilerOptions, allowImportingTsExtensions, erasableSyntaxOnly, lib
 
 ### Community 41 - "Auth Service & Tokens"
 Cohesion: 0.17
-Nodes (12): AuthResult, RefreshTokenInfo, AuthService, CancellationToken, DateTime, Guid, Task, IRefreshTokenRepository (+4 more)
+Nodes (13): ITokenService, AuthResult, RefreshTokenInfo, AuthService, CancellationToken, DateTime, Guid, Task (+5 more)
 
 ### Community 42 - "Root Task-Runner Scripts"
 Cohesion: 0.10
@@ -350,40 +346,28 @@ Cohesion: 0.42
 Nodes (5): ScheduleConflictTests, DateOnly, Fact, Guid, Task
 
 ### Community 45 - "ScheduleEntry"
-Cohesion: 0.15
-Nodes (21): ScheduleEntry, ScheduleEntryKind, DateOnly, DateTime, Guid, TimeOnly, IScheduleEntryRepository, BookingId (+13 more)
-
-### Community 46 - "JWT Token Service"
-Cohesion: 0.12
-Nodes (22): MealTimesController, CancellationToken, Guid, HttpDelete, HttpGet, HttpPost, HttpPut, IActionResult (+14 more)
+Cohesion: 0.33
+Nodes (4): PasswordRules, int, IRuleBuilder, IRuleBuilderOptions
 
 ### Community 47 - "tests / CampCenter.IntegrationTests (2)"
-Cohesion: 0.26
-Nodes (10): AdminUserDto, CreateUserRequestDto, SetUserRoleRequestDto, UserService, CancellationToken, Guid, List, Task (+2 more)
+Cohesion: 0.39
+Nodes (6): AdminUserDto, UserService, CancellationToken, Guid, List, Task
 
 ### Community 48 - "Frontend App Shell & i18n"
-Cohesion: 0.12
-Nodes (22): AdminBooking, bookingGroupCategories, BookingGroupCategory, BookingStatus, bookingStatuses, cancelAdminBooking(), createAdminBooking(), Dashboard (+14 more)
+Cohesion: 0.13
+Nodes (18): AdminBooking, BookingGroupCategory, BookingStatus, bookingStatuses, cancelAdminBooking(), createAdminBooking(), DashboardBooking, getAdminBookings() (+10 more)
 
 ### Community 49 - "Auth Controller (1)"
-Cohesion: 0.11
-Nodes (20): CookieOptions, AuthController, CancellationToken, DateTime, EnableRateLimiting, HttpPost, IActionResult, IValidator (+12 more)
-
-### Community 50 - ".CreateWorkerAsync"
-Cohesion: 0.24
-Nodes (10): AdminUser, createUser(), deleteUser(), getUsers(), setUserRole(), userRoles, UserRole, emptyForm (+2 more)
+Cohesion: 0.17
+Nodes (14): CookieOptions, AuthController, CancellationToken, DateTime, EnableRateLimiting, HttpPost, IActionResult, IValidator (+6 more)
 
 ### Community 51 - "Refresh Token Repository"
-Cohesion: 0.18
-Nodes (10): RefreshToken, DateTime, Guid, RefreshTokenConfiguration, EntityTypeBuilder, RefreshTokenRepository, CancellationToken, DateTime (+2 more)
-
-### Community 52 - "BookingMealTime"
-Cohesion: 0.14
-Nodes (17): IReadOnlyList, BookingMealTime, DateTime, Guid, TimeOnly, IBookingMealTimeRepository, CancellationToken, Guid (+9 more)
+Cohesion: 0.24
+Nodes (8): RefreshToken, DateTime, Guid, RefreshTokenRepository, CancellationToken, DateTime, Guid, Task
 
 ### Community 53 - "useAuth"
-Cohesion: 0.12
-Nodes (20): Closure, createClosure(), createRoom(), deleteClosure(), deleteRoom(), getClosures(), getRooms(), Room (+12 more)
+Cohesion: 0.13
+Nodes (19): bookingGroupCategories, createTask(), Dashboard, deleteTask(), getDashboard(), getOccupancy(), getTasks(), Occupancy (+11 more)
 
 ### Community 54 - "API Launch Settings"
 Cohesion: 0.13
@@ -398,16 +382,8 @@ Cohesion: 0.13
 Nodes (15): eslint, @eslint/js, eslint-plugin-react-refresh, devDependencies, eslint, @eslint/js, eslint-plugin-react-refresh, globals (+7 more)
 
 ### Community 57 - "Admin Booking & Notifications (4)"
-Cohesion: 0.12
-Nodes (14): EmailMessage, IEmailSender, CancellationToken, Task, ITokenService, BookingSettings, string, EmailTemplates (+6 more)
-
-### Community 58 - "Persistence / Configurations"
-Cohesion: 0.20
-Nodes (5): CampCenter.Infrastructure.Persistence.Configurations, BookingMealTimeConfiguration, EntityTypeBuilder, RoomTaskConfiguration, EntityTypeBuilder
-
-### Community 59 - "MealTimeDefaultRepository"
-Cohesion: 0.35
-Nodes (5): MealTimeDefaultRepository, CancellationToken, Guid, List, Task
+Cohesion: 0.14
+Nodes (13): EmailMessage, IEmailSender, CancellationToken, Task, BookingSettings, string, EmailTemplates, DateOnly (+5 more)
 
 ### Community 60 - "Frontend Runtime Deps"
 Cohesion: 0.15
@@ -423,7 +399,7 @@ Nodes (7): RoomCleaningRepository, CancellationToken, DateOnly, Dictionary, Guid
 
 ### Community 63 - ".CreateClient"
 Cohesion: 0.10
-Nodes (12): CampCenter.Infrastructure.Auth, CampCenter.Api.RateLimiting, CampCenter.Application, CampCenter.Api.Controllers, CampCenter.Api.Errors, CampCenter.Infrastructure, CampCenter.Infrastructure.Persistence.Seed, Program (+4 more)
+Nodes (11): CampCenter.Infrastructure.Auth, CampCenter.Api.RateLimiting, CampCenter.Application, CampCenter.Api.Controllers, CampCenter.Api.Errors, CampCenter.Infrastructure, CampCenter.Infrastructure.Persistence.Seed, RateLimitPolicies (+3 more)
 
 ### Community 64 - "src / api (2)"
 Cohesion: 0.24
@@ -442,32 +418,28 @@ Cohesion: 0.22
 Nodes (9): AuthorizationHandler, AuthorizationHandlerContext, CampCenter.Api.Auth, IAuthorizationRequirement, IHttpContextAccessor, WriteRequiresAdministratorHandler, WriteRequiresAdministratorRequirement, string (+1 more)
 
 ### Community 69 - "IEntityTypeConfiguration"
-Cohesion: 0.25
-Nodes (5): IEntityTypeConfiguration, AdminUserConfiguration, EntityTypeBuilder, ClosureConfiguration, EntityTypeBuilder
+Cohesion: 0.20
+Nodes (5): CampCenter.Infrastructure.Persistence.Configurations, ClosureConfiguration, EntityTypeBuilder, MealTimeDefaultConfiguration, EntityTypeBuilder
 
 ### Community 70 - "OpenAPI Security Scheme"
 Cohesion: 0.20
 Nodes (8): CampCenter.Api.OpenApi, IOpenApiDocumentTransformer, OpenApiDocument, OpenApiDocumentTransformerContext, BearerSecuritySchemeTransformer, CancellationToken, string, Task
-
-### Community 72 - "ScheduleSettings"
-Cohesion: 0.50
-Nodes (3): ScheduleSettings, string, TimeOnly
 
 ### Community 73 - "Booking Maintenance Background Service"
 Cohesion: 0.31
 Nodes (7): BackgroundService, IServiceScopeFactory, BookingMaintenanceService, CancellationToken, ILogger, Task, TimeSpan
 
 ### Community 74 - "PasswordRules"
-Cohesion: 0.40
-Nodes (3): RoleRules, IRuleBuilder, IRuleBuilderOptions
+Cohesion: 0.25
+Nodes (4): CampCenter.Application.DTOs.Users, RoleRules, IRuleBuilder, IRuleBuilderOptions
 
 ### Community 75 - "SmtpEmailSender"
 Cohesion: 0.25
 Nodes (6): CampCenter.Infrastructure.Email, EmailSettings, string, SmtpEmailSender, CancellationToken, Task
 
 ### Community 76 - "CampCenter.Application.DTOs.Public"
-Cohesion: 0.24
-Nodes (5): CampCenter.IntegrationTests, CampCenter.Application.DTOs.Rooms, CampCenter.Api.Controllers.Public, CampCenter.Application.DTOs.Public, CampCenter.Application.DTOs.Closures
+Cohesion: 0.33
+Nodes (4): CampCenter.IntegrationTests, CampCenter.Application.DTOs.Rooms, CampCenter.Application.DTOs.Public, CampCenter.Application.DTOs.Closures
 
 ### Community 79 - "Frontend Build Scripts"
 Cohesion: 0.29
@@ -497,6 +469,10 @@ Nodes (6): CampCenter.Infrastructure.Persistence.Migrations, ModelSnapshot, Meal
 Cohesion: 0.67
 Nodes (3): Lakeside Typography (Bricolage Grotesque + Inter), SPA HTML Shell, Pre-Paint Theme Restore
 
+### Community 109 - "ScheduleEntryConfiguration"
+Cohesion: 0.25
+Nodes (5): IEntityTypeConfiguration, RefreshTokenConfiguration, EntityTypeBuilder, ScheduleEntryConfiguration, EntityTypeBuilder
+
 ### Community 117 - "Payment"
 Cohesion: 0.47
 Nodes (5): Payment, PaymentKind, PaymentStatus, DateTime, Guid
@@ -504,22 +480,22 @@ Nodes (5): Payment, PaymentKind, PaymentStatus, DateTime, Guid
 ## Knowledge Gaps
 - **240 isolated node(s):** `printWidth`, `name`, `version`, `private`, `type` (+235 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **40 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **41 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `CampCenter.Domain.Entities` connect `Public Booking Service (2)` to `Room Management`, `Admin Bookings Controller & DTOs`, `CampCenter.UnitTests / Validators`, `Room Task Management (1)`, `CampCenter.Application / Services (1)`, `CampCenter.Infrastructure / Repositories (1)`, `Domain & Infra Namespaces`, `Integration Test Harness (1)`, `Camp Session Management`, `CampCenter.Domain / Repositories (2)`, `Application Namespaces & DTOs`, `components / admin`, `Validator Unit Tests`, `Admin User & Token Config`, `ScheduleEntry`, `Refresh Token Repository`, `Persistence / Configurations`, `.CreateClient`, `src / api (2)`, `WriteRequiresAdministratorHandler`, `IEntityTypeConfiguration`, `PasswordRules`, `BookingConfiguration`, `BookingRoomAssignmentConfiguration`, `MealTimeDefaultConfiguration`, `PaymentConfiguration`, `RoomConfiguration`, `ScheduleEntryConfiguration`, `Payment`?**
-  _High betweenness centrality (0.086) - this node is a cross-community bridge._
-- **Why does `CampCenter.Application.Interfaces` connect `Application Namespaces & DTOs` to `Room Management`, `Payment`, `CampCenter.UnitTests / Validators`, `Payment Gateway Integration Tests (1)`, `SmtpEmailSender`, `CampCenter.Application.DTOs.Public`, `Password Hashing (bcrypt)`, `Domain & Infra Namespaces`, `Camp Session Management`, `Admin Booking & Notifications (4)`, `Public Booking Service (2)`, `Admin Booking & Notifications (2)`, `.CreateClient`?**
-  _High betweenness centrality (0.083) - this node is a cross-community bridge._
-- **Why does `CampCenter.Infrastructure.Persistence` connect `Public Booking Service (2)` to `20260729224623_RoomCleanings.Designer.cs`, `EF Core Migrations (5)`, `20260728105506_PerGroupMealTimes.Designer.cs`, `Persistence / Migrations (9)`, `Persistence / Migrations (10)`, `EF Core Migrations (1)`, `20260730211855_AdminUserRole.Designer.cs`, `Persistence / Migrations (13)`, `CampCenter.UnitTests / Services (3)`, `CampCenter.Infrastructure / Repositories (1)`, `EF Core Migrations (3)`, `.CreateClient`?**
-  _High betweenness centrality (0.063) - this node is a cross-community bridge._
+- **Why does `CampCenter.Application.Interfaces` connect `Application Namespaces & DTOs` to `Room Management`, `Payment`, `CampCenter.UnitTests / Validators`, `Validator Unit Tests`, `Payment Gateway Integration Tests (1)`, `PasswordRules`, `SmtpEmailSender`, `CampCenter.Application.DTOs.Public`, `Password Hashing (bcrypt)`, `Domain & Infra Namespaces`, `Admin Booking & Notifications (4)`, `Public Booking Service (2)`, `Admin Booking & Notifications (2)`, `.CreateClient`?**
+  _High betweenness centrality (0.093) - this node is a cross-community bridge._
+- **Why does `CampCenter.Domain.Entities` connect `Public Booking Service (2)` to `Room Management`, `Admin Bookings Controller & DTOs`, `CampCenter.UnitTests / Validators`, `Room Task Management (1)`, `CampCenter.Application / Services (2)`, `CampCenter.UnitTests / Services (1)`, `Domain & Infra Namespaces`, `Integration Test Harness (1)`, `Application Namespaces & DTOs`, `components / admin`, `Validator Unit Tests`, `Admin User & Token Config`, `JWT Token Service`, `.CreateWorkerAsync`, `Refresh Token Repository`, `Persistence / Configurations`, `.CreateClient`, `src / api (2)`, `WriteRequiresAdministratorHandler`, `IEntityTypeConfiguration`, `PasswordRules`, `CampCenter.Application.DTOs.Public`, `BookingConfiguration`, `BookingRoomAssignmentConfiguration`, `PaymentConfiguration`, `RoomConfiguration`, `ScheduleEntryConfiguration`, `Payment`?**
+  _High betweenness centrality (0.088) - this node is a cross-community bridge._
+- **Why does `AppDbContext` connect `CampCenter.Infrastructure / Repositories (1)` to `src / api (2)`, `Room Management`, `components / admin`, `Validator Unit Tests`, `Room Task Management (1)`, `Admin User & Token Config`, `CampCenter.Application / Services (2)`, `CampCenter.UnitTests / Services (1)`, `Refresh Token Repository`, `Integration Test Harness (1)`, `Payment`, `CampCenter.Domain / Repositories (1)`, `RoomCleaningRepository`, `Public Booking Service (2)`?**
+  _High betweenness centrality (0.069) - this node is a cross-community bridge._
 - **What connects `printWidth`, `name`, `version` to the rest of the system?**
   _240 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `DTOs / Schedule (1)` be split into smaller, more focused modules?**
   _Cohesion score 0.09090909090909091 - nodes in this community are weakly interconnected._
 - **Should `Room Management` be split into smaller, more focused modules?**
-  _Cohesion score 0.06621004566210045 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.05636114911080711 - nodes in this community are weakly interconnected._
 - **Should `Admin Bookings Controller & DTOs` be split into smaller, more focused modules?**
-  _Cohesion score 0.0670807453416149 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.07146087743102668 - nodes in this community are weakly interconnected._

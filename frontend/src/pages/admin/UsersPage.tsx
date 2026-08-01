@@ -7,6 +7,7 @@ import {
   createUser,
   deleteUser,
   getUsers,
+  setUserPassword,
   setUserRole,
   userRoles,
   type AdminUser,
@@ -42,6 +43,9 @@ export default function UsersPage() {
   const [form, setForm] = useState<FormState>(emptyForm);
   const [busyId, setBusyId] = useState<string | null>(null);
   const [deleteTarget, setDeleteTarget] = useState<AdminUser | null>(null);
+  const [passwordTarget, setPasswordTarget] = useState<AdminUser | null>(null);
+  const [passwordDraft, setPasswordDraft] = useState("");
+  const [passwordError, setPasswordError] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [notice, setNotice] = useState<string | null>(null);
 
@@ -100,6 +104,45 @@ export default function UsersPage() {
       await reload();
     } catch (err) {
       handleApiError(err, t("adminUsers.roleError"));
+    } finally {
+      setBusyId(null);
+    }
+  }
+
+  useEffect(() => {
+    if (!passwordTarget) return;
+    function onKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape" && busyId !== passwordTarget?.id) setPasswordTarget(null);
+    }
+    document.addEventListener("keydown", onKeyDown);
+    return () => document.removeEventListener("keydown", onKeyDown);
+  }, [passwordTarget, busyId]);
+
+  function openPasswordDialog(user: AdminUser) {
+    setPasswordTarget(user);
+    setPasswordDraft("");
+    setPasswordError(null);
+  }
+
+  async function handleSetPassword(event: FormEvent) {
+    event.preventDefault();
+    if (!passwordTarget) return;
+    setBusyId(passwordTarget.id);
+    setPasswordError(null);
+    try {
+      await setUserPassword(passwordTarget.id, passwordDraft);
+      setNotice(t("adminUsers.passwordChanged", { login: passwordTarget.login }));
+      setPasswordTarget(null);
+      setPasswordDraft("");
+      // The target's own sessions just ended; if it was this browser's account,
+      // the next request finds that out and sends it back to the login page —
+      // nothing to special-case here.
+      await reload();
+    } catch (err) {
+      const detail = isAxiosError(err)
+        ? (err.response?.data as { detail?: string } | undefined)?.detail
+        : undefined;
+      setPasswordError(detail ?? t("adminUsers.passwordError"));
     } finally {
       setBusyId(null);
     }
@@ -225,7 +268,14 @@ export default function UsersPage() {
                   </td>
                   <td>{formatDate(user.createdAt.slice(0, 10), i18n.language)}</td>
                   {canEdit && (
-                    <td>
+                    <td className="row-actions">
+                      <button
+                        type="button"
+                        disabled={busyId === user.id}
+                        onClick={() => openPasswordDialog(user)}
+                      >
+                        {t("adminUsers.changePassword")}
+                      </button>
                       <button
                         type="button"
                         disabled={deleteLocked}
@@ -252,6 +302,55 @@ export default function UsersPage() {
           onConfirm={() => void handleDelete(deleteTarget)}
           onCancel={() => setDeleteTarget(null)}
         />
+      )}
+
+      {passwordTarget && (
+        <div
+          className="modal-overlay"
+          role="presentation"
+          onClick={() => busyId !== passwordTarget.id && setPasswordTarget(null)}
+        >
+          <form
+            className="modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="password-title"
+            onClick={(e) => e.stopPropagation()}
+            onSubmit={(e) => void handleSetPassword(e)}
+          >
+            <h2 id="password-title">
+              {t("adminUsers.changePasswordTitle", { login: passwordTarget.login })}
+            </h2>
+            <label>
+              {t("adminUsers.password")}
+              <input
+                type="password"
+                value={passwordDraft}
+                onChange={(e) => setPasswordDraft(e.target.value)}
+                autoComplete="new-password"
+                autoFocus
+                required
+              />
+            </label>
+            <p className="hk-section-hint">{t("adminUsers.passwordHint")}</p>
+            {passwordError && <p role="alert">{passwordError}</p>}
+            <div className="modal-actions">
+              <button
+                type="button"
+                className="secondary"
+                disabled={busyId === passwordTarget.id}
+                onClick={() => setPasswordTarget(null)}
+              >
+                {t("adminUsers.cancel")}
+              </button>
+              <button type="submit" disabled={busyId === passwordTarget.id}>
+                {busyId === passwordTarget.id
+                  ? t("adminUsers.saving")
+                  : t("adminUsers.changePassword")}
+              </button>
+            </div>
+          </form>
+        </div>
       )}
     </AdminLayout>
   );

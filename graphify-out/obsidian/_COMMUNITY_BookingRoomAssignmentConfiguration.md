@@ -23,8 +23,8 @@ SORT file.name ASC
 ## Connections to other communities
 - 2 edges to [[_COMMUNITY_components  admin]]
 - 1 edge to [[_COMMUNITY_Public Booking Service (2)]]
-- 1 edge to [[_COMMUNITY_Persistence  Configurations]]
 - 1 edge to [[_COMMUNITY_IEntityTypeConfiguration]]
+- 1 edge to [[_COMMUNITY_ScheduleEntryConfiguration]]
 
 ## Top bridge nodes
 - [[BookingRoomAssignmentConfiguration]] - degree 4, connects to 2 communities

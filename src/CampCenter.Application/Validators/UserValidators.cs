@@ -30,6 +30,11 @@ public class SetUserRoleRequestValidator : AbstractValidator<SetUserRoleRequestD
     public SetUserRoleRequestValidator() => RuleFor(r => r.Role).ValidRole();
 }
 
+public class SetUserPasswordRequestValidator : AbstractValidator<SetUserPasswordRequestDto>
+{
+    public SetUserPasswordRequestValidator() => RuleFor(r => r.Password).ValidPassword();
+}
+
 internal static class RoleRules
 {
     /// One of the AdminUserRole names. Checked here as well as in the service, so a

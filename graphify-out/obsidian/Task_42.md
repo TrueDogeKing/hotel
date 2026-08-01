@@ -16,6 +16,7 @@ tags:
 - [[.GetOrThrowAsync()_3]] - `references` [EXTRACTED]
 - [[.GuardLastAdministratorAsync()]] - `references` [EXTRACTED]
 - [[.ListAsync()_5]] - `references` [EXTRACTED]
+- [[.SetPasswordAsync()_1]] - `references` [EXTRACTED]
 - [[.SetRoleAsync()_1]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/tests_/_CampCenterIntegrationTests_2

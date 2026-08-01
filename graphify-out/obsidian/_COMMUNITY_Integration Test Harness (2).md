@@ -48,21 +48,21 @@ SORT file.name ASC
 ## Connections to other communities
 - 17 edges to [[_COMMUNITY_Admin Booking & Notifications (1)]]
 - 12 edges to [[_COMMUNITY_Integration Test Harness (1)]]
+- 7 edges to [[_COMMUNITY_CampCenter.Application  Services (2)]]
 - 6 edges to [[_COMMUNITY_Public Booking Service (1)]]
-- 6 edges to [[_COMMUNITY_CampCenter.Application  Services (2)]]
-- 5 edges to [[_COMMUNITY_Validator Unit Tests]]
 - 5 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (2)]]
 - 5 edges to [[_COMMUNITY_Admin Booking & Notifications (4)]]
 - 4 edges to [[_COMMUNITY_Payment]]
+- 3 edges to [[_COMMUNITY_Room Management]]
 - 3 edges to [[_COMMUNITY_components  admin]]
-- 1 edge to [[_COMMUNITY_BookingMealTime]]
+- 2 edges to [[_COMMUNITY_Validator Unit Tests]]
 - 1 edge to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
 - 1 edge to [[_COMMUNITY_Public Booking Service (2)]]
 - 1 edge to [[_COMMUNITY_CampCenter.Domain  Repositories (1)]]
 
 ## Top bridge nodes
-- [[IBookingRepository]] - degree 32, connects to 9 communities
-- [[.ListLivePresentInAsync()]] - degree 11, connects to 3 communities
+- [[IBookingRepository]] - degree 32, connects to 10 communities
 - [[.ListByCategoryAsync()]] - degree 10, connects to 3 communities
 - [[.GetPaymentsAsync()]] - degree 8, connects to 3 communities
 - [[.GetByIdAsync()_1]] - degree 7, connects to 3 communities
+- [[.AddAsync()_2]] - degree 6, connects to 3 communities

@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/pages/admin/AdminDashboardPage.tsx"
 type: "code"
-community: "Frontend App Shell & i18n"
+community: "useAuth"
 location: "L20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Frontend_App_Shell__i18n
+  - community/useAuth
 ---
 
 # AdminDashboardPage()
@@ -17,4 +17,4 @@ tags:
 - [[scrollPanelIntoView()]] - `calls` [EXTRACTED]
 - [[useAuth()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Frontend_App_Shell__i18n
+#graphify/code #graphify/EXTRACTED #community/useAuth

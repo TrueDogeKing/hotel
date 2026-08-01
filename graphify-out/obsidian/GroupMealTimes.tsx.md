@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/components/admin/GroupMealTimes.tsx"
 type: "code"
-community: "src / api (1)"
+community: "CampCenter.Domain / Repositories (2)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/src_/_api_1
+  - community/CampCenterDomain_/_Repositories_2
 ---
 
 # GroupMealTimes.tsx
@@ -32,4 +32,4 @@ tags:
 - [[toTimeInput()]] - `imports` [EXTRACTED]
 - [[useAuth()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/src_/_api_1
+#graphify/code #graphify/EXTRACTED #community/CampCenterDomain_/_Repositories_2

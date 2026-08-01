@@ -13,6 +13,7 @@ tags:
 
 ## Connections
 - [[.Administrator_CanAdd_ChangeRole_AndDelete_Accounts()]] - `method` [EXTRACTED]
+- [[.Administrator_CanResetAPassword_AndItEndsThatAccountsSessions()]] - `method` [EXTRACTED]
 - [[.CreateWorkerAsync()]] - `method` [EXTRACTED]
 - [[.DuplicateLogin_AndWeakPassword_AreRejected()]] - `method` [EXTRACTED]
 - [[.RoleChange_EndsTheAffectedAccountsSessions()]] - `method` [EXTRACTED]

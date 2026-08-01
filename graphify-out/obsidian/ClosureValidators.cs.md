@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Validators/ClosureValidators.cs"
 type: "code"
-community: "Camp Session Management"
+community: "Validator Unit Tests"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Camp_Session_Management
+  - community/Validator_Unit_Tests
 ---
 
 # ClosureValidators.cs
@@ -17,4 +17,4 @@ tags:
 - [[CreateClosureRequestValidator]] - `contains` [EXTRACTED]
 - [[UpdateClosureRequestValidator]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Camp_Session_Management
+#graphify/code #graphify/EXTRACTED #community/Validator_Unit_Tests

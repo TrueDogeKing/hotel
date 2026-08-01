@@ -12,6 +12,7 @@ tags:
 
 ## Connections
 - [[.Delete()_4]] - `references` [EXTRACTED]
+- [[.SetPassword()]] - `references` [EXTRACTED]
 - [[.SetRole()]] - `references` [EXTRACTED]
 - [[UsersController]] - `references` [EXTRACTED]
 

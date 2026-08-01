@@ -18,6 +18,7 @@ tags:
 - [[.GuardLastAdministratorAsync()]] - `method` [EXTRACTED]
 - [[.ListAsync()_5]] - `method` [EXTRACTED]
 - [[.ParseRole()]] - `method` [EXTRACTED]
+- [[.SetPasswordAsync()_1]] - `method` [EXTRACTED]
 - [[.SetRoleAsync()_1]] - `method` [EXTRACTED]
 - [[.ToDto()_6]] - `method` [EXTRACTED]
 - [[IAdminUserRepository]] - `references` [EXTRACTED]

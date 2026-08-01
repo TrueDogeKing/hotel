@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Validator Unit Tests"
+community: "Room Management"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Validator_Unit_Tests
+  - community/Room_Management
 ---
 
 # Guid
@@ -14,4 +14,4 @@ tags:
 - [[.GetBlockedRoomIdsAsync()_1]] - `references` [EXTRACTED]
 - [[.GetFreeRoomsByCapacityAsync()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Validator_Unit_Tests
+#graphify/code #graphify/EXTRACTED #community/Room_Management

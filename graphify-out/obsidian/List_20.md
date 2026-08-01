@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.Application / Services (1)"
+community: "Admin User & Token Config"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterApplication_/_Services_1
+  - community/Admin_User__Token_Config
 ---
 
 # List
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.ListAsync()_6]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_1
+#graphify/code #graphify/EXTRACTED #community/Admin_User__Token_Config

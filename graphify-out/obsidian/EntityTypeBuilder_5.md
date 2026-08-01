@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "MealTimeDefaultConfiguration"
+community: "IEntityTypeConfiguration"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MealTimeDefaultConfiguration
+  - community/IEntityTypeConfiguration
 ---
 
 # EntityTypeBuilder
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.Configure()_5]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MealTimeDefaultConfiguration
+#graphify/code #graphify/EXTRACTED #community/IEntityTypeConfiguration

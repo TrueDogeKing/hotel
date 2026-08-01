@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/DTOs/Schedule/MealTimeDtos.cs"
 type: "code"
-community: "JWT Token Service"
+community: "CampCenter.UnitTests / Validators"
 location: "L25"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/JWT_Token_Service
+  - community/CampCenterUnitTests_/_Validators
 ---
 
 # UpdateMealTimeDefaultRequestDto
@@ -18,4 +18,4 @@ tags:
 - [[MealTimeDtos.cs]] - `contains` [EXTRACTED]
 - [[UpdateMealTimeDefaultRequestValidator]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/JWT_Token_Service
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Validators

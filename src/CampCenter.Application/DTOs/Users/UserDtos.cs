@@ -14,3 +14,5 @@ public record AdminUserDto(
 public record CreateUserRequestDto(string Login, string Password, string Role);
 
 public record SetUserRoleRequestDto(string Role);
+
+public record SetUserPasswordRequestDto(string Password);

@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Persistence/Configurations/RoomTaskConfiguration.cs"
 type: "code"
-community: "Persistence / Configurations"
+community: ".CreateWorkerAsync"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Persistence_/_Configurations
+  - community/CreateWorkerAsync
 ---
 
 # RoomTaskConfiguration.cs
@@ -16,4 +16,4 @@ tags:
 - [[CampCenter.Infrastructure.Persistence.Configurations]] - `contains` [EXTRACTED]
 - [[RoomTaskConfiguration]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Persistence_/_Configurations
+#graphify/code #graphify/EXTRACTED #community/CreateWorkerAsync

@@ -29,7 +29,12 @@
     "loadError": "Could not load the accounts.",
     "createError": "Could not add the account.",
     "roleError": "Could not change the role.",
-    "deleteError": "Could not delete the account."
+    "deleteError": "Could not delete the account.",
+    "changePassword": "Change password",
+    "changePasswordTitle": "Change password: {{login}}",
+    "passwordChanged": "The password for {{login}} has been changed. That account's sessions have been ended.",
+    "passwordError": "Could not change the password.",
+    "saving": "Saving…"
   },
   "home": {
     "heroTitle": "Summer camp centre by the sea",

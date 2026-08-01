@@ -55,16 +55,17 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 17 edges to [[_COMMUNITY_src  api (1)]]
-- 10 edges to [[_COMMUNITY_CampCenter.Application  Services (3)]]
-- 6 edges to [[_COMMUNITY_src  utils]]
-- 5 edges to [[_COMMUNITY_Public Booking Frontend (1)]]
-- 3 edges to [[_COMMUNITY_useAuth]]
+- 14 edges to [[_COMMUNITY_src  api (1)]]
+- 11 edges to [[_COMMUNITY_src  utils]]
+- 5 edges to [[_COMMUNITY_CampCenter.Application  Services (3)]]
+- 4 edges to [[_COMMUNITY_useAuth]]
+- 4 edges to [[_COMMUNITY_Public Booking Frontend (1)]]
+- 3 edges to [[_COMMUNITY_CampCenter.Domain  Repositories (2)]]
 - 1 edge to [[_COMMUNITY_Frontend Auth & API Client]]
 
 ## Top bridge nodes
-- [[MealTimesPage.tsx]] - degree 18, connects to 5 communities
-- [[DayTimetable.tsx]] - degree 19, connects to 4 communities
+- [[MealTimesPage.tsx]] - degree 18, connects to 4 communities
 - [[toTimeInput()]] - degree 15, connects to 4 communities
+- [[DayTimetable.tsx]] - degree 19, connects to 3 communities
 - [[ScheduleEntryForm.tsx]] - degree 17, connects to 3 communities
-- [[ScheduleEntry]] - degree 6, connects to 2 communities
+- [[ScheduleEntryInput]] - degree 5, connects to 3 communities

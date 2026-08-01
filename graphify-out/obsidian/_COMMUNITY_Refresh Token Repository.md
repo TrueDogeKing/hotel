@@ -1,28 +1,24 @@
 ---
 type: community
-members: 17
+members: 13
 ---
 
 # Refresh Token Repository
 
-**Members:** 17 nodes
+**Members:** 13 nodes
 
 ## Members
 - [[.AddAsync()_15]] - code - src/CampCenter.Infrastructure/Repositories/RefreshTokenRepository.cs
-- [[.Configure()_7]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/RefreshTokenConfiguration.cs
 - [[.GetByTokenHashAsync()_3]] - code - src/CampCenter.Infrastructure/Repositories/RefreshTokenRepository.cs
 - [[.RevokeAllActiveForUserAsync()_1]] - code - src/CampCenter.Infrastructure/Repositories/RefreshTokenRepository.cs
 - [[.SaveChangesAsync()_15]] - code - src/CampCenter.Infrastructure/Repositories/RefreshTokenRepository.cs
 - [[CancellationToken_61]] - code
 - [[DateTime_10]] - code
 - [[DateTime_17]] - code
-- [[EntityTypeBuilder_7]] - code
 - [[Guid_35]] - code
 - [[Guid_55]] - code
 - [[RefreshToken]] - code - src/CampCenter.Domain/Entities/RefreshToken.cs
 - [[RefreshToken.cs]] - code - src/CampCenter.Domain/Entities/RefreshToken.cs
-- [[RefreshTokenConfiguration]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/RefreshTokenConfiguration.cs
-- [[RefreshTokenConfiguration.cs]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/RefreshTokenConfiguration.cs
 - [[RefreshTokenRepository]] - code - src/CampCenter.Infrastructure/Repositories/RefreshTokenRepository.cs
 - [[Task_61]] - code
 
@@ -35,15 +31,12 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 4 edges to [[_COMMUNITY_Auth Service & Tokens]]
-- 3 edges to [[_COMMUNITY_Public Booking Service (2)]]
+- 2 edges to [[_COMMUNITY_Public Booking Service (2)]]
 - 2 edges to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
+- 2 edges to [[_COMMUNITY_ScheduleEntryConfiguration]]
 - 1 edge to [[_COMMUNITY_Admin User & Token Config]]
-- 1 edge to [[_COMMUNITY_Persistence  Configurations]]
-- 1 edge to [[_COMMUNITY_IEntityTypeConfiguration]]
 
 ## Top bridge nodes
-- [[RefreshToken]] - degree 12, connects to 3 communities
+- [[RefreshToken]] - degree 12, connects to 4 communities
 - [[RefreshTokenRepository]] - degree 7, connects to 3 communities
-- [[RefreshTokenConfiguration.cs]] - degree 3, connects to 2 communities
-- [[RefreshTokenConfiguration]] - degree 4, connects to 1 community
 - [[RefreshToken.cs]] - degree 2, connects to 1 community

@@ -1,11 +1,11 @@
 ---
 type: community
-members: 65
+members: 66
 ---
 
 # Room Task Management (1)
 
-**Members:** 65 nodes
+**Members:** 66 nodes
 
 ## Members
 - [[.AddAsync()_8]] - code - src/CampCenter.Domain/Repositories/IRoomTaskRepository.cs
@@ -41,6 +41,7 @@ members: 65
 - [[CancellationToken_40]] - code
 - [[CancellationToken_51]] - code
 - [[CancellationToken_64]] - code
+- [[CreateRoomTaskRequestDto]] - code - src/CampCenter.Application/DTOs/AdminPanel/AdminPanelDtos.cs
 - [[DateTime_12]] - code
 - [[Dictionary_5]] - code
 - [[Dictionary_8]] - code
@@ -82,19 +83,19 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
+- 3 edges to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
 - 3 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
 - 3 edges to [[_COMMUNITY_Admin Booking & Notifications (1)]]
 - 3 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (2)]]
 - 3 edges to [[_COMMUNITY_Room Management]]
 - 3 edges to [[_COMMUNITY_Public Booking Service (2)]]
 - 2 edges to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
-- 2 edges to [[_COMMUNITY_Persistence  Configurations]]
+- 2 edges to [[_COMMUNITY_.CreateWorkerAsync]]
 - 1 edge to [[_COMMUNITY_Integration Test Harness (1)]]
 
 ## Top bridge nodes
 - [[RoomTask_1]] - degree 18, connects to 4 communities
 - [[IRoomTaskRepository]] - degree 13, connects to 3 communities
-- [[.CreateAsync()_12]] - degree 10, connects to 2 communities
 - [[RoomTaskRepository]] - degree 10, connects to 2 communities
 - [[RoomTaskService]] - degree 9, connects to 2 communities
+- [[TasksController]] - degree 8, connects to 2 communities

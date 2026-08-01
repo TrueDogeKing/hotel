@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/pages/admin/TasksPage.tsx"
 type: "code"
-community: "src / api (1)"
+community: "useAuth"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/src_/_api_1
+  - community/useAuth
 ---
 
 # TasksPage.tsx
@@ -23,4 +23,4 @@ tags:
 - [[setTaskDone()]] - `imports` [EXTRACTED]
 - [[useAuth()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/src_/_api_1
+#graphify/code #graphify/EXTRACTED #community/useAuth

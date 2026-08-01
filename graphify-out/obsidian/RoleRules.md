@@ -2,7 +2,7 @@
 source_file: "src/CampCenter.Application/Validators/UserValidators.cs"
 type: "code"
 community: "PasswordRules"
-location: "L33"
+location: "L38"
 tags:
   - graphify/code
   - graphify/EXTRACTED

@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/pages/admin/SchedulePage.tsx"
 type: "code"
-community: "CampCenter.Application / Services (3)"
+community: "src / utils"
 location: "L39"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterApplication_/_Services_3
+  - community/src_/_utils
 ---
 
 # SchedulePage()
@@ -21,4 +21,4 @@ tags:
 - [[scrollPanelIntoView()]] - `calls` [EXTRACTED]
 - [[useAuth()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_3
+#graphify/code #graphify/EXTRACTED #community/src_/_utils

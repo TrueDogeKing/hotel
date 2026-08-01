@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/DTOs/Closures/ClosureDtos.cs"
 type: "code"
-community: "Camp Session Management"
+community: "Validator Unit Tests"
 location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Camp_Session_Management
+  - community/Validator_Unit_Tests
 ---
 
 # UpdateClosureRequestDto
@@ -18,4 +18,4 @@ tags:
 - [[ClosureDtos.cs]] - `contains` [EXTRACTED]
 - [[UpdateClosureRequestValidator]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Camp_Session_Management
+#graphify/code #graphify/EXTRACTED #community/Validator_Unit_Tests

@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/pages/admin/SchedulePage.tsx"
 type: "code"
-community: "CampCenter.Application / Services (3)"
+community: "src / utils"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterApplication_/_Services_3
+  - community/src_/_utils
 ---
 
 # SchedulePage.tsx
@@ -47,4 +47,4 @@ tags:
 - [[todayIso()]] - `imports` [EXTRACTED]
 - [[useAuth()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_3
+#graphify/code #graphify/EXTRACTED #community/src_/_utils

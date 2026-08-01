@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Persistence/Configurations/AdminUserConfiguration.cs"
 type: "code"
-community: "IEntityTypeConfiguration"
+community: "JWT Token Service"
 location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/IEntityTypeConfiguration
+  - community/JWT_Token_Service
 ---
 
 # AdminUserConfiguration
@@ -17,4 +17,4 @@ tags:
 - [[AdminUserConfiguration.cs]] - `contains` [EXTRACTED]
 - [[IEntityTypeConfiguration]] - `implements` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/IEntityTypeConfiguration
+#graphify/code #graphify/EXTRACTED #community/JWT_Token_Service

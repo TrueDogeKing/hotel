@@ -40,8 +40,8 @@
     "semantic_hash": ""
   },
   "frontend/src/api/admin.ts": {
-    "mtime": 1785446831.355138,
-    "ast_hash": "31d228e44ec0b571a4380ef974db01ee",
+    "mtime": 1785508876.059123,
+    "ast_hash": "517ef38566b90530358ea3c85c5413de",
     "semantic_hash": ""
   },
   "frontend/src/api/auth.ts": {
@@ -115,8 +115,8 @@
     "semantic_hash": ""
   },
   "frontend/src/i18n/en.json": {
-    "mtime": 1785507834.7768023,
-    "ast_hash": "5406d77c632a54468322c871d83fffb8",
+    "mtime": 1785509009.6689305,
+    "ast_hash": "d254144e6a82f01391b79fe8bcede426",
     "semantic_hash": ""
   },
   "frontend/src/i18n/index.ts": {
@@ -125,8 +125,8 @@
     "semantic_hash": "2c62823bcdad775ae76fa3a6db453826"
   },
   "frontend/src/i18n/pl.json": {
-    "mtime": 1785507834.7738,
-    "ast_hash": "af4ac8fd39bc44a3b421031543150d80",
+    "mtime": 1785509009.6669292,
+    "ast_hash": "a55dd56904dff91f4486d18cceb0092e",
     "semantic_hash": ""
   },
   "frontend/src/main.tsx": {
@@ -1295,8 +1295,8 @@
     "semantic_hash": ""
   },
   "frontend/src/pages/admin/UsersPage.tsx": {
-    "mtime": 1785448782.788858,
-    "ast_hash": "34dd182bd64e3642ba3d6129faeff7b3",
+    "mtime": 1785508977.3394897,
+    "ast_hash": "2ce95f8afed7110b3ffde7825956b274",
     "semantic_hash": ""
   },
   "src/CampCenter.Api/Auth/WriteRequiresAdministrator.cs": {
@@ -1305,28 +1305,28 @@
     "semantic_hash": ""
   },
   "src/CampCenter.Api/Controllers/Admin/UsersController.cs": {
-    "mtime": 1785448441.5202415,
-    "ast_hash": "e29b80f324c96ec8e5cc5c54c03b8cf9",
+    "mtime": 1785508805.925773,
+    "ast_hash": "283ca200a9ae5dc5c4647d7b6ec91267",
     "semantic_hash": ""
   },
   "src/CampCenter.Application/DTOs/Users/UserDtos.cs": {
-    "mtime": 1785446583.3377228,
-    "ast_hash": "f12fcef28a01854fb39d70e81679f0da",
+    "mtime": 1785508735.1218548,
+    "ast_hash": "b4c1f210c34e2d5b478d9f1d3b07fdef",
     "semantic_hash": ""
   },
   "src/CampCenter.Application/Interfaces/IUserService.cs": {
-    "mtime": 1785446592.431013,
-    "ast_hash": "4fbdd03e0a3ec3746c1e85fb8cce702f",
+    "mtime": 1785508752.4703052,
+    "ast_hash": "4813a17f6baf2d28daf895c6e5a3cf9a",
     "semantic_hash": ""
   },
   "src/CampCenter.Application/Services/UserService.cs": {
-    "mtime": 1785446743.5758572,
-    "ast_hash": "197fbded38c25a4f44837974f5031491",
+    "mtime": 1785508764.0571096,
+    "ast_hash": "095b550ad486452bd87bc8c649a940e1",
     "semantic_hash": ""
   },
   "src/CampCenter.Application/Validators/UserValidators.cs": {
-    "mtime": 1785446649.6496415,
-    "ast_hash": "2d1f579d763b5b6bb73380af238c9be7",
+    "mtime": 1785508777.6090426,
+    "ast_hash": "3247d19010880697737df7111bb84e3f",
     "semantic_hash": ""
   },
   "src/CampCenter.Domain/Entities/AdminUserRole.cs": {
@@ -1345,8 +1345,8 @@
     "semantic_hash": ""
   },
   "tests/CampCenter.IntegrationTests/UsersAndRolesApiTests.cs": {
-    "mtime": 1785449005.78236,
-    "ast_hash": "60f7486540c33fdcff526bab33af88df",
+    "mtime": 1785509096.8472962,
+    "ast_hash": "8ea82cb580c5a5176b5a8a21e7b4097e",
     "semantic_hash": ""
   },
   "frontend/src/components/calendar/RangeCalendar.tsx": {

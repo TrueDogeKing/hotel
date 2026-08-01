@@ -8,7 +8,6 @@ members: 45
 **Members:** 45 nodes
 
 ## Members
-- [[AdminLayout.tsx]] - code - frontend/src/components/admin/AdminLayout.tsx
 - [[Availability]] - code - frontend/src/api/public.ts
 - [[AvailabilityCalendar]] - code - frontend/src/api/public.ts
 - [[AvailabilityDay]] - code - frontend/src/api/public.ts
@@ -43,6 +42,7 @@ members: 45
 - [[createBooking()]] - code - frontend/src/api/public.ts
 - [[emptyContact]] - code - frontend/src/pages/BookingWizardPage.tsx
 - [[formatDate()]] - code - frontend/src/utils/dates.ts
+- [[formatZl()]] - code - frontend/src/api/admin.ts
 - [[getAvailability()]] - code - frontend/src/api/public.ts
 - [[getBooking()]] - code - frontend/src/api/public.ts
 - [[getBookingSchedule()_1]] - code - frontend/src/api/public.ts
@@ -63,18 +63,17 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 13 edges to [[_COMMUNITY_src  utils]]
-- 11 edges to [[_COMMUNITY_Frontend App Shell & i18n]]
-- 10 edges to [[_COMMUNITY_useAuth]]
-- 8 edges to [[_COMMUNITY_Frontend Icon Components]]
-- 7 edges to [[_COMMUNITY_src  api (1)]]
-- 5 edges to [[_COMMUNITY_Room Closure Management]]
-- 5 edges to [[_COMMUNITY_CampCenter.Application  Services (3)]]
-- 3 edges to [[_COMMUNITY_Frontend Auth & API Client]]
-- 3 edges to [[_COMMUNITY_.CreateWorkerAsync]]
+- 9 edges to [[_COMMUNITY_src  api (1)]]
+- 9 edges to [[_COMMUNITY_Frontend App Shell & i18n]]
+- 6 edges to [[_COMMUNITY_useAuth]]
+- 4 edges to [[_COMMUNITY_Room Closure Management]]
+- 4 edges to [[_COMMUNITY_Frontend Icon Components]]
+- 2 edges to [[_COMMUNITY_Frontend Auth & API Client]]
+- 2 edges to [[_COMMUNITY_CampCenter.Application  Services (3)]]
 
 ## Top bridge nodes
-- [[AdminLayout.tsx]] - degree 19, connects to 8 communities
-- [[formatDate()]] - degree 24, connects to 7 communities
-- [[BookingManagePage.tsx]] - degree 16, connects to 5 communities
-- [[BookingWizardPage.tsx]] - degree 17, connects to 4 communities
+- [[formatDate()]] - degree 24, connects to 5 communities
+- [[BookingManagePage.tsx]] - degree 16, connects to 4 communities
+- [[BookingWizardPage.tsx]] - degree 17, connects to 3 communities
 - [[public.ts]] - degree 29, connects to 2 communities
+- [[LanguageSwitcher.tsx]] - degree 13, connects to 2 communities
