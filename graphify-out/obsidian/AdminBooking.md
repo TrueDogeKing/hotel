@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/api/admin.ts"
 type: "code"
-community: "Frontend App Shell & i18n"
+community: "ScheduleEntry"
 location: "L156"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Frontend_App_Shell__i18n
+  - community/ScheduleEntry
 ---
 
 # AdminBooking
@@ -18,4 +18,4 @@ tags:
 - [[Props_3]] - `references` [EXTRACTED]
 - [[admin.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Frontend_App_Shell__i18n
+#graphify/code #graphify/EXTRACTED #community/ScheduleEntry

@@ -14,6 +14,8 @@ tags:
 ## Connections
 - [[CalendarTile()]] - `calls` [EXTRACTED]
 - [[CalendarTile.tsx]] - `imports` [EXTRACTED]
+- [[DayCalendar()]] - `calls` [EXTRACTED]
+- [[DayCalendar.tsx]] - `imports` [EXTRACTED]
 - [[HousekeepingPage()]] - `indirect_call` [INFERRED]
 - [[HousekeepingPage.tsx]] - `imports` [EXTRACTED]
 - [[MonthCalendar.tsx]] - `imports` [EXTRACTED]

@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/utils/dates.ts"
 type: "code"
-community: "Public Booking Frontend (1)"
+community: "ControllerBase"
 location: "L67"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public_Booking_Frontend_1
+  - community/ControllerBase
 ---
 
 # formatDate()
@@ -24,6 +24,8 @@ tags:
 - [[BookingWizardPage.tsx]] - `imports` [EXTRACTED]
 - [[ClosuresPage()]] - `calls` [EXTRACTED]
 - [[ClosuresPage.tsx]] - `imports` [EXTRACTED]
+- [[DateField()]] - `calls` [EXTRACTED]
+- [[DateField.tsx]] - `imports` [EXTRACTED]
 - [[DateRangeField()]] - `calls` [EXTRACTED]
 - [[DateRangeField.tsx]] - `imports` [EXTRACTED]
 - [[DayTimetable()]] - `calls` [EXTRACTED]
@@ -37,4 +39,4 @@ tags:
 - [[dates.ts]] - `contains` [EXTRACTED]
 - [[fromIsoDate()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public_Booking_Frontend_1
+#graphify/code #graphify/EXTRACTED #community/ControllerBase

@@ -295,8 +295,7 @@
   },
   "occupancy": {
     "title": "Obłożenie",
-    "from": "Od",
-    "to": "Do",
+    "range": "Termin",
     "summary": "obłożenie {{occupied}}/{{total}} miejsc",
     "room": "Pokój",
     "beds": "miejsc",
@@ -316,11 +315,17 @@
     "showDone": "Pokaż wykonane",
     "empty": "Brak zadań.",
     "room": "Pokój",
+    "noRoom": "Bez pokoju (zadanie ogólne)",
+    "general": "Ogólne",
+    "textPlaceholder": "np. dostawka",
+    "add": "Dodaj zadanie",
+    "addError": "Nie udało się dodać zadania.",
     "delete": "Usuń"
   },
   "housekeeping": {
     "title": "Sprzątanie pokoi",
     "intro": "Pokoje do ogarnięcia w danym dniu: te, z których grupa właśnie wyjechała (sprawdzić i posprzątać), te, do których dziś wchodzi nowa grupa, oraz te, które trzeba zdążyć zrobić między jedną grupą a drugą.",
+    "day": "Dzień",
     "previousDay": "‹ Poprzedni dzień",
     "nextDay": "Następny dzień ›",
     "today": "Dziś",
@@ -411,6 +416,10 @@
     "activate": "Aktywuj",
     "deactivate": "Dezaktywuj",
     "delete": "Usuń",
+    "deleteTitle": "Usunąć pokój?",
+    "deleteMessage": "Pokój {{number}} zostanie trwale usunięty. Jeśli ma historię rezerwacji, zostanie dezaktywowany zamiast usunięty.",
+    "deleteConfirm": "Usuń pokój",
+    "deleteKeep": "Anuluj",
     "deactivatedInstead": "Pokój ma historię rezerwacji — został dezaktywowany zamiast usunięty.",
     "conflict": "Konflikt: numer pokoju jest zajęty albo dane zmienił ktoś inny. Odśwież i spróbuj ponownie.",
     "genericError": "Nie udało się zapisać zmian."

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Domain & Infra Namespaces"
+community: "ClosureService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Domain__Infra_Namespaces
+  - community/ClosureService
 ---
 
 # Exception
@@ -17,4 +17,4 @@ tags:
 - [[ForbiddenActionException]] - `inherits` [EXTRACTED]
 - [[NotFoundException]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Domain__Infra_Namespaces
+#graphify/code #graphify/EXTRACTED #community/ClosureService

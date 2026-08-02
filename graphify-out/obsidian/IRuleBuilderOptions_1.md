@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "PasswordRules"
+community: "UserValidators.cs"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PasswordRules
+  - community/UserValidatorscs
 ---
 
 # IRuleBuilderOptions
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.ValidRole()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PasswordRules
+#graphify/code #graphify/EXTRACTED #community/UserValidatorscs

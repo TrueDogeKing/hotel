@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/pages/admin/ClosuresPage.tsx"
 type: "code"
-community: "src / api (1)"
+community: "ControllerBase"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/src_/_api_1
+  - community/ControllerBase
 ---
 
 # ClosuresPage.tsx
@@ -18,6 +18,8 @@ tags:
 - [[Closure]] - `imports` [EXTRACTED]
 - [[ClosureFormState]] - `contains` [EXTRACTED]
 - [[ClosuresPage()]] - `contains` [EXTRACTED]
+- [[DateRangeField()]] - `imports` [EXTRACTED]
+- [[DateRangeField.tsx]] - `imports_from` [EXTRACTED]
 - [[Room]] - `imports` [EXTRACTED]
 - [[admin.ts]] - `imports_from` [EXTRACTED]
 - [[createClosure()]] - `imports` [EXTRACTED]
@@ -30,4 +32,4 @@ tags:
 - [[updateClosure()]] - `imports` [EXTRACTED]
 - [[useAuth()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/src_/_api_1
+#graphify/code #graphify/EXTRACTED #community/ControllerBase

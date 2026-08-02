@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import AdminLayout from "../../components/admin/AdminLayout";
+import DateRangeField from "../../components/calendar/DateRangeField";
 import {
   createTask,
   getOccupancy,
@@ -95,14 +96,20 @@ export default function OccupancyPage() {
       <h1>{t("occupancy.title")}</h1>
 
       <div className="admin-form">
-        <label>
-          {t("occupancy.from")}
-          <input type="date" value={start} onChange={(e) => setStart(e.target.value)} />
-        </label>
-        <label>
-          {t("occupancy.to")}
-          <input type="date" value={end} onChange={(e) => setEnd(e.target.value)} />
-        </label>
+        {/* The same folded picker the booking forms use, so the range being viewed
+            is read back as text and the grid keeps the room for itself. Past dates
+            are allowed: occupancy is looked back on as often as ahead. */}
+        <DateRangeField
+          label={t("occupancy.range")}
+          startDate={start}
+          endDate={end}
+          headcount={0}
+          allowPast
+          onChange={(range) => {
+            setStart(range.startDate);
+            setEnd(range.endDate);
+          }}
+        />
       </div>
 
       {error && <p role="alert">{error}</p>}

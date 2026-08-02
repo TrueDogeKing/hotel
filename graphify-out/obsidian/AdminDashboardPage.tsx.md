@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/pages/admin/AdminDashboardPage.tsx"
 type: "code"
-community: "useAuth"
+community: "ScheduleEntry"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/useAuth
+  - community/ScheduleEntry
 ---
 
 # AdminDashboardPage.tsx
@@ -30,4 +30,4 @@ tags:
 - [[setBookingStatus()]] - `imports` [EXTRACTED]
 - [[useAuth()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/useAuth
+#graphify/code #graphify/EXTRACTED #community/ScheduleEntry

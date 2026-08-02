@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "BookingRoomAssignmentConfiguration"
+community: "@types/react"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/BookingRoomAssignmentConfiguration
+  - community/types/react
 ---
 
 # EntityTypeBuilder
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.Configure()_3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/BookingRoomAssignmentConfiguration
+#graphify/code #graphify/EXTRACTED #community/types/react

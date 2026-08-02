@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Domain/Entities/AdminUserRole.cs"
 type: "code"
-community: "Admin User & Token Config"
+community: "Booking Persistence & Entities (1)"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_User__Token_Config
+  - community/Booking_Persistence__Entities_1
 ---
 
 # AdminUserRole
@@ -18,4 +18,4 @@ tags:
 - [[AdminUser_1]] - `references` [EXTRACTED]
 - [[AdminUserRole.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_User__Token_Config
+#graphify/code #graphify/EXTRACTED #community/Booking_Persistence__Entities_1

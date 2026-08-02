@@ -22,6 +22,7 @@ tags:
 - [[20260729102116_ParticipantCountOnScheduleEntry.Designer.cs]] - `imports` [EXTRACTED]
 - [[20260729224623_RoomCleanings.Designer.cs]] - `imports` [EXTRACTED]
 - [[20260730211855_AdminUserRole.Designer.cs]] - `imports` [EXTRACTED]
+- [[20260802130913_MakeRoomTaskRoomOptional.Designer.cs]] - `imports` [EXTRACTED]
 - [[AdminUserRepository.cs]] - `imports` [EXTRACTED]
 - [[AppDbContext.cs]] - `contains` [EXTRACTED]
 - [[AppDbContextModelSnapshot.cs]] - `imports` [EXTRACTED]

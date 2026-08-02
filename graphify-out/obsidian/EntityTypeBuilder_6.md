@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "PaymentConfiguration"
+community: "@types/react"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PaymentConfiguration
+  - community/types/react
 ---
 
 # EntityTypeBuilder
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.Configure()_6]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PaymentConfiguration
+#graphify/code #graphify/EXTRACTED #community/types/react

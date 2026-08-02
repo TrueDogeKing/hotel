@@ -1,11 +1,11 @@
 ---
 type: community
-members: 80
+members: 79
 ---
 
 # CampCenter.UnitTests / Services (1)
 
-**Members:** 80 nodes
+**Members:** 79 nodes
 
 ## Members
 - [[.AddAsync()_4]] - code - src/CampCenter.Domain/Repositories/IMealTimeDefaultRepository.cs
@@ -70,7 +70,6 @@ members: 80
 - [[List_33]] - code
 - [[List_40]] - code
 - [[MealGenerationPlanner]] - code - src/CampCenter.Application/Services/MealGenerationPlanner.cs
-- [[MealGenerationPlanner.cs]] - code - src/CampCenter.Application/Services/MealGenerationPlanner.cs
 - [[MealGenerationPlannerTests]] - code - tests/CampCenter.UnitTests/Services/MealGenerationPlannerTests.cs
 - [[MealKind_1]] - code - src/CampCenter.Domain/Entities/MealTimeDefault.cs
 - [[MealSlot]] - code - src/CampCenter.Application/Services/MealGenerationPlanner.cs
@@ -98,18 +97,15 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 16 edges to [[_COMMUNITY_CampCenter.Application  Services (2)]]
-- 6 edges to [[_COMMUNITY_Camp Session Management]]
-- 4 edges to [[_COMMUNITY_Public Booking Service (2)]]
-- 2 edges to [[_COMMUNITY_Domain & Infra Namespaces]]
-- 2 edges to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
-- 2 edges to [[_COMMUNITY_IEntityTypeConfiguration]]
-- 1 edge to [[_COMMUNITY_DTOs  Schedule (1)]]
-- 1 edge to [[_COMMUNITY_CampCenter.UnitTests  Validators]]
-- 1 edge to [[_COMMUNITY_Application Namespaces & DTOs]]
+- 8 edges to [[_COMMUNITY_Camp Session Management]]
+- 6 edges to [[_COMMUNITY_Exception]]
+- 2 edges to [[_COMMUNITY_components  admin]]
+- 2 edges to [[_COMMUNITY_@typesreact]]
+- 1 edge to [[_COMMUNITY_Public Booking Service (2)]]
 
 ## Top bridge nodes
 - [[MealTimeDefault_1]] - degree 29, connects to 3 communities
 - [[MealTimeService]] - degree 11, connects to 2 communities
 - [[IMealTimeDefaultRepository]] - degree 11, connects to 2 communities
 - [[MealTimeDefaultRepository]] - degree 10, connects to 2 communities
-- [[MealTimeDefaultDto]] - degree 8, connects to 2 communities
+- [[.EffectiveSlots()]] - degree 16, connects to 1 community

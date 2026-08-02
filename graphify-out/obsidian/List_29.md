@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Admin User & Token Config"
+community: "Booking Persistence & Entities (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_User__Token_Config
+  - community/Booking_Persistence__Entities_1
 ---
 
 # List
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.ListAsync()_9]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_User__Token_Config
+#graphify/code #graphify/EXTRACTED #community/Booking_Persistence__Entities_1

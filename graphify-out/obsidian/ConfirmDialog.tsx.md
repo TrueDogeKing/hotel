@@ -18,6 +18,7 @@ tags:
 - [[GroupMealTimes.tsx]] - `imports_from` [EXTRACTED]
 - [[GroupSchedulePanel.tsx]] - `imports_from` [EXTRACTED]
 - [[Props_1]] - `contains` [EXTRACTED]
+- [[RoomsPage.tsx]] - `imports_from` [EXTRACTED]
 - [[SchedulePage.tsx]] - `imports_from` [EXTRACTED]
 - [[UsersPage.tsx]] - `imports_from` [EXTRACTED]
 

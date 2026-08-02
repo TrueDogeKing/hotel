@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Services/UserService.cs"
 type: "code"
-community: "tests / CampCenter.IntegrationTests (2)"
+community: "Booking Persistence & Entities (1)"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/tests_/_CampCenterIntegrationTests_2
+  - community/Booking_Persistence__Entities_1
 ---
 
 # UserService
@@ -27,4 +27,4 @@ tags:
 - [[IUserService]] - `implements` [EXTRACTED]
 - [[UserService.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/tests_/_CampCenterIntegrationTests_2
+#graphify/code #graphify/EXTRACTED #community/Booking_Persistence__Entities_1

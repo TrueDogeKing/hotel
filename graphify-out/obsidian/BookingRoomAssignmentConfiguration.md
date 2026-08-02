@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Persistence/Configurations/BookingRoomAssignmentConfiguration.cs"
 type: "code"
-community: "BookingRoomAssignmentConfiguration"
+community: "@types/react"
 location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/BookingRoomAssignmentConfiguration
+  - community/types/react
 ---
 
 # BookingRoomAssignmentConfiguration
@@ -17,4 +17,4 @@ tags:
 - [[BookingRoomAssignmentConfiguration.cs]] - `contains` [EXTRACTED]
 - [[IEntityTypeConfiguration]] - `implements` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/BookingRoomAssignmentConfiguration
+#graphify/code #graphify/EXTRACTED #community/types/react

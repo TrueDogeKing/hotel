@@ -522,7 +522,7 @@ namespace CampCenter.Infrastructure.Persistence.Migrations
                     b.Property<DateTime?>("DoneAt")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<Guid>("RoomId")
+                    b.Property<Guid?>("RoomId")
                         .HasColumnType("uuid");
 
                     b.Property<uint>("RowVersion")
@@ -731,8 +731,7 @@ namespace CampCenter.Infrastructure.Persistence.Migrations
                     b.HasOne("CampCenter.Domain.Entities.Room", "Room")
                         .WithMany()
                         .HasForeignKey("RoomId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.Navigation("Booking");
 

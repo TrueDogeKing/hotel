@@ -47,6 +47,9 @@ export default function SchedulePage() {
   const [selectedDate, setSelectedDate] = useState<string | null>(TODAY);
   const [day, setDay] = useState<ScheduleDay | null>(null);
   const [selectedBookingId, setSelectedBookingId] = useState<string | null>(null);
+  // The day the group panel should scroll to, e.g. when it was opened from a
+  // click in the day timetable rather than a calendar bar spanning the whole stay.
+  const [focusDate, setFocusDate] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   // The entry being added straight from the timetable — its times as the form
   // currently has them, so the grid can draw the slot it would take. Null when no
@@ -283,7 +286,10 @@ export default function SchedulePage() {
               scrollToTimetable.current = next !== null;
               selectDate(next);
             }}
-            onSelectBar={setSelectedBookingId}
+            onSelectBar={(id) => {
+              setSelectedBookingId(id);
+              setFocusDate(null);
+            }}
             onMonthChange={(y, m) => {
               setYear(y);
               setMonth0(m);
@@ -296,7 +302,10 @@ export default function SchedulePage() {
               <>
                 <DayTimetable
                   day={day}
-                  onSelectGroup={setSelectedBookingId}
+                  onSelectGroup={(id) => {
+                    setSelectedBookingId(id);
+                    setFocusDate(selectedDate);
+                  }}
                   onChangeDay={stepDay}
                   onAddAt={
                     canEdit
@@ -346,6 +355,7 @@ export default function SchedulePage() {
               bookingId={selectedBookingId}
               onClose={() => setSelectedBookingId(null)}
               onChanged={() => void refreshAll()}
+              focusDate={focusDate}
               onLoaded={() => scrollPanelIntoView(groupPanelRef.current)}
             />
           </div>

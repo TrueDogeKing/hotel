@@ -2,7 +2,7 @@
 source_file: "src/CampCenter.Domain/Entities/RoomTask.cs"
 type: "code"
 community: "Room Task Management (1)"
-location: "L11"
+location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED

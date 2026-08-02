@@ -2,7 +2,7 @@
 source_file: "frontend/src/pages/admin/TasksPage.tsx"
 type: "code"
 community: "useAuth"
-location: "L8"
+location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -14,6 +14,7 @@ tags:
 ## Connections
 - [[TasksPage.tsx]] - `contains` [EXTRACTED]
 - [[deleteTask()]] - `calls` [EXTRACTED]
+- [[getRooms()]] - `calls` [EXTRACTED]
 - [[getTasks()]] - `calls` [EXTRACTED]
 - [[setTaskDone()]] - `calls` [EXTRACTED]
 - [[useAuth()]] - `calls` [EXTRACTED]

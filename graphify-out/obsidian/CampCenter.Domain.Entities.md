@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Domain/Entities/AdminUser.cs"
 type: "code"
-community: "Public Booking Service (2)"
+community: "Exception"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public_Booking_Service_2
+  - community/Exception
 ---
 
 # CampCenter.Domain.Entities
@@ -76,6 +76,7 @@ tags:
 - [[RoomCleaningConfiguration.cs]] - `imports` [EXTRACTED]
 - [[RoomCleaningRepository.cs]] - `imports` [EXTRACTED]
 - [[RoomConfiguration.cs]] - `imports` [EXTRACTED]
+- [[RoomNumberComparer.cs]] - `contains` [EXTRACTED]
 - [[RoomRepository.cs]] - `imports` [EXTRACTED]
 - [[RoomService.cs]] - `imports` [EXTRACTED]
 - [[RoomTask.cs]] - `contains` [EXTRACTED]
@@ -94,4 +95,4 @@ tags:
 - [[UsersController.cs]] - `imports` [EXTRACTED]
 - [[WriteRequiresAdministrator.cs]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_2
+#graphify/code #graphify/EXTRACTED #community/Exception

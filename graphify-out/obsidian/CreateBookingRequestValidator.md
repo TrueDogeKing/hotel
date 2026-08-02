@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Validators/CreateBookingRequestValidator.cs"
 type: "code"
-community: "CampCenter.UnitTests / Validators"
+community: "CampCenter.Application.DTOs.Public"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Validators
+  - community/CampCenterApplicationDTOsPublic
 ---
 
 # CreateBookingRequestValidator
@@ -16,4 +16,4 @@ tags:
 - [[CreateBookingRequestDto]] - `references` [EXTRACTED]
 - [[CreateBookingRequestValidator.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Validators
+#graphify/code #graphify/EXTRACTED #community/CampCenterApplicationDTOsPublic

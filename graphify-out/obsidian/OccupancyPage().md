@@ -2,7 +2,7 @@
 source_file: "frontend/src/pages/admin/OccupancyPage.tsx"
 type: "code"
 community: "useAuth"
-location: "L17"
+location: "L18"
 tags:
   - graphify/code
   - graphify/EXTRACTED

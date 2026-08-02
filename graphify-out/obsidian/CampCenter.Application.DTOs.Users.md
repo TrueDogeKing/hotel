@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/DTOs/Users/UserDtos.cs"
 type: "code"
-community: "PasswordRules"
+community: "Application Namespaces & DTOs"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PasswordRules
+  - community/Application_Namespaces__DTOs
 ---
 
 # CampCenter.Application.DTOs.Users
@@ -19,4 +19,4 @@ tags:
 - [[UsersAndRolesApiTests.cs]] - `imports` [EXTRACTED]
 - [[UsersController.cs]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PasswordRules
+#graphify/code #graphify/EXTRACTED #community/Application_Namespaces__DTOs

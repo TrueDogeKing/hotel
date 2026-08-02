@@ -26,8 +26,9 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_Admin Booking & Notifications (4)]]
 - 1 edge to [[_COMMUNITY_Application Namespaces & DTOs]]
+- 1 edge to [[_COMMUNITY_Integration Test Harness (1)]]
+- 1 edge to [[_COMMUNITY_Admin Booking & Notifications (4)]]
 - 1 edge to [[_COMMUNITY_Public Booking Service (2)]]
 
 ## Top bridge nodes

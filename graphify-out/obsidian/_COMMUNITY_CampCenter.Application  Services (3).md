@@ -1,27 +1,15 @@
 ---
 type: community
-members: 14
+members: 2
 ---
 
 # CampCenter.Application / Services (3)
 
-**Members:** 14 nodes
+**Members:** 2 nodes
 
 ## Members
-- [[BookingSchedule]] - code - frontend/src/api/admin.ts
-- [[GroupSchedulePanel()]] - code - frontend/src/components/admin/GroupSchedulePanel.tsx
-- [[GroupSchedulePanel.tsx]] - code - frontend/src/components/admin/GroupSchedulePanel.tsx
-- [[Props_8]] - code - frontend/src/components/admin/GroupSchedulePanel.tsx
-- [[ScheduleConflict]] - code - frontend/src/api/admin.ts
-- [[ScheduleLocations]] - code - frontend/src/api/admin.ts
-- [[checkScheduleConflicts()]] - code - frontend/src/api/admin.ts
-- [[createScheduleEntry()]] - code - frontend/src/api/admin.ts
-- [[deleteScheduleEntry()]] - code - frontend/src/api/admin.ts
-- [[getBookingSchedule()]] - code - frontend/src/api/admin.ts
-- [[getScheduleLocations()]] - code - frontend/src/api/admin.ts
-- [[overlaps()]] - code - frontend/src/components/admin/GroupSchedulePanel.tsx
-- [[updateDietaryNotes()]] - code - frontend/src/api/admin.ts
-- [[updateScheduleEntry()]] - code - frontend/src/api/admin.ts
+- [[eslint-plugin-react-hooks]] - code - frontend/package.json
+- [[eslint-plugin-react-hooks_1]] - concept - frontend/package.json
 
 ## Live Query (requires Dataview plugin)
 
@@ -31,20 +19,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 11 edges to [[_COMMUNITY_src  api (1)]]
-- 8 edges to [[_COMMUNITY_src  utils]]
-- 5 edges to [[_COMMUNITY_Frontend App Shell & i18n]]
-- 5 edges to [[_COMMUNITY_Room Closure Management]]
-- 3 edges to [[_COMMUNITY_useAuth]]
-- 2 edges to [[_COMMUNITY_Frontend Icon Components]]
-- 2 edges to [[_COMMUNITY_Public Booking Frontend (1)]]
-- 1 edge to [[_COMMUNITY_Frontend Auth & API Client]]
-- 1 edge to [[_COMMUNITY_CampCenter.Domain  Repositories (2)]]
-- 1 edge to [[_COMMUNITY_Admin Tasks & Occupancy Pages]]
+- 1 edge to [[_COMMUNITY_ESLint Dev Dependencies]]
 
 ## Top bridge nodes
-- [[GroupSchedulePanel.tsx]] - degree 33, connects to 10 communities
-- [[GroupSchedulePanel()]] - degree 7, connects to 3 communities
-- [[getScheduleLocations()]] - degree 5, connects to 2 communities
-- [[ScheduleConflict]] - degree 3, connects to 2 communities
-- [[createScheduleEntry()]] - degree 3, connects to 2 communities
+- [[eslint-plugin-react-hooks]] - degree 2, connects to 1 community

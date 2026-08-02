@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Domain/Exceptions/ForbiddenActionException.cs"
 type: "code"
-community: "Domain & Infra Namespaces"
+community: "ClosureService"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Domain__Infra_Namespaces
+  - community/ClosureService
 ---
 
 # ForbiddenActionException.cs
@@ -15,4 +15,4 @@ tags:
 - [[CampCenter.Domain.Exceptions]] - `contains` [EXTRACTED]
 - [[ForbiddenActionException]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Domain__Infra_Namespaces
+#graphify/code #graphify/EXTRACTED #community/ClosureService

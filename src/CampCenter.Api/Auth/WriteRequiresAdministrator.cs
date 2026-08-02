@@ -42,7 +42,19 @@ public class WriteRequiresAdministratorHandler
         {
             context.Succeed(requirement);
         }
+        else if (AllowsWorkerWrite())
+        {
+            // A worker reaching a deliberately opened endpoint. Still an authenticated
+            // panel account — the default policy's other requirements have already
+            // established that.
+            context.Succeed(requirement);
+        }
 
         return Task.CompletedTask;
     }
+
+    /// Whether the endpoint being called carries <see cref="AllowWorkerWriteAttribute"/>.
+    private bool AllowsWorkerWrite() =>
+        _http.HttpContext?.GetEndpoint()?.Metadata.GetMetadata<AllowWorkerWriteAttribute>()
+        is not null;
 }

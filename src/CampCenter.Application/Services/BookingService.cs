@@ -184,7 +184,7 @@ public class BookingService : IBookingService
             picked.AddRange(
                 active
                     .Where(r => r.Capacity == capacity && !blocked.Contains(r.Id))
-                    .OrderBy(r => r.Number, StringComparer.OrdinalIgnoreCase)
+                    .OrderBy(r => r.Number, RoomNumberComparer.Instance)
                     .Take(count)
             );
         }

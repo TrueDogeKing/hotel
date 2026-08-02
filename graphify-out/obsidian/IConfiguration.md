@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Rate Limiting & Startup"
+community: "Public Booking Service (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Rate_Limiting__Startup
+  - community/Public_Booking_Service_2
 ---
 
 # IConfiguration
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.AddInfrastructure()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Rate_Limiting__Startup
+#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_2

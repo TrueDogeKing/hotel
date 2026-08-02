@@ -32,6 +32,8 @@ tags:
 - [[20260729224623_RoomCleanings.cs]] - `contains` [EXTRACTED]
 - [[20260730211855_AdminUserRole.Designer.cs]] - `contains` [EXTRACTED]
 - [[20260730211855_AdminUserRole.cs]] - `contains` [EXTRACTED]
+- [[20260802130913_MakeRoomTaskRoomOptional.Designer.cs]] - `contains` [EXTRACTED]
+- [[20260802130913_MakeRoomTaskRoomOptional.cs]] - `contains` [EXTRACTED]
 - [[AppDbContextModelSnapshot.cs]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/EF_Core_Migrations_3

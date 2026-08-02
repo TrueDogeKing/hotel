@@ -31,11 +31,12 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_Auth Service & Tokens]]
 - 3 edges to [[_COMMUNITY_.CreateClient]]
+- 2 edges to [[_COMMUNITY_Auth Service & Tokens]]
 - 1 edge to [[_COMMUNITY_Auth Controller (1)]]
-- 1 edge to [[_COMMUNITY_Domain & Infra Namespaces]]
-- 1 edge to [[_COMMUNITY_Admin User & Token Config]]
+- 1 edge to [[_COMMUNITY_Exception]]
+- 1 edge to [[_COMMUNITY_IEntityTypeConfiguration]]
+- 1 edge to [[_COMMUNITY_Booking Persistence & Entities (1)]]
 
 ## Top bridge nodes
 - [[JwtTokenService]] - degree 9, connects to 2 communities

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Auth Service & Tokens"
+community: "IEntityTypeConfiguration"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Auth_Service__Tokens
+  - community/IEntityTypeConfiguration
 ---
 
 # Guid
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.CreateTokenEntity()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Auth_Service__Tokens
+#graphify/code #graphify/EXTRACTED #community/IEntityTypeConfiguration

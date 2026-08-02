@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/pages/admin/AdminBookingsPage.tsx"
 type: "code"
-community: "Frontend App Shell & i18n"
+community: "ScheduleEntry"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Frontend_App_Shell__i18n
+  - community/ScheduleEntry
 ---
 
 # AdminBookingsPage.tsx
@@ -25,9 +25,8 @@ tags:
 - [[cancelAdminBooking()]] - `imports` [EXTRACTED]
 - [[dates.ts]] - `imports_from` [EXTRACTED]
 - [[formatDate()]] - `imports` [EXTRACTED]
-- [[formatZl()]] - `imports` [EXTRACTED]
 - [[getAdminBookings()]] - `imports` [EXTRACTED]
 - [[setBookingStatus()]] - `imports` [EXTRACTED]
 - [[useAuth()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Frontend_App_Shell__i18n
+#graphify/code #graphify/EXTRACTED #community/ScheduleEntry

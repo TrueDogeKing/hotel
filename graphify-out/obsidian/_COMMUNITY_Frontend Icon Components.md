@@ -1,11 +1,11 @@
 ---
 type: community
-members: 53
+members: 50
 ---
 
 # Frontend Icon Components
 
-**Members:** 53 nodes
+**Members:** 50 nodes
 
 ## Members
 - [[AdminTiles()]] - code - frontend/src/components/admin/AdminTiles.tsx
@@ -38,13 +38,10 @@ members: 53
 - [[IconSettings()]] - code - frontend/src/components/icons.tsx
 - [[IconSparkles()]] - code - frontend/src/components/icons.tsx
 - [[IconSun()]] - code - frontend/src/components/icons.tsx
-- [[IconSunSea()]] - code - frontend/src/components/icons.tsx
 - [[IconUsers()]] - code - frontend/src/components/icons.tsx
 - [[IconUtensils()]] - code - frontend/src/components/icons.tsx
 - [[IconWaves()]] - code - frontend/src/components/icons.tsx
 - [[Listener_1]] - code - frontend/src/theme.ts
-- [[LoginPage()]] - code - frontend/src/pages/LoginPage.tsx
-- [[LoginPage.tsx]] - code - frontend/src/pages/LoginPage.tsx
 - [[OFFER]] - code - frontend/src/pages/PublicHomePage.tsx
 - [[PublicHomePage()]] - code - frontend/src/pages/PublicHomePage.tsx
 - [[PublicHomePage.tsx]] - code - frontend/src/pages/PublicHomePage.tsx
@@ -71,13 +68,13 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 9 edges to [[_COMMUNITY_useAuth]]
-- 4 edges to [[_COMMUNITY_Public Booking Frontend (1)]]
-- 2 edges to [[_COMMUNITY_CampCenter.Application  Services (3)]]
-- 1 edge to [[_COMMUNITY_Frontend Auth & API Client]]
+- 2 edges to [[_COMMUNITY_Public Booking Frontend (1)]]
+- 2 edges to [[_COMMUNITY_Frontend App Shell & i18n]]
+- 1 edge to [[_COMMUNITY_ScheduleEntry]]
 
 ## Top bridge nodes
-- [[LoginPage.tsx]] - degree 10, connects to 3 communities
 - [[icons.tsx]] - degree 38, connects to 2 communities
 - [[PublicHomePage.tsx]] - degree 18, connects to 2 communities
 - [[AdminTiles.tsx]] - degree 14, connects to 1 community
 - [[ThemeToggle.tsx]] - degree 11, connects to 1 community
+- [[ThemeToggle()]] - degree 7, connects to 1 community

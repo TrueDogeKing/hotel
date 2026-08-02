@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/components/admin/BookingGroupSection.tsx"
 type: "code"
-community: "Frontend App Shell & i18n"
+community: "ScheduleEntry"
 location: "L36"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Frontend_App_Shell__i18n
+  - community/ScheduleEntry
 ---
 
 # BookingGroupSection()
@@ -17,4 +17,4 @@ tags:
 - [[getBookingGroupPage()]] - `calls` [EXTRACTED]
 - [[useAuth()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Frontend_App_Shell__i18n
+#graphify/code #graphify/EXTRACTED #community/ScheduleEntry

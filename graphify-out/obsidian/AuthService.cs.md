@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Services/AuthService.cs"
 type: "code"
-community: "Domain & Infra Namespaces"
+community: "Exception"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Domain__Infra_Namespaces
+  - community/Exception
 ---
 
 # AuthService.cs
@@ -21,4 +21,4 @@ tags:
 - [[CampCenter.Domain.Entities]] - `imports` [EXTRACTED]
 - [[CampCenter.Domain.Repositories]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Domain__Infra_Namespaces
+#graphify/code #graphify/EXTRACTED #community/Exception

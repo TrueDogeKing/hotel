@@ -1,11 +1,11 @@
 ---
 type: community
-members: 94
+members: 93
 ---
 
 # Validator Unit Tests
 
-**Members:** 94 nodes
+**Members:** 93 nodes
 
 ## Members
 - [[.AddAsync()_3]] - code - src/CampCenter.Domain/Repositories/IClosureRepository.cs
@@ -85,7 +85,6 @@ members: 94
 - [[IActionResult_11]] - code
 - [[IClosureRepository]] - code - src/CampCenter.Domain/Repositories/IClosureRepository.cs
 - [[IClosureService]] - code - src/CampCenter.Application/Interfaces/IClosureService.cs
-- [[IClosureService.cs]] - code - src/CampCenter.Application/Interfaces/IClosureService.cs
 - [[IValidator_1]] - code
 - [[List_1]] - code
 - [[List_9]] - code
@@ -112,17 +111,20 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 7 edges to [[_COMMUNITY_Room Management]]
-- 4 edges to [[_COMMUNITY_CampCenter.Application.DTOs.Public]]
-- 4 edges to [[_COMMUNITY_CampCenter.UnitTests  Validators]]
-- 3 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
 - 3 edges to [[_COMMUNITY_.GetBlockedRoomIdsAsync]]
+- 3 edges to [[_COMMUNITY_CampCenter.Application.DTOs.Public]]
 - 3 edges to [[_COMMUNITY_Admin Booking & Notifications (1)]]
+- 3 edges to [[_COMMUNITY_Exception]]
 - 3 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (2)]]
-- 3 edges to [[_COMMUNITY_Public Booking Service (2)]]
-- 2 edges to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
+- 2 edges to [[_COMMUNITY_Admin Booking & Notifications (2)]]
 - 2 edges to [[_COMMUNITY_Integration Test Harness (2)]]
-- 2 edges to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
-- 2 edges to [[_COMMUNITY_IEntityTypeConfiguration]]
+- 2 edges to [[_COMMUNITY_CampCenter.UnitTests  Validators]]
+- 2 edges to [[_COMMUNITY_DTOs  Schedule (1)]]
+- 2 edges to [[_COMMUNITY_components  admin]]
+- 2 edges to [[_COMMUNITY_@typesreact]]
+- 1 edge to [[_COMMUNITY_Application Namespaces & DTOs]]
+- 1 edge to [[_COMMUNITY_.CreateClient]]
+- 1 edge to [[_COMMUNITY_Public Booking Service (2)]]
 
 ## Top bridge nodes
 - [[IClosureRepository]] - degree 15, connects to 4 communities

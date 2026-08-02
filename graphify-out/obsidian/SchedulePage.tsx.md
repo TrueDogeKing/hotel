@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/pages/admin/SchedulePage.tsx"
 type: "code"
-community: "src / utils"
+community: "Frontend App Shell & i18n"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/src_/_utils
+  - community/Frontend_App_Shell__i18n
 ---
 
 # SchedulePage.tsx
@@ -47,4 +47,4 @@ tags:
 - [[todayIso()]] - `imports` [EXTRACTED]
 - [[useAuth()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/src_/_utils
+#graphify/code #graphify/EXTRACTED #community/Frontend_App_Shell__i18n

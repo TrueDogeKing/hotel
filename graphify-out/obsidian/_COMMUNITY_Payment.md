@@ -1,19 +1,20 @@
 ---
 type: community
-members: 6
+members: 7
 ---
 
 # Payment
 
-**Members:** 6 nodes
+**Members:** 7 nodes
 
 ## Members
-- [[DateTime_9]] - code
-- [[Guid_34]] - code
-- [[Payment]] - code - src/CampCenter.Domain/Entities/Payment.cs
-- [[Payment.cs]] - code - src/CampCenter.Domain/Entities/Payment.cs
-- [[PaymentKind]] - code - src/CampCenter.Domain/Entities/Payment.cs
-- [[PaymentStatus]] - code - src/CampCenter.Domain/Entities/Payment.cs
+- [[CampCenter.Infrastructure.Payments]] - code - src/CampCenter.Infrastructure/Payments/P24Settings.cs
+- [[P24SignCalculator.cs]] - code - src/CampCenter.Infrastructure/Payments/P24SignCalculator.cs
+- [[P24SignCalculatorTests.cs]] - code - tests/CampCenter.UnitTests/Services/P24SignCalculatorTests.cs
+- [[Przelewy24Client.cs]] - code - src/CampCenter.Infrastructure/Payments/Przelewy24Client.cs
+- [[RegisterData]] - code
+- [[RegisterData_1]] - code - src/CampCenter.Infrastructure/Payments/Przelewy24Client.cs
+- [[RegisterResponse]] - code - src/CampCenter.Infrastructure/Payments/Przelewy24Client.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -23,15 +24,13 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_Integration Test Harness (2)]]
-- 4 edges to [[_COMMUNITY_CampCenter.Domain  Repositories (1)]]
-- 2 edges to [[_COMMUNITY_PaymentConfiguration]]
-- 1 edge to [[_COMMUNITY_Admin Booking & Notifications (1)]]
+- 4 edges to [[_COMMUNITY_Payment Gateway Integration Tests (1)]]
+- 3 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
 - 1 edge to [[_COMMUNITY_Public Booking Service (2)]]
-- 1 edge to [[_COMMUNITY_Integration Test Harness (1)]]
-- 1 edge to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
+- 1 edge to [[_COMMUNITY_Exception]]
 
 ## Top bridge nodes
-- [[Payment]] - degree 15, connects to 5 communities
-- [[PaymentKind]] - degree 5, connects to 3 communities
-- [[Payment.cs]] - degree 4, connects to 1 community
+- [[P24SignCalculatorTests.cs]] - degree 4, connects to 3 communities
+- [[CampCenter.Infrastructure.Payments]] - degree 5, connects to 2 communities
+- [[Przelewy24Client.cs]] - degree 5, connects to 2 communities
+- [[P24SignCalculator.cs]] - degree 3, connects to 2 communities

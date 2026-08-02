@@ -25,12 +25,19 @@ import ScheduleEntryForm from "./ScheduleEntryForm";
 import GroupMealTimes from "./GroupMealTimes";
 import GroupRooms from "./GroupRooms";
 import { useAuth } from "../../auth/AuthContext";
+import { scrollPanelIntoView } from "../../utils/scroll";
 
 interface Props {
   bookingId: string;
   onClose: () => void;
   /** Lets the parent refresh the calendar after entries change. */
   onChanged?: () => void;
+  /**
+   * The day the panel was opened from, e.g. a click in the day timetable. When
+   * set, the panel scrolls to that day's section instead of its own top once
+   * loaded.
+   */
+  focusDate?: string | null;
   /**
    * Fired once this group's programme has arrived and the panel has its real
    * height. Parents scroll to the panel on this rather than on selection: while it
@@ -54,6 +61,7 @@ export default function GroupSchedulePanel({
   bookingId,
   onClose,
   onChanged,
+  focusDate,
   onLoaded,
 }: Props) {
   const { t, i18n } = useTranslation();
@@ -83,6 +91,11 @@ export default function GroupSchedulePanel({
   useEffect(() => {
     onLoadedRef.current = onLoaded;
   });
+  const focusDateRef = useRef(focusDate);
+  useEffect(() => {
+    focusDateRef.current = focusDate;
+  });
+  const dayRefs = useRef(new Map<string, HTMLElement>());
 
   // Announced from an effect, not from the fetch callback: the state set there has
   // not been committed yet, so the panel is still an empty box and a parent that
@@ -92,7 +105,14 @@ export default function GroupSchedulePanel({
   useEffect(() => {
     if (!schedule || announcedFor.current === schedule.bookingId) return;
     announcedFor.current = schedule.bookingId;
-    onLoadedRef.current?.();
+    const target = focusDateRef.current
+      ? dayRefs.current.get(focusDateRef.current)
+      : null;
+    if (target) {
+      scrollPanelIntoView(target);
+    } else {
+      onLoadedRef.current?.();
+    }
   }, [schedule]);
 
   async function reload() {
@@ -362,7 +382,14 @@ export default function GroupSchedulePanel({
       />
 
       {schedule.days.map((day) => (
-        <section className="group-panel-day" key={day.date}>
+        <section
+          className="group-panel-day"
+          key={day.date}
+          ref={(el) => {
+            if (el) dayRefs.current.set(day.date, el);
+            else dayRefs.current.delete(day.date);
+          }}
+        >
           <h3>
             {formatDate(day.date, i18n.language)}
             {day.isArrivalDay && ` · ${t("schedule.arrives")}`}

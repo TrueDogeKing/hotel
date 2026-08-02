@@ -60,8 +60,8 @@ public record OccupancyDto(
 
 public record RoomTaskDto(
     Guid Id,
-    Guid RoomId,
-    string RoomNumber,
+    Guid? RoomId,
+    string? RoomNumber,
     Guid? BookingId,
     string Text,
     string Status,
@@ -69,7 +69,8 @@ public record RoomTaskDto(
     DateTime? DoneAt
 );
 
-public record CreateRoomTaskRequestDto(Guid RoomId, string Text, Guid? BookingId);
+/// RoomId is optional: a general reminder not tied to any room leaves it null.
+public record CreateRoomTaskRequestDto(Guid? RoomId, string Text, Guid? BookingId);
 
 /// A room this booking may occupy: active, and free of other bookings and closures
 /// over the whole stay. The booking's own rooms are in the list too, flagged with

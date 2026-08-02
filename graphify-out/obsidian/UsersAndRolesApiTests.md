@@ -19,6 +19,7 @@ tags:
 - [[.RoleChange_EndsTheAffectedAccountsSessions()]] - `method` [EXTRACTED]
 - [[.SelfDelete_AndLastAdministrator_AreRefused()]] - `method` [EXTRACTED]
 - [[.UniqueLogin()]] - `method` [EXTRACTED]
+- [[.Worker_MayRecordHousekeepingProgress()]] - `method` [EXTRACTED]
 - [[.Worker_ReadsEverySection_ButCannotWriteAnywhere()]] - `method` [EXTRACTED]
 - [[IntegrationTestBase]] - `inherits` [EXTRACTED]
 - [[UsersAndRolesApiTests.cs]] - `contains` [EXTRACTED]

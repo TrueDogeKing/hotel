@@ -11,11 +11,15 @@ public class RoomRepository : IRoomRepository
 
     public RoomRepository(AppDbContext db) => _db = db;
 
-    public Task<List<Room>> GetAllAsync(CancellationToken cancellationToken = default) =>
-        _db.Rooms.OrderBy(r => r.Number).ToListAsync(cancellationToken);
+    public async Task<List<Room>> GetAllAsync(CancellationToken cancellationToken = default) =>
+        (await _db.Rooms.ToListAsync(cancellationToken))
+            .OrderBy(r => r.Number, RoomNumberComparer.Instance)
+            .ToList();
 
-    public Task<List<Room>> GetActiveAsync(CancellationToken cancellationToken = default) =>
-        _db.Rooms.Where(r => r.IsActive).OrderBy(r => r.Number).ToListAsync(cancellationToken);
+    public async Task<List<Room>> GetActiveAsync(CancellationToken cancellationToken = default) =>
+        (await _db.Rooms.Where(r => r.IsActive).ToListAsync(cancellationToken))
+            .OrderBy(r => r.Number, RoomNumberComparer.Instance)
+            .ToList();
 
     public Task<Room?> GetByIdAsync(Guid id, CancellationToken cancellationToken = default) =>
         _db.Rooms.FirstOrDefaultAsync(r => r.Id == id, cancellationToken);

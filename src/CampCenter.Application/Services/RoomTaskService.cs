@@ -35,14 +35,18 @@ public class RoomTaskService : IRoomTaskService
             throw new BusinessRuleViolationException("Task text must be 1–1000 characters.");
         }
 
-        var room =
-            await _rooms.GetByIdAsync(request.RoomId, cancellationToken)
-            ?? throw new NotFoundException("Room not found.");
+        Room? room = null;
+        if (request.RoomId is { } roomId)
+        {
+            room =
+                await _rooms.GetByIdAsync(roomId, cancellationToken)
+                ?? throw new NotFoundException("Room not found.");
+        }
 
         var task = new RoomTask
         {
             Id = Guid.NewGuid(),
-            RoomId = room.Id,
+            RoomId = room?.Id,
             Room = room,
             BookingId = request.BookingId,
             Text = text,
@@ -83,7 +87,7 @@ public class RoomTaskService : IRoomTaskService
         new(
             t.Id,
             t.RoomId,
-            t.Room?.Number ?? "?",
+            t.Room?.Number,
             t.BookingId,
             t.Text,
             t.Status.ToString(),

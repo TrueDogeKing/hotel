@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/api/jwt.ts"
 type: "code"
-community: "src / api (1)"
+community: "Frontend Auth & API Client"
 location: "L48"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/src_/_api_1
+  - community/Frontend_Auth__API_Client
 ---
 
 # UserRole
@@ -20,4 +20,4 @@ tags:
 - [[admin.ts]] - `imports` [EXTRACTED]
 - [[jwt.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/src_/_api_1
+#graphify/code #graphify/EXTRACTED #community/Frontend_Auth__API_Client

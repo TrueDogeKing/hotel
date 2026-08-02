@@ -42,8 +42,8 @@ public class RoomTaskRepository : IRoomTaskRepository
     ) =>
         (
             await _db
-                .RoomTasks.Where(t => t.Status == RoomTaskStatus.Open)
-                .GroupBy(t => t.RoomId)
+                .RoomTasks.Where(t => t.Status == RoomTaskStatus.Open && t.RoomId != null)
+                .GroupBy(t => t.RoomId!.Value)
                 .Select(g => new { g.Key, Count = g.Count() })
                 .ToListAsync(cancellationToken)
         ).ToDictionary(x => x.Key, x => x.Count);

@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/pages/admin/RoomsPage.tsx"
 type: "code"
-community: "src / api (1)"
+community: "useAuth"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/src_/_api_1
+  - community/useAuth
 ---
 
 # RoomsPage.tsx
@@ -15,6 +15,8 @@ tags:
 - [[AdminLayout.tsx]] - `imports_from` [EXTRACTED]
 - [[App.tsx]] - `imports_from` [EXTRACTED]
 - [[AuthContext.tsx]] - `imports_from` [EXTRACTED]
+- [[ConfirmDialog()]] - `imports` [EXTRACTED]
+- [[ConfirmDialog.tsx]] - `imports_from` [EXTRACTED]
 - [[Room]] - `imports` [EXTRACTED]
 - [[RoomFormState]] - `contains` [EXTRACTED]
 - [[RoomsPage()]] - `contains` [EXTRACTED]
@@ -26,4 +28,4 @@ tags:
 - [[updateRoom()]] - `imports` [EXTRACTED]
 - [[useAuth()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/src_/_api_1
+#graphify/code #graphify/EXTRACTED #community/useAuth

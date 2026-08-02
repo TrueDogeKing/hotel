@@ -12,6 +12,8 @@ tags:
 # monthGrid()
 
 ## Connections
+- [[DayCalendar()]] - `calls` [EXTRACTED]
+- [[DayCalendar.tsx]] - `imports` [EXTRACTED]
 - [[MonthCalendar()]] - `calls` [EXTRACTED]
 - [[MonthCalendar.tsx]] - `imports` [EXTRACTED]
 - [[RangeCalendar()]] - `calls` [EXTRACTED]

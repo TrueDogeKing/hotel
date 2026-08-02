@@ -18,6 +18,5 @@ tags:
 - [[getHousekeepingDay()]] - `calls` [EXTRACTED]
 - [[getHousekeepingRange()]] - `calls` [EXTRACTED]
 - [[todayIso()]] - `indirect_call` [INFERRED]
-- [[useAuth()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/src_/_api_1

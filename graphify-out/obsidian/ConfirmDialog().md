@@ -17,6 +17,7 @@ tags:
 - [[ConfirmDialog.tsx]] - `contains` [EXTRACTED]
 - [[GroupMealTimes.tsx]] - `imports` [EXTRACTED]
 - [[GroupSchedulePanel.tsx]] - `imports` [EXTRACTED]
+- [[RoomsPage.tsx]] - `imports` [EXTRACTED]
 - [[SchedulePage.tsx]] - `imports` [EXTRACTED]
 - [[UsersPage.tsx]] - `imports` [EXTRACTED]
 

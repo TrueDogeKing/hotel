@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { Fragment, useCallback, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { isAxiosError } from "axios";
 import AdminLayout from "../../components/admin/AdminLayout";
@@ -7,7 +7,6 @@ import ConfirmDialog from "../../components/ConfirmDialog";
 import {
   bookingStatuses,
   cancelAdminBooking,
-  formatZl,
   getAdminBookings,
   setBookingStatus,
   type AdminBooking,
@@ -70,14 +69,6 @@ export default function AdminBookingsPage() {
 
   const formatDate = (iso: string) => formatIsoDate(iso, i18n.language);
 
-  function paymentBadge(booking: AdminBooking) {
-    if (booking.status === "Cancelled") return t(`adminBookings.statuses.${booking.status}`);
-    if (booking.finalPaid) return t("adminBookings.fullyPaid");
-    if (booking.finalOverdue) return t("adminBookings.finalOverdue");
-    if (booking.depositPaid) return t("adminBookings.depositPaidBadge");
-    return t("adminBookings.awaitingDeposit");
-  }
-
   return (
     <AdminLayout>
       <h1>{t("adminBookings.title")}</h1>
@@ -104,16 +95,16 @@ export default function AdminBookingsPage() {
             <th>{t("adminBookings.organization")}</th>
             <th>{t("adminBookings.dates")}</th>
             <th>{t("adminBookings.headcount")}</th>
-            <th>{t("adminBookings.total")}</th>
-            <th>{t("adminBookings.paymentState")}</th>
             <th />
           </tr>
         </thead>
         <tbody>
+          {/* A booking renders as two sibling rows, so the key belongs on the
+              fragment holding them — not on the rows inside it, which are not a
+              list of their own. */}
           {bookings.map((booking) => (
-            <>
+            <Fragment key={booking.id}>
               <tr
-                key={booking.id}
                 className={booking.finalOverdue ? "overdue" : ""}
                 onClick={() => setExpanded(expanded === booking.id ? null : booking.id)}
               >
@@ -123,8 +114,6 @@ export default function AdminBookingsPage() {
                   {formatDate(booking.endDate)}
                 </td>
                 <td>{booking.headcount}</td>
-                <td>{formatZl(booking.totalGrosze)}</td>
-                <td>{paymentBadge(booking)}</td>
                 <td className="row-actions">
                   {/* A worker reads the status; setting it and cancelling are writes. */}
                   {canEdit ? (
@@ -162,8 +151,8 @@ export default function AdminBookingsPage() {
                 </td>
               </tr>
               {expanded === booking.id && (
-                <tr key={`${booking.id}-details`} className="booking-details">
-                  <td colSpan={6}>
+                <tr className="booking-details">
+                  <td colSpan={4}>
                     <p>
                       {booking.contactName} · {booking.email} · {booking.phone}
                     </p>
@@ -174,16 +163,11 @@ export default function AdminBookingsPage() {
                         .map((a) => `${a.roomNumber} (${a.peopleCount}/${a.capacity})`)
                         .join(", ")}
                     </p>
-                    <p>
-                      {t("adminBookings.deposit")}: {formatZl(booking.depositGrosze)} ·{" "}
-                      {t("adminBookings.finalDue")}:{" "}
-                      {formatDate(booking.finalPaymentDueDate)}
-                    </p>
                     {booking.notes && <p>{booking.notes}</p>}
                   </td>
                 </tr>
               )}
-            </>
+            </Fragment>
           ))}
         </tbody>
       </table>

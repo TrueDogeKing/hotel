@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { isAxiosError } from "axios";
 import AdminLayout from "../../components/admin/AdminLayout";
-import { useAuth } from "../../auth/AuthContext";
+import DateField from "../../components/calendar/DateField";
 import {
   getHousekeepingDay,
   getHousekeepingRange,
@@ -37,8 +37,6 @@ const kindOrder = ["Turnaround", "Departure", "Arrival"] as const;
  */
 export default function HousekeepingPage() {
   const { t, i18n } = useTranslation();
-  // The round itself is a write; a worker reads which rooms need doing.
-  const { canEdit } = useAuth();
   const [date, setDate] = useState(todayIso);
   const [day, setDay] = useState<HousekeepingDay | null>(null);
   const [strip, setStrip] = useState<HousekeepingRange | null>(null);
@@ -134,10 +132,10 @@ export default function HousekeepingPage() {
         <button type="button" onClick={() => selectDate(addDaysIso(date, -1))}>
           {t("housekeeping.previousDay")}
         </button>
-        <input
-          type="date"
+        <DateField
+          label={t("housekeeping.day")}
           value={date}
-          onChange={(e) => selectDate(e.target.value || todayIso())}
+          onChange={(iso) => selectDate(iso || todayIso())}
         />
         <button type="button" onClick={() => selectDate(addDaysIso(date, 1))}>
           {t("housekeeping.nextDay")}
@@ -286,41 +284,33 @@ export default function HousekeepingPage() {
                       {room.note && <span className="hk-room-note">{room.note}</span>}
 
                       <span className="hk-room-actions">
-                        {/* A worker sees where each room has got to; advancing it
-                            and writing notes are writes. The status stays visible
-                            either way — as a chip rather than a button. */}
-                        {canEdit ? (
-                          <>
-                            <button
-                              type="button"
-                              className={`hk-status hk-status-${room.status.toLowerCase()}`}
-                              disabled={busyRoomId === room.roomId}
-                              onClick={() => void apply(room, nextStatus(room.status))}
-                              title={t("housekeeping.advanceHint", {
-                                next: t(`housekeeping.statuses.${nextStatus(room.status)}`),
-                              })}
-                            >
-                              {t(`housekeeping.statuses.${room.status}`)}
-                            </button>
-                            <button
-                              type="button"
-                              className="hk-note-toggle"
-                              onClick={() => {
-                                setNoteFor(noteFor === room.roomId ? null : room.roomId);
-                                setNoteDraft(room.note ?? "");
-                              }}
-                            >
-                              {room.note ? t("housekeeping.editNote") : t("housekeeping.addNote")}
-                            </button>
-                          </>
-                        ) : (
-                          <span className={`hk-status hk-status-${room.status.toLowerCase()}`}>
-                            {t(`housekeeping.statuses.${room.status}`)}
-                          </span>
-                        )}
+                        {/* The round is the one part of the panel a worker writes to:
+                            this is the work they do, so they advance a room and leave
+                            a note on it like an administrator does. */}
+                        <button
+                          type="button"
+                          className={`hk-status hk-status-${room.status.toLowerCase()}`}
+                          disabled={busyRoomId === room.roomId}
+                          onClick={() => void apply(room, nextStatus(room.status))}
+                          title={t("housekeeping.advanceHint", {
+                            next: t(`housekeeping.statuses.${nextStatus(room.status)}`),
+                          })}
+                        >
+                          {t(`housekeeping.statuses.${room.status}`)}
+                        </button>
+                        <button
+                          type="button"
+                          className="hk-note-toggle"
+                          onClick={() => {
+                            setNoteFor(noteFor === room.roomId ? null : room.roomId);
+                            setNoteDraft(room.note ?? "");
+                          }}
+                        >
+                          {room.note ? t("housekeeping.editNote") : t("housekeeping.addNote")}
+                        </button>
                       </span>
 
-                      {canEdit && noteFor === room.roomId && (
+                      {noteFor === room.roomId && (
                         <span className="hk-note-form">
                           <input
                             value={noteDraft}

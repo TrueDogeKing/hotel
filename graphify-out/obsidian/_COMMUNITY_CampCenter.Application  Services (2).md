@@ -1,11 +1,11 @@
 ---
 type: community
-members: 107
+members: 108
 ---
 
 # CampCenter.Application / Services (2)
 
-**Members:** 107 nodes
+**Members:** 108 nodes
 
 ## Members
 - [[.AddAsync()_1]] - code - src/CampCenter.Domain/Repositories/IBookingMealTimeRepository.cs
@@ -41,6 +41,7 @@ members: 107
 - [[.ListForDateAsync()_1]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
 - [[.ListFullySuppressedSlotsAsync()]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
 - [[.ListGeneratedSlotsAsync()]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
+- [[.ListLivePresentInAsync()]] - code - src/CampCenter.Domain/Repositories/IBookingRepository.cs
 - [[.ListLocationsAsync()]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
 - [[.ListVisibleSlotSpansAsync()]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
 - [[.Minutes()]] - code - src/CampCenter.Application/Services/ScheduleService.cs
@@ -126,23 +127,22 @@ SORT file.name ASC
 ## Connections to other communities
 - 17 edges to [[_COMMUNITY_DTOs  Schedule (1)]]
 - 16 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (1)]]
-- 11 edges to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
 - 9 edges to [[_COMMUNITY_Integration Test Harness (1)]]
+- 8 edges to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
 - 7 edges to [[_COMMUNITY_Integration Test Harness (2)]]
 - 7 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (4)]]
-- 5 edges to [[_COMMUNITY_Public Booking Service (2)]]
+- 6 edges to [[_COMMUNITY_Exception]]
+- 4 edges to [[_COMMUNITY_@typesreact]]
+- 3 edges to [[_COMMUNITY_Camp Session Management]]
 - 3 edges to [[_COMMUNITY_Public Booking Service (1)]]
+- 3 edges to [[_COMMUNITY_components  admin]]
 - 2 edges to [[_COMMUNITY_tests  CampCenter.IntegrationTests (1)]]
-- 2 edges to [[_COMMUNITY_Domain & Infra Namespaces]]
-- 2 edges to [[_COMMUNITY_Persistence  Configurations]]
-- 2 edges to [[_COMMUNITY_ScheduleEntryConfiguration]]
-- 1 edge to [[_COMMUNITY_Camp Session Management]]
-- 1 edge to [[_COMMUNITY_CampCenter.UnitTests  Validators]]
 - 1 edge to [[_COMMUNITY_Admin Booking & Notifications (2)]]
+- 1 edge to [[_COMMUNITY_Public Booking Service (2)]]
 
 ## Top bridge nodes
-- [[ScheduleService]] - degree 36, connects to 6 communities
-- [[ScheduleEntry_1]] - degree 28, connects to 5 communities
+- [[ScheduleEntry_1]] - degree 28, connects to 6 communities
+- [[ScheduleService]] - degree 36, connects to 5 communities
 - [[BookingMealTime_1]] - degree 22, connects to 4 communities
 - [[IScheduleEntryRepository]] - degree 17, connects to 4 communities
-- [[.AssignMealTimesAsync()]] - degree 15, connects to 3 communities
+- [[.ToDto()_5]] - degree 15, connects to 3 communities

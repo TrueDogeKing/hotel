@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Api/Errors/GlobalExceptionHandler.cs"
 type: "code"
-community: ".CreateClient"
+community: "Public Booking Service (2)"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateClient
+  - community/Public_Booking_Service_2
 ---
 
 # CampCenter.Api.Errors
@@ -15,4 +15,4 @@ tags:
 - [[GlobalExceptionHandler.cs]] - `contains` [EXTRACTED]
 - [[Program.cs]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateClient
+#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_2

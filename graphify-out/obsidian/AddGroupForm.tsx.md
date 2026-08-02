@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/components/admin/AddGroupForm.tsx"
 type: "code"
-community: "Frontend App Shell & i18n"
+community: "ScheduleEntry"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Frontend_App_Shell__i18n
+  - community/ScheduleEntry
 ---
 
 # AddGroupForm.tsx
@@ -16,6 +16,7 @@ tags:
 - [[AdminBooking]] - `imports` [EXTRACTED]
 - [[AdminDashboardPage.tsx]] - `imports_from` [EXTRACTED]
 - [[BookingStatus]] - `imports` [EXTRACTED]
+- [[DateRangeField()]] - `imports` [EXTRACTED]
 - [[DateRangeField.tsx]] - `imports_from` [EXTRACTED]
 - [[Props_3]] - `contains` [EXTRACTED]
 - [[admin.ts]] - `imports_from` [EXTRACTED]
@@ -23,4 +24,4 @@ tags:
 - [[createAdminBooking()]] - `imports` [EXTRACTED]
 - [[isoInDays()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Frontend_App_Shell__i18n
+#graphify/code #graphify/EXTRACTED #community/ScheduleEntry

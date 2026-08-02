@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/api/admin.ts"
 type: "code"
-community: "CampCenter.Application / Services (3)"
+community: "Frontend App Shell & i18n"
 location: "L610"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterApplication_/_Services_3
+  - community/Frontend_App_Shell__i18n
 ---
 
 # updateScheduleEntry()
@@ -15,4 +15,4 @@ tags:
 - [[GroupSchedulePanel.tsx]] - `imports` [EXTRACTED]
 - [[admin.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_3
+#graphify/code #graphify/EXTRACTED #community/Frontend_App_Shell__i18n

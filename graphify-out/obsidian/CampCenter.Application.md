@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/DependencyInjection.cs"
 type: "code"
-community: ".CreateClient"
+community: "Admin User & Token Config"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateClient
+  - community/Admin_User__Token_Config
 ---
 
 # CampCenter.Application
@@ -15,4 +15,4 @@ tags:
 - [[DependencyInjection.cs]] - `contains` [EXTRACTED]
 - [[Program.cs]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateClient
+#graphify/code #graphify/EXTRACTED #community/Admin_User__Token_Config

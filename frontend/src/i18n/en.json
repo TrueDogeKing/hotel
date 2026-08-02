@@ -294,8 +294,7 @@
   },
   "occupancy": {
     "title": "Occupancy",
-    "from": "From",
-    "to": "To",
+    "range": "Date range",
     "summary": "occupancy {{occupied}}/{{total}} beds",
     "room": "Room",
     "beds": "beds",
@@ -315,11 +314,17 @@
     "showDone": "Show done",
     "empty": "No tasks.",
     "room": "Room",
+    "noRoom": "No room (general task)",
+    "general": "General",
+    "textPlaceholder": "e.g. extra bed",
+    "add": "Add task",
+    "addError": "Failed to add the task.",
     "delete": "Delete"
   },
   "housekeeping": {
     "title": "Room cleaning",
     "intro": "The rooms to deal with on a given day: the ones a group has just left (check and clean), the ones the next group moves into today, and the ones that have to be turned around between the two.",
+    "day": "Day",
     "previousDay": "‹ Previous day",
     "nextDay": "Next day ›",
     "today": "Today",
@@ -410,6 +415,10 @@
     "activate": "Activate",
     "deactivate": "Deactivate",
     "delete": "Delete",
+    "deleteTitle": "Delete this room?",
+    "deleteMessage": "Room {{number}} will be permanently deleted. If it has booking history, it will be deactivated instead.",
+    "deleteConfirm": "Delete room",
+    "deleteKeep": "Cancel",
     "deactivatedInstead": "The room has booking history — it was deactivated instead of deleted.",
     "conflict": "Conflict: the room number is taken or someone else changed the data. Reload and try again.",
     "genericError": "Saving the changes failed."

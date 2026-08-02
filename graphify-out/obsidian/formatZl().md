@@ -12,8 +12,6 @@ tags:
 # formatZl()
 
 ## Connections
-- [[AdminBookingsPage()]] - `calls` [EXTRACTED]
-- [[AdminBookingsPage.tsx]] - `imports` [EXTRACTED]
 - [[BookingManagePage()]] - `calls` [EXTRACTED]
 - [[BookingManagePage.tsx]] - `imports` [EXTRACTED]
 - [[BookingWizardPage()]] - `calls` [EXTRACTED]

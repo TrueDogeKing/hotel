@@ -1,44 +1,21 @@
 ---
 type: community
-members: 31
+members: 8
 ---
 
 # Domain & Infra Namespaces
 
-**Members:** 31 nodes
+**Members:** 8 nodes
 
 ## Members
-- [[AdminBookingService.cs]] - code - src/CampCenter.Application/Services/AdminBookingService.cs
-- [[AuthService.cs]] - code - src/CampCenter.Application/Services/AuthService.cs
-- [[AvailabilityService.cs]] - code - src/CampCenter.Application/Services/AvailabilityService.cs
-- [[BookingService.cs]] - code - src/CampCenter.Application/Services/BookingService.cs
-- [[BusinessRuleViolationException]] - code - src/CampCenter.Domain/Exceptions/BusinessRuleViolationException.cs
-- [[BusinessRuleViolationException.cs]] - code - src/CampCenter.Domain/Exceptions/BusinessRuleViolationException.cs
-- [[CampCenter.Application.Common]] - code - src/CampCenter.Application/Common/LoginNormalizer.cs
-- [[CampCenter.Application.Models]] - code - src/CampCenter.Application/Models/AccessToken.cs
-- [[CampCenter.Application.Services]] - code - src/CampCenter.Application/Services/AdminBookingService.cs
-- [[CampCenter.Domain.Exceptions]] - code - src/CampCenter.Domain/Exceptions/BusinessRuleViolationException.cs
-- [[CampCenter.UnitTests.Services]] - code - tests/CampCenter.UnitTests/Services/HousekeepingPlannerTests.cs
-- [[ConcurrencyConflictException]] - code - src/CampCenter.Domain/Exceptions/ConcurrencyConflictException.cs
-- [[ConcurrencyConflictException.cs]] - code - src/CampCenter.Domain/Exceptions/ConcurrencyConflictException.cs
-- [[ConflictException]] - code - src/CampCenter.Domain/Exceptions/ConflictException.cs
-- [[ConflictException.cs]] - code - src/CampCenter.Domain/Exceptions/ConflictException.cs
-- [[EmailTemplates.cs]] - code - src/CampCenter.Application/Services/EmailTemplates.cs
-- [[Exception_1]] - code
-- [[ForbiddenActionException]] - code - src/CampCenter.Domain/Exceptions/ForbiddenActionException.cs
-- [[ForbiddenActionException.cs]] - code - src/CampCenter.Domain/Exceptions/ForbiddenActionException.cs
-- [[HousekeepingPlannerTests.cs]] - code - tests/CampCenter.UnitTests/Services/HousekeepingPlannerTests.cs
-- [[HousekeepingServiceTests.cs]] - code - tests/CampCenter.UnitTests/Services/HousekeepingServiceTests.cs
-- [[ITokenService.cs]] - code - src/CampCenter.Application/Interfaces/ITokenService.cs
-- [[MealGenerationPlannerTests.cs]] - code - tests/CampCenter.UnitTests/Services/MealGenerationPlannerTests.cs
-- [[NotFoundException]] - code - src/CampCenter.Domain/Exceptions/NotFoundException.cs
-- [[NotFoundException.cs]] - code - src/CampCenter.Domain/Exceptions/NotFoundException.cs
-- [[PaymentService.cs]] - code - src/CampCenter.Application/Services/PaymentService.cs
-- [[RoomMixCalculatorTests.cs]] - code - tests/CampCenter.UnitTests/Services/RoomMixCalculatorTests.cs
-- [[RoomService.cs]] - code - src/CampCenter.Application/Services/RoomService.cs
-- [[ScheduleConflictTests.cs]] - code - tests/CampCenter.UnitTests/Services/ScheduleConflictTests.cs
-- [[ScheduleService.cs]] - code - src/CampCenter.Application/Services/ScheduleService.cs
-- [[UserService.cs]] - code - src/CampCenter.Application/Services/UserService.cs
+- [[.LoginAsync()]] - code - src/CampCenter.Application/Interfaces/IAuthService.cs
+- [[.LogoutAsync()]] - code - src/CampCenter.Application/Interfaces/IAuthService.cs
+- [[.RefreshAsync()]] - code - src/CampCenter.Application/Interfaces/IAuthService.cs
+- [[CancellationToken_18]] - code
+- [[IAuthService]] - code - src/CampCenter.Application/Interfaces/IAuthService.cs
+- [[LoginRequestDto]] - code - src/CampCenter.Application/DTOs/Auth/LoginRequestDto.cs
+- [[LoginRequestDto.cs]] - code - src/CampCenter.Application/DTOs/Auth/LoginRequestDto.cs
+- [[Task_18]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -48,31 +25,13 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 27 edges to [[_COMMUNITY_Public Booking Service (2)]]
-- 22 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
-- 5 edges to [[_COMMUNITY_CampCenter.Application.DTOs.Public]]
-- 4 edges to [[_COMMUNITY_.CreateClient]]
+- 5 edges to [[_COMMUNITY_Auth Controller (1)]]
 - 4 edges to [[_COMMUNITY_Auth Service & Tokens]]
-- 3 edges to [[_COMMUNITY_Admin Booking & Notifications (4)]]
-- 2 edges to [[_COMMUNITY_CampCenter.UnitTests  Validators]]
-- 2 edges to [[_COMMUNITY_CampCenter.Application  Services (2)]]
-- 2 edges to [[_COMMUNITY_Integration Test Harness (1)]]
-- 2 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (1)]]
-- 2 edges to [[_COMMUNITY_Room Mix Calculator Tests]]
-- 2 edges to [[_COMMUNITY_Room Management]]
-- 1 edge to [[_COMMUNITY_eslint]]
-- 1 edge to [[_COMMUNITY_PasswordRules]]
-- 1 edge to [[_COMMUNITY_CampCenter.Application  Services (1)]]
-- 1 edge to [[_COMMUNITY_Admin Booking & Notifications (1)]]
-- 1 edge to [[_COMMUNITY_Public Booking Service (1)]]
-- 1 edge to [[_COMMUNITY_tests  CampCenter.IntegrationTests (2)]]
-- 1 edge to [[_COMMUNITY_Payment_1]]
-- 1 edge to [[_COMMUNITY_CampCenter.UnitTests  Services (2)]]
-- 1 edge to [[_COMMUNITY_CampCenter.UnitTests  Services (4)]]
+- 3 edges to [[_COMMUNITY_CampCenter.UnitTests  Validators]]
 
 ## Top bridge nodes
-- [[CampCenter.Application.Services]] - degree 23, connects to 7 communities
-- [[CampCenter.Application.Models]] - degree 16, connects to 6 communities
-- [[CampCenter.Domain.Exceptions]] - degree 21, connects to 4 communities
-- [[BookingService.cs]] - degree 9, connects to 4 communities
-- [[AuthService.cs]] - degree 8, connects to 4 communities
+- [[IAuthService]] - degree 6, connects to 3 communities
+- [[LoginRequestDto]] - degree 5, connects to 3 communities
+- [[.LoginAsync()]] - degree 6, connects to 2 communities
+- [[.RefreshAsync()]] - degree 5, connects to 2 communities
+- [[.LogoutAsync()]] - degree 4, connects to 1 community

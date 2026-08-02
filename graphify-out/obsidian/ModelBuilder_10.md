@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "20260730211855_AdminUserRole.Designer.cs"
+community: "EF Core Migrations (3)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/20260730211855_AdminUserRoleDesignercs
+  - community/EF_Core_Migrations_3
 ---
 
 # ModelBuilder
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.BuildTargetModel()_9]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/20260730211855_AdminUserRoleDesignercs
+#graphify/code #graphify/EXTRACTED #community/EF_Core_Migrations_3

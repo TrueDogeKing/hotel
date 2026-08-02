@@ -1,17 +1,17 @@
 ---
-source_file: "frontend/src/components/calendar/MonthCalendar.tsx"
+source_file: "frontend/src/components/calendar/DateRangeField.tsx"
 type: "code"
-community: "src / utils"
-location: "L30"
+community: "ControllerBase"
+location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/src_/_utils
+  - community/ControllerBase
 ---
 
 # Props
 
 ## Connections
-- [[MonthCalendar.tsx]] - `contains` [EXTRACTED]
+- [[DateRangeField.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/src_/_utils
+#graphify/code #graphify/EXTRACTED #community/ControllerBase

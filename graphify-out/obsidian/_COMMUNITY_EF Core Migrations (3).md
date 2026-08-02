@@ -9,14 +9,14 @@ members: 10
 
 ## Members
 - [[.BuildModel()]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/AppDbContextModelSnapshot.cs
-- [[.BuildTargetModel()_6]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/20260729100842_MealSittingDuration.Designer.cs
-- [[20260729100842_MealSittingDuration.Designer.cs]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/20260729100842_MealSittingDuration.Designer.cs
+- [[.BuildTargetModel()_9]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/20260730211855_AdminUserRole.Designer.cs
+- [[20260730211855_AdminUserRole.Designer.cs]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/20260730211855_AdminUserRole.Designer.cs
+- [[AdminUserRole_1]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/20260730211855_AdminUserRole.Designer.cs
 - [[AppDbContextModelSnapshot]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/AppDbContextModelSnapshot.cs
 - [[AppDbContextModelSnapshot.cs]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/AppDbContextModelSnapshot.cs
 - [[CampCenter.Infrastructure.Persistence.Migrations]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/20260719142059_InitialAuth.Designer.cs
-- [[MealSittingDuration]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/20260729100842_MealSittingDuration.Designer.cs
-- [[ModelBuilder_7]] - code
-- [[ModelBuilder_11]] - code
+- [[ModelBuilder_10]] - code
+- [[ModelBuilder_12]] - code
 - [[ModelSnapshot]] - code
 
 ## Live Query (requires Dataview plugin)
@@ -41,14 +41,16 @@ SORT file.name ASC
 - 1 edge to [[_COMMUNITY_Persistence  Migrations (4)]]
 - 1 edge to [[_COMMUNITY_20260728105506_PerGroupMealTimes.Designer.cs]]
 - 1 edge to [[_COMMUNITY_Persistence  Migrations (5)]]
+- 1 edge to [[_COMMUNITY_src  api (2)]]
 - 1 edge to [[_COMMUNITY_Persistence  Migrations (6)]]
 - 1 edge to [[_COMMUNITY_Persistence  Migrations (13)]]
 - 1 edge to [[_COMMUNITY_Persistence  Migrations (7)]]
 - 1 edge to [[_COMMUNITY_20260729224623_RoomCleanings.Designer.cs]]
 - 1 edge to [[_COMMUNITY_AdminUserRole]]
-- 1 edge to [[_COMMUNITY_20260730211855_AdminUserRole.Designer.cs]]
+- 1 edge to [[_COMMUNITY_RoomCleaningRepository]]
+- 1 edge to [[_COMMUNITY_20260802130913_MakeRoomTaskRoomOptional.Designer.cs]]
 
 ## Top bridge nodes
-- [[CampCenter.Infrastructure.Persistence.Migrations]] - degree 21, connects to 19 communities
-- [[20260729100842_MealSittingDuration.Designer.cs]] - degree 3, connects to 1 community
+- [[CampCenter.Infrastructure.Persistence.Migrations]] - degree 23, connects to 21 communities
+- [[20260730211855_AdminUserRole.Designer.cs]] - degree 3, connects to 1 community
 - [[AppDbContextModelSnapshot.cs]] - degree 3, connects to 1 community

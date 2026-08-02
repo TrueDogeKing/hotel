@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/components/admin/GroupRooms.tsx"
 type: "code"
-community: "Admin Tasks & Occupancy Pages"
+community: "ScheduleEntry"
 location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Tasks__Occupancy_Pages
+  - community/ScheduleEntry
 ---
 
 # GroupRooms()
@@ -17,4 +17,4 @@ tags:
 - [[getAssignableRooms()]] - `calls` [EXTRACTED]
 - [[useAuth()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Tasks__Occupancy_Pages
+#graphify/code #graphify/EXTRACTED #community/ScheduleEntry

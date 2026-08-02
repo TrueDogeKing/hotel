@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Auth Controller (1)"
+community: "Domain & Infra Namespaces"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Auth_Controller_1
+  - community/Domain__Infra_Namespaces
 ---
 
 # Task
@@ -15,4 +15,4 @@ tags:
 - [[.LogoutAsync()]] - `references` [EXTRACTED]
 - [[.RefreshAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Auth_Controller_1
+#graphify/code #graphify/EXTRACTED #community/Domain__Infra_Namespaces

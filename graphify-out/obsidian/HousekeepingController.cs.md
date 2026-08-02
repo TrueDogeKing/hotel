@@ -12,6 +12,7 @@ tags:
 # HousekeepingController.cs
 
 ## Connections
+- [[CampCenter.Api.Auth]] - `imports` [EXTRACTED]
 - [[CampCenter.Api.Controllers.Admin]] - `contains` [EXTRACTED]
 - [[CampCenter.Api.Extensions]] - `imports` [EXTRACTED]
 - [[CampCenter.Application.DTOs.AdminPanel]] - `imports` [EXTRACTED]

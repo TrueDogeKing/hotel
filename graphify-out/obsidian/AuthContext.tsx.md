@@ -24,7 +24,6 @@ tags:
 - [[GroupMealTimes.tsx]] - `imports_from` [EXTRACTED]
 - [[GroupRooms.tsx]] - `imports_from` [EXTRACTED]
 - [[GroupSchedulePanel.tsx]] - `imports_from` [EXTRACTED]
-- [[HousekeepingPage.tsx]] - `imports_from` [EXTRACTED]
 - [[LoginPage.tsx]] - `imports_from` [EXTRACTED]
 - [[LoginRequest]] - `imports` [EXTRACTED]
 - [[MealTimesPage.tsx]] - `imports_from` [EXTRACTED]

@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/pages/admin/AdminDashboardPage.tsx"
 type: "code"
-community: "useAuth"
+community: "ScheduleEntry"
 location: "L20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/useAuth
+  - community/ScheduleEntry
 ---
 
 # AdminDashboardPage()
@@ -17,4 +17,4 @@ tags:
 - [[scrollPanelIntoView()]] - `calls` [EXTRACTED]
 - [[useAuth()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/useAuth
+#graphify/code #graphify/EXTRACTED #community/ScheduleEntry

@@ -12,6 +12,7 @@ tags:
 # WriteRequiresAdministratorHandler
 
 ## Connections
+- [[.AllowsWorkerWrite()]] - `method` [EXTRACTED]
 - [[.HandleRequirementAsync()]] - `method` [EXTRACTED]
 - [[AuthorizationHandler]] - `inherits` [EXTRACTED]
 - [[IHttpContextAccessor]] - `references` [EXTRACTED]

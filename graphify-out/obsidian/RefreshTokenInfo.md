@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Models/RefreshTokenInfo.cs"
 type: "code"
-community: "Auth Service & Tokens"
+community: "IEntityTypeConfiguration"
 location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Auth_Service__Tokens
+  - community/IEntityTypeConfiguration
 ---
 
 # RefreshTokenInfo
@@ -17,4 +17,4 @@ tags:
 - [[.GenerateRefreshToken()_1]] - `references` [EXTRACTED]
 - [[RefreshTokenInfo.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Auth_Service__Tokens
+#graphify/code #graphify/EXTRACTED #community/IEntityTypeConfiguration

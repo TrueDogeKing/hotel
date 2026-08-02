@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "EF Core Migrations (3)"
+community: "20260802130913_MakeRoomTaskRoomOptional.Designer.cs"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EF_Core_Migrations_3
+  - community/20260802130913_MakeRoomTaskRoomOptionalDesignercs
 ---
 
 # ModelBuilder
 
 ## Connections
-- [[.BuildModel()]] - `references` [EXTRACTED]
+- [[.BuildTargetModel()_10]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EF_Core_Migrations_3
+#graphify/code #graphify/EXTRACTED #community/20260802130913_MakeRoomTaskRoomOptionalDesignercs

@@ -199,11 +199,6 @@ public class UsersAndRolesApiTests : IntegrationTestBase
             ("DELETE", $"/api/admin/closures/{Guid.NewGuid()}", null),
             ("DELETE", $"/api/admin/tasks/{Guid.NewGuid()}", null),
             ("POST", $"/api/admin/bookings/{Guid.NewGuid()}/cancel", null),
-            (
-                "PUT",
-                $"/api/admin/housekeeping/day/{today:yyyy-MM-dd}/rooms/{Guid.NewGuid()}",
-                new { Status = "Done", Note = (string?)null }
-            ),
             // Its own account included: a worker cannot promote itself.
             (
                 "PUT",
@@ -231,6 +226,25 @@ public class UsersAndRolesApiTests : IntegrationTestBase
                 $"Worker should be refused {method} {url}, got {response.StatusCode}"
             );
         }
+    }
+
+    /// The one write a worker may make: recording progress on the housekeeping round.
+    /// A random room id means the service refuses it on the merits (400), which is the
+    /// point — the request got past authorization rather than being stopped at 403.
+    [Fact]
+    public async Task Worker_MayRecordHousekeepingProgress()
+    {
+        var (_, account) = await CreateWorkerAsync("hk");
+        var worker = await CreateClientForAsync(account.Login, Password);
+        var today = DateOnly.FromDateTime(DateTime.UtcNow);
+
+        var response = await worker.PutAsJsonAsync(
+            $"/api/admin/housekeeping/day/{today:yyyy-MM-dd}/rooms/{Guid.NewGuid()}",
+            new { Status = "Done", Note = (string?)null }
+        );
+
+        Assert.NotEqual(HttpStatusCode.Forbidden, response.StatusCode);
+        Assert.NotEqual(HttpStatusCode.Unauthorized, response.StatusCode);
     }
 
     /// A demotion has to end the demoted account's sessions: the role rides in the

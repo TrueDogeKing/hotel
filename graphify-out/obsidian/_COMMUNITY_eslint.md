@@ -1,16 +1,15 @@
 ---
 type: community
-members: 3
+members: 2
 ---
 
 # eslint
 
-**Members:** 3 nodes
+**Members:** 2 nodes
 
 ## Members
-- [[.Normalize()]] - code - src/CampCenter.Application/Common/LoginNormalizer.cs
-- [[LoginNormalizer]] - code - src/CampCenter.Application/Common/LoginNormalizer.cs
-- [[LoginNormalizer.cs]] - code - src/CampCenter.Application/Common/LoginNormalizer.cs
+- [[@typesreact]] - code - frontend/package.json
+- [[@typesreact_1]] - concept - frontend/package.json
 
 ## Live Query (requires Dataview plugin)
 
@@ -20,10 +19,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_Domain & Infra Namespaces]]
-- 1 edge to [[_COMMUNITY_Auth Service & Tokens]]
-- 1 edge to [[_COMMUNITY_tests  CampCenter.IntegrationTests (2)]]
+- 1 edge to [[_COMMUNITY_ESLint Dev Dependencies]]
 
 ## Top bridge nodes
-- [[.Normalize()]] - degree 3, connects to 2 communities
-- [[LoginNormalizer.cs]] - degree 2, connects to 1 community
+- [[@typesreact]] - degree 2, connects to 1 community

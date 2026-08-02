@@ -293,8 +293,8 @@ export async function getOccupancy(start: string, end: string): Promise<Occupanc
 
 export interface RoomTask {
   id: string;
-  roomId: string;
-  roomNumber: string;
+  roomId: string | null;
+  roomNumber: string | null;
   bookingId: string | null;
   text: string;
   status: "Open" | "Done";
@@ -311,7 +311,7 @@ export async function getTasks(filters: {
 }
 
 export async function createTask(input: {
-  roomId: string;
+  roomId: string | null;
   text: string;
   bookingId: string | null;
 }): Promise<RoomTask> {

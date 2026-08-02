@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Interfaces/IAuthService.cs"
 type: "code"
-community: "Auth Controller (1)"
+community: "Domain & Infra Namespaces"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Auth_Controller_1
+  - community/Domain__Infra_Namespaces
 ---
 
 # IAuthService
@@ -19,4 +19,4 @@ tags:
 - [[AuthService]] - `implements` [EXTRACTED]
 - [[IAuthService.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Auth_Controller_1
+#graphify/code #graphify/EXTRACTED #community/Domain__Infra_Namespaces

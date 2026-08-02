@@ -2,6 +2,7 @@ import { useEffect, useState, type FormEvent } from "react";
 import { useTranslation } from "react-i18next";
 import { isAxiosError } from "axios";
 import AdminLayout from "../../components/admin/AdminLayout";
+import DateRangeField from "../../components/calendar/DateRangeField";
 import { useAuth } from "../../auth/AuthContext";
 import {
   createClosure,
@@ -126,24 +127,17 @@ export default function ClosuresPage() {
             maxLength={256}
           />
         </label>
-        <label>
-          {t("adminClosures.startDate")}
-          <input
-            type="date"
-            value={form.startDate}
-            onChange={(e) => setForm({ ...form, startDate: e.target.value })}
-            required
-          />
-        </label>
-        <label>
-          {t("adminClosures.endDate")}
-          <input
-            type="date"
-            value={form.endDate}
-            onChange={(e) => setForm({ ...form, endDate: e.target.value })}
-            required
-          />
-        </label>
+        {/* The field reads the range back as text and only unfolds the calendar on
+            click — the form's other inputs should not be pushed off-screen by six
+            weeks of grid. */}
+        <DateRangeField
+          label={t("adminClosures.dates")}
+          startDate={form.startDate}
+          endDate={form.endDate}
+          headcount={0}
+          allowPast
+          onChange={(range) => setForm({ ...form, startDate: range.startDate, endDate: range.endDate })}
+        />
         <label>
           {t("adminClosures.scope")}
           <select
@@ -158,7 +152,9 @@ export default function ClosuresPage() {
             ))}
           </select>
         </label>
-        <button type="submit">{editing ? t("adminClosures.save") : t("adminClosures.add")}</button>
+        <button type="submit" disabled={form.startDate === "" || form.endDate === ""}>
+          {editing ? t("adminClosures.save") : t("adminClosures.add")}
+        </button>
         {editing && (
           <button
             type="button"

@@ -1,35 +1,39 @@
 ---
 type: community
-members: 22
+members: 26
 ---
 
 # Frontend App Shell & i18n
 
-**Members:** 22 nodes
+**Members:** 26 nodes
 
 ## Members
-- [[AddGroupForm()]] - code - frontend/src/components/admin/AddGroupForm.tsx
-- [[AddGroupForm.tsx]] - code - frontend/src/components/admin/AddGroupForm.tsx
-- [[AdminBooking]] - code - frontend/src/api/admin.ts
-- [[AdminBookingsPage()]] - code - frontend/src/pages/admin/AdminBookingsPage.tsx
-- [[AdminBookingsPage.tsx]] - code - frontend/src/pages/admin/AdminBookingsPage.tsx
-- [[BookingGroupCategory]] - code - frontend/src/api/admin.ts
-- [[BookingGroupSection()]] - code - frontend/src/components/admin/BookingGroupSection.tsx
-- [[BookingGroupSection.tsx]] - code - frontend/src/components/admin/BookingGroupSection.tsx
-- [[BookingStatus]] - code - frontend/src/api/admin.ts
+- [[BookingSchedule]] - code - frontend/src/api/admin.ts
 - [[ConfirmDialog()]] - code - frontend/src/components/ConfirmDialog.tsx
 - [[ConfirmDialog.tsx]] - code - frontend/src/components/ConfirmDialog.tsx
-- [[DashboardBooking]] - code - frontend/src/api/admin.ts
+- [[GroupSchedulePanel()]] - code - frontend/src/components/admin/GroupSchedulePanel.tsx
+- [[GroupSchedulePanel.tsx]] - code - frontend/src/components/admin/GroupSchedulePanel.tsx
 - [[Props_1]] - code - frontend/src/components/ConfirmDialog.tsx
-- [[Props_3]] - code - frontend/src/components/admin/AddGroupForm.tsx
-- [[Props_4]] - code - frontend/src/components/admin/BookingGroupSection.tsx
-- [[bookingStatuses]] - code - frontend/src/api/admin.ts
-- [[cancelAdminBooking()]] - code - frontend/src/api/admin.ts
-- [[createAdminBooking()]] - code - frontend/src/api/admin.ts
-- [[getAdminBookings()]] - code - frontend/src/api/admin.ts
-- [[getBookingGroupPage()]] - code - frontend/src/api/admin.ts
-- [[isoInDays()]] - code - frontend/src/components/admin/AddGroupForm.tsx
-- [[setBookingStatus()]] - code - frontend/src/api/admin.ts
+- [[Props_8]] - code - frontend/src/components/admin/GroupSchedulePanel.tsx
+- [[ScheduleCalendar]] - code - frontend/src/api/admin.ts
+- [[ScheduleConflict]] - code - frontend/src/api/admin.ts
+- [[ScheduleLocations]] - code - frontend/src/api/admin.ts
+- [[SchedulePage()]] - code - frontend/src/pages/admin/SchedulePage.tsx
+- [[SchedulePage.tsx]] - code - frontend/src/pages/admin/SchedulePage.tsx
+- [[TODAY]] - code - frontend/src/pages/admin/SchedulePage.tsx
+- [[addMinutes()]] - code - frontend/src/pages/admin/SchedulePage.tsx
+- [[checkScheduleConflicts()]] - code - frontend/src/api/admin.ts
+- [[createScheduleEntry()]] - code - frontend/src/api/admin.ts
+- [[deleteScheduleEntry()]] - code - frontend/src/api/admin.ts
+- [[getBookingSchedule()]] - code - frontend/src/api/admin.ts
+- [[getScheduleCalendar()]] - code - frontend/src/api/admin.ts
+- [[getScheduleDay()]] - code - frontend/src/api/admin.ts
+- [[getScheduleLocations()]] - code - frontend/src/api/admin.ts
+- [[overlaps()]] - code - frontend/src/components/admin/GroupSchedulePanel.tsx
+- [[scroll.ts]] - code - frontend/src/utils/scroll.ts
+- [[scrollPanelIntoView()]] - code - frontend/src/utils/scroll.ts
+- [[updateDietaryNotes()]] - code - frontend/src/api/admin.ts
+- [[updateScheduleEntry()]] - code - frontend/src/api/admin.ts
 
 ## Live Query (requires Dataview plugin)
 
@@ -39,18 +43,19 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 15 edges to [[_COMMUNITY_src  api (1)]]
-- 10 edges to [[_COMMUNITY_useAuth]]
-- 9 edges to [[_COMMUNITY_Public Booking Frontend (1)]]
-- 5 edges to [[_COMMUNITY_CampCenter.Application  Services (3)]]
-- 4 edges to [[_COMMUNITY_src  utils]]
-- 2 edges to [[_COMMUNITY_Frontend Auth & API Client]]
-- 2 edges to [[_COMMUNITY_CampCenter.Domain  Repositories (2)]]
-- 1 edge to [[_COMMUNITY_Admin Tasks & Occupancy Pages]]
+- 18 edges to [[_COMMUNITY_src  api (1)]]
+- 10 edges to [[_COMMUNITY_ScheduleEntry]]
+- 10 edges to [[_COMMUNITY_Room Closure Management]]
+- 10 edges to [[_COMMUNITY_src  utils]]
+- 8 edges to [[_COMMUNITY_useAuth]]
+- 4 edges to [[_COMMUNITY_Frontend Auth & API Client]]
+- 2 edges to [[_COMMUNITY_Public Booking Frontend (1)]]
+- 2 edges to [[_COMMUNITY_Frontend Icon Components]]
+- 2 edges to [[_COMMUNITY_ControllerBase]]
 
 ## Top bridge nodes
-- [[AdminBookingsPage.tsx]] - degree 17, connects to 5 communities
-- [[BookingGroupSection.tsx]] - degree 13, connects to 5 communities
-- [[ConfirmDialog.tsx]] - degree 8, connects to 5 communities
-- [[ConfirmDialog()]] - degree 7, connects to 5 communities
-- [[AddGroupForm.tsx]] - degree 10, connects to 3 communities
+- [[GroupSchedulePanel.tsx]] - degree 35, connects to 8 communities
+- [[SchedulePage.tsx]] - degree 34, connects to 5 communities
+- [[ConfirmDialog.tsx]] - degree 9, connects to 5 communities
+- [[ConfirmDialog()]] - degree 8, connects to 5 communities
+- [[GroupSchedulePanel()]] - degree 8, connects to 3 communities

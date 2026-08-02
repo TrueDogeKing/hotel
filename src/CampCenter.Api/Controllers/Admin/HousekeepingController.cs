@@ -1,3 +1,4 @@
+using CampCenter.Api.Auth;
 using CampCenter.Api.Extensions;
 using CampCenter.Application.DTOs.AdminPanel;
 using CampCenter.Application.Interfaces;
@@ -40,7 +41,13 @@ public class HousekeepingController : ControllerBase
     /// Marks a room pending, in progress or done for that day, with an optional note.
     /// 400 when the room has no arrival or departure on the day — a page left open while
     /// the booking moved.
+    ///
+    /// Open to workers, unlike every other write in the panel: the round is the work a
+    /// worker actually does, and a housekeeper who cannot tick a room off would have to
+    /// find an administrator to record it. The note travels in the same request, so it
+    /// is writable here too.
     [HttpPut("day/{date}/rooms/{roomId:guid}")]
+    [AllowWorkerWrite]
     [ProducesResponseType(typeof(HousekeepingRoomDto), StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status409Conflict)]

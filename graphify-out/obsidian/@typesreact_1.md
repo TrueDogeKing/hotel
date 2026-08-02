@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/package.json"
 type: "concept"
-community: "@types/react"
+community: "eslint"
 location: "L25"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/types/react
+  - community/eslint
 ---
 
 # @types/react
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[@typesreact]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/types/react
+#graphify/concept #graphify/EXTRACTED #community/eslint

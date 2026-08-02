@@ -13,6 +13,7 @@ tags:
 
 ## Connections
 - [[OccupancyPage.tsx]] - `imports` [EXTRACTED]
+- [[TasksPage.tsx]] - `imports` [EXTRACTED]
 - [[admin.ts]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/useAuth

@@ -1,17 +1,17 @@
 ---
-source_file: "frontend/src/components/calendar/DateRangeField.tsx"
+source_file: "frontend/src/components/calendar/DateField.tsx"
 type: "code"
-community: "Public Booking Frontend (1)"
+community: "ControllerBase"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public_Booking_Frontend_1
+  - community/ControllerBase
 ---
 
 # Props
 
 ## Connections
-- [[DateRangeField.tsx]] - `contains` [EXTRACTED]
+- [[DateField.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public_Booking_Frontend_1
+#graphify/code #graphify/EXTRACTED #community/ControllerBase

@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Domain/Repositories/IAdminUserRepository.cs"
 type: "code"
-community: "Admin User & Token Config"
+community: "Booking Persistence & Entities (1)"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_User__Token_Config
+  - community/Booking_Persistence__Entities_1
 ---
 
 # IAdminUserRepository
@@ -24,4 +24,4 @@ tags:
 - [[IAdminUserRepository.cs]] - `contains` [EXTRACTED]
 - [[UserService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_User__Token_Config
+#graphify/code #graphify/EXTRACTED #community/Booking_Persistence__Entities_1

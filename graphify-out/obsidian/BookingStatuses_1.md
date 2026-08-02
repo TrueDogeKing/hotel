@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Domain/Entities/BookingStatuses.cs"
 type: "code"
-community: "Integration Test Harness (1)"
+community: "AvailabilityService"
 location: "L3"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Integration_Test_Harness_1
+  - community/AvailabilityService
 ---
 
 # BookingStatuses
@@ -15,4 +15,4 @@ tags:
 - [[BookingStatus_1]] - `references` [EXTRACTED]
 - [[BookingStatuses.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Integration_Test_Harness_1
+#graphify/code #graphify/EXTRACTED #community/AvailabilityService

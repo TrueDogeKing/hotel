@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Domain/Entities/AdminUser.cs"
 type: "code"
-community: "Admin User & Token Config"
+community: "Booking Persistence & Entities (1)"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_User__Token_Config
+  - community/Booking_Persistence__Entities_1
 ---
 
 # AdminUser
@@ -36,4 +36,4 @@ tags:
 - [[Guid_28]] - `references` [EXTRACTED]
 - [[RefreshToken]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_User__Token_Config
+#graphify/code #graphify/EXTRACTED #community/Booking_Persistence__Entities_1

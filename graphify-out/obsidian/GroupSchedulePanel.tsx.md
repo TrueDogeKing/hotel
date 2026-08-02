@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/components/admin/GroupSchedulePanel.tsx"
 type: "code"
-community: "CampCenter.Application / Services (3)"
+community: "Frontend App Shell & i18n"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterApplication_/_Services_3
+  - community/Frontend_App_Shell__i18n
 ---
 
 # GroupSchedulePanel.tsx
@@ -40,10 +40,12 @@ tags:
 - [[getScheduleLocations()]] - `imports` [EXTRACTED]
 - [[icons.tsx]] - `imports_from` [EXTRACTED]
 - [[overlaps()]] - `contains` [EXTRACTED]
+- [[scroll.ts]] - `imports_from` [EXTRACTED]
+- [[scrollPanelIntoView()]] - `imports` [EXTRACTED]
 - [[setBookingStatus()]] - `imports` [EXTRACTED]
 - [[toTimeInput()]] - `imports` [EXTRACTED]
 - [[updateDietaryNotes()]] - `imports` [EXTRACTED]
 - [[updateScheduleEntry()]] - `imports` [EXTRACTED]
 - [[useAuth()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_3
+#graphify/code #graphify/EXTRACTED #community/Frontend_App_Shell__i18n

@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/components/admin/GroupRooms.tsx"
 type: "code"
-community: "Admin Tasks & Occupancy Pages"
+community: "ScheduleEntry"
 location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Tasks__Occupancy_Pages
+  - community/ScheduleEntry
 ---
 
 # Props
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[GroupRooms.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Tasks__Occupancy_Pages
+#graphify/code #graphify/EXTRACTED #community/ScheduleEntry

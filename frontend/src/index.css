@@ -348,7 +348,7 @@ button.ghost:hover {
 
 button.danger {
   background: var(--danger);
-  color: oklch(0.99 0 0);
+  color: var(--on-danger);
 }
 button.danger:hover {
   background: var(--danger-hover);

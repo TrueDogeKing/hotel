@@ -16,6 +16,7 @@ tags:
 - [[.DuplicateLogin_AndWeakPassword_AreRejected()]] - `references` [EXTRACTED]
 - [[.RoleChange_EndsTheAffectedAccountsSessions()]] - `references` [EXTRACTED]
 - [[.SelfDelete_AndLastAdministrator_AreRefused()]] - `references` [EXTRACTED]
+- [[.Worker_MayRecordHousekeepingProgress()]] - `references` [EXTRACTED]
 - [[.Worker_ReadsEverySection_ButCannotWriteAnywhere()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/tests_/_CampCenterIntegrationTests_1

@@ -73,7 +73,7 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 5 edges to [[_COMMUNITY_Admin Booking & Notifications (4)]]
-- 4 edges to [[_COMMUNITY_Payment_1]]
+- 4 edges to [[_COMMUNITY_Payment]]
 - 2 edges to [[_COMMUNITY_Admin Booking & Notifications (2)]]
 - 2 edges to [[_COMMUNITY_CampCenter.Application.DTOs.Public]]
 - 1 edge to [[_COMMUNITY_Application Namespaces & DTOs]]

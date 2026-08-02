@@ -294,7 +294,7 @@ public class AdminBookingService : IAdminBookingService
         {
             var picked = active
                 .Where(r => r.Capacity == capacity && !blocked.Contains(r.Id))
-                .OrderBy(r => r.Number, StringComparer.OrdinalIgnoreCase)
+                .OrderBy(r => r.Number, RoomNumberComparer.Instance)
                 .Take(count)
                 .ToList();
             if (picked.Count < count)
@@ -384,7 +384,7 @@ public class AdminBookingService : IAdminBookingService
         [
             .. (await _rooms.GetActiveAsync(cancellationToken))
                 .Where(room => !blocked.Contains(room.Id))
-                .OrderBy(room => room.Number)
+                .OrderBy(room => room.Number, RoomNumberComparer.Instance)
                 .Select(room => new AssignableRoomDto(
                     room.Id,
                     room.Number,
@@ -678,7 +678,7 @@ public class AdminBookingService : IAdminBookingService
                 && finalDue < DateOnly.FromDateTime(DateTime.UtcNow),
             finalDue,
             b.CreatedAt,
-            b.RoomAssignments.OrderBy(a => a.Room?.Number)
+            b.RoomAssignments.OrderBy(a => a.Room?.Number, RoomNumberComparer.Instance)
                 .Select(a => new AdminAssignmentDto(
                     a.Id,
                     a.RoomId,

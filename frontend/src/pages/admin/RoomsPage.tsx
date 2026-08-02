@@ -2,6 +2,7 @@ import { useEffect, useState, type FormEvent } from "react";
 import { useTranslation } from "react-i18next";
 import { isAxiosError } from "axios";
 import AdminLayout from "../../components/admin/AdminLayout";
+import ConfirmDialog from "../../components/ConfirmDialog";
 import { createRoom, deleteRoom, getRooms, updateRoom, type Room } from "../../api/admin";
 import { useAuth } from "../../auth/AuthContext";
 
@@ -21,6 +22,10 @@ export default function RoomsPage() {
   const [rooms, setRooms] = useState<Room[]>([]);
   const [form, setForm] = useState<RoomFormState>(emptyForm);
   const [editing, setEditing] = useState<Room | null>(null);
+  // The room awaiting confirmation. Deleting is the one action here that cannot be
+  // undone from the page, so it asks first.
+  const [deleteTarget, setDeleteTarget] = useState<Room | null>(null);
+  const [deleting, setDeleting] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   async function reload() {
@@ -96,16 +101,21 @@ export default function RoomsPage() {
     }
   }
 
-  async function remove(room: Room) {
+  async function confirmDelete() {
+    if (!deleteTarget) return;
     setError(null);
+    setDeleting(true);
     try {
-      const result = await deleteRoom(room.id);
+      const result = await deleteRoom(deleteTarget.id);
       if (!result.deleted) {
         setError(t("adminRooms.deactivatedInstead"));
       }
+      setDeleteTarget(null);
       await reload();
     } catch (err) {
       handleApiError(err);
+    } finally {
+      setDeleting(false);
     }
   }
 
@@ -185,7 +195,7 @@ export default function RoomsPage() {
                   <button type="button" onClick={() => void toggleActive(room)}>
                     {room.isActive ? t("adminRooms.deactivate") : t("adminRooms.activate")}
                   </button>
-                  <button type="button" onClick={() => void remove(room)}>
+                  <button type="button" onClick={() => setDeleteTarget(room)}>
                     {t("adminRooms.delete")}
                   </button>
                 </td>
@@ -194,6 +204,18 @@ export default function RoomsPage() {
           ))}
         </tbody>
       </table>
+
+      {deleteTarget && (
+        <ConfirmDialog
+          title={t("adminRooms.deleteTitle")}
+          message={t("adminRooms.deleteMessage", { number: deleteTarget.number })}
+          confirmLabel={t("adminRooms.deleteConfirm")}
+          cancelLabel={t("adminRooms.deleteKeep")}
+          busy={deleting}
+          onConfirm={() => void confirmDelete()}
+          onCancel={() => setDeleteTarget(null)}
+        />
+      )}
     </AdminLayout>
   );
 }

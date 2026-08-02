@@ -6,13 +6,15 @@ public enum RoomTaskStatus
     Done,
 }
 
-/// A housekeeping note attached to a room (e.g. "add one extra bed"), optionally
-/// scoped to a booking for context. Housekeeping works off the Open list.
+/// A housekeeping note, usually attached to a room (e.g. "add one extra bed") and
+/// optionally scoped to a booking for context, but RoomId may be left unset for a
+/// general reminder that isn't about any particular room. Housekeeping works off
+/// the Open list.
 public class RoomTask
 {
     public Guid Id { get; set; }
 
-    public Guid RoomId { get; set; }
+    public Guid? RoomId { get; set; }
 
     public Room? Room { get; set; }
 
