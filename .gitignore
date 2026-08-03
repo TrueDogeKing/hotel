@@ -26,6 +26,7 @@ pnpm-debug.log*
 ## --- Środowisko / sekrety ---
 .env
 *.env.local
+deploy.log
 secrets.json
 
 ## --- IDE / OS ---

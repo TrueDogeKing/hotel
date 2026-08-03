@@ -1,0 +1,65 @@
+# Auto-deploy: checks origin/main and, if there is a new commit, pulls it and
+# rebuilds the production stack. Run repeatedly by Windows Task Scheduler (see
+# scripts/register-deploy-task.ps1) rather than a server/webhook, so it needs
+# no exposed port at all.
+#
+# Deliberately never runs `git reset --hard` / `git clean`: if the working tree
+# is not clean, it stops and logs that instead of touching anything. This is
+# meant to run unattended, so silently discarding local changes would be worse
+# than a failed deploy.
+#
+# ASCII-only on purpose: Windows PowerShell 5.1 reads a BOM-less .ps1 using the
+# system codepage, not UTF-8, so non-ASCII text here is a real source of parser
+# errors depending on the machine's locale. Keep it plain.
+#
+# $ErrorActionPreference stays at its default (Continue) rather than "Stop":
+# under Stop, redirecting a native command's stderr with 2>&1 turns every line
+# it writes there — including git's routine "From https://..." progress notes,
+# which are not errors — into a terminating exception. Real native-command
+# failures are instead caught explicitly below via $LASTEXITCODE.
+
+$repoRoot = Split-Path -Parent $PSScriptRoot
+Set-Location $repoRoot
+
+$logFile = Join-Path $repoRoot "deploy.log"
+function Write-Log($message) {
+    $line = "$(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')  $message"
+    Add-Content -Path $logFile -Value $line
+    Write-Host $line
+}
+
+try {
+    git fetch origin main 2>&1 | Out-Null
+    if ($LASTEXITCODE -ne 0) { throw "git fetch failed (exit $LASTEXITCODE)" }
+
+    $local = git rev-parse HEAD
+    $remote = git rev-parse origin/main
+
+    if ($local -eq $remote) {
+        # Quiet exit: logging "nothing new" every 5 minutes would just be noise,
+        # and this is the expected, common case.
+        exit 0
+    }
+
+    Write-Log "New commit on origin/main: $($local.Substring(0,7)) -> $($remote.Substring(0,7))"
+
+    $dirty = git status --porcelain
+    if ($dirty) {
+        Write-Log "ABORTED: working tree is not clean, refusing to touch it automatically. Check manually: git status"
+        exit 1
+    }
+
+    git pull --ff-only origin main 2>&1 | ForEach-Object { Write-Log "  $_" }
+    if ($LASTEXITCODE -ne 0) { throw "git pull failed (exit $LASTEXITCODE)" }
+
+    Write-Log "Rebuilding and restarting containers..."
+    docker compose --env-file .env -f docker/docker-compose.prod.yml up -d --build 2>&1 |
+        ForEach-Object { Write-Log "  $_" }
+    if ($LASTEXITCODE -ne 0) { throw "docker compose up failed (exit $LASTEXITCODE)" }
+
+    Write-Log "Deploy finished: now at $($remote.Substring(0,7))"
+}
+catch {
+    Write-Log "ERROR: $_"
+    exit 1
+}
