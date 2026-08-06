@@ -104,7 +104,6 @@
     "datesTitle": "Kiedy przyjeżdżacie i ile osób?",
     "arrival": "Data przyjazdu",
     "departure": "Data wyjazdu",
-    "headcountLabel": "Liczba osób",
     "checkAvailability": "Sprawdź dostępność",
     "nights": "nocy: {{count}}",
     "centerClosed": "Ośrodek jest zamknięty w wybranym terminie ({{reason}}). Wybierz inne daty.",
@@ -158,7 +157,15 @@
       "legendUnavailable": "niedostępne",
       "legendSelected": "wybrany termin",
       "loadError": "Nie udało się wczytać dostępności — możesz mimo to wybrać termin."
-    }
+    },
+    "campersLabel": "Liczba uczestników",
+    "supervisorsLabel": "Liczba opiekunów",
+    "headcountTotal": "Razem: {{count}} os.",
+    "supervisorRooms": "Pokoje dla opiekunów ({{count}} os.)",
+    "camperRooms": "Pokoje dla uczestników ({{count}} os.)",
+    "supervisorsDoNotFit": "W tym terminie nie da się zakwaterować grupy tak, aby opiekunowie mieli osobne pokoje. Spróbuj innego terminu lub zmień liczbę osób.",
+    "addRoom": "Dodaj pokój {{capacity}}-osobowy",
+    "removeRoom": "Usuń pokój {{capacity}}-osobowy"
   },
   "manage": {
     "notFound": "Nie znaleziono rezerwacji. Sprawdź link z e-maila.",
@@ -278,7 +285,18 @@
     "statusChanged": "Zmieniono status na: {{status}}.",
     "statusError": "Nie udało się zmienić statusu.",
     "loadError": "Nie udało się pobrać pulpitu.",
-    "stayDates": "Termin pobytu"
+    "stayDates": "Termin pobytu",
+    "campers": "Uczestnicy",
+    "supervisors": "Opiekunowie",
+    "headcountTotal": "Razem: {{count}} os.",
+    "camperRate": "Za uczestnika / noc (zł)",
+    "supervisorRate": "Za opiekuna / noc (zł)",
+    "total": "Kwota łączna (zł)",
+    "totalPinned": "Kwota wpisana ręcznie — nie przelicza się.",
+    "totalRecompute": "Przelicz z cennika",
+    "priceLine": "{{campers}} uczestn. + {{supervisors}} opiek. × {{nights}} nocy = {{total}}",
+    "addGroupRooms": "Grupa dodana — przydzielone pokoje",
+    "addGroupDone": "Gotowe"
   },
   "occupancy": {
     "title": "Obłożenie",
@@ -403,7 +421,9 @@
       "Confirmed": "Potwierdzona",
       "Cancelled": "Anulowana",
       "Completed": "Zakończona"
-    }
+    },
+    "perPersonSupervisor": "Za opiekuna / noc (zł)",
+    "priceLineSplit": "{{perPerson}} za uczestnika i {{perSupervisor}} za opiekuna za noc × ({{campers}} + {{supervisors}}) × {{nights}} nocy = {{total}} (zaliczka {{deposit}})"
   },
   "adminRooms": {
     "title": "Pokoje",
@@ -566,7 +586,9 @@
     "customTimeHint": "Godzina ustawiona tylko na ten dzień — zmiana pór grupy jej nie ruszy.",
     "addHere": "+ Dodaj zajęcia",
     "addHereHint": "Kliknij godzinę, aby dodać zajęcia lub posiłek.",
-    "addAt": "Nowa pozycja o {{time}}"
+    "addAt": "Nowa pozycja o {{time}}",
+    "supervisorsShort": "({{count}} op.)",
+    "headcountBreakdown": "osób: {{count}} ({{campers}} uczestn. + {{supervisors}} opiek.)"
   },
   "groupRooms": {
     "title": "Pokoje grupy",
@@ -592,7 +614,9 @@
     "cancel": "Anuluj",
     "saved": "Pokoje zmienione.",
     "loadError": "Nie udało się wczytać pokoi grupy.",
-    "saveError": "Nie udało się zmienić pokoi."
+    "saveError": "Nie udało się zmienić pokoi.",
+    "supervisorRoom": "kadra",
+    "placedSupervisors": "kadra: {{placed}} z {{count}}"
   },
   "mealTimes": {
     "title": "Domyślne pory posiłków",
@@ -629,7 +653,7 @@
   },
   "pricing": {
     "title": "Cennik",
-    "current": "{{price}} za osobę za noc, zaliczka {{deposit}} za osobę za noc.",
+    "current": "{{price}} za uczestnika i {{supervisorPrice}} za opiekuna za noc, zaliczka {{deposit}} od osoby za noc.",
     "hint": "Te stawki wypełniają nową rezerwację. Ich zmiana nie przelicza rezerwacji już przyjętych — tam cenę zmieniasz przy konkretnej grupie.",
     "edit": "Zmień stawki",
     "pricePerPerson": "Cena za osobę / noc (zł)",
@@ -637,6 +661,19 @@
     "save": "Zapisz",
     "cancel": "Anuluj",
     "saved": "Stawki zapisane.",
-    "saveError": "Nie udało się zapisać stawek."
+    "saveError": "Nie udało się zapisać stawek.",
+    "supervisorPricePerPerson": "Cena za opiekuna / noc (zł)"
+  },
+  "groupPeople": {
+    "summary": "Skład grupy: {{campers}} uczestn. + {{supervisors}} opiek. = {{count}} os.",
+    "edit": "Zmień liczbę osób",
+    "campers": "Uczestnicy",
+    "supervisors": "Opiekunowie",
+    "total": "razem: {{count}} os.",
+    "save": "Zapisz",
+    "saving": "Zapisywanie…",
+    "cancel": "Anuluj",
+    "saveError": "Nie udało się zapisać liczby osób.",
+    "roomsOutOfStep": "W pokojach rozlokowano {{placed}} os., a grupa liczy {{headcount}}. Popraw przydział pokoi poniżej. Cenę zmieniasz osobno."
   }
 }

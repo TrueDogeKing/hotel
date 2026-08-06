@@ -1,4 +1,4 @@
-import { useEffect, useId, useRef, useState, type ReactNode } from "react";
+import { useCallback, useEffect, useId, useRef, useState, type ReactNode } from "react";
 
 interface Props {
   label: string;
@@ -74,6 +74,12 @@ export default function PopoverField({ label, summary, empty, aside, children }:
     positionPanel();
   }
 
+  // Handed to the picker so it can close the panel once it has an answer. Looked
+  // up by id rather than through panelRef: this is handed *into* render, and a ref
+  // is not a render-time value. The element is in the document by the time the
+  // picker calls it.
+  const closePanel = useCallback(() => document.getElementById(panelId)?.hidePopover(), [panelId]);
+
   return (
     <div className="date-range-field">
       <span className="date-range-label">{label}</span>
@@ -97,7 +103,7 @@ export default function PopoverField({ label, summary, empty, aside, children }:
         popover="auto"
         className="date-range-popover"
       >
-        {children(() => panelRef.current?.hidePopover())}
+        {children(closePanel)}
       </div>
     </div>
   );

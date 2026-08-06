@@ -10,6 +10,7 @@ import DayTimetable, { NEW_ENTRY_MINUTES } from "../../components/admin/DayTimet
 import GroupSchedulePanel from "../../components/admin/GroupSchedulePanel";
 import ScheduleEntryForm from "../../components/admin/ScheduleEntryForm";
 import ConfirmDialog from "../../components/ConfirmDialog";
+import { groupLabel } from "../../utils/groupLabel";
 import {
   checkScheduleConflicts,
   createScheduleEntry,
@@ -235,9 +236,9 @@ export default function SchedulePage() {
       startIso: booking.startDate,
       // endDate is inclusive here: the group is present on its departure day.
       endIso: booking.endDate,
-      label: `${booking.organizationName} · ${t("schedule.people", {
-        count: booking.headcount,
-      })}`,
+      label: `${groupLabel(booking.organizationName, booking.supervisorCount, (count) =>
+        t("schedule.supervisorsShort", { count }),
+      )} · ${t("schedule.people", { count: booking.headcount })}`,
       muted: booking.status === "PendingDeposit",
     })) ?? [];
 

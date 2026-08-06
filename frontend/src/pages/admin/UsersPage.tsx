@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { isAxiosError } from "axios";
 import AdminLayout from "../../components/admin/AdminLayout";
 import ConfirmDialog from "../../components/ConfirmDialog";
+import Modal from "../../components/Modal";
 import {
   createUser,
   deleteUser,
@@ -108,15 +109,6 @@ export default function UsersPage() {
       setBusyId(null);
     }
   }
-
-  useEffect(() => {
-    if (!passwordTarget) return;
-    function onKeyDown(event: KeyboardEvent) {
-      if (event.key === "Escape" && busyId !== passwordTarget?.id) setPasswordTarget(null);
-    }
-    document.addEventListener("keydown", onKeyDown);
-    return () => document.removeEventListener("keydown", onKeyDown);
-  }, [passwordTarget, busyId]);
 
   function openPasswordDialog(user: AdminUser) {
     setPasswordTarget(user);
@@ -303,22 +295,12 @@ export default function UsersPage() {
       )}
 
       {passwordTarget && (
-        <div
-          className="modal-overlay"
-          role="presentation"
-          onClick={() => busyId !== passwordTarget.id && setPasswordTarget(null)}
+        <Modal
+          title={t("adminUsers.changePasswordTitle", { login: passwordTarget.login })}
+          busy={busyId === passwordTarget.id}
+          onClose={() => setPasswordTarget(null)}
         >
-          <form
-            className="modal"
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby="password-title"
-            onClick={(e) => e.stopPropagation()}
-            onSubmit={(e) => void handleSetPassword(e)}
-          >
-            <h2 id="password-title">
-              {t("adminUsers.changePasswordTitle", { login: passwordTarget.login })}
-            </h2>
+          <form className="modal-form" onSubmit={(e) => void handleSetPassword(e)}>
             <label>
               {t("adminUsers.password")}
               <input
@@ -326,7 +308,6 @@ export default function UsersPage() {
                 value={passwordDraft}
                 onChange={(e) => setPasswordDraft(e.target.value)}
                 autoComplete="new-password"
-                autoFocus
                 required
               />
             </label>
@@ -348,7 +329,7 @@ export default function UsersPage() {
               </button>
             </div>
           </form>
-        </div>
+        </Modal>
       )}
     </AdminLayout>
   );

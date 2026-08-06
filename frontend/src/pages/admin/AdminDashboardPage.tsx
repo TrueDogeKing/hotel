@@ -6,12 +6,15 @@ import { useAuth } from "../../auth/AuthContext";
 import AdminLayout from "../../components/admin/AdminLayout";
 import GroupSchedulePanel from "../../components/admin/GroupSchedulePanel";
 import AddGroupForm from "../../components/admin/AddGroupForm";
+import GroupRooms from "../../components/admin/GroupRooms";
+import Modal from "../../components/Modal";
 import AdminTiles from "../../components/admin/AdminTiles";
 import BookingGroupSection from "../../components/admin/BookingGroupSection";
 import {
   bookingGroupCategories,
   getDashboard,
   setBookingStatus,
+  type AdminBooking,
   type BookingStatus,
   type Dashboard,
 } from "../../api/admin";
@@ -24,6 +27,8 @@ export default function AdminDashboardPage() {
   const [dashboard, setDashboard] = useState<Dashboard | null>(null);
   const [selectedBookingId, setSelectedBookingId] = useState<string | null>(null);
   const [adding, setAdding] = useState(false);
+  // The group just created, while the dialog is showing its rooms.
+  const [created, setCreated] = useState<AdminBooking | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [notice, setNotice] = useState<string | null>(null);
   const groupPanelRef = useRef<HTMLDivElement>(null);
@@ -108,8 +113,8 @@ export default function AdminDashboardPage() {
           <div className="schedule-toolbar">
             <h2>{t("dashboard.groups.title")}</h2>
             {canEdit && (
-              <button type="button" onClick={() => setAdding((open) => !open)}>
-                {adding ? t("dashboard.addGroupCancel") : t("dashboard.addGroup")}
+              <button type="button" onClick={() => setAdding(true)}>
+                {t("dashboard.addGroup")}
               </button>
             )}
           </div>
@@ -117,18 +122,50 @@ export default function AdminDashboardPage() {
           {error && <p role="alert">{error}</p>}
           {notice && <p className="group-panel-notice">{notice}</p>}
 
+          {/* Two steps in one dialog. The rooms cannot be shown before the group
+              exists — they are picked from what is free at the moment it is saved —
+              so the form gives way to the picker rather than the admin having to go
+              looking for it afterwards. */}
           {canEdit && adding && (
-            <AddGroupForm
-              onCreated={async (booking) => {
+            <Modal
+              title={t(created ? "dashboard.addGroupRooms" : "dashboard.addGroup")}
+              size="lg"
+              onClose={() => {
                 setAdding(false);
-                setError(null);
-                setNotice(t("dashboard.groupAdded", { organization: booking.organizationName }));
-                await reload();
-                setSelectedBookingId(booking.id);
+                setCreated(null);
               }}
-              onError={(err) => handleApiError(err, t("dashboard.addGroupError"))}
-              onCancel={() => setAdding(false)}
-            />
+            >
+              {created ? (
+                <>
+                  <GroupRooms bookingId={created.id} onChanged={() => void reload()} />
+                  <div className="modal-actions">
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setAdding(false);
+                        setCreated(null);
+                      }}
+                    >
+                      {t("dashboard.addGroupDone")}
+                    </button>
+                  </div>
+                </>
+              ) : (
+                <AddGroupForm
+                  onCreated={async (booking) => {
+                    setError(null);
+                    setNotice(
+                      t("dashboard.groupAdded", { organization: booking.organizationName }),
+                    );
+                    setCreated(booking);
+                    await reload();
+                    setSelectedBookingId(booking.id);
+                  }}
+                  onError={(err) => handleApiError(err, t("dashboard.addGroupError"))}
+                  onCancel={() => setAdding(false)}
+                />
+              )}
+            </Modal>
           )}
 
           <div className="schedule-layout">

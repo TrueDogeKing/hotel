@@ -104,7 +104,6 @@
     "datesTitle": "When are you coming, and how many?",
     "arrival": "Arrival date",
     "departure": "Departure date",
-    "headcountLabel": "Group size",
     "checkAvailability": "Check availability",
     "nights": "{{count}} nights",
     "centerClosed": "The center is closed in the selected range ({{reason}}). Pick other dates.",
@@ -157,7 +156,15 @@
       "legendUnavailable": "unavailable",
       "legendSelected": "your stay",
       "loadError": "Could not load availability — you can still pick dates."
-    }
+    },
+    "campersLabel": "Number of campers",
+    "supervisorsLabel": "Number of supervisors",
+    "headcountTotal": "Total: {{count}} people",
+    "supervisorRooms": "Rooms for the supervisors ({{count}})",
+    "camperRooms": "Rooms for the campers ({{count}})",
+    "supervisorsDoNotFit": "These dates cannot house the group with the supervisors in rooms of their own. Try other dates, or change the numbers.",
+    "addRoom": "Add a {{capacity}}-bed room",
+    "removeRoom": "Remove a {{capacity}}-bed room"
   },
   "manage": {
     "notFound": "Booking not found. Check the link from your email.",
@@ -277,7 +284,18 @@
     "statusChanged": "Status changed to {{status}}.",
     "statusError": "Could not change the status.",
     "loadError": "Could not load the dashboard.",
-    "stayDates": "Stay dates"
+    "stayDates": "Stay dates",
+    "campers": "Campers",
+    "supervisors": "Supervisors",
+    "headcountTotal": "Total: {{count}} people",
+    "camperRate": "Per camper / night (zł)",
+    "supervisorRate": "Per supervisor / night (zł)",
+    "total": "Total amount (zł)",
+    "totalPinned": "Total typed by hand — it no longer follows the rates.",
+    "totalRecompute": "Recompute from the rates",
+    "priceLine": "{{campers}} campers + {{supervisors}} supervisors × {{nights}} nights = {{total}}",
+    "addGroupRooms": "Group added — the rooms it got",
+    "addGroupDone": "Done"
   },
   "occupancy": {
     "title": "Occupancy",
@@ -402,7 +420,9 @@
       "Confirmed": "Confirmed",
       "Cancelled": "Cancelled",
       "Completed": "Completed"
-    }
+    },
+    "perPersonSupervisor": "Per supervisor / night (zł)",
+    "priceLineSplit": "{{perPerson}} per camper and {{perSupervisor}} per supervisor per night × ({{campers}} + {{supervisors}}) × {{nights}} nights = {{total}} (deposit {{deposit}})"
   },
   "adminRooms": {
     "title": "Rooms",
@@ -565,7 +585,9 @@
     "customTimeHint": "Time set for this day only — re-timing the group's meals will skip it.",
     "addHere": "+ Add activity",
     "addHereHint": "Click an hour to add an activity or a meal.",
-    "addAt": "New entry at {{time}}"
+    "addAt": "New entry at {{time}}",
+    "supervisorsShort": "({{count}} sup.)",
+    "headcountBreakdown": "{{count}} people ({{campers}} campers + {{supervisors}} supervisors)"
   },
   "groupRooms": {
     "title": "The group's rooms",
@@ -591,7 +613,9 @@
     "cancel": "Cancel",
     "saved": "Rooms changed.",
     "loadError": "Could not load the group's rooms.",
-    "saveError": "Could not change the rooms."
+    "saveError": "Could not change the rooms.",
+    "supervisorRoom": "supervisors",
+    "placedSupervisors": "supervisors: {{placed}} of {{count}}"
   },
   "mealTimes": {
     "title": "Default meal times",
@@ -626,7 +650,7 @@
   },
   "pricing": {
     "title": "Rates",
-    "current": "{{price}} per person per night, deposit {{deposit}} per person per night.",
+    "current": "{{price}} per camper and {{supervisorPrice}} per supervisor per night, deposit {{deposit}} per person per night.",
     "hint": "These prefill a new booking. Changing them never re-prices a group already on the books — edit that booking instead.",
     "edit": "Change the rates",
     "pricePerPerson": "Price per person / night (zł)",
@@ -634,6 +658,19 @@
     "save": "Save",
     "cancel": "Cancel",
     "saved": "Rates saved.",
-    "saveError": "Could not save the rates."
+    "saveError": "Could not save the rates.",
+    "supervisorPricePerPerson": "Price per supervisor / night (zł)"
+  },
+  "groupPeople": {
+    "summary": "Group: {{campers}} campers + {{supervisors}} supervisors = {{count}} people",
+    "edit": "Change the numbers",
+    "campers": "Campers",
+    "supervisors": "Supervisors",
+    "total": "total: {{count}}",
+    "save": "Save",
+    "saving": "Saving…",
+    "cancel": "Cancel",
+    "saveError": "Could not save the numbers.",
+    "roomsOutOfStep": "The rooms hold {{placed}} people and the group is {{headcount}}. Fix the room assignment below. The price is changed separately."
   }
 }

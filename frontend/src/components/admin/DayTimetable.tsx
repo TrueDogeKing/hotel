@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import { useEffect, useLayoutEffect, useRef, useState, type CSSProperties } from "react";
 import { MEAL_GAP_MINUTES, type ScheduleDay, type ScheduleEntry } from "../../api/admin";
 import { formatDate, toTimeInput } from "../../utils/dates";
+import { groupLabel } from "../../utils/groupLabel";
 
 interface Props {
   day: ScheduleDay;
@@ -220,6 +221,7 @@ export default function DayTimetable({
   pending = null,
 }: Props) {
   const { t, i18n } = useTranslation();
+  const supervisorsShort = (count: number) => t("schedule.supervisorsShort", { count });
   const chips = buildChips(day.entries);
   const placed = placeChips(chips);
   const clashes = findClashes(chips);
@@ -341,7 +343,7 @@ export default function DayTimetable({
           {day.groups.map((group) => (
             <li key={group.bookingId}>
               <button type="button" onClick={() => onSelectGroup(group.bookingId)}>
-                {group.organizationName}
+                {groupLabel(group.organizationName, group.supervisorCount, supervisorsShort)}
               </button>
               <span className="timetable-group-meta">
                 {t("schedule.people", { count: group.headcount })}
@@ -441,12 +443,18 @@ export default function DayTimetable({
             const clash = clashes.get(chip.key);
             const time = `${toTimeInput(chip.startTime)}–${toTimeInput(chip.endTime)}`;
             const places = placesOf(chip).join(" · ");
+            // Meals and activities both draw as chips, so this is where the kadra
+            // count shows up beside the group: "Karatecy (3 op.)".
             const groups =
               chip.entries.length > 1
                 ? `${t("schedule.groupCount", { count: chip.entries.length })}: ${chip.entries
-                    .map((e) => e.organizationName)
+                    .map((e) => groupLabel(e.organizationName, e.supervisorCount, supervisorsShort))
                     .join(", ")}`
-                : chip.entries[0].organizationName;
+                : groupLabel(
+                    chip.entries[0].organizationName,
+                    chip.entries[0].supervisorCount,
+                    supervisorsShort,
+                  );
             const menu = chip.entries
               .filter((e) => e.menu)
               .map((e) => e.menu)

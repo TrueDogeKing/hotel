@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import Modal from "./Modal";
 
 interface Props {
   title: string;
@@ -11,7 +11,8 @@ interface Props {
   onCancel: () => void;
 }
 
-// Reusable modal confirmation dialog. Closes on overlay click or Escape.
+// A question with two answers. Everything about being a dialog — the overlay,
+// Escape, the focus trap — lives in Modal; this is just its content.
 export default function ConfirmDialog({
   title,
   message,
@@ -21,34 +22,23 @@ export default function ConfirmDialog({
   onConfirm,
   onCancel,
 }: Props) {
-  useEffect(() => {
-    function onKeyDown(event: KeyboardEvent) {
-      if (event.key === "Escape" && !busy) onCancel();
-    }
-    document.addEventListener("keydown", onKeyDown);
-    return () => document.removeEventListener("keydown", onKeyDown);
-  }, [busy, onCancel]);
-
   return (
-    <div className="modal-overlay" role="presentation" onClick={() => !busy && onCancel()}>
-      <div
-        className="modal"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="confirm-title"
-        onClick={(e) => e.stopPropagation()}
-      >
-        <h2 id="confirm-title">{title}</h2>
-        <p>{message}</p>
-        <div className="modal-actions">
+    <Modal
+      title={title}
+      busy={busy}
+      onClose={onCancel}
+      footer={
+        <>
           <button type="button" className="secondary" onClick={onCancel} disabled={busy}>
             {cancelLabel}
           </button>
           <button type="button" className="danger" onClick={onConfirm} disabled={busy}>
             {busy ? "Working…" : confirmLabel}
           </button>
-        </div>
-      </div>
-    </div>
+        </>
+      }
+    >
+      <p>{message}</p>
+    </Modal>
   );
 }

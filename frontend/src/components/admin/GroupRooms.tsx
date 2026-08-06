@@ -16,10 +16,12 @@ interface Props {
   onChanged: () => void;
 }
 
-/** One row being edited: which room, and how many of the group sleep in it. */
+/** One row being edited: which room, how many of the group sleep in it, and
+ *  whether they are the kadra — who get rooms of their own. */
 interface Draft {
   roomId: string;
   peopleCount: number;
+  isSupervisorRoom: boolean;
 }
 
 /**
@@ -66,7 +68,13 @@ export default function GroupRooms({ bookingId, onChanged }: Props) {
     if (!booking) return;
     setNotice(null);
     setError(null);
-    setDrafts(booking.assignments.map((a) => ({ roomId: a.roomId, peopleCount: a.peopleCount })));
+    setDrafts(
+      booking.assignments.map((a) => ({
+        roomId: a.roomId,
+        peopleCount: a.peopleCount,
+        isSupervisorRoom: a.isSupervisorRoom,
+      })),
+    );
   }
 
   function updateDraft(index: number, patch: Partial<Draft>) {
@@ -85,7 +93,9 @@ export default function GroupRooms({ bookingId, onChanged }: Props) {
     setDrafts((current) => {
       if (!current) return current;
       const room = firstUnusedRoom(current);
-      return room ? [...current, { roomId: room.roomId, peopleCount: 1 }] : current;
+      return room
+        ? [...current, { roomId: room.roomId, peopleCount: 1, isSupervisorRoom: false }]
+        : current;
     });
   }
 
@@ -130,7 +140,13 @@ export default function GroupRooms({ bookingId, onChanged }: Props) {
   }
 
   const placed = drafts?.reduce((sum, draft) => sum + (draft.peopleCount || 0), 0) ?? 0;
-  const balanced = placed === booking.headcount;
+  // The two cohorts are placed separately, so they have to add up separately: a
+  // room relabelled as the kadra's does not move anybody into it.
+  const placedSupervisors =
+    drafts
+      ?.filter((draft) => draft.isSupervisorRoom)
+      .reduce((sum, draft) => sum + (draft.peopleCount || 0), 0) ?? 0;
+  const balanced = placed === booking.headcount && placedSupervisors === booking.supervisorCount;
   const duplicated = drafts ? new Set(drafts.map((d) => d.roomId)).size !== drafts.length : false;
   const canSave = !!drafts && drafts.length > 0 && balanced && !duplicated && !saving;
   const roomsLeftToAdd = drafts ? !!firstUnusedRoom(drafts) : false;
@@ -153,6 +169,9 @@ export default function GroupRooms({ bookingId, onChanged }: Props) {
                   {t("groupRooms.people", { count: assignment.peopleCount })}
                 </span>
                 <span className="group-rooms-capacity">
+                  {assignment.isSupervisorRoom && (
+                    <em className="group-rooms-kadra">{t("groupRooms.supervisorRoom")}</em>
+                  )}
                   {t("groupRooms.capacity", { count: assignment.capacity })}
                   {/* An admin may overfill a room on purpose (an extra bed); say so
                       rather than hiding it, because housekeeping has to set it up. */}
@@ -218,6 +237,14 @@ export default function GroupRooms({ bookingId, onChanged }: Props) {
                       updateDraft(index, { peopleCount: Number(e.target.value) || 0 })
                     }
                   />
+                  <label className="group-rooms-kadra-toggle">
+                    <input
+                      type="checkbox"
+                      checked={draft.isSupervisorRoom}
+                      onChange={(e) => updateDraft(index, { isSupervisorRoom: e.target.checked })}
+                    />
+                    {t("groupRooms.supervisorRoom")}
+                  </label>
                   <button
                     type="button"
                     disabled={drafts.length === 1}
@@ -235,6 +262,11 @@ export default function GroupRooms({ bookingId, onChanged }: Props) {
               between rooms one field at a time, and this says when everyone is housed. */}
           <p className={`group-rooms-total${balanced ? " balanced" : " off"}`}>
             {t("groupRooms.placed", { placed, headcount: booking.headcount })}
+            {booking.supervisorCount > 0 &&
+              ` · ${t("groupRooms.placedSupervisors", {
+                placed: placedSupervisors,
+                count: booking.supervisorCount,
+              })}`}
             {!balanced && ` · ${t("groupRooms.mustMatch")}`}
             {duplicated && ` · ${t("groupRooms.duplicate")}`}
           </p>

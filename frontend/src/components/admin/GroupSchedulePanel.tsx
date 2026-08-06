@@ -23,6 +23,7 @@ import { IconUtensils } from "../icons";
 import ConfirmDialog from "../ConfirmDialog";
 import ScheduleEntryForm from "./ScheduleEntryForm";
 import GroupMealTimes from "./GroupMealTimes";
+import GroupPeople from "./GroupPeople";
 import GroupRooms from "./GroupRooms";
 import { useAuth } from "../../auth/AuthContext";
 import { scrollPanelIntoView } from "../../utils/scroll";
@@ -313,8 +314,14 @@ export default function GroupSchedulePanel({
           <p className="group-panel-meta">
             {formatDate(schedule.startDate, i18n.language)} –{" "}
             {formatDate(schedule.endDate, i18n.language)} ·{" "}
-            {t("schedule.people", { count: schedule.headcount })} ·{" "}
-            {t("schedule.nights", { count: schedule.nights })}
+            {schedule.supervisorCount > 0
+              ? t("schedule.headcountBreakdown", {
+                  count: schedule.headcount,
+                  campers: schedule.headcount - schedule.supervisorCount,
+                  supervisors: schedule.supervisorCount,
+                })
+              : t("schedule.people", { count: schedule.headcount })}{" "}
+            · {t("schedule.nights", { count: schedule.nights })}
           </p>
         </div>
         <button type="button" onClick={onClose} aria-label={t("schedule.close")}>
@@ -368,8 +375,23 @@ export default function GroupSchedulePanel({
           instead of carrying over a half-finished edit — and keyed *distinctly*,
           because keys have to be unique among siblings: two children sharing one
           key is a reconciliation bug, not just a warning. */}
+      {/* The counts sit above the rooms: changing them is what usually sends the
+          owner into the room editor, and GroupRooms below reports the totals
+          itself, so no placed-in-rooms hint is needed here. */}
+      <GroupPeople
+        bookingId={bookingId}
+        headcount={schedule.headcount}
+        supervisorCount={schedule.supervisorCount}
+        onChanged={() => void afterMutation()}
+      />
+
+      {/* Keyed by the counts as well as the group: the room editor holds its own
+          copy of the booking, and after the numbers change that copy would go on
+          balancing the rooms against the old headcount — refusing a save for a
+          group that does add up. Remounting also drops any half-finished room
+          edit, which is the right thing when the group under it just changed. */}
       <GroupRooms
-        key={`rooms-${bookingId}`}
+        key={`rooms-${bookingId}-${schedule.headcount}-${schedule.supervisorCount}`}
         bookingId={bookingId}
         onChanged={() => void afterMutation()}
       />

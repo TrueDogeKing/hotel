@@ -25,6 +25,7 @@ export default function PricingDefaultsPanel() {
   const [defaults, setDefaults] = useState<PricingDefaults | null>(null);
   const [open, setOpen] = useState(false);
   const [price, setPrice] = useState("");
+  const [supervisorPrice, setSupervisorPrice] = useState("");
   const [deposit, setDeposit] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [saved, setSaved] = useState(false);
@@ -42,6 +43,7 @@ export default function PricingDefaultsPanel() {
   function startEdit() {
     if (!defaults) return;
     setPrice(groszeToZl(defaults.pricePerPersonPerNightGrosze));
+    setSupervisorPrice(groszeToZl(defaults.supervisorPricePerPersonPerNightGrosze));
     setDeposit(groszeToZl(defaults.depositPerPersonPerNightGrosze));
     setError(null);
     setSaved(false);
@@ -55,6 +57,7 @@ export default function PricingDefaultsPanel() {
       setDefaults(
         await updatePricingDefaults({
           pricePerPersonPerNightGrosze: zlToGrosze(price),
+          supervisorPricePerPersonPerNightGrosze: zlToGrosze(supervisorPrice),
           depositPerPersonPerNightGrosze: zlToGrosze(deposit),
         }),
       );
@@ -77,6 +80,7 @@ export default function PricingDefaultsPanel() {
       <p>
         {t("pricing.current", {
           price: formatZl(defaults.pricePerPersonPerNightGrosze),
+          supervisorPrice: formatZl(defaults.supervisorPricePerPersonPerNightGrosze),
           deposit: formatZl(defaults.depositPerPersonPerNightGrosze),
         })}{" "}
         {canEdit && !open && (
@@ -97,6 +101,15 @@ export default function PricingDefaultsPanel() {
               inputMode="decimal"
               value={price}
               onChange={(e) => setPrice(e.target.value)}
+            />
+          </label>
+          <label>
+            {t("pricing.supervisorPricePerPerson")}
+            <input
+              type="text"
+              inputMode="decimal"
+              value={supervisorPrice}
+              onChange={(e) => setSupervisorPrice(e.target.value)}
             />
           </label>
           <label>

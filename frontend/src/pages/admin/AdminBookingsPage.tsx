@@ -15,6 +15,7 @@ import {
   type AdminBooking,
   type BookingState,
 } from "../../api/admin";
+import GroupPeople from "../../components/admin/GroupPeople";
 import PricingDefaultsPanel from "../../components/admin/PricingDefaultsPanel";
 import { formatDate as formatIsoDate } from "../../utils/dates";
 
@@ -30,6 +31,7 @@ export default function AdminBookingsPage() {
   // storage detail the owner should never have to count in.
   const [priceEditId, setPriceEditId] = useState<string | null>(null);
   const [priceRate, setPriceRate] = useState("");
+  const [priceSupervisorRate, setPriceSupervisorRate] = useState("");
   const [priceTotal, setPriceTotal] = useState("");
   const [priceDeposit, setPriceDeposit] = useState("");
 
@@ -79,18 +81,24 @@ export default function AdminBookingsPage() {
   function startPriceEdit(booking: AdminBooking) {
     setPriceEditId(booking.id);
     setPriceRate(groszeToZl(booking.pricePerPersonPerNightGrosze));
+    setPriceSupervisorRate(groszeToZl(booking.supervisorPricePerPersonPerNightGrosze));
     setPriceTotal(groszeToZl(booking.totalGrosze));
     setPriceDeposit(groszeToZl(booking.depositGrosze));
   }
 
-  /** The total follows the rate as it is typed — it is rate × people × nights —
-   *  but stays editable, so a negotiated flat price can be written over it. */
-  function handleRateChange(booking: AdminBooking, value: string) {
-    setPriceRate(value);
-    const rate = zlToGrosze(value);
-    if (!Number.isNaN(rate)) {
-      setPriceTotal(groszeToZl(rate * booking.headcount * booking.nights));
-    }
+  /** The total follows the rates as they are typed — campers at one, supervisors
+   *  at the other — but stays editable, so a negotiated flat price can be written
+   *  over it. */
+  function recomputeTotal(booking: AdminBooking, camperRate: string, supervisorRate: string) {
+    const camper = zlToGrosze(camperRate);
+    const supervisor = zlToGrosze(supervisorRate);
+    if (Number.isNaN(camper) || Number.isNaN(supervisor)) return;
+    const campers = booking.headcount - booking.supervisorCount;
+    setPriceTotal(
+      groszeToZl(
+        camper * campers * booking.nights + supervisor * booking.supervisorCount * booking.nights,
+      ),
+    );
   }
 
   async function savePrice(e: React.FormEvent, booking: AdminBooking) {
@@ -99,6 +107,7 @@ export default function AdminBookingsPage() {
     try {
       await updateBookingPricing(booking.id, {
         pricePerPersonPerNightGrosze: zlToGrosze(priceRate),
+        supervisorPricePerPersonPerNightGrosze: zlToGrosze(priceSupervisorRate),
         depositGrosze: zlToGrosze(priceDeposit),
         totalGrosze: zlToGrosze(priceTotal),
       });
@@ -211,6 +220,19 @@ export default function AdminBookingsPage() {
                     </p>
                     {booking.notes && <p>{booking.notes}</p>}
 
+                    <div onClick={(e) => e.stopPropagation()}>
+                      <GroupPeople
+                        bookingId={booking.id}
+                        headcount={booking.headcount}
+                        supervisorCount={booking.supervisorCount}
+                        placedInRooms={booking.assignments.reduce(
+                          (sum, a) => sum + a.peopleCount,
+                          0,
+                        )}
+                        onChanged={reload}
+                      />
+                    </div>
+
                     {priceEditId === booking.id ? (
                       <form
                         className="price-form"
@@ -223,7 +245,22 @@ export default function AdminBookingsPage() {
                             type="text"
                             inputMode="decimal"
                             value={priceRate}
-                            onChange={(e) => handleRateChange(booking, e.target.value)}
+                            onChange={(e) => {
+                              setPriceRate(e.target.value);
+                              recomputeTotal(booking, e.target.value, priceSupervisorRate);
+                            }}
+                          />
+                        </label>
+                        <label>
+                          {t("adminBookings.perPersonSupervisor")}
+                          <input
+                            type="text"
+                            inputMode="decimal"
+                            value={priceSupervisorRate}
+                            onChange={(e) => {
+                              setPriceSupervisorRate(e.target.value);
+                              recomputeTotal(booking, priceRate, e.target.value);
+                            }}
                           />
                         </label>
                         <label>
@@ -251,13 +288,21 @@ export default function AdminBookingsPage() {
                       </form>
                     ) : (
                       <p className="price-summary">
-                        {t("adminBookings.priceLine", {
-                          perPerson: formatZl(booking.pricePerPersonPerNightGrosze),
-                          people: booking.headcount,
-                          nights: booking.nights,
-                          total: formatZl(booking.totalGrosze),
-                          deposit: formatZl(booking.depositGrosze),
-                        })}{" "}
+                        {t(
+                          booking.supervisorCount > 0
+                            ? "adminBookings.priceLineSplit"
+                            : "adminBookings.priceLine",
+                          {
+                            perPerson: formatZl(booking.pricePerPersonPerNightGrosze),
+                            perSupervisor: formatZl(booking.supervisorPricePerPersonPerNightGrosze),
+                            people: booking.headcount,
+                            campers: booking.headcount - booking.supervisorCount,
+                            supervisors: booking.supervisorCount,
+                            nights: booking.nights,
+                            total: formatZl(booking.totalGrosze),
+                            deposit: formatZl(booking.depositGrosze),
+                          },
+                        )}{" "}
                         {canEdit && (
                           <button
                             type="button"

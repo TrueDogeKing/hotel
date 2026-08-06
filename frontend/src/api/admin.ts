@@ -151,6 +151,8 @@ export interface AdminAssignment {
   roomNumber: string;
   capacity: number;
   peopleCount: number;
+  /** This room holds the group's supervisors rather than its campers. */
+  isSupervisorRoom: boolean;
 }
 
 export interface AdminBooking {
@@ -162,15 +164,20 @@ export interface AdminBooking {
   contactName: string;
   email: string;
   phone: string;
+  /** Campers and supervisors together. */
   headcount: number;
+  /** How many of headcount are supervisors; campers are the remainder. */
+  supervisorCount: number;
   notes: string | null;
   dietaryNotes: string | null;
   status: "PendingDeposit" | "Confirmed" | "Cancelled" | "Completed";
   cancelReason: string | null;
   totalGrosze: number;
   depositGrosze: number;
-  /** The rate the total was worked out from; total = rate × headcount × nights. */
+  /** The camper rate; total = camper rate × campers × nights + supervisor rate ×
+   *  supervisors × nights, unless a flat total was typed over it. */
   pricePerPersonPerNightGrosze: number;
+  supervisorPricePerPersonPerNightGrosze: number;
   paymentState: BookingPaymentState;
   /** paymentState and status folded together; what the panel's one control shows. */
   state: BookingState;
@@ -231,7 +238,7 @@ export async function getAssignableRooms(bookingId: string): Promise<AssignableR
  *  headcount. A room another group has taken meanwhile comes back as a 409. */
 export async function reassignBooking(
   bookingId: string,
-  assignments: { roomId: string; peopleCount: number }[],
+  assignments: { roomId: string; peopleCount: number; isSupervisorRoom: boolean }[],
 ): Promise<AdminBooking> {
   const { data } = await api.put<AdminBooking>(`/admin/bookings/${bookingId}/assignments`, {
     assignments,
@@ -255,7 +262,15 @@ export interface CreateAdminBookingInput {
   contactName: string;
   email: string;
   phone: string;
+  /** Campers and supervisors together. */
   headcount: number;
+  supervisorCount: number;
+  /** Each null to take the centre's current rate. Sent with the booking rather
+   *  than in a second call, so a group never exists at the wrong price. */
+  pricePerPersonPerNightGrosze: number | null;
+  supervisorPricePerPersonPerNightGrosze: number | null;
+  totalGrosze: number | null;
+  depositGrosze: number | null;
   notes: string | null;
   status: BookingStatus;
   language: string;
@@ -275,12 +290,23 @@ export async function setBookingStatus(id: string, status: BookingStatus): Promi
   return data;
 }
 
+/** Changes only who is coming. The price and the rooms are left exactly as they
+ *  are — each has its own call — so the counts can be corrected on their own. */
+export async function updateBookingPeople(
+  id: string,
+  input: { headcount: number; supervisorCount: number },
+): Promise<AdminBooking> {
+  const { data } = await api.put<AdminBooking>(`/admin/bookings/${id}/people`, input);
+  return data;
+}
+
 /** Re-prices this one group. Leave totalGrosze null to have the server work it
  *  out as rate × headcount × nights; pass one to fix a flat, negotiated amount. */
 export async function updateBookingPricing(
   id: string,
   input: {
     pricePerPersonPerNightGrosze: number;
+    supervisorPricePerPersonPerNightGrosze: number;
     depositGrosze: number;
     totalGrosze: number | null;
   },
@@ -314,6 +340,7 @@ export async function setBookingPaymentState(
  *  nothing has been saved in the panel. */
 export interface PricingDefaults {
   pricePerPersonPerNightGrosze: number;
+  supervisorPricePerPersonPerNightGrosze: number;
   depositPerPersonPerNightGrosze: number;
   updatedAt: string | null;
 }
@@ -325,6 +352,7 @@ export async function getPricingDefaults(): Promise<PricingDefaults> {
 
 export async function updatePricingDefaults(input: {
   pricePerPersonPerNightGrosze: number;
+  supervisorPricePerPersonPerNightGrosze: number;
   depositPerPersonPerNightGrosze: number;
 }): Promise<PricingDefaults> {
   const { data } = await api.put<PricingDefaults>("/admin/pricing", input);
@@ -492,6 +520,7 @@ export interface DashboardBooking {
   startDate: string;
   endDate: string;
   headcount: number;
+  supervisorCount: number;
   occupiedBeds: number;
   status: string;
 }
@@ -546,6 +575,7 @@ export interface ScheduleEntry {
   bookingId: string;
   organizationName: string;
   headcount: number;
+  supervisorCount: number;
   kind: ScheduleEntryKind;
   mealKind: MealKind | null;
   date: string;
@@ -571,6 +601,7 @@ export interface ScheduleCalendarBooking {
   endDate: string;
   nights: number;
   headcount: number;
+  supervisorCount: number;
   status: AdminBooking["status"];
 }
 
@@ -593,6 +624,7 @@ export interface ScheduleDayGroup {
   bookingId: string;
   organizationName: string;
   headcount: number;
+  supervisorCount: number;
   status: AdminBooking["status"];
   isArrivalDay: boolean;
   isDepartureDay: boolean;
@@ -622,6 +654,7 @@ export interface BookingSchedule {
   endDate: string;
   nights: number;
   headcount: number;
+  supervisorCount: number;
   status: AdminBooking["status"];
   notes: string | null;
   dietaryNotes: string | null;

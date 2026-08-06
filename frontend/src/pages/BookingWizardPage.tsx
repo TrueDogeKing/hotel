@@ -4,8 +4,9 @@ import { useTranslation } from "react-i18next";
 import { isAxiosError } from "axios";
 import LanguageSwitcher from "../components/LanguageSwitcher";
 import RangeCalendar from "../components/calendar/RangeCalendar";
+import MixEditor from "../components/MixEditor";
 import { formatZl } from "../api/admin";
-import { createBooking, getAvailability, validateMix, type Availability } from "../api/public";
+import { createBooking, getAvailability, validateSplitMix, type Availability } from "../api/public";
 import { formatDate as formatIsoDate } from "../utils/dates";
 
 type Step = "dates" | "rooms" | "contact" | "summary";
@@ -33,34 +34,49 @@ export default function BookingWizardPage() {
   const [step, setStep] = useState<Step>("dates");
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
-  const [headcountInput, setHeadcountInput] = useState("");
+  // Campers and supervisors are asked for separately because the kadra sleep in
+  // rooms of their own: the centre has to be able to seat them apart, and that is
+  // part of what the availability check answers.
+  const [camperInput, setCamperInput] = useState("");
+  const [supervisorInput, setSupervisorInput] = useState("");
   const [headcount, setHeadcount] = useState(0);
+  const [supervisors, setSupervisors] = useState(0);
   const [availability, setAvailability] = useState<Availability | null>(null);
   const [counts, setCounts] = useState<Record<string, number>>({});
+  const [supervisorCounts, setSupervisorCounts] = useState<Record<string, number>>({});
   const [contact, setContact] = useState<ContactForm>(emptyContact);
   const [error, setError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
 
   const formatDate = (iso: string) => formatIsoDate(iso, i18n.language);
 
+  const campersTyped = Number(camperInput) || 0;
+  const supervisorsTyped = Number(supervisorInput) || 0;
+  const headcountTyped = campersTyped + supervisorsTyped;
+
   const datesValid =
-    startDate !== "" && endDate !== "" && endDate > startDate && Number(headcountInput) >= 1;
+    startDate !== "" && endDate !== "" && endDate > startDate && headcountTyped >= 1;
 
   async function submitDates() {
-    const value = Number(headcountInput);
     if (!datesValid) return;
     setBusy(true);
     setError(null);
     try {
-      const result = await getAvailability(startDate, endDate, value);
-      setHeadcount(value);
+      const result = await getAvailability(startDate, endDate, headcountTyped, supervisorsTyped);
+      setHeadcount(headcountTyped);
+      setSupervisors(supervisorsTyped);
       setAvailability(result);
       if (result.centerClosed) {
         setError(t("wizard.centerClosed", { reason: result.centerClosedReason ?? "" }));
       } else if (!result.fits) {
-        setError(t("wizard.doesNotFitRange"));
+        // A group that fits the centre may still not fit it with the kadra housed
+        // separately, which is a different thing to tell them.
+        setError(
+          supervisorsTyped > 0 ? t("wizard.supervisorsDoNotFit") : t("wizard.doesNotFitRange"),
+        );
       } else {
         setCounts(result.suggestedMix ?? {});
+        setSupervisorCounts(result.suggestedSupervisorMix ?? {});
         setStep("rooms");
       }
     } catch {
@@ -70,16 +86,32 @@ export default function BookingWizardPage() {
     }
   }
 
+  const campers = headcount - supervisors;
   const mixState = availability
-    ? validateMix(headcount, counts, availability.freeRoomsByCapacity)
+    ? validateSplitMix(
+        campers,
+        supervisors,
+        counts,
+        supervisorCounts,
+        availability.freeRoomsByCapacity,
+      )
     : "ok";
-  const totalBeds = Object.entries(counts).reduce(
-    (sum, [cap, count]) => sum + Number(cap) * count,
-    0,
-  );
+  const bedsIn = (mix: Record<string, number>) =>
+    Object.entries(mix).reduce((sum, [cap, count]) => sum + Number(cap) * count, 0);
+  const totalBeds = bedsIn(counts) + bedsIn(supervisorCounts);
 
-  function adjustCount(capacity: string, delta: number) {
-    setCounts((prev) => ({
+  /** Rooms of a capacity still free for one cohort: the centre's, less whatever
+   *  the other cohort has already taken. Keeps the two from claiming one room. */
+  function freeFor(capacity: string, cohort: "campers" | "supervisors"): number {
+    const free = availability?.freeRoomsByCapacity[capacity] ?? 0;
+    const takenByOther =
+      cohort === "campers" ? (supervisorCounts[capacity] ?? 0) : (counts[capacity] ?? 0);
+    return free - takenByOther;
+  }
+
+  function adjustCount(capacity: string, delta: number, cohort: "campers" | "supervisors") {
+    const setter = cohort === "campers" ? setCounts : setSupervisorCounts;
+    setter((prev) => ({
       ...prev,
       [capacity]: Math.max(0, (prev[capacity] ?? 0) + delta),
     }));
@@ -100,7 +132,11 @@ export default function BookingWizardPage() {
         startDate,
         endDate,
         headcount,
+        supervisorCount: supervisors,
         roomCounts: Object.fromEntries(Object.entries(counts).filter(([, v]) => v > 0)),
+        supervisorRoomCounts: Object.fromEntries(
+          Object.entries(supervisorCounts).filter(([, v]) => v > 0),
+        ),
         organizationName: contact.organizationName.trim(),
         contactName: contact.contactName.trim(),
         email: contact.email.trim(),
@@ -151,21 +187,36 @@ export default function BookingWizardPage() {
                 the dates would grey out the wrong ones. */}
             <div className="form">
               <label>
-                {t("wizard.headcountLabel")}
+                {t("wizard.campersLabel")}
                 <input
                   type="number"
-                  min={1}
+                  min={0}
                   max={2000}
-                  value={headcountInput}
-                  onChange={(e) => setHeadcountInput(e.target.value)}
+                  value={camperInput}
+                  onChange={(e) => setCamperInput(e.target.value)}
                 />
               </label>
+              <label>
+                {t("wizard.supervisorsLabel")}
+                <input
+                  type="number"
+                  min={0}
+                  max={2000}
+                  value={supervisorInput}
+                  onChange={(e) => setSupervisorInput(e.target.value)}
+                />
+              </label>
+              {headcountTyped > 0 && (
+                <p className="wizard-chosen">
+                  {t("wizard.headcountTotal", { count: headcountTyped })}
+                </p>
+              )}
             </div>
 
             <RangeCalendar
               startDate={startDate}
               endDate={endDate}
-              headcount={Number(headcountInput) || 0}
+              headcount={headcountTyped}
               onChange={(range) => {
                 setStartDate(range.startDate);
                 setEndDate(range.endDate);
@@ -193,29 +244,30 @@ export default function BookingWizardPage() {
               {t("wizard.nights", { count: availability.nights })}
             </p>
             <p>{t("wizard.roomsHint", { headcount })}</p>
-            <div className="mix-editor">
-              {Object.entries(availability.freeRoomsByCapacity)
-                .sort(([a], [b]) => Number(b) - Number(a))
-                .map(([capacity, free]) => (
-                  <div key={capacity} className="mix-row">
-                    <span>{t("wizard.roomType", { capacity })}</span>
-                    <span className="mix-free">{t("wizard.freeRooms", { count: free })}</span>
-                    <div className="mix-stepper">
-                      <button type="button" onClick={() => adjustCount(capacity, -1)}>
-                        −
-                      </button>
-                      <span>{counts[capacity] ?? 0}</span>
-                      <button
-                        type="button"
-                        disabled={(counts[capacity] ?? 0) >= free}
-                        onClick={() => adjustCount(capacity, 1)}
-                      >
-                        +
-                      </button>
-                    </div>
-                  </div>
-                ))}
-            </div>
+
+            {/* Two editors when the group brings kadra, one when it does not. Each
+                stepper caps at what the other cohort has left free, so the two can
+                never claim the same room. */}
+            {supervisors > 0 && (
+              <>
+                <h2 className="mix-heading">
+                  {t("wizard.supervisorRooms", { count: supervisors })}
+                </h2>
+                <MixEditor
+                  capacities={Object.keys(availability.freeRoomsByCapacity)}
+                  counts={supervisorCounts}
+                  freeFor={(capacity) => freeFor(capacity, "supervisors")}
+                  onAdjust={(capacity, delta) => adjustCount(capacity, delta, "supervisors")}
+                />
+                <h2 className="mix-heading">{t("wizard.camperRooms", { count: campers })}</h2>
+              </>
+            )}
+            <MixEditor
+              capacities={Object.keys(availability.freeRoomsByCapacity)}
+              counts={counts}
+              freeFor={(capacity) => freeFor(capacity, "campers")}
+              onAdjust={(capacity, delta) => adjustCount(capacity, delta, "campers")}
+            />
             <p className={mixState === "ok" ? "mix-status ok" : "mix-status bad"}>
               {t(`wizard.mix.${mixState}`, { beds: totalBeds, headcount })}
             </p>

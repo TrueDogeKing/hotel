@@ -11,8 +11,11 @@ export interface Availability {
   depositPerPersonPerNightGrosze: number;
   remainingCapacity: number;
   freeRoomsByCapacity: Record<string, number>;
+  supervisorPricePerPersonPerNightGrosze: number;
   fits: boolean | null;
   suggestedMix: Record<string, number> | null;
+  /** Rooms suggested for the supervisors — their own, and the smallest that fit. */
+  suggestedSupervisorMix: Record<string, number> | null;
   totalGrosze: number | null;
   depositGrosze: number | null;
 }
@@ -21,9 +24,15 @@ export async function getAvailability(
   start: string,
   end: string,
   headcount?: number,
+  supervisors?: number,
 ): Promise<Availability> {
   const { data } = await api.get<Availability>("/public/availability", {
-    params: { start, end, ...(headcount ? { headcount } : {}) },
+    params: {
+      start,
+      end,
+      ...(headcount ? { headcount } : {}),
+      ...(supervisors ? { supervisors } : {}),
+    },
   });
   return data;
 }
@@ -73,8 +82,12 @@ export async function getPublicClosures(): Promise<PublicClosure[]> {
 export interface CreateBookingInput {
   startDate: string;
   endDate: string;
+  /** Campers and supervisors together. */
   headcount: number;
+  supervisorCount: number;
+  /** Rooms for the campers; the kadra get their own, below. */
   roomCounts: Record<string, number>;
+  supervisorRoomCounts: Record<string, number>;
   organizationName: string;
   contactName: string;
   email: string;
@@ -162,6 +175,33 @@ export interface PublicSchedule {
 export async function getBookingSchedule(token: string): Promise<PublicSchedule> {
   const { data } = await api.get<PublicSchedule>(`/public/bookings/${token}/schedule`);
   return data;
+}
+
+/** Client-side mirror of ValidateSplitMix: the two cohorts are judged against
+ *  their own rooms, so a double for two supervisors is not redundant just because
+ *  the whole group is fifty. Both draw on the same free rooms, so availability is
+ *  checked across the union first. */
+export function validateSplitMix(
+  campers: number,
+  supervisors: number,
+  camperCounts: Record<string, number>,
+  supervisorCounts: Record<string, number>,
+  free: Record<string, number>,
+): "ok" | "too-small" | "unavailable" | "redundant" {
+  const union: Record<string, number> = { ...camperCounts };
+  for (const [cap, count] of Object.entries(supervisorCounts)) {
+    union[cap] = (union[cap] ?? 0) + count;
+  }
+  for (const [cap, count] of Object.entries(union)) {
+    if (count > (free[cap] ?? 0)) return "unavailable";
+  }
+
+  if (supervisors > 0) {
+    const staff = validateMix(supervisors, supervisorCounts, union);
+    if (staff !== "ok") return staff;
+  }
+
+  return validateMix(campers, camperCounts, union);
 }
 
 // Client-side mirror of the server's mix rules, for live wizard feedback.

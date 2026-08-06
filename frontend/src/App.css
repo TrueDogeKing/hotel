@@ -1135,6 +1135,7 @@ p[role="alert"] {
 }
 .modal {
   z-index: var(--z-modal);
+  /* Overridden per size below; sm is the default a question wants. */
   width: min(100%, 26rem);
   background: var(--bg-nav);
   border: 1px solid var(--border);
@@ -1158,6 +1159,31 @@ p[role="alert"] {
   justify-content: flex-end;
   gap: 0.5rem;
   margin-top: 0.5rem;
+}
+
+/* A short form needs more room than a question, a long one more again — and a
+   tall dialog scrolls inside itself rather than off the viewport. */
+.modal-md {
+  width: min(100%, 34rem);
+}
+.modal-lg {
+  width: min(100%, 48rem);
+  max-height: 85vh;
+  overflow-y: auto;
+}
+
+/* A form filling a dialog: the same stacked fields as .form, without the
+   dialog's own padding and gap being applied twice. */
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.modal-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.85rem;
 }
 
 @keyframes overlay-in {
@@ -2272,6 +2298,91 @@ p[role="alert"] {
 .tasks-edit input[type="text"] {
   flex: 1 1 14rem;
   width: auto;
+}
+
+/* The add-group dialog: fields in rows of two or three rather than one long
+   column, so a nine-field form still reads at a glance. */
+.add-group-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 0.75rem 12px;
+}
+.add-group-row > label {
+  flex: 1 1 12rem;
+}
+.add-group-row > label.add-group-notes {
+  flex: 2 1 24rem;
+}
+.add-group-total {
+  flex: 0 0 auto;
+  margin: 0 0 0.35rem;
+  font-weight: 600;
+}
+
+/* A button that reads as a link inside a sentence. */
+.link-button {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--accent);
+  font: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* The group's make-up, above the rooms it is placed in. */
+.group-people {
+  margin: 0.75rem 0;
+}
+.group-people-summary,
+.group-people-edit {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 0.5rem 8px;
+  margin: 0;
+}
+.group-people-edit label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.8rem;
+}
+.group-people-edit input {
+  width: 6rem;
+}
+.group-people-total {
+  align-self: center;
+  font-weight: 600;
+}
+.group-people-warning {
+  margin: 0.35rem 0 0;
+  font-size: 0.85rem;
+  color: var(--danger);
+}
+
+/* Which rooms hold the kadra, in both the read-only list and the editor. */
+.group-rooms-kadra {
+  margin-right: 6px;
+  padding: 1px 6px;
+  border-radius: var(--r-sm);
+  background: color-mix(in oklch, var(--accent) 18%, transparent);
+  font-size: 0.75rem;
+  font-style: normal;
+}
+.group-rooms-kadra-toggle {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+/* Heading over each of the wizard's two room pickers. */
+.mix-heading {
+  margin: 1rem 0 0.25rem;
+  font-size: 0.95rem;
 }
 
 /* Rates panel above the bookings table, and the per-booking price editor inside
