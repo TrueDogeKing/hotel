@@ -22,7 +22,7 @@ SORT file.name ASC
 ## Connections to other communities
 - 1 edge to [[_COMMUNITY_Exception]]
 - 1 edge to [[_COMMUNITY_Auth Service & Tokens]]
-- 1 edge to [[_COMMUNITY_Booking Persistence & Entities (1)]]
+- 1 edge to [[_COMMUNITY_Admin User & Token Config]]
 
 ## Top bridge nodes
 - [[.Normalize()]] - degree 3, connects to 2 communities

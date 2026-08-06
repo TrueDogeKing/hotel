@@ -201,9 +201,7 @@ export interface AssignableRoom {
 }
 
 export async function getAssignableRooms(bookingId: string): Promise<AssignableRoom[]> {
-  const { data } = await api.get<AssignableRoom[]>(
-    `/admin/bookings/${bookingId}/assignable-rooms`,
-  );
+  const { data } = await api.get<AssignableRoom[]>(`/admin/bookings/${bookingId}/assignable-rooms`);
   return data;
 }
 
@@ -243,19 +241,14 @@ export interface CreateAdminBookingInput {
 
 /** Records a group taken by phone or at the door: rooms are picked automatically
  *  and the contact gets no confirmation email. */
-export async function createAdminBooking(
-  input: CreateAdminBookingInput,
-): Promise<AdminBooking> {
+export async function createAdminBooking(input: CreateAdminBookingInput): Promise<AdminBooking> {
   const { data } = await api.post<AdminBooking>("/admin/bookings", input);
   return data;
 }
 
 /** Manual status override. Cancelling frees the rooms and emails the group;
  *  moving back out of Cancelled takes the rooms again and can 409. */
-export async function setBookingStatus(
-  id: string,
-  status: BookingStatus,
-): Promise<AdminBooking> {
+export async function setBookingStatus(id: string, status: BookingStatus): Promise<AdminBooking> {
   const { data } = await api.put<AdminBooking>(`/admin/bookings/${id}/status`, { status });
   return data;
 }
@@ -316,6 +309,14 @@ export async function createTask(input: {
   bookingId: string | null;
 }): Promise<RoomTask> {
   const { data } = await api.post<RoomTask>("/admin/tasks", input);
+  return data;
+}
+
+export async function updateTask(
+  id: string,
+  input: { roomId: string | null; text: string },
+): Promise<RoomTask> {
+  const { data } = await api.put<RoomTask>(`/admin/tasks/${id}`, input);
   return data;
 }
 
@@ -659,10 +660,7 @@ export async function updateDietaryNotes(
   bookingId: string,
   input: { dietaryNotes: string | null; rowVersion: number },
 ): Promise<AdminBooking> {
-  const { data } = await api.put<AdminBooking>(
-    `/admin/bookings/${bookingId}/dietary-notes`,
-    input,
-  );
+  const { data } = await api.put<AdminBooking>(`/admin/bookings/${bookingId}/dietary-notes`, input);
   return data;
 }
 

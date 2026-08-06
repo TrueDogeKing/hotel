@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/api/admin.ts"
 type: "code"
-community: "useAuth"
-location: "L279"
+community: "src / api (1)"
+location: "L272"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/useAuth
+  - community/src_/_api_1
 ---
 
 # Occupancy
@@ -15,4 +15,4 @@ tags:
 - [[OccupancyPage.tsx]] - `imports` [EXTRACTED]
 - [[admin.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/useAuth
+#graphify/code #graphify/EXTRACTED #community/src_/_api_1

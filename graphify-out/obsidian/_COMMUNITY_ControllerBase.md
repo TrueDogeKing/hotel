@@ -1,32 +1,40 @@
 ---
 type: community
-members: 19
+members: 27
 ---
 
 # ControllerBase
 
-**Members:** 19 nodes
+**Members:** 27 nodes
 
 ## Members
-- [[Closure]] - code - frontend/src/api/admin.ts
-- [[ClosureFormState]] - code - frontend/src/pages/admin/ClosuresPage.tsx
-- [[ClosuresPage()]] - code - frontend/src/pages/admin/ClosuresPage.tsx
-- [[ClosuresPage.tsx]] - code - frontend/src/pages/admin/ClosuresPage.tsx
-- [[DateField()]] - code - frontend/src/components/calendar/DateField.tsx
-- [[DateField.tsx]] - code - frontend/src/components/calendar/DateField.tsx
-- [[DateRangeField()]] - code - frontend/src/components/calendar/DateRangeField.tsx
-- [[DateRangeField.tsx]] - code - frontend/src/components/calendar/DateRangeField.tsx
-- [[PopoverField()]] - code - frontend/src/components/calendar/PopoverField.tsx
-- [[PopoverField.tsx]] - code - frontend/src/components/calendar/PopoverField.tsx
-- [[Props_11]] - code - frontend/src/components/calendar/DateField.tsx
-- [[Props_12]] - code - frontend/src/components/calendar/DateRangeField.tsx
-- [[Props_15]] - code - frontend/src/components/calendar/PopoverField.tsx
-- [[createClosure()]] - code - frontend/src/api/admin.ts
-- [[deleteClosure()]] - code - frontend/src/api/admin.ts
-- [[emptyForm]] - code - frontend/src/pages/admin/ClosuresPage.tsx
-- [[formatDate()]] - code - frontend/src/utils/dates.ts
-- [[getClosures()]] - code - frontend/src/api/admin.ts
-- [[updateClosure()]] - code - frontend/src/api/admin.ts
+- [[.Create()_5]] - code - src/CampCenter.Api/Controllers/Admin/UsersController.cs
+- [[.CreateAsync()_6]] - code - src/CampCenter.Application/Interfaces/IUserService.cs
+- [[.Delete()_4]] - code - src/CampCenter.Api/Controllers/Admin/UsersController.cs
+- [[.DeleteAsync()_4]] - code - src/CampCenter.Application/Interfaces/IUserService.cs
+- [[.List()_2]] - code - src/CampCenter.Api/Controllers/Admin/UsersController.cs
+- [[.ListAsync()_2]] - code - src/CampCenter.Application/Interfaces/IUserService.cs
+- [[.SetPassword()]] - code - src/CampCenter.Api/Controllers/Admin/UsersController.cs
+- [[.SetPasswordAsync()]] - code - src/CampCenter.Application/Interfaces/IUserService.cs
+- [[.SetRole()]] - code - src/CampCenter.Api/Controllers/Admin/UsersController.cs
+- [[.SetRoleAsync()]] - code - src/CampCenter.Application/Interfaces/IUserService.cs
+- [[CancellationToken_10]] - code
+- [[CancellationToken_30]] - code
+- [[Guid_7]] - code
+- [[Guid_17]] - code
+- [[HttpDelete_5]] - code
+- [[HttpGet_9]] - code
+- [[HttpPost_6]] - code
+- [[HttpPut_7]] - code
+- [[IActionResult_9]] - code
+- [[IUserService]] - code - src/CampCenter.Application/Interfaces/IUserService.cs
+- [[IValidator_5]] - code
+- [[List_6]] - code
+- [[ProducesResponseType_9]] - code
+- [[SetUserPasswordRequestDto]] - code - src/CampCenter.Application/DTOs/Users/UserDtos.cs
+- [[Task_11]] - code
+- [[Task_30]] - code
+- [[UsersController]] - code - src/CampCenter.Api/Controllers/Admin/UsersController.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -36,18 +44,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 10 edges to [[_COMMUNITY_src  api (1)]]
-- 9 edges to [[_COMMUNITY_useAuth]]
-- 9 edges to [[_COMMUNITY_src  utils]]
-- 6 edges to [[_COMMUNITY_Public Booking Frontend (1)]]
-- 6 edges to [[_COMMUNITY_ScheduleEntry]]
-- 3 edges to [[_COMMUNITY_Frontend Auth & API Client]]
-- 2 edges to [[_COMMUNITY_Room Closure Management]]
-- 2 edges to [[_COMMUNITY_Frontend App Shell & i18n]]
+- 6 edges to [[_COMMUNITY_UserValidators.cs]]
+- 6 edges to [[_COMMUNITY_Admin User & Token Config]]
+- 2 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
+- 1 edge to [[_COMMUNITY_AvailabilityService]]
 
 ## Top bridge nodes
-- [[formatDate()]] - degree 26, connects to 7 communities
-- [[ClosuresPage.tsx]] - degree 19, connects to 4 communities
-- [[DateRangeField.tsx]] - degree 10, connects to 3 communities
-- [[DateRangeField()]] - degree 6, connects to 3 communities
-- [[DateField.tsx]] - degree 7, connects to 2 communities
+- [[UsersController]] - degree 10, connects to 2 communities
+- [[IUserService]] - degree 8, connects to 2 communities
+- [[.CreateAsync()_6]] - degree 7, connects to 2 communities
+- [[.SetRoleAsync()]] - degree 7, connects to 2 communities
+- [[SetUserPasswordRequestDto]] - degree 5, connects to 2 communities

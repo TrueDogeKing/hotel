@@ -56,7 +56,7 @@ public class RoomCleaningRepository : IRoomCleaningRepository
         }
         catch (DbUpdateException ex)
             when (ex.InnerException
-                is PostgresException { SqlState: PostgresErrorCodes.UniqueViolation }
+                    is PostgresException { SqlState: PostgresErrorCodes.UniqueViolation }
             )
         {
             // Two people ticked the same room at the same moment. The index held; the

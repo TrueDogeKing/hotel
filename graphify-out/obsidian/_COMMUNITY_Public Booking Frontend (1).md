@@ -1,13 +1,15 @@
 ---
 type: community
-members: 41
+members: 51
 ---
 
 # Public Booking Frontend (1)
 
-**Members:** 41 nodes
+**Members:** 51 nodes
 
 ## Members
+- [[App()]] - code - frontend/src/App.tsx
+- [[App.tsx]] - code - frontend/src/App.tsx
 - [[Availability]] - code - frontend/src/api/public.ts
 - [[AvailabilityCalendar]] - code - frontend/src/api/public.ts
 - [[AvailabilityDay]] - code - frontend/src/api/public.ts
@@ -22,6 +24,8 @@ members: 41
 - [[ContactForm]] - code - frontend/src/pages/BookingWizardPage.tsx
 - [[CreateBookingInput]] - code - frontend/src/api/public.ts
 - [[CreateBookingResult]] - code - frontend/src/api/public.ts
+- [[DateField()]] - code - frontend/src/components/calendar/DateField.tsx
+- [[DateField.tsx]] - code - frontend/src/components/calendar/DateField.tsx
 - [[FlagGB()]] - code - frontend/src/components/LanguageSwitcher.tsx
 - [[FlagPL()]] - code - frontend/src/components/LanguageSwitcher.tsx
 - [[Language]] - code - frontend/src/i18n/index.ts
@@ -29,7 +33,11 @@ members: 41
 - [[LanguageSwitcher.tsx]] - code - frontend/src/components/LanguageSwitcher.tsx
 - [[PaymentReturnPage()]] - code - frontend/src/pages/PaymentReturnPage.tsx
 - [[PaymentReturnPage.tsx]] - code - frontend/src/pages/PaymentReturnPage.tsx
+- [[PopoverField()]] - code - frontend/src/components/calendar/PopoverField.tsx
+- [[PopoverField.tsx]] - code - frontend/src/components/calendar/PopoverField.tsx
 - [[Props]] - code - frontend/src/components/BookingSchedule.tsx
+- [[Props_11]] - code - frontend/src/components/calendar/DateField.tsx
+- [[Props_15]] - code - frontend/src/components/calendar/PopoverField.tsx
 - [[PublicClosure]] - code - frontend/src/api/public.ts
 - [[PublicSchedule]] - code - frontend/src/api/public.ts
 - [[PublicScheduleDay]] - code - frontend/src/api/public.ts
@@ -38,6 +46,7 @@ members: 41
 - [[cancelBooking()]] - code - frontend/src/api/public.ts
 - [[createBooking()]] - code - frontend/src/api/public.ts
 - [[emptyContact]] - code - frontend/src/pages/BookingWizardPage.tsx
+- [[formatDate()]] - code - frontend/src/utils/dates.ts
 - [[formatZl()]] - code - frontend/src/api/admin.ts
 - [[getAvailability()]] - code - frontend/src/api/public.ts
 - [[getBooking()]] - code - frontend/src/api/public.ts
@@ -46,6 +55,7 @@ members: 41
 - [[getStoredLanguage()]] - code - frontend/src/i18n/index.ts
 - [[index.ts]] - code - frontend/src/i18n/index.ts
 - [[initiatePayment()]] - code - frontend/src/api/public.ts
+- [[main.tsx]] - code - frontend/src/main.tsx
 - [[public.ts]] - code - frontend/src/api/public.ts
 - [[setLanguage()]] - code - frontend/src/i18n/index.ts
 - [[validateMix()]] - code - frontend/src/api/public.ts
@@ -58,18 +68,18 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 8 edges to [[_COMMUNITY_useAuth]]
-- 7 edges to [[_COMMUNITY_src  utils]]
-- 6 edges to [[_COMMUNITY_ControllerBase]]
-- 3 edges to [[_COMMUNITY_src  api (1)]]
-- 2 edges to [[_COMMUNITY_Frontend Auth & API Client]]
+- 15 edges to [[_COMMUNITY_Frontend App Shell & i18n]]
+- 14 edges to [[_COMMUNITY_src  api (1)]]
+- 14 edges to [[_COMMUNITY_src  utils]]
+- 6 edges to [[_COMMUNITY_Frontend Icon Components]]
+- 4 edges to [[_COMMUNITY_Frontend Auth & API Client]]
+- 3 edges to [[_COMMUNITY_Domain & Infra Namespaces]]
+- 3 edges to [[_COMMUNITY_UsersPage.tsx]]
 - 2 edges to [[_COMMUNITY_Room Closure Management]]
-- 2 edges to [[_COMMUNITY_Frontend App Shell & i18n]]
-- 2 edges to [[_COMMUNITY_Frontend Icon Components]]
 
 ## Top bridge nodes
-- [[BookingManagePage.tsx]] - degree 16, connects to 5 communities
-- [[BookingWizardPage.tsx]] - degree 17, connects to 4 communities
-- [[BookingSchedule.tsx]] - degree 9, connects to 3 communities
+- [[App.tsx]] - degree 21, connects to 6 communities
+- [[formatDate()]] - degree 26, connects to 5 communities
+- [[BookingManagePage.tsx]] - degree 16, connects to 3 communities
 - [[public.ts]] - degree 29, connects to 2 communities
-- [[LanguageSwitcher.tsx]] - degree 13, connects to 2 communities
+- [[BookingWizardPage.tsx]] - degree 17, connects to 2 communities

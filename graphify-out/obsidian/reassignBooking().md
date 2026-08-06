@@ -2,7 +2,7 @@
 source_file: "frontend/src/api/admin.ts"
 type: "code"
 community: "ScheduleEntry"
-location: "L212"
+location: "L210"
 tags:
   - graphify/code
   - graphify/EXTRACTED

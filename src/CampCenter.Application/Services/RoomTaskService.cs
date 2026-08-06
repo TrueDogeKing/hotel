@@ -29,19 +29,8 @@ public class RoomTaskService : IRoomTaskService
         CancellationToken cancellationToken = default
     )
     {
-        var text = request.Text.Trim();
-        if (text.Length is 0 or > 1000)
-        {
-            throw new BusinessRuleViolationException("Task text must be 1–1000 characters.");
-        }
-
-        Room? room = null;
-        if (request.RoomId is { } roomId)
-        {
-            room =
-                await _rooms.GetByIdAsync(roomId, cancellationToken)
-                ?? throw new NotFoundException("Room not found.");
-        }
+        var text = NormalizeText(request.Text);
+        var room = await ResolveRoomAsync(request.RoomId, cancellationToken);
 
         var task = new RoomTask
         {
@@ -55,6 +44,25 @@ public class RoomTaskService : IRoomTaskService
         };
 
         await _tasks.AddAsync(task, cancellationToken);
+        await _tasks.SaveChangesAsync(cancellationToken);
+        return ToDto(task);
+    }
+
+    public async Task<RoomTaskDto> UpdateAsync(
+        Guid id,
+        UpdateRoomTaskRequestDto request,
+        CancellationToken cancellationToken = default
+    )
+    {
+        var text = NormalizeText(request.Text);
+        var room = await ResolveRoomAsync(request.RoomId, cancellationToken);
+
+        var task =
+            await _tasks.GetByIdAsync(id, cancellationToken)
+            ?? throw new NotFoundException("Task not found.");
+        task.Text = text;
+        task.RoomId = room?.Id;
+        task.Room = room;
         await _tasks.SaveChangesAsync(cancellationToken);
         return ToDto(task);
     }
@@ -81,6 +89,25 @@ public class RoomTaskService : IRoomTaskService
             ?? throw new NotFoundException("Task not found.");
         _tasks.Remove(task);
         await _tasks.SaveChangesAsync(cancellationToken);
+    }
+
+    private static string NormalizeText(string text)
+    {
+        var trimmed = text.Trim();
+        return trimmed.Length is 0 or > 1000
+            ? throw new BusinessRuleViolationException("Task text must be 1–1000 characters.")
+            : trimmed;
+    }
+
+    private async Task<Room?> ResolveRoomAsync(Guid? roomId, CancellationToken cancellationToken)
+    {
+        if (roomId is not { } id)
+        {
+            return null;
+        }
+
+        return await _rooms.GetByIdAsync(id, cancellationToken)
+            ?? throw new NotFoundException("Room not found.");
     }
 
     private static RoomTaskDto ToDto(RoomTask t) =>

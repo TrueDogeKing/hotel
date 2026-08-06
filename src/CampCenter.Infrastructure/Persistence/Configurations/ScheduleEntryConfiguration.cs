@@ -54,7 +54,12 @@ public class ScheduleEntryConfiguration : IEntityTypeConfiguration<ScheduleEntry
         builder.HasIndex(x => new { x.Date, x.StartTime });
 
         // A single group's programme.
-        builder.HasIndex(x => new { x.BookingId, x.Date, x.StartTime });
+        builder.HasIndex(x => new
+        {
+            x.BookingId,
+            x.Date,
+            x.StartTime,
+        });
 
         // Makes meal generation idempotent at the database level, not just via a
         // read-then-write check — P24 retries notifications, sometimes concurrently.

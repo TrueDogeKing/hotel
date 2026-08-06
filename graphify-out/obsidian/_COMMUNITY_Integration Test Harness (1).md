@@ -1,11 +1,11 @@
 ---
 type: community
-members: 41
+members: 42
 ---
 
 # Integration Test Harness (1)
 
-**Members:** 41 nodes
+**Members:** 42 nodes
 
 ## Members
 - [[.A_one_night_stay_is_an_arrival_on_one_day_and_a_departure_on_the_next()]] - code - tests/CampCenter.UnitTests/Services/HousekeepingPlannerTests.cs
@@ -24,6 +24,7 @@ members: 41
 - [[.FormatDateTime()]] - code - src/CampCenter.Application/Services/EmailTemplates.cs
 - [[.FormatZl()]] - code - src/CampCenter.Application/Services/EmailTemplates.cs
 - [[.One_group_out_and_the_next_in_is_a_single_turnaround()]] - code - tests/CampCenter.UnitTests/Services/HousekeepingPlannerTests.cs
+- [[.RemoveAssignments()]] - code - src/CampCenter.Domain/Repositories/IBookingRepository.cs
 - [[.RemoveAssignments()_1]] - code - src/CampCenter.Infrastructure/Repositories/BookingRepository.cs
 - [[.Stay()]] - code - src/CampCenter.Application/Services/EmailTemplates.cs
 - [[.The_day_before_a_departure_is_not_the_departure_day()]] - code - tests/CampCenter.UnitTests/Services/HousekeepingPlannerTests.cs
@@ -61,18 +62,18 @@ SORT file.name ASC
 - 15 edges to [[_COMMUNITY_CampCenter.Domain  Repositories (1)]]
 - 13 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (2)]]
 - 13 edges to [[_COMMUNITY_Integration Test Harness (2)]]
-- 9 edges to [[_COMMUNITY_CampCenter.Application  Services (2)]]
-- 8 edges to [[_COMMUNITY_Admin Booking & Notifications (1)]]
-- 6 edges to [[_COMMUNITY_Public Booking Service (1)]]
-- 5 edges to [[_COMMUNITY_Exception]]
+- 9 edges to [[_COMMUNITY_Admin Booking & Notifications (1)]]
+- 8 edges to [[_COMMUNITY_Public Booking Service (1)]]
+- 8 edges to [[_COMMUNITY_CampCenter.Application  Services (2)]]
 - 4 edges to [[_COMMUNITY_Admin Booking & Notifications (4)]]
+- 3 edges to [[_COMMUNITY_ClosureService_1]]
+- 3 edges to [[_COMMUNITY_Exception]]
 - 3 edges to [[_COMMUNITY_components  admin]]
 - 2 edges to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
-- 2 edges to [[_COMMUNITY_@typesreact]]
+- 2 edges to [[_COMMUNITY_BookingConfiguration]]
 - 1 edge to [[_COMMUNITY_Booking Maintenance Background Service]]
 - 1 edge to [[_COMMUNITY_SmtpEmailSender]]
 - 1 edge to [[_COMMUNITY_DTOs  Schedule (1)]]
-- 1 edge to [[_COMMUNITY_AvailabilityService]]
 - 1 edge to [[_COMMUNITY_Room Task Management (1)]]
 
 ## Top bridge nodes
@@ -80,4 +81,4 @@ SORT file.name ASC
 - [[BookingStatus_1]] - degree 10, connects to 5 communities
 - [[EmailMessage]] - degree 8, connects to 3 communities
 - [[.BookingCancelled()]] - degree 7, connects to 3 communities
-- [[.ForDay()]] - degree 16, connects to 1 community
+- [[.RemoveAssignments()]] - degree 4, connects to 3 communities

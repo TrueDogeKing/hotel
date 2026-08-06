@@ -38,6 +38,16 @@ public class TasksController : ControllerBase
         return CreatedAtAction(nameof(List), new { id = task.Id }, task);
     }
 
+    [HttpPut("{id:guid}")]
+    [ProducesResponseType(typeof(RoomTaskDto), StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    public async Task<IActionResult> Update(
+        Guid id,
+        [FromBody] UpdateRoomTaskRequestDto request,
+        CancellationToken cancellationToken
+    ) => Ok(await _tasks.UpdateAsync(id, request, cancellationToken));
+
     [HttpPost("{id:guid}/done")]
     [ProducesResponseType(typeof(RoomTaskDto), StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]

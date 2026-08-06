@@ -76,12 +76,7 @@ public class ScheduleService : IScheduleService
             );
         }
 
-        return new ScheduleCalendarDto(
-            start,
-            end,
-            [.. bookings.Select(ToCalendarDto)],
-            days
-        );
+        return new ScheduleCalendarDto(start, end, [.. bookings.Select(ToCalendarDto)], days);
     }
 
     public async Task<ScheduleDayDto> GetDayAsync(
@@ -174,8 +169,7 @@ public class ScheduleService : IScheduleService
                 location is not null
                 && other.Location is not null
                 && string.Equals(other.Location, location, StringComparison.OrdinalIgnoreCase);
-            var bothMeals =
-                kind == ScheduleEntryKind.Meal && other.Kind == ScheduleEntryKind.Meal;
+            var bothMeals = kind == ScheduleEntryKind.Meal && other.Kind == ScheduleEntryKind.Meal;
             if (!samePlace && !bothMeals)
             {
                 continue;
@@ -669,10 +663,7 @@ public class ScheduleService : IScheduleService
             // Reserving the *whole* window for an unseated group would block everyone
             // behind it for hours: a 07:00–10:00 window would push the next group to
             // 10:15 instead of seating it right behind.
-            var firstSitting = (
-                slot.StartTime,
-                slot.StartTime.AddMinutes(slot.DurationMinutes)
-            );
+            var firstSitting = (slot.StartTime, slot.StartTime.AddMinutes(slot.DurationMinutes));
             var taken = neighbours
                 .Where(n => !optedOut.Contains((n.Id, slot.Id)))
                 .Select(n =>
@@ -737,8 +728,9 @@ public class ScheduleService : IScheduleService
         // Keyed exactly like the filtered unique index, and deliberately including
         // suppressed rows — that is what stops a meal the admin deleted from
         // coming back on the next run.
-        var existing = (await _entries.ListGeneratedSlotsAsync(bookingId, cancellationToken))
-            .ToHashSet();
+        var existing = (
+            await _entries.ListGeneratedSlotsAsync(bookingId, cancellationToken)
+        ).ToHashSet();
 
         var now = DateTime.UtcNow;
         var created = new List<ScheduleEntry>();
@@ -841,9 +833,7 @@ public class ScheduleService : IScheduleService
     {
         if (date < booking.StartDate || date > booking.EndDate)
         {
-            throw new BusinessRuleViolationException(
-                "The date must fall within the group's stay."
-            );
+            throw new BusinessRuleViolationException("The date must fall within the group's stay.");
         }
     }
 

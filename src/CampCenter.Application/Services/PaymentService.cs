@@ -207,10 +207,7 @@ public class PaymentService : IPaymentService
                 );
             }
 
-            await SendSafelyAsync(
-                EmailTemplates.BookingConfirmed(booking),
-                cancellationToken
-            );
+            await SendSafelyAsync(EmailTemplates.BookingConfirmed(booking), cancellationToken);
         }
         else if (payment.Kind == PaymentKind.Deposit && booking.Status == BookingStatus.Cancelled)
         {

@@ -12,6 +12,6 @@ tags:
 
 ## Connections
 - [[.DeleteAsync()_7]] - `references` [EXTRACTED]
-- [[.UpdateAsync()_5]] - `references` [EXTRACTED]
+- [[.UpdateAsync()_6]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Room_Management

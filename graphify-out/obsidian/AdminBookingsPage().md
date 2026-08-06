@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/pages/admin/AdminBookingsPage.tsx"
 type: "code"
-community: "ScheduleEntry"
+community: "Frontend App Shell & i18n"
 location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ScheduleEntry
+  - community/Frontend_App_Shell__i18n
 ---
 
 # AdminBookingsPage()
@@ -17,4 +17,4 @@ tags:
 - [[getAdminBookings()]] - `calls` [EXTRACTED]
 - [[useAuth()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ScheduleEntry
+#graphify/code #graphify/EXTRACTED #community/Frontend_App_Shell__i18n

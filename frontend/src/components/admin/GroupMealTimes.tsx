@@ -108,7 +108,9 @@ export default function GroupMealTimes({ bookingId, onChanged }: Props) {
     // Applying a time also seeds whatever the stay was missing, so say so rather
     // than leaving the new meals to appear unannounced.
     setNotice(
-      created > 0 ? `${applied} ${t("schedule.mealTimes.alsoSeeded", { count: created })}` : applied,
+      created > 0
+        ? `${applied} ${t("schedule.mealTimes.alsoSeeded", { count: created })}`
+        : applied,
     );
   }
 
@@ -123,7 +125,9 @@ export default function GroupMealTimes({ bookingId, onChanged }: Props) {
       setClashPrompt({
         mealTime,
         groups: clashes
-          .map((c) => `${c.organizationName} (${toTimeInput(c.startTime)}–${toTimeInput(c.endTime)})`)
+          .map(
+            (c) => `${c.organizationName} (${toTimeInput(c.startTime)}–${toTimeInput(c.endTime)})`,
+          )
           .join(", "),
       });
       return;
@@ -264,36 +268,36 @@ export default function GroupMealTimes({ bookingId, onChanged }: Props) {
               </span>
 
               {canEdit && (
-              <span className="row-actions">
-                <button
-                  type="button"
-                  disabled={!changed || busyId === mealTime.mealTimeDefaultId}
-                  onClick={() => requestSave(mealTime)}
-                >
-                  {t("schedule.mealTimes.apply")}
-                </button>
-                <button
-                  type="button"
-                  disabled={busyId === mealTime.mealTimeDefaultId}
-                  onClick={() => setDeleteTarget(mealTime)}
-                  title={t("schedule.mealTimes.deleteAllHint", { label: mealTime.label })}
-                >
-                  {t("schedule.mealTimes.deleteAll")}
-                </button>
-                {mealTime.isOverridden && (
+                <span className="row-actions">
+                  <button
+                    type="button"
+                    disabled={!changed || busyId === mealTime.mealTimeDefaultId}
+                    onClick={() => requestSave(mealTime)}
+                  >
+                    {t("schedule.mealTimes.apply")}
+                  </button>
                   <button
                     type="button"
                     disabled={busyId === mealTime.mealTimeDefaultId}
-                    onClick={() => void reset(mealTime)}
-                    title={t("schedule.mealTimes.resetHint", {
-                      start: toTimeInput(mealTime.defaultStartTime),
-                      end: toTimeInput(mealTime.defaultEndTime),
-                    })}
+                    onClick={() => setDeleteTarget(mealTime)}
+                    title={t("schedule.mealTimes.deleteAllHint", { label: mealTime.label })}
                   >
-                    {t("schedule.mealTimes.reset")}
+                    {t("schedule.mealTimes.deleteAll")}
                   </button>
-                )}
-              </span>
+                  {mealTime.isOverridden && (
+                    <button
+                      type="button"
+                      disabled={busyId === mealTime.mealTimeDefaultId}
+                      onClick={() => void reset(mealTime)}
+                      title={t("schedule.mealTimes.resetHint", {
+                        start: toTimeInput(mealTime.defaultStartTime),
+                        end: toTimeInput(mealTime.defaultEndTime),
+                      })}
+                    >
+                      {t("schedule.mealTimes.reset")}
+                    </button>
+                  )}
+                </span>
               )}
             </li>
           );

@@ -40,8 +40,8 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 3 edges to [[_COMMUNITY_Admin Booking & Notifications (1)]]
-- 2 edges to [[_COMMUNITY_Exception]]
-- 2 edges to [[_COMMUNITY_Room Management]]
+- 2 edges to [[_COMMUNITY_ClosureService_1]]
+- 2 edges to [[_COMMUNITY_useAuth]]
 - 2 edges to [[_COMMUNITY_Public Booking Service (1)]]
 
 ## Top bridge nodes

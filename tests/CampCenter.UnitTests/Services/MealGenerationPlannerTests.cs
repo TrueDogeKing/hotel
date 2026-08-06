@@ -40,7 +40,8 @@ public class MealGenerationPlannerTests
         var start = new DateOnly(2033, 5, 1);
         var end = new DateOnly(2033, 5, 6); // 5 nights, 6 schedule days
 
-        var plan = MealGenerationPlanner.Plan(start, end, slots, ArrivalFrom, DepartureUntil)
+        var plan = MealGenerationPlanner
+            .Plan(start, end, slots, ArrivalFrom, DepartureUntil)
             .ToList();
 
         // Arrival day: only the dinner slot starts after 15:00.
@@ -99,7 +100,8 @@ public class MealGenerationPlannerTests
         var start = new DateOnly(2033, 5, 1);
         var end = new DateOnly(2033, 5, 4);
 
-        var plan = MealGenerationPlanner.Plan(start, end, slots, ArrivalFrom, DepartureUntil)
+        var plan = MealGenerationPlanner
+            .Plan(start, end, slots, ArrivalFrom, DepartureUntil)
             .ToList();
 
         Assert.Equal(2, plan.Count);

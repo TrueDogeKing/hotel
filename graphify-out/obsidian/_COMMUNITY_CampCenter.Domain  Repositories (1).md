@@ -1,11 +1,11 @@
 ---
 type: community
-members: 32
+members: 34
 ---
 
 # CampCenter.Domain / Repositories (1)
 
-**Members:** 32 nodes
+**Members:** 34 nodes
 
 ## Members
 - [[.AddAssignmentAsync()_1]] - code - src/CampCenter.Infrastructure/Repositories/BookingRepository.cs
@@ -28,6 +28,8 @@ members: 32
 - [[.ListLivePresentInAsync()_1]] - code - src/CampCenter.Infrastructure/Repositories/BookingRepository.cs
 - [[.ListUpcomingAsync()_1]] - code - src/CampCenter.Infrastructure/Repositories/BookingRepository.cs
 - [[.SaveChangesAsync()_12]] - code - src/CampCenter.Infrastructure/Repositories/BookingRepository.cs
+- [[BookingGroupCategory_1]] - code - src/CampCenter.Domain/Entities/BookingGroupCategory.cs
+- [[BookingGroupCategory.cs]] - code - src/CampCenter.Domain/Entities/BookingGroupCategory.cs
 - [[BookingRepository]] - code - src/CampCenter.Infrastructure/Repositories/BookingRepository.cs
 - [[CancellationToken_58]] - code
 - [[DateOnly_26]] - code
@@ -51,12 +53,14 @@ SORT file.name ASC
 ## Connections to other communities
 - 15 edges to [[_COMMUNITY_Integration Test Harness (1)]]
 - 8 edges to [[_COMMUNITY_components  admin]]
+- 2 edges to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
+- 2 edges to [[_COMMUNITY_Exception]]
 - 2 edges to [[_COMMUNITY_Integration Test Harness (2)]]
-- 1 edge to [[_COMMUNITY_Public Booking Service (2)]]
+- 1 edge to [[_COMMUNITY_Admin Booking & Notifications (1)]]
 
 ## Top bridge nodes
 - [[BookingRepository]] - degree 27, connects to 4 communities
-- [[.ListByCategoryAsync()_1]] - degree 9, connects to 2 communities
+- [[BookingGroupCategory_1]] - degree 6, connects to 3 communities
+- [[.ListByCategoryAsync()_1]] - degree 9, connects to 1 community
 - [[.GetCompletedPaymentKindsAsync()_1]] - degree 8, connects to 1 community
 - [[.AddAsync()_12]] - degree 6, connects to 1 community
-- [[.ListAsync()_10]] - degree 6, connects to 1 community

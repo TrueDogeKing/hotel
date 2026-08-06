@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Repositories/RoomTaskRepository.cs"
 type: "code"
-community: "Public Booking Service (2)"
+community: "Exception"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public_Booking_Service_2
+  - community/Exception
 ---
 
 # RoomTaskRepository.cs
@@ -18,4 +18,4 @@ tags:
 - [[CampCenter.Infrastructure.Repositories]] - `contains` [EXTRACTED]
 - [[RoomTaskRepository]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_2
+#graphify/code #graphify/EXTRACTED #community/Exception

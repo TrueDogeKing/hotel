@@ -27,7 +27,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_Public Booking Service (2)]]
+- 2 edges to [[_COMMUNITY_Exception]]
 - 1 edge to [[_COMMUNITY_EF Core Migrations (1)]]
 - 1 edge to [[_COMMUNITY_EF Core Migrations (4)]]
 - 1 edge to [[_COMMUNITY_EF Core Migrations (2)]]

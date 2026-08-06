@@ -1,18 +1,30 @@
 ---
 type: community
-members: 5
+members: 17
 ---
 
 # Admin User & Token Config
 
-**Members:** 5 nodes
+**Members:** 17 nodes
 
 ## Members
-- [[.AddApplication()]] - code - src/CampCenter.Application/DependencyInjection.cs
-- [[CampCenter.Application]] - code - src/CampCenter.Application/DependencyInjection.cs
-- [[DependencyInjection]] - code - src/CampCenter.Application/DependencyInjection.cs
-- [[DependencyInjection.cs]] - code - src/CampCenter.Application/DependencyInjection.cs
-- [[IServiceCollection]] - code
+- [[.CreateAsync()_13]] - code - src/CampCenter.Application/Services/UserService.cs
+- [[.DeleteAsync()_9]] - code - src/CampCenter.Application/Services/UserService.cs
+- [[.GetOrThrowAsync()_3]] - code - src/CampCenter.Application/Services/UserService.cs
+- [[.GuardLastAdministratorAsync()]] - code - src/CampCenter.Application/Services/UserService.cs
+- [[.Hash()]] - code - src/CampCenter.Application/Interfaces/IPasswordHasher.cs
+- [[.ListAsync()_5]] - code - src/CampCenter.Application/Services/UserService.cs
+- [[.ParseRole()]] - code - src/CampCenter.Application/Services/UserService.cs
+- [[.SaveChangesAsync()]] - code - src/CampCenter.Domain/Repositories/IAdminUserRepository.cs
+- [[.SetPasswordAsync()_1]] - code - src/CampCenter.Application/Services/UserService.cs
+- [[.SetRoleAsync()_1]] - code - src/CampCenter.Application/Services/UserService.cs
+- [[.ToDto()_6]] - code - src/CampCenter.Application/Services/UserService.cs
+- [[AdminUserDto]] - code - src/CampCenter.Application/DTOs/Users/UserDtos.cs
+- [[CancellationToken_42]] - code
+- [[Guid_27]] - code
+- [[List_18]] - code
+- [[Task_42]] - code
+- [[UserService]] - code - src/CampCenter.Application/Services/UserService.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -22,10 +34,17 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_Public Booking Service (2)]]
+- 13 edges to [[_COMMUNITY_Booking Persistence & Entities (1)]]
+- 6 edges to [[_COMMUNITY_ControllerBase]]
+- 6 edges to [[_COMMUNITY_Auth Service & Tokens]]
+- 3 edges to [[_COMMUNITY_UserValidators.cs]]
+- 1 edge to [[_COMMUNITY_eslint_1]]
+- 1 edge to [[_COMMUNITY_tests  CampCenter.IntegrationTests (1)]]
 - 1 edge to [[_COMMUNITY_Exception]]
-- 1 edge to [[_COMMUNITY_Application Namespaces & DTOs]]
 
 ## Top bridge nodes
-- [[DependencyInjection.cs]] - degree 4, connects to 2 communities
-- [[CampCenter.Application]] - degree 2, connects to 1 community
+- [[UserService]] - degree 14, connects to 4 communities
+- [[.CreateAsync()_13]] - degree 13, connects to 3 communities
+- [[AdminUserDto]] - degree 11, connects to 3 communities
+- [[.SetRoleAsync()_1]] - degree 12, connects to 2 communities
+- [[.SetPasswordAsync()_1]] - degree 11, connects to 2 communities

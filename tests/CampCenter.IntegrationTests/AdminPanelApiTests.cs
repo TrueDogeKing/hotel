@@ -53,9 +53,7 @@ public class AdminPanelApiTests : IntegrationTestBase
         Assert.Equal(HttpStatusCode.Created, create.StatusCode);
 
         // Occupancy grid over the stay: two AP rooms occupied (7 + 6 people), one free.
-        var occupancy = (
-            await admin.GetFromJsonAsync<OccupancyDto>(OccupancyUrl(start, end))
-        )!;
+        var occupancy = (await admin.GetFromJsonAsync<OccupancyDto>(OccupancyUrl(start, end)))!;
         var apRooms = occupancy.Rooms.Where(r => roomIds.Contains(r.RoomId)).ToList();
         Assert.Equal(2, apRooms.Count(r => r.BookingId is not null));
         Assert.Equal(13, apRooms.Sum(r => r.PeopleCount ?? 0));
@@ -106,6 +104,27 @@ public class AdminPanelApiTests : IntegrationTestBase
 
         occupancy = (await admin.GetFromJsonAsync<OccupancyDto>(OccupancyUrl(start, end)))!;
         Assert.Equal(1, occupancy.Rooms.Single(r => r.RoomId == roomIds[0]).OpenTaskCount);
+
+        // Editing rewrites the text and moves the task to another room.
+        var edit = await admin.PutAsJsonAsync(
+            $"/api/admin/tasks/{task.Id}",
+            new UpdateRoomTaskRequestDto(roomIds[1], "Dostawka — 2 łóżka")
+        );
+        Assert.Equal(HttpStatusCode.OK, edit.StatusCode);
+        var edited = (await edit.Content.ReadFromJsonAsync<RoomTaskDto>())!;
+        Assert.Equal("Dostawka — 2 łóżka", edited.Text);
+        Assert.Equal(roomIds[1], edited.RoomId);
+
+        occupancy = (await admin.GetFromJsonAsync<OccupancyDto>(OccupancyUrl(start, end)))!;
+        Assert.Equal(0, occupancy.Rooms.Single(r => r.RoomId == roomIds[0]).OpenTaskCount);
+        Assert.Equal(1, occupancy.Rooms.Single(r => r.RoomId == roomIds[1]).OpenTaskCount);
+
+        // Blank text is rejected.
+        var badEdit = await admin.PutAsJsonAsync(
+            $"/api/admin/tasks/{task.Id}",
+            new UpdateRoomTaskRequestDto(roomIds[1], "   ")
+        );
+        Assert.Equal(HttpStatusCode.BadRequest, badEdit.StatusCode);
 
         var done = await admin.PostAsync($"/api/admin/tasks/{task.Id}/done", null);
         Assert.Equal(HttpStatusCode.OK, done.StatusCode);

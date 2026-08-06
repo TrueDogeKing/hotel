@@ -23,8 +23,9 @@ public class ClosureService : IClosureService
         _bookings = bookings;
     }
 
-    public async Task<List<ClosureDto>> GetAllAsync(CancellationToken cancellationToken = default) =>
-        (await _closures.GetAllAsync(cancellationToken)).Select(ToDto).ToList();
+    public async Task<List<ClosureDto>> GetAllAsync(
+        CancellationToken cancellationToken = default
+    ) => (await _closures.GetAllAsync(cancellationToken)).Select(ToDto).ToList();
 
     public async Task<ClosureDto> CreateAsync(
         CreateClosureRequestDto request,
@@ -121,8 +122,9 @@ public class ClosureService : IClosureService
             cancellationToken
         );
 
-        var conflict =
-            roomId is null ? bookedRoomIds.Count > 0 : bookedRoomIds.Contains(roomId.Value);
+        var conflict = roomId is null
+            ? bookedRoomIds.Count > 0
+            : bookedRoomIds.Contains(roomId.Value);
         if (conflict)
         {
             throw new BusinessRuleViolationException(

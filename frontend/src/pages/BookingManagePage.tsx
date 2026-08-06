@@ -91,8 +91,7 @@ export default function BookingManagePage() {
           <>
             {justCreated && <p className="manage-banner">{t("manage.created")}</p>}
             <h1>
-              {formatDate(booking.startDate)} –{" "}
-              {formatDate(booking.endDate)}
+              {formatDate(booking.startDate)} – {formatDate(booking.endDate)}
             </h1>
             <p className={`status-badge status-${booking.status.toLowerCase()}`}>
               {t(`manage.statuses.${booking.status}`)}
@@ -101,8 +100,7 @@ export default function BookingManagePage() {
             <dl className="summary-list">
               <dt>{t("manage.dates")}</dt>
               <dd>
-                {formatDate(booking.startDate)} –{" "}
-                {formatDate(booking.endDate)}
+                {formatDate(booking.startDate)} – {formatDate(booking.endDate)}
               </dd>
               <dt>{t("manage.organization")}</dt>
               <dd>{booking.organizationName}</dd>

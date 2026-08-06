@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Booking Persistence & Entities (1)"
+community: "Admin User & Token Config"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Booking_Persistence__Entities_1
+  - community/Admin_User__Token_Config
 ---
 
 # Guid
@@ -19,4 +19,4 @@ tags:
 - [[.SetRoleAsync()_1]] - `references` [EXTRACTED]
 - [[.ToDto()_6]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Booking_Persistence__Entities_1
+#graphify/code #graphify/EXTRACTED #community/Admin_User__Token_Config

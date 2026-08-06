@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Api/Controllers/Admin/UsersController.cs"
 type: "code"
-community: "Booking Persistence & Entities (1)"
+community: "ControllerBase"
 location: "L18"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Booking_Persistence__Entities_1
+  - community/ControllerBase
 ---
 
 # UsersController
@@ -23,4 +23,4 @@ tags:
 - [[IValidator_5]] - `references` [EXTRACTED]
 - [[UsersController.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Booking_Persistence__Entities_1
+#graphify/code #graphify/EXTRACTED #community/ControllerBase

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "DTOs / Schedule (1)"
+community: "ScheduleRules"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DTOs_/_Schedule_1
+  - community/ScheduleRules
 ---
 
 # string
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[ScheduleRules]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DTOs_/_Schedule_1
+#graphify/code #graphify/EXTRACTED #community/ScheduleRules

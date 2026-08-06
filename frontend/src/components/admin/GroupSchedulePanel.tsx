@@ -51,9 +51,7 @@ interface Props {
 function overlaps(entry: ScheduleEntry, others: ScheduleEntry[]): boolean {
   return others.some(
     (other) =>
-      other.id !== entry.id &&
-      other.startTime < entry.endTime &&
-      entry.startTime < other.endTime,
+      other.id !== entry.id && other.startTime < entry.endTime && entry.startTime < other.endTime,
   );
 }
 
@@ -105,9 +103,7 @@ export default function GroupSchedulePanel({
   useEffect(() => {
     if (!schedule || announcedFor.current === schedule.bookingId) return;
     announcedFor.current = schedule.bookingId;
-    const target = focusDateRef.current
-      ? dayRefs.current.get(focusDateRef.current)
-      : null;
+    const target = focusDateRef.current ? dayRefs.current.get(focusDateRef.current) : null;
     if (target) {
       scrollPanelIntoView(target);
     } else {
@@ -142,9 +138,12 @@ export default function GroupSchedulePanel({
   // field a plain text input rather than blocking the panel.
   useEffect(() => {
     let cancelled = false;
-    void getScheduleLocations().then((data) => {
-      if (!cancelled) setLocations(data);
-    }, () => {});
+    void getScheduleLocations().then(
+      (data) => {
+        if (!cancelled) setLocations(data);
+      },
+      () => {},
+    );
     return () => {
       cancelled = true;
     };

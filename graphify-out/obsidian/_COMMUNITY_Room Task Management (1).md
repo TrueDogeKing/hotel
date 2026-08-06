@@ -1,11 +1,11 @@
 ---
 type: community
-members: 65
+members: 73
 ---
 
 # Room Task Management (1)
 
-**Members:** 65 nodes
+**Members:** 73 nodes
 
 ## Members
 - [[.AddAsync()_8]] - code - src/CampCenter.Domain/Repositories/IRoomTaskRepository.cs
@@ -28,19 +28,25 @@ members: 65
 - [[.ListAsync()_4]] - code - src/CampCenter.Application/Services/RoomTaskService.cs
 - [[.ListAsync()_8]] - code - src/CampCenter.Domain/Repositories/IRoomTaskRepository.cs
 - [[.ListAsync()_11]] - code - src/CampCenter.Infrastructure/Repositories/RoomTaskRepository.cs
+- [[.NormalizeText()]] - code - src/CampCenter.Application/Services/RoomTaskService.cs
 - [[.Remove()_5]] - code - src/CampCenter.Domain/Repositories/IRoomTaskRepository.cs
 - [[.Remove()_12]] - code - src/CampCenter.Infrastructure/Repositories/RoomTaskRepository.cs
 - [[.Reopen()]] - code - src/CampCenter.Api/Controllers/Admin/TasksController.cs
+- [[.ResolveRoomAsync()]] - code - src/CampCenter.Application/Services/RoomTaskService.cs
 - [[.SaveChangesAsync()_8]] - code - src/CampCenter.Domain/Repositories/IRoomTaskRepository.cs
 - [[.SaveChangesAsync()_18]] - code - src/CampCenter.Infrastructure/Repositories/RoomTaskRepository.cs
 - [[.SetStatusAsync()_2]] - code - src/CampCenter.Application/Interfaces/IRoomTaskService.cs
 - [[.SetStatusAsync()_5]] - code - src/CampCenter.Application/Services/RoomTaskService.cs
 - [[.ToDto()_4]] - code - src/CampCenter.Application/Services/RoomTaskService.cs
+- [[.Update()_3]] - code - src/CampCenter.Api/Controllers/Admin/TasksController.cs
+- [[.UpdateAsync()_3]] - code - src/CampCenter.Application/Interfaces/IRoomTaskService.cs
+- [[.UpdateAsync()_7]] - code - src/CampCenter.Application/Services/RoomTaskService.cs
 - [[CancellationToken_9]] - code
 - [[CancellationToken_28]] - code
 - [[CancellationToken_40]] - code
 - [[CancellationToken_51]] - code
 - [[CancellationToken_64]] - code
+- [[CreateRoomTaskRequestDto]] - code - src/CampCenter.Application/DTOs/AdminPanel/AdminPanelDtos.cs
 - [[DateTime_12]] - code
 - [[Dictionary_5]] - code
 - [[Dictionary_8]] - code
@@ -53,6 +59,7 @@ members: 65
 - [[HttpDelete_4]] - code
 - [[HttpGet_8]] - code
 - [[HttpPost_5]] - code
+- [[HttpPut_6]] - code
 - [[IActionResult_8]] - code
 - [[IRoomTaskRepository]] - code - src/CampCenter.Domain/Repositories/IRoomTaskRepository.cs
 - [[IRoomTaskService]] - code - src/CampCenter.Application/Interfaces/IRoomTaskService.cs
@@ -73,6 +80,7 @@ members: 65
 - [[Task_51]] - code
 - [[Task_64]] - code
 - [[TasksController]] - code - src/CampCenter.Api/Controllers/Admin/TasksController.cs
+- [[UpdateRoomTaskRequestDto]] - code - src/CampCenter.Application/DTOs/AdminPanel/AdminPanelDtos.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -82,21 +90,20 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
+- 4 edges to [[_COMMUNITY_Room Management]]
+- 3 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
+- 3 edges to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
 - 3 edges to [[_COMMUNITY_Admin Booking & Notifications (1)]]
 - 3 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (2)]]
 - 3 edges to [[_COMMUNITY_Exception]]
-- 3 edges to [[_COMMUNITY_Room Management]]
-- 2 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
 - 2 edges to [[_COMMUNITY_components  admin]]
-- 2 edges to [[_COMMUNITY_@typesreact]]
-- 1 edge to [[_COMMUNITY_Admin Booking & Notifications (2)]]
+- 2 edges to [[_COMMUNITY_RoomTaskConfiguration]]
+- 1 edge to [[_COMMUNITY_AvailabilityService]]
 - 1 edge to [[_COMMUNITY_Integration Test Harness (1)]]
-- 1 edge to [[_COMMUNITY_Public Booking Service (2)]]
 
 ## Top bridge nodes
 - [[RoomTask_1]] - degree 18, connects to 4 communities
 - [[IRoomTaskRepository]] - degree 13, connects to 3 communities
-- [[.CreateAsync()_12]] - degree 10, connects to 2 communities
+- [[RoomTaskService]] - degree 12, connects to 2 communities
 - [[RoomTaskRepository]] - degree 10, connects to 2 communities
-- [[RoomTaskService]] - degree 9, connects to 2 communities
+- [[TasksController]] - degree 9, connects to 2 communities

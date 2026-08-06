@@ -19,6 +19,8 @@ tags:
 - [[.SetStatusAsync()_2]] - `references` [EXTRACTED]
 - [[.SetStatusAsync()_5]] - `references` [EXTRACTED]
 - [[.ToDto()_4]] - `references` [EXTRACTED]
+- [[.UpdateAsync()_3]] - `references` [EXTRACTED]
+- [[.UpdateAsync()_7]] - `references` [EXTRACTED]
 - [[AdminPanelDtos.cs]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Room_Task_Management_1

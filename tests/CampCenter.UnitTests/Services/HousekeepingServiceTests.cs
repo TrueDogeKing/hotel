@@ -16,8 +16,7 @@ public class HousekeepingServiceTests
 
     private readonly IBookingRepository _bookings = Substitute.For<IBookingRepository>();
     private readonly IRoomRepository _rooms = Substitute.For<IRoomRepository>();
-    private readonly IRoomCleaningRepository _cleanings =
-        Substitute.For<IRoomCleaningRepository>();
+    private readonly IRoomCleaningRepository _cleanings = Substitute.For<IRoomCleaningRepository>();
     private readonly IRoomTaskRepository _tasks = Substitute.For<IRoomTaskRepository>();
     private readonly IClosureRepository _closures = Substitute.For<IClosureRepository>();
     private readonly HousekeepingService _service;
@@ -27,11 +26,13 @@ public class HousekeepingServiceTests
         _service = new HousekeepingService(_bookings, _rooms, _cleanings, _tasks, _closures);
         _tasks.CountOpenByRoomAsync(Arg.Any<CancellationToken>()).Returns([]);
         _closures
-            .GetOverlappingAsync(Arg.Any<DateOnly>(), Arg.Any<DateOnly>(), Arg.Any<CancellationToken>())
+            .GetOverlappingAsync(
+                Arg.Any<DateOnly>(),
+                Arg.Any<DateOnly>(),
+                Arg.Any<CancellationToken>()
+            )
             .Returns([]);
-        _cleanings
-            .ListForDateAsync(Arg.Any<DateOnly>(), Arg.Any<CancellationToken>())
-            .Returns([]);
+        _cleanings.ListForDateAsync(Arg.Any<DateOnly>(), Arg.Any<CancellationToken>()).Returns([]);
     }
 
     private static Room Room(string number, int capacity = 4) =>
@@ -78,7 +79,11 @@ public class HousekeepingServiceTests
     {
         _rooms.GetAllAsync(Arg.Any<CancellationToken>()).Returns([.. rooms]);
         _bookings
-            .ListLiveChangingOverAsync(Arg.Any<DateOnly>(), Arg.Any<DateOnly>(), Arg.Any<CancellationToken>())
+            .ListLiveChangingOverAsync(
+                Arg.Any<DateOnly>(),
+                Arg.Any<DateOnly>(),
+                Arg.Any<CancellationToken>()
+            )
             .Returns([.. bookings]);
     }
 
@@ -121,20 +126,18 @@ public class HousekeepingServiceTests
         Setup([room], Booking("Wychodzi", Day.AddDays(-2), Day, room));
         _cleanings
             .ListForDateAsync(Day, Arg.Any<CancellationToken>())
-            .Returns(
-                [
-                    new RoomCleaning
-                    {
-                        Id = Guid.NewGuid(),
-                        RoomId = room.Id,
-                        Date = Day,
-                        Kind = RoomCleaningKind.Departure,
-                        Status = RoomCleaningStatus.Done,
-                        Note = "Zbita szyba",
-                        DoneAt = new DateTime(2033, 5, 10, 9, 30, 0, DateTimeKind.Utc),
-                    },
-                ]
-            );
+            .Returns([
+                new RoomCleaning
+                {
+                    Id = Guid.NewGuid(),
+                    RoomId = room.Id,
+                    Date = Day,
+                    Kind = RoomCleaningKind.Departure,
+                    Status = RoomCleaningStatus.Done,
+                    Note = "Zbita szyba",
+                    DoneAt = new DateTime(2033, 5, 10, 9, 30, 0, DateTimeKind.Utc),
+                },
+            ]);
 
         var day = await _service.GetDayAsync(Day);
 
@@ -168,7 +171,9 @@ public class HousekeepingServiceTests
     {
         var room = Room("10");
         Setup([room], Booking("Wychodzi", Day.AddDays(-2), Day, room));
-        _cleanings.GetAsync(room.Id, Day, Arg.Any<CancellationToken>()).Returns((RoomCleaning?)null);
+        _cleanings
+            .GetAsync(room.Id, Day, Arg.Any<CancellationToken>())
+            .Returns((RoomCleaning?)null);
 
         RoomCleaning? added = null;
         await _cleanings.AddAsync(
@@ -176,7 +181,12 @@ public class HousekeepingServiceTests
             Arg.Any<CancellationToken>()
         );
 
-        await _service.SetStatusAsync(room.Id, Day, new SetRoomCleaningRequestDto("Done", " ok "), AdminId);
+        await _service.SetStatusAsync(
+            room.Id,
+            Day,
+            new SetRoomCleaningRequestDto("Done", " ok "),
+            AdminId
+        );
 
         Assert.NotNull(added);
         Assert.Equal(RoomCleaningStatus.Done, added!.Status);
@@ -203,7 +213,12 @@ public class HousekeepingServiceTests
         };
         _cleanings.GetAsync(room.Id, Day, Arg.Any<CancellationToken>()).Returns(existing);
 
-        await _service.SetStatusAsync(room.Id, Day, new SetRoomCleaningRequestDto("Pending", null), AdminId);
+        await _service.SetStatusAsync(
+            room.Id,
+            Day,
+            new SetRoomCleaningRequestDto("Pending", null),
+            AdminId
+        );
 
         Assert.Equal(RoomCleaningStatus.Pending, existing.Status);
         Assert.Null(existing.DoneAt);
@@ -221,7 +236,12 @@ public class HousekeepingServiceTests
         // A page left open while the booking moved must not write progress nobody will
         // ever see again — the list is derived, so such a row would be invisible.
         await Assert.ThrowsAsync<BusinessRuleViolationException>(() =>
-            _service.SetStatusAsync(idle.Id, Day, new SetRoomCleaningRequestDto("Done", null), AdminId)
+            _service.SetStatusAsync(
+                idle.Id,
+                Day,
+                new SetRoomCleaningRequestDto("Done", null),
+                AdminId
+            )
         );
         await _cleanings.DidNotReceive().SaveChangesAsync(Arg.Any<CancellationToken>());
     }
@@ -233,7 +253,12 @@ public class HousekeepingServiceTests
         Setup([room], Booking("Wychodzi", Day.AddDays(-2), Day, room));
 
         await Assert.ThrowsAsync<BusinessRuleViolationException>(() =>
-            _service.SetStatusAsync(room.Id, Day, new SetRoomCleaningRequestDto("Sparkling", null), AdminId)
+            _service.SetStatusAsync(
+                room.Id,
+                Day,
+                new SetRoomCleaningRequestDto("Sparkling", null),
+                AdminId
+            )
         );
     }
 
@@ -249,7 +274,11 @@ public class HousekeepingServiceTests
             Booking("Wchodzi", Day.AddDays(1), Day.AddDays(4), other)
         );
         _cleanings
-            .CountDoneByDateAsync(Arg.Any<DateOnly>(), Arg.Any<DateOnly>(), Arg.Any<CancellationToken>())
+            .CountDoneByDateAsync(
+                Arg.Any<DateOnly>(),
+                Arg.Any<DateOnly>(),
+                Arg.Any<CancellationToken>()
+            )
             .Returns(new Dictionary<DateOnly, int> { [Day] = 1 });
 
         var range = await _service.GetRangeAsync(Day, Day.AddDays(2));

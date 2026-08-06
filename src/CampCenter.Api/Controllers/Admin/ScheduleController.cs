@@ -99,11 +99,7 @@ public class ScheduleController : ControllerBase
         }
 
         var entry = await _schedule.CreateEntryAsync(request, cancellationToken);
-        return CreatedAtAction(
-            nameof(GetForBooking),
-            new { bookingId = entry.BookingId },
-            entry
-        );
+        return CreatedAtAction(nameof(GetForBooking), new { bookingId = entry.BookingId }, entry);
     }
 
     [HttpPut("entries/{id:guid}")]

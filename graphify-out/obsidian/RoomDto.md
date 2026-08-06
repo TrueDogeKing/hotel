@@ -18,7 +18,7 @@ tags:
 - [[.GetAllAsync()_5]] - `references` [EXTRACTED]
 - [[.ToDto()_3]] - `references` [EXTRACTED]
 - [[.UpdateAsync()_2]] - `references` [EXTRACTED]
-- [[.UpdateAsync()_5]] - `references` [EXTRACTED]
+- [[.UpdateAsync()_6]] - `references` [EXTRACTED]
 - [[RoomDtos.cs]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Room_Management

@@ -110,8 +110,7 @@ export default function AdminBookingsPage() {
               >
                 <td>{booking.organizationName}</td>
                 <td>
-                  {formatDate(booking.startDate)} –{" "}
-                  {formatDate(booking.endDate)}
+                  {formatDate(booking.startDate)} – {formatDate(booking.endDate)}
                 </td>
                 <td>{booking.headcount}</td>
                 <td className="row-actions">
@@ -136,18 +135,17 @@ export default function AdminBookingsPage() {
                     t(`adminBookings.statuses.${booking.status}`)
                   )}
                   {canEdit &&
-                    (booking.status === "PendingDeposit" ||
-                      booking.status === "Confirmed") && (
-                    <button
-                      type="button"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        setCancelTarget(booking);
-                      }}
-                    >
-                      {t("adminBookings.cancel")}
-                    </button>
-                  )}
+                    (booking.status === "PendingDeposit" || booking.status === "Confirmed") && (
+                      <button
+                        type="button"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setCancelTarget(booking);
+                        }}
+                      >
+                        {t("adminBookings.cancel")}
+                      </button>
+                    )}
                 </td>
               </tr>
               {expanded === booking.id && (

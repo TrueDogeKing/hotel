@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Interfaces/IUserService.cs"
 type: "code"
-community: "Booking Persistence & Entities (1)"
+community: "ControllerBase"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Booking_Persistence__Entities_1
+  - community/ControllerBase
 ---
 
 # IUserService
@@ -21,4 +21,4 @@ tags:
 - [[UserService]] - `implements` [EXTRACTED]
 - [[UsersController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Booking_Persistence__Entities_1
+#graphify/code #graphify/EXTRACTED #community/ControllerBase

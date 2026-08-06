@@ -143,8 +143,7 @@ export default function RangeCalendar({
   }
 
   const weekdays = shortWeekdays(i18n.language);
-  const selectedNights =
-    startDate && endDate ? dayNumber(endDate) - dayNumber(startDate) : 0;
+  const selectedNights = startDate && endDate ? dayNumber(endDate) - dayNumber(startDate) : 0;
 
   return (
     <div className={`range-cal${loading ? " loading" : ""}`}>

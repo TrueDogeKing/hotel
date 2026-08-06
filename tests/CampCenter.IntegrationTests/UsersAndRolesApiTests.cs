@@ -113,9 +113,9 @@ public class UsersAndRolesApiTests : IntegrationTestBase
 
         // Whether demoting the caller is refused depends on how many administrators
         // exist, so assert against that rather than assuming a fresh database.
-        var administrators = (await admin.GetFromJsonAsync<List<AdminUserDto>>(
-            "/api/admin/users"
-        ))!.Count(u => u.Role == "Administrator");
+        var administrators = (
+            await admin.GetFromJsonAsync<List<AdminUserDto>>("/api/admin/users")
+        )!.Count(u => u.Role == "Administrator");
         var demoteSelf = await admin.PutAsJsonAsync(
             $"/api/admin/users/{me.Id}/role",
             new SetUserRoleRequestDto("Worker")
@@ -194,7 +194,16 @@ public class UsersAndRolesApiTests : IntegrationTestBase
                 )
             ),
             ("DELETE", $"/api/admin/schedule/entries/{Guid.NewGuid()}", null),
-            ("POST", "/api/admin/rooms", new { Number = "W-1", Capacity = 4, Description = (string?)null }),
+            (
+                "POST",
+                "/api/admin/rooms",
+                new
+                {
+                    Number = "W-1",
+                    Capacity = 4,
+                    Description = (string?)null,
+                }
+            ),
             ("DELETE", $"/api/admin/rooms/{Guid.NewGuid()}", null),
             ("DELETE", $"/api/admin/closures/{Guid.NewGuid()}", null),
             ("DELETE", $"/api/admin/tasks/{Guid.NewGuid()}", null),

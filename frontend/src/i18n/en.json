@@ -1,6 +1,6 @@
 {
   "common": {
-    "appName": "CampCenter",
+    "appName": "Alga",
     "loading": "Loading…"
   },
   "roles": {
@@ -77,11 +77,11 @@
       }
     },
     "contactTitle": "Get in touch",
-    "contactLead": "Have questions about hosting your group at CampCenter? Our team is ready to help you plan the perfect stay.",
-    "contactAddress": "CampCenter, Jeziorna 1, 11-111 Nadjeziorze, Poland",
+    "contactLead": "Have questions about hosting your group at Alga? Our team is ready to help you plan the perfect stay.",
+    "contactAddress": "Alga, Jeziorna 1, 11-111 Nadjeziorze, Poland",
     "contactPhone": "+48 000 000 000",
-    "contactEmail": "rezerwacje@campcenter.pl",
-    "rights": "© 2026 CampCenter. All rights reserved."
+    "contactEmail": "rezerwacje@alga.pl",
+    "rights": "© 2026 Alga. All rights reserved."
   },
   "login": {
     "title": "Admin sign-in",
@@ -319,6 +319,10 @@
     "textPlaceholder": "e.g. extra bed",
     "add": "Add task",
     "addError": "Failed to add the task.",
+    "edit": "Edit",
+    "save": "Save",
+    "cancel": "Cancel",
+    "editError": "Failed to save the task.",
     "delete": "Delete"
   },
   "housekeeping": {

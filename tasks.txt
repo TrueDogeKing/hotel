@@ -5,3 +5,6 @@ Drukowanie dnia i pokoi do sprzątania
 dodanie aktywności z tabelki godzinowej
 
 pomieszczenia aktywności do dodania jak basen,kręgle,dyskoteka do wybrania z listy gdy aktywności + opcja inne
+
+Opinia: sprawdzenie obłożenia można klikać jak ośrodek pełen
+dodać edytowanie zadań

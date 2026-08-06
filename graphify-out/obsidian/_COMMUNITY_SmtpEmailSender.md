@@ -29,7 +29,7 @@ SORT file.name ASC
 - 1 edge to [[_COMMUNITY_Application Namespaces & DTOs]]
 - 1 edge to [[_COMMUNITY_Integration Test Harness (1)]]
 - 1 edge to [[_COMMUNITY_Admin Booking & Notifications (4)]]
-- 1 edge to [[_COMMUNITY_Public Booking Service (2)]]
+- 1 edge to [[_COMMUNITY_Exception]]
 
 ## Top bridge nodes
 - [[SmtpEmailSender]] - degree 4, connects to 1 community

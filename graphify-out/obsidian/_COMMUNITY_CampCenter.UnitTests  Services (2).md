@@ -1,11 +1,11 @@
 ---
 type: community
-members: 93
+members: 89
 ---
 
 # CampCenter.UnitTests / Services (2)
 
-**Members:** 93 nodes
+**Members:** 89 nodes
 
 ## Members
 - [[.A_room_nobody_has_touched_is_pending()]] - code - tests/CampCenter.UnitTests/Services/HousekeepingServiceTests.cs
@@ -13,7 +13,6 @@ members: 93
 - [[.AddAsync()_6]] - code - src/CampCenter.Domain/Repositories/IRoomCleaningRepository.cs
 - [[.AddAsync()_16]] - code - src/CampCenter.Infrastructure/Repositories/RoomCleaningRepository.cs
 - [[.Booking()_1]] - code - tests/CampCenter.UnitTests/Services/HousekeepingServiceTests.cs
-- [[.Configure()_8]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/RoomCleaningConfiguration.cs
 - [[.CountDoneByDateAsync()]] - code - src/CampCenter.Domain/Repositories/IRoomCleaningRepository.cs
 - [[.CountDoneByDateAsync()_1]] - code - src/CampCenter.Infrastructure/Repositories/RoomCleaningRepository.cs
 - [[.GetAsync()_3]] - code - src/CampCenter.Domain/Repositories/IRoomCleaningRepository.cs
@@ -59,7 +58,6 @@ members: 93
 - [[DateTime_11]] - code
 - [[Dictionary_4]] - code
 - [[Dictionary_7]] - code
-- [[EntityTypeBuilder_8]] - code
 - [[Fact_8]] - code
 - [[Guid_2]] - code
 - [[Guid_12]] - code
@@ -89,8 +87,6 @@ members: 93
 - [[Room_2]] - code
 - [[RoomCleaning]] - code - src/CampCenter.Domain/Entities/RoomCleaning.cs
 - [[RoomCleaning.cs]] - code - src/CampCenter.Domain/Entities/RoomCleaning.cs
-- [[RoomCleaningConfiguration]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/RoomCleaningConfiguration.cs
-- [[RoomCleaningConfiguration.cs]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/RoomCleaningConfiguration.cs
 - [[RoomCleaningKind_1]] - code - src/CampCenter.Domain/Entities/RoomCleaning.cs
 - [[RoomCleaningRepository]] - code - src/CampCenter.Infrastructure/Repositories/RoomCleaningRepository.cs
 - [[RoomCleaningStatus_1]] - code - src/CampCenter.Domain/Entities/RoomCleaning.cs
@@ -112,19 +108,20 @@ SORT file.name ASC
 ## Connections to other communities
 - 13 edges to [[_COMMUNITY_Integration Test Harness (1)]]
 - 7 edges to [[_COMMUNITY_Room Management]]
-- 5 edges to [[_COMMUNITY_Exception]]
 - 5 edges to [[_COMMUNITY_Integration Test Harness (2)]]
-- 3 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
-- 3 edges to [[_COMMUNITY_Validator Unit Tests]]
+- 4 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
 - 3 edges to [[_COMMUNITY_Room Task Management (1)]]
+- 3 edges to [[_COMMUNITY_Exception]]
+- 2 edges to [[_COMMUNITY_IClosureRepository]]
 - 2 edges to [[_COMMUNITY_components  admin]]
-- 2 edges to [[_COMMUNITY_@typesreact]]
-- 1 edge to [[_COMMUNITY_Admin Booking & Notifications (2)]]
-- 1 edge to [[_COMMUNITY_Public Booking Service (2)]]
+- 2 edges to [[_COMMUNITY_RoomCleaningConfiguration]]
+- 1 edge to [[_COMMUNITY_AvailabilityService]]
+- 1 edge to [[_COMMUNITY_useAuth]]
+- 1 edge to [[_COMMUNITY_ClosureService_1]]
 
 ## Top bridge nodes
 - [[HousekeepingServiceTests]] - degree 22, connects to 5 communities
 - [[HousekeepingService]] - degree 14, connects to 5 communities
 - [[.GetDayAsync()_2]] - degree 16, connects to 3 communities
-- [[RoomCleaning]] - degree 16, connects to 2 communities
+- [[RoomCleaning]] - degree 16, connects to 3 communities
 - [[.Setup()]] - degree 14, connects to 2 communities

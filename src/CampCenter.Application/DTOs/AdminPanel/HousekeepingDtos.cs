@@ -47,7 +47,11 @@ public record HousekeepingDayDto(
 /// a glance shows which day still has work outstanding.
 public record HousekeepingDaySummaryDto(DateOnly Date, int RoomCount, int DoneCount);
 
-public record HousekeepingRangeDto(DateOnly From, DateOnly To, List<HousekeepingDaySummaryDto> Days);
+public record HousekeepingRangeDto(
+    DateOnly From,
+    DateOnly To,
+    List<HousekeepingDaySummaryDto> Days
+);
 
 /// Pending / InProgress / Done, plus an optional note from whoever did the room.
 public record SetRoomCleaningRequestDto(string Status, string? Note);

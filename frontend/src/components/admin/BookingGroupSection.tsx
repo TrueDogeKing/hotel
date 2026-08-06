@@ -150,9 +150,7 @@ export default function BookingGroupSection({
                   <tr
                     key={booking.id}
                     className={booking.id === selectedBookingId ? "selected-row" : ""}
-                    onClick={() =>
-                      onSelect(selectedBookingId === booking.id ? null : booking.id)
-                    }
+                    onClick={() => onSelect(selectedBookingId === booking.id ? null : booking.id)}
                   >
                     <td>{booking.organizationName}</td>
                     <td>

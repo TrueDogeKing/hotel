@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Interfaces/ITokenService.cs"
 type: "code"
-community: "Exception"
+community: "ClosureService"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Exception
+  - community/ClosureService
 ---
 
 # ITokenService.cs
@@ -17,4 +17,4 @@ tags:
 - [[CampCenter.Domain.Entities]] - `imports` [EXTRACTED]
 - [[ITokenService]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Exception
+#graphify/code #graphify/EXTRACTED #community/ClosureService

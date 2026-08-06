@@ -12,10 +12,7 @@ public class ClosureRepository : IClosureRepository
     public ClosureRepository(AppDbContext db) => _db = db;
 
     public Task<List<Closure>> GetAllAsync(CancellationToken cancellationToken = default) =>
-        _db
-            .Closures.Include(c => c.Room)
-            .OrderBy(c => c.StartDate)
-            .ToListAsync(cancellationToken);
+        _db.Closures.Include(c => c.Room).OrderBy(c => c.StartDate).ToListAsync(cancellationToken);
 
     public Task<Closure?> GetByIdAsync(Guid id, CancellationToken cancellationToken = default) =>
         _db.Closures.Include(c => c.Room).FirstOrDefaultAsync(c => c.Id == id, cancellationToken);

@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/DTOs/Closures/ClosureDtos.cs"
 type: "code"
-community: "Validator Unit Tests"
+community: "ClosureService"
 location: "L3"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Validator_Unit_Tests
+  - community/ClosureService
 ---
 
 # ClosureDto
@@ -18,7 +18,7 @@ tags:
 - [[.GetAllAsync()_3]] - `references` [EXTRACTED]
 - [[.ToDto()_1]] - `references` [EXTRACTED]
 - [[.UpdateAsync()]] - `references` [EXTRACTED]
-- [[.UpdateAsync()_3]] - `references` [EXTRACTED]
+- [[.UpdateAsync()_4]] - `references` [EXTRACTED]
 - [[ClosureDtos.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Validator_Unit_Tests
+#graphify/code #graphify/EXTRACTED #community/ClosureService

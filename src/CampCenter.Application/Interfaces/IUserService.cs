@@ -10,7 +10,10 @@ namespace CampCenter.Application.Interfaces;
 /// itself, and the last administrator may be neither deleted nor demoted.
 public interface IUserService
 {
-    Task<List<AdminUserDto>> ListAsync(Guid callerId, CancellationToken cancellationToken = default);
+    Task<List<AdminUserDto>> ListAsync(
+        Guid callerId,
+        CancellationToken cancellationToken = default
+    );
 
     /// Throws BusinessRuleViolationException when the login is taken.
     Task<AdminUserDto> CreateAsync(

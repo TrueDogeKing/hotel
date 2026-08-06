@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Public Booking Service (2)"
+community: ".AddInfrastructure"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public_Booking_Service_2
+  - community/AddInfrastructure
 ---
 
 # IConfiguration
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.AddInfrastructure()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_2
+#graphify/code #graphify/EXTRACTED #community/AddInfrastructure

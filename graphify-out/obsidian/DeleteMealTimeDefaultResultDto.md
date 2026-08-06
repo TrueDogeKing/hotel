@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/DTOs/Schedule/MealTimeDtos.cs"
 type: "code"
-community: "Camp Session Management"
+community: "IEntityTypeConfiguration"
 location: "L38"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Camp_Session_Management
+  - community/IEntityTypeConfiguration
 ---
 
 # DeleteMealTimeDefaultResultDto
@@ -16,4 +16,4 @@ tags:
 - [[.DeleteAsync()_6]] - `references` [EXTRACTED]
 - [[MealTimeDtos.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Camp_Session_Management
+#graphify/code #graphify/EXTRACTED #community/IEntityTypeConfiguration

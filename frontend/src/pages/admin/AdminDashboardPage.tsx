@@ -72,7 +72,6 @@ export default function AdminDashboardPage() {
     }
   }
 
-
   return (
     <AdminLayout>
       <p>{t("admin.welcome", { login: userLogin ?? "" })}</p>
@@ -123,9 +122,7 @@ export default function AdminDashboardPage() {
               onCreated={async (booking) => {
                 setAdding(false);
                 setError(null);
-                setNotice(
-                  t("dashboard.groupAdded", { organization: booking.organizationName }),
-                );
+                setNotice(t("dashboard.groupAdded", { organization: booking.organizationName }));
                 await reload();
                 setSelectedBookingId(booking.id);
               }}

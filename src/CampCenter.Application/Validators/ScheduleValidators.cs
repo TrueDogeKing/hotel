@@ -9,7 +9,10 @@ public class CreateScheduleEntryRequestValidator : AbstractValidator<CreateSched
     public CreateScheduleEntryRequestValidator()
     {
         RuleFor(x => x.BookingId).NotEmpty();
-        RuleFor(x => x.Kind).NotEmpty().Must(ScheduleRules.BeAKind).WithMessage(ScheduleRules.KindMessage);
+        RuleFor(x => x.Kind)
+            .NotEmpty()
+            .Must(ScheduleRules.BeAKind)
+            .WithMessage(ScheduleRules.KindMessage);
         RuleFor(x => x.MealKind)
             .Must(ScheduleRules.BeAMealKind)
             .When(x => ScheduleRules.IsMeal(x.Kind))
@@ -32,7 +35,10 @@ public class UpdateScheduleEntryRequestValidator : AbstractValidator<UpdateSched
 {
     public UpdateScheduleEntryRequestValidator()
     {
-        RuleFor(x => x.Kind).NotEmpty().Must(ScheduleRules.BeAKind).WithMessage(ScheduleRules.KindMessage);
+        RuleFor(x => x.Kind)
+            .NotEmpty()
+            .Must(ScheduleRules.BeAKind)
+            .WithMessage(ScheduleRules.KindMessage);
         RuleFor(x => x.MealKind)
             .Must(ScheduleRules.BeAMealKind)
             .When(x => ScheduleRules.IsMeal(x.Kind))
@@ -53,8 +59,7 @@ public class UpdateScheduleEntryRequestValidator : AbstractValidator<UpdateSched
 
 public class UpdateDietaryNotesRequestValidator : AbstractValidator<UpdateDietaryNotesRequestDto>
 {
-    public UpdateDietaryNotesRequestValidator() =>
-        RuleFor(x => x.DietaryNotes).MaximumLength(2000);
+    public UpdateDietaryNotesRequestValidator() => RuleFor(x => x.DietaryNotes).MaximumLength(2000);
 }
 
 /// Shared between the create and update validators so the two can never drift.

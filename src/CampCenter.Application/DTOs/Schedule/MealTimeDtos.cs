@@ -41,11 +41,7 @@ public record DeleteMealTimeDefaultResultDto(bool Deleted);
 
 /// Another group's sitting in the same window, so the panel can show who this group
 /// is seated around and warn before a change crowds them.
-public record NeighbourSittingDto(
-    string OrganizationName,
-    TimeOnly StartTime,
-    TimeOnly EndTime
-);
+public record NeighbourSittingDto(string OrganizationName, TimeOnly StartTime, TimeOnly EndTime);
 
 /// One center slot as it applies to a single group: the center times, this
 /// group's times, and whether they differ.

@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/pages/LoginPage.tsx"
 type: "code"
-community: "useAuth"
+community: "Frontend Icon Components"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/useAuth
+  - community/Frontend_Icon_Components
 ---
 
 # LoginPage.tsx
@@ -23,4 +23,4 @@ tags:
 - [[icons.tsx]] - `imports_from` [EXTRACTED]
 - [[useAuth()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/useAuth
+#graphify/code #graphify/EXTRACTED #community/Frontend_Icon_Components

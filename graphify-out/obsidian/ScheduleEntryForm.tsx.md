@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/components/admin/ScheduleEntryForm.tsx"
 type: "code"
-community: "Room Closure Management"
+community: "Domain & Infra Namespaces"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Closure_Management
+  - community/Domain__Infra_Namespaces
 ---
 
 # ScheduleEntryForm.tsx
@@ -30,4 +30,4 @@ tags:
 - [[mealKinds]] - `imports` [EXTRACTED]
 - [[toTimeInput()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management
+#graphify/code #graphify/EXTRACTED #community/Domain__Infra_Namespaces

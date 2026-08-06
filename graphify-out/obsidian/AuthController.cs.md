@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Api/Controllers/AuthController.cs"
 type: "code"
-community: ".CreateClient"
+community: "Public Booking Service (2)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateClient
+  - community/Public_Booking_Service_2
 ---
 
 # AuthController.cs
@@ -20,4 +20,4 @@ tags:
 - [[CampCenter.Application.Models]] - `imports` [EXTRACTED]
 - [[CampCenter.Infrastructure.Auth]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateClient
+#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_2

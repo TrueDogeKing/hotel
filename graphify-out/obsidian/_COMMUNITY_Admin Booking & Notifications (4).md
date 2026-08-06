@@ -39,11 +39,11 @@ SORT file.name ASC
 - 3 edges to [[_COMMUNITY_Public Booking Service (1)]]
 - 3 edges to [[_COMMUNITY_Admin Booking & Notifications (2)]]
 - 2 edges to [[_COMMUNITY_DTOs  Schedule (1)]]
-- 2 edges to [[_COMMUNITY_Auth Service & Tokens]]
-- 2 edges to [[_COMMUNITY_Exception]]
+- 2 edges to [[_COMMUNITY_CampCenter.Application  Services (1)]]
+- 2 edges to [[_COMMUNITY_ClosureService_1]]
 - 1 edge to [[_COMMUNITY_Application Namespaces & DTOs]]
 - 1 edge to [[_COMMUNITY_SmtpEmailSender]]
-- 1 edge to [[_COMMUNITY_Room Management]]
+- 1 edge to [[_COMMUNITY_useAuth]]
 
 ## Top bridge nodes
 - [[PaymentService]] - degree 12, connects to 6 communities

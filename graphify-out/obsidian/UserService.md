@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Services/UserService.cs"
 type: "code"
-community: "Booking Persistence & Entities (1)"
+community: "Admin User & Token Config"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Booking_Persistence__Entities_1
+  - community/Admin_User__Token_Config
 ---
 
 # UserService
@@ -27,4 +27,4 @@ tags:
 - [[IUserService]] - `implements` [EXTRACTED]
 - [[UserService.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Booking_Persistence__Entities_1
+#graphify/code #graphify/EXTRACTED #community/Admin_User__Token_Config

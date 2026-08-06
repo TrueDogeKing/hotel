@@ -16,6 +16,7 @@ tags:
 - [[.DeleteAsync()_3]] - `method` [EXTRACTED]
 - [[.ListAsync()_1]] - `method` [EXTRACTED]
 - [[.SetStatusAsync()_2]] - `method` [EXTRACTED]
+- [[.UpdateAsync()_3]] - `method` [EXTRACTED]
 - [[IRoomTaskService.cs]] - `contains` [EXTRACTED]
 - [[RoomTaskService]] - `implements` [EXTRACTED]
 - [[TasksController]] - `references` [EXTRACTED]

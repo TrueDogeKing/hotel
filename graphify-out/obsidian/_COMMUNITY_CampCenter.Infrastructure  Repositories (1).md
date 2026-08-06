@@ -1,11 +1,11 @@
 ---
 type: community
-members: 26
+members: 27
 ---
 
 # CampCenter.Infrastructure / Repositories (1)
 
-**Members:** 26 nodes
+**Members:** 27 nodes
 
 ## Members
 - [[.AddAsync()_19]] - code - src/CampCenter.Infrastructure/Repositories/ScheduleEntryRepository.cs
@@ -18,6 +18,7 @@ members: 26
 - [[.ListGeneratedSlotsAsync()_1]] - code - src/CampCenter.Infrastructure/Repositories/ScheduleEntryRepository.cs
 - [[.ListLocationsAsync()_1]] - code - src/CampCenter.Infrastructure/Repositories/ScheduleEntryRepository.cs
 - [[.ListVisibleSlotSpansAsync()_1]] - code - src/CampCenter.Infrastructure/Repositories/ScheduleEntryRepository.cs
+- [[.Remove()_13]] - code - src/CampCenter.Infrastructure/Repositories/ScheduleEntryRepository.cs
 - [[.SaveChangesAsync()_19]] - code - src/CampCenter.Infrastructure/Repositories/ScheduleEntryRepository.cs
 - [[BookingId_1]] - code
 - [[CancellationToken_65]] - code
@@ -45,7 +46,7 @@ SORT file.name ASC
 ## Connections to other communities
 - 8 edges to [[_COMMUNITY_CampCenter.Application  Services (2)]]
 - 1 edge to [[_COMMUNITY_components  admin]]
-- 1 edge to [[_COMMUNITY_Public Booking Service (2)]]
+- 1 edge to [[_COMMUNITY_Exception]]
 
 ## Top bridge nodes
 - [[ScheduleEntryRepository]] - degree 15, connects to 3 communities

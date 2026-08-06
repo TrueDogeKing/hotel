@@ -39,7 +39,9 @@ public interface IScheduleEntryRepository
     /// The span each group's remaining meals actually occupy, per (booking, slot).
     /// This is the truth about when a group eats — the centre's window may have been
     /// edited since those meals were generated, so it cannot be inferred from it.
-    Task<List<(Guid BookingId, Guid MealTimeDefaultId, TimeOnly Start, TimeOnly End)>> ListVisibleSlotSpansAsync(
+    Task<
+        List<(Guid BookingId, Guid MealTimeDefaultId, TimeOnly Start, TimeOnly End)>
+    > ListVisibleSlotSpansAsync(
         IReadOnlyCollection<Guid> bookingIds,
         CancellationToken cancellationToken = default
     );

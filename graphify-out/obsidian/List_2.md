@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Camp Session Management"
+community: "IMealTimeService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Camp_Session_Management
+  - community/IMealTimeService
 ---
 
 # List
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.GetAllAsync()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Camp_Session_Management
+#graphify/code #graphify/EXTRACTED #community/IMealTimeService

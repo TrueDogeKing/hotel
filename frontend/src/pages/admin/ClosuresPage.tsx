@@ -117,56 +117,58 @@ export default function ClosuresPage() {
       <p>{t("adminClosures.intro")}</p>
 
       {canEdit && (
-      <form className="admin-form" onSubmit={handleSubmit}>
-        <label>
-          {t("adminClosures.reason")}
-          <input
-            value={form.reason}
-            onChange={(e) => setForm({ ...form, reason: e.target.value })}
-            required
-            maxLength={256}
-          />
-        </label>
-        {/* The field reads the range back as text and only unfolds the calendar on
+        <form className="admin-form" onSubmit={handleSubmit}>
+          <label>
+            {t("adminClosures.reason")}
+            <input
+              value={form.reason}
+              onChange={(e) => setForm({ ...form, reason: e.target.value })}
+              required
+              maxLength={256}
+            />
+          </label>
+          {/* The field reads the range back as text and only unfolds the calendar on
             click — the form's other inputs should not be pushed off-screen by six
             weeks of grid. */}
-        <DateRangeField
-          label={t("adminClosures.dates")}
-          startDate={form.startDate}
-          endDate={form.endDate}
-          headcount={0}
-          allowPast
-          onChange={(range) => setForm({ ...form, startDate: range.startDate, endDate: range.endDate })}
-        />
-        <label>
-          {t("adminClosures.scope")}
-          <select
-            value={form.roomId}
-            onChange={(e) => setForm({ ...form, roomId: e.target.value })}
-          >
-            <option value="">{t("adminClosures.wholeCenter")}</option>
-            {rooms.map((r) => (
-              <option key={r.id} value={r.id}>
-                {t("adminClosures.roomOption", { number: r.number })}
-              </option>
-            ))}
-          </select>
-        </label>
-        <button type="submit" disabled={form.startDate === "" || form.endDate === ""}>
-          {editing ? t("adminClosures.save") : t("adminClosures.add")}
-        </button>
-        {editing && (
-          <button
-            type="button"
-            onClick={() => {
-              setEditing(null);
-              setForm(emptyForm);
-            }}
-          >
-            {t("adminClosures.cancelEdit")}
+          <DateRangeField
+            label={t("adminClosures.dates")}
+            startDate={form.startDate}
+            endDate={form.endDate}
+            headcount={0}
+            allowPast
+            onChange={(range) =>
+              setForm({ ...form, startDate: range.startDate, endDate: range.endDate })
+            }
+          />
+          <label>
+            {t("adminClosures.scope")}
+            <select
+              value={form.roomId}
+              onChange={(e) => setForm({ ...form, roomId: e.target.value })}
+            >
+              <option value="">{t("adminClosures.wholeCenter")}</option>
+              {rooms.map((r) => (
+                <option key={r.id} value={r.id}>
+                  {t("adminClosures.roomOption", { number: r.number })}
+                </option>
+              ))}
+            </select>
+          </label>
+          <button type="submit" disabled={form.startDate === "" || form.endDate === ""}>
+            {editing ? t("adminClosures.save") : t("adminClosures.add")}
           </button>
-        )}
-      </form>
+          {editing && (
+            <button
+              type="button"
+              onClick={() => {
+                setEditing(null);
+                setForm(emptyForm);
+              }}
+            >
+              {t("adminClosures.cancelEdit")}
+            </button>
+          )}
+        </form>
       )}
 
       {error && <p role="alert">{error}</p>}

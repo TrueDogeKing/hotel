@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "IEntityTypeConfiguration"
+community: "Auth Service & Tokens"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/IEntityTypeConfiguration
+  - community/Auth_Service__Tokens
 ---
 
 # DateTime
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.CreateTokenEntity()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/IEntityTypeConfiguration
+#graphify/code #graphify/EXTRACTED #community/Auth_Service__Tokens

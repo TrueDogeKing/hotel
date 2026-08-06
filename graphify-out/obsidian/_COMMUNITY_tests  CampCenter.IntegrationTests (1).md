@@ -1,11 +1,11 @@
 ---
 type: community
-members: 100
+members: 104
 ---
 
 # tests / CampCenter.IntegrationTests (1)
 
-**Members:** 100 nodes
+**Members:** 104 nodes
 
 ## Members
 - [[.AdminEndpoints_WithoutToken_ReturnUnauthorized()]] - code - tests/CampCenter.IntegrationTests/RoomsAndClosuresApiTests.cs
@@ -69,6 +69,8 @@ members: 100
 - [[.Worker_ReadsEverySection_ButCannotWriteAnywhere()]] - code - tests/CampCenter.IntegrationTests/UsersAndRolesApiTests.cs
 - [[Admin]] - code
 - [[AdminPanelApiTests]] - code - tests/CampCenter.IntegrationTests/AdminPanelApiTests.cs
+- [[ApiCollection]] - code - tests/CampCenter.IntegrationTests/ApiCollection.cs
+- [[ApiCollection.cs]] - code - tests/CampCenter.IntegrationTests/ApiCollection.cs
 - [[AuthApiTests]] - code - tests/CampCenter.IntegrationTests/AuthApiTests.cs
 - [[BookingId_2]] - code
 - [[Capacity_1]] - code
@@ -89,6 +91,7 @@ members: 100
 - [[HttpClient_3]] - code
 - [[HttpClient_4]] - code
 - [[HttpClient_5]] - code
+- [[ICollectionFixture]] - code
 - [[IntegrationTestBase]] - code - tests/CampCenter.IntegrationTests/ApiCollection.cs
 - [[List_39]] - code
 - [[PublicBookingApiTests]] - code - tests/CampCenter.IntegrationTests/PublicBookingApiTests.cs
@@ -107,6 +110,7 @@ members: 100
 - [[Worker]] - code
 - [[int_5]] - code
 - [[long_1]] - code
+- [[string_13]] - code
 - [[string_14]] - code
 
 ## Live Query (requires Dataview plugin)
@@ -117,19 +121,19 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_CampCenter.Application.DTOs.Public]]
+- 5 edges to [[_COMMUNITY_CampCenter.Application.DTOs.Public]]
+- 2 edges to [[_COMMUNITY_Auth Controller (1)]]
 - 2 edges to [[_COMMUNITY_CampCenter.Application  Services (2)]]
-- 2 edges to [[_COMMUNITY_CampCenter.UnitTests  Validators]]
 - 2 edges to [[_COMMUNITY_Payment Gateway Integration Tests (2)]]
 - 1 edge to [[_COMMUNITY_Public Booking Service (1)]]
 - 1 edge to [[_COMMUNITY_Camp Session Management]]
-- 1 edge to [[_COMMUNITY_Booking Persistence & Entities (1)]]
+- 1 edge to [[_COMMUNITY_Admin User & Token Config]]
 - 1 edge to [[_COMMUNITY_Payment Gateway Integration Tests (1)]]
 - 1 edge to [[_COMMUNITY_Application Namespaces & DTOs]]
 
 ## Top bridge nodes
-- [[IntegrationTestBase]] - degree 13, connects to 3 communities
+- [[IntegrationTestBase]] - degree 13, connects to 2 communities
+- [[ApiCollection.cs]] - degree 4, connects to 2 communities
 - [[ScheduleApiTests]] - degree 26, connects to 1 community
 - [[PublicBookingApiTests]] - degree 14, connects to 1 community
 - [[.CreateWorkerAsync()]] - degree 13, connects to 1 community
-- [[.GetMealTimesAsync()]] - degree 12, connects to 1 community

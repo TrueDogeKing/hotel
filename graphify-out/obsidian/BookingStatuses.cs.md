@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Domain/Entities/BookingStatuses.cs"
 type: "code"
-community: "AvailabilityService"
+community: "Exception"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AvailabilityService
+  - community/Exception
 ---
 
 # BookingStatuses.cs
@@ -15,4 +15,4 @@ tags:
 - [[BookingStatuses_1]] - `contains` [EXTRACTED]
 - [[CampCenter.Domain.Entities]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AvailabilityService
+#graphify/code #graphify/EXTRACTED #community/Exception

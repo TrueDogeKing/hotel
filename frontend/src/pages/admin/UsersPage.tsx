@@ -172,42 +172,42 @@ export default function UsersPage() {
       <p>{t("adminUsers.intro")}</p>
 
       {canEdit && (
-      <form className="admin-form" onSubmit={(e) => void handleCreate(e)}>
-        <label>
-          {t("adminUsers.login")}
-          <input
-            value={form.login}
-            onChange={(e) => setForm({ ...form, login: e.target.value })}
-            maxLength={32}
-            autoComplete="off"
-            required
-          />
-        </label>
-        <label>
-          {t("adminUsers.password")}
-          <input
-            type="password"
-            value={form.password}
-            onChange={(e) => setForm({ ...form, password: e.target.value })}
-            autoComplete="new-password"
-            required
-          />
-        </label>
-        <label>
-          {t("adminUsers.role")}
-          <select
-            value={form.role}
-            onChange={(e) => setForm({ ...form, role: e.target.value as UserRole })}
-          >
-            {userRoles.map((role) => (
-              <option key={role} value={role}>
-                {t(`roles.${role}`)}
-              </option>
-            ))}
-          </select>
-        </label>
-        <button type="submit">{t("adminUsers.add")}</button>
-      </form>
+        <form className="admin-form" onSubmit={(e) => void handleCreate(e)}>
+          <label>
+            {t("adminUsers.login")}
+            <input
+              value={form.login}
+              onChange={(e) => setForm({ ...form, login: e.target.value })}
+              maxLength={32}
+              autoComplete="off"
+              required
+            />
+          </label>
+          <label>
+            {t("adminUsers.password")}
+            <input
+              type="password"
+              value={form.password}
+              onChange={(e) => setForm({ ...form, password: e.target.value })}
+              autoComplete="new-password"
+              required
+            />
+          </label>
+          <label>
+            {t("adminUsers.role")}
+            <select
+              value={form.role}
+              onChange={(e) => setForm({ ...form, role: e.target.value as UserRole })}
+            >
+              {userRoles.map((role) => (
+                <option key={role} value={role}>
+                  {t(`roles.${role}`)}
+                </option>
+              ))}
+            </select>
+          </label>
+          <button type="submit">{t("adminUsers.add")}</button>
+        </form>
       )}
       {canEdit && <p className="hk-section-hint">{t("adminUsers.passwordHint")}</p>}
 
@@ -243,9 +243,7 @@ export default function UsersPage() {
                 <tr key={user.id}>
                   <td>
                     {user.login}
-                    {user.isSelf && (
-                      <span className="hk-room-beds"> · {t("adminUsers.you")}</span>
-                    )}
+                    {user.isSelf && <span className="hk-room-beds"> · {t("adminUsers.you")}</span>}
                   </td>
                   <td>
                     {canEdit ? (

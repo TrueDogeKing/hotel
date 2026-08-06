@@ -27,6 +27,7 @@ tags:
 - [[.PickRoomsAsync()]] - `references` [EXTRACTED]
 - [[.Remove()_4]] - `references` [EXTRACTED]
 - [[.Remove()_11]] - `references` [EXTRACTED]
+- [[.ResolveRoomAsync()]] - `references` [EXTRACTED]
 - [[.Room()]] - `references` [EXTRACTED]
 - [[.SaveWithConcurrencyCheckAsync()]] - `references` [EXTRACTED]
 - [[.Setup()]] - `references` [EXTRACTED]

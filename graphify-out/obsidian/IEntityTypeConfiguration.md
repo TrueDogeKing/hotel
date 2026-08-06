@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "@types/react"
+community: "RoomTaskConfiguration"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/types/react
+  - community/RoomTaskConfiguration
 ---
 
 # IEntityTypeConfiguration
@@ -24,4 +24,4 @@ tags:
 - [[RoomTaskConfiguration]] - `implements` [EXTRACTED]
 - [[ScheduleEntryConfiguration]] - `implements` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/types/react
+#graphify/code #graphify/EXTRACTED #community/RoomTaskConfiguration

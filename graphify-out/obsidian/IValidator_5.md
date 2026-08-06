@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Booking Persistence & Entities (1)"
+community: "ControllerBase"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Booking_Persistence__Entities_1
+  - community/ControllerBase
 ---
 
 # IValidator
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[UsersController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Booking_Persistence__Entities_1
+#graphify/code #graphify/EXTRACTED #community/ControllerBase

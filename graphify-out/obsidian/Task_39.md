@@ -15,6 +15,6 @@ tags:
 - [[.DeleteAsync()_7]] - `references` [EXTRACTED]
 - [[.GetAllAsync()_5]] - `references` [EXTRACTED]
 - [[.SaveWithConcurrencyCheckAsync()]] - `references` [EXTRACTED]
-- [[.UpdateAsync()_5]] - `references` [EXTRACTED]
+- [[.UpdateAsync()_6]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Room_Management

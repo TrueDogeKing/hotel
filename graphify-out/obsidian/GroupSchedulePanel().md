@@ -2,7 +2,7 @@
 source_file: "frontend/src/components/admin/GroupSchedulePanel.tsx"
 type: "code"
 community: "Frontend App Shell & i18n"
-location: "L60"
+location: "L58"
 tags:
   - graphify/code
   - graphify/EXTRACTED

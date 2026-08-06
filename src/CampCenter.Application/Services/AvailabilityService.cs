@@ -122,10 +122,9 @@ public class AvailabilityService : IAvailabilityService
                 )
                 .ToHashSet();
 
-            var freeBeds =
-                centerClosure is not null
-                    ? 0
-                    : activeRooms.Where(r => !blocked.Contains(r.Id)).Sum(r => r.Capacity);
+            var freeBeds = centerClosure is not null
+                ? 0
+                : activeRooms.Where(r => !blocked.Contains(r.Id)).Sum(r => r.Capacity);
 
             days.Add(
                 new AvailabilityDayDto(
@@ -173,7 +172,11 @@ public class AvailabilityService : IAvailabilityService
         CancellationToken cancellationToken = default
     )
     {
-        var overlappingClosures = await _closures.GetOverlappingAsync(start, end, cancellationToken);
+        var overlappingClosures = await _closures.GetOverlappingAsync(
+            start,
+            end,
+            cancellationToken
+        );
 
         // A center-wide closure (RoomId null) blocks every active room.
         if (overlappingClosures.Any(c => c.RoomId is null))

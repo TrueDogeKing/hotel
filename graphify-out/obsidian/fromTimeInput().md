@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/utils/dates.ts"
 type: "code"
-community: "src / api (1)"
+community: "Domain & Infra Namespaces"
 location: "L111"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/src_/_api_1
+  - community/Domain__Infra_Namespaces
 ---
 
 # fromTimeInput()
@@ -17,4 +17,4 @@ tags:
 - [[ScheduleEntryForm.tsx]] - `imports` [EXTRACTED]
 - [[dates.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/src_/_api_1
+#graphify/code #graphify/EXTRACTED #community/Domain__Infra_Namespaces

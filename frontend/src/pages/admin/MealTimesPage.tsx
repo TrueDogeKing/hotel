@@ -150,81 +150,81 @@ export default function MealTimesPage() {
       </p>
 
       {canEdit && (
-      <form className="admin-form" onSubmit={handleSubmit}>
-        <label>
-          {t("mealTimes.mealKind")}
-          <select
-            value={form.mealKind}
-            onChange={(e) => setForm({ ...form, mealKind: e.target.value as MealKind })}
-          >
-            {mealKinds.map((m) => (
-              <option key={m} value={m}>
-                {t(`schedule.mealKinds.${m}`)}
-              </option>
-            ))}
-          </select>
-        </label>
-        <label>
-          {t("mealTimes.label")}
-          <input
-            value={form.label}
-            onChange={(e) => setForm({ ...form, label: e.target.value })}
-            required
-            maxLength={128}
-          />
-        </label>
-        <label>
-          {t("mealTimes.startTime")}
-          <input
-            type="time"
-            value={form.startTime}
-            onChange={(e) => setForm({ ...form, startTime: e.target.value })}
-            required
-          />
-        </label>
-        <label>
-          {t("mealTimes.endTime")}
-          <input
-            type="time"
-            value={form.endTime}
-            onChange={(e) => setForm({ ...form, endTime: e.target.value })}
-            required
-          />
-        </label>
-        <label title={t("mealTimes.durationHint")}>
-          {t("mealTimes.duration")}
-          <input
-            type="number"
-            min={5}
-            max={480}
-            step={5}
-            value={form.durationMinutes}
-            onChange={(e) => setForm({ ...form, durationMinutes: e.target.value })}
-            required
-          />
-        </label>
-        <label>
-          {t("mealTimes.sortOrder")}
-          <input
-            type="number"
-            min={0}
-            value={form.sortOrder}
-            onChange={(e) => setForm({ ...form, sortOrder: e.target.value })}
-          />
-        </label>
-        <button type="submit">{editing ? t("mealTimes.save") : t("mealTimes.add")}</button>
-        {editing && (
-          <button
-            type="button"
-            onClick={() => {
-              setEditing(null);
-              setForm(emptyForm);
-            }}
-          >
-            {t("mealTimes.cancelEdit")}
-          </button>
-        )}
-      </form>
+        <form className="admin-form" onSubmit={handleSubmit}>
+          <label>
+            {t("mealTimes.mealKind")}
+            <select
+              value={form.mealKind}
+              onChange={(e) => setForm({ ...form, mealKind: e.target.value as MealKind })}
+            >
+              {mealKinds.map((m) => (
+                <option key={m} value={m}>
+                  {t(`schedule.mealKinds.${m}`)}
+                </option>
+              ))}
+            </select>
+          </label>
+          <label>
+            {t("mealTimes.label")}
+            <input
+              value={form.label}
+              onChange={(e) => setForm({ ...form, label: e.target.value })}
+              required
+              maxLength={128}
+            />
+          </label>
+          <label>
+            {t("mealTimes.startTime")}
+            <input
+              type="time"
+              value={form.startTime}
+              onChange={(e) => setForm({ ...form, startTime: e.target.value })}
+              required
+            />
+          </label>
+          <label>
+            {t("mealTimes.endTime")}
+            <input
+              type="time"
+              value={form.endTime}
+              onChange={(e) => setForm({ ...form, endTime: e.target.value })}
+              required
+            />
+          </label>
+          <label title={t("mealTimes.durationHint")}>
+            {t("mealTimes.duration")}
+            <input
+              type="number"
+              min={5}
+              max={480}
+              step={5}
+              value={form.durationMinutes}
+              onChange={(e) => setForm({ ...form, durationMinutes: e.target.value })}
+              required
+            />
+          </label>
+          <label>
+            {t("mealTimes.sortOrder")}
+            <input
+              type="number"
+              min={0}
+              value={form.sortOrder}
+              onChange={(e) => setForm({ ...form, sortOrder: e.target.value })}
+            />
+          </label>
+          <button type="submit">{editing ? t("mealTimes.save") : t("mealTimes.add")}</button>
+          {editing && (
+            <button
+              type="button"
+              onClick={() => {
+                setEditing(null);
+                setForm(emptyForm);
+              }}
+            >
+              {t("mealTimes.cancelEdit")}
+            </button>
+          )}
+        </form>
       )}
 
       {error && <p role="alert">{error}</p>}

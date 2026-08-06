@@ -50,8 +50,8 @@ public class HousekeepingService : IHousekeepingService
         var jobs = await GetJobsAsync(date, cancellationToken);
 
         var rooms = (await _rooms.GetAllAsync(cancellationToken)).ToDictionary(r => r.Id);
-        var progress = (await _cleanings.ListForDateAsync(date, cancellationToken)).ToDictionary(c =>
-            c.RoomId
+        var progress = (await _cleanings.ListForDateAsync(date, cancellationToken)).ToDictionary(
+            c => c.RoomId
         );
         var openTasks = await _tasks.CountOpenByRoomAsync(cancellationToken);
 
@@ -68,13 +68,13 @@ public class HousekeepingService : IHousekeepingService
             .GroupBy(c => c.RoomId!.Value)
             .ToDictionary(g => g.Key, g => g.First().Reason);
 
-        var dtos = jobs
-            .Where(job => rooms.ContainsKey(job.RoomId))
+        var dtos = jobs.Where(job => rooms.ContainsKey(job.RoomId))
             .Select(job =>
             {
                 var room = rooms[job.RoomId];
                 progress.TryGetValue(job.RoomId, out var cleaning);
-                var closureReason = centerClosure?.Reason ?? roomClosures.GetValueOrDefault(room.Id);
+                var closureReason =
+                    centerClosure?.Reason ?? roomClosures.GetValueOrDefault(room.Id);
 
                 return new HousekeepingRoomDto(
                     room.Id,

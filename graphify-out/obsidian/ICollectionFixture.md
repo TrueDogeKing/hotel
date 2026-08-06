@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Payment Gateway Integration Tests (2)"
+community: "tests / CampCenter.IntegrationTests (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Payment_Gateway_Integration_Tests_2
+  - community/tests_/_CampCenterIntegrationTests_1
 ---
 
 # ICollectionFixture
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[ApiCollection]] - `implements` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Payment_Gateway_Integration_Tests_2
+#graphify/code #graphify/EXTRACTED #community/tests_/_CampCenterIntegrationTests_1

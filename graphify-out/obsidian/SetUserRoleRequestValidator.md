@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Validators/UserValidators.cs"
 type: "code"
-community: "Booking Persistence & Entities (1)"
+community: "UserValidators.cs"
 location: "L28"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Booking_Persistence__Entities_1
+  - community/UserValidatorscs
 ---
 
 # SetUserRoleRequestValidator
@@ -16,4 +16,4 @@ tags:
 - [[SetUserRoleRequestDto]] - `references` [EXTRACTED]
 - [[UserValidators.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Booking_Persistence__Entities_1
+#graphify/code #graphify/EXTRACTED #community/UserValidatorscs

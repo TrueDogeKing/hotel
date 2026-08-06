@@ -172,9 +172,7 @@ export default function HousekeepingPage() {
                     aria-current={summary.date === date}
                     onClick={() => selectDate(summary.date)}
                   >
-                    <span className="hk-strip-date">
-                      {formatDate(summary.date, i18n.language)}
-                    </span>
+                    <span className="hk-strip-date">{formatDate(summary.date, i18n.language)}</span>
                     <span className="hk-strip-count">
                       {summary.roomCount === 0
                         ? t("housekeeping.stripNone")

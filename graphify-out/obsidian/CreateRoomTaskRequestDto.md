@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/DTOs/AdminPanel/AdminPanelDtos.cs"
 type: "code"
-community: "Admin Bookings Controller & DTOs"
+community: "Room Task Management (1)"
 location: "L73"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Bookings_Controller__DTOs
+  - community/Room_Task_Management_1
 ---
 
 # CreateRoomTaskRequestDto
@@ -17,4 +17,4 @@ tags:
 - [[.CreateAsync()_12]] - `references` [EXTRACTED]
 - [[AdminPanelDtos.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Bookings_Controller__DTOs
+#graphify/code #graphify/EXTRACTED #community/Room_Task_Management_1

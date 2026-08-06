@@ -27,5 +27,6 @@ tags:
 - [[RoomOccupancyDto]] - `contains` [EXTRACTED]
 - [[RoomTaskDto]] - `contains` [EXTRACTED]
 - [[SetBookingStatusRequestDto]] - `contains` [EXTRACTED]
+- [[UpdateRoomTaskRequestDto]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Admin_Bookings_Controller__DTOs

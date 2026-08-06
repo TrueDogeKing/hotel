@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/api/admin.ts"
 type: "code"
-community: "ControllerBase"
+community: "src / api (1)"
 location: "L107"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ControllerBase
+  - community/src_/_api_1
 ---
 
 # getClosures()
@@ -16,4 +16,4 @@ tags:
 - [[ClosuresPage.tsx]] - `imports` [EXTRACTED]
 - [[admin.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ControllerBase
+#graphify/code #graphify/EXTRACTED #community/src_/_api_1

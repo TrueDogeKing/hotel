@@ -56,5 +56,5 @@ public class WriteRequiresAdministratorHandler
     /// Whether the endpoint being called carries <see cref="AllowWorkerWriteAttribute"/>.
     private bool AllowsWorkerWrite() =>
         _http.HttpContext?.GetEndpoint()?.Metadata.GetMetadata<AllowWorkerWriteAttribute>()
-        is not null;
+            is not null;
 }

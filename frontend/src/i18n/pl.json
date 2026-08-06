@@ -1,6 +1,6 @@
 {
   "common": {
-    "appName": "Ośrodek CampCenter",
+    "appName": "Alga",
     "loading": "Ładowanie…"
   },
   "roles": {
@@ -77,11 +77,11 @@
       }
     },
     "contactTitle": "Skontaktuj się",
-    "contactLead": "Masz pytania o pobyt grupy w ośrodku CampCenter? Nasz zespół pomoże zaplanować idealny wyjazd.",
-    "contactAddress": "Ośrodek CampCenter, ul. Jeziorna 1, 11-111 Nadjeziorze",
+    "contactLead": "Masz pytania o pobyt grupy w ośrodku Alga? Nasz zespół pomoże zaplanować idealny wyjazd.",
+    "contactAddress": "Ośrodek Alga, ul. Jeziorna 1, 11-111 Nadjeziorze",
     "contactPhone": "+48 000 000 000",
-    "contactEmail": "rezerwacje@campcenter.pl",
-    "rights": "© 2026 CampCenter. Wszelkie prawa zastrzeżone."
+    "contactEmail": "rezerwacje@alga.pl",
+    "rights": "© 2026 Alga. Wszelkie prawa zastrzeżone."
   },
   "login": {
     "title": "Logowanie administratora",
@@ -320,6 +320,10 @@
     "textPlaceholder": "np. dostawka",
     "add": "Dodaj zadanie",
     "addError": "Nie udało się dodać zadania.",
+    "edit": "Edytuj",
+    "save": "Zapisz",
+    "cancel": "Anuluj",
+    "editError": "Nie udało się zapisać zadania.",
     "delete": "Usuń"
   },
   "housekeeping": {

@@ -240,7 +240,9 @@ public class ScheduleApiTests : IntegrationTestBase
         var (bookingId, _, _, end) = await CreateBookingAsync(admin);
 
         var day = (
-            await admin.GetFromJsonAsync<ScheduleDayDto>($"/api/admin/schedule/day/{end:yyyy-MM-dd}")
+            await admin.GetFromJsonAsync<ScheduleDayDto>(
+                $"/api/admin/schedule/day/{end:yyyy-MM-dd}"
+            )
         )!;
 
         var group = Assert.Single(day.Groups, g => g.BookingId == bookingId);
@@ -701,7 +703,11 @@ public class ScheduleApiTests : IntegrationTestBase
         return [.. schedule.Days.SelectMany(d => d.Entries).Where(e => e.MealKind == "Breakfast")];
     }
 
-    private static CreateScheduleEntryRequestDto EntryOn(Guid bookingId, DateOnly date, string title) =>
+    private static CreateScheduleEntryRequestDto EntryOn(
+        Guid bookingId,
+        DateOnly date,
+        string title
+    ) =>
         new(
             bookingId,
             "Activity",
@@ -718,9 +724,12 @@ public class ScheduleApiTests : IntegrationTestBase
 
     /// A confirmed-shape booking in its own date window with its own room, so the
     /// shared inventory never causes cross-test interference.
-    private async Task<(Guid BookingId, string Token, DateOnly Start, DateOnly End)> CreateBookingAsync(
-        HttpClient admin
-    )
+    private async Task<(
+        Guid BookingId,
+        string Token,
+        DateOnly Start,
+        DateOnly End
+    )> CreateBookingAsync(HttpClient admin)
     {
         var offset = Interlocked.Increment(ref _windowOffset) * 30;
         var suffix = Guid.NewGuid().ToString("N")[..6];
@@ -733,21 +742,22 @@ public class ScheduleApiTests : IntegrationTestBase
         var start = new DateOnly(2034, 1, 1).AddDays(offset);
         var end = start.AddDays(5); // 5 nights → 6 schedule days
 
-        var create = await CreateClient().PostAsJsonAsync(
-            "/api/public/bookings",
-            new CreateBookingRequestDto(
-                start,
-                end,
-                12,
-                new Dictionary<int, int> { [12] = 1 },
-                $"Grupa {suffix}",
-                "Anna Opiekun",
-                $"sch-{suffix}@example.com",
-                "+48 600 100 200",
-                null,
-                "pl"
-            )
-        );
+        var create = await CreateClient()
+            .PostAsJsonAsync(
+                "/api/public/bookings",
+                new CreateBookingRequestDto(
+                    start,
+                    end,
+                    12,
+                    new Dictionary<int, int> { [12] = 1 },
+                    $"Grupa {suffix}",
+                    "Anna Opiekun",
+                    $"sch-{suffix}@example.com",
+                    "+48 600 100 200",
+                    null,
+                    "pl"
+                )
+            );
         Assert.Equal(HttpStatusCode.Created, create.StatusCode);
         var booking = (await create.Content.ReadFromJsonAsync<CreateBookingResponseDto>())!;
 

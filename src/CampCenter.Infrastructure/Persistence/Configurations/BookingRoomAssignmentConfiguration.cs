@@ -15,7 +15,12 @@ public class BookingRoomAssignmentConfiguration : IEntityTypeConfiguration<Booki
         // THE double-booking guard is a Postgres GiST exclusion constraint over
         // (RoomId, daterange[StartDate, EndDate)) added in the migration — EF's
         // model can't express it. This index backs the range availability queries.
-        builder.HasIndex(x => new { x.RoomId, x.StartDate, x.EndDate });
+        builder.HasIndex(x => new
+        {
+            x.RoomId,
+            x.StartDate,
+            x.EndDate,
+        });
 
         builder.HasIndex(x => x.BookingId);
 

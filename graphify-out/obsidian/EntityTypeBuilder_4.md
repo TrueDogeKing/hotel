@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "@types/react"
+community: "ClosureConfiguration"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/types/react
+  - community/ClosureConfiguration
 ---
 
 # EntityTypeBuilder
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.Configure()_4]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/types/react
+#graphify/code #graphify/EXTRACTED #community/ClosureConfiguration

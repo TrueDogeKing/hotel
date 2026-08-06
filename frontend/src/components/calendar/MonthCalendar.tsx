@@ -1,12 +1,6 @@
 import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
-import {
-  dayNumber,
-  formatMonth,
-  monthGrid,
-  shortWeekdays,
-  todayIso,
-} from "../../utils/dates";
+import { dayNumber, formatMonth, monthGrid, shortWeekdays, todayIso } from "../../utils/dates";
 import { packLanes, type LaneEvent } from "./lanes";
 import CalendarTile from "./CalendarTile";
 

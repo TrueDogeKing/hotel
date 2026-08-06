@@ -2,7 +2,7 @@
 source_file: "frontend/src/components/calendar/MonthCalendar.tsx"
 type: "code"
 community: "src / utils"
-location: "L42"
+location: "L36"
 tags:
   - graphify/code
   - graphify/EXTRACTED

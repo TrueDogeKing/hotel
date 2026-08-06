@@ -10,7 +10,8 @@ public class BookingMealTimeConfiguration : IEntityTypeConfiguration<BookingMeal
     {
         builder.ToTable(
             "BookingMealTimes",
-            t => t.HasCheckConstraint("CK_BookingMealTimes_TimeOrder", "\"EndTime\" > \"StartTime\"")
+            t =>
+                t.HasCheckConstraint("CK_BookingMealTimes_TimeOrder", "\"EndTime\" > \"StartTime\"")
         );
 
         builder.HasKey(x => x.Id);

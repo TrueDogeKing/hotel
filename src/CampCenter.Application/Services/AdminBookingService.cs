@@ -134,9 +134,10 @@ public class AdminBookingService : IAdminBookingService
             // A manage token is minted so the group can still be given a
             // self-service link later; nothing is emailed here.
             ManageTokenHash = token.TokenHash,
-            HoldExpiresAt = status == BookingStatus.PendingDeposit
-                ? ComputeHoldExpiry(request.StartDate)
-                : null,
+            HoldExpiresAt =
+                status == BookingStatus.PendingDeposit
+                    ? ComputeHoldExpiry(request.StartDate)
+                    : null,
             TotalGrosze = _settings.PricePerPersonPerNightGrosze * request.Headcount * nights,
             DepositGrosze = _settings.DepositPerPersonPerNightGrosze * request.Headcount * nights,
             RequestedRoomCounts = JsonSerializer.Serialize(mix),
@@ -226,8 +227,7 @@ public class AdminBookingService : IAdminBookingService
         if (booking.Status == BookingStatus.Cancelled)
         {
             var mix =
-                JsonSerializer.Deserialize<Dictionary<int, int>>(booking.RequestedRoomCounts)
-                ?? [];
+                JsonSerializer.Deserialize<Dictionary<int, int>>(booking.RequestedRoomCounts) ?? [];
             foreach (var assignment in await BuildAssignmentsAsync(booking, mix, cancellationToken))
             {
                 booking.RoomAssignments.Add(assignment);
@@ -237,9 +237,8 @@ public class AdminBookingService : IAdminBookingService
 
         booking.Status = target;
         booking.CancelReason = null;
-        booking.HoldExpiresAt = target == BookingStatus.PendingDeposit
-            ? ComputeHoldExpiry(booking.StartDate)
-            : null;
+        booking.HoldExpiresAt =
+            target == BookingStatus.PendingDeposit ? ComputeHoldExpiry(booking.StartDate) : null;
 
         await _bookings.SaveChangesAsync(cancellationToken);
         return await GetAsync(id, cancellationToken);

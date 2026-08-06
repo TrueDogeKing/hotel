@@ -9,7 +9,10 @@ public class CreateMealTimeDefaultRequestValidator
 {
     public CreateMealTimeDefaultRequestValidator()
     {
-        RuleFor(x => x.MealKind).NotEmpty().Must(MealTimeRules.BeAMealKind).WithMessage(MealTimeRules.MealKindMessage);
+        RuleFor(x => x.MealKind)
+            .NotEmpty()
+            .Must(MealTimeRules.BeAMealKind)
+            .WithMessage(MealTimeRules.MealKindMessage);
         RuleFor(x => x.Label).NotEmpty().MaximumLength(128);
         RuleFor(x => x.SortOrder).GreaterThanOrEqualTo(0);
         RuleFor(x => x.DurationMinutes)
@@ -26,7 +29,10 @@ public class UpdateMealTimeDefaultRequestValidator
 {
     public UpdateMealTimeDefaultRequestValidator()
     {
-        RuleFor(x => x.MealKind).NotEmpty().Must(MealTimeRules.BeAMealKind).WithMessage(MealTimeRules.MealKindMessage);
+        RuleFor(x => x.MealKind)
+            .NotEmpty()
+            .Must(MealTimeRules.BeAMealKind)
+            .WithMessage(MealTimeRules.MealKindMessage);
         RuleFor(x => x.Label).NotEmpty().MaximumLength(128);
         RuleFor(x => x.SortOrder).GreaterThanOrEqualTo(0);
         RuleFor(x => x.DurationMinutes)
@@ -48,8 +54,7 @@ public class SetBookingMealTimeRequestValidator : AbstractValidator<SetBookingMe
 
 internal static class MealTimeRules
 {
-    public const string MealKindMessage =
-        "Meal kind must be Breakfast, Lunch, Dinner or Snack.";
+    public const string MealKindMessage = "Meal kind must be Breakfast, Lunch, Dinner or Snack.";
     public const string TimeOrderMessage = "End time must be after the start time.";
     public const string DurationMessage = "A sitting must last between 5 and 480 minutes.";
 

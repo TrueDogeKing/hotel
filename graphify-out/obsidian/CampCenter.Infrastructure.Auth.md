@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Auth/BcryptPasswordHasher.cs"
 type: "code"
-community: ".CreateClient"
+community: "Public Booking Service (2)"
 location: "L3"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateClient
+  - community/Public_Booking_Service_2
 ---
 
 # CampCenter.Infrastructure.Auth
@@ -20,4 +20,4 @@ tags:
 - [[Program.cs]] - `imports` [EXTRACTED]
 - [[RefreshTokenSettings.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateClient
+#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_2

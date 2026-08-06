@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Persistence/Configurations/RoomTaskConfiguration.cs"
 type: "code"
-community: "@types/react"
+community: "RoomTaskConfiguration"
 location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/types/react
+  - community/RoomTaskConfiguration
 ---
 
 # RoomTaskConfiguration
@@ -17,4 +17,4 @@ tags:
 - [[RoomTask_1]] - `references` [EXTRACTED]
 - [[RoomTaskConfiguration.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/types/react
+#graphify/code #graphify/EXTRACTED #community/RoomTaskConfiguration

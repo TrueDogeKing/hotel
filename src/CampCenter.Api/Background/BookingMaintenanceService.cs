@@ -85,10 +85,7 @@ public class BookingMaintenanceService : BackgroundService
         {
             try
             {
-                await email.SendAsync(
-                    EmailTemplates.BookingCancelled(booking),
-                    cancellationToken
-                );
+                await email.SendAsync(EmailTemplates.BookingCancelled(booking), cancellationToken);
             }
             catch (Exception ex) when (ex is not OperationCanceledException)
             {

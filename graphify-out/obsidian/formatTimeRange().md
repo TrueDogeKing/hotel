@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/utils/dates.ts"
 type: "code"
-community: "Room Closure Management"
+community: "Domain & Infra Namespaces"
 location: "L116"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Closure_Management
+  - community/Domain__Infra_Namespaces
 ---
 
 # formatTimeRange()
@@ -15,4 +15,4 @@ tags:
 - [[dates.ts]] - `contains` [EXTRACTED]
 - [[toTimeInput()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management
+#graphify/code #graphify/EXTRACTED #community/Domain__Infra_Namespaces

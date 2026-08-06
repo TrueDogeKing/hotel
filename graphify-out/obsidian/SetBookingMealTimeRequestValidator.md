@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Validators/MealTimeValidators.cs"
 type: "code"
-community: "DTOs / Schedule (1)"
-location: "L41"
+community: "IEntityTypeConfiguration"
+location: "L47"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DTOs_/_Schedule_1
+  - community/IEntityTypeConfiguration
 ---
 
 # SetBookingMealTimeRequestValidator
@@ -16,4 +16,4 @@ tags:
 - [[MealTimeValidators.cs]] - `contains` [EXTRACTED]
 - [[SetBookingMealTimeRequestDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DTOs_/_Schedule_1
+#graphify/code #graphify/EXTRACTED #community/IEntityTypeConfiguration

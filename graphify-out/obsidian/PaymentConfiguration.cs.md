@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Persistence/Configurations/PaymentConfiguration.cs"
 type: "code"
-community: "@types/react"
+community: "PaymentConfiguration"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/types/react
+  - community/PaymentConfiguration
 ---
 
 # PaymentConfiguration.cs
@@ -16,4 +16,4 @@ tags:
 - [[CampCenter.Infrastructure.Persistence.Configurations]] - `contains` [EXTRACTED]
 - [[PaymentConfiguration]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/types/react
+#graphify/code #graphify/EXTRACTED #community/PaymentConfiguration

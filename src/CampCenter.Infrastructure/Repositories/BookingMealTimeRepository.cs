@@ -14,10 +14,7 @@ public class BookingMealTimeRepository : IBookingMealTimeRepository
     public Task<List<BookingMealTime>> ListForBookingAsync(
         Guid bookingId,
         CancellationToken cancellationToken = default
-    ) =>
-        _db
-            .BookingMealTimes.Where(m => m.BookingId == bookingId)
-            .ToListAsync(cancellationToken);
+    ) => _db.BookingMealTimes.Where(m => m.BookingId == bookingId).ToListAsync(cancellationToken);
 
     public Task<List<BookingMealTime>> ListForBookingsAsync(
         IReadOnlyCollection<Guid> bookingIds,

@@ -156,7 +156,11 @@ public class BookingService : IBookingService
         }
 
         await SendSafelyAsync(
-            EmailTemplates.BookingCreated(booking, ManageUrl(token.RawToken), FinalDueDate(booking)),
+            EmailTemplates.BookingCreated(
+                booking,
+                ManageUrl(token.RawToken),
+                FinalDueDate(booking)
+            ),
             cancellationToken
         );
 

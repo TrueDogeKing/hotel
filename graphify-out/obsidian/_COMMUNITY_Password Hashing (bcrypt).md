@@ -1,19 +1,23 @@
 ---
 type: community
-members: 6
+members: 10
 ---
 
 # Password Hashing (bcrypt)
 
-**Members:** 6 nodes
+**Members:** 10 nodes
 
 ## Members
-- [[.Hash()_1]] - code - src/CampCenter.Infrastructure/Auth/BcryptPasswordHasher.cs
-- [[.Verify()]] - code - src/CampCenter.Application/Interfaces/IPasswordHasher.cs
-- [[.Verify()_1]] - code - src/CampCenter.Infrastructure/Auth/BcryptPasswordHasher.cs
-- [[BcryptPasswordHasher]] - code - src/CampCenter.Infrastructure/Auth/BcryptPasswordHasher.cs
-- [[IPasswordHasher]] - code - src/CampCenter.Application/Interfaces/IPasswordHasher.cs
-- [[IPasswordHasher.cs]] - code - src/CampCenter.Application/Interfaces/IPasswordHasher.cs
+- [[.CreateAsync()_2]] - code - src/CampCenter.Application/Interfaces/IClosureService.cs
+- [[.DeleteAsync()]] - code - src/CampCenter.Application/Interfaces/IClosureService.cs
+- [[.GetAllAsync()]] - code - src/CampCenter.Application/Interfaces/IClosureService.cs
+- [[.UpdateAsync()]] - code - src/CampCenter.Application/Interfaces/IClosureService.cs
+- [[CancellationToken_21]] - code
+- [[Guid_11]] - code
+- [[IClosureService]] - code - src/CampCenter.Application/Interfaces/IClosureService.cs
+- [[IClosureService.cs]] - code - src/CampCenter.Application/Interfaces/IClosureService.cs
+- [[List_1]] - code
+- [[Task_21]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -23,13 +27,15 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_Booking Persistence & Entities (1)]]
-- 2 edges to [[_COMMUNITY_Auth Service & Tokens]]
+- 5 edges to [[_COMMUNITY_AvailabilityService]]
+- 4 edges to [[_COMMUNITY_ClosureService]]
+- 2 edges to [[_COMMUNITY_ClosureValidatorsTests]]
+- 1 edge to [[_COMMUNITY_CampCenter.Application.DTOs.Public]]
 - 1 edge to [[_COMMUNITY_Application Namespaces & DTOs]]
-- 1 edge to [[_COMMUNITY_.CreateClient]]
 
 ## Top bridge nodes
-- [[IPasswordHasher]] - degree 6, connects to 2 communities
-- [[BcryptPasswordHasher]] - degree 4, connects to 1 community
-- [[IPasswordHasher.cs]] - degree 2, connects to 1 community
-- [[.Verify()]] - degree 2, connects to 1 community
+- [[.UpdateAsync()]] - degree 7, connects to 3 communities
+- [[.CreateAsync()_2]] - degree 6, connects to 3 communities
+- [[IClosureService]] - degree 7, connects to 2 communities
+- [[.GetAllAsync()]] - degree 6, connects to 2 communities
+- [[IClosureService.cs]] - degree 3, connects to 2 communities

@@ -2,7 +2,7 @@
 source_file: "src/CampCenter.Application/DTOs/AdminPanel/HousekeepingDtos.cs"
 type: "code"
 community: "CampCenter.UnitTests / Services (2)"
-location: "L53"
+location: "L57"
 tags:
   - graphify/code
   - graphify/EXTRACTED

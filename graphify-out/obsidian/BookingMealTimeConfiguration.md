@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Persistence/Configurations/BookingMealTimeConfiguration.cs"
 type: "code"
-community: "@types/react"
+community: "BookingMealTimeConfiguration"
 location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/types/react
+  - community/BookingMealTimeConfiguration
 ---
 
 # BookingMealTimeConfiguration
@@ -17,4 +17,4 @@ tags:
 - [[BookingMealTimeConfiguration.cs]] - `contains` [EXTRACTED]
 - [[IEntityTypeConfiguration]] - `implements` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/types/react
+#graphify/code #graphify/EXTRACTED #community/BookingMealTimeConfiguration

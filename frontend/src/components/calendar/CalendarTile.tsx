@@ -49,12 +49,7 @@ export default function CalendarTile({
 
   return (
     <div className={classes.join(" ")}>
-      <button
-        type="button"
-        className="cal-date"
-        onClick={() => onSelectDay(iso)}
-        aria-label={iso}
-      >
+      <button type="button" className="cal-date" onClick={() => onSelectDay(iso)} aria-label={iso}>
         {date.getDate()}
       </button>
 

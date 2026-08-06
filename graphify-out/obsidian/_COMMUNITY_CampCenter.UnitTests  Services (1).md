@@ -1,11 +1,11 @@
 ---
 type: community
-members: 79
+members: 80
 ---
 
 # CampCenter.UnitTests / Services (1)
 
-**Members:** 79 nodes
+**Members:** 80 nodes
 
 ## Members
 - [[.AddAsync()_4]] - code - src/CampCenter.Domain/Repositories/IMealTimeDefaultRepository.cs
@@ -47,7 +47,7 @@ members: 79
 - [[.SeededDefaults()]] - code - tests/CampCenter.UnitTests/Services/MealGenerationPlannerTests.cs
 - [[.SeededSlots()]] - code - tests/CampCenter.UnitTests/Services/MealGenerationPlannerTests.cs
 - [[.ToDto()_2]] - code - src/CampCenter.Application/Services/MealTimeService.cs
-- [[.UpdateAsync()_4]] - code - src/CampCenter.Application/Services/MealTimeService.cs
+- [[.UpdateAsync()_5]] - code - src/CampCenter.Application/Services/MealTimeService.cs
 - [[CancellationToken_37]] - code
 - [[CancellationToken_47]] - code
 - [[CancellationToken_60]] - code
@@ -70,6 +70,7 @@ members: 79
 - [[List_33]] - code
 - [[List_40]] - code
 - [[MealGenerationPlanner]] - code - src/CampCenter.Application/Services/MealGenerationPlanner.cs
+- [[MealGenerationPlanner.cs]] - code - src/CampCenter.Application/Services/MealGenerationPlanner.cs
 - [[MealGenerationPlannerTests]] - code - tests/CampCenter.UnitTests/Services/MealGenerationPlannerTests.cs
 - [[MealKind_1]] - code - src/CampCenter.Domain/Entities/MealTimeDefault.cs
 - [[MealSlot]] - code - src/CampCenter.Application/Services/MealGenerationPlanner.cs
@@ -97,15 +98,16 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 16 edges to [[_COMMUNITY_CampCenter.Application  Services (2)]]
-- 8 edges to [[_COMMUNITY_Camp Session Management]]
-- 6 edges to [[_COMMUNITY_Exception]]
+- 5 edges to [[_COMMUNITY_Exception]]
+- 4 edges to [[_COMMUNITY_IEntityTypeConfiguration]]
+- 4 edges to [[_COMMUNITY_IMealTimeService]]
+- 2 edges to [[_COMMUNITY_ClosureService_1]]
 - 2 edges to [[_COMMUNITY_components  admin]]
-- 2 edges to [[_COMMUNITY_@typesreact]]
-- 1 edge to [[_COMMUNITY_Public Booking Service (2)]]
+- 2 edges to [[_COMMUNITY_MealTimeDefaultConfiguration]]
 
 ## Top bridge nodes
 - [[MealTimeDefault_1]] - degree 29, connects to 3 communities
 - [[MealTimeService]] - degree 11, connects to 2 communities
 - [[IMealTimeDefaultRepository]] - degree 11, connects to 2 communities
 - [[MealTimeDefaultRepository]] - degree 10, connects to 2 communities
-- [[.EffectiveSlots()]] - degree 16, connects to 1 community
+- [[MealTimeDefaultDto]] - degree 8, connects to 2 communities

@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Api/Controllers/Public/PublicPaymentsController.cs"
 type: "code"
-community: ".CreateClient"
+community: "CampCenter.Application.DTOs.Public"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateClient
+  - community/CampCenterApplicationDTOsPublic
 ---
 
 # PublicPaymentsController.cs
@@ -16,4 +16,4 @@ tags:
 - [[CampCenter.Application.Interfaces]] - `imports` [EXTRACTED]
 - [[PublicPaymentsController]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateClient
+#graphify/code #graphify/EXTRACTED #community/CampCenterApplicationDTOsPublic

@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Api/Controllers/Public/PublicAvailabilityController.cs"
 type: "code"
-community: ".CreateClient"
+community: "CampCenter.Application.DTOs.Public"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateClient
+  - community/CampCenterApplicationDTOsPublic
 ---
 
 # PublicAvailabilityController.cs
@@ -18,4 +18,4 @@ tags:
 - [[CampCenter.Domain.Repositories]] - `imports` [EXTRACTED]
 - [[PublicAvailabilityController]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateClient
+#graphify/code #graphify/EXTRACTED #community/CampCenterApplicationDTOsPublic

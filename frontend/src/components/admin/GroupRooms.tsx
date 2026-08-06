@@ -66,14 +66,13 @@ export default function GroupRooms({ bookingId, onChanged }: Props) {
     if (!booking) return;
     setNotice(null);
     setError(null);
-    setDrafts(
-      booking.assignments.map((a) => ({ roomId: a.roomId, peopleCount: a.peopleCount })),
-    );
+    setDrafts(booking.assignments.map((a) => ({ roomId: a.roomId, peopleCount: a.peopleCount })));
   }
 
   function updateDraft(index: number, patch: Partial<Draft>) {
-    setDrafts((current) =>
-      current?.map((draft, i) => (i === index ? { ...draft, ...patch } : draft)) ?? null,
+    setDrafts(
+      (current) =>
+        current?.map((draft, i) => (i === index ? { ...draft, ...patch } : draft)) ?? null,
     );
   }
 
@@ -138,8 +137,7 @@ export default function GroupRooms({ bookingId, onChanged }: Props) {
   // Two separate reasons the rooms may not be changed: the booking is over, or
   // the reader is a worker. Only the first one is worth explaining — a worker is
   // not being blocked from something they were offered.
-  const editable =
-    canEdit && booking.status !== "Cancelled" && booking.status !== "Completed";
+  const editable = canEdit && booking.status !== "Cancelled" && booking.status !== "Completed";
 
   return (
     <section className="group-rooms">

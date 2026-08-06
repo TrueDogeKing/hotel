@@ -88,7 +88,9 @@ public class ScheduleEntryRepository : IScheduleEntryRepository
         return [.. rows.Select(r => (r.BookingId, r.MealTimeDefaultId))];
     }
 
-    public async Task<List<(Guid BookingId, Guid MealTimeDefaultId, TimeOnly Start, TimeOnly End)>> ListVisibleSlotSpansAsync(
+    public async Task<
+        List<(Guid BookingId, Guid MealTimeDefaultId, TimeOnly Start, TimeOnly End)>
+    > ListVisibleSlotSpansAsync(
         IReadOnlyCollection<Guid> bookingIds,
         CancellationToken cancellationToken = default
     )
@@ -118,7 +120,9 @@ public class ScheduleEntryRepository : IScheduleEntryRepository
             .OrderBy(location => location)
             .ToListAsync(cancellationToken);
 
-    public async Task<List<(DateOnly Date, ScheduleEntryKind Kind, int Count)>> CountByDateAndKindAsync(
+    public async Task<
+        List<(DateOnly Date, ScheduleEntryKind Kind, int Count)>
+    > CountByDateAndKindAsync(
         DateOnly start,
         DateOnly end,
         IReadOnlyCollection<Guid> bookingIds,
@@ -154,8 +158,10 @@ public class ScheduleEntryRepository : IScheduleEntryRepository
         CancellationToken cancellationToken = default
     ) => await _db.ScheduleEntries.AddRangeAsync(entries, cancellationToken);
 
-    public async Task AddAsync(ScheduleEntry entry, CancellationToken cancellationToken = default) =>
-        await _db.ScheduleEntries.AddAsync(entry, cancellationToken);
+    public async Task AddAsync(
+        ScheduleEntry entry,
+        CancellationToken cancellationToken = default
+    ) => await _db.ScheduleEntries.AddAsync(entry, cancellationToken);
 
     public void Remove(ScheduleEntry entry) => _db.ScheduleEntries.Remove(entry);
 
@@ -167,7 +173,7 @@ public class ScheduleEntryRepository : IScheduleEntryRepository
         }
         catch (DbUpdateException ex)
             when (ex.InnerException
-                is PostgresException { SqlState: PostgresErrorCodes.UniqueViolation }
+                    is PostgresException { SqlState: PostgresErrorCodes.UniqueViolation }
             )
         {
             // The generation idempotency index rejected a duplicate: a concurrent

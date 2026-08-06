@@ -72,6 +72,10 @@ public record RoomTaskDto(
 /// RoomId is optional: a general reminder not tied to any room leaves it null.
 public record CreateRoomTaskRequestDto(Guid? RoomId, string Text, Guid? BookingId);
 
+/// Editing a task rewrites its text and may move it to another room — or to no room
+/// at all, by leaving RoomId null. Status and booking stay as they were.
+public record UpdateRoomTaskRequestDto(Guid? RoomId, string Text);
+
 /// A room this booking may occupy: active, and free of other bookings and closures
 /// over the whole stay. The booking's own rooms are in the list too, flagged with
 /// Assigned — moving a group is picking from this one set.

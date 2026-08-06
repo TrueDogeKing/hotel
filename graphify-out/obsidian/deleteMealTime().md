@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/api/admin.ts"
 type: "code"
-community: "src / api (1)"
-location: "L714"
+community: "Domain & Infra Namespaces"
+location: "L712"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/src_/_api_1
+  - community/Domain__Infra_Namespaces
 ---
 
 # deleteMealTime()
@@ -15,4 +15,4 @@ tags:
 - [[MealTimesPage.tsx]] - `imports` [EXTRACTED]
 - [[admin.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/src_/_api_1
+#graphify/code #graphify/EXTRACTED #community/Domain__Infra_Namespaces

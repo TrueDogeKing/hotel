@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: ".GetBlockedRoomIdsAsync"
+community: "Admin Booking & Notifications (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/GetBlockedRoomIdsAsync
+  - community/Admin_Booking__Notifications_1
 ---
 
 # HashSet
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.GetBlockedRoomIdsAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/GetBlockedRoomIdsAsync
+#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_1

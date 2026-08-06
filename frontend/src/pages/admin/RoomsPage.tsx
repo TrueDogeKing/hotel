@@ -124,48 +124,48 @@ export default function RoomsPage() {
       <h1>{t("adminRooms.title")}</h1>
 
       {canEdit && (
-      <form className="admin-form" onSubmit={handleSubmit}>
-        <label>
-          {t("adminRooms.number")}
-          <input
-            value={form.number}
-            onChange={(e) => setForm({ ...form, number: e.target.value })}
-            required
-            maxLength={32}
-          />
-        </label>
-        <label>
-          {t("adminRooms.capacity")}
-          <input
-            type="number"
-            min={1}
-            max={20}
-            value={form.capacity}
-            onChange={(e) => setForm({ ...form, capacity: e.target.value })}
-            required
-          />
-        </label>
-        <label>
-          {t("adminRooms.description")}
-          <input
-            value={form.description}
-            onChange={(e) => setForm({ ...form, description: e.target.value })}
-            maxLength={512}
-          />
-        </label>
-        <button type="submit">{editing ? t("adminRooms.save") : t("adminRooms.add")}</button>
-        {editing && (
-          <button
-            type="button"
-            onClick={() => {
-              setEditing(null);
-              setForm(emptyForm);
-            }}
-          >
-            {t("adminRooms.cancelEdit")}
-          </button>
-        )}
-      </form>
+        <form className="admin-form" onSubmit={handleSubmit}>
+          <label>
+            {t("adminRooms.number")}
+            <input
+              value={form.number}
+              onChange={(e) => setForm({ ...form, number: e.target.value })}
+              required
+              maxLength={32}
+            />
+          </label>
+          <label>
+            {t("adminRooms.capacity")}
+            <input
+              type="number"
+              min={1}
+              max={20}
+              value={form.capacity}
+              onChange={(e) => setForm({ ...form, capacity: e.target.value })}
+              required
+            />
+          </label>
+          <label>
+            {t("adminRooms.description")}
+            <input
+              value={form.description}
+              onChange={(e) => setForm({ ...form, description: e.target.value })}
+              maxLength={512}
+            />
+          </label>
+          <button type="submit">{editing ? t("adminRooms.save") : t("adminRooms.add")}</button>
+          {editing && (
+            <button
+              type="button"
+              onClick={() => {
+                setEditing(null);
+                setForm(emptyForm);
+              }}
+            >
+              {t("adminRooms.cancelEdit")}
+            </button>
+          )}
+        </form>
       )}
 
       {error && <p role="alert">{error}</p>}

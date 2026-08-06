@@ -17,6 +17,12 @@ public interface IRoomTaskService
         CancellationToken cancellationToken = default
     );
 
+    Task<RoomTaskDto> UpdateAsync(
+        Guid id,
+        UpdateRoomTaskRequestDto request,
+        CancellationToken cancellationToken = default
+    );
+
     Task<RoomTaskDto> SetStatusAsync(
         Guid id,
         RoomTaskStatus status,

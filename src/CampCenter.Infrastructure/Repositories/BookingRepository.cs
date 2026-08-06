@@ -68,9 +68,7 @@ public class BookingRepository : IBookingRepository
         _db
             .Bookings.Include(b => b.RoomAssignments)
                 .ThenInclude(a => a.Room)
-            .Where(b =>
-                LiveStatuses.Contains(b.Status) && b.StartDate < end && start < b.EndDate
-            )
+            .Where(b => LiveStatuses.Contains(b.Status) && b.StartDate < end && start < b.EndDate)
             .OrderBy(b => b.StartDate)
             .ToListAsync(cancellationToken);
 
@@ -308,8 +306,7 @@ public class BookingRepository : IBookingRepository
         for (Exception? ex = exception; ex is not null; ex = ex.InnerException)
         {
             if (
-                ex
-                is PostgresException
+                ex is PostgresException
                 {
                     SqlState: PostgresErrorCodes.UniqueViolation
                         or PostgresErrorCodes.ExclusionViolation

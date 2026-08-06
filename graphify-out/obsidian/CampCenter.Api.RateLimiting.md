@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Api/RateLimiting/RateLimitPolicies.cs"
 type: "code"
-community: ".CreateClient"
+community: "Public Booking Service (2)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateClient
+  - community/Public_Booking_Service_2
 ---
 
 # CampCenter.Api.RateLimiting
@@ -17,4 +17,4 @@ tags:
 - [[PublicBookingsController.cs]] - `imports` [EXTRACTED]
 - [[RateLimitPolicies.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateClient
+#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_2

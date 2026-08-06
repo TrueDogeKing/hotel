@@ -1,11 +1,11 @@
 ---
 type: community
-members: 108
+members: 105
 ---
 
 # CampCenter.Application / Services (2)
 
-**Members:** 108 nodes
+**Members:** 105 nodes
 
 ## Members
 - [[.AddAsync()_1]] - code - src/CampCenter.Domain/Repositories/IBookingMealTimeRepository.cs
@@ -41,7 +41,6 @@ members: 108
 - [[.ListForDateAsync()_1]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
 - [[.ListFullySuppressedSlotsAsync()]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
 - [[.ListGeneratedSlotsAsync()]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
-- [[.ListLivePresentInAsync()]] - code - src/CampCenter.Domain/Repositories/IBookingRepository.cs
 - [[.ListLocationsAsync()]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
 - [[.ListVisibleSlotSpansAsync()]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
 - [[.Minutes()]] - code - src/CampCenter.Application/Services/ScheduleService.cs
@@ -51,7 +50,6 @@ members: 108
 - [[.Remove()_1]] - code - src/CampCenter.Domain/Repositories/IBookingMealTimeRepository.cs
 - [[.Remove()_6]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
 - [[.Remove()_8]] - code - src/CampCenter.Infrastructure/Repositories/BookingMealTimeRepository.cs
-- [[.Remove()_13]] - code - src/CampCenter.Infrastructure/Repositories/ScheduleEntryRepository.cs
 - [[.ResetBookingMealTimeAsync()_1]] - code - src/CampCenter.Application/Services/ScheduleService.cs
 - [[.RetimeGeneratedMealsAsync()]] - code - src/CampCenter.Application/Services/ScheduleService.cs
 - [[.SaveChangesAsync()_1]] - code - src/CampCenter.Domain/Repositories/IBookingMealTimeRepository.cs
@@ -63,7 +61,6 @@ members: 108
 - [[.UpdateEntryAsync()_1]] - code - src/CampCenter.Application/Services/ScheduleService.cs
 - [[BookingId]] - code
 - [[BookingMealTime_1]] - code - src/CampCenter.Domain/Entities/BookingMealTime.cs
-- [[BookingMealTime.cs]] - code - src/CampCenter.Domain/Entities/BookingMealTime.cs
 - [[BookingMealTimeDto]] - code - src/CampCenter.Application/DTOs/Schedule/MealTimeDtos.cs
 - [[BookingMealTimeRepository]] - code - src/CampCenter.Infrastructure/Repositories/BookingMealTimeRepository.cs
 - [[CancellationToken_41]] - code
@@ -125,24 +122,27 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 17 edges to [[_COMMUNITY_DTOs  Schedule (1)]]
 - 16 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (1)]]
-- 9 edges to [[_COMMUNITY_Integration Test Harness (1)]]
+- 15 edges to [[_COMMUNITY_DTOs  Schedule (1)]]
+- 8 edges to [[_COMMUNITY_Integration Test Harness (1)]]
 - 8 edges to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
 - 7 edges to [[_COMMUNITY_Integration Test Harness (2)]]
 - 7 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (4)]]
-- 6 edges to [[_COMMUNITY_Exception]]
-- 4 edges to [[_COMMUNITY_@typesreact]]
-- 3 edges to [[_COMMUNITY_Camp Session Management]]
+- 5 edges to [[_COMMUNITY_Exception]]
+- 3 edges to [[_COMMUNITY_IEntityTypeConfiguration]]
 - 3 edges to [[_COMMUNITY_Public Booking Service (1)]]
 - 3 edges to [[_COMMUNITY_components  admin]]
 - 2 edges to [[_COMMUNITY_tests  CampCenter.IntegrationTests (1)]]
+- 2 edges to [[_COMMUNITY_ClosureService_1]]
+- 2 edges to [[_COMMUNITY_BookingMealTimeConfiguration]]
+- 2 edges to [[_COMMUNITY_IEntityTypeConfiguration_1]]
+- 1 edge to [[_COMMUNITY_Camp Session Management]]
+- 1 edge to [[_COMMUNITY_CampCenter.UnitTests  Validators]]
 - 1 edge to [[_COMMUNITY_Admin Booking & Notifications (2)]]
-- 1 edge to [[_COMMUNITY_Public Booking Service (2)]]
 
 ## Top bridge nodes
 - [[ScheduleEntry_1]] - degree 28, connects to 6 communities
 - [[ScheduleService]] - degree 36, connects to 5 communities
-- [[BookingMealTime_1]] - degree 22, connects to 4 communities
+- [[BookingMealTime_1]] - degree 22, connects to 5 communities
 - [[IScheduleEntryRepository]] - degree 17, connects to 4 communities
-- [[.ToDto()_5]] - degree 15, connects to 3 communities
+- [[.SetBookingMealTimeAsync()_1]] - degree 16, connects to 3 communities

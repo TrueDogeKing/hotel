@@ -131,6 +131,7 @@ tags:
 - [[updateMealTime()]] - `contains` [EXTRACTED]
 - [[updateRoom()]] - `contains` [EXTRACTED]
 - [[updateScheduleEntry()]] - `contains` [EXTRACTED]
+- [[updateTask()]] - `contains` [EXTRACTED]
 - [[userRoles]] - `contains` [EXTRACTED]
 - [[zlToGrosze()]] - `contains` [EXTRACTED]
 

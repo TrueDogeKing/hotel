@@ -94,8 +94,10 @@ public class BookingsController : ControllerBase
     [HttpGet("{id:guid}/assignable-rooms")]
     [ProducesResponseType(typeof(List<AssignableRoomDto>), StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public async Task<IActionResult> AssignableRooms(Guid id, CancellationToken cancellationToken) =>
-        Ok(await _bookings.GetAssignableRoomsAsync(id, cancellationToken));
+    public async Task<IActionResult> AssignableRooms(
+        Guid id,
+        CancellationToken cancellationToken
+    ) => Ok(await _bookings.GetAssignableRoomsAsync(id, cancellationToken));
 
     [HttpPut("{id:guid}/assignments")]
     [ProducesResponseType(typeof(AdminBookingDto), StatusCodes.Status200OK)]
