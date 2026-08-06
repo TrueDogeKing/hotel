@@ -7,13 +7,17 @@ import {
   IconArrowRight,
   IconBed,
   IconMail,
-  IconMap,
   IconMapPin,
   IconPhone,
   IconSunSea,
   IconUtensils,
   IconWaves,
 } from "../components/icons";
+
+// The keyless Google Maps embed endpoint: it takes a place query directly, no
+// API key or billing account needed (unlike the JS/Embed API proper).
+const MAP_QUERY = encodeURIComponent("Gdańska 47A, 82-110 Sztutowo");
+const MAP_EMBED_SRC = `https://maps.google.com/maps?q=${MAP_QUERY}&z=15&output=embed`;
 
 // Public landing page: sticky nav, hero, feature cards, how-it-works, contact,
 // footer. Structure mirrors the stitch mockup.
@@ -110,8 +114,13 @@ export default function PublicHomePage() {
               </li>
             </ul>
           </div>
-          <div className="home-contact-map" aria-hidden="true">
-            <IconMap />
+          <div className="home-contact-map">
+            <iframe
+              title={t("home.contactAddress")}
+              src={MAP_EMBED_SRC}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
           </div>
         </section>
       </main>

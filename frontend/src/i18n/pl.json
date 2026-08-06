@@ -69,16 +69,16 @@
       },
       "meals": {
         "title": "Wyżywienie",
-        "body": "Własna kuchnia i stołówka: cztery posiłki dziennie, jadłospisy dostosowane do diet uczestników."
+        "body": "Własna kuchnia i stołówka: trzy posiłki dziennie, jadłospisy dostosowane do diet uczestników."
       },
       "grounds": {
         "title": "Teren rekreacyjny",
-        "body": "Boiska, świetlice, plaża nad morzem i wyznaczone kąpielisko z ratownikiem."
+        "body": "Boiska, świetlice, basen i plaża nad morzem."
       }
     },
     "contactTitle": "Skontaktuj się",
     "contactLead": "Masz pytania o pobyt grupy w ośrodku Alga? Nasz zespół pomoże zaplanować idealny wyjazd.",
-    "contactAddress": "Ośrodek Alga, ul. Jeziorna 1, 11-111 Nadjeziorze",
+    "contactAddress": "Ośrodek Alga, ul. Gdańska 47A, 82-110 Sztutowo",
     "contactPhone": "+48 000 000 000",
     "contactEmail": "rezerwacje@alga.pl",
     "rights": "© 2026 Alga. Wszelkie prawa zastrzeżone."
