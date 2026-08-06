@@ -307,7 +307,7 @@
     "freeRoom": "Room free",
     "blocked": "closed",
     "closedRoom": "Room closed in this range",
-    "tasks": "Housekeeping tasks",
+    "tasks": "Tasks",
     "noTasks": "No tasks.",
     "taskPlaceholder": "e.g. extra bed",
     "addTask": "Add task",
@@ -315,7 +315,7 @@
     "loadError": "Failed to load occupancy."
   },
   "tasks": {
-    "title": "Housekeeping tasks",
+    "title": "Tasks",
     "showDone": "Show done",
     "empty": "No tasks.",
     "room": "Room",

@@ -235,7 +235,7 @@
       },
       "tasks": {
         "name": "Zadania",
-        "description": "Zadania dla obsługi, np. dostawki."
+        "description": "Zadania do wykonania, np. dostawki."
       },
       "closures": {
         "name": "Blokady",
@@ -308,7 +308,7 @@
     "freeRoom": "Pokój wolny",
     "blocked": "zamknięty",
     "closedRoom": "Pokój zamknięty w tym terminie",
-    "tasks": "Zadania dla obsługi",
+    "tasks": "Zadania do wykonania",
     "noTasks": "Brak zadań.",
     "taskPlaceholder": "np. dostawka — 1 łóżko",
     "addTask": "Dodaj zadanie",
@@ -316,7 +316,7 @@
     "loadError": "Nie udało się pobrać obłożenia."
   },
   "tasks": {
-    "title": "Zadania dla obsługi",
+    "title": "Zadania do wykonania",
     "showDone": "Pokaż wykonane",
     "empty": "Brak zadań.",
     "room": "Pokój",
