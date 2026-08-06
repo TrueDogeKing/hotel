@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "AvailabilityService"
+community: "Admin Bookings Controller & DTOs"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AvailabilityService
+  - community/Admin_Bookings_Controller__DTOs
 ---
 
 # ControllerBase
@@ -18,12 +18,12 @@ tags:
 - [[HousekeepingController]] - `inherits` [EXTRACTED]
 - [[MealTimesController]] - `inherits` [EXTRACTED]
 - [[OccupancyController]] - `inherits` [EXTRACTED]
+- [[PricingController]] - `inherits` [EXTRACTED]
 - [[PublicAvailabilityController]] - `inherits` [EXTRACTED]
 - [[PublicBookingsController]] - `inherits` [EXTRACTED]
-- [[PublicPaymentsController]] - `inherits` [EXTRACTED]
 - [[RoomsController]] - `inherits` [EXTRACTED]
 - [[ScheduleController]] - `inherits` [EXTRACTED]
 - [[TasksController]] - `inherits` [EXTRACTED]
 - [[UsersController]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AvailabilityService
+#graphify/code #graphify/EXTRACTED #community/Admin_Bookings_Controller__DTOs

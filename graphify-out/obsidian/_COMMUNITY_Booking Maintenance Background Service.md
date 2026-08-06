@@ -27,7 +27,7 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 1 edge to [[_COMMUNITY_Exception]]
-- 1 edge to [[_COMMUNITY_Integration Test Harness (1)]]
+- 1 edge to [[_COMMUNITY_Admin Booking & Notifications (4)]]
 
 ## Top bridge nodes
 - [[BookingMaintenanceService]] - degree 7, connects to 1 community

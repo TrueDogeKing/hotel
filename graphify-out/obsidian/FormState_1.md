@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/pages/admin/UsersPage.tsx"
 type: "code"
-community: "UsersPage.tsx"
+community: "useAuth"
 location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/UsersPagetsx
+  - community/useAuth
 ---
 
 # FormState
@@ -15,4 +15,4 @@ tags:
 - [[UserRole]] - `references` [EXTRACTED]
 - [[UsersPage.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/UsersPagetsx
+#graphify/code #graphify/EXTRACTED #community/useAuth

@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "../components/LanguageSwitcher";
 import ConfirmDialog from "../components/ConfirmDialog";
 import { formatZl } from "../api/admin";
-import { cancelBooking, getBooking, initiatePayment, type BookingDetails } from "../api/public";
+import { cancelBooking, getBooking, type BookingDetails } from "../api/public";
 import { formatDate as formatIsoDate } from "../utils/dates";
 import BookingSchedule from "../components/BookingSchedule";
 
@@ -19,7 +19,6 @@ export default function BookingManagePage() {
   const [notFound, setNotFound] = useState(false);
   const [confirmCancel, setConfirmCancel] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [paying, setPaying] = useState(false);
 
   useEffect(() => {
     if (!token) return;
@@ -48,18 +47,10 @@ export default function BookingManagePage() {
     [i18n.language],
   );
 
-  async function pay(kind: "Deposit" | "Final") {
-    if (!token) return;
-    setError(null);
-    setPaying(true);
-    try {
-      const { redirectUrl } = await initiatePayment(token, kind);
-      window.location.href = redirectUrl;
-    } catch {
-      setError(t("manage.paymentError"));
-      setPaying(false);
-    }
-  }
+  // Paying online is switched off: the group settles with the centre directly
+  // and the owner records it in the panel. See PublicPaymentsController for the
+  // commented-out P24 flow this replaced.
+  // async function pay(kind: "Deposit" | "Final") { … }
 
   async function handleCancel() {
     if (!token) return;
@@ -131,32 +122,12 @@ export default function BookingManagePage() {
               )}
             </dl>
 
-            {booking.payments.length > 0 && (
-              <>
-                <h2>{t("manage.payments")}</h2>
-                <ul>
-                  {booking.payments.map((p) => (
-                    <li key={p.id}>
-                      {t(`manage.paymentKinds.${p.kind}`)} — {formatZl(p.amountGrosze)} —{" "}
-                      {t(`manage.paymentStatuses.${p.status}`)}
-                    </li>
-                  ))}
-                </ul>
-              </>
-            )}
+            <p className="pay-offline">{t("manage.payOffline")}</p>
 
             {error && <p role="alert">{error}</p>}
 
             {booking.status === "PendingDeposit" && (
               <div className="manage-actions">
-                <button
-                  type="button"
-                  className="pay-button"
-                  disabled={paying}
-                  onClick={() => void pay("Deposit")}
-                >
-                  {paying ? t("manage.redirecting") : t("manage.payDeposit")}
-                </button>
                 <button type="button" onClick={() => setConfirmCancel(true)}>
                   {t("manage.cancel")}
                 </button>
@@ -167,20 +138,6 @@ export default function BookingManagePage() {
             {token && (booking.status === "Confirmed" || booking.status === "Completed") && (
               <BookingSchedule token={token} />
             )}
-
-            {booking.status === "Confirmed" &&
-              !booking.payments.some((p) => p.kind === "Final" && p.status === "Completed") && (
-                <div className="manage-actions">
-                  <button
-                    type="button"
-                    className="pay-button"
-                    disabled={paying}
-                    onClick={() => void pay("Final")}
-                  >
-                    {paying ? t("manage.redirecting") : t("manage.payFinal")}
-                  </button>
-                </div>
-              )}
           </>
         )}
       </section>

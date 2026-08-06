@@ -1,19 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "tests / CampCenter.IntegrationTests (1)"
+community: "CampCenter.UnitTests / Services (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/tests_/_CampCenterIntegrationTests_1
+  - community/CampCenterUnitTests_/_Services_2
 ---
 
 # Task
 
 ## Connections
-- [[.AssignableRooms_OffersOwnAndFreeRooms_ButNotTakenOrClosedOnes()]] - `references` [EXTRACTED]
-- [[.Closure_BlocksRoom_InOccupancyGrid()]] - `references` [EXTRACTED]
-- [[.DashboardGroups_SplitByCategory_AndPage()]] - `references` [EXTRACTED]
-- [[.Occupancy_Reassign_Tasks_And_Dashboard_Work()]] - `references` [EXTRACTED]
+- [[.AddAsync()_18]] - `references` [EXTRACTED]
+- [[.CountDoneByDateAsync()_1]] - `references` [EXTRACTED]
+- [[.GetAsync()_9]] - `references` [EXTRACTED]
+- [[.ListForDateAsync()_2]] - `references` [EXTRACTED]
+- [[.SaveChangesAsync()_18]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/tests_/_CampCenterIntegrationTests_1
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_2

@@ -5,7 +5,7 @@
 Aplikacja webowa ośrodka kolonijnego: strona informacyjna, rezerwacja pobytów
 w dowolnym zakresie dat dla grup zorganizowanych (bez konta, potwierdzenie
 e-mailem) oraz panel administratora (pokoje, blokady, obłożenie, zadania dla
-obsługi). Płatności online przez Przelewy24 (zaliczka + dopłata).
+obsługi). Płatności rozliczane poza systemem: właściciel odnotowuje je w panelu.
 
 ## Architektura
 
@@ -16,7 +16,13 @@ obsługi). Płatności online przez Przelewy24 (zaliczka + dopłata).
 * Autoryzacja: JWT (access token) + refresh token w cookie HttpOnly — tylko admini;
   rezerwujący nie mają kont (link zarządzania z tokenem w e-mailu)
 * E-mail: MailKit/SMTP (dev: Mailpit, http://localhost:8025)
-* Płatności: Przelewy24 (sandbox w dev), zaliczka potwierdza rezerwację
+* Płatności: rozliczane poza aplikacją (przelew/gotówka). Właściciel ustawia
+  stan rezerwacji jedną listą (BookingState: AwaitingPayment / DepositPaid /
+  Paid / Cancelled / Completed — endpoint PUT /api/admin/bookings/{id}/state),
+  która składa razem Status i PaymentState; odnotowanie wpłaty potwierdza
+  rezerwację, wybór "anulowana" zwalnia pokoje i wysyła e-mail. Kod Przelewy24 jest zakomentowany, nie usunięty —
+  PublicPaymentsController, akcja InitiatePayment, rejestracje IPaymentService /
+  IPaymentGateway i binding P24Settings
 * Reverse proxy / TLS: Caddy; środowisko: Docker Compose
 
 ## Model domeny
@@ -29,13 +35,19 @@ obsługi). Płatności online przez Przelewy24 (zaliczka + dopłata).
 * Booking — rezerwacja grupowa (daty StartDate/EndDate, organizacja, kontakt,
   liczba osób, status PendingDeposit/Confirmed/Cancelled/Completed, token
   zarządzania hashowany, język pl/en, kwoty w groszach — snapshot). Cennik
-  globalny: cena/os./noc + zaliczka/os./noc z konfiguracji (sekcja "Booking")
+  cena/os./noc snapshotowana na rezerwacji i edytowalna per grupa (total =
+  stawka × osoby × noce, można nadpisać kwotą negocjowaną); PaymentState
+  Unpaid/DepositPaid/Paid ustawiany ręcznie przez właściciela
+* PricingDefaults — jednowierszowa tabela ze stawkami ośrodka (cena i zaliczka
+  na osobę za noc), edytowana w panelu nad listą rezerwacji; wypełnia nową
+  rezerwację, nie przelicza istniejących. Do czasu pierwszego zapisu obowiązują
+  wartości z konfiguracji (sekcja "Booking")
 * BookingRoomAssignment — konkretne pokoje przydzielone przy utworzeniu, z
   zakresem dat; ograniczenie wykluczające GiST (btree_gist) na
   (RoomId, daterange[StartDate,EndDate)) chroni przed podwójną rezerwacją
   (zakresy półotwarte — wyjazd = przyjazd tego samego dnia nie kolidują)
 * RoomTask — zadania dla obsługi (np. dostawka), Open/Done
-* Payment — Deposit/Final, Pending/Completed/Failed, pola P24; częściowy
+* Payment — historyczne wpłaty P24 (tabela została, flow wyłączony); częściowy
   unikalny indeks (BookingId, Kind) WHERE Completed
 
 ## Knowledge graph / Obsidian vault (obowiązkowe)
@@ -85,7 +97,8 @@ nieaktualny vault jest gorszy niż jego brak.
 * Hasła bcrypt; JWT + rotacja refresh tokenów z detekcją ponownego użycia
 * Rate limiting globalny per-IP + zaostrzony na auth i publiczne endpointy rezerwacji
 * Walidacja FluentValidation; kwoty płatności zawsze liczone po stronie serwera
-* Webhook P24: weryfikacja podpisu SHA-384 + kwoty + transaction/verify, idempotentny
+* Webhook P24 (wyłączony, kod zakomentowany): weryfikacja podpisu SHA-384 +
+  kwoty + transaction/verify, idempotentny
 
 # Task Runner Rules
 

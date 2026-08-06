@@ -12,7 +12,7 @@ tags:
 # ScheduleEntryRepository
 
 ## Connections
-- [[.AddAsync()_19]] - `method` [EXTRACTED]
+- [[.AddAsync()_21]] - `method` [EXTRACTED]
 - [[.AddRangeAsync()_1]] - `method` [EXTRACTED]
 - [[.CountByDateAndKindAsync()_1]] - `method` [EXTRACTED]
 - [[.GetByIdAsync()_13]] - `method` [EXTRACTED]
@@ -23,7 +23,7 @@ tags:
 - [[.ListLocationsAsync()_1]] - `method` [EXTRACTED]
 - [[.ListVisibleSlotSpansAsync()_1]] - `method` [EXTRACTED]
 - [[.Remove()_13]] - `method` [EXTRACTED]
-- [[.SaveChangesAsync()_19]] - `method` [EXTRACTED]
+- [[.SaveChangesAsync()_21]] - `method` [EXTRACTED]
 - [[AppDbContext]] - `references` [EXTRACTED]
 - [[IScheduleEntryRepository]] - `implements` [EXTRACTED]
 - [[ScheduleEntryRepository.cs]] - `contains` [EXTRACTED]

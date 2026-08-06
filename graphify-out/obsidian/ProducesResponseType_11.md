@@ -1,18 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: ".Calendar"
+community: "Auth Controller (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Calendar
+  - community/Auth_Controller_1
 ---
 
 # ProducesResponseType
 
 ## Connections
-- [[.Calendar()]] - `references` [EXTRACTED]
-- [[.Closures()]] - `references` [EXTRACTED]
-- [[.Get()_3]] - `references` [EXTRACTED]
+- [[.Login()]] - `references` [EXTRACTED]
+- [[.Logout()]] - `references` [EXTRACTED]
+- [[.Refresh()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Calendar
+#graphify/code #graphify/EXTRACTED #community/Auth_Controller_1

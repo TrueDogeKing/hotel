@@ -12,7 +12,7 @@ tags:
 
 ## Connections
 - [[.GetBookingMealTimesAsync()_1]] - `references` [EXTRACTED]
-- [[.ToDto()_5]] - `references` [EXTRACTED]
+- [[.ToDto()_6]] - `references` [EXTRACTED]
 - [[.ToPublicDto()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_2

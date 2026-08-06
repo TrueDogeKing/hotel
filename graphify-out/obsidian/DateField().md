@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/components/calendar/DateField.tsx"
 type: "code"
-community: "Public Booking Frontend (1)"
+community: "src / utils"
 location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public_Booking_Frontend_1
+  - community/src_/_utils
 ---
 
 # DateField()
@@ -16,4 +16,4 @@ tags:
 - [[HousekeepingPage.tsx]] - `imports` [EXTRACTED]
 - [[formatDate()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public_Booking_Frontend_1
+#graphify/code #graphify/EXTRACTED #community/src_/_utils

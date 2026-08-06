@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Persistence/Configurations/MealTimeDefaultConfiguration.cs"
 type: "code"
-community: "MealTimeDefaultConfiguration"
+community: "BookingConfiguration"
 location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MealTimeDefaultConfiguration
+  - community/BookingConfiguration
 ---
 
 # MealTimeDefaultConfiguration
@@ -17,4 +17,4 @@ tags:
 - [[MealTimeDefault_1]] - `references` [EXTRACTED]
 - [[MealTimeDefaultConfiguration.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MealTimeDefaultConfiguration
+#graphify/code #graphify/EXTRACTED #community/BookingConfiguration

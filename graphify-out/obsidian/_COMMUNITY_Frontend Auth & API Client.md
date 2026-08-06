@@ -46,15 +46,16 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 8 edges to [[_COMMUNITY_Frontend App Shell & i18n]]
-- 6 edges to [[_COMMUNITY_src  api (1)]]
-- 5 edges to [[_COMMUNITY_UsersPage.tsx]]
-- 4 edges to [[_COMMUNITY_Public Booking Frontend (1)]]
+- 7 edges to [[_COMMUNITY_src  api (1)]]
+- 5 edges to [[_COMMUNITY_useAuth]]
+- 3 edges to [[_COMMUNITY_Public Booking Frontend (1)]]
 - 2 edges to [[_COMMUNITY_Domain & Infra Namespaces]]
 - 1 edge to [[_COMMUNITY_ScheduleEntry]]
+- 1 edge to [[_COMMUNITY_GroupRooms.tsx]]
 - 1 edge to [[_COMMUNITY_Frontend Icon Components]]
 
 ## Top bridge nodes
-- [[AuthContext.tsx]] - degree 35, connects to 7 communities
+- [[AuthContext.tsx]] - degree 36, connects to 8 communities
 - [[client.ts]] - degree 13, connects to 2 communities
 - [[jwt.ts]] - degree 10, connects to 2 communities
 - [[api]] - degree 4, connects to 2 communities

@@ -1,20 +1,21 @@
 ---
 source_file: ""
 type: "code"
-community: "ControllerBase"
+community: "Room Task Management (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ControllerBase
+  - community/Room_Task_Management_1
 ---
 
 # IActionResult
 
 ## Connections
-- [[.Create()_5]] - `references` [EXTRACTED]
-- [[.Delete()_4]] - `references` [EXTRACTED]
-- [[.List()_2]] - `references` [EXTRACTED]
-- [[.SetPassword()]] - `references` [EXTRACTED]
-- [[.SetRole()]] - `references` [EXTRACTED]
+- [[.Create()_4]] - `references` [EXTRACTED]
+- [[.Delete()_3]] - `references` [EXTRACTED]
+- [[.Done()]] - `references` [EXTRACTED]
+- [[.List()_1]] - `references` [EXTRACTED]
+- [[.Reopen()]] - `references` [EXTRACTED]
+- [[.Update()_4]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ControllerBase
+#graphify/code #graphify/EXTRACTED #community/Room_Task_Management_1

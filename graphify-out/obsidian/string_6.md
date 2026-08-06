@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "ScheduleRules"
+community: "CampCenter.UnitTests / Validators"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ScheduleRules
+  - community/CampCenterUnitTests_/_Validators
 ---
 
 # string
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[ScheduleRules]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ScheduleRules
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Validators

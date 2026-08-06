@@ -1,18 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "Auth Controller (1)"
+community: "ControllerBase"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Auth_Controller_1
+  - community/ControllerBase
 ---
 
 # CancellationToken
 
 ## Connections
-- [[.Login()]] - `references` [EXTRACTED]
-- [[.Logout()]] - `references` [EXTRACTED]
-- [[.Refresh()]] - `references` [EXTRACTED]
+- [[.Create()_5]] - `references` [EXTRACTED]
+- [[.Delete()_4]] - `references` [EXTRACTED]
+- [[.List()_2]] - `references` [EXTRACTED]
+- [[.SetPassword()]] - `references` [EXTRACTED]
+- [[.SetRole()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Auth_Controller_1
+#graphify/code #graphify/EXTRACTED #community/ControllerBase

@@ -14,6 +14,20 @@ public enum BookingStatus
     Completed,
 }
 
+/// How much of the price the owner has actually been paid. Set by hand in the
+/// panel: money changes hands by transfer or in cash, not through the site.
+public enum BookingPaymentState
+{
+    /// Nothing received yet ("oczekuje na płatność").
+    Unpaid,
+
+    /// The deposit has arrived; the rest is still owed ("zaliczka zapłacona").
+    DepositPaid,
+
+    /// Paid in full ("opłacone").
+    Paid,
+}
+
 public enum BookingCancelReason
 {
     ByBooker,
@@ -68,9 +82,19 @@ public class Booking
     public DateTime? HoldExpiresAt { get; set; }
 
     /// Amounts snapshotted at creation so later price edits don't change existing bookings.
+    /// The owner may edit all three afterwards on this booking alone.
     public long TotalGrosze { get; set; }
 
     public long DepositGrosze { get; set; }
+
+    /// The rate this group's total was worked out from: total = rate × headcount ×
+    /// nights. Kept on the booking so the panel can show what the group is charged
+    /// per participant per night and recompute the total when either side changes.
+    public long PricePerPersonPerNightGrosze { get; set; }
+
+    /// Whether the money has arrived — recorded by the owner, who is paid by
+    /// transfer or in cash rather than through the site.
+    public BookingPaymentState PaymentState { get; set; } = BookingPaymentState.Unpaid;
 
     /// Requested room mix as JSON {"4": 40, "3": 2} (capacity → count). Historical
     /// record that survives assignment deletion on cancel.

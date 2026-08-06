@@ -1,18 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "Room Task Management (1)"
+community: "Room Management"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Task_Management_1
+  - community/Room_Management
 ---
 
 # Guid
 
 ## Connections
-- [[.CountOpenByRoomAsync()]] - `references` [EXTRACTED]
-- [[.GetByIdAsync()_5]] - `references` [EXTRACTED]
-- [[.ListAsync()_8]] - `references` [EXTRACTED]
+- [[.GetByIdAsync()_4]] - `references` [EXTRACTED]
+- [[.HasAssignmentsAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Task_Management_1
+#graphify/code #graphify/EXTRACTED #community/Room_Management

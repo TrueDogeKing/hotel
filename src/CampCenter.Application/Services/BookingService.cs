@@ -19,6 +19,7 @@ public class BookingService : IBookingService
     private readonly ITokenService _tokenService;
     private readonly IEmailSender _email;
     private readonly IScheduleEntryRepository _scheduleEntries;
+    private readonly IPricingService _pricing;
     private readonly BookingSettings _settings;
     private readonly ILogger<BookingService> _logger;
 
@@ -29,6 +30,7 @@ public class BookingService : IBookingService
         ITokenService tokenService,
         IEmailSender email,
         IScheduleEntryRepository scheduleEntries,
+        IPricingService pricing,
         IOptions<BookingSettings> settings,
         ILogger<BookingService> logger
     )
@@ -39,6 +41,7 @@ public class BookingService : IBookingService
         _tokenService = tokenService;
         _email = email;
         _scheduleEntries = scheduleEntries;
+        _pricing = pricing;
         _settings = settings.Value;
         _logger = logger;
     }
@@ -116,6 +119,7 @@ public class BookingService : IBookingService
             holdExpires = startUtc.AddDays(-1);
         }
 
+        var rates = await _pricing.GetAsync(cancellationToken);
         var token = _tokenService.GenerateRefreshToken(); // 32-byte URL-safe secret + SHA-256 hash
 
         var booking = new Booking
@@ -131,8 +135,9 @@ public class BookingService : IBookingService
             Notes = string.IsNullOrWhiteSpace(request.Notes) ? null : request.Notes.Trim(),
             ManageTokenHash = token.TokenHash,
             HoldExpiresAt = holdExpires,
-            TotalGrosze = _settings.PricePerPersonPerNightGrosze * request.Headcount * nights,
-            DepositGrosze = _settings.DepositPerPersonPerNightGrosze * request.Headcount * nights,
+            PricePerPersonPerNightGrosze = rates.PricePerPersonPerNightGrosze,
+            TotalGrosze = rates.PricePerPersonPerNightGrosze * request.Headcount * nights,
+            DepositGrosze = rates.DepositPerPersonPerNightGrosze * request.Headcount * nights,
             RequestedRoomCounts = JsonSerializer.Serialize(
                 request
                     .RoomCounts.Where(kv => kv.Value > 0)

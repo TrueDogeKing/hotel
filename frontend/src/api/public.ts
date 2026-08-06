@@ -182,12 +182,14 @@ export function validateMix(
   return "ok";
 }
 
-export async function initiatePayment(
-  token: string,
-  kind: "Deposit" | "Final",
-): Promise<{ redirectUrl: string }> {
-  const { data } = await api.post<{ redirectUrl: string }>(`/public/bookings/${token}/payments`, {
-    kind,
-  });
-  return data;
-}
+// Online payment is switched off — the endpoint behind this is commented out in
+// PublicBookingsController. Left here for whenever card payment comes back.
+// export async function initiatePayment(
+//   token: string,
+//   kind: "Deposit" | "Final",
+// ): Promise<{ redirectUrl: string }> {
+//   const { data } = await api.post<{ redirectUrl: string }>(`/public/bookings/${token}/payments`, {
+//     kind,
+//   });
+//   return data;
+// }

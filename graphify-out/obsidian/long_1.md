@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "tests / CampCenter.IntegrationTests (1)"
+community: "CampCenter.UnitTests / Services (3)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/tests_/_CampCenterIntegrationTests_1
+  - community/CampCenterUnitTests_/_Services_3
 ---
 
 # long
 
 ## Connections
-- [[PublicBookingApiTests]] - `references` [EXTRACTED]
+- [[PricingService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/tests_/_CampCenterIntegrationTests_1
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_3

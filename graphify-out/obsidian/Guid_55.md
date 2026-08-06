@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "Refresh Token Repository"
+community: "CampCenter.UnitTests / Services (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Refresh_Token_Repository
+  - community/CampCenterUnitTests_/_Services_1
 ---
 
 # Guid
 
 ## Connections
-- [[.RevokeAllActiveForUserAsync()_1]] - `references` [EXTRACTED]
+- [[.GetByIdAsync()_10]] - `references` [EXTRACTED]
+- [[.IsReferencedAsync()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Refresh_Token_Repository
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_1

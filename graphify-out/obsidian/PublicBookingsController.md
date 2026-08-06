@@ -16,7 +16,6 @@ tags:
 - [[.Create()_6]] - `method` [EXTRACTED]
 - [[.GetByToken()]] - `method` [EXTRACTED]
 - [[.GetScheduleByToken()]] - `method` [EXTRACTED]
-- [[.InitiatePayment()]] - `method` [EXTRACTED]
 - [[ControllerBase]] - `inherits` [EXTRACTED]
 - [[IBookingService]] - `references` [EXTRACTED]
 - [[IValidator_7]] - `references` [EXTRACTED]

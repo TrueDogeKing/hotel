@@ -1,19 +1,21 @@
 ---
 source_file: ""
 type: "code"
-community: "Auth Service & Tokens"
+community: "Validator Unit Tests"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Auth_Service__Tokens
+  - community/Validator_Unit_Tests
 ---
 
 # CancellationToken
 
 ## Connections
-- [[.AddAsync()_5]] - `references` [EXTRACTED]
-- [[.GetByTokenHashAsync()_1]] - `references` [EXTRACTED]
-- [[.RevokeAllActiveForUserAsync()]] - `references` [EXTRACTED]
-- [[.SaveChangesAsync()_5]] - `references` [EXTRACTED]
+- [[.AddAsync()_3]] - `references` [EXTRACTED]
+- [[.GetAllAsync()_6]] - `references` [EXTRACTED]
+- [[.GetByIdAsync()_2]] - `references` [EXTRACTED]
+- [[.GetOverlappingAsync()]] - `references` [EXTRACTED]
+- [[.GetUpcomingCenterWideAsync()]] - `references` [EXTRACTED]
+- [[.SaveChangesAsync()_3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Auth_Service__Tokens
+#graphify/code #graphify/EXTRACTED #community/Validator_Unit_Tests

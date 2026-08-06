@@ -1,12 +1,12 @@
 ---
 source_file: "tests/CampCenter.UnitTests/Services/P24SignCalculatorTests.cs"
 type: "code"
-community: "Payment"
+community: "SmtpEmailSender"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Payment
+  - community/SmtpEmailSender
 ---
 
 # P24SignCalculatorTests.cs
@@ -17,4 +17,4 @@ tags:
 - [[CampCenter.UnitTests.Services]] - `contains` [EXTRACTED]
 - [[P24SignCalculatorTests]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Payment
+#graphify/code #graphify/EXTRACTED #community/SmtpEmailSender

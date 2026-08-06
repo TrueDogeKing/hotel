@@ -12,7 +12,6 @@ tags:
 # PaymentReturnPage.tsx
 
 ## Connections
-- [[App.tsx]] - `imports_from` [EXTRACTED]
 - [[BookingDetails]] - `imports` [EXTRACTED]
 - [[LanguageSwitcher()]] - `imports` [EXTRACTED]
 - [[LanguageSwitcher.tsx]] - `imports_from` [EXTRACTED]

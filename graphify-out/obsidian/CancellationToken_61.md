@@ -1,19 +1,34 @@
 ---
 source_file: ""
 type: "code"
-community: "Refresh Token Repository"
+community: "CampCenter.Domain / Repositories (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Refresh_Token_Repository
+  - community/CampCenterDomain_/_Repositories_1
 ---
 
 # CancellationToken
 
 ## Connections
-- [[.AddAsync()_15]] - `references` [EXTRACTED]
-- [[.GetByTokenHashAsync()_3]] - `references` [EXTRACTED]
-- [[.RevokeAllActiveForUserAsync()_1]] - `references` [EXTRACTED]
-- [[.SaveChangesAsync()_15]] - `references` [EXTRACTED]
+- [[.AddAssignmentAsync()_1]] - `references` [EXTRACTED]
+- [[.AddAsync()_13]] - `references` [EXTRACTED]
+- [[.AddPaymentAsync()_1]] - `references` [EXTRACTED]
+- [[.GetBookedRoomIdsInRangeAsync()_1]] - `references` [EXTRACTED]
+- [[.GetByIdAsync()_8]] - `references` [EXTRACTED]
+- [[.GetByTokenHashAsync()_2]] - `references` [EXTRACTED]
+- [[.GetCompletedPaymentKindsAsync()_1]] - `references` [EXTRACTED]
+- [[.GetConfirmedEndedAsync()_1]] - `references` [EXTRACTED]
+- [[.GetExpiredPendingAsync()_1]] - `references` [EXTRACTED]
+- [[.GetPaymentByP24SessionIdAsync()_1]] - `references` [EXTRACTED]
+- [[.GetPaymentsAsync()_1]] - `references` [EXTRACTED]
+- [[.ListAssignmentsInRangeAsync()_1]] - `references` [EXTRACTED]
+- [[.ListAsync()_10]] - `references` [EXTRACTED]
+- [[.ListByCategoryAsync()_1]] - `references` [EXTRACTED]
+- [[.ListLiveChangingOverAsync()_1]] - `references` [EXTRACTED]
+- [[.ListLiveInRangeAsync()_1]] - `references` [EXTRACTED]
+- [[.ListLivePresentInAsync()_1]] - `references` [EXTRACTED]
+- [[.ListUpcomingAsync()_1]] - `references` [EXTRACTED]
+- [[.SaveChangesAsync()_13]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Refresh_Token_Repository
+#graphify/code #graphify/EXTRACTED #community/CampCenterDomain_/_Repositories_1

@@ -23,7 +23,7 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 1 edge to [[_COMMUNITY_EF Core Migrations (3)]]
-- 1 edge to [[_COMMUNITY_AdminUserRole]]
+- 1 edge to [[_COMMUNITY_Persistence  Migrations (1)]]
 
 ## Top bridge nodes
 - [[PerGroupMealTimes_1]] - degree 4, connects to 1 community

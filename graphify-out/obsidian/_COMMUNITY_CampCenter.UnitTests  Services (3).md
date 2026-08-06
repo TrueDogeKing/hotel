@@ -1,17 +1,53 @@
 ---
 type: community
-members: 4
+members: 40
 ---
 
 # CampCenter.UnitTests / Services (3)
 
-**Members:** 4 nodes
+**Members:** 40 nodes
 
 ## Members
-- [[.BuildTargetModel()_2]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/20260721111400_ReplaceSessionsWithClosures.Designer.cs
-- [[20260721111400_ReplaceSessionsWithClosures.Designer.cs]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/20260721111400_ReplaceSessionsWithClosures.Designer.cs
-- [[ModelBuilder_3]] - code
-- [[ReplaceSessionsWithClosures]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/20260721111400_ReplaceSessionsWithClosures.Designer.cs
+- [[.AddAsync()_5]] - code - src/CampCenter.Domain/Repositories/IPricingDefaultsRepository.cs
+- [[.AddAsync()_16]] - code - src/CampCenter.Infrastructure/Repositories/PricingDefaultsRepository.cs
+- [[.Get()_3]] - code - src/CampCenter.Api/Controllers/Admin/PricingController.cs
+- [[.GetAsync()_1]] - code - src/CampCenter.Application/Interfaces/IPricingService.cs
+- [[.GetAsync()_3]] - code - src/CampCenter.Application/Services/PricingService.cs
+- [[.GetAsync()_5]] - code - src/CampCenter.Domain/Repositories/IPricingDefaultsRepository.cs
+- [[.GetAsync()_8]] - code - src/CampCenter.Infrastructure/Repositories/PricingDefaultsRepository.cs
+- [[.Guard()]] - code - src/CampCenter.Application/Services/PricingService.cs
+- [[.SaveChangesAsync()_5]] - code - src/CampCenter.Domain/Repositories/IPricingDefaultsRepository.cs
+- [[.SaveChangesAsync()_16]] - code - src/CampCenter.Infrastructure/Repositories/PricingDefaultsRepository.cs
+- [[.ToDto()_3]] - code - src/CampCenter.Application/Services/PricingService.cs
+- [[.Update()_2]] - code - src/CampCenter.Api/Controllers/Admin/PricingController.cs
+- [[.UpdateAsync()_2]] - code - src/CampCenter.Application/Interfaces/IPricingService.cs
+- [[.UpdateAsync()_7]] - code - src/CampCenter.Application/Services/PricingService.cs
+- [[CancellationToken_7]] - code
+- [[CancellationToken_27]] - code
+- [[CancellationToken_40]] - code
+- [[CancellationToken_50]] - code
+- [[CancellationToken_64]] - code
+- [[DateTime_10]] - code
+- [[Guid_35]] - code
+- [[HttpGet_6]] - code
+- [[HttpPut_4]] - code
+- [[IActionResult_6]] - code
+- [[IPricingDefaultsRepository]] - code - src/CampCenter.Domain/Repositories/IPricingDefaultsRepository.cs
+- [[IPricingService]] - code - src/CampCenter.Application/Interfaces/IPricingService.cs
+- [[PricingController]] - code - src/CampCenter.Api/Controllers/Admin/PricingController.cs
+- [[PricingDefaults_1]] - code - src/CampCenter.Domain/Entities/PricingDefaults.cs
+- [[PricingDefaults.cs]] - code - src/CampCenter.Domain/Entities/PricingDefaults.cs
+- [[PricingDefaultsDto]] - code - src/CampCenter.Application/DTOs/AdminPanel/AdminPanelDtos.cs
+- [[PricingDefaultsRepository]] - code - src/CampCenter.Infrastructure/Repositories/PricingDefaultsRepository.cs
+- [[PricingService]] - code - src/CampCenter.Application/Services/PricingService.cs
+- [[ProducesResponseType_6]] - code
+- [[Task_8]] - code
+- [[Task_27]] - code
+- [[Task_40]] - code
+- [[Task_50]] - code
+- [[Task_64]] - code
+- [[UpdatePricingDefaultsRequestDto]] - code - src/CampCenter.Application/DTOs/AdminPanel/AdminPanelDtos.cs
+- [[long_1]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -21,8 +57,20 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_Exception]]
-- 1 edge to [[_COMMUNITY_EF Core Migrations (3)]]
+- 3 edges to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
+- 3 edges to [[_COMMUNITY_Exception]]
+- 2 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
+- 2 edges to [[_COMMUNITY_Admin Booking & Notifications (1)]]
+- 2 edges to [[_COMMUNITY_Room Management]]
+- 2 edges to [[_COMMUNITY_Public Booking Service (1)]]
+- 2 edges to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
+- 2 edges to [[_COMMUNITY_BookingConfiguration]]
+- 1 edge to [[_COMMUNITY_BookingSettings]]
+- 1 edge to [[_COMMUNITY_ClosureService]]
 
 ## Top bridge nodes
-- [[20260721111400_ReplaceSessionsWithClosures.Designer.cs]] - degree 3, connects to 2 communities
+- [[IPricingService]] - degree 8, connects to 4 communities
+- [[.GetAsync()_1]] - degree 8, connects to 3 communities
+- [[PricingDefaults_1]] - degree 11, connects to 2 communities
+- [[PricingService]] - degree 9, connects to 2 communities
+- [[PricingDefaultsRepository]] - degree 6, connects to 2 communities

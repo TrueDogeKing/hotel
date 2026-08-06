@@ -1,9 +1,7 @@
 using CampCenter.Application.DTOs.Public;
 using CampCenter.Application.Interfaces;
-using CampCenter.Application.Models;
 using CampCenter.Domain.Exceptions;
 using CampCenter.Domain.Repositories;
-using Microsoft.Extensions.Options;
 
 namespace CampCenter.Application.Services;
 
@@ -12,19 +10,19 @@ public class AvailabilityService : IAvailabilityService
     private readonly IRoomRepository _rooms;
     private readonly IBookingRepository _bookings;
     private readonly IClosureRepository _closures;
-    private readonly BookingSettings _settings;
+    private readonly IPricingService _pricing;
 
     public AvailabilityService(
         IRoomRepository rooms,
         IBookingRepository bookings,
         IClosureRepository closures,
-        IOptions<BookingSettings> settings
+        IPricingService pricing
     )
     {
         _rooms = rooms;
         _bookings = bookings;
         _closures = closures;
-        _settings = settings.Value;
+        _pricing = pricing;
     }
 
     public async Task<AvailabilityDto> GetAvailabilityAsync(
@@ -35,6 +33,7 @@ public class AvailabilityService : IAvailabilityService
     )
     {
         var nights = end.DayNumber - start.DayNumber;
+        var rates = await _pricing.GetAsync(cancellationToken);
         var centerReason = await GetCenterClosureReasonAsync(start, end, cancellationToken);
         var free = await GetFreeRoomsByCapacityAsync(start, end, null, cancellationToken);
         var remaining = (int)RoomMixCalculator.TotalCapacity(free);
@@ -47,8 +46,8 @@ public class AvailabilityService : IAvailabilityService
         {
             mix = RoomMixCalculator.SuggestMix(headcount.Value, free);
             fits = centerReason is null && mix is not null;
-            total = _settings.PricePerPersonPerNightGrosze * headcount.Value * nights;
-            deposit = _settings.DepositPerPersonPerNightGrosze * headcount.Value * nights;
+            total = rates.PricePerPersonPerNightGrosze * headcount.Value * nights;
+            deposit = rates.DepositPerPersonPerNightGrosze * headcount.Value * nights;
         }
 
         return new AvailabilityDto(
@@ -57,8 +56,8 @@ public class AvailabilityService : IAvailabilityService
             nights,
             centerReason is not null,
             centerReason,
-            _settings.PricePerPersonPerNightGrosze,
-            _settings.DepositPerPersonPerNightGrosze,
+            rates.PricePerPersonPerNightGrosze,
+            rates.DepositPerPersonPerNightGrosze,
             remaining,
             free,
             fits,

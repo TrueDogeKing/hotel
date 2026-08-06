@@ -1,19 +1,14 @@
 ---
 source_file: "src/CampCenter.Api/Controllers/Public/PublicPaymentsController.cs"
 type: "code"
-community: "CampCenter.Application.DTOs.Public"
+community: "Payment"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterApplicationDTOsPublic
+  - community/Payment
 ---
 
 # PublicPaymentsController.cs
 
-## Connections
-- [[CampCenter.Api.Controllers.Public]] - `contains` [EXTRACTED]
-- [[CampCenter.Application.Interfaces]] - `imports` [EXTRACTED]
-- [[PublicPaymentsController]] - `contains` [EXTRACTED]
-
-#graphify/code #graphify/EXTRACTED #community/CampCenterApplicationDTOsPublic
+#graphify/code #graphify/EXTRACTED #community/Payment

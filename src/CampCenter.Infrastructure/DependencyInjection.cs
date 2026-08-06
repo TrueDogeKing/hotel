@@ -31,13 +31,15 @@ public static class DependencyInjection
         services.AddScoped<IAdminUserRepository, AdminUserRepository>();
         services.AddScoped<IRefreshTokenRepository, RefreshTokenRepository>();
         services.AddSingleton<IEmailSender, SmtpEmailSender>();
-        services.AddHttpClient<IPaymentGateway, Przelewy24Client>();
+        // Payment gateway off with the rest of the P24 flow (see Application DI).
+        // services.AddHttpClient<IPaymentGateway, Przelewy24Client>();
         services.AddScoped<IRoomRepository, RoomRepository>();
         services.AddScoped<IBookingRepository, BookingRepository>();
         services.AddScoped<IRoomTaskRepository, RoomTaskRepository>();
         services.AddScoped<IRoomCleaningRepository, RoomCleaningRepository>();
         services.AddScoped<IClosureRepository, ClosureRepository>();
         services.AddScoped<IMealTimeDefaultRepository, MealTimeDefaultRepository>();
+        services.AddScoped<IPricingDefaultsRepository, PricingDefaultsRepository>();
         services.AddScoped<IScheduleEntryRepository, ScheduleEntryRepository>();
         services.AddScoped<IBookingMealTimeRepository, BookingMealTimeRepository>();
 

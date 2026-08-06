@@ -2,7 +2,7 @@
 source_file: "src/CampCenter.Domain/Entities/Booking.cs"
 type: "code"
 community: "Integration Test Harness (1)"
-location: "L17"
+location: "L31"
 tags:
   - graphify/code
   - graphify/EXTRACTED

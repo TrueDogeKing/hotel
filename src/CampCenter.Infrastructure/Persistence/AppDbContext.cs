@@ -32,6 +32,8 @@ public class AppDbContext : DbContext
 
     public DbSet<BookingMealTime> BookingMealTimes => Set<BookingMealTime>();
 
+    public DbSet<PricingDefaults> PricingDefaults => Set<PricingDefaults>();
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);

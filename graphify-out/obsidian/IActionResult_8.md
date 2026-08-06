@@ -1,21 +1,29 @@
 ---
 source_file: ""
 type: "code"
-community: "Room Task Management (1)"
+community: "DTOs / Schedule (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Task_Management_1
+  - community/DTOs_/_Schedule_1
 ---
 
 # IActionResult
 
 ## Connections
-- [[.Create()_4]] - `references` [EXTRACTED]
-- [[.Delete()_3]] - `references` [EXTRACTED]
-- [[.Done()]] - `references` [EXTRACTED]
-- [[.List()_1]] - `references` [EXTRACTED]
-- [[.Reopen()]] - `references` [EXTRACTED]
-- [[.Update()_3]] - `references` [EXTRACTED]
+- [[.CheckConflicts()]] - `references` [EXTRACTED]
+- [[.CreateEntry()]] - `references` [EXTRACTED]
+- [[.DeleteBookingMeals()]] - `references` [EXTRACTED]
+- [[.DeleteEntry()]] - `references` [EXTRACTED]
+- [[.GenerateMeals()]] - `references` [EXTRACTED]
+- [[.GenerateMissingMeals()]] - `references` [EXTRACTED]
+- [[.GetBookingMealTimes()]] - `references` [EXTRACTED]
+- [[.GetCalendar()]] - `references` [EXTRACTED]
+- [[.GetDay()_1]] - `references` [EXTRACTED]
+- [[.GetForBooking()]] - `references` [EXTRACTED]
+- [[.GetLocations()]] - `references` [EXTRACTED]
+- [[.ResetBookingMealTime()]] - `references` [EXTRACTED]
+- [[.SetBookingMealTime()]] - `references` [EXTRACTED]
+- [[.UpdateEntry()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Task_Management_1
+#graphify/code #graphify/EXTRACTED #community/DTOs_/_Schedule_1

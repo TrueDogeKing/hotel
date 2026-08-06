@@ -14,6 +14,7 @@ tags:
 ## Connections
 - [[Booking]] - `contains` [EXTRACTED]
 - [[BookingCancelReason]] - `contains` [EXTRACTED]
+- [[BookingPaymentState_1]] - `contains` [EXTRACTED]
 - [[BookingStatus_1]] - `contains` [EXTRACTED]
 - [[CampCenter.Domain.Entities]] - `contains` [EXTRACTED]
 

@@ -119,10 +119,20 @@ namespace CampCenter.Infrastructure.Persistence.Migrations
                         .HasMaxLength(256)
                         .HasColumnType("character varying(256)");
 
+                    b.Property<string>("PaymentState")
+                        .IsRequired()
+                        .ValueGeneratedOnAdd()
+                        .HasMaxLength(16)
+                        .HasColumnType("character varying(16)")
+                        .HasDefaultValue("Unpaid");
+
                     b.Property<string>("Phone")
                         .IsRequired()
                         .HasMaxLength(32)
                         .HasColumnType("character varying(32)");
+
+                    b.Property<long>("PricePerPersonPerNightGrosze")
+                        .HasColumnType("bigint");
 
                     b.Property<string>("RequestedRoomCounts")
                         .IsRequired()
@@ -376,6 +386,35 @@ namespace CampCenter.Infrastructure.Persistence.Migrations
                         .HasFilter("\"Status\" = 'Completed'");
 
                     b.ToTable("Payments", (string)null);
+                });
+
+            modelBuilder.Entity("CampCenter.Domain.Entities.PricingDefaults", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<long>("DepositPerPersonPerNightGrosze")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("PricePerPersonPerNightGrosze")
+                        .HasColumnType("bigint");
+
+                    b.Property<uint>("RowVersion")
+                        .IsConcurrencyToken()
+                        .ValueGeneratedOnAddOrUpdate()
+                        .HasColumnType("xid")
+                        .HasColumnName("xmin");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("PricingDefaults", null, t =>
+                        {
+                            t.HasCheckConstraint("CK_PricingDefaults_Amounts", "\"PricePerPersonPerNightGrosze\" >= 0 AND \"DepositPerPersonPerNightGrosze\" BETWEEN 0 AND \"PricePerPersonPerNightGrosze\"");
+                        });
                 });
 
             modelBuilder.Entity("CampCenter.Domain.Entities.RefreshToken", b =>

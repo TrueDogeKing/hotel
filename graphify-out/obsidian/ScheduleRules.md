@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Validators/ScheduleValidators.cs"
 type: "code"
-community: "ScheduleRules"
+community: "CampCenter.UnitTests / Validators"
 location: "L66"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ScheduleRules
+  - community/CampCenterUnitTests_/_Validators
 ---
 
 # ScheduleRules
@@ -18,4 +18,4 @@ tags:
 - [[ScheduleValidators.cs]] - `contains` [EXTRACTED]
 - [[string_6]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ScheduleRules
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Validators

@@ -1,11 +1,11 @@
 ---
 type: community
-members: 30
+members: 28
 ---
 
 # Auth Controller (1)
 
-**Members:** 30 nodes
+**Members:** 28 nodes
 
 ## Members
 - [[.BuildCookieOptions()]] - code - src/CampCenter.Api/Controllers/AuthController.cs
@@ -18,26 +18,24 @@ members: 30
 - [[.Refresh()]] - code - src/CampCenter.Api/Controllers/AuthController.cs
 - [[.RefreshAsync()]] - code - src/CampCenter.Application/Interfaces/IAuthService.cs
 - [[.SetRefreshTokenCookie()]] - code - src/CampCenter.Api/Controllers/AuthController.cs
-- [[AuthApiTests.cs]] - code - tests/CampCenter.IntegrationTests/AuthApiTests.cs
 - [[AuthController]] - code - src/CampCenter.Api/Controllers/AuthController.cs
-- [[CampCenter.Application.DTOs.Auth]] - code - src/CampCenter.Application/DTOs/Auth/LoginRequestDto.cs
-- [[CancellationToken_11]] - code
+- [[CancellationToken_12]] - code
 - [[CancellationToken_18]] - code
 - [[CookieOptions]] - code
 - [[DateTime]] - code
 - [[EnableRateLimiting]] - code
 - [[HttpPost_7]] - code
-- [[IActionResult_10]] - code
+- [[IActionResult_11]] - code
 - [[IAuthService]] - code - src/CampCenter.Application/Interfaces/IAuthService.cs
-- [[IAuthService.cs]] - code - src/CampCenter.Application/Interfaces/IAuthService.cs
 - [[IValidator_6]] - code
 - [[LoginRequestDto]] - code - src/CampCenter.Application/DTOs/Auth/LoginRequestDto.cs
 - [[LoginRequestDto.cs]] - code - src/CampCenter.Application/DTOs/Auth/LoginRequestDto.cs
-- [[LoginResponseDto]] - code - src/CampCenter.Application/DTOs/Auth/LoginResponseDto.cs
-- [[LoginResponseDto.cs]] - code - src/CampCenter.Application/DTOs/Auth/LoginResponseDto.cs
-- [[ProducesResponseType_10]] - code
-- [[Task_12]] - code
+- [[ProducesResponseType_11]] - code
+- [[RefreshTokenSettings]] - code - src/CampCenter.Infrastructure/Auth/RefreshTokenSettings.cs
+- [[RefreshTokenSettings.cs]] - code - src/CampCenter.Infrastructure/Auth/RefreshTokenSettings.cs
+- [[Task_13]] - code
 - [[Task_18]] - code
+- [[string_9]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -48,19 +46,15 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 5 edges to [[_COMMUNITY_Auth Service & Tokens]]
-- 3 edges to [[_COMMUNITY_CampCenter.UnitTests  Validators]]
-- 2 edges to [[_COMMUNITY_Public Booking Service (2)]]
-- 2 edges to [[_COMMUNITY_tests  CampCenter.IntegrationTests (1)]]
-- 1 edge to [[_COMMUNITY_AvailabilityService]]
+- 3 edges to [[_COMMUNITY_eslint_1]]
+- 1 edge to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
+- 1 edge to [[_COMMUNITY_CampCenter.UnitTests  Validators]]
+- 1 edge to [[_COMMUNITY_Public Booking Service (2)]]
 - 1 edge to [[_COMMUNITY_CampCenter.Application  Services (1)]]
-- 1 edge to [[_COMMUNITY_Exception]]
-- 1 edge to [[_COMMUNITY_Application Namespaces & DTOs]]
-- 1 edge to [[_COMMUNITY_ClosureService_1]]
-- 1 edge to [[_COMMUNITY_CampCenter.Application.DTOs.Public]]
 
 ## Top bridge nodes
-- [[CampCenter.Application.DTOs.Auth]] - degree 9, connects to 4 communities
-- [[AuthController]] - degree 12, connects to 3 communities
+- [[AuthController]] - degree 12, connects to 2 communities
+- [[IAuthService]] - degree 6, connects to 2 communities
 - [[LoginRequestDto]] - degree 5, connects to 2 communities
-- [[IAuthService.cs]] - degree 4, connects to 2 communities
-- [[AuthApiTests.cs]] - degree 3, connects to 2 communities
+- [[.IssueTokens()]] - degree 6, connects to 1 community
+- [[.LoginAsync()]] - degree 6, connects to 1 community

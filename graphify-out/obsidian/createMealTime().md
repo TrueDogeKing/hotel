@@ -2,7 +2,7 @@
 source_file: "frontend/src/api/admin.ts"
 type: "code"
 community: "Domain & Infra Namespaces"
-location: "L698"
+location: "L776"
 tags:
   - graphify/code
   - graphify/EXTRACTED

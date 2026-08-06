@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Interfaces/IAuthService.cs"
 type: "code"
-community: "Auth Controller (1)"
+community: "eslint"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Auth_Controller_1
+  - community/eslint
 ---
 
 # IAuthService.cs
@@ -17,4 +17,4 @@ tags:
 - [[CampCenter.Application.Models]] - `imports` [EXTRACTED]
 - [[IAuthService]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Auth_Controller_1
+#graphify/code #graphify/EXTRACTED #community/eslint

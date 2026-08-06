@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Domain/Repositories/IClosureRepository.cs"
 type: "code"
-community: "IClosureRepository"
+community: "Validator Unit Tests"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/IClosureRepository
+  - community/Validator_Unit_Tests
 ---
 
 # IClosureRepository
@@ -28,4 +28,4 @@ tags:
 - [[IClosureRepository.cs]] - `contains` [EXTRACTED]
 - [[PublicAvailabilityController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/IClosureRepository
+#graphify/code #graphify/EXTRACTED #community/Validator_Unit_Tests

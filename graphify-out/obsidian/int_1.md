@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "useAuth"
+community: "Room Management"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/useAuth
+  - community/Room_Management
 ---
 
 # int
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[AvailabilityService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/useAuth
+#graphify/code #graphify/EXTRACTED #community/Room_Management

@@ -1,12 +1,12 @@
 ---
 source_file: "CLAUDE.md"
 type: "document"
-community: "Docker & Project Docs"
+community: "AvailabilityService"
 location: "L1"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Docker__Project_Docs
+  - community/AvailabilityService
 ---
 
 # CampCenter
@@ -19,4 +19,4 @@ tags:
 - [[Model domeny]] - `contains` [EXTRACTED]
 - [[Wymagania bezpieczeństwa]] - `contains` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Docker__Project_Docs
+#graphify/document #graphify/EXTRACTED #community/AvailabilityService

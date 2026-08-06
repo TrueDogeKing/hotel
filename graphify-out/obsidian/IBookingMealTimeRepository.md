@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[.AddAsync()_1]] - `method` [EXTRACTED]
-- [[.GetAsync()_2]] - `method` [EXTRACTED]
+- [[.GetAsync()_4]] - `method` [EXTRACTED]
 - [[.ListForBookingAsync()]] - `method` [EXTRACTED]
 - [[.ListForBookingsAsync()]] - `method` [EXTRACTED]
 - [[.Remove()_1]] - `method` [EXTRACTED]

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "components / admin"
+community: "CampCenter.Infrastructure / Repositories (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/components_/_admin
+  - community/CampCenterInfrastructure_/_Repositories_1
 ---
 
 # ModelBuilder
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.OnModelCreating()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/components_/_admin
+#graphify/code #graphify/EXTRACTED #community/CampCenterInfrastructure_/_Repositories_1

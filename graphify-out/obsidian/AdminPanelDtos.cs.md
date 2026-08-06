@@ -22,11 +22,16 @@ tags:
 - [[DashboardBookingDto]] - `contains` [EXTRACTED]
 - [[DashboardDto]] - `contains` [EXTRACTED]
 - [[OccupancyDto]] - `contains` [EXTRACTED]
+- [[PricingDefaultsDto]] - `contains` [EXTRACTED]
 - [[ReassignBookingRequestDto]] - `contains` [EXTRACTED]
 - [[ReassignmentEntryDto]] - `contains` [EXTRACTED]
 - [[RoomOccupancyDto]] - `contains` [EXTRACTED]
 - [[RoomTaskDto]] - `contains` [EXTRACTED]
+- [[SetBookingPaymentStateRequestDto]] - `contains` [EXTRACTED]
+- [[SetBookingStateRequestDto]] - `contains` [EXTRACTED]
 - [[SetBookingStatusRequestDto]] - `contains` [EXTRACTED]
+- [[UpdateBookingPricingRequestDto]] - `contains` [EXTRACTED]
+- [[UpdatePricingDefaultsRequestDto]] - `contains` [EXTRACTED]
 - [[UpdateRoomTaskRequestDto]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Admin_Bookings_Controller__DTOs

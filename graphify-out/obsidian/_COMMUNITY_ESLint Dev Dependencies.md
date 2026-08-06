@@ -33,7 +33,7 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 1 edge to [[_COMMUNITY_Frontend Package Manifest]]
-- 1 edge to [[_COMMUNITY_CampCenter.Application  Services (3)]]
+- 1 edge to [[_COMMUNITY_eslint-plugin-react-hooks]]
 - 1 edge to [[_COMMUNITY_Prettier Dependency]]
 - 1 edge to [[_COMMUNITY_Node Type Definitions]]
 - 1 edge to [[_COMMUNITY_eslint]]

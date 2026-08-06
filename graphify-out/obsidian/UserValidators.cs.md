@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Validators/UserValidators.cs"
 type: "code"
-community: "UserValidators.cs"
+community: "CampCenter.UnitTests / Validators"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/UserValidatorscs
+  - community/CampCenterUnitTests_/_Validators
 ---
 
 # UserValidators.cs
@@ -20,4 +20,4 @@ tags:
 - [[SetUserPasswordRequestValidator]] - `contains` [EXTRACTED]
 - [[SetUserRoleRequestValidator]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/UserValidatorscs
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Validators

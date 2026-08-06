@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Services/AvailabilityService.cs"
 type: "code"
-community: "useAuth"
-location: "L10"
+community: "Room Management"
+location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/useAuth
+  - community/Room_Management
 ---
 
 # AvailabilityService
@@ -18,11 +18,11 @@ tags:
 - [[.GetCenterClosureReasonAsync()_1]] - `method` [EXTRACTED]
 - [[.GetFreeRoomsByCapacityAsync()_1]] - `method` [EXTRACTED]
 - [[AvailabilityService.cs]] - `contains` [EXTRACTED]
-- [[BookingSettings]] - `references` [EXTRACTED]
 - [[IAvailabilityService]] - `implements` [EXTRACTED]
 - [[IBookingRepository]] - `references` [EXTRACTED]
 - [[IClosureRepository]] - `references` [EXTRACTED]
+- [[IPricingService]] - `references` [EXTRACTED]
 - [[IRoomRepository]] - `references` [EXTRACTED]
 - [[int_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/useAuth
+#graphify/code #graphify/EXTRACTED #community/Room_Management

@@ -1,17 +1,26 @@
 ---
 source_file: ""
 type: "code"
-community: "Payment Gateway Integration Tests (2)"
+community: "CampCenter.Application / Services (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Payment_Gateway_Integration_Tests_2
+  - community/CampCenterApplication_/_Services_2
 ---
 
 # Task
 
 ## Connections
-- [[.SeedAdminUserAsync()]] - `references` [EXTRACTED]
-- [[.SeedMealTimeDefaultsAsync()]] - `references` [EXTRACTED]
+- [[.AddAsync()_10]] - `references` [EXTRACTED]
+- [[.AddRangeAsync()]] - `references` [EXTRACTED]
+- [[.CountByDateAndKindAsync()]] - `references` [EXTRACTED]
+- [[.GetByIdAsync()_6]] - `references` [EXTRACTED]
+- [[.ListForBookingAsync()_1]] - `references` [EXTRACTED]
+- [[.ListForDateAsync()_1]] - `references` [EXTRACTED]
+- [[.ListFullySuppressedSlotsAsync()]] - `references` [EXTRACTED]
+- [[.ListGeneratedSlotsAsync()]] - `references` [EXTRACTED]
+- [[.ListLocationsAsync()]] - `references` [EXTRACTED]
+- [[.ListVisibleSlotSpansAsync()]] - `references` [EXTRACTED]
+- [[.SaveChangesAsync()_10]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Payment_Gateway_Integration_Tests_2
+#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_2

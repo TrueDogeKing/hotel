@@ -17,6 +17,7 @@ tags:
 - [[.ListAsync()_3]] - `references` [EXTRACTED]
 - [[.ListAsync()_7]] - `references` [EXTRACTED]
 - [[.ListAsync()_10]] - `references` [EXTRACTED]
+- [[.Of()]] - `references` [EXTRACTED]
 - [[.ParseStatus()]] - `references` [EXTRACTED]
 - [[Booking]] - `references` [EXTRACTED]
 - [[Booking.cs]] - `contains` [EXTRACTED]

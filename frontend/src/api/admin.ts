@@ -169,6 +169,11 @@ export interface AdminBooking {
   cancelReason: string | null;
   totalGrosze: number;
   depositGrosze: number;
+  /** The rate the total was worked out from; total = rate × headcount × nights. */
+  pricePerPersonPerNightGrosze: number;
+  paymentState: BookingPaymentState;
+  /** paymentState and status folded together; what the panel's one control shows. */
+  state: BookingState;
   depositPaid: boolean;
   finalPaid: boolean;
   finalOverdue: boolean;
@@ -176,6 +181,23 @@ export interface AdminBooking {
   createdAt: string;
   assignments: AdminAssignment[];
 }
+
+/** What the owner has been paid. Money changes hands off the site, so this is
+ *  recorded by hand rather than by a payment gateway. */
+export type BookingPaymentState = "Unpaid" | "DepositPaid" | "Paid";
+
+/** Status and payment as one value — the only one the panel offers. A booking is
+ *  confirmed exactly when a payment is recorded against it, so the two lists were
+ *  never independent. */
+export type BookingState = "AwaitingPayment" | "DepositPaid" | "Paid" | "Cancelled" | "Completed";
+
+export const bookingStates: BookingState[] = [
+  "AwaitingPayment",
+  "DepositPaid",
+  "Paid",
+  "Cancelled",
+  "Completed",
+];
 
 export async function getAdminBookings(filters: { status?: string }): Promise<AdminBooking[]> {
   const { data } = await api.get<AdminBooking[]>("/admin/bookings", { params: filters });
@@ -250,6 +272,62 @@ export async function createAdminBooking(input: CreateAdminBookingInput): Promis
  *  moving back out of Cancelled takes the rooms again and can 409. */
 export async function setBookingStatus(id: string, status: BookingStatus): Promise<AdminBooking> {
   const { data } = await api.put<AdminBooking>(`/admin/bookings/${id}/status`, { status });
+  return data;
+}
+
+/** Re-prices this one group. Leave totalGrosze null to have the server work it
+ *  out as rate × headcount × nights; pass one to fix a flat, negotiated amount. */
+export async function updateBookingPricing(
+  id: string,
+  input: {
+    pricePerPersonPerNightGrosze: number;
+    depositGrosze: number;
+    totalGrosze: number | null;
+  },
+): Promise<AdminBooking> {
+  const { data } = await api.put<AdminBooking>(`/admin/bookings/${id}/pricing`, input);
+  return data;
+}
+
+/** The panel's single state control. Cancelling frees the rooms and emails the
+ *  group; reviving a cancelled booking takes its rooms back and can 409. */
+export async function setBookingState(id: string, state: BookingState): Promise<AdminBooking> {
+  const { data } = await api.put<AdminBooking>(`/admin/bookings/${id}/state`, { state });
+  return data;
+}
+
+/** Records what arrived. Anything other than Unpaid confirms a booking that was
+ *  still waiting on its deposit. */
+export async function setBookingPaymentState(
+  id: string,
+  paymentState: BookingPaymentState,
+): Promise<AdminBooking> {
+  const { data } = await api.put<AdminBooking>(`/admin/bookings/${id}/payment-state`, {
+    paymentState,
+  });
+  return data;
+}
+
+// --- Centre-wide rates ---
+
+/** `updatedAt` is null while the values still come from configuration and
+ *  nothing has been saved in the panel. */
+export interface PricingDefaults {
+  pricePerPersonPerNightGrosze: number;
+  depositPerPersonPerNightGrosze: number;
+  updatedAt: string | null;
+}
+
+export async function getPricingDefaults(): Promise<PricingDefaults> {
+  const { data } = await api.get<PricingDefaults>("/admin/pricing");
+  return data;
+}
+
+export async function updatePricingDefaults(input: {
+  pricePerPersonPerNightGrosze: number;
+  depositPerPersonPerNightGrosze: number;
+}): Promise<PricingDefaults> {
+  const { data } = await api.put<PricingDefaults>("/admin/pricing", input);
   return data;
 }
 

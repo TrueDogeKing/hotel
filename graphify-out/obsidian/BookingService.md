@@ -30,6 +30,7 @@ tags:
 - [[IBookingService]] - `implements` [EXTRACTED]
 - [[IEmailSender]] - `references` [EXTRACTED]
 - [[ILogger_3]] - `references` [EXTRACTED]
+- [[IPricingService]] - `references` [EXTRACTED]
 - [[IRoomRepository]] - `references` [EXTRACTED]
 - [[IScheduleEntryRepository]] - `references` [EXTRACTED]
 - [[ITokenService]] - `references` [EXTRACTED]

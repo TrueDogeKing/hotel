@@ -73,19 +73,24 @@ public class PublicBookingsController : ControllerBase
         CancellationToken cancellationToken
     ) => Ok(await _bookings.GetScheduleByTokenAsync(token, cancellationToken));
 
-    /// Starts an online payment (deposit or final) — returns the P24 redirect URL.
-    [HttpPost("{token}/payments")]
-    [EnableRateLimiting(RateLimitPolicies.PublicBooking)]
-    [ProducesResponseType(typeof(InitiatePaymentResponseDto), StatusCodes.Status200OK)]
-    [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    [ProducesResponseType(StatusCodes.Status404NotFound)]
-    [ProducesResponseType(StatusCodes.Status409Conflict)]
-    public async Task<IActionResult> InitiatePayment(
-        string token,
-        [FromBody] InitiatePaymentRequestDto request,
-        [FromServices] IPaymentService payments,
-        CancellationToken cancellationToken
-    ) => Ok(await payments.InitiateAsync(token, request, cancellationToken));
+    // Online payment is switched off: groups pay the centre directly and the
+    // owner records it in the panel (Booking.PaymentState). The Przelewy24 code
+    // is left in the tree, unregistered, for whenever card payment comes back —
+    // see PublicPaymentsController and Infrastructure/Payments.
+    //
+    // /// Starts an online payment (deposit or final) — returns the P24 redirect URL.
+    // [HttpPost("{token}/payments")]
+    // [EnableRateLimiting(RateLimitPolicies.PublicBooking)]
+    // [ProducesResponseType(typeof(InitiatePaymentResponseDto), StatusCodes.Status200OK)]
+    // [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    // [ProducesResponseType(StatusCodes.Status404NotFound)]
+    // [ProducesResponseType(StatusCodes.Status409Conflict)]
+    // public async Task<IActionResult> InitiatePayment(
+    //     string token,
+    //     [FromBody] InitiatePaymentRequestDto request,
+    //     [FromServices] IPaymentService payments,
+    //     CancellationToken cancellationToken
+    // ) => Ok(await payments.InitiateAsync(token, request, cancellationToken));
 
     [HttpPost("{token}/cancel")]
     [EnableRateLimiting(RateLimitPolicies.PublicBooking)]

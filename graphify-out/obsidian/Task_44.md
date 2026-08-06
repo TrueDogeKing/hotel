@@ -1,20 +1,22 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.Application / Services (2)"
+community: "Admin User & Token Config"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterApplication_/_Services_2
+  - community/Admin_User__Token_Config
 ---
 
 # Task
 
 ## Connections
-- [[.AddAsync()_1]] - `references` [EXTRACTED]
-- [[.GetAsync()_2]] - `references` [EXTRACTED]
-- [[.ListForBookingAsync()]] - `references` [EXTRACTED]
-- [[.ListForBookingsAsync()]] - `references` [EXTRACTED]
-- [[.SaveChangesAsync()_1]] - `references` [EXTRACTED]
+- [[.CreateAsync()_13]] - `references` [EXTRACTED]
+- [[.DeleteAsync()_9]] - `references` [EXTRACTED]
+- [[.GetOrThrowAsync()_3]] - `references` [EXTRACTED]
+- [[.GuardLastAdministratorAsync()]] - `references` [EXTRACTED]
+- [[.ListAsync()_5]] - `references` [EXTRACTED]
+- [[.SetPasswordAsync()_1]] - `references` [EXTRACTED]
+- [[.SetRoleAsync()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_2
+#graphify/code #graphify/EXTRACTED #community/Admin_User__Token_Config

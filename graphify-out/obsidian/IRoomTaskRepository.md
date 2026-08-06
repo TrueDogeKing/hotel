@@ -12,13 +12,13 @@ tags:
 # IRoomTaskRepository
 
 ## Connections
-- [[.AddAsync()_8]] - `method` [EXTRACTED]
+- [[.AddAsync()_9]] - `method` [EXTRACTED]
 - [[.CountOpenAsync()]] - `method` [EXTRACTED]
 - [[.CountOpenByRoomAsync()]] - `method` [EXTRACTED]
 - [[.GetByIdAsync()_5]] - `method` [EXTRACTED]
 - [[.ListAsync()_8]] - `method` [EXTRACTED]
 - [[.Remove()_5]] - `method` [EXTRACTED]
-- [[.SaveChangesAsync()_8]] - `method` [EXTRACTED]
+- [[.SaveChangesAsync()_9]] - `method` [EXTRACTED]
 - [[AdminBookingService]] - `references` [EXTRACTED]
 - [[HousekeepingService]] - `references` [EXTRACTED]
 - [[HousekeepingServiceTests]] - `references` [EXTRACTED]

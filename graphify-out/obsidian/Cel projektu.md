@@ -1,12 +1,12 @@
 ---
 source_file: "CLAUDE.md"
 type: "document"
-community: "Docker & Project Docs"
+community: "AvailabilityService"
 location: "L3"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Docker__Project_Docs
+  - community/AvailabilityService
 ---
 
 # Cel projektu
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[CampCenter]] - `contains` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Docker__Project_Docs
+#graphify/document #graphify/EXTRACTED #community/AvailabilityService

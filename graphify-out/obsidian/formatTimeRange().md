@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/utils/dates.ts"
 type: "code"
-community: "Domain & Infra Namespaces"
+community: "src / utils"
 location: "L116"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Domain__Infra_Namespaces
+  - community/src_/_utils
 ---
 
 # formatTimeRange()
@@ -15,4 +15,4 @@ tags:
 - [[dates.ts]] - `contains` [EXTRACTED]
 - [[toTimeInput()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Domain__Infra_Namespaces
+#graphify/code #graphify/EXTRACTED #community/src_/_utils

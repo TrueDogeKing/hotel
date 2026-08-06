@@ -1,12 +1,12 @@
 ---
 source_file: "CLAUDE.md"
 type: "document"
-community: "Docker & Project Docs"
-location: "L90"
+community: "AvailabilityService"
+location: "L103"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Docker__Project_Docs
+  - community/AvailabilityService
 ---
 
 # Task Runner Rules
@@ -20,4 +20,4 @@ tags:
 - [[Knowledge Graph  Obsidian Vault Workflow]] - `conceptually_related_to` [INFERRED]
 - [[Mise responsibilities]] - `contains` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Docker__Project_Docs
+#graphify/document #graphify/EXTRACTED #community/AvailabilityService

@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Interfaces/ITokenService.cs"
 type: "code"
-community: "CampCenter.Application / Services (1)"
+community: "Auth Service & Tokens"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterApplication_/_Services_1
+  - community/Auth_Service__Tokens
 ---
 
 # ITokenService
@@ -22,4 +22,4 @@ tags:
 - [[JwtTokenService]] - `implements` [EXTRACTED]
 - [[PaymentService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_1
+#graphify/code #graphify/EXTRACTED #community/Auth_Service__Tokens

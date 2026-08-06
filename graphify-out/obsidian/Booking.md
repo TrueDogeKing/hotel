@@ -2,7 +2,7 @@
 source_file: "src/CampCenter.Domain/Entities/Booking.cs"
 type: "code"
 community: "Integration Test Harness (1)"
-location: "L26"
+location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -19,7 +19,7 @@ tags:
 - [[.A_room_taken_today_by_a_group_is_an_arrival()]] - `calls` [EXTRACTED]
 - [[.A_turnaround_carries_both_groups_and_both_bed_counts()]] - `calls` [EXTRACTED]
 - [[.AddAsync()_2]] - `references` [EXTRACTED]
-- [[.AddAsync()_12]] - `references` [EXTRACTED]
+- [[.AddAsync()_13]] - `references` [EXTRACTED]
 - [[.ApplyCancellationAsync()]] - `references` [EXTRACTED]
 - [[.AssignMealTimesAsync()]] - `references` [EXTRACTED]
 - [[.AssignRooms()]] - `references` [EXTRACTED]
@@ -76,13 +76,14 @@ tags:
 - [[.The_day_strip_counts_rooms_and_rooms_done_per_day()]] - `calls` [EXTRACTED]
 - [[.ToCalendarDto()]] - `references` [EXTRACTED]
 - [[.ToDto()]] - `references` [EXTRACTED]
-- [[.ToDto()_5]] - `references` [EXTRACTED]
+- [[.ToDto()_6]] - `references` [EXTRACTED]
 - [[.ToPublicDto()]] - `references` [EXTRACTED]
 - [[AppDbContext]] - `references` [EXTRACTED]
 - [[Booking.cs]] - `contains` [EXTRACTED]
 - [[BookingCancelReason]] - `references` [EXTRACTED]
 - [[BookingConfiguration]] - `references` [EXTRACTED]
 - [[BookingMealTime_1]] - `references` [EXTRACTED]
+- [[BookingPaymentState_1]] - `references` [EXTRACTED]
 - [[BookingRoomAssignment]] - `references` [EXTRACTED]
 - [[BookingStatus_1]] - `references` [EXTRACTED]
 - [[DateOnly_17]] - `references` [EXTRACTED]

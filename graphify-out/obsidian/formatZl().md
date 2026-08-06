@@ -12,10 +12,14 @@ tags:
 # formatZl()
 
 ## Connections
+- [[AdminBookingsPage()]] - `calls` [EXTRACTED]
+- [[AdminBookingsPage.tsx]] - `imports` [EXTRACTED]
 - [[BookingManagePage()]] - `calls` [EXTRACTED]
 - [[BookingManagePage.tsx]] - `imports` [EXTRACTED]
 - [[BookingWizardPage()]] - `calls` [EXTRACTED]
 - [[BookingWizardPage.tsx]] - `imports` [EXTRACTED]
+- [[PricingDefaultsPanel()]] - `calls` [EXTRACTED]
+- [[PricingDefaultsPanel.tsx]] - `imports` [EXTRACTED]
 - [[admin.ts]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Public_Booking_Frontend_1

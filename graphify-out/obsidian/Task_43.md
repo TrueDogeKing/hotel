@@ -1,21 +1,33 @@
 ---
 source_file: ""
 type: "code"
-community: "Booking Persistence & Entities (1)"
+community: "CampCenter.Application / Services (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Booking_Persistence__Entities_1
+  - community/CampCenterApplication_/_Services_2
 ---
 
 # Task
 
 ## Connections
-- [[.AddAsync()]] - `references` [EXTRACTED]
-- [[.CountByRoleAsync()]] - `references` [EXTRACTED]
-- [[.GetByIdAsync()]] - `references` [EXTRACTED]
-- [[.GetByLoginAsync()]] - `references` [EXTRACTED]
-- [[.ListAsync()_6]] - `references` [EXTRACTED]
-- [[.SaveChangesAsync()]] - `references` [EXTRACTED]
+- [[.AssignMealTimesAsync()]] - `references` [EXTRACTED]
+- [[.CheckConflictsAsync()_1]] - `references` [EXTRACTED]
+- [[.CreateEntryAsync()_1]] - `references` [EXTRACTED]
+- [[.DeleteBookingMealsAsync()_1]] - `references` [EXTRACTED]
+- [[.DeleteEntryAsync()_1]] - `references` [EXTRACTED]
+- [[.GenerateMealsForBookingAsync()_1]] - `references` [EXTRACTED]
+- [[.GenerateMissingMealsAsync()_1]] - `references` [EXTRACTED]
+- [[.GetBookingMealTimesAsync()_1]] - `references` [EXTRACTED]
+- [[.GetBookingOrThrowAsync()]] - `references` [EXTRACTED]
+- [[.GetCalendarAsync()_3]] - `references` [EXTRACTED]
+- [[.GetDayAsync()_3]] - `references` [EXTRACTED]
+- [[.GetEntryOrThrowAsync()]] - `references` [EXTRACTED]
+- [[.GetForBookingAsync()_1]] - `references` [EXTRACTED]
+- [[.GetLocationsAsync()_1]] - `references` [EXTRACTED]
+- [[.ResetBookingMealTimeAsync()_1]] - `references` [EXTRACTED]
+- [[.RetimeGeneratedMealsAsync()]] - `references` [EXTRACTED]
+- [[.SetBookingMealTimeAsync()_1]] - `references` [EXTRACTED]
+- [[.UpdateEntryAsync()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Booking_Persistence__Entities_1
+#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_2

@@ -1,17 +1,19 @@
 ---
 type: community
-members: 36
+members: 43
 ---
 
 # src / utils
 
-**Members:** 36 nodes
+**Members:** 43 nodes
 
 ## Members
 - [[CalendarBar]] - code - frontend/src/components/calendar/MonthCalendar.tsx
 - [[CalendarDayBadge]] - code - frontend/src/components/calendar/MonthCalendar.tsx
 - [[CalendarTile()]] - code - frontend/src/components/calendar/CalendarTile.tsx
 - [[CalendarTile.tsx]] - code - frontend/src/components/calendar/CalendarTile.tsx
+- [[DateField()]] - code - frontend/src/components/calendar/DateField.tsx
+- [[DateField.tsx]] - code - frontend/src/components/calendar/DateField.tsx
 - [[DateRangeField()]] - code - frontend/src/components/calendar/DateRangeField.tsx
 - [[DateRangeField.tsx]] - code - frontend/src/components/calendar/DateRangeField.tsx
 - [[DayCalendar()]] - code - frontend/src/components/calendar/DayCalendar.tsx
@@ -19,10 +21,14 @@ members: 36
 - [[LaneEvent]] - code - frontend/src/components/calendar/lanes.ts
 - [[MonthCalendar()]] - code - frontend/src/components/calendar/MonthCalendar.tsx
 - [[MonthCalendar.tsx]] - code - frontend/src/components/calendar/MonthCalendar.tsx
+- [[PopoverField()]] - code - frontend/src/components/calendar/PopoverField.tsx
+- [[PopoverField.tsx]] - code - frontend/src/components/calendar/PopoverField.tsx
 - [[Props_10]] - code - frontend/src/components/calendar/CalendarTile.tsx
+- [[Props_11]] - code - frontend/src/components/calendar/DateField.tsx
 - [[Props_12]] - code - frontend/src/components/calendar/DateRangeField.tsx
 - [[Props_13]] - code - frontend/src/components/calendar/DayCalendar.tsx
 - [[Props_14]] - code - frontend/src/components/calendar/MonthCalendar.tsx
+- [[Props_15]] - code - frontend/src/components/calendar/PopoverField.tsx
 - [[Props_16]] - code - frontend/src/components/calendar/RangeCalendar.tsx
 - [[RangeCalendar()]] - code - frontend/src/components/calendar/RangeCalendar.tsx
 - [[RangeCalendar.tsx]] - code - frontend/src/components/calendar/RangeCalendar.tsx
@@ -31,6 +37,7 @@ members: 36
 - [[dates.ts]] - code - frontend/src/utils/dates.ts
 - [[dayNumber()]] - code - frontend/src/utils/dates.ts
 - [[formatMonth()]] - code - frontend/src/utils/dates.ts
+- [[formatTimeRange()]] - code - frontend/src/utils/dates.ts
 - [[fromIsoDate()]] - code - frontend/src/utils/dates.ts
 - [[getAvailabilityCalendar()]] - code - frontend/src/api/public.ts
 - [[groupHue()]] - code - frontend/src/components/calendar/lanes.ts
@@ -53,15 +60,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 15 edges to [[_COMMUNITY_src  api (1)]]
+- 17 edges to [[_COMMUNITY_src  api (1)]]
 - 14 edges to [[_COMMUNITY_Public Booking Frontend (1)]]
-- 14 edges to [[_COMMUNITY_Frontend App Shell & i18n]]
+- 10 edges to [[_COMMUNITY_Frontend App Shell & i18n]]
 - 6 edges to [[_COMMUNITY_Domain & Infra Namespaces]]
+- 3 edges to [[_COMMUNITY_ScheduleEntry]]
 - 1 edge to [[_COMMUNITY_Room Closure Management]]
-- 1 edge to [[_COMMUNITY_UsersPage.tsx]]
+- 1 edge to [[_COMMUNITY_useAuth]]
 
 ## Top bridge nodes
-- [[dates.ts]] - degree 38, connects to 6 communities
+- [[dates.ts]] - degree 38, connects to 7 communities
 - [[DateRangeField.tsx]] - degree 10, connects to 3 communities
 - [[DateRangeField()]] - degree 6, connects to 3 communities
 - [[todayIso()]] - degree 14, connects to 2 communities

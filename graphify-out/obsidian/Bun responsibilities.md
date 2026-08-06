@@ -1,12 +1,12 @@
 ---
 source_file: "CLAUDE.md"
 type: "document"
-community: "Docker & Project Docs"
-location: "L103"
+community: "AvailabilityService"
+location: "L116"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Docker__Project_Docs
+  - community/AvailabilityService
 ---
 
 # Bun responsibilities
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Task Runner Rules]] - `contains` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Docker__Project_Docs
+#graphify/document #graphify/EXTRACTED #community/AvailabilityService

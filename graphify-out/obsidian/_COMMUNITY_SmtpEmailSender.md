@@ -1,22 +1,20 @@
 ---
 type: community
-members: 9
+members: 7
 ---
 
 # SmtpEmailSender
 
-**Members:** 9 nodes
+**Members:** 7 nodes
 
 ## Members
-- [[.SendAsync()_1]] - code - src/CampCenter.Infrastructure/Email/SmtpEmailSender.cs
-- [[CampCenter.Infrastructure.Email]] - code - src/CampCenter.Infrastructure/Email/EmailSettings.cs
-- [[CancellationToken_53]] - code
-- [[EmailSettings]] - code - src/CampCenter.Infrastructure/Email/EmailSettings.cs
-- [[EmailSettings.cs]] - code - src/CampCenter.Infrastructure/Email/EmailSettings.cs
-- [[SmtpEmailSender]] - code - src/CampCenter.Infrastructure/Email/SmtpEmailSender.cs
-- [[SmtpEmailSender.cs]] - code - src/CampCenter.Infrastructure/Email/SmtpEmailSender.cs
-- [[Task_53]] - code
-- [[string_10]] - code
+- [[CampCenter.Infrastructure.Payments]] - code - src/CampCenter.Infrastructure/Payments/P24Settings.cs
+- [[P24SignCalculator.cs]] - code - src/CampCenter.Infrastructure/Payments/P24SignCalculator.cs
+- [[P24SignCalculatorTests.cs]] - code - tests/CampCenter.UnitTests/Services/P24SignCalculatorTests.cs
+- [[Przelewy24Client.cs]] - code - src/CampCenter.Infrastructure/Payments/Przelewy24Client.cs
+- [[RegisterData]] - code
+- [[RegisterData_1]] - code - src/CampCenter.Infrastructure/Payments/Przelewy24Client.cs
+- [[RegisterResponse]] - code - src/CampCenter.Infrastructure/Payments/Przelewy24Client.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -26,13 +24,13 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_Application Namespaces & DTOs]]
-- 1 edge to [[_COMMUNITY_Integration Test Harness (1)]]
-- 1 edge to [[_COMMUNITY_Admin Booking & Notifications (4)]]
-- 1 edge to [[_COMMUNITY_Exception]]
+- 4 edges to [[_COMMUNITY_Payment Gateway Integration Tests (1)]]
+- 3 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
+- 1 edge to [[_COMMUNITY_Public Booking Service (2)]]
+- 1 edge to [[_COMMUNITY_ClosureService]]
 
 ## Top bridge nodes
-- [[SmtpEmailSender]] - degree 4, connects to 1 community
-- [[.SendAsync()_1]] - degree 4, connects to 1 community
-- [[CampCenter.Infrastructure.Email]] - degree 3, connects to 1 community
-- [[SmtpEmailSender.cs]] - degree 3, connects to 1 community
+- [[P24SignCalculatorTests.cs]] - degree 4, connects to 3 communities
+- [[CampCenter.Infrastructure.Payments]] - degree 5, connects to 2 communities
+- [[Przelewy24Client.cs]] - degree 5, connects to 2 communities
+- [[P24SignCalculator.cs]] - degree 3, connects to 2 communities

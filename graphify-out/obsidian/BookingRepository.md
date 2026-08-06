@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[.AddAssignmentAsync()_1]] - `method` [EXTRACTED]
-- [[.AddAsync()_12]] - `method` [EXTRACTED]
+- [[.AddAsync()_13]] - `method` [EXTRACTED]
 - [[.AddPaymentAsync()_1]] - `method` [EXTRACTED]
 - [[.Detach()_1]] - `method` [EXTRACTED]
 - [[.GetBookedRoomIdsInRangeAsync()_1]] - `method` [EXTRACTED]
@@ -34,7 +34,7 @@ tags:
 - [[.ListUpcomingAsync()_1]] - `method` [EXTRACTED]
 - [[.RemoveAssignment()_1]] - `method` [EXTRACTED]
 - [[.RemoveAssignments()_1]] - `method` [EXTRACTED]
-- [[.SaveChangesAsync()_12]] - `method` [EXTRACTED]
+- [[.SaveChangesAsync()_13]] - `method` [EXTRACTED]
 - [[AppDbContext]] - `references` [EXTRACTED]
 - [[BookingRepository.cs]] - `contains` [EXTRACTED]
 - [[BookingStatus_1]] - `references` [EXTRACTED]

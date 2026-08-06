@@ -16,6 +16,7 @@ tags:
 - [[.CreateClient()]] - `method` [EXTRACTED]
 - [[.CreateClientForAsync()]] - `method` [EXTRACTED]
 - [[AdminPanelApiTests]] - `inherits` [EXTRACTED]
+- [[AdminPricingApiTests]] - `inherits` [EXTRACTED]
 - [[ApiCollection.cs]] - `contains` [EXTRACTED]
 - [[AuthApiTests]] - `inherits` [EXTRACTED]
 - [[CampCenterApiFactory]] - `references` [EXTRACTED]

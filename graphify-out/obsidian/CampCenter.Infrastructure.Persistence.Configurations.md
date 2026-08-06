@@ -19,6 +19,7 @@ tags:
 - [[ClosureConfiguration.cs]] - `contains` [EXTRACTED]
 - [[MealTimeDefaultConfiguration.cs]] - `contains` [EXTRACTED]
 - [[PaymentConfiguration.cs]] - `contains` [EXTRACTED]
+- [[PricingDefaultsConfiguration.cs]] - `contains` [EXTRACTED]
 - [[RefreshTokenConfiguration.cs]] - `contains` [EXTRACTED]
 - [[RoomCleaningConfiguration.cs]] - `contains` [EXTRACTED]
 - [[RoomConfiguration.cs]] - `contains` [EXTRACTED]

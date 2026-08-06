@@ -14,6 +14,5 @@ tags:
 ## Connections
 - [[PublicAvailabilityController.cs]] - `contains` [EXTRACTED]
 - [[PublicBookingsController.cs]] - `contains` [EXTRACTED]
-- [[PublicPaymentsController.cs]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/CampCenterApplicationDTOsPublic

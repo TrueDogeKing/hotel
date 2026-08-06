@@ -1,22 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "Payment Gateway Integration Tests (1)"
+community: "tests / CampCenter.IntegrationTests (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Payment_Gateway_Integration_Tests_1
+  - community/tests_/_CampCenterIntegrationTests_1
 ---
 
 # Task
 
 ## Connections
-- [[.CreateBookingWithDepositAsync()]] - `references` [EXTRACTED]
-- [[.DepositWebhook_ConfirmsBooking_AndIsIdempotent()]] - `references` [EXTRACTED]
-- [[.DepositWebhook_GeneratesTheGroupsMeals()]] - `references` [EXTRACTED]
-- [[.RegisterTransactionAsync()_2]] - `references` [EXTRACTED]
-- [[.VerifyTransactionAsync()_2]] - `references` [EXTRACTED]
-- [[.Webhook_AmountMismatch_IsRejected()]] - `references` [EXTRACTED]
-- [[.Webhook_BadSignature_IsRejected()]] - `references` [EXTRACTED]
+- [[.AssignableRooms_OffersOwnAndFreeRooms_ButNotTakenOrClosedOnes()]] - `references` [EXTRACTED]
+- [[.Closure_BlocksRoom_InOccupancyGrid()]] - `references` [EXTRACTED]
+- [[.DashboardGroups_SplitByCategory_AndPage()]] - `references` [EXTRACTED]
+- [[.Occupancy_Reassign_Tasks_And_Dashboard_Work()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Payment_Gateway_Integration_Tests_1
+#graphify/code #graphify/EXTRACTED #community/tests_/_CampCenterIntegrationTests_1

@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/api/admin.ts"
 type: "code"
-community: "ScheduleEntry"
-location: "L203"
+community: "GroupRooms.tsx"
+location: "L225"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ScheduleEntry
+  - community/GroupRoomstsx
 ---
 
 # getAssignableRooms()
@@ -16,4 +16,4 @@ tags:
 - [[GroupRooms.tsx]] - `imports` [EXTRACTED]
 - [[admin.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ScheduleEntry
+#graphify/code #graphify/EXTRACTED #community/GroupRoomstsx

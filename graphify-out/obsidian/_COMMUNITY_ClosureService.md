@@ -1,29 +1,45 @@
 ---
 type: community
-members: 16
+members: 32
 ---
 
 # ClosureService
 
-**Members:** 16 nodes
+**Members:** 32 nodes
 
 ## Members
-- [[.CreateAsync()_9]] - code - src/CampCenter.Application/Services/ClosureService.cs
-- [[.DeleteAsync()_5]] - code - src/CampCenter.Application/Services/ClosureService.cs
-- [[.GetAllAsync()_3]] - code - src/CampCenter.Application/Services/ClosureService.cs
-- [[.GetOrThrowAsync()_1]] - code - src/CampCenter.Application/Services/ClosureService.cs
-- [[.GuardNoLiveBookingsAsync()]] - code - src/CampCenter.Application/Services/ClosureService.cs
-- [[.GuardRoomExistsAsync()]] - code - src/CampCenter.Application/Services/ClosureService.cs
-- [[.SaveChangesAsync()_3]] - code - src/CampCenter.Domain/Repositories/IClosureRepository.cs
-- [[.ToDto()_1]] - code - src/CampCenter.Application/Services/ClosureService.cs
-- [[.UpdateAsync()_4]] - code - src/CampCenter.Application/Services/ClosureService.cs
-- [[CancellationToken_35]] - code
-- [[ClosureDto]] - code - src/CampCenter.Application/DTOs/Closures/ClosureDtos.cs
-- [[ClosureService]] - code - src/CampCenter.Application/Services/ClosureService.cs
-- [[DateOnly_11]] - code
-- [[Guid_21]] - code
-- [[List_9]] - code
-- [[Task_35]] - code
+- [[AdminBookingService.cs]] - code - src/CampCenter.Application/Services/AdminBookingService.cs
+- [[AuthService.cs]] - code - src/CampCenter.Application/Services/AuthService.cs
+- [[AvailabilityService.cs]] - code - src/CampCenter.Application/Services/AvailabilityService.cs
+- [[BookingService.cs]] - code - src/CampCenter.Application/Services/BookingService.cs
+- [[BusinessRuleViolationException]] - code - src/CampCenter.Domain/Exceptions/BusinessRuleViolationException.cs
+- [[BusinessRuleViolationException.cs]] - code - src/CampCenter.Domain/Exceptions/BusinessRuleViolationException.cs
+- [[CampCenter.Application.Common]] - code - src/CampCenter.Application/Common/LoginNormalizer.cs
+- [[CampCenter.Application.Models]] - code - src/CampCenter.Application/Models/AccessToken.cs
+- [[CampCenter.Application.Services]] - code - src/CampCenter.Application/Services/AdminBookingService.cs
+- [[CampCenter.Domain.Exceptions]] - code - src/CampCenter.Domain/Exceptions/BusinessRuleViolationException.cs
+- [[CampCenter.UnitTests.Services]] - code - tests/CampCenter.UnitTests/Services/HousekeepingPlannerTests.cs
+- [[ConcurrencyConflictException]] - code - src/CampCenter.Domain/Exceptions/ConcurrencyConflictException.cs
+- [[ConcurrencyConflictException.cs]] - code - src/CampCenter.Domain/Exceptions/ConcurrencyConflictException.cs
+- [[ConflictException]] - code - src/CampCenter.Domain/Exceptions/ConflictException.cs
+- [[ConflictException.cs]] - code - src/CampCenter.Domain/Exceptions/ConflictException.cs
+- [[EmailTemplates.cs]] - code - src/CampCenter.Application/Services/EmailTemplates.cs
+- [[Exception_1]] - code
+- [[ForbiddenActionException]] - code - src/CampCenter.Domain/Exceptions/ForbiddenActionException.cs
+- [[ForbiddenActionException.cs]] - code - src/CampCenter.Domain/Exceptions/ForbiddenActionException.cs
+- [[HousekeepingPlannerTests.cs]] - code - tests/CampCenter.UnitTests/Services/HousekeepingPlannerTests.cs
+- [[HousekeepingServiceTests.cs]] - code - tests/CampCenter.UnitTests/Services/HousekeepingServiceTests.cs
+- [[ITokenService.cs]] - code - src/CampCenter.Application/Interfaces/ITokenService.cs
+- [[MealGenerationPlannerTests.cs]] - code - tests/CampCenter.UnitTests/Services/MealGenerationPlannerTests.cs
+- [[NotFoundException]] - code - src/CampCenter.Domain/Exceptions/NotFoundException.cs
+- [[NotFoundException.cs]] - code - src/CampCenter.Domain/Exceptions/NotFoundException.cs
+- [[PaymentService.cs]] - code - src/CampCenter.Application/Services/PaymentService.cs
+- [[PricingService.cs]] - code - src/CampCenter.Application/Services/PricingService.cs
+- [[RoomMixCalculatorTests.cs]] - code - tests/CampCenter.UnitTests/Services/RoomMixCalculatorTests.cs
+- [[RoomService.cs]] - code - src/CampCenter.Application/Services/RoomService.cs
+- [[ScheduleConflictTests.cs]] - code - tests/CampCenter.UnitTests/Services/ScheduleConflictTests.cs
+- [[ScheduleService.cs]] - code - src/CampCenter.Application/Services/ScheduleService.cs
+- [[UserService.cs]] - code - src/CampCenter.Application/Services/UserService.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -33,17 +49,33 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 8 edges to [[_COMMUNITY_IClosureRepository]]
-- 4 edges to [[_COMMUNITY_Password Hashing (bcrypt)]]
-- 3 edges to [[_COMMUNITY_ClosureValidatorsTests]]
-- 2 edges to [[_COMMUNITY_Integration Test Harness (2)]]
+- 29 edges to [[_COMMUNITY_Exception]]
+- 25 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
+- 5 edges to [[_COMMUNITY_CampCenter.Application.DTOs.Public]]
+- 4 edges to [[_COMMUNITY_Auth Service & Tokens]]
+- 3 edges to [[_COMMUNITY_eslint_1]]
+- 3 edges to [[_COMMUNITY_Public Booking Service (2)]]
+- 2 edges to [[_COMMUNITY_CampCenter.Application  Services (2)]]
+- 2 edges to [[_COMMUNITY_Integration Test Harness (1)]]
+- 2 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (1)]]
+- 2 edges to [[_COMMUNITY_Room Mix Calculator Tests]]
 - 2 edges to [[_COMMUNITY_Room Management]]
-- 2 edges to [[_COMMUNITY_Validator Unit Tests]]
-- 1 edge to [[_COMMUNITY_Exception]]
+- 1 edge to [[_COMMUNITY_eslint_2]]
+- 1 edge to [[_COMMUNITY_CampCenter.Application  Services (1)]]
+- 1 edge to [[_COMMUNITY_BookingSettings]]
+- 1 edge to [[_COMMUNITY_Admin Booking & Notifications (1)]]
+- 1 edge to [[_COMMUNITY_Public Booking Service (1)]]
+- 1 edge to [[_COMMUNITY_Admin Booking & Notifications (4)]]
+- 1 edge to [[_COMMUNITY_Payment Gateway Integration Tests (1)]]
+- 1 edge to [[_COMMUNITY_CampCenter.UnitTests  Services (3)]]
+- 1 edge to [[_COMMUNITY_Admin User & Token Config]]
+- 1 edge to [[_COMMUNITY_SmtpEmailSender]]
+- 1 edge to [[_COMMUNITY_CampCenter.UnitTests  Services (2)]]
+- 1 edge to [[_COMMUNITY_CampCenter.UnitTests  Services (4)]]
 
 ## Top bridge nodes
-- [[ClosureService]] - degree 13, connects to 5 communities
-- [[.CreateAsync()_9]] - degree 11, connects to 2 communities
-- [[.GetOrThrowAsync()_1]] - degree 9, connects to 2 communities
-- [[ClosureDto]] - degree 8, connects to 2 communities
-- [[.UpdateAsync()_4]] - degree 11, connects to 1 community
+- [[CampCenter.Application.Services]] - degree 24, connects to 7 communities
+- [[CampCenter.Application.Models]] - degree 16, connects to 6 communities
+- [[CampCenter.Domain.Exceptions]] - degree 22, connects to 4 communities
+- [[BookingService.cs]] - degree 9, connects to 4 communities
+- [[AuthService.cs]] - degree 8, connects to 4 communities

@@ -1,12 +1,12 @@
 ---
 source_file: "CLAUDE.md"
 type: "rationale"
-community: "Docker & Project Docs"
+community: "AvailabilityService"
 location: "Knowledge graph / Obsidian vault"
 tags:
   - graphify/rationale
   - graphify/INFERRED
-  - community/Docker__Project_Docs
+  - community/AvailabilityService
 ---
 
 # Knowledge Graph / Obsidian Vault Workflow
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Task Runner Rules]] - `conceptually_related_to` [INFERRED]
 
-#graphify/rationale #graphify/INFERRED #community/Docker__Project_Docs
+#graphify/rationale #graphify/INFERRED #community/AvailabilityService

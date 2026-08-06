@@ -13,6 +13,5 @@ tags:
 ## Connections
 - [[.Cancel()_1]] - `references` [EXTRACTED]
 - [[.Create()_6]] - `references` [EXTRACTED]
-- [[.InitiatePayment()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_2

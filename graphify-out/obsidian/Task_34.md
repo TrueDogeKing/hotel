@@ -1,23 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "Public Booking Service (1)"
+community: "Room Management"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public_Booking_Service_1
+  - community/Room_Management
 ---
 
 # Task
 
 ## Connections
-- [[.CancelByTokenAsync()_1]] - `references` [EXTRACTED]
-- [[.CreateAsync()_8]] - `references` [EXTRACTED]
-- [[.FindByTokenAsync()]] - `references` [EXTRACTED]
-- [[.GetByTokenAsync()_1]] - `references` [EXTRACTED]
-- [[.GetScheduleByTokenAsync()_1]] - `references` [EXTRACTED]
-- [[.PickRoomsAsync()]] - `references` [EXTRACTED]
-- [[.SendSafelyAsync()]] - `references` [EXTRACTED]
-- [[.TryCreateAsync()]] - `references` [EXTRACTED]
+- [[.GetAvailabilityAsync()_1]] - `references` [EXTRACTED]
+- [[.GetBlockedRoomIdsAsync()_1]] - `references` [EXTRACTED]
+- [[.GetCalendarAsync()_2]] - `references` [EXTRACTED]
+- [[.GetCenterClosureReasonAsync()_1]] - `references` [EXTRACTED]
+- [[.GetFreeRoomsByCapacityAsync()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_1
+#graphify/code #graphify/EXTRACTED #community/Room_Management

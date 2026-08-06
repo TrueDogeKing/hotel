@@ -11,8 +11,7 @@ tags:
 # Task
 
 ## Connections
-- [[.AdminEndpoints_WithoutToken_ReturnUnauthorized()]] - `references` [EXTRACTED]
-- [[.Closures_CrudRoundtrip_Works()]] - `references` [EXTRACTED]
-- [[.Rooms_CrudRoundtrip_Works()]] - `references` [EXTRACTED]
+- [[.CreateAuthenticatedClientAsync()]] - `references` [EXTRACTED]
+- [[.CreateClientForAsync()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/tests_/_CampCenterIntegrationTests_1

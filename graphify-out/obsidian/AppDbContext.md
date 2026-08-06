@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Persistence/AppDbContext.cs"
 type: "code"
-community: "components / admin"
+community: "CampCenter.Infrastructure / Repositories (1)"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/components_/_admin
+  - community/CampCenterInfrastructure_/_Repositories_1
 ---
 
 # AppDbContext
@@ -30,6 +30,8 @@ tags:
 - [[MealTimeDefault_1]] - `references` [EXTRACTED]
 - [[MealTimeDefaultRepository]] - `references` [EXTRACTED]
 - [[Payment]] - `references` [EXTRACTED]
+- [[PricingDefaults_1]] - `references` [EXTRACTED]
+- [[PricingDefaultsRepository]] - `references` [EXTRACTED]
 - [[RefreshToken]] - `references` [EXTRACTED]
 - [[RefreshTokenRepository]] - `references` [EXTRACTED]
 - [[Room_1]] - `references` [EXTRACTED]
@@ -41,4 +43,4 @@ tags:
 - [[ScheduleEntry_1]] - `references` [EXTRACTED]
 - [[ScheduleEntryRepository]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/components_/_admin
+#graphify/code #graphify/EXTRACTED #community/CampCenterInfrastructure_/_Repositories_1

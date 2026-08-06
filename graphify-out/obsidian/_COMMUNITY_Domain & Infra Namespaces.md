@@ -1,11 +1,11 @@
 ---
 type: community
-members: 34
+members: 33
 ---
 
 # Domain & Infra Namespaces
 
-**Members:** 34 nodes
+**Members:** 33 nodes
 
 ## Members
 - [[BookingMealTime]] - code - frontend/src/api/admin.ts
@@ -31,7 +31,6 @@ members: 34
 - [[deleteBookingMeals()]] - code - frontend/src/api/admin.ts
 - [[deleteMealTime()]] - code - frontend/src/api/admin.ts
 - [[emptyForm_1]] - code - frontend/src/pages/admin/MealTimesPage.tsx
-- [[formatTimeRange()]] - code - frontend/src/utils/dates.ts
 - [[fromTimeInput()]] - code - frontend/src/utils/dates.ts
 - [[getBookingMealTimes()]] - code - frontend/src/api/admin.ts
 - [[getMealTimes()]] - code - frontend/src/api/admin.ts
@@ -52,15 +51,15 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 18 edges to [[_COMMUNITY_src  api (1)]]
-- 15 edges to [[_COMMUNITY_Frontend App Shell & i18n]]
+- 14 edges to [[_COMMUNITY_Frontend App Shell & i18n]]
 - 6 edges to [[_COMMUNITY_src  utils]]
 - 4 edges to [[_COMMUNITY_Room Closure Management]]
-- 3 edges to [[_COMMUNITY_Public Booking Frontend (1)]]
+- 4 edges to [[_COMMUNITY_Public Booking Frontend (1)]]
 - 2 edges to [[_COMMUNITY_Frontend Auth & API Client]]
 
 ## Top bridge nodes
-- [[MealTimesPage.tsx]] - degree 18, connects to 5 communities
-- [[GroupMealTimes.tsx]] - degree 19, connects to 4 communities
+- [[GroupMealTimes.tsx]] - degree 19, connects to 5 communities
+- [[MealTimesPage.tsx]] - degree 18, connects to 4 communities
 - [[ScheduleEntryForm.tsx]] - degree 17, connects to 4 communities
 - [[toTimeInput()]] - degree 15, connects to 4 communities
 - [[ScheduleEntryInput]] - degree 5, connects to 2 communities

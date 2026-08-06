@@ -55,6 +55,37 @@ public interface IAdminBookingService
         CancellationToken cancellationToken = default
     );
 
+    /// Changes what this one group is charged. The rate and deposit are stored as
+    /// given; the total is recomputed as rate × headcount × nights unless the
+    /// request carries a flat total of its own. Other bookings are untouched — the
+    /// centre-wide rates live in IPricingService.
+    Task<AdminBookingDto> UpdatePricingAsync(
+        Guid id,
+        UpdateBookingPricingRequestDto request,
+        CancellationToken cancellationToken = default
+    );
+
+    /// The panel's single state control: sets status and payment together.
+    ///
+    /// AwaitingPayment / DepositPaid / Paid record what has been paid on a live
+    /// booking (and confirm one waiting on its deposit); Cancelled and Completed
+    /// are status moves, and go down exactly the same paths as SetStatusAsync —
+    /// cancelling frees the rooms and emails the group.
+    Task<AdminBookingDto> SetStateAsync(
+        Guid id,
+        SetBookingStateRequestDto request,
+        CancellationToken cancellationToken = default
+    );
+
+    /// Records what the owner has been paid. Marking a deposit (or the full amount)
+    /// received confirms a booking still waiting on one, exactly as an online
+    /// deposit payment used to: the room hold stops expiring.
+    Task<AdminBookingDto> SetPaymentStateAsync(
+        Guid id,
+        SetBookingPaymentStateRequestDto request,
+        CancellationToken cancellationToken = default
+    );
+
     /// Sets the kitchen-facing dietary/preparation note for a group.
     Task<AdminBookingDto> UpdateDietaryNotesAsync(
         Guid id,

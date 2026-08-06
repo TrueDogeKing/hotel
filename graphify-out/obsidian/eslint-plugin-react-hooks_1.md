@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/package.json"
 type: "concept"
-community: "CampCenter.Application / Services (3)"
+community: "eslint-plugin-react-hooks"
 location: "L29"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/CampCenterApplication_/_Services_3
+  - community/eslint-plugin-react-hooks
 ---
 
 # eslint-plugin-react-hooks
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[eslint-plugin-react-hooks]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/CampCenterApplication_/_Services_3
+#graphify/concept #graphify/EXTRACTED #community/eslint-plugin-react-hooks

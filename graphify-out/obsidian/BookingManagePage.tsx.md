@@ -26,7 +26,6 @@ tags:
 - [[formatDate()]] - `imports` [EXTRACTED]
 - [[formatZl()]] - `imports` [EXTRACTED]
 - [[getBooking()]] - `imports` [EXTRACTED]
-- [[initiatePayment()]] - `imports` [EXTRACTED]
 - [[public.ts]] - `imports_from` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Public_Booking_Frontend_1

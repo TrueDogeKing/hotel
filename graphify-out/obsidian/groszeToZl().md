@@ -12,6 +12,8 @@ tags:
 # groszeToZl()
 
 ## Connections
+- [[AdminBookingsPage.tsx]] - `imports` [EXTRACTED]
+- [[PricingDefaultsPanel.tsx]] - `imports` [EXTRACTED]
 - [[admin.ts]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/src_/_api_1

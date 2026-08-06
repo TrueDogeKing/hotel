@@ -1,12 +1,12 @@
 ---
 source_file: "CLAUDE.md"
 type: "document"
-community: "Docker & Project Docs"
-location: "L41"
+community: "AvailabilityService"
+location: "L53"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Docker__Project_Docs
+  - community/AvailabilityService
 ---
 
 # Knowledge graph / Obsidian vault (obowiązkowe)
@@ -16,4 +16,4 @@ tags:
 - [[CampCenter]] - `contains` [EXTRACTED]
 - [[Eksploracja przez vault (oszczędność tokenów)]] - `contains` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Docker__Project_Docs
+#graphify/document #graphify/EXTRACTED #community/AvailabilityService

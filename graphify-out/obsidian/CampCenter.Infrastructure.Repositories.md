@@ -18,6 +18,7 @@ tags:
 - [[ClosureRepository.cs]] - `contains` [EXTRACTED]
 - [[DependencyInjection.cs_1]] - `imports` [EXTRACTED]
 - [[MealTimeDefaultRepository.cs]] - `contains` [EXTRACTED]
+- [[PricingDefaultsRepository.cs]] - `contains` [EXTRACTED]
 - [[RefreshTokenRepository.cs]] - `contains` [EXTRACTED]
 - [[RoomCleaningRepository.cs]] - `contains` [EXTRACTED]
 - [[RoomRepository.cs]] - `contains` [EXTRACTED]

@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Payments/Przelewy24Client.cs"
 type: "code"
-community: "Payment"
+community: "SmtpEmailSender"
 location: "L127"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Payment
+  - community/SmtpEmailSender
 ---
 
 # RegisterResponse
@@ -15,4 +15,4 @@ tags:
 - [[Przelewy24Client.cs]] - `contains` [EXTRACTED]
 - [[RegisterData]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Payment
+#graphify/code #graphify/EXTRACTED #community/SmtpEmailSender

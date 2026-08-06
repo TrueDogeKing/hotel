@@ -1,18 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: ".Calendar"
+community: "ControllerBase"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Calendar
+  - community/ControllerBase
 ---
 
 # HttpGet
 
 ## Connections
-- [[.Calendar()]] - `references` [EXTRACTED]
-- [[.Closures()]] - `references` [EXTRACTED]
-- [[.Get()_3]] - `references` [EXTRACTED]
+- [[.List()_2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Calendar
+#graphify/code #graphify/EXTRACTED #community/ControllerBase

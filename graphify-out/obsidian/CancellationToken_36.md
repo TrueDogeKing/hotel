@@ -1,19 +1,22 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.UnitTests / Services (2)"
+community: "Validator Unit Tests"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Services_2
+  - community/Validator_Unit_Tests
 ---
 
 # CancellationToken
 
 ## Connections
-- [[.GetDayAsync()_2]] - `references` [EXTRACTED]
-- [[.GetJobsAsync()]] - `references` [EXTRACTED]
-- [[.GetRangeAsync()_1]] - `references` [EXTRACTED]
-- [[.SetStatusAsync()_4]] - `references` [EXTRACTED]
+- [[.CreateAsync()_9]] - `references` [EXTRACTED]
+- [[.DeleteAsync()_5]] - `references` [EXTRACTED]
+- [[.GetAllAsync()_3]] - `references` [EXTRACTED]
+- [[.GetOrThrowAsync()_1]] - `references` [EXTRACTED]
+- [[.GuardNoLiveBookingsAsync()]] - `references` [EXTRACTED]
+- [[.GuardRoomExistsAsync()]] - `references` [EXTRACTED]
+- [[.UpdateAsync()_5]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_2
+#graphify/code #graphify/EXTRACTED #community/Validator_Unit_Tests

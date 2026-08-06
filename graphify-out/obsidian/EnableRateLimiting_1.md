@@ -15,6 +15,5 @@ tags:
 - [[.Create()_6]] - `references` [EXTRACTED]
 - [[.GetByToken()]] - `references` [EXTRACTED]
 - [[.GetScheduleByToken()]] - `references` [EXTRACTED]
-- [[.InitiatePayment()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_2

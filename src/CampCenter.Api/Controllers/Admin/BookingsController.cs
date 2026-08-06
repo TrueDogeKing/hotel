@@ -110,6 +110,43 @@ public class BookingsController : ControllerBase
         CancellationToken cancellationToken
     ) => Ok(await _bookings.ReassignAsync(id, request, cancellationToken));
 
+    /// What this one group is charged. The centre-wide rates that prefill a new
+    /// booking are elsewhere — see PricingController.
+    [HttpPut("{id:guid}/pricing")]
+    [ProducesResponseType(typeof(AdminBookingDto), StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    public async Task<IActionResult> UpdatePricing(
+        Guid id,
+        [FromBody] UpdateBookingPricingRequestDto request,
+        CancellationToken cancellationToken
+    ) => Ok(await _bookings.UpdatePricingAsync(id, request, cancellationToken));
+
+    /// The panel's single state control — status and payment in one move. See
+    /// BookingState for the values and IAdminBookingService.SetStateAsync for what
+    /// each one does.
+    [HttpPut("{id:guid}/state")]
+    [ProducesResponseType(typeof(AdminBookingDto), StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    [ProducesResponseType(StatusCodes.Status409Conflict)]
+    public async Task<IActionResult> SetState(
+        Guid id,
+        [FromBody] SetBookingStateRequestDto request,
+        CancellationToken cancellationToken
+    ) => Ok(await _bookings.SetStateAsync(id, request, cancellationToken));
+
+    /// What the owner has actually been paid: Unpaid / DepositPaid / Paid.
+    [HttpPut("{id:guid}/payment-state")]
+    [ProducesResponseType(typeof(AdminBookingDto), StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    public async Task<IActionResult> SetPaymentState(
+        Guid id,
+        [FromBody] SetBookingPaymentStateRequestDto request,
+        CancellationToken cancellationToken
+    ) => Ok(await _bookings.SetPaymentStateAsync(id, request, cancellationToken));
+
     /// Kitchen-facing dietary/preparation note for the group. Separate from the
     /// booker's own Notes.
     [HttpPut("{id:guid}/dietary-notes")]

@@ -1,16 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "Validator Unit Tests"
+community: "CampCenter.Domain / Repositories (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Validator_Unit_Tests
+  - community/CampCenterDomain_/_Repositories_1
 ---
 
 # Guid
 
 ## Connections
-- [[.GetByIdAsync()_9]] - `references` [EXTRACTED]
+- [[.GetBookedRoomIdsInRangeAsync()_1]] - `references` [EXTRACTED]
+- [[.GetByIdAsync()_8]] - `references` [EXTRACTED]
+- [[.GetCompletedPaymentKindsAsync()_1]] - `references` [EXTRACTED]
+- [[.GetPaymentsAsync()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Validator_Unit_Tests
+#graphify/code #graphify/EXTRACTED #community/CampCenterDomain_/_Repositories_1

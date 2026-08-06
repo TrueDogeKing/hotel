@@ -27,6 +27,7 @@ tags:
 - [[MealTimeService.cs]] - `imports` [EXTRACTED]
 - [[NotFoundException.cs]] - `contains` [EXTRACTED]
 - [[PaymentService.cs]] - `imports` [EXTRACTED]
+- [[PricingService.cs]] - `imports` [EXTRACTED]
 - [[RoomCleaningRepository.cs]] - `imports` [EXTRACTED]
 - [[RoomService.cs]] - `imports` [EXTRACTED]
 - [[RoomTaskService.cs]] - `imports` [EXTRACTED]

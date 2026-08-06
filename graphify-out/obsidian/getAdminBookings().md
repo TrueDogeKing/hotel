@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/api/admin.ts"
 type: "code"
-community: "Frontend App Shell & i18n"
-location: "L180"
+community: "Public Booking Frontend (1)"
+location: "L202"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Frontend_App_Shell__i18n
+  - community/Public_Booking_Frontend_1
 ---
 
 # getAdminBookings()
@@ -16,4 +16,4 @@ tags:
 - [[AdminBookingsPage.tsx]] - `imports` [EXTRACTED]
 - [[admin.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Frontend_App_Shell__i18n
+#graphify/code #graphify/EXTRACTED #community/Public_Booking_Frontend_1

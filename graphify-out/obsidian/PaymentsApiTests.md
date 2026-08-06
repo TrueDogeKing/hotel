@@ -2,7 +2,7 @@
 source_file: "tests/CampCenter.IntegrationTests/PaymentsApiTests.cs"
 type: "code"
 community: "Payment Gateway Integration Tests (1)"
-location: "L51"
+location: "L54"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -23,6 +23,6 @@ tags:
 - [[IntegrationTestBase]] - `inherits` [EXTRACTED]
 - [[PaymentsApiTests.cs]] - `contains` [EXTRACTED]
 - [[int_4]] - `references` [EXTRACTED]
-- [[long]] - `references` [EXTRACTED]
+- [[long_2]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Payment_Gateway_Integration_Tests_1

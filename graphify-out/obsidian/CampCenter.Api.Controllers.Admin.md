@@ -18,6 +18,7 @@ tags:
 - [[HousekeepingController.cs]] - `contains` [EXTRACTED]
 - [[MealTimesController.cs]] - `contains` [EXTRACTED]
 - [[OccupancyController.cs]] - `contains` [EXTRACTED]
+- [[PricingController.cs]] - `contains` [EXTRACTED]
 - [[RoomsController.cs]] - `contains` [EXTRACTED]
 - [[ScheduleController.cs]] - `contains` [EXTRACTED]
 - [[TasksController.cs]] - `contains` [EXTRACTED]

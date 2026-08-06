@@ -1,21 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "IClosureRepository"
+community: "CampCenter.Application / Services (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/IClosureRepository
+  - community/CampCenterApplication_/_Services_2
 ---
 
 # CancellationToken
 
 ## Connections
-- [[.AddAsync()_3]] - `references` [EXTRACTED]
-- [[.GetAllAsync()_6]] - `references` [EXTRACTED]
-- [[.GetByIdAsync()_2]] - `references` [EXTRACTED]
-- [[.GetOverlappingAsync()]] - `references` [EXTRACTED]
-- [[.GetUpcomingCenterWideAsync()]] - `references` [EXTRACTED]
-- [[.SaveChangesAsync()_3]] - `references` [EXTRACTED]
+- [[.AddAsync()_1]] - `references` [EXTRACTED]
+- [[.GetAsync()_4]] - `references` [EXTRACTED]
+- [[.ListForBookingAsync()]] - `references` [EXTRACTED]
+- [[.ListForBookingsAsync()]] - `references` [EXTRACTED]
+- [[.SaveChangesAsync()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/IClosureRepository
+#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_2

@@ -1,19 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.Domain / Repositories (1)"
+community: "CampCenter.Application / Services (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterDomain_/_Repositories_1
+  - community/CampCenterApplication_/_Services_2
 ---
 
 # Guid
 
 ## Connections
-- [[.GetBookedRoomIdsInRangeAsync()_1]] - `references` [EXTRACTED]
-- [[.GetByIdAsync()_8]] - `references` [EXTRACTED]
-- [[.GetCompletedPaymentKindsAsync()_1]] - `references` [EXTRACTED]
-- [[.GetPaymentsAsync()_1]] - `references` [EXTRACTED]
+- [[.GetAsync()_7]] - `references` [EXTRACTED]
+- [[.ListForBookingAsync()_2]] - `references` [EXTRACTED]
+- [[.ListForBookingsAsync()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterDomain_/_Repositories_1
+#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_2

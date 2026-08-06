@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/pages/admin/AdminBookingsPage.tsx"
 type: "code"
-community: "Frontend App Shell & i18n"
+community: "Public Booking Frontend (1)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Frontend_App_Shell__i18n
+  - community/Public_Booking_Frontend_1
 ---
 
 # AdminBookingsPage.tsx
@@ -17,16 +17,20 @@ tags:
 - [[AdminLayout.tsx]] - `imports_from` [EXTRACTED]
 - [[App.tsx]] - `imports_from` [EXTRACTED]
 - [[AuthContext.tsx]] - `imports_from` [EXTRACTED]
-- [[BookingStatus]] - `imports` [EXTRACTED]
+- [[BookingState]] - `imports` [EXTRACTED]
 - [[ConfirmDialog()]] - `imports` [EXTRACTED]
 - [[ConfirmDialog.tsx]] - `imports_from` [EXTRACTED]
+- [[PricingDefaultsPanel.tsx]] - `imports_from` [EXTRACTED]
 - [[admin.ts]] - `imports_from` [EXTRACTED]
-- [[bookingStatuses]] - `imports` [EXTRACTED]
-- [[cancelAdminBooking()]] - `imports` [EXTRACTED]
+- [[bookingStates]] - `imports` [EXTRACTED]
 - [[dates.ts]] - `imports_from` [EXTRACTED]
 - [[formatDate()]] - `imports` [EXTRACTED]
+- [[formatZl()]] - `imports` [EXTRACTED]
 - [[getAdminBookings()]] - `imports` [EXTRACTED]
-- [[setBookingStatus()]] - `imports` [EXTRACTED]
+- [[groszeToZl()]] - `imports` [EXTRACTED]
+- [[setBookingState()]] - `imports` [EXTRACTED]
+- [[updateBookingPricing()]] - `imports` [EXTRACTED]
 - [[useAuth()]] - `imports` [EXTRACTED]
+- [[zlToGrosze()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Frontend_App_Shell__i18n
+#graphify/code #graphify/EXTRACTED #community/Public_Booking_Frontend_1

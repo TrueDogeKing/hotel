@@ -2274,6 +2274,50 @@ p[role="alert"] {
   width: auto;
 }
 
+/* Rates panel above the bookings table, and the per-booking price editor inside
+   an expanded row. Both are field strips like .admin-form, not full forms. */
+.pricing-defaults {
+  margin-bottom: 20px;
+  padding: 12px 16px;
+  border: 1px solid color-mix(in oklch, currentColor 12%, transparent);
+  border-radius: var(--r-md);
+}
+
+.pricing-defaults h2 {
+  margin: 0 0 4px;
+  font-size: 1rem;
+}
+
+.pricing-hint {
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+.price-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 0.75rem 8px;
+}
+
+.price-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.85rem;
+}
+
+.price-form input {
+  width: 9rem;
+}
+
+.price-summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
 .admin-table tr.overdue td {
   color: var(--danger);
 }

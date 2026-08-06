@@ -12,11 +12,11 @@ tags:
 # RoomCleaningRepository
 
 ## Connections
-- [[.AddAsync()_16]] - `method` [EXTRACTED]
+- [[.AddAsync()_18]] - `method` [EXTRACTED]
 - [[.CountDoneByDateAsync()_1]] - `method` [EXTRACTED]
-- [[.GetAsync()_5]] - `method` [EXTRACTED]
+- [[.GetAsync()_9]] - `method` [EXTRACTED]
 - [[.ListForDateAsync()_2]] - `method` [EXTRACTED]
-- [[.SaveChangesAsync()_16]] - `method` [EXTRACTED]
+- [[.SaveChangesAsync()_18]] - `method` [EXTRACTED]
 - [[AppDbContext]] - `references` [EXTRACTED]
 - [[IRoomCleaningRepository]] - `implements` [EXTRACTED]
 - [[RoomCleaningRepository.cs]] - `contains` [EXTRACTED]

@@ -14,6 +14,5 @@ tags:
 - [[.BuildAssignmentsAsync()]] - `references` [EXTRACTED]
 - [[.GetAssignableRoomsAsync()_1]] - `references` [EXTRACTED]
 - [[.ListAsync()_3]] - `references` [EXTRACTED]
-- [[.ToDto()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_1

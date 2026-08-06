@@ -1,20 +1,21 @@
 ---
 source_file: ""
 type: "code"
-community: "tests / CampCenter.IntegrationTests (1)"
+community: "Room Task Management (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/tests_/_CampCenterIntegrationTests_1
+  - community/Room_Task_Management_1
 ---
 
 # Task
 
 ## Connections
-- [[.Login_ExceedingRateLimit_ReturnsTooManyRequests()]] - `references` [EXTRACTED]
-- [[.Login_WithInvalidPayload_ReturnsBadRequest()]] - `references` [EXTRACTED]
-- [[.Login_WithUnknownLogin_ReturnsUnauthorized()]] - `references` [EXTRACTED]
-- [[.Login_WithValidAdminCredentials_ReturnsTokenAndSetsRefreshCookie()]] - `references` [EXTRACTED]
-- [[.Login_WithWrongPassword_ReturnsUnauthorized()]] - `references` [EXTRACTED]
+- [[.AddAsync()_20]] - `references` [EXTRACTED]
+- [[.CountOpenAsync()_1]] - `references` [EXTRACTED]
+- [[.CountOpenByRoomAsync()_1]] - `references` [EXTRACTED]
+- [[.GetByIdAsync()_12]] - `references` [EXTRACTED]
+- [[.ListAsync()_11]] - `references` [EXTRACTED]
+- [[.SaveChangesAsync()_20]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/tests_/_CampCenterIntegrationTests_1
+#graphify/code #graphify/EXTRACTED #community/Room_Task_Management_1

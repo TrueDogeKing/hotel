@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Api/Controllers/Admin/MealTimesController.cs"
 type: "code"
-community: ".Update"
+community: "Camp Session Management"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Update
+  - community/Camp_Session_Management
 ---
 
 # MealTimesController
@@ -21,4 +21,4 @@ tags:
 - [[IValidator_2]] - `references` [EXTRACTED]
 - [[MealTimesController.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Update
+#graphify/code #graphify/EXTRACTED #community/Camp_Session_Management

@@ -1,11 +1,11 @@
 ---
 type: community
-members: 104
+members: 110
 ---
 
 # tests / CampCenter.IntegrationTests (1)
 
-**Members:** 104 nodes
+**Members:** 110 nodes
 
 ## Members
 - [[.AdminEndpoints_WithoutToken_ReturnUnauthorized()]] - code - tests/CampCenter.IntegrationTests/RoomsAndClosuresApiTests.cs
@@ -48,10 +48,13 @@ members: 104
 - [[.Login_WithWrongPassword_ReturnsUnauthorized()]] - code - tests/CampCenter.IntegrationTests/AuthApiTests.cs
 - [[.MealTimeDefaults_CrudRoundtrip_Works()]] - code - tests/CampCenter.IntegrationTests/ScheduleApiTests.cs
 - [[.Meal_WithoutMealKind_IsRejected()]] - code - tests/CampCenter.IntegrationTests/ScheduleApiTests.cs
+- [[.MergedState_DrivesPaymentAndStatusTogether()]] - code - tests/CampCenter.IntegrationTests/AdminPricingApiTests.cs
 - [[.OccupancyUrl()]] - code - tests/CampCenter.IntegrationTests/AdminPanelApiTests.cs
 - [[.Occupancy_Reassign_Tasks_And_Dashboard_Work()]] - code - tests/CampCenter.IntegrationTests/AdminPanelApiTests.cs
 - [[.ParallelBookings_ForTheLastRooms_ExactlyOneWins()]] - code - tests/CampCenter.IntegrationTests/PublicBookingApiTests.cs
 - [[.PublicSchedule_ByToken_ShowsMenu_ButHidesPrepNotes()]] - code - tests/CampCenter.IntegrationTests/ScheduleApiTests.cs
+- [[.Rates_PrefillANewBooking_AndCanBeRepricedPerGroup()]] - code - tests/CampCenter.IntegrationTests/AdminPricingApiTests.cs
+- [[.RecordingTheDeposit_ConfirmsABookingWaitingOnIt()]] - code - tests/CampCenter.IntegrationTests/AdminPricingApiTests.cs
 - [[.ResettingAGroupsMealTime_RestoresTheCenterTime()]] - code - tests/CampCenter.IntegrationTests/ScheduleApiTests.cs
 - [[.RoleChange_EndsTheAffectedAccountsSessions()]] - code - tests/CampCenter.IntegrationTests/UsersAndRolesApiTests.cs
 - [[.Rooms_CrudRoundtrip_Works()]] - code - tests/CampCenter.IntegrationTests/RoomsAndClosuresApiTests.cs
@@ -69,6 +72,7 @@ members: 104
 - [[.Worker_ReadsEverySection_ButCannotWriteAnywhere()]] - code - tests/CampCenter.IntegrationTests/UsersAndRolesApiTests.cs
 - [[Admin]] - code
 - [[AdminPanelApiTests]] - code - tests/CampCenter.IntegrationTests/AdminPanelApiTests.cs
+- [[AdminPricingApiTests]] - code - tests/CampCenter.IntegrationTests/AdminPricingApiTests.cs
 - [[ApiCollection]] - code - tests/CampCenter.IntegrationTests/ApiCollection.cs
 - [[ApiCollection.cs]] - code - tests/CampCenter.IntegrationTests/ApiCollection.cs
 - [[AuthApiTests]] - code - tests/CampCenter.IntegrationTests/AuthApiTests.cs
@@ -82,11 +86,12 @@ members: 104
 - [[End_3]] - code
 - [[Fact]] - code
 - [[Fact_1]] - code
-- [[Fact_3]] - code
+- [[Fact_2]] - code
 - [[Fact_4]] - code
 - [[Fact_5]] - code
 - [[Fact_6]] - code
-- [[Guid_60]] - code
+- [[Fact_7]] - code
+- [[Guid_61]] - code
 - [[HttpClient_1]] - code
 - [[HttpClient_3]] - code
 - [[HttpClient_4]] - code
@@ -98,18 +103,19 @@ members: 104
 - [[RoomsAndClosuresApiTests]] - code - tests/CampCenter.IntegrationTests/RoomsAndClosuresApiTests.cs
 - [[ScheduleApiTests]] - code - tests/CampCenter.IntegrationTests/ScheduleApiTests.cs
 - [[Start_3]] - code
-- [[Task_66]] - code
-- [[Task_67]] - code
-- [[Task_68]] - code
+- [[Task_70]] - code
 - [[Task_71]] - code
 - [[Task_72]] - code
 - [[Task_73]] - code
-- [[Task_74]] - code
+- [[Task_76]] - code
+- [[Task_77]] - code
+- [[Task_78]] - code
+- [[Task_79]] - code
 - [[Token_1]] - code
 - [[UsersAndRolesApiTests]] - code - tests/CampCenter.IntegrationTests/UsersAndRolesApiTests.cs
 - [[Worker]] - code
 - [[int_5]] - code
-- [[long_1]] - code
+- [[long_3]] - code
 - [[string_13]] - code
 - [[string_14]] - code
 
@@ -121,18 +127,18 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_CampCenter.Application.DTOs.Public]]
-- 2 edges to [[_COMMUNITY_Auth Controller (1)]]
+- 6 edges to [[_COMMUNITY_CampCenter.Application.DTOs.Public]]
+- 2 edges to [[_COMMUNITY_eslint_1]]
 - 2 edges to [[_COMMUNITY_CampCenter.Application  Services (2)]]
 - 2 edges to [[_COMMUNITY_Payment Gateway Integration Tests (2)]]
 - 1 edge to [[_COMMUNITY_Public Booking Service (1)]]
 - 1 edge to [[_COMMUNITY_Camp Session Management]]
-- 1 edge to [[_COMMUNITY_Admin User & Token Config]]
+- 1 edge to [[_COMMUNITY_CampCenter.Application  Services (3)]]
 - 1 edge to [[_COMMUNITY_Payment Gateway Integration Tests (1)]]
 - 1 edge to [[_COMMUNITY_Application Namespaces & DTOs]]
 
 ## Top bridge nodes
-- [[IntegrationTestBase]] - degree 13, connects to 2 communities
+- [[IntegrationTestBase]] - degree 14, connects to 2 communities
 - [[ApiCollection.cs]] - degree 4, connects to 2 communities
 - [[ScheduleApiTests]] - degree 26, connects to 1 community
 - [[PublicBookingApiTests]] - degree 14, connects to 1 community

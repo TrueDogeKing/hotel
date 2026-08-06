@@ -28,6 +28,7 @@ tags:
 - [[MealGenerationPlannerTests.cs]] - `imports` [EXTRACTED]
 - [[MealTimeService.cs]] - `contains` [EXTRACTED]
 - [[PaymentService.cs]] - `contains` [EXTRACTED]
+- [[PricingService.cs]] - `contains` [EXTRACTED]
 - [[RoomMixCalculator.cs]] - `contains` [EXTRACTED]
 - [[RoomMixCalculatorTests.cs]] - `imports` [EXTRACTED]
 - [[RoomService.cs]] - `contains` [EXTRACTED]

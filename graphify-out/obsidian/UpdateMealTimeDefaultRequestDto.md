@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/DTOs/Schedule/MealTimeDtos.cs"
 type: "code"
-community: "IEntityTypeConfiguration"
+community: "CampCenter.UnitTests / Validators"
 location: "L25"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/IEntityTypeConfiguration
+  - community/CampCenterUnitTests_/_Validators
 ---
 
 # UpdateMealTimeDefaultRequestDto
@@ -14,8 +14,8 @@ tags:
 ## Connections
 - [[.Update()_1]] - `references` [EXTRACTED]
 - [[.UpdateAsync()_1]] - `references` [EXTRACTED]
-- [[.UpdateAsync()_5]] - `references` [EXTRACTED]
+- [[.UpdateAsync()_6]] - `references` [EXTRACTED]
 - [[MealTimeDtos.cs]] - `contains` [EXTRACTED]
 - [[UpdateMealTimeDefaultRequestValidator]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/IEntityTypeConfiguration
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Validators

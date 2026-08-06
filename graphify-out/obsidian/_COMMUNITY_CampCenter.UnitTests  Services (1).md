@@ -9,7 +9,7 @@ members: 80
 
 ## Members
 - [[.AddAsync()_4]] - code - src/CampCenter.Domain/Repositories/IMealTimeDefaultRepository.cs
-- [[.AddAsync()_14]] - code - src/CampCenter.Infrastructure/Repositories/MealTimeDefaultRepository.cs
+- [[.AddAsync()_15]] - code - src/CampCenter.Infrastructure/Repositories/MealTimeDefaultRepository.cs
 - [[.ClashesWith()]] - code - src/CampCenter.Application/Services/MealGenerationPlanner.cs
 - [[.CreateAsync()_10]] - code - src/CampCenter.Application/Services/MealTimeService.cs
 - [[.Default()]] - code - tests/CampCenter.UnitTests/Services/MealGenerationPlannerTests.cs
@@ -43,23 +43,23 @@ members: 80
 - [[.Remove()_3]] - code - src/CampCenter.Domain/Repositories/IMealTimeDefaultRepository.cs
 - [[.Remove()_10]] - code - src/CampCenter.Infrastructure/Repositories/MealTimeDefaultRepository.cs
 - [[.SaveChangesAsync()_4]] - code - src/CampCenter.Domain/Repositories/IMealTimeDefaultRepository.cs
-- [[.SaveChangesAsync()_14]] - code - src/CampCenter.Infrastructure/Repositories/MealTimeDefaultRepository.cs
+- [[.SaveChangesAsync()_15]] - code - src/CampCenter.Infrastructure/Repositories/MealTimeDefaultRepository.cs
 - [[.SeededDefaults()]] - code - tests/CampCenter.UnitTests/Services/MealGenerationPlannerTests.cs
 - [[.SeededSlots()]] - code - tests/CampCenter.UnitTests/Services/MealGenerationPlannerTests.cs
 - [[.ToDto()_2]] - code - src/CampCenter.Application/Services/MealTimeService.cs
-- [[.UpdateAsync()_5]] - code - src/CampCenter.Application/Services/MealTimeService.cs
-- [[CancellationToken_37]] - code
-- [[CancellationToken_47]] - code
-- [[CancellationToken_60]] - code
+- [[.UpdateAsync()_6]] - code - src/CampCenter.Application/Services/MealTimeService.cs
+- [[CancellationToken_38]] - code
+- [[CancellationToken_49]] - code
+- [[CancellationToken_63]] - code
 - [[Date]] - code
 - [[DateOnly_15]] - code
 - [[DateTime_8]] - code
 - [[End]] - code
-- [[Fact_9]] - code
+- [[Fact_10]] - code
 - [[Guid_23]] - code
 - [[Guid_33]] - code
-- [[Guid_44]] - code
-- [[Guid_54]] - code
+- [[Guid_45]] - code
+- [[Guid_55]] - code
 - [[IEnumerable_1]] - code
 - [[IMealTimeDefaultRepository]] - code - src/CampCenter.Domain/Repositories/IMealTimeDefaultRepository.cs
 - [[IReadOnlyCollection]] - code
@@ -81,9 +81,9 @@ members: 80
 - [[MealTimeService]] - code - src/CampCenter.Application/Services/MealTimeService.cs
 - [[Slot]] - code
 - [[Start]] - code
-- [[Task_37]] - code
-- [[Task_47]] - code
-- [[Task_60]] - code
+- [[Task_38]] - code
+- [[Task_49]] - code
+- [[Task_63]] - code
 - [[TimeOnly_1]] - code
 - [[TimeOnly_2]] - code
 - [[TimeOnly_5]] - code
@@ -98,12 +98,14 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 16 edges to [[_COMMUNITY_CampCenter.Application  Services (2)]]
-- 5 edges to [[_COMMUNITY_Exception]]
-- 4 edges to [[_COMMUNITY_IEntityTypeConfiguration]]
-- 4 edges to [[_COMMUNITY_IMealTimeService]]
-- 2 edges to [[_COMMUNITY_ClosureService_1]]
-- 2 edges to [[_COMMUNITY_components  admin]]
-- 2 edges to [[_COMMUNITY_MealTimeDefaultConfiguration]]
+- 6 edges to [[_COMMUNITY_Camp Session Management]]
+- 4 edges to [[_COMMUNITY_Exception]]
+- 2 edges to [[_COMMUNITY_ClosureService]]
+- 2 edges to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
+- 2 edges to [[_COMMUNITY_BookingConfiguration]]
+- 1 edge to [[_COMMUNITY_DTOs  Schedule (1)]]
+- 1 edge to [[_COMMUNITY_CampCenter.UnitTests  Validators]]
+- 1 edge to [[_COMMUNITY_Application Namespaces & DTOs]]
 
 ## Top bridge nodes
 - [[MealTimeDefault_1]] - degree 29, connects to 3 communities

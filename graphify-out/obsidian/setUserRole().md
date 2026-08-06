@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/api/admin.ts"
 type: "code"
-community: "UsersPage.tsx"
+community: "useAuth"
 location: "L32"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/UsersPagetsx
+  - community/useAuth
 ---
 
 # setUserRole()
@@ -15,4 +15,4 @@ tags:
 - [[UsersPage.tsx]] - `imports` [EXTRACTED]
 - [[admin.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/UsersPagetsx
+#graphify/code #graphify/EXTRACTED #community/useAuth

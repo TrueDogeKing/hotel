@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "AdminUserRole"
+community: "Persistence / Migrations (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AdminUserRole
+  - community/Persistence_/_Migrations_1
 ---
 
 # Migration
@@ -15,6 +15,7 @@ tags:
 - [[CoreDomain_1]] - `inherits` [EXTRACTED]
 - [[InitialAuth_1]] - `inherits` [EXTRACTED]
 - [[MakeRoomTaskRoomOptional_1]] - `inherits` [EXTRACTED]
+- [[ManualPricingAndPaymentState_1]] - `inherits` [EXTRACTED]
 - [[MealSittingDuration_1]] - `inherits` [EXTRACTED]
 - [[ParticipantCountOnScheduleEntry_1]] - `inherits` [EXTRACTED]
 - [[PerGroupMealTimes_1]] - `inherits` [EXTRACTED]
@@ -23,4 +24,4 @@ tags:
 - [[ScheduleAndMealTimes_1]] - `inherits` [EXTRACTED]
 - [[SuppressDeletedGeneratedMeals_1]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AdminUserRole
+#graphify/code #graphify/EXTRACTED #community/Persistence_/_Migrations_1

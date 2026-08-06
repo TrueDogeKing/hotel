@@ -15,7 +15,6 @@ tags:
 - [[AvailabilityService]] - `contains` [EXTRACTED]
 - [[CampCenter.Application.DTOs.Public]] - `imports` [EXTRACTED]
 - [[CampCenter.Application.Interfaces]] - `imports` [EXTRACTED]
-- [[CampCenter.Application.Models]] - `imports` [EXTRACTED]
 - [[CampCenter.Application.Services]] - `contains` [EXTRACTED]
 - [[CampCenter.Domain.Exceptions]] - `imports` [EXTRACTED]
 - [[CampCenter.Domain.Repositories]] - `imports` [EXTRACTED]

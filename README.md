@@ -2,21 +2,23 @@
 
 Web application for a summer camp center: an informational site, stay bookings
 for any dates for organized groups (no account required), an admin panel (rooms,
-closures, occupancy, housekeeping tasks) and Przelewy24 online payments (deposit
-+ balance). Bilingual PL/EN UI (flag switcher).
+closures, occupancy, housekeeping tasks). Payment is settled directly with the
+centre and recorded by the owner. Bilingual PL/EN UI (flag switcher).
 
 ## How it works
 
 1. The admin defines rooms (number of beds) and closures — date ranges when the
    whole center or a single room is unavailable (e.g. winter break, renovation).
-   Pricing (price/person/night, deposit/person/night) is global in the config.
+   Pricing (price/person/night, deposit/person/night) is set in the panel, above
+   the bookings list; each booking keeps its own copy and can be re-priced.
 2. The guest picks arrival and departure dates plus the number of people, gets
    availability (free rooms and the computed price for the number of nights),
    adjusts the suggested room split and leaves contact details — a link to
    manage the booking is sent by e-mail.
-3. A deposit paid via Przelewy24 confirms the booking (unpaid bookings are
-   released after 7 days); the balance is due up to 30 days before the stay
-   begins.
+3. The group pays the centre directly; the owner records it on the booking
+   (awaiting payment / deposit paid / paid in full). Recording a payment confirms
+   the booking (bookings with nothing recorded are released after 7 days); the
+   balance is due up to 30 days before the stay begins.
 4. The admin sees room occupancy over a chosen date range (free / occupied /
    closed) and adds housekeeping tasks (e.g. an extra bed), while the dashboard
    shows overdue balances, pending deposits and active closures.
@@ -37,32 +39,23 @@ bun run frontend      # SPA: http://localhost:5173 (vite)
 
 Tests: `bun run test` (integration tests require a running Docker — Testcontainers).
 
-## Payments (Przelewy24)
+## Payments
 
-* Dev/sandbox: create an account at https://sandbox.przelewy24.pl, set
-  `P24__MerchantId`, `P24__PosId`, `P24__CrcKey`, `P24__ApiKey` in
-  `appsettings.Development.json` (or as environment variables).
-* The webhook `POST /api/public/payments/p24/status` must be reachable from the
-  internet. Locally, use a tunnel (e.g. `cloudflared tunnel --url http://localhost:5298`)
-  and set `P24__ApiBaseUrl` to the tunnel address; alternatively, you can
-  manually re-send the notification from the sandbox panel.
-* Amounts are always computed by the server; the webhook verifies the SHA-384
-  signature and the amount and calls `transaction/verify` — only then is the
-  booking confirmed.
+Money changes hands outside the application — by transfer or in cash — and the
+owner records what arrived on each booking (`Unpaid` / `DepositPaid` / `Paid`).
+Recording a payment confirms a booking that was waiting on its deposit.
 
-### P24 go-live checklist
-
-1. Production account at https://przelewy24.pl verified and active.
-2. In `.env`: `P24_MERCHANT_ID`, `P24_POS_ID`, `P24_CRC_KEY`, `P24_API_KEY`
-   from the production panel, plus `P24_BASE_URL=https://secure.przelewy24.pl`.
-3. `DOMAIN` points publicly to the server (webhook: `https://DOMAIN/api/public/payments/p24/status`).
-4. Make a 1 PLN test transfer and check: the status in the P24 panel, the
-   confirmation e-mail, and the booking status in the admin panel.
+The Przelewy24 integration is switched off, not deleted: `PublicPaymentsController`,
+the `InitiatePayment` action, the `IPaymentService` / `IPaymentGateway`
+registrations and the `P24Settings` binding are all commented out, and
+`PaymentsApiTests` is skipped. `PaymentService`, `Przelewy24Client` and the
+`Payments` table are untouched, so bringing card payment back is a matter of
+uncommenting those five places.
 
 ## Production
 
 ```bash
-cp .env.example .env   # fill in DOMAIN, JWT__Key, POSTGRES_PASSWORD, ADMIN_PASSWORD, EMAIL_*, P24_*
+cp .env.example .env   # fill in DOMAIN, JWT__Key, POSTGRES_PASSWORD, ADMIN_PASSWORD, EMAIL_*
 bun run prod:up        # Caddy (auto-HTTPS) + frontend + api + postgres
 ```
 

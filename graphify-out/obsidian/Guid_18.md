@@ -13,10 +13,13 @@ tags:
 ## Connections
 - [[.CancelAsync()_1]] - `references` [EXTRACTED]
 - [[.GetAssignableRoomsAsync()_1]] - `references` [EXTRACTED]
-- [[.GetAsync()_1]] - `references` [EXTRACTED]
+- [[.GetAsync()_2]] - `references` [EXTRACTED]
 - [[.GetOrThrowAsync()]] - `references` [EXTRACTED]
 - [[.ReassignAsync()_1]] - `references` [EXTRACTED]
+- [[.SetPaymentStateAsync()_1]] - `references` [EXTRACTED]
+- [[.SetStateAsync()_1]] - `references` [EXTRACTED]
 - [[.SetStatusAsync()_3]] - `references` [EXTRACTED]
 - [[.UpdateDietaryNotesAsync()_1]] - `references` [EXTRACTED]
+- [[.UpdatePricingAsync()_1]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_1

@@ -1,12 +1,12 @@
 ---
 source_file: "CLAUDE.md"
 type: "document"
-community: "Docker & Project Docs"
-location: "L68"
+community: "AvailabilityService"
+location: "L80"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Docker__Project_Docs
+  - community/AvailabilityService
 ---
 
 # Aktualizacja po każdej zmianie (obowiązkowe)
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Knowledge graph  Obsidian vault (obowiązkowe)]] - `contains` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Docker__Project_Docs
+#graphify/document #graphify/EXTRACTED #community/AvailabilityService

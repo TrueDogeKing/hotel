@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "RefreshTokenConfiguration"
+community: "BookingConfiguration"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RefreshTokenConfiguration
+  - community/BookingConfiguration
 ---
 
 # EntityTypeBuilder
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.Configure()_7]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RefreshTokenConfiguration
+#graphify/code #graphify/EXTRACTED #community/BookingConfiguration

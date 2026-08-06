@@ -26,16 +26,16 @@ members: 29
 - [[.ListLiveInRangeAsync()]] - code - src/CampCenter.Domain/Repositories/IBookingRepository.cs
 - [[.ListLivePresentInAsync()]] - code - src/CampCenter.Domain/Repositories/IBookingRepository.cs
 - [[.ListUpcomingAsync()]] - code - src/CampCenter.Domain/Repositories/IBookingRepository.cs
-- [[CancellationToken_45]] - code
+- [[CancellationToken_47]] - code
 - [[DateOnly_22]] - code
-- [[DateTime_14]] - code
+- [[DateTime_15]] - code
 - [[Dictionary_3]] - code
-- [[Guid_42]] - code
+- [[Guid_43]] - code
 - [[IBookingRepository]] - code - src/CampCenter.Domain/Repositories/IBookingRepository.cs
 - [[IReadOnlyCollection_2]] - code
 - [[Items]] - code
 - [[List_22]] - code
-- [[Task_45]] - code
+- [[Task_47]] - code
 - [[Total]] - code
 
 ## Live Query (requires Dataview plugin)
@@ -46,20 +46,22 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 17 edges to [[_COMMUNITY_Admin Booking & Notifications (1)]]
-- 13 edges to [[_COMMUNITY_Integration Test Harness (1)]]
+- 14 edges to [[_COMMUNITY_Admin Booking & Notifications (1)]]
+- 12 edges to [[_COMMUNITY_Integration Test Harness (1)]]
 - 7 edges to [[_COMMUNITY_CampCenter.Application  Services (2)]]
-- 7 edges to [[_COMMUNITY_components  admin]]
-- 5 edges to [[_COMMUNITY_Public Booking Service (1)]]
+- 6 edges to [[_COMMUNITY_Public Booking Service (1)]]
 - 5 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (2)]]
-- 5 edges to [[_COMMUNITY_Admin Booking & Notifications (4)]]
-- 3 edges to [[_COMMUNITY_useAuth]]
-- 2 edges to [[_COMMUNITY_ClosureService]]
-- 2 edges to [[_COMMUNITY_CampCenter.Domain  Repositories (1)]]
+- 5 edges to [[_COMMUNITY_Payment Gateway Integration Tests (1)]]
+- 4 edges to [[_COMMUNITY_.Update]]
+- 3 edges to [[_COMMUNITY_Room Management]]
+- 3 edges to [[_COMMUNITY_components  admin]]
+- 2 edges to [[_COMMUNITY_Validator Unit Tests]]
+- 1 edge to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
 - 1 edge to [[_COMMUNITY_Exception]]
+- 1 edge to [[_COMMUNITY_CampCenter.Domain  Repositories (1)]]
 
 ## Top bridge nodes
-- [[IBookingRepository]] - degree 32, connects to 11 communities
+- [[IBookingRepository]] - degree 32, connects to 10 communities
 - [[.ListByCategoryAsync()]] - degree 10, connects to 3 communities
 - [[.GetPaymentsAsync()]] - degree 8, connects to 3 communities
 - [[.GetByIdAsync()_1]] - degree 7, connects to 3 communities

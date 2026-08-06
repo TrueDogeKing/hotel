@@ -12,9 +12,9 @@ tags:
 # UpdateRoomRequestDto
 
 ## Connections
-- [[.Update()_2]] - `references` [EXTRACTED]
-- [[.UpdateAsync()_2]] - `references` [EXTRACTED]
-- [[.UpdateAsync()_6]] - `references` [EXTRACTED]
+- [[.Update()_3]] - `references` [EXTRACTED]
+- [[.UpdateAsync()_3]] - `references` [EXTRACTED]
+- [[.UpdateAsync()_8]] - `references` [EXTRACTED]
 - [[RoomDtos.cs]] - `contains` [EXTRACTED]
 - [[UpdateRoomRequestValidator]] - `references` [EXTRACTED]
 

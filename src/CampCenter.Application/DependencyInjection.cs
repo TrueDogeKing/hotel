@@ -19,7 +19,11 @@ public static class DependencyInjection
         services.AddScoped<IAdminBookingService, AdminBookingService>();
         services.AddScoped<IRoomTaskService, RoomTaskService>();
         services.AddScoped<IHousekeepingService, HousekeepingService>();
-        services.AddScoped<IPaymentService, PaymentService>();
+        // Przelewy24 is switched off — the owner records payments by hand. Left
+        // registered nowhere rather than deleted, so turning it back on is a
+        // matter of uncommenting this line and its infrastructure counterpart.
+        // services.AddScoped<IPaymentService, PaymentService>();
+        services.AddScoped<IPricingService, PricingService>();
         services.AddScoped<IMealTimeService, MealTimeService>();
         services.AddScoped<IScheduleService, ScheduleService>();
         services.AddScoped<IUserService, UserService>();

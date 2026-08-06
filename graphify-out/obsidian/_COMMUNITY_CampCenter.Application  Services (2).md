@@ -1,16 +1,16 @@
 ---
 type: community
-members: 105
+members: 106
 ---
 
 # CampCenter.Application / Services (2)
 
-**Members:** 105 nodes
+**Members:** 106 nodes
 
 ## Members
 - [[.AddAsync()_1]] - code - src/CampCenter.Domain/Repositories/IBookingMealTimeRepository.cs
-- [[.AddAsync()_9]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
-- [[.AddAsync()_11]] - code - src/CampCenter.Infrastructure/Repositories/BookingMealTimeRepository.cs
+- [[.AddAsync()_10]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
+- [[.AddAsync()_12]] - code - src/CampCenter.Infrastructure/Repositories/BookingMealTimeRepository.cs
 - [[.AddRangeAsync()]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
 - [[.AssignMealTimesAsync()]] - code - src/CampCenter.Application/Services/ScheduleService.cs
 - [[.CheckConflictsAsync()_1]] - code - src/CampCenter.Application/Services/ScheduleService.cs
@@ -20,8 +20,8 @@ members: 105
 - [[.DeleteEntryAsync()_1]] - code - src/CampCenter.Application/Services/ScheduleService.cs
 - [[.GenerateMealsForBookingAsync()_1]] - code - src/CampCenter.Application/Services/ScheduleService.cs
 - [[.GenerateMissingMealsAsync()_1]] - code - src/CampCenter.Application/Services/ScheduleService.cs
-- [[.GetAsync()_2]] - code - src/CampCenter.Domain/Repositories/IBookingMealTimeRepository.cs
-- [[.GetAsync()_4]] - code - src/CampCenter.Infrastructure/Repositories/BookingMealTimeRepository.cs
+- [[.GetAsync()_4]] - code - src/CampCenter.Domain/Repositories/IBookingMealTimeRepository.cs
+- [[.GetAsync()_7]] - code - src/CampCenter.Infrastructure/Repositories/BookingMealTimeRepository.cs
 - [[.GetBookingMealTimesAsync()_1]] - code - src/CampCenter.Application/Services/ScheduleService.cs
 - [[.GetBookingOrThrowAsync()]] - code - src/CampCenter.Application/Services/ScheduleService.cs
 - [[.GetByIdAsync()_6]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
@@ -53,34 +53,35 @@ members: 105
 - [[.ResetBookingMealTimeAsync()_1]] - code - src/CampCenter.Application/Services/ScheduleService.cs
 - [[.RetimeGeneratedMealsAsync()]] - code - src/CampCenter.Application/Services/ScheduleService.cs
 - [[.SaveChangesAsync()_1]] - code - src/CampCenter.Domain/Repositories/IBookingMealTimeRepository.cs
-- [[.SaveChangesAsync()_9]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
-- [[.SaveChangesAsync()_11]] - code - src/CampCenter.Infrastructure/Repositories/BookingMealTimeRepository.cs
+- [[.SaveChangesAsync()_10]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
+- [[.SaveChangesAsync()_12]] - code - src/CampCenter.Infrastructure/Repositories/BookingMealTimeRepository.cs
 - [[.SetBookingMealTimeAsync()_1]] - code - src/CampCenter.Application/Services/ScheduleService.cs
-- [[.ToDto()_5]] - code - src/CampCenter.Application/Services/ScheduleService.cs
+- [[.ToDto()_6]] - code - src/CampCenter.Application/Services/ScheduleService.cs
 - [[.ToPublicDto()]] - code - src/CampCenter.Application/Services/ScheduleService.cs
 - [[.UpdateEntryAsync()_1]] - code - src/CampCenter.Application/Services/ScheduleService.cs
 - [[BookingId]] - code
 - [[BookingMealTime_1]] - code - src/CampCenter.Domain/Entities/BookingMealTime.cs
+- [[BookingMealTime.cs]] - code - src/CampCenter.Domain/Entities/BookingMealTime.cs
 - [[BookingMealTimeDto]] - code - src/CampCenter.Application/DTOs/Schedule/MealTimeDtos.cs
 - [[BookingMealTimeRepository]] - code - src/CampCenter.Infrastructure/Repositories/BookingMealTimeRepository.cs
-- [[CancellationToken_41]] - code
-- [[CancellationToken_44]] - code
-- [[CancellationToken_52]] - code
-- [[CancellationToken_57]] - code
+- [[CancellationToken_43]] - code
+- [[CancellationToken_46]] - code
+- [[CancellationToken_55]] - code
+- [[CancellationToken_60]] - code
 - [[Count]] - code
 - [[Date_1]] - code
 - [[DateOnly_16]] - code
 - [[DateOnly_21]] - code
 - [[DateOnly_25]] - code
 - [[DateTime_6]] - code
-- [[DateTime_13]] - code
+- [[DateTime_14]] - code
 - [[End_1]] - code
 - [[Guid_26]] - code
 - [[Guid_30]] - code
-- [[Guid_39]] - code
-- [[Guid_41]] - code
-- [[Guid_49]] - code
-- [[Guid_51]] - code
+- [[Guid_40]] - code
+- [[Guid_42]] - code
+- [[Guid_50]] - code
+- [[Guid_52]] - code
 - [[IBookingMealTimeRepository]] - code - src/CampCenter.Domain/Repositories/IBookingMealTimeRepository.cs
 - [[IReadOnlyCollection_1]] - code
 - [[IReadOnlyCollection_3]] - code
@@ -102,10 +103,10 @@ members: 105
 - [[ScheduleSettings.cs]] - code - src/CampCenter.Application/Models/ScheduleSettings.cs
 - [[Skipped]] - code
 - [[Start_1]] - code
-- [[Task_41]] - code
-- [[Task_44]] - code
-- [[Task_52]] - code
-- [[Task_57]] - code
+- [[Task_43]] - code
+- [[Task_46]] - code
+- [[Task_55]] - code
+- [[Task_60]] - code
 - [[TimeOnly]] - code
 - [[TimeOnly_3]] - code
 - [[TimeOnly_4]] - code
@@ -122,27 +123,24 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
+- 18 edges to [[_COMMUNITY_DTOs  Schedule (1)]]
 - 16 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (1)]]
-- 15 edges to [[_COMMUNITY_DTOs  Schedule (1)]]
+- 11 edges to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
 - 8 edges to [[_COMMUNITY_Integration Test Harness (1)]]
-- 8 edges to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
 - 7 edges to [[_COMMUNITY_Integration Test Harness (2)]]
 - 7 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (4)]]
 - 5 edges to [[_COMMUNITY_Exception]]
-- 3 edges to [[_COMMUNITY_IEntityTypeConfiguration]]
+- 4 edges to [[_COMMUNITY_BookingConfiguration]]
 - 3 edges to [[_COMMUNITY_Public Booking Service (1)]]
-- 3 edges to [[_COMMUNITY_components  admin]]
 - 2 edges to [[_COMMUNITY_tests  CampCenter.IntegrationTests (1)]]
-- 2 edges to [[_COMMUNITY_ClosureService_1]]
-- 2 edges to [[_COMMUNITY_BookingMealTimeConfiguration]]
-- 2 edges to [[_COMMUNITY_IEntityTypeConfiguration_1]]
+- 2 edges to [[_COMMUNITY_ClosureService]]
 - 1 edge to [[_COMMUNITY_Camp Session Management]]
 - 1 edge to [[_COMMUNITY_CampCenter.UnitTests  Validators]]
 - 1 edge to [[_COMMUNITY_Admin Booking & Notifications (2)]]
 
 ## Top bridge nodes
-- [[ScheduleEntry_1]] - degree 28, connects to 6 communities
 - [[ScheduleService]] - degree 36, connects to 5 communities
-- [[BookingMealTime_1]] - degree 22, connects to 5 communities
+- [[ScheduleEntry_1]] - degree 28, connects to 5 communities
+- [[BookingMealTime_1]] - degree 22, connects to 4 communities
 - [[IScheduleEntryRepository]] - degree 17, connects to 4 communities
-- [[.SetBookingMealTimeAsync()_1]] - degree 16, connects to 3 communities
+- [[.AssignMealTimesAsync()]] - degree 15, connects to 3 communities

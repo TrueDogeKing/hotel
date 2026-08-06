@@ -176,30 +176,17 @@
     "deposit": "Deposit",
     "holdExpires": "Deposit due by",
     "finalDue": "Final payment by",
-    "payments": "Payments",
-    "paymentKinds": {
-      "Deposit": "Deposit",
-      "Final": "Final payment"
-    },
-    "paymentStatuses": {
-      "Pending": "In progress",
-      "Completed": "Paid",
-      "Failed": "Failed"
-    },
     "cancel": "Cancel booking",
     "cancelTitle": "Cancel the booking?",
     "cancelMessage": "The rooms will be released. This cannot be undone.",
     "cancelConfirm": "Yes, cancel",
     "cancelKeep": "Go back",
     "cancelError": "Failed to cancel the booking.",
-    "payDeposit": "Pay the deposit (Przelewy24)",
-    "payFinal": "Pay the remaining amount (Przelewy24)",
-    "redirecting": "Redirecting…",
-    "paymentError": "Failed to start the payment. Try again.",
     "schedule": {
       "title": "Your camp programme",
       "intro": "Meals and activities for every day of your stay."
-    }
+    },
+    "payOffline": "Payment is settled directly with the centre — we will send you the details. The amounts above are what the stay costs."
   },
   "admin": {
     "dashboardTitle": "Admin panel",
@@ -380,13 +367,6 @@
     "dates": "Dates",
     "headcount": "People",
     "total": "Amount",
-    "paymentState": "Payment",
-    "statuses": {
-      "PendingDeposit": "Awaiting deposit",
-      "Confirmed": "Confirmed",
-      "Cancelled": "Cancelled",
-      "Completed": "Completed"
-    },
     "fullyPaid": "Fully paid",
     "finalOverdue": "⚠ Final payment overdue",
     "depositPaidBadge": "Deposit paid",
@@ -395,14 +375,34 @@
     "nights": "{{count}} nights",
     "deposit": "Deposit",
     "finalDue": "Final payment by",
-    "cancel": "Cancel",
     "cancelMessage": "The booking of {{organization}} will be cancelled and its rooms released. Any deposit refund is settled outside the system.",
     "cancelTitle": "Cancel the booking?",
     "cancelConfirm": "Yes, cancel",
     "cancelKeep": "Go back",
     "cancelError": "Failed to cancel the booking.",
+    "perPerson": "Per person / night (zł)",
+    "priceLine": "{{perPerson}} per person per night × {{people}} people × {{nights}} nights = {{total}} (deposit {{deposit}})",
+    "priceEdit": "Edit the price",
+    "priceSave": "Save the price",
+    "priceCancel": "Cancel",
+    "priceError": "Could not save the price.",
+    "state": "Status",
+    "states": {
+      "AwaitingPayment": "Awaiting payment",
+      "DepositPaid": "Deposit paid",
+      "Paid": "Paid in full",
+      "Cancelled": "Cancelled",
+      "Completed": "Completed"
+    },
+    "stateError": "Could not change the status.",
     "status": "Booking status",
-    "statusError": "Could not change the status."
+    "statusError": "Could not change the status.",
+    "statuses": {
+      "PendingDeposit": "Awaiting deposit",
+      "Confirmed": "Confirmed",
+      "Cancelled": "Cancelled",
+      "Completed": "Completed"
+    }
   },
   "adminRooms": {
     "title": "Rooms",
@@ -623,5 +623,17 @@
     "placeholder": "Pick dates…",
     "nights_one": "1 night",
     "nights_other": "{{count}} nights"
+  },
+  "pricing": {
+    "title": "Rates",
+    "current": "{{price}} per person per night, deposit {{deposit}} per person per night.",
+    "hint": "These prefill a new booking. Changing them never re-prices a group already on the books — edit that booking instead.",
+    "edit": "Change the rates",
+    "pricePerPerson": "Price per person / night (zł)",
+    "depositPerPerson": "Deposit per person / night (zł)",
+    "save": "Save",
+    "cancel": "Cancel",
+    "saved": "Rates saved.",
+    "saveError": "Could not save the rates."
   }
 }

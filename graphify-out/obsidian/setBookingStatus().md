@@ -2,7 +2,7 @@
 source_file: "frontend/src/api/admin.ts"
 type: "code"
 community: "Frontend App Shell & i18n"
-location: "L251"
+location: "L273"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,6 @@ tags:
 # setBookingStatus()
 
 ## Connections
-- [[AdminBookingsPage.tsx]] - `imports` [EXTRACTED]
 - [[AdminDashboardPage.tsx]] - `imports` [EXTRACTED]
 - [[GroupSchedulePanel.tsx]] - `imports` [EXTRACTED]
 - [[admin.ts]] - `contains` [EXTRACTED]

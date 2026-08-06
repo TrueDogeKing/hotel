@@ -21,6 +21,7 @@ public class AdminBookingService : IAdminBookingService
     private readonly IEmailSender _email;
     private readonly ITokenService _tokenService;
     private readonly IScheduleService _schedule;
+    private readonly IPricingService _pricing;
     private readonly BookingSettings _settings;
     private readonly ILogger<AdminBookingService> _logger;
 
@@ -33,6 +34,7 @@ public class AdminBookingService : IAdminBookingService
         IEmailSender email,
         ITokenService tokenService,
         IScheduleService schedule,
+        IPricingService pricing,
         IOptions<BookingSettings> settings,
         ILogger<AdminBookingService> logger
     )
@@ -45,6 +47,7 @@ public class AdminBookingService : IAdminBookingService
         _email = email;
         _tokenService = tokenService;
         _schedule = schedule;
+        _pricing = pricing;
         _settings = settings.Value;
         _logger = logger;
     }
@@ -55,22 +58,13 @@ public class AdminBookingService : IAdminBookingService
     )
     {
         var bookings = await _bookings.ListAsync(status, cancellationToken);
-        var paid = await _bookings.GetCompletedPaymentKindsAsync(
-            bookings.Select(b => b.Id).ToList(),
-            cancellationToken
-        );
-        return bookings.Select(b => ToDto(b, paid.GetValueOrDefault(b.Id) ?? [])).ToList();
+        return bookings.Select(ToDto).ToList();
     }
 
     public async Task<AdminBookingDto> GetAsync(
         Guid id,
         CancellationToken cancellationToken = default
-    )
-    {
-        var booking = await GetOrThrowAsync(id, cancellationToken);
-        var paid = await _bookings.GetCompletedPaymentKindsAsync([id], cancellationToken);
-        return ToDto(booking, paid.GetValueOrDefault(id) ?? []);
-    }
+    ) => ToDto(await GetOrThrowAsync(id, cancellationToken));
 
     public async Task<AdminBookingDto> CreateAsync(
         CreateAdminBookingRequestDto request,
@@ -118,6 +112,7 @@ public class AdminBookingService : IAdminBookingService
             );
 
         var nights = request.EndDate.DayNumber - request.StartDate.DayNumber;
+        var rates = await _pricing.GetAsync(cancellationToken);
         var token = _tokenService.GenerateRefreshToken();
         var booking = new Booking
         {
@@ -138,8 +133,11 @@ public class AdminBookingService : IAdminBookingService
                 status == BookingStatus.PendingDeposit
                     ? ComputeHoldExpiry(request.StartDate)
                     : null,
-            TotalGrosze = _settings.PricePerPersonPerNightGrosze * request.Headcount * nights,
-            DepositGrosze = _settings.DepositPerPersonPerNightGrosze * request.Headcount * nights,
+            // Prefilled from the centre's current rates and snapshotted here: the
+            // owner can then re-price this one group without touching any other.
+            PricePerPersonPerNightGrosze = rates.PricePerPersonPerNightGrosze,
+            TotalGrosze = rates.PricePerPersonPerNightGrosze * request.Headcount * nights,
+            DepositGrosze = rates.DepositPerPersonPerNightGrosze * request.Headcount * nights,
             RequestedRoomCounts = JsonSerializer.Serialize(mix),
             Language = request.Language == "en" ? "en" : "pl",
             CreatedAt = DateTime.UtcNow,
@@ -241,6 +239,176 @@ public class AdminBookingService : IAdminBookingService
             target == BookingStatus.PendingDeposit ? ComputeHoldExpiry(booking.StartDate) : null;
 
         await _bookings.SaveChangesAsync(cancellationToken);
+        return await GetAsync(id, cancellationToken);
+    }
+
+    /// A rate above this is a typo (10 000 zł per person per night), not a price.
+    private const long MaxRateGrosze = 1_000_000;
+
+    /// Ceiling on a single group's bill (1 000 000 zł), for the same reason.
+    private const long MaxTotalGrosze = 100_000_000;
+
+    public async Task<AdminBookingDto> UpdatePricingAsync(
+        Guid id,
+        UpdateBookingPricingRequestDto request,
+        CancellationToken cancellationToken = default
+    )
+    {
+        var booking = await GetOrThrowAsync(id, cancellationToken);
+
+        if (request.PricePerPersonPerNightGrosze is < 0 or > MaxRateGrosze)
+        {
+            throw new BusinessRuleViolationException(
+                "The rate must be between 0 and 10 000 zł per person per night."
+            );
+        }
+
+        // A flat total the owner typed wins over the arithmetic — a negotiated price
+        // or a discount is exactly the case the rate cannot express.
+        var total =
+            request.TotalGrosze
+            ?? request.PricePerPersonPerNightGrosze * booking.Headcount * booking.Nights;
+        if (total is < 0 or > MaxTotalGrosze)
+        {
+            throw new BusinessRuleViolationException(
+                "The total must be between 0 and 1 000 000 zł."
+            );
+        }
+
+        if (request.DepositGrosze < 0 || request.DepositGrosze > total)
+        {
+            throw new BusinessRuleViolationException(
+                "The deposit must be between 0 and the total."
+            );
+        }
+
+        booking.PricePerPersonPerNightGrosze = request.PricePerPersonPerNightGrosze;
+        booking.TotalGrosze = total;
+        booking.DepositGrosze = request.DepositGrosze;
+        await _bookings.SaveChangesAsync(cancellationToken);
+        return await GetAsync(id, cancellationToken);
+    }
+
+    public async Task<AdminBookingDto> SetStateAsync(
+        Guid id,
+        SetBookingStateRequestDto request,
+        CancellationToken cancellationToken = default
+    )
+    {
+        if (!Enum.TryParse<BookingState>(request.State, out var state))
+        {
+            throw new BusinessRuleViolationException($"Unknown booking state '{request.State}'.");
+        }
+
+        // Cancelling and completing are moves on the stay, and keep every rule the
+        // status endpoint enforces — freeing rooms, notifying the group, taking the
+        // rooms back when a cancelled booking is revived.
+        if (state is BookingState.Cancelled or BookingState.Completed)
+        {
+            var status =
+                state == BookingState.Cancelled ? BookingStatus.Cancelled : BookingStatus.Completed;
+            return await SetStatusAsync(
+                id,
+                new SetBookingStatusRequestDto(status.ToString()),
+                cancellationToken
+            );
+        }
+
+        var payment = state switch
+        {
+            BookingState.Paid => BookingPaymentState.Paid,
+            BookingState.DepositPaid => BookingPaymentState.DepositPaid,
+            _ => BookingPaymentState.Unpaid,
+        };
+
+        // Coming back to a live state from a cancelled booking is a status move
+        // first — the rooms have to be taken again, and may be gone.
+        var booking = await GetOrThrowAsync(id, cancellationToken);
+        if (booking.Status is BookingStatus.Cancelled or BookingStatus.Completed)
+        {
+            var revived =
+                payment is BookingPaymentState.Unpaid
+                    ? BookingStatus.PendingDeposit
+                    : BookingStatus.Confirmed;
+            await SetStatusAsync(
+                id,
+                new SetBookingStatusRequestDto(revived.ToString()),
+                cancellationToken
+            );
+        }
+
+        return await SetPaymentStateAsync(
+            id,
+            new SetBookingPaymentStateRequestDto(payment.ToString()),
+            cancellationToken
+        );
+    }
+
+    public async Task<AdminBookingDto> SetPaymentStateAsync(
+        Guid id,
+        SetBookingPaymentStateRequestDto request,
+        CancellationToken cancellationToken = default
+    )
+    {
+        var booking = await GetOrThrowAsync(id, cancellationToken);
+        if (!Enum.TryParse<BookingPaymentState>(request.PaymentState, out var state))
+        {
+            throw new BusinessRuleViolationException(
+                $"Unknown payment state '{request.PaymentState}'."
+            );
+        }
+
+        booking.PaymentState = state;
+
+        // Money in hand is what a booking was ever waiting for, so recording it
+        // confirms the group and stops the sweeper releasing its rooms. The reverse
+        // is deliberately not automatic: un-ticking a payment made in error should
+        // not quietly un-confirm a group that has already been told it has a place.
+        var confirmedNow =
+            state is not BookingPaymentState.Unpaid
+            && booking.Status == BookingStatus.PendingDeposit;
+        if (confirmedNow)
+        {
+            booking.Status = BookingStatus.Confirmed;
+            booking.HoldExpiresAt = null;
+        }
+
+        await _bookings.SaveChangesAsync(cancellationToken);
+
+        if (confirmedNow)
+        {
+            // Confirming used to happen in the payment webhook, which generated the
+            // stay's meals and told the group it had a place. Both still have to
+            // happen — this is now the only path that confirms a public booking.
+            // Neither may fail the save: the schedule page can backfill meals, and a
+            // missed email is recoverable by hand.
+            try
+            {
+                await _schedule.GenerateMealsForBookingAsync(booking.Id, cancellationToken);
+            }
+            catch (Exception ex) when (ex is not OperationCanceledException)
+            {
+                _logger.LogError(
+                    ex,
+                    "Meal generation failed for booking {BookingId} confirmed by payment record.",
+                    booking.Id
+                );
+            }
+
+            try
+            {
+                await _email.SendAsync(EmailTemplates.BookingConfirmed(booking), cancellationToken);
+            }
+            catch (Exception ex) when (ex is not OperationCanceledException)
+            {
+                _logger.LogError(
+                    ex,
+                    "Failed to send the confirmation email for booking {BookingId}.",
+                    booking.Id
+                );
+            }
+        }
+
         return await GetAsync(id, cancellationToken);
     }
 
@@ -359,8 +527,7 @@ public class AdminBookingService : IAdminBookingService
             : request.DietaryNotes.Trim();
 
         await _bookings.SaveChangesAsync(cancellationToken);
-        var paid = await _bookings.GetCompletedPaymentKindsAsync([id], cancellationToken);
-        return ToDto(booking, paid.GetValueOrDefault(id) ?? []);
+        return ToDto(booking);
     }
 
     public async Task<List<AssignableRoomDto>> GetAssignableRoomsAsync(
@@ -649,11 +816,11 @@ public class AdminBookingService : IAdminBookingService
             ? b.StartDate.AddDays(-_settings.FinalPaymentDueDays)
             : DateOnly.MinValue;
 
-    private AdminBookingDto ToDto(Booking b, List<PaymentKind> completedKinds)
+    private AdminBookingDto ToDto(Booking b)
     {
         var finalDue = FinalDueDate(b);
-        var depositPaid = completedKinds.Contains(PaymentKind.Deposit);
-        var finalPaid = completedKinds.Contains(PaymentKind.Final);
+        var depositPaid = b.PaymentState is not BookingPaymentState.Unpaid;
+        var finalPaid = b.PaymentState is BookingPaymentState.Paid;
         return new AdminBookingDto(
             b.Id,
             b.StartDate,
@@ -670,6 +837,9 @@ public class AdminBookingService : IAdminBookingService
             b.CancelReason?.ToString(),
             b.TotalGrosze,
             b.DepositGrosze,
+            b.PricePerPersonPerNightGrosze,
+            b.PaymentState.ToString(),
+            BookingStates.Of(b.Status, b.PaymentState).ToString(),
             depositPaid,
             finalPaid,
             b.Status == BookingStatus.Confirmed

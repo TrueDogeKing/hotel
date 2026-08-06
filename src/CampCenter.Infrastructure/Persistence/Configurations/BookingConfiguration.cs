@@ -28,6 +28,12 @@ public class BookingConfiguration : IEntityTypeConfiguration<Booking>
 
         builder.Property(x => x.CancelReason).HasConversion<string>().HasMaxLength(16);
 
+        builder
+            .Property(x => x.PaymentState)
+            .HasConversion<string>()
+            .HasMaxLength(16)
+            .HasDefaultValue(BookingPaymentState.Unpaid);
+
         builder.Property(x => x.ManageTokenHash).IsRequired().HasMaxLength(128);
 
         // Lookup of a booking from its manage-link token.

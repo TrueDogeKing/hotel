@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/App.tsx"
 type: "code"
-community: "Public Booking Frontend (1)"
+community: "Frontend App Shell & i18n"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public_Booking_Frontend_1
+  - community/Frontend_App_Shell__i18n
 ---
 
 # App.tsx
@@ -24,7 +24,6 @@ tags:
 - [[LoginPage.tsx]] - `imports_from` [EXTRACTED]
 - [[MealTimesPage.tsx]] - `imports_from` [EXTRACTED]
 - [[OccupancyPage.tsx]] - `imports_from` [EXTRACTED]
-- [[PaymentReturnPage.tsx]] - `imports_from` [EXTRACTED]
 - [[ProtectedRoute()]] - `imports` [EXTRACTED]
 - [[ProtectedRoute.tsx]] - `imports_from` [EXTRACTED]
 - [[PublicHomePage.tsx]] - `imports_from` [EXTRACTED]
@@ -34,4 +33,4 @@ tags:
 - [[UsersPage.tsx]] - `imports_from` [EXTRACTED]
 - [[main.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public_Booking_Frontend_1
+#graphify/code #graphify/EXTRACTED #community/Frontend_App_Shell__i18n

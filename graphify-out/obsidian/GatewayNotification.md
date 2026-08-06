@@ -16,7 +16,6 @@ tags:
 - [[.HandleNotificationAsync()_1]] - `references` [EXTRACTED]
 - [[.Notification()]] - `references` [EXTRACTED]
 - [[.NotificationSign()]] - `references` [EXTRACTED]
-- [[.P24Status()]] - `references` [EXTRACTED]
 - [[.VerifyNotificationSignature()]] - `references` [EXTRACTED]
 - [[.VerifyNotificationSignature()_1]] - `references` [EXTRACTED]
 - [[.VerifyNotificationSignature()_2]] - `references` [EXTRACTED]

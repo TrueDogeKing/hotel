@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "RoomTaskConfiguration"
+community: "BookingConfiguration"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RoomTaskConfiguration
+  - community/BookingConfiguration
 ---
 
 # EntityTypeBuilder
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.Configure()_10]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RoomTaskConfiguration
+#graphify/code #graphify/EXTRACTED #community/BookingConfiguration

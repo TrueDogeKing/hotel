@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Interfaces/IClosureService.cs"
 type: "code"
-community: "Password Hashing (bcrypt)"
+community: "Validator Unit Tests"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Password_Hashing_bcrypt
+  - community/Validator_Unit_Tests
 ---
 
 # IClosureService
@@ -20,4 +20,4 @@ tags:
 - [[ClosuresController]] - `references` [EXTRACTED]
 - [[IClosureService.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Password_Hashing_bcrypt
+#graphify/code #graphify/EXTRACTED #community/Validator_Unit_Tests

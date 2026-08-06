@@ -1,20 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "DTOs / Schedule (1)"
+community: "Room Management"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DTOs_/_Schedule_1
+  - community/Room_Management
 ---
 
 # HttpGet
 
 ## Connections
-- [[.GetBookingMealTimes()]] - `references` [EXTRACTED]
-- [[.GetCalendar()]] - `references` [EXTRACTED]
-- [[.GetDay()_1]] - `references` [EXTRACTED]
-- [[.GetForBooking()]] - `references` [EXTRACTED]
-- [[.GetLocations()]] - `references` [EXTRACTED]
+- [[.GetAll()_2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DTOs_/_Schedule_1
+#graphify/code #graphify/EXTRACTED #community/Room_Management

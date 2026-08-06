@@ -70,13 +70,13 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 9 edges to [[_COMMUNITY_Frontend App Shell & i18n]]
-- 6 edges to [[_COMMUNITY_Public Booking Frontend (1)]]
+- 11 edges to [[_COMMUNITY_Frontend App Shell & i18n]]
+- 4 edges to [[_COMMUNITY_Public Booking Frontend (1)]]
 - 1 edge to [[_COMMUNITY_Frontend Auth & API Client]]
 
 ## Top bridge nodes
 - [[LoginPage.tsx]] - degree 10, connects to 3 communities
+- [[PublicHomePage.tsx]] - degree 18, connects to 2 communities
 - [[icons.tsx]] - degree 38, connects to 1 community
-- [[PublicHomePage.tsx]] - degree 18, connects to 1 community
 - [[AdminTiles.tsx]] - degree 14, connects to 1 community
 - [[ThemeToggle.tsx]] - degree 11, connects to 1 community

@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[.AddAsync()]] - `references` [EXTRACTED]
-- [[.AddAsync()_10]] - `references` [EXTRACTED]
+- [[.AddAsync()_11]] - `references` [EXTRACTED]
 - [[.Configure()]] - `references` [EXTRACTED]
 - [[.CreateAccessToken()]] - `references` [EXTRACTED]
 - [[.CreateAccessToken()_1]] - `references` [EXTRACTED]
@@ -27,7 +27,7 @@ tags:
 - [[.ListAsync()_9]] - `references` [EXTRACTED]
 - [[.Remove()]] - `references` [EXTRACTED]
 - [[.Remove()_7]] - `references` [EXTRACTED]
-- [[.ToDto()_6]] - `references` [EXTRACTED]
+- [[.ToDto()_7]] - `references` [EXTRACTED]
 - [[AdminUser.cs]] - `contains` [EXTRACTED]
 - [[AdminUserConfiguration]] - `references` [EXTRACTED]
 - [[AdminUserRole]] - `references` [EXTRACTED]

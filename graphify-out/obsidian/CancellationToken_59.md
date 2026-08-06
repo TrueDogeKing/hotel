@@ -1,21 +1,21 @@
 ---
 source_file: ""
 type: "code"
-community: "Validator Unit Tests"
+community: "Booking Persistence & Entities (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Validator_Unit_Tests
+  - community/Booking_Persistence__Entities_1
 ---
 
 # CancellationToken
 
 ## Connections
-- [[.AddAsync()_13]] - `references` [EXTRACTED]
-- [[.GetAllAsync()_9]] - `references` [EXTRACTED]
-- [[.GetByIdAsync()_9]] - `references` [EXTRACTED]
-- [[.GetOverlappingAsync()_1]] - `references` [EXTRACTED]
-- [[.GetUpcomingCenterWideAsync()_1]] - `references` [EXTRACTED]
-- [[.SaveChangesAsync()_13]] - `references` [EXTRACTED]
+- [[.AddAsync()_11]] - `references` [EXTRACTED]
+- [[.CountByRoleAsync()_1]] - `references` [EXTRACTED]
+- [[.GetByIdAsync()_7]] - `references` [EXTRACTED]
+- [[.GetByLoginAsync()_1]] - `references` [EXTRACTED]
+- [[.ListAsync()_9]] - `references` [EXTRACTED]
+- [[.SaveChangesAsync()_11]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Validator_Unit_Tests
+#graphify/code #graphify/EXTRACTED #community/Booking_Persistence__Entities_1

@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "Room Task Management (1)"
+community: "DTOs / Schedule (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Task_Management_1
+  - community/DTOs_/_Schedule_1
 ---
 
 # HttpPut
 
 ## Connections
-- [[.Update()_3]] - `references` [EXTRACTED]
+- [[.SetBookingMealTime()]] - `references` [EXTRACTED]
+- [[.UpdateEntry()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Task_Management_1
+#graphify/code #graphify/EXTRACTED #community/DTOs_/_Schedule_1

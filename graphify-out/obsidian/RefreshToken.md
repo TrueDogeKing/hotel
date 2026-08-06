@@ -12,16 +12,16 @@ tags:
 # RefreshToken
 
 ## Connections
-- [[.AddAsync()_5]] - `references` [EXTRACTED]
-- [[.AddAsync()_15]] - `references` [EXTRACTED]
-- [[.Configure()_7]] - `references` [EXTRACTED]
+- [[.AddAsync()_6]] - `references` [EXTRACTED]
+- [[.AddAsync()_17]] - `references` [EXTRACTED]
+- [[.Configure()_8]] - `references` [EXTRACTED]
 - [[.CreateTokenEntity()]] - `references` [EXTRACTED]
 - [[.GetByTokenHashAsync()_1]] - `references` [EXTRACTED]
 - [[.GetByTokenHashAsync()_3]] - `references` [EXTRACTED]
 - [[AdminUser_1]] - `references` [EXTRACTED]
 - [[AppDbContext]] - `references` [EXTRACTED]
-- [[DateTime_10]] - `references` [EXTRACTED]
-- [[Guid_35]] - `references` [EXTRACTED]
+- [[DateTime_11]] - `references` [EXTRACTED]
+- [[Guid_36]] - `references` [EXTRACTED]
 - [[RefreshToken.cs]] - `contains` [EXTRACTED]
 - [[RefreshTokenConfiguration]] - `references` [EXTRACTED]
 

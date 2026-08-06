@@ -1,34 +1,21 @@
 ---
 source_file: ""
 type: "code"
-community: "Integration Test Harness (2)"
+community: "Booking Persistence & Entities (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Integration_Test_Harness_2
+  - community/Booking_Persistence__Entities_1
 ---
 
 # CancellationToken
 
 ## Connections
-- [[.AddAssignmentAsync()]] - `references` [EXTRACTED]
-- [[.AddAsync()_2]] - `references` [EXTRACTED]
-- [[.AddPaymentAsync()]] - `references` [EXTRACTED]
-- [[.GetBookedRoomIdsInRangeAsync()]] - `references` [EXTRACTED]
-- [[.GetByIdAsync()_1]] - `references` [EXTRACTED]
-- [[.GetByTokenHashAsync()]] - `references` [EXTRACTED]
-- [[.GetCompletedPaymentKindsAsync()]] - `references` [EXTRACTED]
-- [[.GetConfirmedEndedAsync()]] - `references` [EXTRACTED]
-- [[.GetExpiredPendingAsync()]] - `references` [EXTRACTED]
-- [[.GetPaymentByP24SessionIdAsync()]] - `references` [EXTRACTED]
-- [[.GetPaymentsAsync()]] - `references` [EXTRACTED]
-- [[.ListAssignmentsInRangeAsync()]] - `references` [EXTRACTED]
-- [[.ListAsync()_7]] - `references` [EXTRACTED]
-- [[.ListByCategoryAsync()]] - `references` [EXTRACTED]
-- [[.ListLiveChangingOverAsync()]] - `references` [EXTRACTED]
-- [[.ListLiveInRangeAsync()]] - `references` [EXTRACTED]
-- [[.ListLivePresentInAsync()]] - `references` [EXTRACTED]
-- [[.ListUpcomingAsync()]] - `references` [EXTRACTED]
-- [[.SaveChangesAsync()_2]] - `references` [EXTRACTED]
+- [[.AddAsync()]] - `references` [EXTRACTED]
+- [[.CountByRoleAsync()]] - `references` [EXTRACTED]
+- [[.GetByIdAsync()]] - `references` [EXTRACTED]
+- [[.GetByLoginAsync()]] - `references` [EXTRACTED]
+- [[.ListAsync()_6]] - `references` [EXTRACTED]
+- [[.SaveChangesAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Integration_Test_Harness_2
+#graphify/code #graphify/EXTRACTED #community/Booking_Persistence__Entities_1

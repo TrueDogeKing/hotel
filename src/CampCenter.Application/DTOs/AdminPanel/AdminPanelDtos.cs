@@ -25,6 +25,14 @@ public record AdminBookingDto(
     string? CancelReason,
     long TotalGrosze,
     long DepositGrosze,
+    /// The rate the total was worked out from: total = rate × headcount × nights,
+    /// unless the owner typed a flat total over the top of it.
+    long PricePerPersonPerNightGrosze,
+    /// Unpaid / DepositPaid / Paid, as recorded by the owner.
+    string PaymentState,
+    /// Status and payment folded into the single value the panel works in — see
+    /// BookingState. Status and PaymentState above remain the stored truth.
+    string State,
     bool DepositPaid,
     bool FinalPaid,
     /// Confirmed, final unpaid, and past the final-payment due date ("zaległa dopłata").
@@ -107,6 +115,35 @@ public record CreateAdminBookingRequestDto(
 /// Manual status override. Any status may be set from any other — see
 /// IAdminBookingService.SetStatusAsync for what each transition does.
 public record SetBookingStatusRequestDto(string Status);
+
+/// What this one group is charged. The rate is what the owner edits; TotalGrosze
+/// comes along so a flat, negotiated amount can be typed over the arithmetic
+/// (null recomputes it as rate × headcount × nights).
+public record UpdateBookingPricingRequestDto(
+    long PricePerPersonPerNightGrosze,
+    long DepositGrosze,
+    long? TotalGrosze
+);
+
+/// Unpaid / DepositPaid / Paid — the owner's record of what has actually arrived.
+public record SetBookingPaymentStateRequestDto(string PaymentState);
+
+/// The one state the panel shows, folding the booking's status together with what
+/// has been paid — see BookingState.
+public record SetBookingStateRequestDto(string State);
+
+/// The centre's rates. UpdatedAt is null while the configured defaults are still
+/// in force and nothing has been saved in the panel.
+public record PricingDefaultsDto(
+    long PricePerPersonPerNightGrosze,
+    long DepositPerPersonPerNightGrosze,
+    DateTime? UpdatedAt
+);
+
+public record UpdatePricingDefaultsRequestDto(
+    long PricePerPersonPerNightGrosze,
+    long DepositPerPersonPerNightGrosze
+);
 
 public record DashboardBookingDto(
     Guid Id,

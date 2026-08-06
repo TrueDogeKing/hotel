@@ -1,20 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.UnitTests / Services (1)"
+community: "CampCenter.UnitTests / Services (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Services_1
+  - community/CampCenterUnitTests_/_Services_2
 ---
 
 # Task
 
 ## Connections
-- [[.CreateAsync()_10]] - `references` [EXTRACTED]
-- [[.DeleteAsync()_6]] - `references` [EXTRACTED]
-- [[.GetAllAsync()_4]] - `references` [EXTRACTED]
-- [[.GetOrThrowAsync()_2]] - `references` [EXTRACTED]
-- [[.UpdateAsync()_5]] - `references` [EXTRACTED]
+- [[.GetDayAsync()_2]] - `references` [EXTRACTED]
+- [[.GetJobsAsync()]] - `references` [EXTRACTED]
+- [[.GetRangeAsync()_1]] - `references` [EXTRACTED]
+- [[.SetStatusAsync()_4]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_1
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_2

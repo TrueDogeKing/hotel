@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Room Management"
+community: "Refresh Token Repository"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Management
+  - community/Refresh_Token_Repository
 ---
 
 # Guid
 
 ## Connections
-- [[Room_1]] - `references` [EXTRACTED]
+- [[RefreshToken]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Management
+#graphify/code #graphify/EXTRACTED #community/Refresh_Token_Repository

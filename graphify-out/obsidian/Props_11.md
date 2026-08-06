@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/components/calendar/DateField.tsx"
 type: "code"
-community: "Public Booking Frontend (1)"
+community: "src / utils"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public_Booking_Frontend_1
+  - community/src_/_utils
 ---
 
 # Props
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[DateField.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public_Booking_Frontend_1
+#graphify/code #graphify/EXTRACTED #community/src_/_utils

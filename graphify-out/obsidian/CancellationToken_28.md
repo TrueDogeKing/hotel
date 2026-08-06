@@ -1,20 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "Room Task Management (1)"
+community: "Room Management"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Task_Management_1
+  - community/Room_Management
 ---
 
 # CancellationToken
 
 ## Connections
-- [[.CreateAsync()_5]] - `references` [EXTRACTED]
-- [[.DeleteAsync()_3]] - `references` [EXTRACTED]
-- [[.ListAsync()_1]] - `references` [EXTRACTED]
-- [[.SetStatusAsync()_2]] - `references` [EXTRACTED]
+- [[.CreateAsync()_4]] - `references` [EXTRACTED]
+- [[.DeleteAsync()_2]] - `references` [EXTRACTED]
+- [[.GetAllAsync()_2]] - `references` [EXTRACTED]
 - [[.UpdateAsync()_3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Task_Management_1
+#graphify/code #graphify/EXTRACTED #community/Room_Management

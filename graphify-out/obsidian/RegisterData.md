@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Payment"
+community: "SmtpEmailSender"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Payment
+  - community/SmtpEmailSender
 ---
 
 # RegisterData
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[RegisterResponse]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Payment
+#graphify/code #graphify/EXTRACTED #community/SmtpEmailSender

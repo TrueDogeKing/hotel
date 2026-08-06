@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Interfaces/IEmailSender.cs"
 type: "code"
-community: "Integration Test Harness (1)"
+community: "Admin Booking & Notifications (4)"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Integration_Test_Harness_1
+  - community/Admin_Booking__Notifications_4
 ---
 
 # EmailMessage
@@ -21,4 +21,4 @@ tags:
 - [[.SendSafelyAsync()_1]] - `references` [EXTRACTED]
 - [[IEmailSender.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Integration_Test_Harness_1
+#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_4

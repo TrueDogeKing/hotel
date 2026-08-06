@@ -177,30 +177,17 @@
     "deposit": "Zaliczka",
     "holdExpires": "Zaliczka płatna do",
     "finalDue": "Dopłata do",
-    "payments": "Płatności",
-    "paymentKinds": {
-      "Deposit": "Zaliczka",
-      "Final": "Dopłata"
-    },
-    "paymentStatuses": {
-      "Pending": "W trakcie",
-      "Completed": "Opłacona",
-      "Failed": "Nieudana"
-    },
     "cancel": "Anuluj rezerwację",
     "cancelTitle": "Anulować rezerwację?",
     "cancelMessage": "Pokoje zostaną zwolnione. Tej operacji nie można cofnąć.",
     "cancelConfirm": "Tak, anuluj",
     "cancelKeep": "Wróć",
     "cancelError": "Nie udało się anulować rezerwacji.",
-    "payDeposit": "Zapłać zaliczkę (Przelewy24)",
-    "payFinal": "Zapłać pozostałą kwotę (Przelewy24)",
-    "redirecting": "Przekierowywanie…",
-    "paymentError": "Nie udało się rozpocząć płatności. Spróbuj ponownie.",
     "schedule": {
       "title": "Wasz program pobytu",
       "intro": "Plan posiłków i zajęć na każdy dzień turnusu."
-    }
+    },
+    "payOffline": "Płatność rozliczasz bezpośrednio z ośrodkiem — dane do przelewu prześlemy osobno. Powyższe kwoty to koszt pobytu."
   },
   "admin": {
     "dashboardTitle": "Panel administratora",
@@ -381,13 +368,6 @@
     "dates": "Termin",
     "headcount": "Osoby",
     "total": "Kwota",
-    "paymentState": "Płatność",
-    "statuses": {
-      "PendingDeposit": "Oczekuje na zaliczkę",
-      "Confirmed": "Potwierdzona",
-      "Cancelled": "Anulowana",
-      "Completed": "Zakończona"
-    },
     "fullyPaid": "Opłacona w całości",
     "finalOverdue": "⚠ Zaległa dopłata",
     "depositPaidBadge": "Zaliczka opłacona",
@@ -396,14 +376,34 @@
     "nights": "nocy: {{count}}",
     "deposit": "Zaliczka",
     "finalDue": "Dopłata do",
-    "cancel": "Anuluj",
     "cancelTitle": "Anulować rezerwację?",
     "cancelMessage": "Rezerwacja {{organization}} zostanie anulowana, a pokoje zwolnione. Ewentualny zwrot zaliczki rozliczasz poza systemem.",
     "cancelConfirm": "Tak, anuluj",
     "cancelKeep": "Wróć",
     "cancelError": "Nie udało się anulować rezerwacji.",
+    "perPerson": "Za osobę / noc (zł)",
+    "priceLine": "{{perPerson}} za osobę za noc × {{people}} os. × {{nights}} nocy = {{total}} (zaliczka {{deposit}})",
+    "priceEdit": "Zmień cenę",
+    "priceSave": "Zapisz cenę",
+    "priceCancel": "Anuluj",
+    "priceError": "Nie udało się zapisać ceny.",
+    "state": "Status",
+    "states": {
+      "AwaitingPayment": "Oczekuje na płatność",
+      "DepositPaid": "Zaliczka zapłacona",
+      "Paid": "Opłacone",
+      "Cancelled": "Anulowana",
+      "Completed": "Zakończona"
+    },
+    "stateError": "Nie udało się zmienić statusu.",
     "status": "Status rezerwacji",
-    "statusError": "Nie udało się zmienić statusu."
+    "statusError": "Nie udało się zmienić statusu.",
+    "statuses": {
+      "PendingDeposit": "Oczekuje na zaliczkę",
+      "Confirmed": "Potwierdzona",
+      "Cancelled": "Anulowana",
+      "Completed": "Zakończona"
+    }
   },
   "adminRooms": {
     "title": "Pokoje",
@@ -626,5 +626,17 @@
     "nights_few": "{{count}} noce",
     "nights_many": "{{count}} nocy",
     "nights_other": "{{count}} nocy"
+  },
+  "pricing": {
+    "title": "Cennik",
+    "current": "{{price}} za osobę za noc, zaliczka {{deposit}} za osobę za noc.",
+    "hint": "Te stawki wypełniają nową rezerwację. Ich zmiana nie przelicza rezerwacji już przyjętych — tam cenę zmieniasz przy konkretnej grupie.",
+    "edit": "Zmień stawki",
+    "pricePerPerson": "Cena za osobę / noc (zł)",
+    "depositPerPerson": "Zaliczka za osobę / noc (zł)",
+    "save": "Zapisz",
+    "cancel": "Anuluj",
+    "saved": "Stawki zapisane.",
+    "saveError": "Nie udało się zapisać stawek."
   }
 }

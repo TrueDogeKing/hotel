@@ -39,7 +39,6 @@ tags:
 - [[getPublicClosures()]] - `contains` [EXTRACTED]
 - [[getStoredLanguage()]] - `imports` [EXTRACTED]
 - [[index.ts]] - `imports_from` [EXTRACTED]
-- [[initiatePayment()]] - `contains` [EXTRACTED]
 - [[validateMix()]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Public_Booking_Frontend_1

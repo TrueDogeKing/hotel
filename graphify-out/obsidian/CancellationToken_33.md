@@ -1,20 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "useAuth"
+community: "Auth Service & Tokens"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/useAuth
+  - community/Auth_Service__Tokens
 ---
 
 # CancellationToken
 
 ## Connections
-- [[.GetAvailabilityAsync()_1]] - `references` [EXTRACTED]
-- [[.GetBlockedRoomIdsAsync()_1]] - `references` [EXTRACTED]
-- [[.GetCalendarAsync()_2]] - `references` [EXTRACTED]
-- [[.GetCenterClosureReasonAsync()_1]] - `references` [EXTRACTED]
-- [[.GetFreeRoomsByCapacityAsync()_1]] - `references` [EXTRACTED]
+- [[.IssueTokensAsync()]] - `references` [EXTRACTED]
+- [[.LoginAsync()_1]] - `references` [EXTRACTED]
+- [[.LogoutAsync()_1]] - `references` [EXTRACTED]
+- [[.RefreshAsync()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/useAuth
+#graphify/code #graphify/EXTRACTED #community/Auth_Service__Tokens

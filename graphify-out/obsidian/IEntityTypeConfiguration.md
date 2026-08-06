@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "RoomTaskConfiguration"
+community: "BookingConfiguration"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RoomTaskConfiguration
+  - community/BookingConfiguration
 ---
 
 # IEntityTypeConfiguration
@@ -18,10 +18,11 @@ tags:
 - [[ClosureConfiguration]] - `implements` [EXTRACTED]
 - [[MealTimeDefaultConfiguration]] - `implements` [EXTRACTED]
 - [[PaymentConfiguration]] - `implements` [EXTRACTED]
+- [[PricingDefaultsConfiguration]] - `implements` [EXTRACTED]
 - [[RefreshTokenConfiguration]] - `implements` [EXTRACTED]
 - [[RoomCleaningConfiguration]] - `implements` [EXTRACTED]
 - [[RoomConfiguration]] - `implements` [EXTRACTED]
 - [[RoomTaskConfiguration]] - `implements` [EXTRACTED]
 - [[ScheduleEntryConfiguration]] - `implements` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RoomTaskConfiguration
+#graphify/code #graphify/EXTRACTED #community/BookingConfiguration

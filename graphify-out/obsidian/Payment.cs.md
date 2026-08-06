@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Domain/Entities/Payment.cs"
 type: "code"
-community: "components / admin"
+community: ".Update"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/components_/_admin
+  - community/Update
 ---
 
 # Payment.cs
@@ -17,4 +17,4 @@ tags:
 - [[PaymentKind]] - `contains` [EXTRACTED]
 - [[PaymentStatus]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/components_/_admin
+#graphify/code #graphify/EXTRACTED #community/Update

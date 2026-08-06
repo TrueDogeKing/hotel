@@ -1,16 +1,17 @@
 ---
 type: community
-members: 60
+members: 68
 ---
 
 # src / api (1)
 
-**Members:** 60 nodes
+**Members:** 68 nodes
 
 ## Members
 - [[AdminAssignment]] - code - frontend/src/api/admin.ts
 - [[ApplyBookingMealTimeResult]] - code - frontend/src/api/admin.ts
 - [[BookingGroupPage]] - code - frontend/src/api/admin.ts
+- [[BookingPaymentState]] - code - frontend/src/api/admin.ts
 - [[BookingScheduleDay]] - code - frontend/src/api/admin.ts
 - [[Closure]] - code - frontend/src/api/admin.ts
 - [[ClosureFormState]] - code - frontend/src/pages/admin/ClosuresPage.tsx
@@ -28,6 +29,9 @@ members: 60
 - [[Occupancy]] - code - frontend/src/api/admin.ts
 - [[OccupancyPage()]] - code - frontend/src/pages/admin/OccupancyPage.tsx
 - [[OccupancyPage.tsx]] - code - frontend/src/pages/admin/OccupancyPage.tsx
+- [[PricingDefaults]] - code - frontend/src/api/admin.ts
+- [[PricingDefaultsPanel()]] - code - frontend/src/components/admin/PricingDefaultsPanel.tsx
+- [[PricingDefaultsPanel.tsx]] - code - frontend/src/components/admin/PricingDefaultsPanel.tsx
 - [[Room]] - code - frontend/src/api/admin.ts
 - [[RoomCleaningKind]] - code - frontend/src/api/admin.ts
 - [[RoomCleaningStatus]] - code - frontend/src/api/admin.ts
@@ -45,6 +49,7 @@ members: 60
 - [[TasksPage()]] - code - frontend/src/pages/admin/TasksPage.tsx
 - [[TasksPage.tsx]] - code - frontend/src/pages/admin/TasksPage.tsx
 - [[admin.ts]] - code - frontend/src/api/admin.ts
+- [[cancelAdminBooking()]] - code - frontend/src/api/admin.ts
 - [[createClosure()]] - code - frontend/src/api/admin.ts
 - [[createRoom()]] - code - frontend/src/api/admin.ts
 - [[createTask()]] - code - frontend/src/api/admin.ts
@@ -57,14 +62,17 @@ members: 60
 - [[getHousekeepingDay()]] - code - frontend/src/api/admin.ts
 - [[getHousekeepingRange()]] - code - frontend/src/api/admin.ts
 - [[getOccupancy()]] - code - frontend/src/api/admin.ts
+- [[getPricingDefaults()]] - code - frontend/src/api/admin.ts
 - [[getRooms()]] - code - frontend/src/api/admin.ts
 - [[getTasks()]] - code - frontend/src/api/admin.ts
 - [[groszeToZl()]] - code - frontend/src/api/admin.ts
 - [[kindOrder]] - code - frontend/src/pages/admin/HousekeepingPage.tsx
 - [[roomCleaningStatuses]] - code - frontend/src/api/admin.ts
+- [[setBookingPaymentState()]] - code - frontend/src/api/admin.ts
 - [[setRoomCleaning()]] - code - frontend/src/api/admin.ts
 - [[setTaskDone()]] - code - frontend/src/api/admin.ts
 - [[updateClosure()]] - code - frontend/src/api/admin.ts
+- [[updatePricingDefaults()]] - code - frontend/src/api/admin.ts
 - [[updateRoom()]] - code - frontend/src/api/admin.ts
 - [[updateTask()]] - code - frontend/src/api/admin.ts
 - [[zlToGrosze()]] - code - frontend/src/api/admin.ts
@@ -77,18 +85,19 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 45 edges to [[_COMMUNITY_Frontend App Shell & i18n]]
+- 38 edges to [[_COMMUNITY_Frontend App Shell & i18n]]
+- 20 edges to [[_COMMUNITY_Public Booking Frontend (1)]]
 - 18 edges to [[_COMMUNITY_Domain & Infra Namespaces]]
-- 15 edges to [[_COMMUNITY_src  utils]]
-- 14 edges to [[_COMMUNITY_Public Booking Frontend (1)]]
-- 9 edges to [[_COMMUNITY_UsersPage.tsx]]
-- 6 edges to [[_COMMUNITY_Frontend Auth & API Client]]
-- 5 edges to [[_COMMUNITY_ScheduleEntry]]
+- 17 edges to [[_COMMUNITY_src  utils]]
+- 9 edges to [[_COMMUNITY_ScheduleEntry]]
+- 9 edges to [[_COMMUNITY_useAuth]]
+- 7 edges to [[_COMMUNITY_Frontend Auth & API Client]]
+- 5 edges to [[_COMMUNITY_GroupRooms.tsx]]
 - 3 edges to [[_COMMUNITY_Room Closure Management]]
 
 ## Top bridge nodes
-- [[admin.ts]] - degree 122, connects to 7 communities
+- [[admin.ts]] - degree 132, connects to 8 communities
 - [[ClosuresPage.tsx]] - degree 19, connects to 4 communities
 - [[HousekeepingPage.tsx]] - degree 19, connects to 3 communities
-- [[OccupancyPage.tsx]] - degree 16, connects to 3 communities
 - [[RoomsPage.tsx]] - degree 15, connects to 3 communities
+- [[PricingDefaultsPanel.tsx]] - degree 11, connects to 3 communities

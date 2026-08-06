@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Interfaces/IMealTimeService.cs"
 type: "code"
-community: "IMealTimeService"
+community: "Camp Session Management"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/IMealTimeService
+  - community/Camp_Session_Management
 ---
 
 # IMealTimeService
@@ -20,4 +20,4 @@ tags:
 - [[MealTimeService]] - `implements` [EXTRACTED]
 - [[MealTimesController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/IMealTimeService
+#graphify/code #graphify/EXTRACTED #community/Camp_Session_Management

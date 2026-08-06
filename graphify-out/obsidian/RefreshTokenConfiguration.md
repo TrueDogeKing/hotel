@@ -1,20 +1,20 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Persistence/Configurations/RefreshTokenConfiguration.cs"
 type: "code"
-community: "RefreshTokenConfiguration"
+community: "Refresh Token Repository"
 location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RefreshTokenConfiguration
+  - community/Refresh_Token_Repository
 ---
 
 # RefreshTokenConfiguration
 
 ## Connections
-- [[.Configure()_7]] - `method` [EXTRACTED]
+- [[.Configure()_8]] - `method` [EXTRACTED]
 - [[IEntityTypeConfiguration]] - `implements` [EXTRACTED]
 - [[RefreshToken]] - `references` [EXTRACTED]
 - [[RefreshTokenConfiguration.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RefreshTokenConfiguration
+#graphify/code #graphify/EXTRACTED #community/Refresh_Token_Repository

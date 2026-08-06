@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/DTOs/Users/UserDtos.cs"
 type: "code"
-community: "Admin User & Token Config"
+community: "CampCenter.Application / Services (3)"
 location: "L4"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_User__Token_Config
+  - community/CampCenterApplication_/_Services_3
 ---
 
 # AdminUserDto
@@ -21,7 +21,7 @@ tags:
 - [[.SetPasswordAsync()_1]] - `references` [EXTRACTED]
 - [[.SetRoleAsync()]] - `references` [EXTRACTED]
 - [[.SetRoleAsync()_1]] - `references` [EXTRACTED]
-- [[.ToDto()_6]] - `references` [EXTRACTED]
+- [[.ToDto()_7]] - `references` [EXTRACTED]
 - [[UserDtos.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_User__Token_Config
+#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_3

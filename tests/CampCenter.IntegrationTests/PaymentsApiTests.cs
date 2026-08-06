@@ -48,6 +48,9 @@ public class FakePaymentGateway : IPaymentGateway
     }
 }
 
+/// The online-payment flow, skipped while Przelewy24 is switched off. Payment is
+/// recorded by the owner now (Booking.PaymentState, AdminPricingApiTests); these
+/// stay so the gateway can be re-enabled without rewriting its cover.
 public class PaymentsApiTests : IntegrationTestBase
 {
     // Default per-night pricing from appsettings.json (grosze per person per night).
@@ -151,7 +154,9 @@ public class PaymentsApiTests : IntegrationTestBase
         return (booking.ManageToken, _gateway.Registered[^1]);
     }
 
-    [Fact]
+    [Fact(
+        Skip = "Przelewy24 is switched off: the endpoints these drive are commented out in PublicBookingsController / PublicPaymentsController. Re-enable with them."
+    )]
     public async Task DepositWebhook_ConfirmsBooking_AndIsIdempotent()
     {
         var (token, registered) = await CreateBookingWithDepositAsync();
@@ -212,7 +217,9 @@ public class PaymentsApiTests : IntegrationTestBase
     /// in PaymentService.HandleNotificationAsync, so it belongs with the payment
     /// tests — they already own the only overridden host, and adding another one
     /// puts a second background sweeper on the shared database.
-    [Fact]
+    [Fact(
+        Skip = "Przelewy24 is switched off: the endpoints these drive are commented out in PublicBookingsController / PublicPaymentsController. Re-enable with them."
+    )]
     public async Task DepositWebhook_GeneratesTheGroupsMeals()
     {
         var (token, registered) = await CreateBookingWithDepositAsync();
@@ -239,7 +246,9 @@ public class PaymentsApiTests : IntegrationTestBase
         Assert.All(schedule.Days[1..^1], day => Assert.Equal(3, day.Entries.Count));
     }
 
-    [Fact]
+    [Fact(
+        Skip = "Przelewy24 is switched off: the endpoints these drive are commented out in PublicBookingsController / PublicPaymentsController. Re-enable with them."
+    )]
     public async Task Webhook_AmountMismatch_IsRejected()
     {
         var (_, registered) = await CreateBookingWithDepositAsync();
@@ -253,7 +262,9 @@ public class PaymentsApiTests : IntegrationTestBase
         Assert.DoesNotContain(_gateway.Verified, v => v.SessionId == registered.SessionId);
     }
 
-    [Fact]
+    [Fact(
+        Skip = "Przelewy24 is switched off: the endpoints these drive are commented out in PublicBookingsController / PublicPaymentsController. Re-enable with them."
+    )]
     public async Task Webhook_BadSignature_IsRejected()
     {
         var (_, registered) = await CreateBookingWithDepositAsync();

@@ -1,22 +1,21 @@
 ---
 source_file: ""
 type: "code"
-community: "Admin User & Token Config"
+community: "Room Task Management (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_User__Token_Config
+  - community/Room_Task_Management_1
 ---
 
 # Task
 
 ## Connections
-- [[.CreateAsync()_13]] - `references` [EXTRACTED]
-- [[.DeleteAsync()_9]] - `references` [EXTRACTED]
-- [[.GetOrThrowAsync()_3]] - `references` [EXTRACTED]
-- [[.GuardLastAdministratorAsync()]] - `references` [EXTRACTED]
-- [[.ListAsync()_5]] - `references` [EXTRACTED]
-- [[.SetPasswordAsync()_1]] - `references` [EXTRACTED]
-- [[.SetRoleAsync()_1]] - `references` [EXTRACTED]
+- [[.CreateAsync()_12]] - `references` [EXTRACTED]
+- [[.DeleteAsync()_8]] - `references` [EXTRACTED]
+- [[.ListAsync()_4]] - `references` [EXTRACTED]
+- [[.ResolveRoomAsync()]] - `references` [EXTRACTED]
+- [[.SetStatusAsync()_5]] - `references` [EXTRACTED]
+- [[.UpdateAsync()_9]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_User__Token_Config
+#graphify/code #graphify/EXTRACTED #community/Room_Task_Management_1

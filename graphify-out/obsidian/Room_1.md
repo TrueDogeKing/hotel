@@ -12,10 +12,10 @@ tags:
 # Room
 
 ## Connections
-- [[.AddAsync()_7]] - `references` [EXTRACTED]
-- [[.AddAsync()_17]] - `references` [EXTRACTED]
+- [[.AddAsync()_8]] - `references` [EXTRACTED]
+- [[.AddAsync()_19]] - `references` [EXTRACTED]
 - [[.AssignRooms()]] - `references` [EXTRACTED]
-- [[.Configure()_9]] - `references` [EXTRACTED]
+- [[.Configure()_10]] - `references` [EXTRACTED]
 - [[.GetActiveAsync()_1]] - `references` [EXTRACTED]
 - [[.GetActiveAsync()_3]] - `references` [EXTRACTED]
 - [[.GetAllAsync()_8]] - `references` [EXTRACTED]
@@ -31,11 +31,11 @@ tags:
 - [[.Room()]] - `references` [EXTRACTED]
 - [[.SaveWithConcurrencyCheckAsync()]] - `references` [EXTRACTED]
 - [[.Setup()]] - `references` [EXTRACTED]
-- [[.ToDto()_3]] - `references` [EXTRACTED]
+- [[.ToDto()_4]] - `references` [EXTRACTED]
 - [[AppDbContext]] - `references` [EXTRACTED]
 - [[BookingRoomAssignment]] - `references` [EXTRACTED]
 - [[Closure_1]] - `references` [EXTRACTED]
-- [[Guid_36]] - `references` [EXTRACTED]
+- [[Guid_37]] - `references` [EXTRACTED]
 - [[Room.cs]] - `contains` [EXTRACTED]
 - [[RoomCleaning]] - `references` [EXTRACTED]
 - [[RoomConfiguration]] - `references` [EXTRACTED]

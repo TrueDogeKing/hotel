@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[How it works]] - `contains` [EXTRACTED]
-- [[Payments (Przelewy24)]] - `contains` [EXTRACTED]
+- [[Payments]] - `contains` [EXTRACTED]
 - [[Production]] - `contains` [EXTRACTED]
 - [[Quick start (dev)]] - `contains` [EXTRACTED]
 - [[README]] - `contains` [EXTRACTED]

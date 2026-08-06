@@ -80,9 +80,12 @@ builder.Services.Configure<CampCenter.Application.Models.ScheduleSettings>(
 builder.Services.Configure<CampCenter.Infrastructure.Email.EmailSettings>(
     builder.Configuration.GetSection(CampCenter.Infrastructure.Email.EmailSettings.SectionName)
 );
-builder.Services.Configure<CampCenter.Infrastructure.Payments.P24Settings>(
-    builder.Configuration.GetSection(CampCenter.Infrastructure.Payments.P24Settings.SectionName)
-);
+
+// P24 is switched off (see Application/DependencyInjection.cs); nothing reads
+// these settings while that is the case.
+// builder.Services.Configure<CampCenter.Infrastructure.Payments.P24Settings>(
+//     builder.Configuration.GetSection(CampCenter.Infrastructure.Payments.P24Settings.SectionName)
+// );
 builder.Services.AddHostedService<CampCenter.Api.Background.BookingMaintenanceService>();
 
 builder

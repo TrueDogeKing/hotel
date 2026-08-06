@@ -1,20 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "Admin Booking & Notifications (2)"
+community: "Validator Unit Tests"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Booking__Notifications_2
+  - community/Validator_Unit_Tests
 ---
 
 # ProducesResponseType
 
 ## Connections
-- [[.Cancel()_1]] - `references` [EXTRACTED]
-- [[.Create()_6]] - `references` [EXTRACTED]
-- [[.GetByToken()]] - `references` [EXTRACTED]
-- [[.GetScheduleByToken()]] - `references` [EXTRACTED]
-- [[.InitiatePayment()]] - `references` [EXTRACTED]
+- [[.Calendar()]] - `references` [EXTRACTED]
+- [[.Closures()]] - `references` [EXTRACTED]
+- [[.Get()_4]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_2
+#graphify/code #graphify/EXTRACTED #community/Validator_Unit_Tests

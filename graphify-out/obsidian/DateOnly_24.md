@@ -12,7 +12,7 @@ tags:
 
 ## Connections
 - [[.CountDoneByDateAsync()]] - `references` [EXTRACTED]
-- [[.GetAsync()_3]] - `references` [EXTRACTED]
+- [[.GetAsync()_6]] - `references` [EXTRACTED]
 - [[.ListForDateAsync()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_2

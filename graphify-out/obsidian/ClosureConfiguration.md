@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Persistence/Configurations/ClosureConfiguration.cs"
 type: "code"
-community: "ClosureConfiguration"
+community: "BookingConfiguration"
 location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ClosureConfiguration
+  - community/BookingConfiguration
 ---
 
 # ClosureConfiguration
@@ -17,4 +17,4 @@ tags:
 - [[ClosureConfiguration.cs]] - `contains` [EXTRACTED]
 - [[IEntityTypeConfiguration]] - `implements` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ClosureConfiguration
+#graphify/code #graphify/EXTRACTED #community/BookingConfiguration

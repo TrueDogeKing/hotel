@@ -27,6 +27,7 @@ tags:
 - [[LoginPage.tsx]] - `imports_from` [EXTRACTED]
 - [[LoginRequest]] - `imports` [EXTRACTED]
 - [[MealTimesPage.tsx]] - `imports_from` [EXTRACTED]
+- [[PricingDefaultsPanel.tsx]] - `imports_from` [EXTRACTED]
 - [[ProtectedRoute.tsx]] - `imports_from` [EXTRACTED]
 - [[RoomsPage.tsx]] - `imports_from` [EXTRACTED]
 - [[SchedulePage.tsx]] - `imports_from` [EXTRACTED]

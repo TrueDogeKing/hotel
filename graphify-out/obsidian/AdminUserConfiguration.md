@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Persistence/Configurations/AdminUserConfiguration.cs"
 type: "code"
-community: "@types/react"
+community: "BookingConfiguration"
 location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/types/react
+  - community/BookingConfiguration
 ---
 
 # AdminUserConfiguration
@@ -17,4 +17,4 @@ tags:
 - [[AdminUserConfiguration.cs]] - `contains` [EXTRACTED]
 - [[IEntityTypeConfiguration]] - `implements` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/types/react
+#graphify/code #graphify/EXTRACTED #community/BookingConfiguration

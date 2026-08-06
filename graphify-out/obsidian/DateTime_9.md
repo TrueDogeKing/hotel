@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "components / admin"
+community: ".Update"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/components_/_admin
+  - community/Update
 ---
 
 # DateTime
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Payment]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/components_/_admin
+#graphify/code #graphify/EXTRACTED #community/Update

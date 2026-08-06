@@ -1,11 +1,11 @@
 ---
 type: community
-members: 25
+members: 21
 ---
 
 # Public Booking Service (1)
 
-**Members:** 25 nodes
+**Members:** 21 nodes
 
 ## Members
 - [[.AssignRooms()]] - code - src/CampCenter.Application/Services/BookingService.cs
@@ -18,21 +18,17 @@ members: 25
 - [[.GetScheduleByTokenAsync()_1]] - code - src/CampCenter.Application/Services/BookingService.cs
 - [[.ManageUrl()]] - code - src/CampCenter.Application/Services/BookingService.cs
 - [[.PickRoomsAsync()]] - code - src/CampCenter.Application/Services/BookingService.cs
+- [[.RemoveAssignments()]] - code - src/CampCenter.Domain/Repositories/IBookingRepository.cs
 - [[.SendSafelyAsync()]] - code - src/CampCenter.Application/Services/BookingService.cs
 - [[.TryCreateAsync()]] - code - src/CampCenter.Application/Services/BookingService.cs
-- [[AvailabilityDayDto]] - code - src/CampCenter.Application/DTOs/Public/PublicDtos.cs
-- [[BookingDetailsDto]] - code - src/CampCenter.Application/DTOs/Public/PublicDtos.cs
-- [[BookingPaymentDto]] - code - src/CampCenter.Application/DTOs/Public/PublicDtos.cs
 - [[BookingService]] - code - src/CampCenter.Application/Services/BookingService.cs
-- [[CancellationToken_34]] - code
+- [[CancellationToken_35]] - code
 - [[CreateBookingRequestDto]] - code - src/CampCenter.Application/DTOs/Public/PublicDtos.cs
 - [[CreateBookingResponseDto]] - code - src/CampCenter.Application/DTOs/Public/PublicDtos.cs
 - [[DateOnly_10]] - code
 - [[ILogger_3]] - code
 - [[List_8]] - code
-- [[PublicClosureDto]] - code - src/CampCenter.Application/DTOs/Public/PublicDtos.cs
-- [[PublicDtos.cs]] - code - src/CampCenter.Application/DTOs/Public/PublicDtos.cs
-- [[Task_34]] - code
+- [[Task_35]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -42,24 +38,25 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 8 edges to [[_COMMUNITY_Integration Test Harness (1)]]
-- 6 edges to [[_COMMUNITY_Admin Booking & Notifications (2)]]
-- 5 edges to [[_COMMUNITY_.GetBlockedRoomIdsAsync]]
-- 5 edges to [[_COMMUNITY_Integration Test Harness (2)]]
+- 7 edges to [[_COMMUNITY_.GetBlockedRoomIdsAsync]]
+- 6 edges to [[_COMMUNITY_Integration Test Harness (2)]]
+- 5 edges to [[_COMMUNITY_Admin Booking & Notifications (2)]]
+- 5 edges to [[_COMMUNITY_Admin Booking & Notifications (4)]]
+- 5 edges to [[_COMMUNITY_Integration Test Harness (1)]]
 - 4 edges to [[_COMMUNITY_Admin Booking & Notifications (1)]]
 - 4 edges to [[_COMMUNITY_Room Management]]
-- 3 edges to [[_COMMUNITY_Admin Booking & Notifications (4)]]
-- 3 edges to [[_COMMUNITY_CampCenter.Application  Services (1)]]
+- 3 edges to [[_COMMUNITY_Auth Service & Tokens]]
 - 3 edges to [[_COMMUNITY_CampCenter.Application  Services (2)]]
+- 2 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (3)]]
 - 2 edges to [[_COMMUNITY_Room Mix Calculator Tests]]
-- 1 edge to [[_COMMUNITY_CampCenter.Application.DTOs.Public]]
 - 1 edge to [[_COMMUNITY_CampCenter.UnitTests  Validators]]
 - 1 edge to [[_COMMUNITY_tests  CampCenter.IntegrationTests (1)]]
-- 1 edge to [[_COMMUNITY_ClosureService_1]]
+- 1 edge to [[_COMMUNITY_BookingSettings]]
+- 1 edge to [[_COMMUNITY_ClosureService]]
 
 ## Top bridge nodes
-- [[BookingService]] - degree 21, connects to 8 communities
-- [[.TryCreateAsync()]] - degree 18, connects to 6 communities
-- [[CreateBookingRequestDto]] - degree 9, connects to 3 communities
+- [[BookingService]] - degree 22, connects to 10 communities
+- [[.TryCreateAsync()]] - degree 19, connects to 7 communities
+- [[CreateBookingRequestDto]] - degree 9, connects to 4 communities
 - [[.FindByTokenAsync()]] - degree 9, connects to 3 communities
 - [[.AssignRooms()]] - degree 7, connects to 3 communities

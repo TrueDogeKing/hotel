@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/DTOs/Schedule/MealTimeDtos.cs"
 type: "code"
-community: "IEntityTypeConfiguration"
+community: "Camp Session Management"
 location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/IEntityTypeConfiguration
+  - community/Camp_Session_Management
 ---
 
 # CreateMealTimeDefaultRequestDto
@@ -19,4 +19,4 @@ tags:
 - [[CreateMealTimeDefaultRequestValidator]] - `references` [EXTRACTED]
 - [[MealTimeDtos.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/IEntityTypeConfiguration
+#graphify/code #graphify/EXTRACTED #community/Camp_Session_Management
