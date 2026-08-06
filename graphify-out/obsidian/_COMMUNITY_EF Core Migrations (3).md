@@ -9,19 +9,19 @@ members: 14
 
 ## Members
 - [[.BuildModel()]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/AppDbContextModelSnapshot.cs
-- [[.BuildTargetModel()_1]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/20260719143540_CoreDomain.Designer.cs
-- [[.BuildTargetModel()_2]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/20260721111400_ReplaceSessionsWithClosures.Designer.cs
-- [[20260719143540_CoreDomain.Designer.cs]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/20260719143540_CoreDomain.Designer.cs
-- [[20260721111400_ReplaceSessionsWithClosures.Designer.cs]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/20260721111400_ReplaceSessionsWithClosures.Designer.cs
+- [[.BuildTargetModel()_6]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/20260729100842_MealSittingDuration.Designer.cs
+- [[.BuildTargetModel()_8]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/20260729224623_RoomCleanings.Designer.cs
+- [[20260729100842_MealSittingDuration.Designer.cs]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/20260729100842_MealSittingDuration.Designer.cs
+- [[20260729224623_RoomCleanings.Designer.cs]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/20260729224623_RoomCleanings.Designer.cs
 - [[AppDbContextModelSnapshot]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/AppDbContextModelSnapshot.cs
 - [[AppDbContextModelSnapshot.cs]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/AppDbContextModelSnapshot.cs
 - [[CampCenter.Infrastructure.Persistence.Migrations]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/20260719142059_InitialAuth.Designer.cs
-- [[CoreDomain]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/20260719143540_CoreDomain.Designer.cs
-- [[ModelBuilder_2]] - code
-- [[ModelBuilder_3]] - code
-- [[ModelBuilder_13]] - code
+- [[MealSittingDuration]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/20260729100842_MealSittingDuration.Designer.cs
+- [[ModelBuilder_7]] - code
+- [[ModelBuilder_9]] - code
+- [[ModelBuilder_14]] - code
 - [[ModelSnapshot]] - code
-- [[ReplaceSessionsWithClosures]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/20260721111400_ReplaceSessionsWithClosures.Designer.cs
+- [[RoomCleanings]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/20260729224623_RoomCleanings.Designer.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -31,11 +31,13 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_Exception]]
+- 3 edges to [[_COMMUNITY_Public Booking Service (2)]]
 - 1 edge to [[_COMMUNITY_EF Core Migrations (1)]]
 - 1 edge to [[_COMMUNITY_EF Core Migrations (4)]]
 - 1 edge to [[_COMMUNITY_EF Core Migrations (2)]]
+- 1 edge to [[_COMMUNITY_20260719143540_CoreDomain.Designer.cs]]
 - 1 edge to [[_COMMUNITY_Persistence  Migrations (1)]]
+- 1 edge to [[_COMMUNITY_20260721111400_ReplaceSessionsWithClosures.Designer.cs]]
 - 1 edge to [[_COMMUNITY_Persistence  Migrations (2)]]
 - 1 edge to [[_COMMUNITY_Persistence  Migrations (9)]]
 - 1 edge to [[_COMMUNITY_Persistence  Migrations (3)]]
@@ -43,20 +45,20 @@ SORT file.name ASC
 - 1 edge to [[_COMMUNITY_Persistence  Migrations (4)]]
 - 1 edge to [[_COMMUNITY_20260728105506_PerGroupMealTimes.Designer.cs]]
 - 1 edge to [[_COMMUNITY_Persistence  Migrations (5)]]
-- 1 edge to [[_COMMUNITY_src  api (2)]]
 - 1 edge to [[_COMMUNITY_Persistence  Migrations (6)]]
 - 1 edge to [[_COMMUNITY_Persistence  Migrations (13)]]
 - 1 edge to [[_COMMUNITY_Persistence  Migrations (7)]]
-- 1 edge to [[_COMMUNITY_20260729224623_RoomCleanings.Designer.cs]]
 - 1 edge to [[_COMMUNITY_AdminUserRole]]
 - 1 edge to [[_COMMUNITY_20260730211855_AdminUserRole.Designer.cs]]
-- 1 edge to [[_COMMUNITY_RoomCleaningRepository]]
+- 1 edge to [[_COMMUNITY_RoomCleaningRepository_1]]
 - 1 edge to [[_COMMUNITY_20260802130913_MakeRoomTaskRoomOptional.Designer.cs]]
-- 1 edge to [[_COMMUNITY_ClosureValidatorsTests]]
+- 1 edge to [[_COMMUNITY_ClosureValidatorsTests_1]]
 - 1 edge to [[_COMMUNITY_UsersPage.tsx]]
+- 1 edge to [[_COMMUNITY_SupervisorCountsAndRates]]
+- 1 edge to [[_COMMUNITY_20260806102552_SupervisorCountsAndRates.Designer.cs]]
 
 ## Top bridge nodes
-- [[CampCenter.Infrastructure.Persistence.Migrations]] - degree 25, connects to 22 communities
-- [[20260719143540_CoreDomain.Designer.cs]] - degree 3, connects to 1 community
-- [[20260721111400_ReplaceSessionsWithClosures.Designer.cs]] - degree 3, connects to 1 community
+- [[CampCenter.Infrastructure.Persistence.Migrations]] - degree 27, connects to 24 communities
+- [[20260729100842_MealSittingDuration.Designer.cs]] - degree 3, connects to 1 community
+- [[20260729224623_RoomCleanings.Designer.cs]] - degree 3, connects to 1 community
 - [[AppDbContextModelSnapshot.cs]] - degree 3, connects to 1 community

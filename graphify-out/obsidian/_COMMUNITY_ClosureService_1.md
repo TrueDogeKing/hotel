@@ -1,19 +1,24 @@
 ---
 type: community
-members: 6
+members: 11
 ---
 
 # ClosureService
 
-**Members:** 6 nodes
+**Members:** 11 nodes
 
 ## Members
-- [[.Hash()_1]] - code - src/CampCenter.Infrastructure/Auth/BcryptPasswordHasher.cs
-- [[.Verify()]] - code - src/CampCenter.Application/Interfaces/IPasswordHasher.cs
-- [[.Verify()_1]] - code - src/CampCenter.Infrastructure/Auth/BcryptPasswordHasher.cs
-- [[BcryptPasswordHasher]] - code - src/CampCenter.Infrastructure/Auth/BcryptPasswordHasher.cs
-- [[IPasswordHasher]] - code - src/CampCenter.Application/Interfaces/IPasswordHasher.cs
-- [[IPasswordHasher.cs]] - code - src/CampCenter.Application/Interfaces/IPasswordHasher.cs
+- [[BusinessRuleViolationException]] - code - src/CampCenter.Domain/Exceptions/BusinessRuleViolationException.cs
+- [[BusinessRuleViolationException.cs]] - code - src/CampCenter.Domain/Exceptions/BusinessRuleViolationException.cs
+- [[ConcurrencyConflictException]] - code - src/CampCenter.Domain/Exceptions/ConcurrencyConflictException.cs
+- [[ConcurrencyConflictException.cs]] - code - src/CampCenter.Domain/Exceptions/ConcurrencyConflictException.cs
+- [[ConflictException]] - code - src/CampCenter.Domain/Exceptions/ConflictException.cs
+- [[ConflictException.cs]] - code - src/CampCenter.Domain/Exceptions/ConflictException.cs
+- [[Exception_1]] - code
+- [[ForbiddenActionException]] - code - src/CampCenter.Domain/Exceptions/ForbiddenActionException.cs
+- [[ForbiddenActionException.cs]] - code - src/CampCenter.Domain/Exceptions/ForbiddenActionException.cs
+- [[NotFoundException]] - code - src/CampCenter.Domain/Exceptions/NotFoundException.cs
+- [[NotFoundException.cs]] - code - src/CampCenter.Domain/Exceptions/NotFoundException.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -23,13 +28,11 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_Admin User & Token Config]]
-- 2 edges to [[_COMMUNITY_Auth Service & Tokens]]
-- 1 edge to [[_COMMUNITY_Application Namespaces & DTOs]]
-- 1 edge to [[_COMMUNITY_Public Booking Service (2)]]
+- 5 edges to [[_COMMUNITY_Exception]]
 
 ## Top bridge nodes
-- [[IPasswordHasher]] - degree 6, connects to 2 communities
-- [[BcryptPasswordHasher]] - degree 4, connects to 1 community
-- [[IPasswordHasher.cs]] - degree 2, connects to 1 community
-- [[.Verify()]] - degree 2, connects to 1 community
+- [[BusinessRuleViolationException.cs]] - degree 2, connects to 1 community
+- [[ConcurrencyConflictException.cs]] - degree 2, connects to 1 community
+- [[ConflictException.cs]] - degree 2, connects to 1 community
+- [[ForbiddenActionException.cs]] - degree 2, connects to 1 community
+- [[NotFoundException.cs]] - degree 2, connects to 1 community

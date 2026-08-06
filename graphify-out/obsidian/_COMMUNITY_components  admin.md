@@ -1,19 +1,38 @@
 ---
 type: community
-members: 6
+members: 25
 ---
 
 # components / admin
 
-**Members:** 6 nodes
+**Members:** 25 nodes
 
 ## Members
-- [[.RemoveAssignment()]] - code - src/CampCenter.Domain/Repositories/IBookingRepository.cs
-- [[.RemoveAssignment()_1]] - code - src/CampCenter.Infrastructure/Repositories/BookingRepository.cs
-- [[BookingRoomAssignment]] - code - src/CampCenter.Domain/Entities/BookingRoomAssignment.cs
-- [[BookingRoomAssignment.cs]] - code - src/CampCenter.Domain/Entities/BookingRoomAssignment.cs
-- [[DateOnly_18]] - code
-- [[Guid_31]] - code
+- [[.AddAsync()_10]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
+- [[.AddRangeAsync()]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
+- [[.CountByDateAndKindAsync()]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
+- [[.GetByIdAsync()_6]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
+- [[.ListForBookingAsync()_1]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
+- [[.ListForDateAsync()_1]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
+- [[.ListFullySuppressedSlotsAsync()]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
+- [[.ListGeneratedSlotsAsync()]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
+- [[.ListLocationsAsync()]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
+- [[.ListVisibleSlotSpansAsync()]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
+- [[BookingId]] - code
+- [[CancellationToken_55]] - code
+- [[Count]] - code
+- [[Date_1]] - code
+- [[DateOnly_25]] - code
+- [[End_1]] - code
+- [[Guid_50]] - code
+- [[IReadOnlyCollection_3]] - code
+- [[IScheduleEntryRepository]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
+- [[Kind]] - code
+- [[List_28]] - code
+- [[MealTimeDefaultId]] - code
+- [[Start_1]] - code
+- [[Task_55]] - code
+- [[TimeOnly_7]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -23,17 +42,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_Integration Test Harness (2)]]
-- 3 edges to [[_COMMUNITY_CampCenter.Domain  Repositories (1)]]
-- 2 edges to [[_COMMUNITY_Admin Booking & Notifications (1)]]
-- 2 edges to [[_COMMUNITY_BookingConfiguration]]
+- 16 edges to [[_COMMUNITY_CampCenter.Application  Services (2)]]
+- 8 edges to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
+- 2 edges to [[_COMMUNITY_Public Booking Service (1)]]
+- 2 edges to [[_COMMUNITY_eslint_2]]
+- 2 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (4)]]
 - 1 edge to [[_COMMUNITY_Exception]]
-- 1 edge to [[_COMMUNITY_Integration Test Harness (1)]]
-- 1 edge to [[_COMMUNITY_Room Management]]
-- 1 edge to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
 
 ## Top bridge nodes
-- [[BookingRoomAssignment]] - degree 15, connects to 7 communities
-- [[.RemoveAssignment()]] - degree 3, connects to 2 communities
-- [[BookingRoomAssignment.cs]] - degree 2, connects to 1 community
-- [[.RemoveAssignment()_1]] - degree 2, connects to 1 community
+- [[IScheduleEntryRepository]] - degree 17, connects to 5 communities
+- [[.ListForBookingAsync()_1]] - degree 10, connects to 3 communities
+- [[.ListForDateAsync()_1]] - degree 9, connects to 3 communities
+- [[.CountByDateAndKindAsync()]] - degree 12, connects to 2 communities
+- [[.ListFullySuppressedSlotsAsync()]] - degree 10, connects to 2 communities

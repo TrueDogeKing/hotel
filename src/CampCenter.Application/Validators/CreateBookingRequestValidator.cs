@@ -11,11 +11,17 @@ public class CreateBookingRequestValidator : AbstractValidator<CreateBookingRequ
             .GreaterThan(x => x.StartDate)
             .WithMessage("The departure date must be after the arrival date.");
         RuleFor(x => x.Headcount).InclusiveBetween(1, 2000);
+        RuleFor(x => x.SupervisorCount)
+            .InclusiveBetween(0, 2000)
+            .LessThanOrEqualTo(x => x.Headcount)
+            .WithMessage("There cannot be more supervisors than people in the group.");
         RuleFor(x => x.RoomCounts)
             .NotEmpty()
-            .Must(counts =>
-                counts.All(kv => kv.Key is > 0 and <= 20 && kv.Value is >= 0 and <= 500)
-            )
+            .Must(BeSaneCounts)
+            .WithMessage("Invalid room counts.");
+        // Empty is legitimate — a group with no supervisors picks no rooms for them.
+        RuleFor(x => x.SupervisorRoomCounts)
+            .Must(BeSaneCounts)
             .WithMessage("Invalid room counts.");
         RuleFor(x => x.OrganizationName).NotEmpty().MaximumLength(256);
         RuleFor(x => x.ContactName).NotEmpty().MaximumLength(128);
@@ -30,4 +36,7 @@ public class CreateBookingRequestValidator : AbstractValidator<CreateBookingRequ
             .Must(l => l is "pl" or "en")
             .WithMessage("Language must be 'pl' or 'en'.");
     }
+
+    private static bool BeSaneCounts(Dictionary<int, int>? counts) =>
+        counts is null || counts.All(kv => kv.Key is > 0 and <= 20 && kv.Value is >= 0 and <= 500);
 }

@@ -1,17 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "Payment Gateway Integration Tests (2)"
+community: ".CreateClient"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Payment_Gateway_Integration_Tests_2
+  - community/CreateClient
 ---
 
 # Task
 
 ## Connections
-- [[.DisposeAsync()]] - `references` [EXTRACTED]
-- [[.InitializeAsync()]] - `references` [EXTRACTED]
+- [[.Login_ExceedingRateLimit_ReturnsTooManyRequests()]] - `references` [EXTRACTED]
+- [[.Login_WithInvalidPayload_ReturnsBadRequest()]] - `references` [EXTRACTED]
+- [[.Login_WithUnknownLogin_ReturnsUnauthorized()]] - `references` [EXTRACTED]
+- [[.Login_WithValidAdminCredentials_ReturnsTokenAndSetsRefreshCookie()]] - `references` [EXTRACTED]
+- [[.Login_WithWrongPassword_ReturnsUnauthorized()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Payment_Gateway_Integration_Tests_2
+#graphify/code #graphify/EXTRACTED #community/CreateClient

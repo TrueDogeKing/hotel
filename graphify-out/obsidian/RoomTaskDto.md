@@ -2,7 +2,7 @@
 source_file: "src/CampCenter.Application/DTOs/AdminPanel/AdminPanelDtos.cs"
 type: "code"
 community: "Room Task Management (1)"
-location: "L69"
+location: "L76"
 tags:
   - graphify/code
   - graphify/EXTRACTED

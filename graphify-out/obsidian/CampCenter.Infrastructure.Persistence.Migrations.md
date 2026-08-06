@@ -36,6 +36,8 @@ tags:
 - [[20260802130913_MakeRoomTaskRoomOptional.cs]] - `contains` [EXTRACTED]
 - [[20260806090830_ManualPricingAndPaymentState.Designer.cs]] - `contains` [EXTRACTED]
 - [[20260806090830_ManualPricingAndPaymentState.cs]] - `contains` [EXTRACTED]
+- [[20260806102552_SupervisorCountsAndRates.Designer.cs]] - `contains` [EXTRACTED]
+- [[20260806102552_SupervisorCountsAndRates.cs]] - `contains` [EXTRACTED]
 - [[AppDbContextModelSnapshot.cs]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/EF_Core_Migrations_3

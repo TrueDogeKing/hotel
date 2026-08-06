@@ -1,11 +1,11 @@
 ---
 type: community
-members: 27
+members: 24
 ---
 
 # Auth Service & Tokens
 
-**Members:** 27 nodes
+**Members:** 24 nodes
 
 ## Members
 - [[.AddAsync()_6]] - code - src/CampCenter.Domain/Repositories/IRefreshTokenRepository.cs
@@ -18,7 +18,6 @@ members: 27
 - [[.LoginAsync()_1]] - code - src/CampCenter.Application/Services/AuthService.cs
 - [[.LogoutAsync()_1]] - code - src/CampCenter.Application/Services/AuthService.cs
 - [[.RefreshAsync()_1]] - code - src/CampCenter.Application/Services/AuthService.cs
-- [[.RevokeAllActiveForUserAsync()]] - code - src/CampCenter.Domain/Repositories/IRefreshTokenRepository.cs
 - [[.SaveChangesAsync()_6]] - code - src/CampCenter.Domain/Repositories/IRefreshTokenRepository.cs
 - [[AuthResult]] - code - src/CampCenter.Application/Models/AuthResult.cs
 - [[AuthResult.cs]] - code - src/CampCenter.Application/Models/AuthResult.cs
@@ -26,9 +25,7 @@ members: 27
 - [[CancellationToken_33]] - code
 - [[CancellationToken_51]] - code
 - [[DateTime_2]] - code
-- [[DateTime_16]] - code
 - [[Guid_19]] - code
-- [[Guid_46]] - code
 - [[IRefreshTokenRepository]] - code - src/CampCenter.Domain/Repositories/IRefreshTokenRepository.cs
 - [[ITokenService]] - code - src/CampCenter.Application/Interfaces/ITokenService.cs
 - [[RefreshTokenInfo]] - code - src/CampCenter.Application/Models/RefreshTokenInfo.cs
@@ -44,17 +41,17 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_Auth Controller (1)]]
-- 4 edges to [[_COMMUNITY_ClosureService]]
+- 5 edges to [[_COMMUNITY_CampCenter.UnitTests  Validators]]
+- 5 edges to [[_COMMUNITY_Admin User & Token Config]]
+- 4 edges to [[_COMMUNITY_Auth Controller (1)]]
 - 4 edges to [[_COMMUNITY_Booking Persistence & Entities (1)]]
 - 4 edges to [[_COMMUNITY_Refresh Token Repository]]
-- 4 edges to [[_COMMUNITY_Admin User & Token Config]]
 - 3 edges to [[_COMMUNITY_Public Booking Service (1)]]
 - 3 edges to [[_COMMUNITY_CampCenter.Application  Services (1)]]
-- 2 edges to [[_COMMUNITY_ClosureService_1]]
+- 2 edges to [[_COMMUNITY_ClosureService]]
 - 2 edges to [[_COMMUNITY_Admin Booking & Notifications (1)]]
-- 2 edges to [[_COMMUNITY_Payment Gateway Integration Tests (1)]]
-- 1 edge to [[_COMMUNITY_eslint_2]]
+- 2 edges to [[_COMMUNITY_Admin Booking & Notifications (4)]]
+- 1 edge to [[_COMMUNITY_eslint_1]]
 - 1 edge to [[_COMMUNITY_Exception]]
 
 ## Top bridge nodes

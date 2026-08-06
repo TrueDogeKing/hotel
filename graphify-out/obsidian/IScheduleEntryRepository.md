@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs"
 type: "code"
-community: "CampCenter.Application / Services (2)"
+community: "components / admin"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterApplication_/_Services_2
+  - community/components_/_admin
 ---
 
 # IScheduleEntryRepository
@@ -30,4 +30,4 @@ tags:
 - [[ScheduleEntryRepository]] - `implements` [EXTRACTED]
 - [[ScheduleService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_2
+#graphify/code #graphify/EXTRACTED #community/components_/_admin

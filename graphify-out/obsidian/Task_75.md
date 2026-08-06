@@ -1,22 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "Payment Gateway Integration Tests (1)"
+community: "Payment Gateway Integration Tests (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Payment_Gateway_Integration_Tests_1
+  - community/Payment_Gateway_Integration_Tests_2
 ---
 
 # Task
 
 ## Connections
-- [[.CreateBookingWithDepositAsync()]] - `references` [EXTRACTED]
-- [[.DepositWebhook_ConfirmsBooking_AndIsIdempotent()]] - `references` [EXTRACTED]
-- [[.DepositWebhook_GeneratesTheGroupsMeals()]] - `references` [EXTRACTED]
-- [[.RegisterTransactionAsync()_2]] - `references` [EXTRACTED]
-- [[.VerifyTransactionAsync()_2]] - `references` [EXTRACTED]
-- [[.Webhook_AmountMismatch_IsRejected()]] - `references` [EXTRACTED]
-- [[.Webhook_BadSignature_IsRejected()]] - `references` [EXTRACTED]
+- [[.DisposeAsync()]] - `references` [EXTRACTED]
+- [[.InitializeAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Payment_Gateway_Integration_Tests_1
+#graphify/code #graphify/EXTRACTED #community/Payment_Gateway_Integration_Tests_2

@@ -11,11 +11,16 @@ public record AvailabilityDto(
     bool CenterClosed,
     string? CenterClosedReason,
     long PricePerPersonPerNightGrosze,
+    long SupervisorPricePerPersonPerNightGrosze,
     long DepositPerPersonPerNightGrosze,
     int RemainingCapacity,
     Dictionary<int, int> FreeRoomsByCapacity,
     bool? Fits,
+    /// Rooms suggested for the campers.
     Dictionary<int, int>? SuggestedMix,
+    /// Rooms suggested for the supervisors — their own, and the smallest that fit.
+    /// Empty when the group brings none.
+    Dictionary<int, int>? SuggestedSupervisorMix,
     long? TotalGrosze,
     long? DepositGrosze
 );
@@ -52,8 +57,15 @@ public record AvailabilityCalendarDto(
 public record CreateBookingRequestDto(
     DateOnly StartDate,
     DateOnly EndDate,
+    /// Campers and supervisors together.
     int Headcount,
+    /// How many of Headcount are supervisors. They are housed separately, so the
+    /// wizard picks their rooms as a mix of their own.
+    int SupervisorCount,
+    /// Rooms for the campers, keyed by capacity.
     Dictionary<int, int> RoomCounts,
+    /// Rooms for the supervisors, keyed by capacity. Empty when the group brings none.
+    Dictionary<int, int> SupervisorRoomCounts,
     string OrganizationName,
     string ContactName,
     string Email,
@@ -86,6 +98,7 @@ public record BookingDetailsDto(
     string Email,
     string Phone,
     int Headcount,
+    int SupervisorCount,
     Dictionary<int, int> RoomCounts,
     long TotalGrosze,
     long DepositGrosze,

@@ -30,6 +30,7 @@ public class PublicAvailabilityController : ControllerBase
         [FromQuery] DateOnly start,
         [FromQuery] DateOnly end,
         [FromQuery] int? headcount,
+        [FromQuery] int? supervisors,
         CancellationToken cancellationToken
     )
     {
@@ -40,7 +41,13 @@ public class PublicAvailabilityController : ControllerBase
         }
 
         return Ok(
-            await _availability.GetAvailabilityAsync(start, end, headcount, cancellationToken)
+            await _availability.GetAvailabilityAsync(
+                start,
+                end,
+                headcount,
+                supervisors,
+                cancellationToken
+            )
         );
     }
 

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/CampCenter.IntegrationTests/AuthApiTests.cs"
 type: "code"
-community: "tests / CampCenter.IntegrationTests (1)"
+community: ".CreateClient"
 location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/tests_/_CampCenterIntegrationTests_1
+  - community/CreateClient
 ---
 
 # AuthApiTests
@@ -20,4 +20,4 @@ tags:
 - [[AuthApiTests.cs]] - `contains` [EXTRACTED]
 - [[IntegrationTestBase]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/tests_/_CampCenterIntegrationTests_1
+#graphify/code #graphify/EXTRACTED #community/CreateClient

@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/DTOs/Schedule/ScheduleDtos.cs"
 type: "code"
-community: "CampCenter.UnitTests / Validators"
-location: "L173"
+community: "DTOs / Schedule (1)"
+location: "L181"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Validators
+  - community/DTOs_/_Schedule_1
 ---
 
 # UpdateDietaryNotesRequestDto
@@ -18,4 +18,4 @@ tags:
 - [[ScheduleDtos.cs]] - `contains` [EXTRACTED]
 - [[UpdateDietaryNotesRequestValidator]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Validators
+#graphify/code #graphify/EXTRACTED #community/DTOs_/_Schedule_1

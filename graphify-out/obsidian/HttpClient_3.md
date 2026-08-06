@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "tests / CampCenter.IntegrationTests (1)"
+community: "Payment Gateway Integration Tests (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/tests_/_CampCenterIntegrationTests_1
+  - community/Payment_Gateway_Integration_Tests_1
 ---
 
 # HttpClient
 
 ## Connections
-- [[.SetUpRoomsAsync()]] - `references` [EXTRACTED]
+- [[PaymentsApiTests]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/tests_/_CampCenterIntegrationTests_1
+#graphify/code #graphify/EXTRACTED #community/Payment_Gateway_Integration_Tests_1

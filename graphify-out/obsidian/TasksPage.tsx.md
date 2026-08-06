@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/pages/admin/TasksPage.tsx"
 type: "code"
-community: "src / api (1)"
+community: "Room Closure Management"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/src_/_api_1
+  - community/Room_Closure_Management
 ---
 
 # TasksPage.tsx
@@ -27,4 +27,4 @@ tags:
 - [[updateTask()]] - `imports` [EXTRACTED]
 - [[useAuth()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/src_/_api_1
+#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management

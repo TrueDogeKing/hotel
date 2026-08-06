@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Domain/Repositories/IRoomCleaningRepository.cs"
 type: "code"
-community: "CampCenter.UnitTests / Services (2)"
+community: "BookingSettings"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Services_2
+  - community/BookingSettings
 ---
 
 # IRoomCleaningRepository
@@ -22,4 +22,4 @@ tags:
 - [[IRoomCleaningRepository.cs]] - `contains` [EXTRACTED]
 - [[RoomCleaningRepository]] - `implements` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_2
+#graphify/code #graphify/EXTRACTED #community/BookingSettings

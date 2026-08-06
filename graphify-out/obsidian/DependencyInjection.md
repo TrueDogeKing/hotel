@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/DependencyInjection.cs"
 type: "code"
-community: "Public Booking Service (2)"
+community: "DependencyInjection.cs"
 location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public_Booking_Service_2
+  - community/DependencyInjectioncs
 ---
 
 # DependencyInjection
@@ -15,4 +15,4 @@ tags:
 - [[.AddApplication()]] - `method` [EXTRACTED]
 - [[DependencyInjection.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_2
+#graphify/code #graphify/EXTRACTED #community/DependencyInjectioncs

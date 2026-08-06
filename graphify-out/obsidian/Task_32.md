@@ -27,6 +27,7 @@ tags:
 - [[.SetStateAsync()_1]] - `references` [EXTRACTED]
 - [[.SetStatusAsync()_3]] - `references` [EXTRACTED]
 - [[.UpdateDietaryNotesAsync()_1]] - `references` [EXTRACTED]
+- [[.UpdatePeopleAsync()_1]] - `references` [EXTRACTED]
 - [[.UpdatePricingAsync()_1]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_1

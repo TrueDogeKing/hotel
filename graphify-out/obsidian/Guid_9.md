@@ -19,6 +19,7 @@ tags:
 - [[.SetStateAsync()]] - `references` [EXTRACTED]
 - [[.SetStatusAsync()]] - `references` [EXTRACTED]
 - [[.UpdateDietaryNotesAsync()]] - `references` [EXTRACTED]
+- [[.UpdatePeopleAsync()]] - `references` [EXTRACTED]
 - [[.UpdatePricingAsync()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Admin_Bookings_Controller__DTOs

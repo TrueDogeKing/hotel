@@ -100,27 +100,29 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 7 edges to [[_COMMUNITY_Validator Unit Tests]]
-- 7 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (2)]]
 - 5 edges to [[_COMMUNITY_Admin Booking & Notifications (1)]]
+- 4 edges to [[_COMMUNITY_Exception]]
 - 4 edges to [[_COMMUNITY_Public Booking Service (1)]]
 - 4 edges to [[_COMMUNITY_Room Task Management (1)]]
+- 4 edges to [[_COMMUNITY_20260729224623_RoomCleanings.Designer.cs]]
 - 3 edges to [[_COMMUNITY_.GetBlockedRoomIdsAsync]]
 - 3 edges to [[_COMMUNITY_Integration Test Harness (2)]]
-- 3 edges to [[_COMMUNITY_Exception]]
 - 2 edges to [[_COMMUNITY_CampCenter.Application.DTOs.Public]]
-- 2 edges to [[_COMMUNITY_CampCenter.UnitTests  Validators]]
+- 2 edges to [[_COMMUNITY_Camp Session Management]]
 - 2 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (3)]]
-- 2 edges to [[_COMMUNITY_ClosureService]]
 - 2 edges to [[_COMMUNITY_Room Mix Calculator Tests]]
-- 2 edges to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
+- 2 edges to [[_COMMUNITY_BookingSettings]]
+- 2 edges to [[_COMMUNITY_GroupRooms.tsx_1]]
 - 2 edges to [[_COMMUNITY_BookingConfiguration]]
 - 1 edge to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
 - 1 edge to [[_COMMUNITY_Application Namespaces & DTOs]]
-- 1 edge to [[_COMMUNITY_components  admin]]
+- 1 edge to [[_COMMUNITY_BookingStatus]]
+- 1 edge to [[_COMMUNITY_UserValidators.cs]]
+- 1 edge to [[_COMMUNITY_Public Booking Service (2)]]
 
 ## Top bridge nodes
-- [[Room_1]] - degree 28, connects to 7 communities
-- [[IRoomRepository]] - degree 18, connects to 6 communities
+- [[Room_1]] - degree 28, connects to 8 communities
+- [[IRoomRepository]] - degree 18, connects to 7 communities
 - [[AvailabilityService]] - degree 12, connects to 5 communities
 - [[.GetAvailabilityAsync()_1]] - degree 10, connects to 3 communities
 - [[.GetByIdAsync()_4]] - degree 10, connects to 3 communities

@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/api/admin.ts"
 type: "code"
-community: "src / api (1)"
+community: "Room Closure Management"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/src_/_api_1
+  - community/Room_Closure_Management
 ---
 
 # admin.ts
@@ -39,6 +39,7 @@ tags:
 - [[DashboardBooking]] - `contains` [EXTRACTED]
 - [[DayTimetable.tsx]] - `imports_from` [EXTRACTED]
 - [[GroupMealTimes.tsx]] - `imports_from` [EXTRACTED]
+- [[GroupPeople.tsx]] - `imports_from` [EXTRACTED]
 - [[GroupRooms.tsx]] - `imports_from` [EXTRACTED]
 - [[GroupSchedulePanel.tsx]] - `imports_from` [EXTRACTED]
 - [[HousekeepingDay]] - `contains` [EXTRACTED]
@@ -134,6 +135,7 @@ tags:
 - [[setTaskDone()]] - `contains` [EXTRACTED]
 - [[setUserPassword()]] - `contains` [EXTRACTED]
 - [[setUserRole()]] - `contains` [EXTRACTED]
+- [[updateBookingPeople()]] - `contains` [EXTRACTED]
 - [[updateBookingPricing()]] - `contains` [EXTRACTED]
 - [[updateClosure()]] - `contains` [EXTRACTED]
 - [[updateDietaryNotes()]] - `contains` [EXTRACTED]
@@ -145,4 +147,4 @@ tags:
 - [[userRoles]] - `contains` [EXTRACTED]
 - [[zlToGrosze()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/src_/_api_1
+#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management

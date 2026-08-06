@@ -14,6 +14,7 @@ tags:
 ## Connections
 - [[AdminPanelApiTests.cs]] - `contains` [EXTRACTED]
 - [[AdminPricingApiTests.cs]] - `contains` [EXTRACTED]
+- [[AdminSupervisorRoomsApiTests.cs]] - `contains` [EXTRACTED]
 - [[ApiCollection.cs]] - `contains` [EXTRACTED]
 - [[AuthApiTests.cs]] - `contains` [EXTRACTED]
 - [[CampCenterApiFactory.cs]] - `contains` [EXTRACTED]

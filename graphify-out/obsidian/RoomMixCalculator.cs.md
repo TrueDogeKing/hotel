@@ -14,5 +14,6 @@ tags:
 ## Connections
 - [[CampCenter.Application.Services]] - `contains` [EXTRACTED]
 - [[RoomMixCalculator]] - `contains` [EXTRACTED]
+- [[SplitMix_1]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Room_Mix_Calculator_Tests

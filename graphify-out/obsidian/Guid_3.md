@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Camp Session Management"
+community: "src / api (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Camp_Session_Management
+  - community/src_/_api_2
 ---
 
 # Guid
@@ -14,4 +14,4 @@ tags:
 - [[.Delete()_1]] - `references` [EXTRACTED]
 - [[.Update()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Camp_Session_Management
+#graphify/code #graphify/EXTRACTED #community/src_/_api_2

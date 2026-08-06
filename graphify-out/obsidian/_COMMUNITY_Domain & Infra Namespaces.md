@@ -1,46 +1,39 @@
 ---
 type: community
-members: 33
+members: 26
 ---
 
 # Domain & Infra Namespaces
 
-**Members:** 33 nodes
+**Members:** 26 nodes
 
 ## Members
-- [[BookingMealTime]] - code - frontend/src/api/admin.ts
+- [[Chip]] - code - frontend/src/components/admin/DayTimetable.tsx
+- [[ClashReason]] - code - frontend/src/components/admin/DayTimetable.tsx
+- [[DayTimetable()]] - code - frontend/src/components/admin/DayTimetable.tsx
+- [[DayTimetable.tsx]] - code - frontend/src/components/admin/DayTimetable.tsx
 - [[EntryGroupOption]] - code - frontend/src/components/admin/ScheduleEntryForm.tsx
-- [[FormState]] - code - frontend/src/pages/admin/MealTimesPage.tsx
-- [[GroupMealTimes()]] - code - frontend/src/components/admin/GroupMealTimes.tsx
-- [[GroupMealTimes.tsx]] - code - frontend/src/components/admin/GroupMealTimes.tsx
 - [[HOUSE_LOCATIONS]] - code - frontend/src/components/admin/ScheduleEntryForm.tsx
-- [[MealKind]] - code - frontend/src/api/admin.ts
-- [[MealTimeDefault]] - code - frontend/src/api/admin.ts
-- [[MealTimesPage()]] - code - frontend/src/pages/admin/MealTimesPage.tsx
-- [[MealTimesPage.tsx]] - code - frontend/src/pages/admin/MealTimesPage.tsx
-- [[NeighbourSitting]] - code - frontend/src/api/admin.ts
 - [[OTHER()]] - code - frontend/src/components/admin/ScheduleEntryForm.tsx
-- [[Props_6]] - code - frontend/src/components/admin/GroupMealTimes.tsx
-- [[Props_9]] - code - frontend/src/components/admin/ScheduleEntryForm.tsx
+- [[PlacedChip]] - code - frontend/src/components/admin/DayTimetable.tsx
+- [[Props_7]] - code - frontend/src/components/admin/DayTimetable.tsx
+- [[Props_12]] - code - frontend/src/components/admin/ScheduleEntryForm.tsx
+- [[ScheduleDay]] - code - frontend/src/api/admin.ts
+- [[ScheduleEntry]] - code - frontend/src/api/admin.ts
 - [[ScheduleEntryForm()]] - code - frontend/src/components/admin/ScheduleEntryForm.tsx
 - [[ScheduleEntryForm.tsx]] - code - frontend/src/components/admin/ScheduleEntryForm.tsx
 - [[ScheduleEntryInput]] - code - frontend/src/api/admin.ts
 - [[ScheduleEntryKind]] - code - frontend/src/api/admin.ts
-- [[clashingNeighbours()]] - code - frontend/src/components/admin/GroupMealTimes.tsx
-- [[createMealTime()]] - code - frontend/src/api/admin.ts
-- [[deleteBookingMeals()]] - code - frontend/src/api/admin.ts
-- [[deleteMealTime()]] - code - frontend/src/api/admin.ts
-- [[emptyForm_1]] - code - frontend/src/pages/admin/MealTimesPage.tsx
-- [[fromTimeInput()]] - code - frontend/src/utils/dates.ts
-- [[getBookingMealTimes()]] - code - frontend/src/api/admin.ts
-- [[getMealTimes()]] - code - frontend/src/api/admin.ts
+- [[buildChips()]] - code - frontend/src/components/admin/DayTimetable.tsx
+- [[findClashes()]] - code - frontend/src/components/admin/DayTimetable.tsx
+- [[formatTime()]] - code - frontend/src/components/admin/DayTimetable.tsx
+- [[groupLabel()]] - code - frontend/src/utils/groupLabel.ts
+- [[groupLabel.ts]] - code - frontend/src/utils/groupLabel.ts
+- [[groupsOf()]] - code - frontend/src/components/admin/DayTimetable.tsx
 - [[houseLocationKey()]] - code - frontend/src/components/admin/ScheduleEntryForm.tsx
-- [[mealKinds]] - code - frontend/src/api/admin.ts
-- [[minutesOf()_1]] - code - frontend/src/components/admin/GroupMealTimes.tsx
-- [[resetBookingMealTime()]] - code - frontend/src/api/admin.ts
-- [[setBookingMealTime()]] - code - frontend/src/api/admin.ts
-- [[toTimeInput()]] - code - frontend/src/utils/dates.ts
-- [[updateMealTime()]] - code - frontend/src/api/admin.ts
+- [[minutesOf()]] - code - frontend/src/components/admin/DayTimetable.tsx
+- [[placeChips()]] - code - frontend/src/components/admin/DayTimetable.tsx
+- [[placesOf()]] - code - frontend/src/components/admin/DayTimetable.tsx
 
 ## Live Query (requires Dataview plugin)
 
@@ -50,16 +43,15 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 18 edges to [[_COMMUNITY_src  api (1)]]
-- 14 edges to [[_COMMUNITY_Frontend App Shell & i18n]]
-- 6 edges to [[_COMMUNITY_src  utils]]
-- 4 edges to [[_COMMUNITY_Room Closure Management]]
+- 10 edges to [[_COMMUNITY_Frontend App Shell & i18n]]
+- 9 edges to [[_COMMUNITY_Room Closure Management]]
 - 4 edges to [[_COMMUNITY_Public Booking Frontend (1)]]
-- 2 edges to [[_COMMUNITY_Frontend Auth & API Client]]
+- 2 edges to [[_COMMUNITY_src  utils]]
+- 2 edges to [[_COMMUNITY_ScheduleEntry]]
 
 ## Top bridge nodes
-- [[GroupMealTimes.tsx]] - degree 19, connects to 5 communities
-- [[MealTimesPage.tsx]] - degree 18, connects to 4 communities
+- [[DayTimetable.tsx]] - degree 21, connects to 5 communities
 - [[ScheduleEntryForm.tsx]] - degree 17, connects to 4 communities
-- [[toTimeInput()]] - degree 15, connects to 4 communities
+- [[DayTimetable()]] - degree 10, connects to 2 communities
+- [[ScheduleEntry]] - degree 6, connects to 2 communities
 - [[ScheduleEntryInput]] - degree 5, connects to 2 communities

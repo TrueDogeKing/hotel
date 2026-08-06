@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Validators/AdminBookingValidators.cs"
 type: "code"
-community: "CampCenter.UnitTests / Validators"
+community: "Camp Session Management"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Validators
+  - community/Camp_Session_Management
 ---
 
 # CampCenter.Application.Validators
@@ -25,4 +25,4 @@ tags:
 - [[ScheduleValidatorsTests.cs]] - `imports` [EXTRACTED]
 - [[UserValidators.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Validators
+#graphify/code #graphify/EXTRACTED #community/Camp_Session_Management

@@ -13,8 +13,8 @@ members: 15
 - [[@vitejsplugin-react]] - code - frontend/package.json
 - [[@vitejsplugin-react_1]] - concept - frontend/package.json
 - [[devDependencies]] - code - frontend/package.json
-- [[eslint]] - code - frontend/package.json
-- [[eslint_1]] - concept - frontend/package.json
+- [[eslint-plugin-react-hooks]] - code - frontend/package.json
+- [[eslint-plugin-react-hooks_1]] - concept - frontend/package.json
 - [[eslint-plugin-react-refresh]] - code - frontend/package.json
 - [[eslint-plugin-react-refresh_1]] - concept - frontend/package.json
 - [[globals]] - code - frontend/package.json
@@ -33,10 +33,10 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 1 edge to [[_COMMUNITY_Frontend Package Manifest]]
-- 1 edge to [[_COMMUNITY_eslint-plugin-react-hooks]]
+- 1 edge to [[_COMMUNITY_eslint]]
 - 1 edge to [[_COMMUNITY_Prettier Dependency]]
 - 1 edge to [[_COMMUNITY_Node Type Definitions]]
-- 1 edge to [[_COMMUNITY_eslint]]
+- 1 edge to [[_COMMUNITY_RoomConfiguration]]
 - 1 edge to [[_COMMUNITY_React DOM Type Definitions]]
 - 1 edge to [[_COMMUNITY_TypeScript Dependency]]
 

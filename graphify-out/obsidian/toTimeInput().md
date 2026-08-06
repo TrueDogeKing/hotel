@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/utils/dates.ts"
 type: "code"
-community: "Domain & Infra Namespaces"
+community: "Public Booking Frontend (1)"
 location: "L106"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Domain__Infra_Namespaces
+  - community/Public_Booking_Frontend_1
 ---
 
 # toTimeInput()
@@ -28,4 +28,4 @@ tags:
 - [[dates.ts]] - `contains` [EXTRACTED]
 - [[formatTimeRange()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Domain__Infra_Namespaces
+#graphify/code #graphify/EXTRACTED #community/Public_Booking_Frontend_1

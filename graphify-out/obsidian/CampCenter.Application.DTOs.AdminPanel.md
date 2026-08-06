@@ -17,6 +17,7 @@ tags:
 - [[AdminPanelApiTests.cs]] - `imports` [EXTRACTED]
 - [[AdminPanelDtos.cs]] - `contains` [EXTRACTED]
 - [[AdminPricingApiTests.cs]] - `imports` [EXTRACTED]
+- [[AdminSupervisorRoomsApiTests.cs]] - `imports` [EXTRACTED]
 - [[BookingsController.cs]] - `imports` [EXTRACTED]
 - [[DashboardController.cs]] - `imports` [EXTRACTED]
 - [[HousekeepingController.cs]] - `imports` [EXTRACTED]

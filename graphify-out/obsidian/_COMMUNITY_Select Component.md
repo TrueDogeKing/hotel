@@ -8,7 +8,7 @@ members: 4
 **Members:** 4 nodes
 
 ## Members
-- [[Props_2]] - code - frontend/src/components/Select.tsx
+- [[Props_4]] - code - frontend/src/components/Select.tsx
 - [[Select()]] - code - frontend/src/components/Select.tsx
 - [[Select.tsx]] - code - frontend/src/components/Select.tsx
 - [[SelectOption]] - code - frontend/src/components/Select.tsx

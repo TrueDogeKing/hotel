@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/pages/admin/UsersPage.tsx"
 type: "code"
-community: "useAuth"
-location: "L25"
+community: "src / api (1)"
+location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/useAuth
+  - community/src_/_api_1
 ---
 
 # emptyForm
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[UsersPage.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/useAuth
+#graphify/code #graphify/EXTRACTED #community/src_/_api_1

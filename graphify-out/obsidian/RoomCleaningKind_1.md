@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Domain/Entities/RoomCleaning.cs"
 type: "code"
-community: "CampCenter.UnitTests / Services (2)"
+community: "UserValidators.cs"
 location: "L4"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Services_2
+  - community/UserValidatorscs
 ---
 
 # RoomCleaningKind
@@ -16,4 +16,4 @@ tags:
 - [[RoomCleaning]] - `references` [EXTRACTED]
 - [[RoomCleaning.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_2
+#graphify/code #graphify/EXTRACTED #community/UserValidatorscs

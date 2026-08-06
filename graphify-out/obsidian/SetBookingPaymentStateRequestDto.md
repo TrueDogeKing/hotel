@@ -2,7 +2,7 @@
 source_file: "src/CampCenter.Application/DTOs/AdminPanel/AdminPanelDtos.cs"
 type: "code"
 community: "Admin Bookings Controller & DTOs"
-location: "L129"
+location: "L152"
 tags:
   - graphify/code
   - graphify/EXTRACTED

@@ -5,7 +5,9 @@ public record AdminAssignmentDto(
     Guid RoomId,
     string RoomNumber,
     int Capacity,
-    int PeopleCount
+    int PeopleCount,
+    /// This room holds the group's supervisors rather than its campers.
+    bool IsSupervisorRoom
 );
 
 public record AdminBookingDto(
@@ -17,7 +19,10 @@ public record AdminBookingDto(
     string ContactName,
     string Email,
     string Phone,
+    /// Campers and supervisors together.
     int Headcount,
+    /// How many of Headcount are supervisors; campers are the remainder.
+    int SupervisorCount,
     string? Notes,
     /// Admin-managed dietary/preparation note; distinct from Notes, which the booker wrote.
     string? DietaryNotes,
@@ -25,9 +30,11 @@ public record AdminBookingDto(
     string? CancelReason,
     long TotalGrosze,
     long DepositGrosze,
-    /// The rate the total was worked out from: total = rate × headcount × nights,
-    /// unless the owner typed a flat total over the top of it.
+    /// The camper rate the total was worked out from: total = camper rate ×
+    /// campers × nights + supervisor rate × supervisors × nights, unless the owner
+    /// typed a flat total over the top of it.
     long PricePerPersonPerNightGrosze,
+    long SupervisorPricePerPersonPerNightGrosze,
     /// Unpaid / DepositPaid / Paid, as recorded by the owner.
     string PaymentState,
     /// Status and payment folded into the single value the panel works in — see
@@ -89,7 +96,7 @@ public record UpdateRoomTaskRequestDto(Guid? RoomId, string Text);
 /// Assigned — moving a group is picking from this one set.
 public record AssignableRoomDto(Guid RoomId, string RoomNumber, int Capacity, bool Assigned);
 
-public record ReassignmentEntryDto(Guid RoomId, int PeopleCount);
+public record ReassignmentEntryDto(Guid RoomId, int PeopleCount, bool IsSupervisorRoom);
 
 public record ReassignBookingRequestDto(List<ReassignmentEntryDto> Assignments);
 
@@ -104,23 +111,39 @@ public record CreateAdminBookingRequestDto(
     string ContactName,
     string Email,
     string Phone,
+    /// Campers and supervisors together — the frontend adds the two fields it
+    /// shows. Kept as the total so the public DTO keeps the same meaning.
     int Headcount,
+    /// How many of Headcount are supervisors. They are given rooms of their own.
+    int SupervisorCount,
     string? Notes,
     /// PendingDeposit / Confirmed / Cancelled / Completed. Defaults to Confirmed.
     string? Status,
     /// "pl" or "en"; drives the language of any later email. Defaults to "pl".
-    string? Language
+    string? Language,
+    /// Prices, each null to take the centre's current rate. Set together with the
+    /// booking rather than in a second call, so a group never exists at the wrong
+    /// price for however long that call takes.
+    long? PricePerPersonPerNightGrosze,
+    long? SupervisorPricePerPersonPerNightGrosze,
+    long? TotalGrosze,
+    long? DepositGrosze
 );
 
 /// Manual status override. Any status may be set from any other — see
 /// IAdminBookingService.SetStatusAsync for what each transition does.
 public record SetBookingStatusRequestDto(string Status);
 
+/// Who is coming, once the booking already exists: the total and how many of it
+/// are supervisors. Campers are the difference.
+public record UpdateBookingPeopleRequestDto(int Headcount, int SupervisorCount);
+
 /// What this one group is charged. The rate is what the owner edits; TotalGrosze
 /// comes along so a flat, negotiated amount can be typed over the arithmetic
 /// (null recomputes it as rate × headcount × nights).
 public record UpdateBookingPricingRequestDto(
     long PricePerPersonPerNightGrosze,
+    long SupervisorPricePerPersonPerNightGrosze,
     long DepositGrosze,
     long? TotalGrosze
 );
@@ -136,12 +159,14 @@ public record SetBookingStateRequestDto(string State);
 /// in force and nothing has been saved in the panel.
 public record PricingDefaultsDto(
     long PricePerPersonPerNightGrosze,
+    long SupervisorPricePerPersonPerNightGrosze,
     long DepositPerPersonPerNightGrosze,
     DateTime? UpdatedAt
 );
 
 public record UpdatePricingDefaultsRequestDto(
     long PricePerPersonPerNightGrosze,
+    long SupervisorPricePerPersonPerNightGrosze,
     long DepositPerPersonPerNightGrosze
 );
 
@@ -151,6 +176,7 @@ public record DashboardBookingDto(
     DateOnly StartDate,
     DateOnly EndDate,
     int Headcount,
+    int SupervisorCount,
     int OccupiedBeds,
     string Status
 );

@@ -55,6 +55,20 @@ public interface IAdminBookingService
         CancellationToken cancellationToken = default
     );
 
+    /// Changes who is coming: the headcount and how many of them are supervisors.
+    ///
+    /// Only the counts. A group loses and gains people after it is booked —
+    /// someone is sent home, a parent joins the kadra — and the owner wants that
+    /// recorded in one move, not bundled with decisions about money and beds.
+    /// The price is left exactly as it stands (UpdatePricingAsync changes it) and
+    /// so are the rooms (ReassignAsync moves them); the returned booking simply
+    /// shows the new numbers against the old arrangement.
+    Task<AdminBookingDto> UpdatePeopleAsync(
+        Guid id,
+        UpdateBookingPeopleRequestDto request,
+        CancellationToken cancellationToken = default
+    );
+
     /// Changes what this one group is charged. The rate and deposit are stored as
     /// given; the total is recomputed as rate × headcount × nights unless the
     /// request carries a flat total of its own. Other bookings are untouched — the

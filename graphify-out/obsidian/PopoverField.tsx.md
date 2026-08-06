@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/components/calendar/PopoverField.tsx"
 type: "code"
-community: "src / utils"
+community: "ScheduleEntry"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/src_/_utils
+  - community/ScheduleEntry
 ---
 
 # PopoverField.tsx
@@ -15,6 +15,6 @@ tags:
 - [[DateField.tsx]] - `imports_from` [EXTRACTED]
 - [[DateRangeField.tsx]] - `imports_from` [EXTRACTED]
 - [[PopoverField()]] - `contains` [EXTRACTED]
-- [[Props_15]] - `contains` [EXTRACTED]
+- [[Props_18]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/src_/_utils
+#graphify/code #graphify/EXTRACTED #community/ScheduleEntry

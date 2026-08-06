@@ -1,17 +1,18 @@
 ---
-source_file: "frontend/src/components/admin/GroupRooms.tsx"
+source_file: "frontend/src/components/admin/DayTimetable.tsx"
 type: "code"
-community: "GroupRooms.tsx"
-location: "L13"
+community: "Domain & Infra Namespaces"
+location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/GroupRoomstsx
+  - community/Domain__Infra_Namespaces
 ---
 
 # Props
 
 ## Connections
-- [[GroupRooms.tsx]] - `contains` [EXTRACTED]
+- [[DayTimetable.tsx]] - `contains` [EXTRACTED]
+- [[ScheduleDay]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/GroupRoomstsx
+#graphify/code #graphify/EXTRACTED #community/Domain__Infra_Namespaces

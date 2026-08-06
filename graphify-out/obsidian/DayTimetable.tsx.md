@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/components/admin/DayTimetable.tsx"
 type: "code"
-community: "Room Closure Management"
+community: "Domain & Infra Namespaces"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Closure_Management
+  - community/Domain__Infra_Namespaces
 ---
 
 # DayTimetable.tsx
@@ -16,7 +16,7 @@ tags:
 - [[ClashReason]] - `contains` [EXTRACTED]
 - [[DayTimetable()]] - `contains` [EXTRACTED]
 - [[PlacedChip]] - `contains` [EXTRACTED]
-- [[Props_5]] - `contains` [EXTRACTED]
+- [[Props_7]] - `contains` [EXTRACTED]
 - [[ScheduleDay]] - `imports` [EXTRACTED]
 - [[ScheduleEntry]] - `imports` [EXTRACTED]
 - [[SchedulePage.tsx]] - `imports_from` [EXTRACTED]
@@ -26,10 +26,12 @@ tags:
 - [[findClashes()]] - `contains` [EXTRACTED]
 - [[formatDate()]] - `imports` [EXTRACTED]
 - [[formatTime()]] - `contains` [EXTRACTED]
+- [[groupLabel()]] - `imports` [EXTRACTED]
+- [[groupLabel.ts]] - `imports_from` [EXTRACTED]
 - [[groupsOf()]] - `contains` [EXTRACTED]
 - [[minutesOf()]] - `contains` [EXTRACTED]
 - [[placeChips()]] - `contains` [EXTRACTED]
 - [[placesOf()]] - `contains` [EXTRACTED]
 - [[toTimeInput()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management
+#graphify/code #graphify/EXTRACTED #community/Domain__Infra_Namespaces

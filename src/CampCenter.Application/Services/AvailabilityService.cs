@@ -29,6 +29,7 @@ public class AvailabilityService : IAvailabilityService
         DateOnly start,
         DateOnly end,
         int? headcount,
+        int? supervisors,
         CancellationToken cancellationToken = default
     )
     {
@@ -39,14 +40,23 @@ public class AvailabilityService : IAvailabilityService
         var remaining = (int)RoomMixCalculator.TotalCapacity(free);
 
         Dictionary<int, int>? mix = null;
+        Dictionary<int, int>? supervisorMix = null;
         bool? fits = null;
         long? total = null;
         long? deposit = null;
         if (headcount is > 0)
         {
-            mix = RoomMixCalculator.SuggestMix(headcount.Value, free);
-            fits = centerReason is null && mix is not null;
-            total = rates.PricePerPersonPerNightGrosze * headcount.Value * nights;
+            // The kadra are quoted and housed separately, so a group that brings
+            // them is told up front whether the centre can seat them apart.
+            var staff = Math.Clamp(supervisors ?? 0, 0, headcount.Value);
+            var campers = headcount.Value - staff;
+            var split = RoomMixCalculator.SuggestSplitMix(campers, staff, free);
+            mix = split?.CamperMix;
+            supervisorMix = split?.SupervisorMix;
+            fits = centerReason is null && split is not null;
+            total =
+                (rates.PricePerPersonPerNightGrosze * campers * nights)
+                + (rates.SupervisorPricePerPersonPerNightGrosze * staff * nights);
             deposit = rates.DepositPerPersonPerNightGrosze * headcount.Value * nights;
         }
 
@@ -57,11 +67,13 @@ public class AvailabilityService : IAvailabilityService
             centerReason is not null,
             centerReason,
             rates.PricePerPersonPerNightGrosze,
+            rates.SupervisorPricePerPersonPerNightGrosze,
             rates.DepositPerPersonPerNightGrosze,
             remaining,
             free,
             fits,
             mix,
+            supervisorMix,
             total,
             deposit
         );

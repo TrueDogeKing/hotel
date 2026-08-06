@@ -25,6 +25,7 @@ tags:
 - [[.SetStateAsync()]] - `method` [EXTRACTED]
 - [[.SetStatusAsync()]] - `method` [EXTRACTED]
 - [[.UpdateDietaryNotesAsync()]] - `method` [EXTRACTED]
+- [[.UpdatePeopleAsync()]] - `method` [EXTRACTED]
 - [[.UpdatePricingAsync()]] - `method` [EXTRACTED]
 - [[AdminBookingService]] - `implements` [EXTRACTED]
 - [[BookingsController]] - `references` [EXTRACTED]

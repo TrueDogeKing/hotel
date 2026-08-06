@@ -1,12 +1,12 @@
 ---
 source_file: "tests/CampCenter.UnitTests/Validators/ClosureValidatorsTests.cs"
 type: "code"
-community: "CampCenter.UnitTests / Validators"
+community: "Camp Session Management"
 location: "L4"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Validators
+  - community/Camp_Session_Management
 ---
 
 # CampCenter.UnitTests.Validators
@@ -16,4 +16,4 @@ tags:
 - [[LoginRequestValidatorTests.cs]] - `contains` [EXTRACTED]
 - [[ScheduleValidatorsTests.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Validators
+#graphify/code #graphify/EXTRACTED #community/Camp_Session_Management

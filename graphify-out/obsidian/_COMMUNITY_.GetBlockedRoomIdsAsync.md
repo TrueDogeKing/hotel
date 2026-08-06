@@ -37,7 +37,7 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 7 edges to [[_COMMUNITY_Public Booking Service (1)]]
-- 6 edges to [[_COMMUNITY_Admin Booking & Notifications (1)]]
+- 7 edges to [[_COMMUNITY_Admin Booking & Notifications (1)]]
 - 3 edges to [[_COMMUNITY_Validator Unit Tests]]
 - 3 edges to [[_COMMUNITY_Room Management]]
 - 2 edges to [[_COMMUNITY_CampCenter.Application.DTOs.Public]]
@@ -47,5 +47,5 @@ SORT file.name ASC
 - [[IAvailabilityService]] - degree 10, connects to 5 communities
 - [[.GetBlockedRoomIdsAsync()]] - degree 10, connects to 2 communities
 - [[PublicDtos.cs]] - degree 9, connects to 2 communities
-- [[.GetFreeRoomsByCapacityAsync()]] - degree 8, connects to 2 communities
+- [[.GetFreeRoomsByCapacityAsync()]] - degree 9, connects to 2 communities
 - [[.GetCenterClosureReasonAsync()]] - degree 6, connects to 2 communities

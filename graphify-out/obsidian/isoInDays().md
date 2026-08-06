@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/components/admin/AddGroupForm.tsx"
 type: "code"
-community: "ScheduleEntry"
-location: "L17"
+community: "useAuth"
+location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ScheduleEntry
+  - community/useAuth
 ---
 
 # isoInDays()
@@ -15,4 +15,4 @@ tags:
 - [[AddGroupForm()]] - `calls` [EXTRACTED]
 - [[AddGroupForm.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ScheduleEntry
+#graphify/code #graphify/EXTRACTED #community/useAuth

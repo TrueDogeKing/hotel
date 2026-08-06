@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Persistence/Configurations/PaymentConfiguration.cs"
 type: "code"
-community: "BookingConfiguration"
+community: "PaymentConfiguration"
 location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/BookingConfiguration
+  - community/PaymentConfiguration
 ---
 
 # PaymentConfiguration
@@ -17,4 +17,4 @@ tags:
 - [[Payment]] - `references` [EXTRACTED]
 - [[PaymentConfiguration.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/BookingConfiguration
+#graphify/code #graphify/EXTRACTED #community/PaymentConfiguration

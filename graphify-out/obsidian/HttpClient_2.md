@@ -1,16 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "Payment Gateway Integration Tests (1)"
+community: ".CreateClient"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Payment_Gateway_Integration_Tests_1
+  - community/CreateClient
 ---
 
 # HttpClient
 
 ## Connections
-- [[PaymentsApiTests]] - `references` [EXTRACTED]
+- [[.CreateAuthenticatedClientAsync()]] - `references` [EXTRACTED]
+- [[.CreateClient()]] - `references` [EXTRACTED]
+- [[.CreateClientForAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Payment_Gateway_Integration_Tests_1
+#graphify/code #graphify/EXTRACTED #community/CreateClient

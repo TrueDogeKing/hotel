@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/pages/admin/AdminBookingsPage.tsx"
 type: "code"
-community: "Public Booking Frontend (1)"
-location: "L21"
+community: "useAuth"
+location: "L22"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public_Booking_Frontend_1
+  - community/useAuth
 ---
 
 # AdminBookingsPage()
@@ -18,4 +18,4 @@ tags:
 - [[getAdminBookings()]] - `calls` [EXTRACTED]
 - [[useAuth()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public_Booking_Frontend_1
+#graphify/code #graphify/EXTRACTED #community/useAuth

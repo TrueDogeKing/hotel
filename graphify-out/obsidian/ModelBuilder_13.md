@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "EF Core Migrations (3)"
+community: "20260806102552_SupervisorCountsAndRates.Designer.cs"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EF_Core_Migrations_3
+  - community/20260806102552_SupervisorCountsAndRatesDesignercs
 ---
 
 # ModelBuilder
 
 ## Connections
-- [[.BuildModel()]] - `references` [EXTRACTED]
+- [[.BuildTargetModel()_12]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EF_Core_Migrations_3
+#graphify/code #graphify/EXTRACTED #community/20260806102552_SupervisorCountsAndRatesDesignercs

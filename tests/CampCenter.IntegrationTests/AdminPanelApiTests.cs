@@ -41,7 +41,9 @@ public class AdminPanelApiTests : IntegrationTestBase
                     start,
                     end,
                     13,
+                    0,
                     new Dictionary<int, int> { [7] = 2 },
+                    [],
                     "AP Org",
                     "Ola Testowa",
                     "ap@example.com",
@@ -75,9 +77,9 @@ public class AdminPanelApiTests : IntegrationTestBase
         var reassign = await admin.PutAsJsonAsync(
             $"/api/admin/bookings/{booking.Id}/assignments",
             new ReassignBookingRequestDto([
-                new ReassignmentEntryDto(roomIds[0], 5),
-                new ReassignmentEntryDto(roomIds[1], 4),
-                new ReassignmentEntryDto(roomIds[2], 4),
+                new ReassignmentEntryDto(roomIds[0], 5, false),
+                new ReassignmentEntryDto(roomIds[1], 4, false),
+                new ReassignmentEntryDto(roomIds[2], 4, false),
             ])
         );
         Assert.True(
@@ -90,7 +92,7 @@ public class AdminPanelApiTests : IntegrationTestBase
         // Wrong headcount sum is rejected.
         var badReassign = await admin.PutAsJsonAsync(
             $"/api/admin/bookings/{booking.Id}/assignments",
-            new ReassignBookingRequestDto([new ReassignmentEntryDto(roomIds[0], 5)])
+            new ReassignBookingRequestDto([new ReassignmentEntryDto(roomIds[0], 5, false)])
         );
         Assert.Equal(HttpStatusCode.BadRequest, badReassign.StatusCode);
 
@@ -179,9 +181,14 @@ public class AdminPanelApiTests : IntegrationTestBase
                     $"{name.ToLowerInvariant()}@example.com",
                     "+48 500 500 503",
                     9,
+                    0,
                     null,
                     "Confirmed",
-                    "pl"
+                    "pl",
+                    null,
+                    null,
+                    null,
+                    null
                 )
             );
             Assert.Equal(HttpStatusCode.Created, response.StatusCode);
@@ -268,7 +275,9 @@ public class AdminPanelApiTests : IntegrationTestBase
                     start,
                     end,
                     11,
+                    0,
                     new Dictionary<int, int> { [11] = 1 },
+                    [],
                     "AR Org",
                     "Ola Testowa",
                     "ar@example.com",
@@ -287,7 +296,9 @@ public class AdminPanelApiTests : IntegrationTestBase
                     start.AddDays(2),
                     end.AddDays(2),
                     11,
+                    0,
                     new Dictionary<int, int> { [11] = 1 },
+                    [],
                     "AR Rival",
                     "Jan Testowy",
                     "ar-rival@example.com",
@@ -344,7 +355,7 @@ public class AdminPanelApiTests : IntegrationTestBase
         Assert.False(target.Assigned);
         var move = await admin.PutAsJsonAsync(
             $"/api/admin/bookings/{booking.Id}/assignments",
-            new ReassignBookingRequestDto([new ReassignmentEntryDto(target.RoomId, 11)])
+            new ReassignBookingRequestDto([new ReassignmentEntryDto(target.RoomId, 11, false)])
         );
         Assert.True(
             move.StatusCode == HttpStatusCode.OK,

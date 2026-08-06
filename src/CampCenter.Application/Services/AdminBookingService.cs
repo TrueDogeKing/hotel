@@ -105,14 +105,29 @@ public class AdminBookingService : IAdminBookingService
             null,
             cancellationToken
         );
-        var mix =
-            RoomMixCalculator.SuggestMix(request.Headcount, free)
+        var supervisors = request.SupervisorCount;
+        var campers = request.Headcount - supervisors;
+        var split =
+            RoomMixCalculator.SuggestSplitMix(campers, supervisors, free)
             ?? throw new ConflictException(
-                "The free rooms cannot house this group over the selected range."
+                supervisors > 0
+                    ? "The free rooms cannot house this group with the supervisors in rooms of their own."
+                    : "The free rooms cannot house this group over the selected range."
             );
 
         var nights = request.EndDate.DayNumber - request.StartDate.DayNumber;
         var rates = await _pricing.GetAsync(cancellationToken);
+        var camperRate = request.PricePerPersonPerNightGrosze ?? rates.PricePerPersonPerNightGrosze;
+        var supervisorRate =
+            request.SupervisorPricePerPersonPerNightGrosze
+            ?? rates.SupervisorPricePerPersonPerNightGrosze;
+        var total =
+            request.TotalGrosze
+            ?? (camperRate * campers * nights) + (supervisorRate * supervisors * nights);
+        var deposit =
+            request.DepositGrosze
+            ?? rates.DepositPerPersonPerNightGrosze * request.Headcount * nights;
+        GuardPricing(camperRate, supervisorRate, total, deposit);
         var token = _tokenService.GenerateRefreshToken();
         var booking = new Booking
         {
@@ -133,18 +148,21 @@ public class AdminBookingService : IAdminBookingService
                 status == BookingStatus.PendingDeposit
                     ? ComputeHoldExpiry(request.StartDate)
                     : null,
-            // Prefilled from the centre's current rates and snapshotted here: the
-            // owner can then re-price this one group without touching any other.
-            PricePerPersonPerNightGrosze = rates.PricePerPersonPerNightGrosze,
-            TotalGrosze = rates.PricePerPersonPerNightGrosze * request.Headcount * nights,
-            DepositGrosze = rates.DepositPerPersonPerNightGrosze * request.Headcount * nights,
-            RequestedRoomCounts = JsonSerializer.Serialize(mix),
+            SupervisorCount = supervisors,
+            // Taken from the request where the owner set one, otherwise from the
+            // centre's current rates, and snapshotted here either way: this one
+            // group can be re-priced later without touching any other.
+            PricePerPersonPerNightGrosze = camperRate,
+            SupervisorPricePerPersonPerNightGrosze = supervisorRate,
+            TotalGrosze = total,
+            DepositGrosze = deposit,
+            RequestedRoomCounts = JsonSerializer.Serialize(split.Combined),
             Language = request.Language == "en" ? "en" : "pl",
             CreatedAt = DateTime.UtcNow,
         };
 
         booking.RoomAssignments.AddRange(
-            await BuildAssignmentsAsync(booking, mix, cancellationToken)
+            await BuildAssignmentsAsync(booking, split, cancellationToken)
         );
 
         await _bookings.AddAsync(booking, cancellationToken);
@@ -224,9 +242,28 @@ public class AdminBookingService : IAdminBookingService
         // back, and someone else may hold them by now.
         if (booking.Status == BookingStatus.Cancelled)
         {
-            var mix =
-                JsonSerializer.Deserialize<Dictionary<int, int>>(booking.RequestedRoomCounts) ?? [];
-            foreach (var assignment in await BuildAssignmentsAsync(booking, mix, cancellationToken))
+            // The rooms were released on cancel and may be gone, so the split is
+            // recomputed against what is free now rather than replayed from the
+            // historical mix — which is also how the supervisors get their own
+            // rooms back without the mix having to remember which ones they were.
+            var free = await _availability.GetFreeRoomsByCapacityAsync(
+                booking.StartDate,
+                booking.EndDate,
+                booking.Id,
+                cancellationToken
+            );
+            var split =
+                RoomMixCalculator.SuggestSplitMix(
+                    booking.CamperCount,
+                    booking.SupervisorCount,
+                    free
+                )
+                ?? throw new ConflictException(
+                    "The rooms this group had are no longer free over its dates."
+                );
+            foreach (
+                var assignment in await BuildAssignmentsAsync(booking, split, cancellationToken)
+            )
             {
                 booking.RoomAssignments.Add(assignment);
                 await _bookings.AddAssignmentAsync(assignment, cancellationToken);
@@ -248,6 +285,61 @@ public class AdminBookingService : IAdminBookingService
     /// Ceiling on a single group's bill (1 000 000 zł), for the same reason.
     private const long MaxTotalGrosze = 100_000_000;
 
+    /// The same money rules whether the amounts arrive with a new booking or as an
+    /// edit to an existing one.
+    private static void GuardPricing(long camperRate, long supervisorRate, long total, long deposit)
+    {
+        if (camperRate is < 0 or > MaxRateGrosze || supervisorRate is < 0 or > MaxRateGrosze)
+        {
+            throw new BusinessRuleViolationException(
+                "A rate must be between 0 and 10 000 zł per person per night."
+            );
+        }
+
+        if (total is < 0 or > MaxTotalGrosze)
+        {
+            throw new BusinessRuleViolationException(
+                "The total must be between 0 and 1 000 000 zł."
+            );
+        }
+
+        if (deposit < 0 || deposit > total)
+        {
+            throw new BusinessRuleViolationException(
+                "The deposit must be between 0 and the total."
+            );
+        }
+    }
+
+    public async Task<AdminBookingDto> UpdatePeopleAsync(
+        Guid id,
+        UpdateBookingPeopleRequestDto request,
+        CancellationToken cancellationToken = default
+    )
+    {
+        var booking = await GetOrThrowAsync(id, cancellationToken);
+
+        if (request.Headcount is < 1 or > 2000)
+        {
+            throw new BusinessRuleViolationException("A group must be between 1 and 2000 people.");
+        }
+
+        if (request.SupervisorCount < 0 || request.SupervisorCount > request.Headcount)
+        {
+            throw new BusinessRuleViolationException(
+                "There cannot be more supervisors than people in the group."
+            );
+        }
+
+        // Just the counts. The price stays as it stands and so do the rooms — both
+        // are the owner's to settle separately, and a group that has lost someone
+        // is not necessarily a group that owes less or sleeps anywhere else.
+        booking.Headcount = request.Headcount;
+        booking.SupervisorCount = request.SupervisorCount;
+        await _bookings.SaveChangesAsync(cancellationToken);
+        return await GetAsync(id, cancellationToken);
+    }
+
     public async Task<AdminBookingDto> UpdatePricingAsync(
         Guid id,
         UpdateBookingPricingRequestDto request,
@@ -256,32 +348,25 @@ public class AdminBookingService : IAdminBookingService
     {
         var booking = await GetOrThrowAsync(id, cancellationToken);
 
-        if (request.PricePerPersonPerNightGrosze is < 0 or > MaxRateGrosze)
-        {
-            throw new BusinessRuleViolationException(
-                "The rate must be between 0 and 10 000 zł per person per night."
-            );
-        }
-
         // A flat total the owner typed wins over the arithmetic — a negotiated price
-        // or a discount is exactly the case the rate cannot express.
+        // or a discount is exactly the case the rates cannot express.
         var total =
             request.TotalGrosze
-            ?? request.PricePerPersonPerNightGrosze * booking.Headcount * booking.Nights;
-        if (total is < 0 or > MaxTotalGrosze)
-        {
-            throw new BusinessRuleViolationException(
-                "The total must be between 0 and 1 000 000 zł."
-            );
-        }
+            ?? (request.PricePerPersonPerNightGrosze * booking.CamperCount * booking.Nights)
+                + (
+                    request.SupervisorPricePerPersonPerNightGrosze
+                    * booking.SupervisorCount
+                    * booking.Nights
+                );
+        GuardPricing(
+            request.PricePerPersonPerNightGrosze,
+            request.SupervisorPricePerPersonPerNightGrosze,
+            total,
+            request.DepositGrosze
+        );
 
-        if (request.DepositGrosze < 0 || request.DepositGrosze > total)
-        {
-            throw new BusinessRuleViolationException(
-                "The deposit must be between 0 and the total."
-            );
-        }
-
+        booking.SupervisorPricePerPersonPerNightGrosze =
+            request.SupervisorPricePerPersonPerNightGrosze;
         booking.PricePerPersonPerNightGrosze = request.PricePerPersonPerNightGrosze;
         booking.TotalGrosze = total;
         booking.DepositGrosze = request.DepositGrosze;
@@ -439,10 +524,11 @@ public class AdminBookingService : IAdminBookingService
     /// unattached so the caller decides how to track them.
     private async Task<List<BookingRoomAssignment>> BuildAssignmentsAsync(
         Booking booking,
-        IReadOnlyDictionary<int, int> mix,
+        RoomMixCalculator.SplitMix split,
         CancellationToken cancellationToken
     )
     {
+        var mix = split.Combined;
         if (mix.Count == 0 || RoomMixCalculator.TotalCapacity(mix) < booking.Headcount)
         {
             throw new ConflictException("No room mix on record that fits this group.");
@@ -474,9 +560,10 @@ public class AdminBookingService : IAdminBookingService
             byCapacity[capacity] = new Queue<Room>(picked);
         }
 
-        return RoomMixCalculator
-            .DistributePeople(booking.Headcount, mix)
-            .Select(load => new BookingRoomAssignment
+        // One queue per capacity, drained by the supervisors first and the campers
+        // after, so a room can never be handed to both cohorts.
+        BookingRoomAssignment Assign((int Capacity, int PeopleCount) load, bool supervisors) =>
+            new()
             {
                 Id = Guid.NewGuid(),
                 BookingId = booking.Id,
@@ -484,8 +571,18 @@ public class AdminBookingService : IAdminBookingService
                 StartDate = booking.StartDate,
                 EndDate = booking.EndDate,
                 PeopleCount = load.PeopleCount,
-            })
-            .ToList();
+                IsSupervisorRoom = supervisors,
+            };
+
+        return
+        [
+            .. RoomMixCalculator
+                .DistributePeople(booking.SupervisorCount, split.SupervisorMix)
+                .Select(load => Assign(load, true)),
+            .. RoomMixCalculator
+                .DistributePeople(booking.CamperCount, split.CamperMix)
+                .Select(load => Assign(load, false)),
+        ];
     }
 
     /// Deposit hold: the standard window, cut short so it always expires before
@@ -599,6 +696,18 @@ public class AdminBookingService : IAdminBookingService
             );
         }
 
+        // The two cohorts are placed separately, so they have to add up separately
+        // too — otherwise a room could be relabelled without anyone moving.
+        if (
+            request.Assignments.Where(a => a.IsSupervisorRoom).Sum(a => a.PeopleCount)
+            != booking.SupervisorCount
+        )
+        {
+            throw new BusinessRuleViolationException(
+                "The supervisor rooms must hold exactly the booking's supervisors."
+            );
+        }
+
         // Requested rooms must exist and be free over the booking's dates — booked
         // by another booking or blocked by a closure disqualifies them. This
         // booking's own rooms are excluded from the blocked set.
@@ -633,6 +742,7 @@ public class AdminBookingService : IAdminBookingService
             if (requestedByRoom.TryGetValue(existing.RoomId, out var kept))
             {
                 existing.PeopleCount = kept.PeopleCount;
+                existing.IsSupervisorRoom = kept.IsSupervisorRoom;
                 requestedByRoom.Remove(existing.RoomId);
             }
             else
@@ -652,6 +762,7 @@ public class AdminBookingService : IAdminBookingService
                 StartDate = booking.StartDate,
                 EndDate = booking.EndDate,
                 PeopleCount = entry.PeopleCount,
+                IsSupervisorRoom = entry.IsSupervisorRoom,
             };
             booking.RoomAssignments.Add(assignment);
             await _bookings.AddAssignmentAsync(assignment, cancellationToken);
@@ -738,6 +849,7 @@ public class AdminBookingService : IAdminBookingService
                 b.StartDate,
                 b.EndDate,
                 b.Headcount,
+                b.SupervisorCount,
                 b.RoomAssignments.Sum(a => a.PeopleCount),
                 b.Status.ToString()
             ))
@@ -797,6 +909,7 @@ public class AdminBookingService : IAdminBookingService
                     b.StartDate,
                     b.EndDate,
                     b.Headcount,
+                    b.SupervisorCount,
                     b.RoomAssignments.Sum(a => a.PeopleCount),
                     b.Status.ToString()
                 )),
@@ -831,6 +944,7 @@ public class AdminBookingService : IAdminBookingService
             b.Email,
             b.Phone,
             b.Headcount,
+            b.SupervisorCount,
             b.Notes,
             b.DietaryNotes,
             b.Status.ToString(),
@@ -838,6 +952,7 @@ public class AdminBookingService : IAdminBookingService
             b.TotalGrosze,
             b.DepositGrosze,
             b.PricePerPersonPerNightGrosze,
+            b.SupervisorPricePerPersonPerNightGrosze,
             b.PaymentState.ToString(),
             BookingStates.Of(b.Status, b.PaymentState).ToString(),
             depositPaid,
@@ -853,7 +968,8 @@ public class AdminBookingService : IAdminBookingService
                     a.RoomId,
                     a.Room?.Number ?? "?",
                     a.Room?.Capacity ?? 0,
-                    a.PeopleCount
+                    a.PeopleCount,
+                    a.IsSupervisorRoom
                 ))
                 .ToList()
         );

@@ -2,7 +2,7 @@
 source_file: "frontend/src/api/admin.ts"
 type: "code"
 community: "GroupRooms.tsx"
-location: "L218"
+location: "L225"
 tags:
   - graphify/code
   - graphify/EXTRACTED

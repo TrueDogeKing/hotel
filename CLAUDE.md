@@ -33,16 +33,22 @@ obsługi). Płatności rozliczane poza systemem: właściciel odnotowuje je w pa
 * Closure (blokada) — zakres dat, w którym cały ośrodek (RoomId null) albo
   jeden pokój jest niedostępny; zastępuje dawny model turnusów
 * Booking — rezerwacja grupowa (daty StartDate/EndDate, organizacja, kontakt,
-  liczba osób, status PendingDeposit/Confirmed/Cancelled/Completed, token
+  Headcount = uczestnicy + opiekunowie (SupervisorCount; CamperCount jest
+  wyliczany), liczba osób, status PendingDeposit/Confirmed/Cancelled/Completed, token
   zarządzania hashowany, język pl/en, kwoty w groszach — snapshot). Cennik
-  cena/os./noc snapshotowana na rezerwacji i edytowalna per grupa (total =
-  stawka × osoby × noce, można nadpisać kwotą negocjowaną); PaymentState
+  dwie stawki snapshotowane na rezerwacji i edytowalne per grupa — za uczestnika
+  i za opiekuna (total = stawka uczestnika × uczestnicy × noce + stawka opiekuna
+  × opiekunowie × noce, można nadpisać kwotą negocjowaną; zaliczka to jedna
+  stawka od każdej osoby); PaymentState
   Unpaid/DepositPaid/Paid ustawiany ręcznie przez właściciela
 * PricingDefaults — jednowierszowa tabela ze stawkami ośrodka (cena i zaliczka
   na osobę za noc), edytowana w panelu nad listą rezerwacji; wypełnia nową
   rezerwację, nie przelicza istniejących. Do czasu pierwszego zapisu obowiązują
   wartości z konfiguracji (sekcja "Booking")
-* BookingRoomAssignment — konkretne pokoje przydzielone przy utworzeniu, z
+* BookingRoomAssignment — konkretne pokoje przydzielone przy utworzeniu
+  (IsSupervisorRoom oznacza pokoje kadry — kadra nigdy nie mieszka z
+  uczestnikami; RoomMixCalculator.SuggestSplitMix sadza ją w najmniejszych
+  wolnych pokojach, a gdy się nie da rozdzielić — odmawia), z
   zakresem dat; ograniczenie wykluczające GiST (btree_gist) na
   (RoomId, daterange[StartDate,EndDate)) chroni przed podwójną rezerwacją
   (zakresy półotwarte — wyjazd = przyjazd tego samego dnia nie kolidują)

@@ -32,7 +32,7 @@ public class AdminPricingApiTests : IntegrationTestBase
         // The centre's rates: 150 zł per person per night, 40 zł of it as deposit.
         var setRates = await admin.PutAsJsonAsync(
             "/api/admin/pricing",
-            new UpdatePricingDefaultsRequestDto(15_000, 4_000)
+            new UpdatePricingDefaultsRequestDto(15_000, 15_000, 4_000)
         );
         Assert.Equal(HttpStatusCode.OK, setRates.StatusCode);
         var rates = (await setRates.Content.ReadFromJsonAsync<PricingDefaultsDto>())!;
@@ -42,7 +42,7 @@ public class AdminPricingApiTests : IntegrationTestBase
         // A deposit above the price is refused.
         var badRates = await admin.PutAsJsonAsync(
             "/api/admin/pricing",
-            new UpdatePricingDefaultsRequestDto(15_000, 20_000)
+            new UpdatePricingDefaultsRequestDto(15_000, 15_000, 20_000)
         );
         Assert.Equal(HttpStatusCode.BadRequest, badRates.StatusCode);
 
@@ -58,9 +58,14 @@ public class AdminPricingApiTests : IntegrationTestBase
                 "pricing@example.com",
                 "+48 600 600 600",
                 10,
+                0,
                 null,
                 null,
-                "pl"
+                "pl",
+                null,
+                null,
+                null,
+                null
             )
         );
         Assert.Equal(HttpStatusCode.Created, create.StatusCode);
@@ -75,7 +80,7 @@ public class AdminPricingApiTests : IntegrationTestBase
         // Re-pricing this group: a new rate, total left to the arithmetic.
         var reprice = await admin.PutAsJsonAsync(
             $"/api/admin/bookings/{booking.Id}/pricing",
-            new UpdateBookingPricingRequestDto(12_000, 100_000, null)
+            new UpdateBookingPricingRequestDto(12_000, 12_000, 100_000, null)
         );
         Assert.Equal(HttpStatusCode.OK, reprice.StatusCode);
         var repriced = (await reprice.Content.ReadFromJsonAsync<AdminBookingDto>())!;
@@ -85,7 +90,7 @@ public class AdminPricingApiTests : IntegrationTestBase
         // A flat, negotiated total overrides that arithmetic.
         var flat = await admin.PutAsJsonAsync(
             $"/api/admin/bookings/{booking.Id}/pricing",
-            new UpdateBookingPricingRequestDto(12_000, 100_000, 400_000)
+            new UpdateBookingPricingRequestDto(12_000, 12_000, 100_000, 400_000)
         );
         var flatBooking = (await flat.Content.ReadFromJsonAsync<AdminBookingDto>())!;
         Assert.Equal(400_000, flatBooking.TotalGrosze);
@@ -93,14 +98,14 @@ public class AdminPricingApiTests : IntegrationTestBase
         // A deposit larger than the total is refused.
         var badDeposit = await admin.PutAsJsonAsync(
             $"/api/admin/bookings/{booking.Id}/pricing",
-            new UpdateBookingPricingRequestDto(12_000, 500_000, 400_000)
+            new UpdateBookingPricingRequestDto(12_000, 12_000, 500_000, 400_000)
         );
         Assert.Equal(HttpStatusCode.BadRequest, badDeposit.StatusCode);
 
         // Raising the centre's rates leaves the group already on the books alone.
         await admin.PutAsJsonAsync(
             "/api/admin/pricing",
-            new UpdatePricingDefaultsRequestDto(30_000, 5_000)
+            new UpdatePricingDefaultsRequestDto(30_000, 30_000, 5_000)
         );
         var unchanged = (
             await admin.GetFromJsonAsync<AdminBookingDto>($"/api/admin/bookings/{booking.Id}")
@@ -130,9 +135,14 @@ public class AdminPricingApiTests : IntegrationTestBase
                 "payment@example.com",
                 "+48 700 700 700",
                 12,
+                0,
                 null,
                 nameof(BookingStatus.PendingDeposit),
-                "pl"
+                "pl",
+                null,
+                null,
+                null,
+                null
             )
         );
         var booking = (await create.Content.ReadFromJsonAsync<AdminBookingDto>())!;
@@ -197,9 +207,14 @@ public class AdminPricingApiTests : IntegrationTestBase
                 "state@example.com",
                 "+48 800 800 800",
                 13,
+                0,
                 null,
                 nameof(BookingStatus.PendingDeposit),
-                "pl"
+                "pl",
+                null,
+                null,
+                null,
+                null
             )
         );
         var booking = (await create.Content.ReadFromJsonAsync<AdminBookingDto>())!;

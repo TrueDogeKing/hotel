@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/components/admin/DayTimetable.tsx"
 type: "code"
-community: "Room Closure Management"
-location: "L215"
+community: "Domain & Infra Namespaces"
+location: "L216"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Closure_Management
+  - community/Domain__Infra_Namespaces
 ---
 
 # DayTimetable()
@@ -17,9 +17,10 @@ tags:
 - [[findClashes()]] - `calls` [EXTRACTED]
 - [[formatDate()]] - `calls` [EXTRACTED]
 - [[formatTime()]] - `calls` [EXTRACTED]
+- [[groupLabel()]] - `calls` [EXTRACTED]
 - [[minutesOf()]] - `calls` [EXTRACTED]
 - [[placeChips()]] - `calls` [EXTRACTED]
 - [[placesOf()]] - `calls` [EXTRACTED]
 - [[toTimeInput()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management
+#graphify/code #graphify/EXTRACTED #community/Domain__Infra_Namespaces

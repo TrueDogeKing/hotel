@@ -25,10 +25,10 @@ SORT file.name ASC
 ## Connections to other communities
 - 4 edges to [[_COMMUNITY_Integration Test Harness (2)]]
 - 4 edges to [[_COMMUNITY_CampCenter.Domain  Repositories (1)]]
-- 2 edges to [[_COMMUNITY_BookingConfiguration]]
+- 2 edges to [[_COMMUNITY_PaymentConfiguration]]
 - 1 edge to [[_COMMUNITY_Exception]]
 - 1 edge to [[_COMMUNITY_Integration Test Harness (1)]]
-- 1 edge to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
+- 1 edge to [[_COMMUNITY_GroupRooms.tsx_1]]
 
 ## Top bridge nodes
 - [[Payment]] - degree 15, connects to 5 communities

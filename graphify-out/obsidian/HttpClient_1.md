@@ -1,18 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "tests / CampCenter.IntegrationTests (1)"
+community: ".WithRoomsAsync"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/tests_/_CampCenterIntegrationTests_1
+  - community/WithRoomsAsync
 ---
 
 # HttpClient
 
 ## Connections
-- [[.CreateAuthenticatedClientAsync()]] - `references` [EXTRACTED]
-- [[.CreateClient()]] - `references` [EXTRACTED]
-- [[.CreateClientForAsync()]] - `references` [EXTRACTED]
+- [[.WithRoomsAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/tests_/_CampCenterIntegrationTests_1
+#graphify/code #graphify/EXTRACTED #community/WithRoomsAsync

@@ -2,7 +2,7 @@
 source_file: "src/CampCenter.Application/DTOs/AdminPanel/AdminPanelDtos.cs"
 type: "code"
 community: "Admin Booking & Notifications (1)"
-location: "L11"
+location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -29,6 +29,8 @@ tags:
 - [[.ToDto()]] - `references` [EXTRACTED]
 - [[.UpdateDietaryNotesAsync()]] - `references` [EXTRACTED]
 - [[.UpdateDietaryNotesAsync()_1]] - `references` [EXTRACTED]
+- [[.UpdatePeopleAsync()]] - `references` [EXTRACTED]
+- [[.UpdatePeopleAsync()_1]] - `references` [EXTRACTED]
 - [[.UpdatePricingAsync()]] - `references` [EXTRACTED]
 - [[.UpdatePricingAsync()_1]] - `references` [EXTRACTED]
 - [[AdminPanelDtos.cs]] - `contains` [EXTRACTED]

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.UnitTests / Services (2)"
+community: "BookingSettings"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Services_2
+  - community/BookingSettings
 ---
 
 # DateOnly
@@ -15,4 +15,4 @@ tags:
 - [[.GetAsync()_6]] - `references` [EXTRACTED]
 - [[.ListForDateAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_2
+#graphify/code #graphify/EXTRACTED #community/BookingSettings

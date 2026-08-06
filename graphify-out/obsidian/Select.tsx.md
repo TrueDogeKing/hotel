@@ -12,7 +12,7 @@ tags:
 # Select.tsx
 
 ## Connections
-- [[Props_2]] - `contains` [EXTRACTED]
+- [[Props_4]] - `contains` [EXTRACTED]
 - [[Select()]] - `contains` [EXTRACTED]
 - [[SelectOption]] - `contains` [EXTRACTED]
 

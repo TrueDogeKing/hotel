@@ -18,6 +18,7 @@ tags:
 - [[ContactForm]] - `contains` [EXTRACTED]
 - [[LanguageSwitcher()]] - `imports` [EXTRACTED]
 - [[LanguageSwitcher.tsx]] - `imports_from` [EXTRACTED]
+- [[MixEditor.tsx]] - `imports_from` [EXTRACTED]
 - [[RangeCalendar.tsx]] - `imports_from` [EXTRACTED]
 - [[Step]] - `contains` [EXTRACTED]
 - [[admin.ts]] - `imports_from` [EXTRACTED]
@@ -28,6 +29,6 @@ tags:
 - [[formatZl()]] - `imports` [EXTRACTED]
 - [[getAvailability()]] - `imports` [EXTRACTED]
 - [[public.ts]] - `imports_from` [EXTRACTED]
-- [[validateMix()]] - `imports` [EXTRACTED]
+- [[validateSplitMix()]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Public_Booking_Frontend_1

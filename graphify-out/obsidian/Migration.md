@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Persistence / Migrations (1)"
+community: "Persistence / Migrations (3)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Persistence_/_Migrations_1
+  - community/Persistence_/_Migrations_3
 ---
 
 # Migration
@@ -22,6 +22,7 @@ tags:
 - [[ReplaceSessionsWithClosures_1]] - `inherits` [EXTRACTED]
 - [[RoomCleanings_1]] - `inherits` [EXTRACTED]
 - [[ScheduleAndMealTimes_1]] - `inherits` [EXTRACTED]
+- [[SupervisorCountsAndRates_1]] - `inherits` [EXTRACTED]
 - [[SuppressDeletedGeneratedMeals_1]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Persistence_/_Migrations_1
+#graphify/code #graphify/EXTRACTED #community/Persistence_/_Migrations_3

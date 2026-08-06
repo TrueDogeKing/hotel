@@ -1,15 +1,17 @@
 ---
 type: community
-members: 2
+members: 4
 ---
 
 # eslint-plugin-react-hooks
 
-**Members:** 2 nodes
+**Members:** 4 nodes
 
 ## Members
-- [[eslint-plugin-react-hooks]] - code - frontend/package.json
-- [[eslint-plugin-react-hooks_1]] - concept - frontend/package.json
+- [[.Configure()_4]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/ClosureConfiguration.cs
+- [[ClosureConfiguration]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/ClosureConfiguration.cs
+- [[ClosureConfiguration.cs]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/ClosureConfiguration.cs
+- [[EntityTypeBuilder_4]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -19,7 +21,12 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_ESLint Dev Dependencies]]
+- 2 edges to [[_COMMUNITY_Validator Unit Tests]]
+- 1 edge to [[_COMMUNITY_Exception]]
+- 1 edge to [[_COMMUNITY_eslint_3]]
+- 1 edge to [[_COMMUNITY_BookingConfiguration]]
 
 ## Top bridge nodes
-- [[eslint-plugin-react-hooks]] - degree 2, connects to 1 community
+- [[ClosureConfiguration]] - degree 4, connects to 2 communities
+- [[ClosureConfiguration.cs]] - degree 3, connects to 2 communities
+- [[.Configure()_4]] - degree 3, connects to 1 community

@@ -1,18 +1,22 @@
 ---
 type: community
-members: 5
+members: 9
 ---
 
 # ClosureValidatorsTests
 
-**Members:** 5 nodes
+**Members:** 9 nodes
 
 ## Members
-- [[.Down()_11]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/20260806090830_ManualPricingAndPaymentState.cs
-- [[.Up()_11]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/20260806090830_ManualPricingAndPaymentState.cs
-- [[20260806090830_ManualPricingAndPaymentState.cs]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/20260806090830_ManualPricingAndPaymentState.cs
-- [[ManualPricingAndPaymentState_1]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/20260806090830_ManualPricingAndPaymentState.cs
-- [[MigrationBuilder_11]] - code
+- [[.SendAsync()_1]] - code - src/CampCenter.Infrastructure/Email/SmtpEmailSender.cs
+- [[CampCenter.Infrastructure.Email]] - code - src/CampCenter.Infrastructure/Email/EmailSettings.cs
+- [[CancellationToken_56]] - code
+- [[EmailSettings]] - code - src/CampCenter.Infrastructure/Email/EmailSettings.cs
+- [[EmailSettings.cs]] - code - src/CampCenter.Infrastructure/Email/EmailSettings.cs
+- [[SmtpEmailSender]] - code - src/CampCenter.Infrastructure/Email/SmtpEmailSender.cs
+- [[SmtpEmailSender.cs]] - code - src/CampCenter.Infrastructure/Email/SmtpEmailSender.cs
+- [[Task_56]] - code
+- [[string_10]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -22,9 +26,12 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_EF Core Migrations (3)]]
-- 1 edge to [[_COMMUNITY_Persistence  Migrations (1)]]
+- 2 edges to [[_COMMUNITY_Admin Booking & Notifications (4)]]
+- 1 edge to [[_COMMUNITY_Application Namespaces & DTOs]]
+- 1 edge to [[_COMMUNITY_Public Booking Service (2)]]
 
 ## Top bridge nodes
-- [[ManualPricingAndPaymentState_1]] - degree 4, connects to 1 community
-- [[20260806090830_ManualPricingAndPaymentState.cs]] - degree 2, connects to 1 community
+- [[SmtpEmailSender]] - degree 4, connects to 1 community
+- [[.SendAsync()_1]] - degree 4, connects to 1 community
+- [[CampCenter.Infrastructure.Email]] - degree 3, connects to 1 community
+- [[SmtpEmailSender.cs]] - degree 3, connects to 1 community

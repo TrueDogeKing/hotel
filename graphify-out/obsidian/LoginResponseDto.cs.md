@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/DTOs/Auth/LoginResponseDto.cs"
 type: "code"
-community: "eslint"
+community: "CampCenter.UnitTests / Validators"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/eslint
+  - community/CampCenterUnitTests_/_Validators
 ---
 
 # LoginResponseDto.cs
@@ -15,4 +15,4 @@ tags:
 - [[CampCenter.Application.DTOs.Auth]] - `contains` [EXTRACTED]
 - [[LoginResponseDto]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/eslint
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Validators

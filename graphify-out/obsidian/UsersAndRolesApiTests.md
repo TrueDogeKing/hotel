@@ -1,12 +1,12 @@
 ---
 source_file: "tests/CampCenter.IntegrationTests/UsersAndRolesApiTests.cs"
 type: "code"
-community: "tests / CampCenter.IntegrationTests (1)"
+community: ".CreateWorkerAsync"
 location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/tests_/_CampCenterIntegrationTests_1
+  - community/CreateWorkerAsync
 ---
 
 # UsersAndRolesApiTests
@@ -25,4 +25,4 @@ tags:
 - [[UsersAndRolesApiTests.cs]] - `contains` [EXTRACTED]
 - [[string_14]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/tests_/_CampCenterIntegrationTests_1
+#graphify/code #graphify/EXTRACTED #community/CreateWorkerAsync

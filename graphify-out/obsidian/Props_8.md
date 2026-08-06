@@ -1,17 +1,17 @@
 ---
-source_file: "frontend/src/components/admin/GroupSchedulePanel.tsx"
+source_file: "frontend/src/components/admin/GroupMealTimes.tsx"
 type: "code"
-community: "Frontend App Shell & i18n"
-location: "L30"
+community: "src / api (1)"
+location: "L41"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Frontend_App_Shell__i18n
+  - community/src_/_api_1
 ---
 
 # Props
 
 ## Connections
-- [[GroupSchedulePanel.tsx]] - `contains` [EXTRACTED]
+- [[GroupMealTimes.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Frontend_App_Shell__i18n
+#graphify/code #graphify/EXTRACTED #community/src_/_api_1

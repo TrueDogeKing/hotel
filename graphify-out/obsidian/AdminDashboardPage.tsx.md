@@ -13,6 +13,7 @@ tags:
 
 ## Connections
 - [[AddGroupForm.tsx]] - `imports_from` [EXTRACTED]
+- [[AdminBooking]] - `imports` [EXTRACTED]
 - [[AdminDashboardPage()]] - `contains` [EXTRACTED]
 - [[AdminLayout.tsx]] - `imports_from` [EXTRACTED]
 - [[AdminTiles.tsx]] - `imports_from` [EXTRACTED]
@@ -21,7 +22,10 @@ tags:
 - [[BookingGroupSection.tsx]] - `imports_from` [EXTRACTED]
 - [[BookingStatus]] - `imports` [EXTRACTED]
 - [[Dashboard]] - `imports` [EXTRACTED]
+- [[GroupRooms.tsx]] - `imports_from` [EXTRACTED]
 - [[GroupSchedulePanel.tsx]] - `imports_from` [EXTRACTED]
+- [[Modal()]] - `imports` [EXTRACTED]
+- [[Modal.tsx]] - `imports_from` [EXTRACTED]
 - [[admin.ts]] - `imports_from` [EXTRACTED]
 - [[bookingGroupCategories]] - `imports` [EXTRACTED]
 - [[getDashboard()]] - `imports` [EXTRACTED]

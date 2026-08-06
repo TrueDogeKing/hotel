@@ -13,12 +13,13 @@ tags:
 
 ## Connections
 - [[AdminBooking]] - `imports` [EXTRACTED]
+- [[AdminDashboardPage.tsx]] - `imports_from` [EXTRACTED]
 - [[AssignableRoom]] - `imports` [EXTRACTED]
 - [[AuthContext.tsx]] - `imports_from` [EXTRACTED]
 - [[Draft]] - `contains` [EXTRACTED]
 - [[GroupRooms()]] - `contains` [EXTRACTED]
 - [[GroupSchedulePanel.tsx]] - `imports_from` [EXTRACTED]
-- [[Props_7]] - `contains` [EXTRACTED]
+- [[Props_10]] - `contains` [EXTRACTED]
 - [[admin.ts]] - `imports_from` [EXTRACTED]
 - [[getAdminBooking()]] - `imports` [EXTRACTED]
 - [[getAssignableRooms()]] - `imports` [EXTRACTED]

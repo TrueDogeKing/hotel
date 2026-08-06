@@ -1,12 +1,12 @@
 ---
 source_file: "tests/CampCenter.IntegrationTests/AdminPanelApiTests.cs"
 type: "code"
-community: "tests / CampCenter.IntegrationTests (1)"
+community: "AdminPanelApiTests"
 location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/tests_/_CampCenterIntegrationTests_1
+  - community/AdminPanelApiTests
 ---
 
 # AdminPanelApiTests
@@ -20,4 +20,4 @@ tags:
 - [[AdminPanelApiTests.cs]] - `contains` [EXTRACTED]
 - [[IntegrationTestBase]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/tests_/_CampCenterIntegrationTests_1
+#graphify/code #graphify/EXTRACTED #community/AdminPanelApiTests

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "PasswordRules"
+community: "Camp Session Management"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PasswordRules
+  - community/Camp_Session_Management
 ---
 
 # IRuleBuilderOptions
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.ValidPassword()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PasswordRules
+#graphify/code #graphify/EXTRACTED #community/Camp_Session_Management

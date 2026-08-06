@@ -30,6 +30,7 @@ tags:
 - [[SetBookingPaymentStateRequestDto]] - `contains` [EXTRACTED]
 - [[SetBookingStateRequestDto]] - `contains` [EXTRACTED]
 - [[SetBookingStatusRequestDto]] - `contains` [EXTRACTED]
+- [[UpdateBookingPeopleRequestDto]] - `contains` [EXTRACTED]
 - [[UpdateBookingPricingRequestDto]] - `contains` [EXTRACTED]
 - [[UpdatePricingDefaultsRequestDto]] - `contains` [EXTRACTED]
 - [[UpdateRoomTaskRequestDto]] - `contains` [EXTRACTED]

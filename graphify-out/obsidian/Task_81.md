@@ -1,28 +1,25 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.UnitTests / Services (4)"
+community: "20260729224623_RoomCleanings.Designer.cs"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Services_4
+  - community/20260729224623_RoomCleaningsDesignercs
 ---
 
 # Task
 
 ## Connections
-- [[.Accepts_a_sitting_after_the_changeover()]] - `references` [EXTRACTED]
-- [[.CheckAsync()]] - `references` [EXTRACTED]
-- [[.Does_not_flag_an_activity_against_a_meal_elsewhere()]] - `references` [EXTRACTED]
-- [[.Does_not_flag_the_entry_being_edited_against_itself()]] - `references` [EXTRACTED]
-- [[.Flags_a_meal_while_another_group_is_at_the_tables()]] - `references` [EXTRACTED]
-- [[.Flags_a_sitting_that_leaves_no_changeover()]] - `references` [EXTRACTED]
-- [[.Flags_another_group_in_the_same_place()]] - `references` [EXTRACTED]
-- [[.Ignores_a_different_place_at_the_same_time()]] - `references` [EXTRACTED]
-- [[.Ignores_the_group_own_programme()]] - `references` [EXTRACTED]
-- [[.Ignores_the_place_being_free_before_the_activity_starts()]] - `references` [EXTRACTED]
-- [[.Late_evening_sittings_do_not_wrap_past_midnight()]] - `references` [EXTRACTED]
-- [[.Matches_places_case_insensitively()]] - `references` [EXTRACTED]
-- [[.Reports_the_place_rather_than_the_meal_when_both_hold()]] - `references` [EXTRACTED]
+- [[.A_room_nobody_has_touched_is_pending()]] - `references` [EXTRACTED]
+- [[.A_turnaround_carries_both_groups_and_both_bed_counts()]] - `references` [EXTRACTED]
+- [[.Marking_a_room_done_creates_its_row_and_stamps_who_and_when()]] - `references` [EXTRACTED]
+- [[.Puts_turnarounds_before_departures_and_arrivals()]] - `references` [EXTRACTED]
+- [[.Refuses_a_room_with_nothing_to_do_that_day()]] - `references` [EXTRACTED]
+- [[.Rejects_a_range_that_ends_before_it_starts()]] - `references` [EXTRACTED]
+- [[.Rejects_an_unknown_status()]] - `references` [EXTRACTED]
+- [[.Reopening_a_room_clears_who_finished_it()]] - `references` [EXTRACTED]
+- [[.Stored_progress_is_merged_into_the_derived_list()]] - `references` [EXTRACTED]
+- [[.The_day_strip_counts_rooms_and_rooms_done_per_day()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_4
+#graphify/code #graphify/EXTRACTED #community/20260729224623_RoomCleaningsDesignercs

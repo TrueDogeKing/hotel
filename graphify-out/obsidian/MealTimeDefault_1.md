@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Domain/Entities/MealTimeDefault.cs"
 type: "code"
-community: "CampCenter.UnitTests / Services (1)"
+community: "AvailabilityService"
 location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Services_1
+  - community/AvailabilityService
 ---
 
 # MealTimeDefault
@@ -42,4 +42,4 @@ tags:
 - [[ScheduleEntry_1]] - `references` [EXTRACTED]
 - [[TimeOnly_5]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_1
+#graphify/code #graphify/EXTRACTED #community/AvailabilityService

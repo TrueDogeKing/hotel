@@ -14,8 +14,12 @@ public class PricingDefaults
 
     public Guid Id { get; set; } = SingletonId;
 
-    /// Price per participant per night, in grosze.
+    /// Price per camper per night, in grosze.
     public long PricePerPersonPerNightGrosze { get; set; }
+
+    /// Price per supervisor per night, in grosze. A centre that charges the kadra
+    /// the same simply leaves this equal to the camper rate.
+    public long SupervisorPricePerPersonPerNightGrosze { get; set; }
 
     /// Deposit per participant per night, in grosze (never above the price).
     public long DepositPerPersonPerNightGrosze { get; set; }

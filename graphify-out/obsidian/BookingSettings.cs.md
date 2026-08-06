@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Models/BookingSettings.cs"
 type: "code"
-community: "BookingSettings"
+community: "Admin Booking & Notifications (4)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/BookingSettings
+  - community/Admin_Booking__Notifications_4
 ---
 
 # BookingSettings.cs
@@ -15,4 +15,4 @@ tags:
 - [[BookingSettings]] - `contains` [EXTRACTED]
 - [[CampCenter.Application.Models]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/BookingSettings
+#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_4

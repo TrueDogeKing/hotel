@@ -1,15 +1,16 @@
 ---
 type: community
-members: 40
+members: 44
 ---
 
 # CampCenter.UnitTests / Services (3)
 
-**Members:** 40 nodes
+**Members:** 44 nodes
 
 ## Members
 - [[.AddAsync()_5]] - code - src/CampCenter.Domain/Repositories/IPricingDefaultsRepository.cs
 - [[.AddAsync()_16]] - code - src/CampCenter.Infrastructure/Repositories/PricingDefaultsRepository.cs
+- [[.Configure()_7]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/PricingDefaultsConfiguration.cs
 - [[.Get()_3]] - code - src/CampCenter.Api/Controllers/Admin/PricingController.cs
 - [[.GetAsync()_1]] - code - src/CampCenter.Application/Interfaces/IPricingService.cs
 - [[.GetAsync()_3]] - code - src/CampCenter.Application/Services/PricingService.cs
@@ -28,6 +29,7 @@ members: 40
 - [[CancellationToken_50]] - code
 - [[CancellationToken_64]] - code
 - [[DateTime_10]] - code
+- [[EntityTypeBuilder_7]] - code
 - [[Guid_35]] - code
 - [[HttpGet_6]] - code
 - [[HttpPut_4]] - code
@@ -37,6 +39,8 @@ members: 40
 - [[PricingController]] - code - src/CampCenter.Api/Controllers/Admin/PricingController.cs
 - [[PricingDefaults_1]] - code - src/CampCenter.Domain/Entities/PricingDefaults.cs
 - [[PricingDefaults.cs]] - code - src/CampCenter.Domain/Entities/PricingDefaults.cs
+- [[PricingDefaultsConfiguration]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/PricingDefaultsConfiguration.cs
+- [[PricingDefaultsConfiguration.cs]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/PricingDefaultsConfiguration.cs
 - [[PricingDefaultsDto]] - code - src/CampCenter.Application/DTOs/AdminPanel/AdminPanelDtos.cs
 - [[PricingDefaultsRepository]] - code - src/CampCenter.Infrastructure/Repositories/PricingDefaultsRepository.cs
 - [[PricingService]] - code - src/CampCenter.Application/Services/PricingService.cs
@@ -57,20 +61,21 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
+- 4 edges to [[_COMMUNITY_Exception]]
 - 3 edges to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
-- 3 edges to [[_COMMUNITY_Exception]]
 - 2 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
 - 2 edges to [[_COMMUNITY_Admin Booking & Notifications (1)]]
 - 2 edges to [[_COMMUNITY_Room Management]]
 - 2 edges to [[_COMMUNITY_Public Booking Service (1)]]
-- 2 edges to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
-- 2 edges to [[_COMMUNITY_BookingConfiguration]]
-- 1 edge to [[_COMMUNITY_BookingSettings]]
-- 1 edge to [[_COMMUNITY_ClosureService]]
+- 2 edges to [[_COMMUNITY_GroupRooms.tsx_1]]
+- 1 edge to [[_COMMUNITY_Admin Booking & Notifications (4)]]
+- 1 edge to [[_COMMUNITY_eslint_3]]
+- 1 edge to [[_COMMUNITY_BookingConfiguration]]
+- 1 edge to [[_COMMUNITY_Public Booking Service (2)]]
 
 ## Top bridge nodes
 - [[IPricingService]] - degree 8, connects to 4 communities
 - [[.GetAsync()_1]] - degree 8, connects to 3 communities
-- [[PricingDefaults_1]] - degree 11, connects to 2 communities
 - [[PricingService]] - degree 9, connects to 2 communities
 - [[PricingDefaultsRepository]] - degree 6, connects to 2 communities
+- [[PricingController]] - degree 5, connects to 2 communities

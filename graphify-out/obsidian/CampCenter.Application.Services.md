@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Services/AdminBookingService.cs"
 type: "code"
-community: "ClosureService"
+community: "Exception"
 location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ClosureService
+  - community/Exception
 ---
 
 # CampCenter.Application.Services
@@ -30,6 +30,7 @@ tags:
 - [[PaymentService.cs]] - `contains` [EXTRACTED]
 - [[PricingService.cs]] - `contains` [EXTRACTED]
 - [[RoomMixCalculator.cs]] - `contains` [EXTRACTED]
+- [[RoomMixCalculatorSplitTests.cs]] - `imports` [EXTRACTED]
 - [[RoomMixCalculatorTests.cs]] - `imports` [EXTRACTED]
 - [[RoomService.cs]] - `contains` [EXTRACTED]
 - [[RoomTaskService.cs]] - `contains` [EXTRACTED]
@@ -37,4 +38,4 @@ tags:
 - [[ScheduleService.cs]] - `contains` [EXTRACTED]
 - [[UserService.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ClosureService
+#graphify/code #graphify/EXTRACTED #community/Exception

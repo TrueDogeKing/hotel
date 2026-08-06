@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Refresh Token Repository"
+community: "AdminUserConfiguration"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Refresh_Token_Repository
+  - community/AdminUserConfiguration
 ---
 
 # EntityTypeBuilder
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.Configure()_8]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Refresh_Token_Repository
+#graphify/code #graphify/EXTRACTED #community/AdminUserConfiguration

@@ -13,6 +13,7 @@ tags:
 
 ## Connections
 - [[AdminPanelApiTests.cs]] - `imports` [EXTRACTED]
+- [[AdminSupervisorRoomsApiTests.cs]] - `imports` [EXTRACTED]
 - [[AvailabilityService.cs]] - `imports` [EXTRACTED]
 - [[BookingService.cs]] - `imports` [EXTRACTED]
 - [[CreateBookingRequestValidator.cs]] - `imports` [EXTRACTED]

@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Services/HousekeepingService.cs"
 type: "code"
-community: "Application Namespaces & DTOs"
+community: "Exception"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Application_Namespaces__DTOs
+  - community/Exception
 ---
 
 # HousekeepingService.cs
@@ -20,4 +20,4 @@ tags:
 - [[CampCenter.Domain.Repositories]] - `imports` [EXTRACTED]
 - [[HousekeepingService]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Application_Namespaces__DTOs
+#graphify/code #graphify/EXTRACTED #community/Exception

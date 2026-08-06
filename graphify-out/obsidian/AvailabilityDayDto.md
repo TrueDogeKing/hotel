@@ -2,7 +2,7 @@
 source_file: "src/CampCenter.Application/DTOs/Public/PublicDtos.cs"
 type: "code"
 community: ".GetBlockedRoomIdsAsync"
-location: "L32"
+location: "L37"
 tags:
   - graphify/code
   - graphify/EXTRACTED

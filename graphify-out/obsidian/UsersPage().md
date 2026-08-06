@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/pages/admin/UsersPage.tsx"
 type: "code"
-community: "useAuth"
-location: "L37"
+community: "src / api (1)"
+location: "L38"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/useAuth
+  - community/src_/_api_1
 ---
 
 # UsersPage()
@@ -17,4 +17,4 @@ tags:
 - [[getUsers()]] - `calls` [EXTRACTED]
 - [[useAuth()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/useAuth
+#graphify/code #graphify/EXTRACTED #community/src_/_api_1

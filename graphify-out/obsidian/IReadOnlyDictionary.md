@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Admin Booking & Notifications (1)"
+community: "Public Booking Service (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Booking__Notifications_1
+  - community/Public_Booking_Service_1
 ---
 
 # IReadOnlyDictionary
 
 ## Connections
-- [[.BuildAssignmentsAsync()]] - `references` [EXTRACTED]
+- [[.CombineCounts()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_1
+#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_1

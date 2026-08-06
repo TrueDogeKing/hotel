@@ -59,8 +59,19 @@ public class Booking
 
     public required string Phone { get; set; }
 
-    /// Number of participants the group brings.
+    /// Everyone the group brings, campers and supervisors together. Stays the
+    /// total because capacity, pricing, catering and the emails all reason about
+    /// bodies in beds rather than about who they are.
     public int Headcount { get; set; }
+
+    /// How many of Headcount are adult supervisors (kadra). They sleep in their
+    /// own rooms, are shown in brackets beside the group in schedules, and are
+    /// charged at their own rate.
+    public int SupervisorCount { get; set; }
+
+    /// The children. Derived, never stored — one number can only be edited in one
+    /// place without the two drifting apart.
+    public int CamperCount => Headcount - SupervisorCount;
 
     /// Free-text note left by the booker at booking time.
     public string? Notes { get; set; }
@@ -87,10 +98,14 @@ public class Booking
 
     public long DepositGrosze { get; set; }
 
-    /// The rate this group's total was worked out from: total = rate × headcount ×
-    /// nights. Kept on the booking so the panel can show what the group is charged
-    /// per participant per night and recompute the total when either side changes.
+    /// The camper rate this group's total was worked out from. Kept on the booking
+    /// so the panel can show what the group is charged per participant per night
+    /// and recompute the total when either side changes.
     public long PricePerPersonPerNightGrosze { get; set; }
+
+    /// The kadra's own rate. Total = camper rate × campers × nights +
+    /// supervisor rate × supervisors × nights, unless a flat total was typed over it.
+    public long SupervisorPricePerPersonPerNightGrosze { get; set; }
 
     /// Whether the money has arrived — recorded by the owner, who is paid by
     /// transfer or in cash rather than through the site.

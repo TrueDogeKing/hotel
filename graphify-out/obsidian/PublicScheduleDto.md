@@ -2,7 +2,7 @@
 source_file: "src/CampCenter.Application/DTOs/Schedule/ScheduleDtos.cs"
 type: "code"
 community: "Admin Booking & Notifications (2)"
-location: "L192"
+location: "L200"
 tags:
   - graphify/code
   - graphify/EXTRACTED

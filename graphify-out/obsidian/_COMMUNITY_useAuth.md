@@ -1,25 +1,35 @@
 ---
 type: community
-members: 12
+members: 22
 ---
 
 # useAuth
 
-**Members:** 12 nodes
+**Members:** 22 nodes
 
 ## Members
-- [[AdminUser]] - code - frontend/src/api/admin.ts
-- [[FormState_1]] - code - frontend/src/pages/admin/UsersPage.tsx
-- [[UserRole]] - code - frontend/src/api/jwt.ts
-- [[UsersPage()]] - code - frontend/src/pages/admin/UsersPage.tsx
-- [[UsersPage.tsx]] - code - frontend/src/pages/admin/UsersPage.tsx
-- [[createUser()]] - code - frontend/src/api/admin.ts
-- [[deleteUser()]] - code - frontend/src/api/admin.ts
-- [[emptyForm_3]] - code - frontend/src/pages/admin/UsersPage.tsx
-- [[getUsers()]] - code - frontend/src/api/admin.ts
-- [[setUserPassword()]] - code - frontend/src/api/admin.ts
-- [[setUserRole()]] - code - frontend/src/api/admin.ts
-- [[userRoles]] - code - frontend/src/api/admin.ts
+- [[AddGroupForm()]] - code - frontend/src/components/admin/AddGroupForm.tsx
+- [[AddGroupForm.tsx]] - code - frontend/src/components/admin/AddGroupForm.tsx
+- [[AdminBooking]] - code - frontend/src/api/admin.ts
+- [[AdminBookingsPage()]] - code - frontend/src/pages/admin/AdminBookingsPage.tsx
+- [[AdminBookingsPage.tsx]] - code - frontend/src/pages/admin/AdminBookingsPage.tsx
+- [[BookingState]] - code - frontend/src/api/admin.ts
+- [[PricingDefaults]] - code - frontend/src/api/admin.ts
+- [[PricingDefaultsPanel()]] - code - frontend/src/components/admin/PricingDefaultsPanel.tsx
+- [[PricingDefaultsPanel.tsx]] - code - frontend/src/components/admin/PricingDefaultsPanel.tsx
+- [[Props_5]] - code - frontend/src/components/admin/AddGroupForm.tsx
+- [[bookingStates]] - code - frontend/src/api/admin.ts
+- [[createAdminBooking()]] - code - frontend/src/api/admin.ts
+- [[formatZl()]] - code - frontend/src/api/admin.ts
+- [[getAdminBookings()]] - code - frontend/src/api/admin.ts
+- [[getPricingDefaults()]] - code - frontend/src/api/admin.ts
+- [[groszeToZl()]] - code - frontend/src/api/admin.ts
+- [[isoInDays()]] - code - frontend/src/components/admin/AddGroupForm.tsx
+- [[nightsBetween()]] - code - frontend/src/components/admin/AddGroupForm.tsx
+- [[setBookingState()]] - code - frontend/src/api/admin.ts
+- [[updateBookingPricing()]] - code - frontend/src/api/admin.ts
+- [[updatePricingDefaults()]] - code - frontend/src/api/admin.ts
+- [[zlToGrosze()]] - code - frontend/src/api/admin.ts
 
 ## Live Query (requires Dataview plugin)
 
@@ -29,15 +39,18 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 9 edges to [[_COMMUNITY_src  api (1)]]
-- 5 edges to [[_COMMUNITY_Frontend Auth & API Client]]
-- 4 edges to [[_COMMUNITY_Frontend App Shell & i18n]]
-- 4 edges to [[_COMMUNITY_Public Booking Frontend (1)]]
+- 16 edges to [[_COMMUNITY_Room Closure Management]]
+- 10 edges to [[_COMMUNITY_Frontend App Shell & i18n]]
+- 5 edges to [[_COMMUNITY_Public Booking Frontend (1)]]
+- 4 edges to [[_COMMUNITY_ScheduleEntry]]
+- 2 edges to [[_COMMUNITY_Frontend Auth & API Client]]
+- 2 edges to [[_COMMUNITY_src  api (1)]]
+- 1 edge to [[_COMMUNITY_GroupRooms.tsx]]
 - 1 edge to [[_COMMUNITY_src  utils]]
 
 ## Top bridge nodes
-- [[UsersPage.tsx]] - degree 21, connects to 5 communities
-- [[UserRole]] - degree 7, connects to 2 communities
-- [[UsersPage()]] - degree 4, connects to 2 communities
-- [[AdminUser]] - degree 3, connects to 1 community
-- [[getUsers()]] - degree 3, connects to 1 community
+- [[AdminBookingsPage.tsx]] - degree 21, connects to 7 communities
+- [[AddGroupForm.tsx]] - degree 16, connects to 3 communities
+- [[PricingDefaultsPanel.tsx]] - degree 11, connects to 3 communities
+- [[AdminBooking]] - degree 6, connects to 3 communities
+- [[formatZl()]] - degree 11, connects to 2 communities

@@ -2,7 +2,7 @@
 source_file: "frontend/src/pages/admin/AdminDashboardPage.tsx"
 type: "code"
 community: "Frontend App Shell & i18n"
-location: "L20"
+location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED

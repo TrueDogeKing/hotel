@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/pages/admin/UsersPage.tsx"
 type: "code"
-community: "useAuth"
+community: "src / api (1)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/useAuth
+  - community/src_/_api_1
 ---
 
 # UsersPage.tsx
@@ -19,6 +19,8 @@ tags:
 - [[ConfirmDialog()]] - `imports` [EXTRACTED]
 - [[ConfirmDialog.tsx]] - `imports_from` [EXTRACTED]
 - [[FormState_1]] - `contains` [EXTRACTED]
+- [[Modal()]] - `imports` [EXTRACTED]
+- [[Modal.tsx]] - `imports_from` [EXTRACTED]
 - [[UserRole]] - `imports` [EXTRACTED]
 - [[UsersPage()]] - `contains` [EXTRACTED]
 - [[admin.ts]] - `imports_from` [EXTRACTED]
@@ -34,4 +36,4 @@ tags:
 - [[useAuth()]] - `imports` [EXTRACTED]
 - [[userRoles]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/useAuth
+#graphify/code #graphify/EXTRACTED #community/src_/_api_1

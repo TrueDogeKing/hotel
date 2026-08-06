@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.UnitTests / Validators"
+community: "CampCenter.Application / Services (3)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Validators
+  - community/CampCenterApplication_/_Services_3
 ---
 
 # IRuleBuilderOptions
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.ValidRole()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Validators
+#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_3

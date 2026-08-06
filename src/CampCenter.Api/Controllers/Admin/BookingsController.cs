@@ -110,6 +110,18 @@ public class BookingsController : ControllerBase
         CancellationToken cancellationToken
     ) => Ok(await _bookings.ReassignAsync(id, request, cancellationToken));
 
+    /// Who is coming: the headcount and how many of them are supervisors. Only the
+    /// counts — the price and the rooms have endpoints of their own.
+    [HttpPut("{id:guid}/people")]
+    [ProducesResponseType(typeof(AdminBookingDto), StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    public async Task<IActionResult> UpdatePeople(
+        Guid id,
+        [FromBody] UpdateBookingPeopleRequestDto request,
+        CancellationToken cancellationToken
+    ) => Ok(await _bookings.UpdatePeopleAsync(id, request, cancellationToken));
+
     /// What this one group is charged. The centre-wide rates that prefill a new
     /// booking are elsewhere — see PricingController.
     [HttpPut("{id:guid}/pricing")]

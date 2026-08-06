@@ -104,7 +104,18 @@ public class BookingService : IBookingService
             null,
             cancellationToken
         );
-        var mixError = RoomMixCalculator.ValidateMix(request.Headcount, request.RoomCounts, free);
+        // The two cohorts are validated against their own rooms: a double for two
+        // supervisors is not a redundant room just because the whole group is fifty.
+        var supervisors = Math.Clamp(request.SupervisorCount, 0, request.Headcount);
+        var campers = request.Headcount - supervisors;
+        var supervisorRoomCounts = request.SupervisorRoomCounts ?? [];
+        var mixError = RoomMixCalculator.ValidateSplitMix(
+            campers,
+            supervisors,
+            request.RoomCounts,
+            supervisorRoomCounts,
+            free
+        );
         if (mixError is not null)
         {
             throw new BusinessRuleViolationException($"Invalid room selection ({mixError}).");
@@ -135,13 +146,15 @@ public class BookingService : IBookingService
             Notes = string.IsNullOrWhiteSpace(request.Notes) ? null : request.Notes.Trim(),
             ManageTokenHash = token.TokenHash,
             HoldExpiresAt = holdExpires,
+            SupervisorCount = supervisors,
             PricePerPersonPerNightGrosze = rates.PricePerPersonPerNightGrosze,
-            TotalGrosze = rates.PricePerPersonPerNightGrosze * request.Headcount * nights,
+            SupervisorPricePerPersonPerNightGrosze = rates.SupervisorPricePerPersonPerNightGrosze,
+            TotalGrosze =
+                (rates.PricePerPersonPerNightGrosze * campers * nights)
+                + (rates.SupervisorPricePerPersonPerNightGrosze * supervisors * nights),
             DepositGrosze = rates.DepositPerPersonPerNightGrosze * request.Headcount * nights,
             RequestedRoomCounts = JsonSerializer.Serialize(
-                request
-                    .RoomCounts.Where(kv => kv.Value > 0)
-                    .ToDictionary(kv => kv.Key, kv => kv.Value)
+                CombineCounts(request.RoomCounts, supervisorRoomCounts)
             ),
             Language = request.Language == "en" ? "en" : "pl",
             CreatedAt = now,
@@ -172,6 +185,21 @@ public class BookingService : IBookingService
         return new CreateBookingResponseDto(booking.Id, token.RawToken);
     }
 
+    /// The two cohorts' room counts added together — what actually has to be free.
+    private static Dictionary<int, int> CombineCounts(
+        IReadOnlyDictionary<int, int> campers,
+        IReadOnlyDictionary<int, int> supervisors
+    )
+    {
+        var combined = campers.Where(kv => kv.Value > 0).ToDictionary(kv => kv.Key, kv => kv.Value);
+        foreach (var (capacity, count) in supervisors.Where(kv => kv.Value > 0))
+        {
+            combined[capacity] = combined.GetValueOrDefault(capacity) + count;
+        }
+
+        return combined;
+    }
+
     /// Picks concrete free rooms matching the requested counts: lowest room
     /// numbers first within each capacity.
     private async Task<List<Room>> PickRoomsAsync(
@@ -187,8 +215,9 @@ public class BookingService : IBookingService
             cancellationToken
         );
 
+        var wanted = CombineCounts(request.RoomCounts, request.SupervisorRoomCounts ?? []);
         var picked = new List<Room>();
-        foreach (var (capacity, count) in request.RoomCounts.Where(kv => kv.Value > 0))
+        foreach (var (capacity, count) in wanted.Where(kv => kv.Value > 0))
         {
             picked.AddRange(
                 active
@@ -207,27 +236,40 @@ public class BookingService : IBookingService
         List<Room> rooms
     )
     {
-        // Distribute people: full rooms first (largest capacity first), remainder in the last.
-        var loads = RoomMixCalculator.DistributePeople(request.Headcount, request.RoomCounts);
+        // Distribute people: full rooms first (largest capacity first), remainder in
+        // the last. The supervisors are placed first out of the same per-capacity
+        // queues, so their rooms are theirs alone.
         var byCapacity = rooms
             .GroupBy(r => r.Capacity)
             .ToDictionary(g => g.Key, g => new Queue<Room>(g));
 
-        foreach (var (capacity, peopleCount) in loads)
+        void Place(List<(int Capacity, int PeopleCount)> loads, bool supervisors)
         {
-            var room = byCapacity[capacity].Dequeue();
-            booking.RoomAssignments.Add(
-                new BookingRoomAssignment
-                {
-                    Id = Guid.NewGuid(),
-                    BookingId = booking.Id,
-                    RoomId = room.Id,
-                    StartDate = booking.StartDate,
-                    EndDate = booking.EndDate,
-                    PeopleCount = peopleCount,
-                }
-            );
+            foreach (var (capacity, peopleCount) in loads)
+            {
+                booking.RoomAssignments.Add(
+                    new BookingRoomAssignment
+                    {
+                        Id = Guid.NewGuid(),
+                        BookingId = booking.Id,
+                        RoomId = byCapacity[capacity].Dequeue().Id,
+                        StartDate = booking.StartDate,
+                        EndDate = booking.EndDate,
+                        PeopleCount = peopleCount,
+                        IsSupervisorRoom = supervisors,
+                    }
+                );
+            }
         }
+
+        Place(
+            RoomMixCalculator.DistributePeople(
+                booking.SupervisorCount,
+                request.SupervisorRoomCounts ?? []
+            ),
+            true
+        );
+        Place(RoomMixCalculator.DistributePeople(booking.CamperCount, request.RoomCounts), false);
     }
 
     public async Task<BookingDetailsDto> GetByTokenAsync(
@@ -250,6 +292,7 @@ public class BookingService : IBookingService
             booking.Email,
             booking.Phone,
             booking.Headcount,
+            booking.SupervisorCount,
             JsonSerializer.Deserialize<Dictionary<int, int>>(booking.RequestedRoomCounts) ?? [],
             booking.TotalGrosze,
             booking.DepositGrosze,

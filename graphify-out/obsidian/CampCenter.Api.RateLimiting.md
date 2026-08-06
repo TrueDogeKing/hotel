@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Api/RateLimiting/RateLimitPolicies.cs"
 type: "code"
-community: "eslint"
+community: "CampCenter.Application.DTOs.Public"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/eslint
+  - community/CampCenterApplicationDTOsPublic
 ---
 
 # CampCenter.Api.RateLimiting
@@ -17,4 +17,4 @@ tags:
 - [[PublicBookingsController.cs]] - `imports` [EXTRACTED]
 - [[RateLimitPolicies.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/eslint
+#graphify/code #graphify/EXTRACTED #community/CampCenterApplicationDTOsPublic

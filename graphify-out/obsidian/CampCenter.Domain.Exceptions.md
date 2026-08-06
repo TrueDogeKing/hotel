@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Domain/Exceptions/BusinessRuleViolationException.cs"
 type: "code"
-community: "ClosureService"
+community: "Exception"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ClosureService
+  - community/Exception
 ---
 
 # CampCenter.Domain.Exceptions
@@ -35,4 +35,4 @@ tags:
 - [[ScheduleService.cs]] - `imports` [EXTRACTED]
 - [[UserService.cs]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ClosureService
+#graphify/code #graphify/EXTRACTED #community/Exception

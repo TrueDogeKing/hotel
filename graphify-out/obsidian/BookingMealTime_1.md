@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Domain/Entities/BookingMealTime.cs"
 type: "code"
-community: "CampCenter.Application / Services (2)"
+community: "GroupRooms.tsx"
 location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterApplication_/_Services_2
+  - community/GroupRoomstsx
 ---
 
 # BookingMealTime
@@ -35,4 +35,4 @@ tags:
 - [[MealTimeDefault_1]] - `references` [EXTRACTED]
 - [[TimeOnly_4]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_2
+#graphify/code #graphify/EXTRACTED #community/GroupRoomstsx

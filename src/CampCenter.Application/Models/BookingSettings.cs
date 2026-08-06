@@ -11,8 +11,13 @@ public class BookingSettings
     /// The final payment is due this many days before the stay starts.
     public int FinalPaymentDueDays { get; set; } = 30;
 
-    /// Price per participant per night, in grosze. Booking total = rate × people × nights.
+    /// Price per camper per night, in grosze. Booking total = camper rate × campers
+    /// × nights + supervisor rate × supervisors × nights.
     public long PricePerPersonPerNightGrosze { get; set; } = 12000;
+
+    /// Price per supervisor per night, in grosze. Defaults to the camper rate, so a
+    /// centre that charges the kadra the same never has to think about it.
+    public long SupervisorPricePerPersonPerNightGrosze { get; set; } = 12000;
 
     /// Deposit per participant per night, in grosze (must not exceed the price).
     public long DepositPerPersonPerNightGrosze { get; set; } = 3000;

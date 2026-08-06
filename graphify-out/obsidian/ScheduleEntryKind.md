@@ -2,7 +2,7 @@
 source_file: "frontend/src/api/admin.ts"
 type: "code"
 community: "Domain & Infra Namespaces"
-location: "L539"
+location: "L568"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # ScheduleEntryKind
 
 ## Connections
-- [[Props_9]] - `references` [EXTRACTED]
+- [[Props_12]] - `references` [EXTRACTED]
 - [[ScheduleEntryForm.tsx]] - `imports` [EXTRACTED]
 - [[admin.ts]] - `contains` [EXTRACTED]
 

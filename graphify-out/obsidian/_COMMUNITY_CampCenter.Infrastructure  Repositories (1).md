@@ -1,17 +1,16 @@
 ---
 type: community
-members: 36
+members: 35
 ---
 
 # CampCenter.Infrastructure / Repositories (1)
 
-**Members:** 36 nodes
+**Members:** 35 nodes
 
 ## Members
 - [[.AddAsync()_21]] - code - src/CampCenter.Infrastructure/Repositories/ScheduleEntryRepository.cs
 - [[.AddRangeAsync()_1]] - code - src/CampCenter.Infrastructure/Repositories/ScheduleEntryRepository.cs
 - [[.CountByDateAndKindAsync()_1]] - code - src/CampCenter.Infrastructure/Repositories/ScheduleEntryRepository.cs
-- [[.CreateDbContext()]] - code - src/CampCenter.Infrastructure/Persistence/DesignTimeDbContextFactory.cs
 - [[.GetByIdAsync()_13]] - code - src/CampCenter.Infrastructure/Repositories/ScheduleEntryRepository.cs
 - [[.ListForBookingAsync()_3]] - code - src/CampCenter.Infrastructure/Repositories/ScheduleEntryRepository.cs
 - [[.ListForDateAsync()_3]] - code - src/CampCenter.Infrastructure/Repositories/ScheduleEntryRepository.cs
@@ -19,30 +18,30 @@ members: 36
 - [[.ListGeneratedSlotsAsync()_1]] - code - src/CampCenter.Infrastructure/Repositories/ScheduleEntryRepository.cs
 - [[.ListLocationsAsync()_1]] - code - src/CampCenter.Infrastructure/Repositories/ScheduleEntryRepository.cs
 - [[.ListVisibleSlotSpansAsync()_1]] - code - src/CampCenter.Infrastructure/Repositories/ScheduleEntryRepository.cs
-- [[.OnModelCreating()]] - code - src/CampCenter.Infrastructure/Persistence/AppDbContext.cs
+- [[.Remove()_6]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
 - [[.Remove()_13]] - code - src/CampCenter.Infrastructure/Repositories/ScheduleEntryRepository.cs
 - [[.SaveChangesAsync()_21]] - code - src/CampCenter.Infrastructure/Repositories/ScheduleEntryRepository.cs
-- [[AppDbContext]] - code - src/CampCenter.Infrastructure/Persistence/AppDbContext.cs
 - [[BookingId_1]] - code
 - [[CancellationToken_69]] - code
 - [[Count_1]] - code
 - [[Date_2]] - code
+- [[DateOnly_21]] - code
 - [[DateOnly_29]] - code
-- [[DbContext]] - code
-- [[DbSet]] - code
-- [[DesignTimeDbContextFactory]] - code - src/CampCenter.Infrastructure/Persistence/DesignTimeDbContextFactory.cs
-- [[DesignTimeDbContextFactory.cs]] - code - src/CampCenter.Infrastructure/Persistence/DesignTimeDbContextFactory.cs
+- [[DateTime_14]] - code
 - [[End_2]] - code
+- [[Guid_40]] - code
 - [[Guid_60]] - code
-- [[IDesignTimeDbContextFactory]] - code
 - [[IReadOnlyCollection_6]] - code
 - [[Kind_1]] - code
 - [[List_37]] - code
 - [[MealTimeDefaultId_1]] - code
-- [[ModelBuilder]] - code
+- [[ScheduleEntry_1]] - code - src/CampCenter.Domain/Entities/ScheduleEntry.cs
+- [[ScheduleEntry.cs]] - code - src/CampCenter.Domain/Entities/ScheduleEntry.cs
+- [[ScheduleEntryKind_1]] - code - src/CampCenter.Domain/Entities/ScheduleEntry.cs
 - [[ScheduleEntryRepository]] - code - src/CampCenter.Infrastructure/Repositories/ScheduleEntryRepository.cs
 - [[Start_2]] - code
 - [[Task_69]] - code
+- [[TimeOnly_6]] - code
 - [[TimeOnly_8]] - code
 
 ## Live Query (requires Dataview plugin)
@@ -53,24 +52,18 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 11 edges to [[_COMMUNITY_CampCenter.Application  Services (2)]]
-- 3 edges to [[_COMMUNITY_Exception]]
-- 2 edges to [[_COMMUNITY_Booking Persistence & Entities (1)]]
-- 2 edges to [[_COMMUNITY_Validator Unit Tests]]
-- 2 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (1)]]
-- 2 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (3)]]
-- 2 edges to [[_COMMUNITY_Refresh Token Repository]]
-- 2 edges to [[_COMMUNITY_Room Management]]
-- 2 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (2)]]
-- 2 edges to [[_COMMUNITY_Room Task Management (1)]]
+- 8 edges to [[_COMMUNITY_components  admin]]
+- 6 edges to [[_COMMUNITY_CampCenter.Application  Services (2)]]
+- 3 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (4)]]
+- 2 edges to [[_COMMUNITY_Exception]]
+- 2 edges to [[_COMMUNITY_AvailabilityService]]
+- 2 edges to [[_COMMUNITY_GroupRooms.tsx_1]]
+- 2 edges to [[_COMMUNITY_ScheduleEntryConfiguration]]
 - 1 edge to [[_COMMUNITY_Integration Test Harness (1)]]
-- 1 edge to [[_COMMUNITY_components  admin]]
-- 1 edge to [[_COMMUNITY_.Update]]
-- 1 edge to [[_COMMUNITY_CampCenter.Domain  Repositories (1)]]
 
 ## Top bridge nodes
-- [[AppDbContext]] - degree 30, connects to 14 communities
-- [[ScheduleEntryRepository]] - degree 15, connects to 2 communities
-- [[.CountByDateAndKindAsync()_1]] - degree 11, connects to 1 community
-- [[.ListForDateAsync()_3]] - degree 6, connects to 1 community
-- [[.ListForBookingAsync()_3]] - degree 6, connects to 1 community
+- [[ScheduleEntry_1]] - degree 28, connects to 7 communities
+- [[ScheduleEntryRepository]] - degree 15, connects to 3 communities
+- [[ScheduleEntryKind_1]] - degree 8, connects to 3 communities
+- [[.Remove()_6]] - degree 3, connects to 2 communities
+- [[ScheduleEntry.cs]] - degree 3, connects to 1 community

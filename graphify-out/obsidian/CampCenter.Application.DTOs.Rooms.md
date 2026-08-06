@@ -14,6 +14,7 @@ tags:
 ## Connections
 - [[AdminPanelApiTests.cs]] - `imports` [EXTRACTED]
 - [[AdminPricingApiTests.cs]] - `imports` [EXTRACTED]
+- [[AdminSupervisorRoomsApiTests.cs]] - `imports` [EXTRACTED]
 - [[IRoomService.cs]] - `imports` [EXTRACTED]
 - [[PaymentsApiTests.cs]] - `imports` [EXTRACTED]
 - [[PublicBookingApiTests.cs]] - `imports` [EXTRACTED]

@@ -2,7 +2,7 @@
 source_file: "frontend/src/api/public.ts"
 type: "code"
 community: "Public Booking Frontend (1)"
-location: "L34"
+location: "L43"
 tags:
   - graphify/code
   - graphify/EXTRACTED

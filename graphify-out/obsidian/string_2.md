@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "eslint"
+community: "CampCenter.Application.DTOs.Public"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/eslint
+  - community/CampCenterApplicationDTOsPublic
 ---
 
 # string
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[RateLimitPolicies]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/eslint
+#graphify/code #graphify/EXTRACTED #community/CampCenterApplicationDTOsPublic

@@ -32,7 +32,7 @@ members: 32
 - [[CancellationToken_61]] - code
 - [[DateOnly_26]] - code
 - [[DateTime_17]] - code
-- [[Dictionary_6]] - code
+- [[Dictionary_8]] - code
 - [[Exception_2]] - code
 - [[Guid_53]] - code
 - [[IReadOnlyCollection_5]] - code
@@ -49,17 +49,18 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 15 edges to [[_COMMUNITY_Integration Test Harness (1)]]
+- 13 edges to [[_COMMUNITY_Integration Test Harness (1)]]
 - 4 edges to [[_COMMUNITY_.Update]]
-- 3 edges to [[_COMMUNITY_components  admin]]
+- 3 edges to [[_COMMUNITY_BookingStatus]]
+- 2 edges to [[_COMMUNITY_.AddInfrastructure]]
 - 1 edge to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
 - 1 edge to [[_COMMUNITY_Integration Test Harness (2)]]
-- 1 edge to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
+- 1 edge to [[_COMMUNITY_GroupRooms.tsx_1]]
 - 1 edge to [[_COMMUNITY_Exception]]
 
 ## Top bridge nodes
-- [[BookingRepository]] - degree 27, connects to 5 communities
+- [[BookingRepository]] - degree 27, connects to 6 communities
 - [[.ListByCategoryAsync()_1]] - degree 9, connects to 2 communities
+- [[.ListAsync()_10]] - degree 6, connects to 2 communities
 - [[.GetCompletedPaymentKindsAsync()_1]] - degree 8, connects to 1 community
 - [[.AddAsync()_13]] - degree 6, connects to 1 community
-- [[.ListAsync()_10]] - degree 6, connects to 1 community

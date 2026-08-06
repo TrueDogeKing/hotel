@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/components/ConfirmDialog.tsx"
 type: "code"
-community: "Public Booking Frontend (1)"
-location: "L15"
+community: "src / api (1)"
+location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public_Booking_Frontend_1
+  - community/src_/_api_1
 ---
 
 # ConfirmDialog()
@@ -21,4 +21,4 @@ tags:
 - [[SchedulePage.tsx]] - `imports` [EXTRACTED]
 - [[UsersPage.tsx]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public_Booking_Frontend_1
+#graphify/code #graphify/EXTRACTED #community/src_/_api_1

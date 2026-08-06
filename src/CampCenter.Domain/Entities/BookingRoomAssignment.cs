@@ -26,4 +26,10 @@ public class BookingRoomAssignment
     /// Suggested occupancy for this room (capacity for all but the last room of a
     /// mix, the remainder in the last one). Admins may adjust.
     public int PeopleCount { get; set; }
+
+    /// This room holds the group's supervisors (kadra) rather than its campers.
+    /// Stored rather than inferred: once an admin has reassigned by hand, a
+    /// three-person kadra room and a three-person camper room are identical in
+    /// every other respect.
+    public bool IsSupervisorRoom { get; set; }
 }

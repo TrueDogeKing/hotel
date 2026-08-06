@@ -8,8 +8,8 @@ members: 2
 **Members:** 2 nodes
 
 ## Members
-- [[@typesreact]] - code - frontend/package.json
-- [[@typesreact_1]] - concept - frontend/package.json
+- [[eslint]] - code - frontend/package.json
+- [[eslint_1]] - concept - frontend/package.json
 
 ## Live Query (requires Dataview plugin)
 
@@ -22,4 +22,4 @@ SORT file.name ASC
 - 1 edge to [[_COMMUNITY_ESLint Dev Dependencies]]
 
 ## Top bridge nodes
-- [[@typesreact]] - degree 2, connects to 1 community
+- [[eslint]] - degree 2, connects to 1 community

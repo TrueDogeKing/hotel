@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/pages/admin/AdminBookingsPage.tsx"
 type: "code"
-community: "Public Booking Frontend (1)"
+community: "useAuth"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public_Booking_Frontend_1
+  - community/useAuth
 ---
 
 # AdminBookingsPage.tsx
@@ -20,6 +20,7 @@ tags:
 - [[BookingState]] - `imports` [EXTRACTED]
 - [[ConfirmDialog()]] - `imports` [EXTRACTED]
 - [[ConfirmDialog.tsx]] - `imports_from` [EXTRACTED]
+- [[GroupPeople.tsx]] - `imports_from` [EXTRACTED]
 - [[PricingDefaultsPanel.tsx]] - `imports_from` [EXTRACTED]
 - [[admin.ts]] - `imports_from` [EXTRACTED]
 - [[bookingStates]] - `imports` [EXTRACTED]
@@ -33,4 +34,4 @@ tags:
 - [[useAuth()]] - `imports` [EXTRACTED]
 - [[zlToGrosze()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public_Booking_Frontend_1
+#graphify/code #graphify/EXTRACTED #community/useAuth

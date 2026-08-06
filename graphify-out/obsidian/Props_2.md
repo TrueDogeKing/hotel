@@ -1,17 +1,17 @@
 ---
-source_file: "frontend/src/components/Select.tsx"
+source_file: "frontend/src/components/MixEditor.tsx"
 type: "code"
-community: "Select Component"
-location: "L8"
+community: "Public Booking Frontend (1)"
+location: "L3"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Select_Component
+  - community/Public_Booking_Frontend_1
 ---
 
 # Props
 
 ## Connections
-- [[Select.tsx]] - `contains` [EXTRACTED]
+- [[MixEditor.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Select_Component
+#graphify/code #graphify/EXTRACTED #community/Public_Booking_Frontend_1

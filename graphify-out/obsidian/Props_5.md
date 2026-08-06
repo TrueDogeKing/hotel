@@ -1,18 +1,18 @@
 ---
-source_file: "frontend/src/components/admin/DayTimetable.tsx"
+source_file: "frontend/src/components/admin/AddGroupForm.tsx"
 type: "code"
-community: "Room Closure Management"
-location: "L6"
+community: "useAuth"
+location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Closure_Management
+  - community/useAuth
 ---
 
 # Props
 
 ## Connections
-- [[DayTimetable.tsx]] - `contains` [EXTRACTED]
-- [[ScheduleDay]] - `references` [EXTRACTED]
+- [[AddGroupForm.tsx]] - `contains` [EXTRACTED]
+- [[AdminBooking]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management
+#graphify/code #graphify/EXTRACTED #community/useAuth

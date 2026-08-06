@@ -24,6 +24,10 @@ public class BookingRoomAssignmentConfiguration : IEntityTypeConfiguration<Booki
 
         builder.HasIndex(x => x.BookingId);
 
+        // Assignments are always read a whole booking at a time, so the flag needs
+        // no index of its own.
+        builder.Property(x => x.IsSupervisorRoom).HasDefaultValue(false);
+
         // Deleting a booking takes its assignments with it; rooms must never be
         // deletable while assigned (Restrict).
         builder

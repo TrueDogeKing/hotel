@@ -1,12 +1,12 @@
 ---
 source_file: "tests/CampCenter.IntegrationTests/ApiCollection.cs"
 type: "code"
-community: "tests / CampCenter.IntegrationTests (1)"
+community: "AdminPricingApiTests"
 location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/tests_/_CampCenterIntegrationTests_1
+  - community/AdminPricingApiTests
 ---
 
 # IntegrationTestBase
@@ -17,6 +17,7 @@ tags:
 - [[.CreateClientForAsync()]] - `method` [EXTRACTED]
 - [[AdminPanelApiTests]] - `inherits` [EXTRACTED]
 - [[AdminPricingApiTests]] - `inherits` [EXTRACTED]
+- [[AdminSupervisorRoomsApiTests]] - `inherits` [EXTRACTED]
 - [[ApiCollection.cs]] - `contains` [EXTRACTED]
 - [[AuthApiTests]] - `inherits` [EXTRACTED]
 - [[CampCenterApiFactory]] - `references` [EXTRACTED]
@@ -27,4 +28,4 @@ tags:
 - [[UsersAndRolesApiTests]] - `inherits` [EXTRACTED]
 - [[string_13]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/tests_/_CampCenterIntegrationTests_1
+#graphify/code #graphify/EXTRACTED #community/AdminPricingApiTests

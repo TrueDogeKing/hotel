@@ -45,13 +45,17 @@ public class PublicBookingApiTests : IntegrationTestBase
         DateOnly end,
         int headcount,
         Dictionary<int, int> counts,
-        string email = "org@example.com"
+        string email = "org@example.com",
+        int supervisors = 0,
+        Dictionary<int, int>? supervisorCounts = null
     ) =>
         new(
             start,
             end,
             headcount,
+            supervisors,
             counts,
+            supervisorCounts ?? [],
             "Test Org",
             "Jan Kowalski",
             email,

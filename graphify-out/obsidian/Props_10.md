@@ -1,19 +1,17 @@
 ---
-source_file: "frontend/src/components/calendar/CalendarTile.tsx"
+source_file: "frontend/src/components/admin/GroupRooms.tsx"
 type: "code"
-community: "src / utils"
-location: "L6"
+community: "GroupRooms.tsx"
+location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/src_/_utils
+  - community/GroupRoomstsx
 ---
 
 # Props
 
 ## Connections
-- [[CalendarBar]] - `references` [EXTRACTED]
-- [[CalendarDayBadge]] - `references` [EXTRACTED]
-- [[CalendarTile.tsx]] - `contains` [EXTRACTED]
+- [[GroupRooms.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/src_/_utils
+#graphify/code #graphify/EXTRACTED #community/GroupRoomstsx

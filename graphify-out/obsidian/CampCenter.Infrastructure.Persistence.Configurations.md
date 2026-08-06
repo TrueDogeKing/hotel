@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Persistence/Configurations/AdminUserConfiguration.cs"
 type: "code"
-community: "BookingConfiguration"
+community: "eslint"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/BookingConfiguration
+  - community/eslint
 ---
 
 # CampCenter.Infrastructure.Persistence.Configurations
@@ -26,4 +26,4 @@ tags:
 - [[RoomTaskConfiguration.cs]] - `contains` [EXTRACTED]
 - [[ScheduleEntryConfiguration.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/BookingConfiguration
+#graphify/code #graphify/EXTRACTED #community/eslint

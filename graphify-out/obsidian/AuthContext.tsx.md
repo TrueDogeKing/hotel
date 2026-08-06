@@ -22,6 +22,7 @@ tags:
 - [[BookingGroupSection.tsx]] - `imports_from` [EXTRACTED]
 - [[ClosuresPage.tsx]] - `imports_from` [EXTRACTED]
 - [[GroupMealTimes.tsx]] - `imports_from` [EXTRACTED]
+- [[GroupPeople.tsx]] - `imports_from` [EXTRACTED]
 - [[GroupRooms.tsx]] - `imports_from` [EXTRACTED]
 - [[GroupSchedulePanel.tsx]] - `imports_from` [EXTRACTED]
 - [[LoginPage.tsx]] - `imports_from` [EXTRACTED]

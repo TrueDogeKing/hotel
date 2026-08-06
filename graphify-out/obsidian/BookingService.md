@@ -14,6 +14,7 @@ tags:
 ## Connections
 - [[.AssignRooms()]] - `method` [EXTRACTED]
 - [[.CancelByTokenAsync()_1]] - `method` [EXTRACTED]
+- [[.CombineCounts()]] - `method` [EXTRACTED]
 - [[.CreateAsync()_8]] - `method` [EXTRACTED]
 - [[.FinalDueDate()_1]] - `method` [EXTRACTED]
 - [[.FindByTokenAsync()]] - `method` [EXTRACTED]

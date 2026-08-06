@@ -92,6 +92,7 @@ public class ScheduleService : IScheduleService
                 b.Id,
                 b.OrganizationName,
                 b.Headcount,
+                b.SupervisorCount,
                 b.Status.ToString(),
                 b.StartDate == date,
                 b.EndDate == date,
@@ -135,6 +136,7 @@ public class ScheduleService : IScheduleService
             booking.EndDate,
             booking.Nights,
             booking.Headcount,
+            booking.SupervisorCount,
             booking.Status.ToString(),
             booking.Notes,
             booking.DietaryNotes,
@@ -894,6 +896,7 @@ public class ScheduleService : IScheduleService
             b.EndDate,
             b.Nights,
             b.Headcount,
+            b.SupervisorCount,
             b.Status.ToString()
         );
 
@@ -936,6 +939,7 @@ public class ScheduleService : IScheduleService
             e.BookingId,
             booking?.OrganizationName ?? string.Empty,
             booking?.Headcount ?? 0,
+            booking?.SupervisorCount ?? 0,
             e.Kind.ToString(),
             e.MealKind?.ToString(),
             e.Date,

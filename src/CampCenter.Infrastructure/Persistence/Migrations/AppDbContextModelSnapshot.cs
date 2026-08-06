@@ -152,6 +152,14 @@ namespace CampCenter.Infrastructure.Persistence.Migrations
                         .HasMaxLength(16)
                         .HasColumnType("character varying(16)");
 
+                    b.Property<int>("SupervisorCount")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasDefaultValue(0);
+
+                    b.Property<long>("SupervisorPricePerPersonPerNightGrosze")
+                        .HasColumnType("bigint");
+
                     b.Property<long>("TotalGrosze")
                         .HasColumnType("bigint");
 
@@ -162,7 +170,10 @@ namespace CampCenter.Infrastructure.Persistence.Migrations
 
                     b.HasIndex("StartDate", "Status");
 
-                    b.ToTable("Bookings", (string)null);
+                    b.ToTable("Bookings", null, t =>
+                        {
+                            t.HasCheckConstraint("CK_Bookings_SupervisorCount", "\"SupervisorCount\" >= 0 AND \"SupervisorCount\" <= \"Headcount\"");
+                        });
                 });
 
             modelBuilder.Entity("CampCenter.Domain.Entities.BookingMealTime", b =>
@@ -219,6 +230,11 @@ namespace CampCenter.Infrastructure.Persistence.Migrations
 
                     b.Property<DateOnly>("EndDate")
                         .HasColumnType("date");
+
+                    b.Property<bool>("IsSupervisorRoom")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("boolean")
+                        .HasDefaultValue(false);
 
                     b.Property<int>("PeopleCount")
                         .HasColumnType("integer");
@@ -406,6 +422,9 @@ namespace CampCenter.Infrastructure.Persistence.Migrations
                         .HasColumnType("xid")
                         .HasColumnName("xmin");
 
+                    b.Property<long>("SupervisorPricePerPersonPerNightGrosze")
+                        .HasColumnType("bigint");
+
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("timestamp with time zone");
 
@@ -413,7 +432,7 @@ namespace CampCenter.Infrastructure.Persistence.Migrations
 
                     b.ToTable("PricingDefaults", null, t =>
                         {
-                            t.HasCheckConstraint("CK_PricingDefaults_Amounts", "\"PricePerPersonPerNightGrosze\" >= 0 AND \"DepositPerPersonPerNightGrosze\" BETWEEN 0 AND \"PricePerPersonPerNightGrosze\"");
+                            t.HasCheckConstraint("CK_PricingDefaults_Amounts", "\"PricePerPersonPerNightGrosze\" >= 0 AND \"SupervisorPricePerPersonPerNightGrosze\" >= 0 AND \"DepositPerPersonPerNightGrosze\" BETWEEN 0 AND LEAST(\"PricePerPersonPerNightGrosze\", \"SupervisorPricePerPersonPerNightGrosze\")");
                         });
                 });
 

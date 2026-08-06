@@ -1,11 +1,11 @@
 ---
 type: community
-members: 91
+members: 95
 ---
 
 # Validator Unit Tests
 
-**Members:** 91 nodes
+**Members:** 95 nodes
 
 ## Members
 - [[.AddAsync()_3]] - code - src/CampCenter.Domain/Repositories/IClosureRepository.cs
@@ -46,6 +46,7 @@ members: 91
 - [[.UpdateAsync()_5]] - code - src/CampCenter.Application/Services/ClosureService.cs
 - [[.Valid()]] - code - tests/CampCenter.UnitTests/Validators/ClosureValidatorsTests.cs
 - [[.ValidClosure_Passes()]] - code - tests/CampCenter.UnitTests/Validators/ClosureValidatorsTests.cs
+- [[CampCenter.Application.DTOs.Closures]] - code - src/CampCenter.Application/DTOs/Closures/ClosureDtos.cs
 - [[CancellationToken_2]] - code
 - [[CancellationToken_13]] - code
 - [[CancellationToken_21]] - code
@@ -58,6 +59,7 @@ members: 91
 - [[ClosureDtos.cs]] - code - src/CampCenter.Application/DTOs/Closures/ClosureDtos.cs
 - [[ClosureRepository]] - code - src/CampCenter.Infrastructure/Repositories/ClosureRepository.cs
 - [[ClosureService]] - code - src/CampCenter.Application/Services/ClosureService.cs
+- [[ClosureValidators.cs]] - code - src/CampCenter.Application/Validators/ClosureValidators.cs
 - [[ClosureValidatorsTests]] - code - tests/CampCenter.UnitTests/Validators/ClosureValidatorsTests.cs
 - [[ClosuresController]] - code - src/CampCenter.Api/Controllers/Admin/ClosuresController.cs
 - [[CreateClosureRequestDto]] - code - src/CampCenter.Application/DTOs/Closures/ClosureDtos.cs
@@ -68,7 +70,7 @@ members: 91
 - [[DateOnly_23]] - code
 - [[DateOnly_27]] - code
 - [[DateTime_7]] - code
-- [[Fact_14]] - code
+- [[Fact_16]] - code
 - [[Guid_1]] - code
 - [[Guid_11]] - code
 - [[Guid_21]] - code
@@ -84,6 +86,7 @@ members: 91
 - [[IActionResult_12]] - code
 - [[IClosureRepository]] - code - src/CampCenter.Domain/Repositories/IClosureRepository.cs
 - [[IClosureService]] - code - src/CampCenter.Application/Interfaces/IClosureService.cs
+- [[IClosureService.cs]] - code - src/CampCenter.Application/Interfaces/IClosureService.cs
 - [[IValidator_1]] - code
 - [[List_1]] - code
 - [[List_9]] - code
@@ -99,6 +102,7 @@ members: 91
 - [[Task_48]] - code
 - [[Task_62]] - code
 - [[UpdateClosureRequestDto]] - code - src/CampCenter.Application/DTOs/Closures/ClosureDtos.cs
+- [[UpdateClosureRequestValidator]] - code - src/CampCenter.Application/Validators/ClosureValidators.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -109,21 +113,23 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 7 edges to [[_COMMUNITY_Room Management]]
-- 4 edges to [[_COMMUNITY_CampCenter.Application.DTOs.Public]]
-- 4 edges to [[_COMMUNITY_CampCenter.UnitTests  Validators]]
+- 5 edges to [[_COMMUNITY_Camp Session Management]]
+- 4 edges to [[_COMMUNITY_Exception]]
+- 3 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
+- 3 edges to [[_COMMUNITY_CampCenter.Application.DTOs.Public]]
 - 3 edges to [[_COMMUNITY_.GetBlockedRoomIdsAsync]]
-- 3 edges to [[_COMMUNITY_Admin Booking & Notifications (1)]]
-- 3 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (2)]]
-- 3 edges to [[_COMMUNITY_Exception]]
+- 3 edges to [[_COMMUNITY_Integration Test Harness (2)]]
 - 2 edges to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
-- 2 edges to [[_COMMUNITY_Integration Test Harness (2)]]
-- 2 edges to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
-- 2 edges to [[_COMMUNITY_BookingConfiguration]]
-- 1 edge to [[_COMMUNITY_Application Namespaces & DTOs]]
+- 2 edges to [[_COMMUNITY_Admin Booking & Notifications (1)]]
+- 2 edges to [[_COMMUNITY_BookingSettings]]
+- 2 edges to [[_COMMUNITY_GroupRooms.tsx_1]]
+- 2 edges to [[_COMMUNITY_eslint-plugin-react-hooks]]
+- 1 edge to [[_COMMUNITY_20260729224623_RoomCleanings.Designer.cs]]
+- 1 edge to [[_COMMUNITY_Public Booking Service (2)]]
 
 ## Top bridge nodes
-- [[IClosureRepository]] - degree 15, connects to 4 communities
+- [[IClosureRepository]] - degree 15, connects to 5 communities
+- [[CampCenter.Application.DTOs.Closures]] - degree 8, connects to 4 communities
 - [[Closure_1]] - degree 22, connects to 3 communities
 - [[ClosureService]] - degree 13, connects to 3 communities
 - [[.GetOverlappingAsync()]] - degree 11, connects to 3 communities
-- [[PublicAvailabilityController]] - degree 7, connects to 3 communities

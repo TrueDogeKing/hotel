@@ -48,11 +48,12 @@ SORT file.name ASC
 ## Connections to other communities
 - 13 edges to [[_COMMUNITY_Admin User & Token Config]]
 - 4 edges to [[_COMMUNITY_Auth Service & Tokens]]
-- 4 edges to [[_COMMUNITY_Exception]]
-- 2 edges to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
-- 2 edges to [[_COMMUNITY_BookingConfiguration]]
+- 3 edges to [[_COMMUNITY_Exception]]
+- 2 edges to [[_COMMUNITY_GroupRooms.tsx_1]]
+- 2 edges to [[_COMMUNITY_eslint_3]]
 - 1 edge to [[_COMMUNITY_Refresh Token Repository]]
 - 1 edge to [[_COMMUNITY_CampCenter.Application  Services (1)]]
+- 1 edge to [[_COMMUNITY_Public Booking Service (2)]]
 
 ## Top bridge nodes
 - [[AdminUser_1]] - degree 23, connects to 6 communities

@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/api/admin.ts"
 type: "code"
-community: "ScheduleEntry"
-location: "L156"
+community: "useAuth"
+location: "L158"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ScheduleEntry
+  - community/useAuth
 ---
 
 # AdminBooking
@@ -14,8 +14,9 @@ tags:
 ## Connections
 - [[AddGroupForm.tsx]] - `imports` [EXTRACTED]
 - [[AdminBookingsPage.tsx]] - `imports` [EXTRACTED]
+- [[AdminDashboardPage.tsx]] - `imports` [EXTRACTED]
 - [[GroupRooms.tsx]] - `imports` [EXTRACTED]
-- [[Props_3]] - `references` [EXTRACTED]
+- [[Props_5]] - `references` [EXTRACTED]
 - [[admin.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ScheduleEntry
+#graphify/code #graphify/EXTRACTED #community/useAuth

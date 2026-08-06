@@ -2,7 +2,7 @@
 source_file: "CLAUDE.md"
 type: "document"
 community: "AvailabilityService"
-location: "L60"
+location: "L66"
 tags:
   - graphify/document
   - graphify/EXTRACTED

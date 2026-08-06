@@ -8,9 +8,25 @@ public class BookingConfiguration : IEntityTypeConfiguration<Booking>
 {
     public void Configure(EntityTypeBuilder<Booking> builder)
     {
-        builder.ToTable("Bookings");
+        builder.ToTable(
+            "Bookings",
+            t =>
+            {
+                // Campers are Headcount - SupervisorCount, so a supervisor count
+                // above the total would make the group negative children strong.
+                t.HasCheckConstraint(
+                    "CK_Bookings_SupervisorCount",
+                    "\"SupervisorCount\" >= 0 AND \"SupervisorCount\" <= \"Headcount\""
+                );
+            }
+        );
 
         builder.HasKey(x => x.Id);
+
+        // Derived from the two stored counts; nothing to map.
+        builder.Ignore(x => x.CamperCount);
+
+        builder.Property(x => x.SupervisorCount).HasDefaultValue(0);
 
         builder.Property(x => x.OrganizationName).IsRequired().HasMaxLength(256);
 

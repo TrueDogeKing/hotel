@@ -5,6 +5,8 @@ public record ScheduleEntryDto(
     Guid BookingId,
     string OrganizationName,
     int Headcount,
+    /// How many of them are supervisors — shown in brackets beside the group.
+    int SupervisorCount,
     string Kind,
     string? MealKind,
     DateOnly Date,
@@ -33,6 +35,8 @@ public record ScheduleCalendarBookingDto(
     DateOnly EndDate,
     int Nights,
     int Headcount,
+    /// How many of them are supervisors — shown in brackets beside the group.
+    int SupervisorCount,
     string Status
 );
 
@@ -57,6 +61,8 @@ public record ScheduleDayGroupDto(
     Guid BookingId,
     string OrganizationName,
     int Headcount,
+    /// How many of them are supervisors — shown in brackets beside the group.
+    int SupervisorCount,
     string Status,
     bool IsArrivalDay,
     bool IsDepartureDay,
@@ -88,6 +94,8 @@ public record BookingScheduleDto(
     DateOnly EndDate,
     int Nights,
     int Headcount,
+    /// How many of them are supervisors — shown in brackets beside the group.
+    int SupervisorCount,
     string Status,
     string? Notes,
     string? DietaryNotes,

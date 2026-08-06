@@ -40,5 +40,6 @@ tags:
 - [[getStoredLanguage()]] - `imports` [EXTRACTED]
 - [[index.ts]] - `imports_from` [EXTRACTED]
 - [[validateMix()]] - `contains` [EXTRACTED]
+- [[validateSplitMix()]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Public_Booking_Frontend_1

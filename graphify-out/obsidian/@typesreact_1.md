@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/package.json"
 type: "concept"
-community: "eslint"
+community: "RoomConfiguration"
 location: "L25"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/eslint
+  - community/RoomConfiguration
 ---
 
 # @types/react
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[@typesreact]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/eslint
+#graphify/concept #graphify/EXTRACTED #community/RoomConfiguration

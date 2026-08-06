@@ -1,18 +1,28 @@
 ---
 type: community
-members: 5
+members: 15
 ---
 
 # RoomCleaningRepository
 
-**Members:** 5 nodes
+**Members:** 15 nodes
 
 ## Members
-- [[.Down()_10]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/20260802130913_MakeRoomTaskRoomOptional.cs
-- [[.Up()_10]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/20260802130913_MakeRoomTaskRoomOptional.cs
-- [[20260802130913_MakeRoomTaskRoomOptional.cs]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/20260802130913_MakeRoomTaskRoomOptional.cs
-- [[MakeRoomTaskRoomOptional_1]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/20260802130913_MakeRoomTaskRoomOptional.cs
-- [[MigrationBuilder_10]] - code
+- [[.CreateAsync()_10]] - code - src/CampCenter.Application/Services/MealTimeService.cs
+- [[.DeleteAsync()_6]] - code - src/CampCenter.Application/Services/MealTimeService.cs
+- [[.GetAllAsync()_4]] - code - src/CampCenter.Application/Services/MealTimeService.cs
+- [[.GetOrThrowAsync()_2]] - code - src/CampCenter.Application/Services/MealTimeService.cs
+- [[.GuardTimes()]] - code - src/CampCenter.Application/Services/MealTimeService.cs
+- [[.ParseMealKind()]] - code - src/CampCenter.Application/Services/MealTimeService.cs
+- [[.ToDto()_2]] - code - src/CampCenter.Application/Services/MealTimeService.cs
+- [[.UpdateAsync()_6]] - code - src/CampCenter.Application/Services/MealTimeService.cs
+- [[CancellationToken_38]] - code
+- [[Guid_23]] - code
+- [[List_13]] - code
+- [[MealTimeDefaultDto]] - code - src/CampCenter.Application/DTOs/Schedule/MealTimeDtos.cs
+- [[MealTimeService]] - code - src/CampCenter.Application/Services/MealTimeService.cs
+- [[Task_38]] - code
+- [[TimeOnly_2]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -22,9 +32,13 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_EF Core Migrations (3)]]
-- 1 edge to [[_COMMUNITY_Persistence  Migrations (1)]]
+- 12 edges to [[_COMMUNITY_AvailabilityService]]
+- 8 edges to [[_COMMUNITY_src  api (2)]]
+- 1 edge to [[_COMMUNITY_Exception]]
 
 ## Top bridge nodes
-- [[MakeRoomTaskRoomOptional_1]] - degree 4, connects to 1 community
-- [[20260802130913_MakeRoomTaskRoomOptional.cs]] - degree 2, connects to 1 community
+- [[MealTimeService]] - degree 11, connects to 3 communities
+- [[.UpdateAsync()_6]] - degree 11, connects to 2 communities
+- [[.CreateAsync()_10]] - degree 10, connects to 2 communities
+- [[.DeleteAsync()_6]] - degree 9, connects to 2 communities
+- [[MealTimeDefaultDto]] - degree 8, connects to 1 community

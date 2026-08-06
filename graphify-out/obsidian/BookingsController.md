@@ -22,6 +22,7 @@ tags:
 - [[.SetState()]] - `method` [EXTRACTED]
 - [[.SetStatus()]] - `method` [EXTRACTED]
 - [[.UpdateDietaryNotes()]] - `method` [EXTRACTED]
+- [[.UpdatePeople()]] - `method` [EXTRACTED]
 - [[.UpdatePricing()]] - `method` [EXTRACTED]
 - [[BookingsController.cs]] - `contains` [EXTRACTED]
 - [[ControllerBase]] - `inherits` [EXTRACTED]

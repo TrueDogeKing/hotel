@@ -1,17 +1,22 @@
 ---
 source_file: ""
 type: "code"
-community: "tests / CampCenter.IntegrationTests (1)"
+community: ".WithRoomsAsync"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/tests_/_CampCenterIntegrationTests_1
+  - community/WithRoomsAsync
 ---
 
 # Task
 
 ## Connections
-- [[.CreateAuthenticatedClientAsync()]] - `references` [EXTRACTED]
-- [[.CreateClientForAsync()]] - `references` [EXTRACTED]
+- [[.Create_HousesTheSupervisorsInRoomsOfTheirOwn()]] - `references` [EXTRACTED]
+- [[.Create_TakesTheRatesItIsGiven_AndFallsBackToTheCentres()]] - `references` [EXTRACTED]
+- [[.People_CanBeCorrected_WithoutTouchingThePriceOrTheRooms()]] - `references` [EXTRACTED]
+- [[.PublicBooking_CarriesItsOwnSupervisorRooms()]] - `references` [EXTRACTED]
+- [[.PublicBooking_RejectsAMixThatSharesRoomsBetweenCohorts()]] - `references` [EXTRACTED]
+- [[.Reassign_RequiresEachCohortToAddUpOnItsOwn()]] - `references` [EXTRACTED]
+- [[.WithRoomsAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/tests_/_CampCenterIntegrationTests_1
+#graphify/code #graphify/EXTRACTED #community/WithRoomsAsync

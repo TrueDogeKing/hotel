@@ -1,20 +1,18 @@
 ---
 type: community
-members: 70
+members: 63
 ---
 
 # Payment Gateway Integration Tests (1)
 
-**Members:** 70 nodes
+**Members:** 63 nodes
 
 ## Members
 - [[.CreateBookingWithDepositAsync()]] - code - tests/CampCenter.IntegrationTests/PaymentsApiTests.cs
 - [[.DepositWebhook_ConfirmsBooking_AndIsIdempotent()]] - code - tests/CampCenter.IntegrationTests/PaymentsApiTests.cs
 - [[.DepositWebhook_GeneratesTheGroupsMeals()]] - code - tests/CampCenter.IntegrationTests/PaymentsApiTests.cs
 - [[.HandleNotificationAsync()]] - code - src/CampCenter.Application/Interfaces/IPaymentService.cs
-- [[.HandleNotificationAsync()_1]] - code - src/CampCenter.Application/Services/PaymentService.cs
 - [[.InitiateAsync()]] - code - src/CampCenter.Application/Interfaces/IPaymentService.cs
-- [[.InitiateAsync()_1]] - code - src/CampCenter.Application/Services/PaymentService.cs
 - [[.Notification()]] - code - tests/CampCenter.IntegrationTests/PaymentsApiTests.cs
 - [[.NotificationSign()]] - code - src/CampCenter.Infrastructure/Payments/P24SignCalculator.cs
 - [[.NotificationSign_RoundTrips()]] - code - tests/CampCenter.UnitTests/Services/P24SignCalculatorTests.cs
@@ -23,7 +21,6 @@ members: 70
 - [[.RegisterTransactionAsync()]] - code - src/CampCenter.Application/Interfaces/IPaymentGateway.cs
 - [[.RegisterTransactionAsync()_1]] - code - src/CampCenter.Infrastructure/Payments/Przelewy24Client.cs
 - [[.RegisterTransactionAsync()_2]] - code - tests/CampCenter.IntegrationTests/PaymentsApiTests.cs
-- [[.SendSafelyAsync()_1]] - code - src/CampCenter.Application/Services/PaymentService.cs
 - [[.Sha384()]] - code - src/CampCenter.Infrastructure/Payments/P24SignCalculator.cs
 - [[.Sha384()_1]] - code - tests/CampCenter.UnitTests/Services/P24SignCalculatorTests.cs
 - [[.VerifyNotificationSignature()]] - code - src/CampCenter.Application/Interfaces/IPaymentGateway.cs
@@ -39,18 +36,16 @@ members: 70
 - [[Amount]] - code
 - [[CancellationToken_25]] - code
 - [[CancellationToken_26]] - code
-- [[CancellationToken_39]] - code
 - [[CancellationToken_57]] - code
 - [[CancellationToken_70]] - code
-- [[Fact_3]] - code
-- [[Fact_11]] - code
+- [[Fact_4]] - code
+- [[Fact_12]] - code
 - [[FakePaymentGateway]] - code - tests/CampCenter.IntegrationTests/PaymentsApiTests.cs
 - [[GatewayNotification]] - code - src/CampCenter.Application/Interfaces/IPaymentGateway.cs
 - [[GatewayRegisterRequest]] - code - src/CampCenter.Application/Interfaces/IPaymentGateway.cs
 - [[GatewayRegisterResult]] - code - src/CampCenter.Application/Interfaces/IPaymentGateway.cs
 - [[HttpClient]] - code
-- [[HttpClient_2]] - code
-- [[ILogger_4]] - code
+- [[HttpClient_3]] - code
 - [[IPaymentGateway]] - code - src/CampCenter.Application/Interfaces/IPaymentGateway.cs
 - [[IPaymentGateway.cs]] - code - src/CampCenter.Application/Interfaces/IPaymentGateway.cs
 - [[IPaymentService]] - code - src/CampCenter.Application/Interfaces/IPaymentService.cs
@@ -63,16 +58,14 @@ members: 70
 - [[P24Settings.cs]] - code - src/CampCenter.Infrastructure/Payments/P24Settings.cs
 - [[P24SignCalculator]] - code - src/CampCenter.Infrastructure/Payments/P24SignCalculator.cs
 - [[P24SignCalculatorTests]] - code - tests/CampCenter.UnitTests/Services/P24SignCalculatorTests.cs
-- [[PaymentService]] - code - src/CampCenter.Application/Services/PaymentService.cs
 - [[PaymentsApiTests]] - code - tests/CampCenter.IntegrationTests/PaymentsApiTests.cs
 - [[Przelewy24Client]] - code - src/CampCenter.Infrastructure/Payments/Przelewy24Client.cs
 - [[Registered]] - code
 - [[SessionId]] - code
 - [[Task_25]] - code
 - [[Task_26]] - code
-- [[Task_39]] - code
 - [[Task_57]] - code
-- [[Task_75]] - code
+- [[Task_76]] - code
 - [[Token]] - code
 - [[int_4]] - code
 - [[long_2]] - code
@@ -87,21 +80,15 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_Integration Test Harness (2)]]
-- 4 edges to [[_COMMUNITY_Admin Booking & Notifications (4)]]
+- 8 edges to [[_COMMUNITY_Admin Booking & Notifications (4)]]
 - 4 edges to [[_COMMUNITY_SmtpEmailSender]]
 - 3 edges to [[_COMMUNITY_CampCenter.Application.DTOs.Public]]
 - 2 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
-- 2 edges to [[_COMMUNITY_DTOs  Schedule (1)]]
-- 2 edges to [[_COMMUNITY_Auth Service & Tokens]]
-- 2 edges to [[_COMMUNITY_Admin Booking & Notifications (1)]]
-- 1 edge to [[_COMMUNITY_BookingSettings]]
-- 1 edge to [[_COMMUNITY_ClosureService]]
-- 1 edge to [[_COMMUNITY_tests  CampCenter.IntegrationTests (1)]]
+- 1 edge to [[_COMMUNITY_AdminPricingApiTests]]
 
 ## Top bridge nodes
-- [[PaymentService]] - degree 12, connects to 6 communities
-- [[.HandleNotificationAsync()_1]] - degree 11, connects to 4 communities
-- [[.InitiateAsync()_1]] - degree 11, connects to 3 communities
 - [[PaymentsApiTests]] - degree 12, connects to 2 communities
 - [[IPaymentService.cs]] - degree 5, connects to 2 communities
+- [[FakePaymentGateway]] - degree 11, connects to 1 community
+- [[GatewayNotification]] - degree 8, connects to 1 community
+- [[Przelewy24Client]] - degree 8, connects to 1 community

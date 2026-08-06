@@ -10,6 +10,7 @@ public interface IAvailabilityService
         DateOnly start,
         DateOnly end,
         int? headcount,
+        int? supervisors,
         CancellationToken cancellationToken = default
     );
 

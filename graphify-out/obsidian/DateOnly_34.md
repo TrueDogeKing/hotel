@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.UnitTests / Services (2)"
+community: "20260729224623_RoomCleanings.Designer.cs"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Services_2
+  - community/20260729224623_RoomCleaningsDesignercs
 ---
 
 # DateOnly
@@ -14,4 +14,4 @@ tags:
 - [[.Booking()_1]] - `references` [EXTRACTED]
 - [[HousekeepingServiceTests]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_2
+#graphify/code #graphify/EXTRACTED #community/20260729224623_RoomCleaningsDesignercs

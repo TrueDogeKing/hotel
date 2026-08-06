@@ -2,7 +2,7 @@
 source_file: "src/CampCenter.Application/DTOs/Schedule/ScheduleDtos.cs"
 type: "code"
 community: "DTOs / Schedule (1)"
-location: "L180"
+location: "L188"
 tags:
   - graphify/code
   - graphify/EXTRACTED

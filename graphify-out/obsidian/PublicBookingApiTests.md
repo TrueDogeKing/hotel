@@ -1,12 +1,12 @@
 ---
 source_file: "tests/CampCenter.IntegrationTests/PublicBookingApiTests.cs"
 type: "code"
-community: "tests / CampCenter.IntegrationTests (1)"
+community: "PasswordRules"
 location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/tests_/_CampCenterIntegrationTests_1
+  - community/PasswordRules
 ---
 
 # PublicBookingApiTests
@@ -27,4 +27,4 @@ tags:
 - [[PublicBookingApiTests.cs]] - `contains` [EXTRACTED]
 - [[long_3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/tests_/_CampCenterIntegrationTests_1
+#graphify/code #graphify/EXTRACTED #community/PasswordRules

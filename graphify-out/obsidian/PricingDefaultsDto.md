@@ -2,7 +2,7 @@
 source_file: "src/CampCenter.Application/DTOs/AdminPanel/AdminPanelDtos.cs"
 type: "code"
 community: "CampCenter.UnitTests / Services (3)"
-location: "L137"
+location: "L160"
 tags:
   - graphify/code
   - graphify/EXTRACTED

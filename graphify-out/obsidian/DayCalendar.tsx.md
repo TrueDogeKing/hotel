@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[DateField.tsx]] - `imports_from` [EXTRACTED]
 - [[DayCalendar()]] - `contains` [EXTRACTED]
-- [[Props_13]] - `contains` [EXTRACTED]
+- [[Props_16]] - `contains` [EXTRACTED]
 - [[dates.ts]] - `imports_from` [EXTRACTED]
 - [[formatMonth()]] - `imports` [EXTRACTED]
 - [[monthGrid()]] - `imports` [EXTRACTED]
