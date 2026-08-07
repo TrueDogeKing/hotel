@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/auth/AuthContext.tsx"
 type: "code"
-community: "Frontend App Shell & i18n"
+community: "useAuth"
 location: "L58"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Frontend_App_Shell__i18n
+  - community/useAuth
 ---
 
 # useAuth()
@@ -48,4 +48,4 @@ tags:
 - [[UsersPage()]] - `calls` [EXTRACTED]
 - [[UsersPage.tsx]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Frontend_App_Shell__i18n
+#graphify/code #graphify/EXTRACTED #community/useAuth

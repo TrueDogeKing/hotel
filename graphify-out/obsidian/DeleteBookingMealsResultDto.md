@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/DTOs/Schedule/MealTimeDtos.cs"
 type: "code"
-community: "src / api (2)"
-location: "L78"
+community: "Camp Session Management"
+location: "L74"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/src_/_api_2
+  - community/Camp_Session_Management
 ---
 
 # DeleteBookingMealsResultDto
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[MealTimeDtos.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/src_/_api_2
+#graphify/code #graphify/EXTRACTED #community/Camp_Session_Management

@@ -1,47 +1,41 @@
 ---
 type: community
-members: 34
+members: 28
 ---
 
 # Admin Booking & Notifications (1)
 
-**Members:** 34 nodes
+**Members:** 28 nodes
 
 ## Members
-- [[.ApplyCancellationAsync()]] - code - src/CampCenter.Application/Services/AdminBookingService.cs
-- [[.BuildAssignmentsAsync()]] - code - src/CampCenter.Application/Services/AdminBookingService.cs
-- [[.CancelAsync()_1]] - code - src/CampCenter.Application/Services/AdminBookingService.cs
-- [[.ComputeHoldExpiry()]] - code - src/CampCenter.Application/Services/AdminBookingService.cs
-- [[.CreateAsync()_7]] - code - src/CampCenter.Application/Services/AdminBookingService.cs
-- [[.FinalDueDate()]] - code - src/CampCenter.Application/Services/AdminBookingService.cs
-- [[.GetAssignableRoomsAsync()_1]] - code - src/CampCenter.Application/Services/AdminBookingService.cs
-- [[.GetAsync()_2]] - code - src/CampCenter.Application/Services/AdminBookingService.cs
-- [[.GetGroupPageAsync()_1]] - code - src/CampCenter.Application/Services/AdminBookingService.cs
-- [[.GetOccupancyAsync()_1]] - code - src/CampCenter.Application/Services/AdminBookingService.cs
-- [[.GetOrThrowAsync()]] - code - src/CampCenter.Application/Services/AdminBookingService.cs
-- [[.GuardPricing()]] - code - src/CampCenter.Application/Services/AdminBookingService.cs
-- [[.ListAsync()_3]] - code - src/CampCenter.Application/Services/AdminBookingService.cs
-- [[.ParseStatus()]] - code - src/CampCenter.Application/Services/AdminBookingService.cs
-- [[.ReassignAsync()_1]] - code - src/CampCenter.Application/Services/AdminBookingService.cs
-- [[.SaveChangesAsync()_2]] - code - src/CampCenter.Domain/Repositories/IBookingRepository.cs
-- [[.SetPaymentStateAsync()_1]] - code - src/CampCenter.Application/Services/AdminBookingService.cs
-- [[.SetStateAsync()_1]] - code - src/CampCenter.Application/Services/AdminBookingService.cs
-- [[.SetStatusAsync()_3]] - code - src/CampCenter.Application/Services/AdminBookingService.cs
-- [[.ToDto()]] - code - src/CampCenter.Application/Services/AdminBookingService.cs
-- [[.UpdateDietaryNotesAsync()_1]] - code - src/CampCenter.Application/Services/AdminBookingService.cs
-- [[.UpdatePeopleAsync()_1]] - code - src/CampCenter.Application/Services/AdminBookingService.cs
-- [[.UpdatePricingAsync()_1]] - code - src/CampCenter.Application/Services/AdminBookingService.cs
-- [[AdminBookingDto]] - code - src/CampCenter.Application/DTOs/AdminPanel/AdminPanelDtos.cs
-- [[AdminBookingService]] - code - src/CampCenter.Application/Services/AdminBookingService.cs
-- [[CancellationToken_32]] - code
-- [[DateOnly_8]] - code
-- [[DateTime_1]] - code
-- [[Guid_18]] - code
-- [[ILogger_2]] - code
-- [[List_7]] - code
-- [[Task_32]] - code
-- [[int]] - code
-- [[long]] - code
+- [[AdminLayout.tsx]] - code - frontend/src/components/admin/AdminLayout.tsx
+- [[FlagGB()]] - code - frontend/src/components/LanguageSwitcher.tsx
+- [[FlagPL()]] - code - frontend/src/components/LanguageSwitcher.tsx
+- [[IconMoon()]] - code - frontend/src/components/icons.tsx
+- [[IconSun()]] - code - frontend/src/components/icons.tsx
+- [[IconSunSea()]] - code - frontend/src/components/icons.tsx
+- [[Language]] - code - frontend/src/i18n/index.ts
+- [[LanguageSwitcher()]] - code - frontend/src/components/LanguageSwitcher.tsx
+- [[LanguageSwitcher.tsx]] - code - frontend/src/components/LanguageSwitcher.tsx
+- [[Listener_1]] - code - frontend/src/theme.ts
+- [[LoginPage()]] - code - frontend/src/pages/LoginPage.tsx
+- [[LoginPage.tsx]] - code - frontend/src/pages/LoginPage.tsx
+- [[Props_4]] - code - frontend/src/components/PublicHeader.tsx
+- [[PublicHeader()]] - code - frontend/src/components/PublicHeader.tsx
+- [[PublicHeader.tsx]] - code - frontend/src/components/PublicHeader.tsx
+- [[SECTIONS]] - code - frontend/src/components/PublicHeader.tsx
+- [[Theme]] - code - frontend/src/theme.ts
+- [[ThemeToggle()]] - code - frontend/src/components/ThemeToggle.tsx
+- [[ThemeToggle.tsx]] - code - frontend/src/components/ThemeToggle.tsx
+- [[applyTheme()]] - code - frontend/src/theme.ts
+- [[getStoredLanguage()]] - code - frontend/src/i18n/index.ts
+- [[getTheme()]] - code - frontend/src/theme.ts
+- [[index.ts]] - code - frontend/src/i18n/index.ts
+- [[listeners_1]] - code - frontend/src/theme.ts
+- [[setLanguage()]] - code - frontend/src/i18n/index.ts
+- [[subscribeTheme()]] - code - frontend/src/theme.ts
+- [[theme.ts]] - code - frontend/src/theme.ts
+- [[toggleTheme()]] - code - frontend/src/theme.ts
 
 ## Live Query (requires Dataview plugin)
 
@@ -51,26 +45,17 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 23 edges to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
-- 15 edges to [[_COMMUNITY_Integration Test Harness (2)]]
-- 8 edges to [[_COMMUNITY_Admin Booking & Notifications (4)]]
-- 7 edges to [[_COMMUNITY_.GetBlockedRoomIdsAsync]]
-- 5 edges to [[_COMMUNITY_Room Management]]
-- 5 edges to [[_COMMUNITY_Room Mix Calculator Tests]]
-- 5 edges to [[_COMMUNITY_Integration Test Harness (1)]]
-- 4 edges to [[_COMMUNITY_DTOs  Schedule (1)]]
-- 4 edges to [[_COMMUNITY_Public Booking Service (1)]]
-- 2 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (3)]]
-- 2 edges to [[_COMMUNITY_Auth Service & Tokens]]
-- 2 edges to [[_COMMUNITY_Validator Unit Tests]]
-- 2 edges to [[_COMMUNITY_Room Task Management (1)]]
-- 2 edges to [[_COMMUNITY_.AddInfrastructure]]
-- 2 edges to [[_COMMUNITY_BookingStatus]]
-- 1 edge to [[_COMMUNITY_Exception]]
+- 8 edges to [[_COMMUNITY_Frontend Icon Components]]
+- 7 edges to [[_COMMUNITY_useAuth]]
+- 7 edges to [[_COMMUNITY_Public Booking Frontend (1)]]
+- 5 edges to [[_COMMUNITY_Room Closure Management]]
+- 3 edges to [[_COMMUNITY_Frontend Auth & API Client]]
+- 2 edges to [[_COMMUNITY_Frontend App Shell & i18n]]
+- 1 edge to [[_COMMUNITY_Domain & Infra Namespaces]]
 
 ## Top bridge nodes
-- [[AdminBookingService]] - degree 38, connects to 11 communities
-- [[.CreateAsync()_7]] - degree 19, connects to 8 communities
-- [[.BuildAssignmentsAsync()]] - degree 13, connects to 5 communities
-- [[.ReassignAsync()_1]] - degree 13, connects to 5 communities
-- [[.GetOccupancyAsync()_1]] - degree 9, connects to 5 communities
+- [[AdminLayout.tsx]] - degree 19, connects to 6 communities
+- [[LoginPage.tsx]] - degree 10, connects to 3 communities
+- [[PublicHeader.tsx]] - degree 12, connects to 2 communities
+- [[index.ts]] - degree 6, connects to 2 communities
+- [[LanguageSwitcher.tsx]] - degree 11, connects to 1 community

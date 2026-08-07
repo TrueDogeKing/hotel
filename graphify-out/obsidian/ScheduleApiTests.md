@@ -2,7 +2,7 @@
 source_file: "tests/CampCenter.IntegrationTests/ScheduleApiTests.cs"
 type: "code"
 community: "tests / CampCenter.IntegrationTests (1)"
-location: "L9"
+location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -16,6 +16,7 @@ tags:
 - [[.BreakfastsAsync()]] - `method` [EXTRACTED]
 - [[.BulkRetime_PreservesADayChangedIndividually()]] - `method` [EXTRACTED]
 - [[.Calendar_BarSpansFullStayInclusive()]] - `method` [EXTRACTED]
+- [[.ConfirmingAGroup_LaysItsMealsOntoTheTimetable()]] - `method` [EXTRACTED]
 - [[.CreateBookingAsync()]] - `method` [EXTRACTED]
 - [[.DayView_IncludesDepartingGroup()]] - `method` [EXTRACTED]
 - [[.DietaryNotes_AreStoredAndReturnedOnTheGroupSchedule()]] - `method` [EXTRACTED]

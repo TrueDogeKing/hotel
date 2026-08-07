@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/DTOs/AdminPanel/AdminPanelDtos.cs"
 type: "code"
-community: "Admin Bookings Controller & DTOs"
+community: ".GetBlockedRoomIdsAsync"
 location: "L107"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Bookings_Controller__DTOs
+  - community/GetBlockedRoomIdsAsync
 ---
 
 # CreateAdminBookingRequestDto
@@ -18,4 +18,4 @@ tags:
 - [[AdminPanelDtos.cs]] - `contains` [EXTRACTED]
 - [[CreateAdminBookingRequestValidator]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Bookings_Controller__DTOs
+#graphify/code #graphify/EXTRACTED #community/GetBlockedRoomIdsAsync

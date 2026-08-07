@@ -1,17 +1,17 @@
 ---
-source_file: "frontend/src/components/Select.tsx"
+source_file: "frontend/src/components/PublicHeader.tsx"
 type: "code"
-community: "Select Component"
-location: "L8"
+community: "Admin Booking & Notifications (1)"
+location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Select_Component
+  - community/Admin_Booking__Notifications_1
 ---
 
 # Props
 
 ## Connections
-- [[Select.tsx]] - `contains` [EXTRACTED]
+- [[PublicHeader.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Select_Component
+#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_1

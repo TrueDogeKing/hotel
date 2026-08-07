@@ -1,12 +1,12 @@
 ---
 source_file: "tests/CampCenter.UnitTests/Services/HousekeepingServiceTests.cs"
 type: "code"
-community: "20260729224623_RoomCleanings.Designer.cs"
+community: "CampCenter.UnitTests / Services (2)"
 location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/20260729224623_RoomCleaningsDesignercs
+  - community/CampCenterUnitTests_/_Services_2
 ---
 
 # HousekeepingServiceTests
@@ -35,4 +35,4 @@ tags:
 - [[IRoomRepository]] - `references` [EXTRACTED]
 - [[IRoomTaskRepository]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/20260729224623_RoomCleaningsDesignercs
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_2

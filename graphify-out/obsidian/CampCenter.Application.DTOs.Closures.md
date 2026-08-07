@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/DTOs/Closures/ClosureDtos.cs"
 type: "code"
-community: "Validator Unit Tests"
+community: "CampCenter.Application.DTOs.Public"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Validator_Unit_Tests
+  - community/CampCenterApplicationDTOsPublic
 ---
 
 # CampCenter.Application.DTOs.Closures
@@ -21,4 +21,4 @@ tags:
 - [[PublicBookingApiTests.cs]] - `imports` [EXTRACTED]
 - [[RoomsAndClosuresApiTests.cs]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Validator_Unit_Tests
+#graphify/code #graphify/EXTRACTED #community/CampCenterApplicationDTOsPublic

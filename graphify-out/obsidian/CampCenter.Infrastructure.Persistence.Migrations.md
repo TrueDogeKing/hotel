@@ -38,6 +38,8 @@ tags:
 - [[20260806090830_ManualPricingAndPaymentState.cs]] - `contains` [EXTRACTED]
 - [[20260806102552_SupervisorCountsAndRates.Designer.cs]] - `contains` [EXTRACTED]
 - [[20260806102552_SupervisorCountsAndRates.cs]] - `contains` [EXTRACTED]
+- [[20260807113217_RemoveMealTimeSortOrder.Designer.cs]] - `contains` [EXTRACTED]
+- [[20260807113217_RemoveMealTimeSortOrder.cs]] - `contains` [EXTRACTED]
 - [[AppDbContextModelSnapshot.cs]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/EF_Core_Migrations_3

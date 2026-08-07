@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/package.json"
 type: "code"
-community: "RoomConfiguration"
+community: "ESLint Dev Dependencies"
 location: "L25"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RoomConfiguration
+  - community/ESLint_Dev_Dependencies
 ---
 
 # @types/react
@@ -15,4 +15,4 @@ tags:
 - [[@typesreact_1]] - `imports` [EXTRACTED]
 - [[devDependencies]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RoomConfiguration
+#graphify/code #graphify/EXTRACTED #community/ESLint_Dev_Dependencies

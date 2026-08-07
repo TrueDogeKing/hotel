@@ -90,6 +90,7 @@ tags:
 - [[RoomTaskConfiguration.cs]] - `imports` [EXTRACTED]
 - [[RoomTaskRepository.cs]] - `imports` [EXTRACTED]
 - [[RoomTaskService.cs]] - `imports` [EXTRACTED]
+- [[ScheduleApiTests.cs]] - `imports` [EXTRACTED]
 - [[ScheduleConflictTests.cs]] - `imports` [EXTRACTED]
 - [[ScheduleEntry.cs]] - `contains` [EXTRACTED]
 - [[ScheduleEntryConfiguration.cs]] - `imports` [EXTRACTED]

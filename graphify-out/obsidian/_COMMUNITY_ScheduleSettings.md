@@ -21,7 +21,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_CampCenter.UnitTests  Validators]]
+- 1 edge to [[_COMMUNITY_ClosureService]]
 - 1 edge to [[_COMMUNITY_CampCenter.Application  Services (2)]]
 
 ## Top bridge nodes

@@ -8,7 +8,6 @@ public record MealTimeDefaultDto(
     TimeOnly EndTime,
     /// How long one group's sitting lasts within the window.
     int DurationMinutes,
-    int SortOrder,
     bool IsActive,
     uint RowVersion
 );
@@ -18,8 +17,7 @@ public record CreateMealTimeDefaultRequestDto(
     string Label,
     TimeOnly StartTime,
     TimeOnly EndTime,
-    int DurationMinutes,
-    int SortOrder
+    int DurationMinutes
 );
 
 public record UpdateMealTimeDefaultRequestDto(
@@ -28,7 +26,6 @@ public record UpdateMealTimeDefaultRequestDto(
     TimeOnly StartTime,
     TimeOnly EndTime,
     int DurationMinutes,
-    int SortOrder,
     bool IsActive,
     uint RowVersion
 );
@@ -49,7 +46,6 @@ public record BookingMealTimeDto(
     Guid MealTimeDefaultId,
     string MealKind,
     string Label,
-    int SortOrder,
     TimeOnly DefaultStartTime,
     TimeOnly DefaultEndTime,
     /// The window's sitting length; the gap between sittings is MealGapMinutes.

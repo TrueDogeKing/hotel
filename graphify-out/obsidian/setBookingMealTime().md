@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/api/admin.ts"
 type: "code"
-community: "src / api (1)"
-location: "L880"
+community: "Persistence / Migrations (10)"
+location: "L877"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/src_/_api_1
+  - community/Persistence_/_Migrations_10
 ---
 
 # setBookingMealTime()
@@ -15,4 +15,4 @@ tags:
 - [[GroupMealTimes.tsx]] - `imports` [EXTRACTED]
 - [[admin.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/src_/_api_1
+#graphify/code #graphify/EXTRACTED #community/Persistence_/_Migrations_10

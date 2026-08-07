@@ -1724,49 +1724,312 @@ p[role="alert"] {
 
 /* --- Booking wizard + manage page (phase 3) --- */
 
-.wizard,
-.manage {
-  width: min(720px, 100% - 48px);
-  margin: 0 auto 48px;
+/* ==========================================================================
+   Booking flow — the public site's own language, not the panel's.
+   Shares the landing page's shell (.home), header, footer and surface tokens so
+   stepping from the site into a booking never feels like stepping off it.
+   ========================================================================== */
+
+.booking-main {
+  width: min(56rem, 100% - clamp(2rem, 8vw, 5rem));
+  margin: 0 auto;
+  padding: clamp(2rem, 5vw, 3.5rem) 0 clamp(3rem, 7vw, 5rem);
 }
 
-.wizard-steps {
+.booking-intro {
+  text-align: center;
+  max-width: 44rem;
+  margin: 0 auto clamp(2rem, 4vw, 2.75rem);
+}
+.booking-intro h1 {
+  color: var(--accent);
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  text-wrap: balance;
+  margin: 0;
+}
+.booking-intro p {
+  margin: 0.75rem 0 0;
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  text-wrap: pretty;
+}
+
+/* The rates, answered before anything is asked. Pills rather than cards: three
+   short facts, not three things to read. */
+.rate-chips {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  justify-content: center;
+  gap: 0.6rem;
   list-style: none;
   padding: 0;
-  margin: 0 0 24px;
-  font-size: 0.85rem;
+  margin: 1.5rem 0 0;
+}
+.rate-chips li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1rem;
+  padding: 0.6rem 1.1rem;
+  border-radius: var(--r-lg);
+  background: var(--bg-float);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+}
+.rate-chips strong {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--accent);
+  white-space: nowrap;
+}
+.rate-chips span {
+  font-size: 0.8rem;
+  color: var(--text-muted);
 }
 
+/* Numbered steps, the same vocabulary as the landing page's "how it works" —
+   the booking is that sequence, actually being walked. */
+.wizard-steps {
+  display: flex;
+  align-items: flex-start;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+  counter-reset: none;
+}
 .wizard-steps li {
-  padding: 6px 12px;
-  border-radius: 999px;
-  background: color-mix(in oklch, currentColor 8%, transparent);
-  opacity: 0.6;
+  position: relative;
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  text-align: center;
+  min-width: 0;
 }
-
-.wizard-steps li.current {
-  opacity: 1;
+/* The rule joining one step to the next, behind the numbers. */
+.wizard-steps li:not(:first-child)::before {
+  content: "";
+  position: absolute;
+  top: 1.1rem;
+  right: 50%;
+  left: -50%;
+  height: 2px;
+  background: var(--border-strong);
+}
+.wizard-steps li.done::before,
+.wizard-steps li.current::before {
   background: var(--accent);
+}
+.wizard-step-num {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: var(--r-full);
+  background: var(--bg-nav);
+  border: 2px solid var(--border-strong);
+  color: var(--text-muted);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition:
+    background-color var(--dur) var(--ease-out),
+    border-color var(--dur) var(--ease-out),
+    color var(--dur) var(--ease-out);
+}
+.wizard-steps li.done .wizard-step-num,
+.wizard-steps li.current .wizard-step-num {
+  background: var(--accent);
+  border-color: var(--accent);
   color: var(--on-accent);
 }
-
-.wizard-steps li.done {
-  opacity: 0.85;
+.wizard-steps li.current .wizard-step-num {
+  box-shadow: 0 0 0 4px var(--accent-soft);
+}
+.wizard-step-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  line-height: 1.3;
+}
+.wizard-steps li.current .wizard-step-label {
+  color: var(--accent);
 }
 
+/* The step itself: one elevated surface, the same material as the landing
+   page's cards. */
 .wizard-panel {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  align-items: flex-start;
+  align-items: stretch;
+  gap: 1.1rem;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  background: var(--bg-float);
+  border: 1px solid var(--border);
+  border-radius: var(--r-xl);
+  box-shadow: var(--shadow-md);
+  animation: step-in var(--dur-slow) var(--ease-out);
+}
+.wizard-panel > h2 {
+  margin: 0;
+  color: var(--text-strong);
+  font-size: 1.4rem;
+  text-wrap: balance;
+}
+.wizard-stay {
+  margin: -0.6rem 0 0;
+  color: var(--accent);
+  font-weight: 600;
+}
+.wizard-hint {
+  margin: 0;
+  color: var(--text-muted);
+  line-height: 1.6;
+  max-width: 65ch;
+}
+
+@keyframes step-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
+
+/* Counts and the contact form: two columns where there is room, one where there
+   is not, rather than a single tall stack of short fields. */
+.booking-counts,
+.booking-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
+  gap: 0.9rem 1rem;
+  align-items: end;
+}
+.booking-counts label,
+.booking-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+.booking-form-wide {
+  grid-column: 1 / -1;
+}
+.booking-count-total {
+  margin: 0 0 0.6rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+/* What the stay costs. The total is the figure people came for, so it is the
+   one that carries weight. */
+.booking-price {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 2rem;
+  align-items: baseline;
+  padding: 1.1rem 1.25rem;
+  border-radius: var(--r-lg);
+  background: var(--accent-soft);
+  border: 1px solid color-mix(in srgb, var(--accent) 22%, transparent);
+}
+.booking-price-total,
+.booking-price-deposit {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+.booking-price-total {
+  margin-right: auto;
+}
+.booking-price span {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+.booking-price-total strong {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--accent);
+}
+.booking-price-deposit strong {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-strong);
+}
+
+.booking-alert {
+  margin: 0 0 1.25rem;
 }
 
 .wizard-nav {
   display: flex;
-  gap: 12px;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+.wizard-nav.end {
+  justify-content: flex-end;
+}
+/* The step's own forward action: accent-weighted, so "next" never reads as the
+   same thing as "back". */
+.btn-primary {
+  background: var(--accent);
+  color: var(--on-accent);
+  font-weight: 600;
+}
+.btn-primary:hover:not(:disabled) {
+  background: var(--accent-hover);
+}
+.wizard-nav .cta-amber {
+  margin-top: 0;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+.wizard-nav .cta-amber:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+}
+
+@media (max-width: 32rem) {
+  .wizard-steps li:not(.current) .wizard-step-label {
+    /* Four labels never fit a phone; the numbers and the current step carry it. */
+    display: none;
+  }
+  .wizard-nav > button {
+    flex: 1 1 10rem;
+  }
+}
+
+/* The base control sizes are tuned for the admin panel's density. This page is
+   public and mostly used on a phone, so its controls take the touch minimum. */
+@media (pointer: coarse) {
+  .booking-page .wizard-nav > button,
+  .booking-page .manage-actions > button,
+  .booking-counts input,
+  .booking-form input,
+  .booking-form textarea {
+    min-height: 2.75rem;
+  }
+  .booking-page .mix-stepper button {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wizard-panel {
+    animation: none;
+  }
 }
 
 .session-cards {
@@ -1844,46 +2107,75 @@ p[role="alert"] {
 .summary-list {
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: 6px 20px;
+  gap: 0.55rem 1.5rem;
   margin: 0;
+  padding: 1rem 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
 }
 
 .summary-list dt {
-  opacity: 0.7;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-weight: 600;
 }
 
 .summary-list dd {
   margin: 0;
+  color: var(--text-strong);
 }
 
 .manage-banner {
-  padding: 12px 16px;
-  border-radius: 10px;
-  background: color-mix(in oklch, var(--success) 15%, transparent);
+  margin: 0;
+  padding: 0.85rem 1.1rem;
+  border-radius: var(--r-md);
+  background: var(--success-soft);
+  border: 1px solid color-mix(in srgb, var(--success) 30%, transparent);
+  color: var(--text-strong);
+  font-weight: 500;
+}
+
+/* Dates and status read as one line: the stay, and where it stands. */
+.manage-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1rem;
+}
+.manage-head h1 {
+  margin: 0;
+  color: var(--accent);
+  font-size: clamp(1.5rem, 3.5vw, 1.9rem);
 }
 
 .status-badge {
   display: inline-block;
-  padding: 4px 12px;
-  border-radius: 999px;
+  margin: 0;
+  padding: 0.25rem 0.85rem;
+  border-radius: var(--r-full);
   font-size: 0.85rem;
-  background: color-mix(in oklch, currentColor 10%, transparent);
+  font-weight: 600;
+  background: var(--bg-nav);
+  border: 1px solid var(--border-strong);
+  color: var(--text-muted);
 }
 
 .status-badge.status-confirmed {
-  background: color-mix(in oklch, var(--success) 20%, transparent);
+  background: var(--success-soft);
+  border-color: color-mix(in srgb, var(--success) 35%, transparent);
+  color: var(--success);
 }
 
 .status-badge.status-cancelled {
-  background: color-mix(in oklch, var(--danger) 20%, transparent);
+  background: var(--danger-soft);
+  border-color: color-mix(in srgb, var(--danger) 35%, transparent);
+  color: var(--danger);
 }
 
 .manage-actions {
-  margin-top: 20px;
   display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 0.75rem;
 }
 
 /* --- Dashboard tiles: the way into every admin section ---
@@ -2381,8 +2673,9 @@ p[role="alert"] {
 
 /* Heading over each of the wizard's two room pickers. */
 .mix-heading {
-  margin: 1rem 0 0.25rem;
+  margin: 0.5rem 0 -0.35rem;
   font-size: 0.95rem;
+  color: var(--text-strong);
 }
 
 /* Rates panel above the bookings table, and the per-booking price editor inside
@@ -2493,6 +2786,9 @@ p[role="alert"] {
   align-items: center;
   justify-content: space-between;
   gap: 1.5rem;
+  /* A flex child of .home, so without this the page below it compresses the
+     header — the booking flow squashed it to half its height. */
+  flex: none;
   height: 5rem;
   padding: 0 clamp(1rem, 4vw, 2.5rem);
   background: color-mix(in srgb, var(--bg-body) 88%, transparent);

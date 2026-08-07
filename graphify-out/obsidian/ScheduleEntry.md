@@ -15,7 +15,7 @@ tags:
 - [[Chip]] - `references` [EXTRACTED]
 - [[DayTimetable.tsx]] - `imports` [EXTRACTED]
 - [[GroupSchedulePanel.tsx]] - `imports` [EXTRACTED]
-- [[Props_12]] - `references` [EXTRACTED]
+- [[Props_13]] - `references` [EXTRACTED]
 - [[ScheduleEntryForm.tsx]] - `imports` [EXTRACTED]
 - [[admin.ts]] - `contains` [EXTRACTED]
 

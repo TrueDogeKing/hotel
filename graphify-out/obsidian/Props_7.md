@@ -1,18 +1,19 @@
 ---
-source_file: "frontend/src/components/admin/DayTimetable.tsx"
+source_file: "frontend/src/components/admin/BookingGroupSection.tsx"
 type: "code"
-community: "Domain & Infra Namespaces"
-location: "L7"
+community: "ScheduleEntry"
+location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Domain__Infra_Namespaces
+  - community/ScheduleEntry
 ---
 
 # Props
 
 ## Connections
-- [[DayTimetable.tsx]] - `contains` [EXTRACTED]
-- [[ScheduleDay]] - `references` [EXTRACTED]
+- [[BookingGroupCategory]] - `references` [EXTRACTED]
+- [[BookingGroupSection.tsx]] - `contains` [EXTRACTED]
+- [[BookingStatus]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Domain__Infra_Namespaces
+#graphify/code #graphify/EXTRACTED #community/ScheduleEntry

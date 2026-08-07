@@ -16,7 +16,7 @@ tags:
 - [[AdminBookingsPage.tsx]] - `imports` [EXTRACTED]
 - [[AdminDashboardPage.tsx]] - `imports` [EXTRACTED]
 - [[GroupRooms.tsx]] - `imports` [EXTRACTED]
-- [[Props_5]] - `references` [EXTRACTED]
+- [[Props_6]] - `references` [EXTRACTED]
 - [[admin.ts]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/useAuth

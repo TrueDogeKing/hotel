@@ -15,6 +15,7 @@ tags:
 - [[.BreakfastsAsync()]] - `references` [EXTRACTED]
 - [[.BulkRetime_PreservesADayChangedIndividually()]] - `references` [EXTRACTED]
 - [[.Calendar_BarSpansFullStayInclusive()]] - `references` [EXTRACTED]
+- [[.ConfirmingAGroup_LaysItsMealsOntoTheTimetable()]] - `references` [EXTRACTED]
 - [[.CreateBookingAsync()]] - `references` [EXTRACTED]
 - [[.DayView_IncludesDepartingGroup()]] - `references` [EXTRACTED]
 - [[.DietaryNotes_AreStoredAndReturnedOnTheGroupSchedule()]] - `references` [EXTRACTED]

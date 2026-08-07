@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "AdminPricingApiTests"
+community: "IntegrationTestBase"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AdminPricingApiTests
+  - community/IntegrationTestBase
 ---
 
 # ICollectionFixture
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[ApiCollection]] - `implements` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AdminPricingApiTests
+#graphify/code #graphify/EXTRACTED #community/IntegrationTestBase

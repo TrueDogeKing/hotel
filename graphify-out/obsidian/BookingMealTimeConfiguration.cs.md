@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Persistence/Configurations/BookingMealTimeConfiguration.cs"
 type: "code"
-community: "BookingMealTimeConfiguration"
+community: "GroupRooms.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/BookingMealTimeConfiguration
+  - community/GroupRoomstsx
 ---
 
 # BookingMealTimeConfiguration.cs
@@ -16,4 +16,4 @@ tags:
 - [[CampCenter.Domain.Entities]] - `imports` [EXTRACTED]
 - [[CampCenter.Infrastructure.Persistence.Configurations]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/BookingMealTimeConfiguration
+#graphify/code #graphify/EXTRACTED #community/GroupRoomstsx

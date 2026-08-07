@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Validator Unit Tests"
+community: "CampCenter.UnitTests / Services (3)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Validator_Unit_Tests
+  - community/CampCenterUnitTests_/_Services_3
 ---
 
 # CancellationToken
@@ -14,5 +14,6 @@ tags:
 - [[.Calendar()]] - `references` [EXTRACTED]
 - [[.Closures()]] - `references` [EXTRACTED]
 - [[.Get()_4]] - `references` [EXTRACTED]
+- [[.Pricing()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Validator_Unit_Tests
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_3

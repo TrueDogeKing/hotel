@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "GroupRooms.tsx"
+community: "AppDbContext"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/GroupRoomstsx
+  - community/AppDbContext
 ---
 
 # ModelBuilder
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.OnModelCreating()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/GroupRoomstsx
+#graphify/code #graphify/EXTRACTED #community/AppDbContext

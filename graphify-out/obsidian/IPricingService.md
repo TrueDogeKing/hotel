@@ -20,5 +20,6 @@ tags:
 - [[IPricingService.cs]] - `contains` [EXTRACTED]
 - [[PricingController]] - `references` [EXTRACTED]
 - [[PricingService]] - `implements` [EXTRACTED]
+- [[PublicAvailabilityController]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_3

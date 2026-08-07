@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/api/admin.ts"
 type: "code"
-community: "GroupRooms.tsx"
+community: "useAuth"
 location: "L225"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/GroupRoomstsx
+  - community/useAuth
 ---
 
 # AssignableRoom
@@ -15,4 +15,4 @@ tags:
 - [[GroupRooms.tsx]] - `imports` [EXTRACTED]
 - [[admin.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/GroupRoomstsx
+#graphify/code #graphify/EXTRACTED #community/useAuth

@@ -1,11 +1,11 @@
 ---
 type: community
-members: 23
+members: 26
 ---
 
 # Auth Controller (1)
 
-**Members:** 23 nodes
+**Members:** 26 nodes
 
 ## Members
 - [[.BuildCookieOptions()]] - code - src/CampCenter.Api/Controllers/AuthController.cs
@@ -29,8 +29,11 @@ members: 23
 - [[IAuthService]] - code - src/CampCenter.Application/Interfaces/IAuthService.cs
 - [[IValidator_6]] - code
 - [[ProducesResponseType_11]] - code
+- [[RefreshTokenSettings]] - code - src/CampCenter.Infrastructure/Auth/RefreshTokenSettings.cs
+- [[RefreshTokenSettings.cs]] - code - src/CampCenter.Infrastructure/Auth/RefreshTokenSettings.cs
 - [[Task_13]] - code
 - [[Task_18]] - code
+- [[string_9]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -40,13 +43,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_CampCenter.UnitTests  Validators]]
 - 4 edges to [[_COMMUNITY_Auth Service & Tokens]]
-- 1 edge to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
+- 3 edges to [[_COMMUNITY_Persistence  Migrations (2)]]
+- 2 edges to [[_COMMUNITY_Public Booking Service (2)]]
+- 1 edge to [[_COMMUNITY_Admin Booking & Notifications (2)]]
 - 1 edge to [[_COMMUNITY_CampCenter.Application  Services (1)]]
 
 ## Top bridge nodes
-- [[AuthController]] - degree 12, connects to 3 communities
+- [[AuthController]] - degree 12, connects to 2 communities
 - [[IAuthService]] - degree 6, connects to 2 communities
 - [[.LoginAsync()]] - degree 6, connects to 2 communities
 - [[.Login()]] - degree 10, connects to 1 community

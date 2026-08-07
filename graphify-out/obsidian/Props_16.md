@@ -1,17 +1,17 @@
 ---
-source_file: "frontend/src/components/calendar/DayCalendar.tsx"
+source_file: "frontend/src/components/calendar/DateRangeField.tsx"
 type: "code"
-community: "src / utils"
-location: "L5"
+community: "ScheduleEntry"
+location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/src_/_utils
+  - community/ScheduleEntry
 ---
 
 # Props
 
 ## Connections
-- [[DayCalendar.tsx]] - `contains` [EXTRACTED]
+- [[DateRangeField.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/src_/_utils
+#graphify/code #graphify/EXTRACTED #community/ScheduleEntry

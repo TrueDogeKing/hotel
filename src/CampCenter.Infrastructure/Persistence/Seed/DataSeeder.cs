@@ -68,7 +68,6 @@ public static class DataSeeder
                 Label = "Śniadanie",
                 StartTime = new TimeOnly(8, 0),
                 EndTime = new TimeOnly(9, 0),
-                SortOrder = 1,
                 CreatedAt = now,
             },
             new MealTimeDefault
@@ -78,7 +77,6 @@ public static class DataSeeder
                 Label = "Obiad",
                 StartTime = new TimeOnly(13, 0),
                 EndTime = new TimeOnly(14, 0),
-                SortOrder = 2,
                 CreatedAt = now,
             },
             new MealTimeDefault
@@ -88,7 +86,6 @@ public static class DataSeeder
                 Label = "Kolacja",
                 StartTime = new TimeOnly(18, 0),
                 EndTime = new TimeOnly(19, 0),
-                SortOrder = 3,
                 CreatedAt = now,
             }
         );

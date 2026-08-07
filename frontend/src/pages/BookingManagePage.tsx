@@ -1,7 +1,8 @@
 import { useEffect, useMemo, useState } from "react";
-import { Link, useLocation, useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import LanguageSwitcher from "../components/LanguageSwitcher";
+import PublicHeader from "../components/PublicHeader";
+import PublicFooter from "../components/PublicFooter";
 import ConfirmDialog from "../components/ConfirmDialog";
 import { formatZl } from "../api/admin";
 import { cancelBooking, getBooking, type BookingDetails } from "../api/public";
@@ -66,81 +67,89 @@ export default function BookingManagePage() {
   }
 
   return (
-    <main className="public-page">
-      <header className="public-header">
-        <Link className="auth-brand" to="/">
-          <span className="mark">C</span> {t("common.appName")}
-        </Link>
-        <LanguageSwitcher />
-      </header>
+    <div className="home booking-page">
+      <PublicHeader variant="sub" />
 
-      <section className="manage">
-        {notFound && <p role="alert">{t("manage.notFound")}</p>}
-        {!booking && !notFound && <p>{t("common.loading")}</p>}
+      <main className="booking-main">
+        <section className="wizard-panel manage">
+          {notFound && <p role="alert">{t("manage.notFound")}</p>}
+          {!booking && !notFound && <p>{t("common.loading")}</p>}
 
-        {booking && (
-          <>
-            {justCreated && <p className="manage-banner">{t("manage.created")}</p>}
-            <h1>
-              {formatDate(booking.startDate)} – {formatDate(booking.endDate)}
-            </h1>
-            <p className={`status-badge status-${booking.status.toLowerCase()}`}>
-              {t(`manage.statuses.${booking.status}`)}
-            </p>
-
-            <dl className="summary-list">
-              <dt>{t("manage.dates")}</dt>
-              <dd>
-                {formatDate(booking.startDate)} – {formatDate(booking.endDate)}
-              </dd>
-              <dt>{t("manage.organization")}</dt>
-              <dd>{booking.organizationName}</dd>
-              <dt>{t("manage.headcount")}</dt>
-              <dd>{booking.headcount}</dd>
-              <dt>{t("manage.rooms")}</dt>
-              <dd>
-                {Object.entries(booking.roomCounts)
-                  .sort(([a], [b]) => Number(b) - Number(a))
-                  .map(([cap, count]) => t("wizard.roomLine", { count, capacity: cap }))
-                  .join(", ")}
-              </dd>
-              <dt>{t("manage.total")}</dt>
-              <dd>{formatZl(booking.totalGrosze)}</dd>
-              <dt>{t("manage.deposit")}</dt>
-              <dd>{formatZl(booking.depositGrosze)}</dd>
-              {booking.status === "PendingDeposit" && booking.holdExpiresAt && (
-                <>
-                  <dt>{t("manage.holdExpires")}</dt>
-                  <dd>{dateTimeFormatter.format(new Date(booking.holdExpiresAt))}</dd>
-                </>
-              )}
-              {(booking.status === "PendingDeposit" || booking.status === "Confirmed") && (
-                <>
-                  <dt>{t("manage.finalDue")}</dt>
-                  <dd>{formatDate(booking.finalPaymentDueDate)}</dd>
-                </>
-              )}
-            </dl>
-
-            <p className="pay-offline">{t("manage.payOffline")}</p>
-
-            {error && <p role="alert">{error}</p>}
-
-            {booking.status === "PendingDeposit" && (
-              <div className="manage-actions">
-                <button type="button" onClick={() => setConfirmCancel(true)}>
-                  {t("manage.cancel")}
-                </button>
+          {booking && (
+            <>
+              {justCreated && <p className="manage-banner">{t("manage.created")}</p>}
+              <div className="manage-head">
+                <h1>
+                  {formatDate(booking.startDate)} – {formatDate(booking.endDate)}
+                </h1>
+                <p className={`status-badge status-${booking.status.toLowerCase()}`}>
+                  {t(`manage.statuses.${booking.status}`)}
+                </p>
               </div>
-            )}
 
-            {/* The camp programme only exists once the booking is confirmed. */}
-            {token && (booking.status === "Confirmed" || booking.status === "Completed") && (
-              <BookingSchedule token={token} />
-            )}
-          </>
-        )}
-      </section>
+              <dl className="summary-list">
+                <dt>{t("manage.dates")}</dt>
+                <dd>
+                  {formatDate(booking.startDate)} – {formatDate(booking.endDate)}
+                </dd>
+                <dt>{t("manage.organization")}</dt>
+                <dd>{booking.organizationName}</dd>
+                <dt>{t("manage.headcount")}</dt>
+                <dd>{booking.headcount}</dd>
+                <dt>{t("manage.rooms")}</dt>
+                <dd>
+                  {Object.entries(booking.roomCounts)
+                    .sort(([a], [b]) => Number(b) - Number(a))
+                    .map(([cap, count]) => t("wizard.roomLine", { count, capacity: cap }))
+                    .join(", ")}
+                </dd>
+                {booking.status === "PendingDeposit" && booking.holdExpiresAt && (
+                  <>
+                    <dt>{t("manage.holdExpires")}</dt>
+                    <dd>{dateTimeFormatter.format(new Date(booking.holdExpiresAt))}</dd>
+                  </>
+                )}
+                {(booking.status === "PendingDeposit" || booking.status === "Confirmed") && (
+                  <>
+                    <dt>{t("manage.finalDue")}</dt>
+                    <dd>{formatDate(booking.finalPaymentDueDate)}</dd>
+                  </>
+                )}
+              </dl>
+
+              <div className="booking-price">
+                <div className="booking-price-total">
+                  <span>{t("manage.total")}</span>
+                  <strong>{formatZl(booking.totalGrosze)}</strong>
+                </div>
+                <div className="booking-price-deposit">
+                  <span>{t("manage.deposit")}</span>
+                  <strong>{formatZl(booking.depositGrosze)}</strong>
+                </div>
+              </div>
+
+              <p className="wizard-hint">{t("manage.payOffline")}</p>
+
+              {error && <p role="alert">{error}</p>}
+
+              {booking.status === "PendingDeposit" && (
+                <div className="manage-actions">
+                  <button type="button" onClick={() => setConfirmCancel(true)}>
+                    {t("manage.cancel")}
+                  </button>
+                </div>
+              )}
+
+              {/* The camp programme only exists once the booking is confirmed. */}
+              {token && (booking.status === "Confirmed" || booking.status === "Completed") && (
+                <BookingSchedule token={token} />
+              )}
+            </>
+          )}
+        </section>
+      </main>
+
+      <PublicFooter />
 
       {confirmCancel && (
         <ConfirmDialog
@@ -152,6 +161,6 @@ export default function BookingManagePage() {
           onCancel={() => setConfirmCancel(false)}
         />
       )}
-    </main>
+    </div>
   );
 }

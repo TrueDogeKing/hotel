@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: ".CreateClient"
+community: "PasswordRules"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateClient
+  - community/PasswordRules
 ---
 
 # HttpClient
@@ -15,4 +15,4 @@ tags:
 - [[.CreateClient()]] - `references` [EXTRACTED]
 - [[.CreateClientForAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateClient
+#graphify/code #graphify/EXTRACTED #community/PasswordRules

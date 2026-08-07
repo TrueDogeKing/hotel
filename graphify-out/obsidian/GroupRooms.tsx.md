@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/components/admin/GroupRooms.tsx"
 type: "code"
-community: "GroupRooms.tsx"
+community: "useAuth"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/GroupRoomstsx
+  - community/useAuth
 ---
 
 # GroupRooms.tsx
@@ -19,11 +19,11 @@ tags:
 - [[Draft]] - `contains` [EXTRACTED]
 - [[GroupRooms()]] - `contains` [EXTRACTED]
 - [[GroupSchedulePanel.tsx]] - `imports_from` [EXTRACTED]
-- [[Props_10]] - `contains` [EXTRACTED]
+- [[Props_11]] - `contains` [EXTRACTED]
 - [[admin.ts]] - `imports_from` [EXTRACTED]
 - [[getAdminBooking()]] - `imports` [EXTRACTED]
 - [[getAssignableRooms()]] - `imports` [EXTRACTED]
 - [[reassignBooking()]] - `imports` [EXTRACTED]
 - [[useAuth()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/GroupRoomstsx
+#graphify/code #graphify/EXTRACTED #community/useAuth

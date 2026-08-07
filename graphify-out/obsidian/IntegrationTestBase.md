@@ -1,12 +1,12 @@
 ---
 source_file: "tests/CampCenter.IntegrationTests/ApiCollection.cs"
 type: "code"
-community: "AdminPricingApiTests"
+community: "IntegrationTestBase"
 location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AdminPricingApiTests
+  - community/IntegrationTestBase
 ---
 
 # IntegrationTestBase
@@ -28,4 +28,4 @@ tags:
 - [[UsersAndRolesApiTests]] - `inherits` [EXTRACTED]
 - [[string_13]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AdminPricingApiTests
+#graphify/code #graphify/EXTRACTED #community/IntegrationTestBase

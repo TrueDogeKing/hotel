@@ -1,22 +1,25 @@
 ---
 type: community
-members: 9
+members: 12
 ---
 
 # ClosureValidatorsTests
 
-**Members:** 9 nodes
+**Members:** 12 nodes
 
 ## Members
-- [[.SendAsync()_1]] - code - src/CampCenter.Infrastructure/Email/SmtpEmailSender.cs
-- [[CampCenter.Infrastructure.Email]] - code - src/CampCenter.Infrastructure/Email/EmailSettings.cs
-- [[CancellationToken_56]] - code
-- [[EmailSettings]] - code - src/CampCenter.Infrastructure/Email/EmailSettings.cs
-- [[EmailSettings.cs]] - code - src/CampCenter.Infrastructure/Email/EmailSettings.cs
-- [[SmtpEmailSender]] - code - src/CampCenter.Infrastructure/Email/SmtpEmailSender.cs
-- [[SmtpEmailSender.cs]] - code - src/CampCenter.Infrastructure/Email/SmtpEmailSender.cs
-- [[Task_56]] - code
-- [[string_10]] - code
+- [[.GetAvailabilityAsync()]] - code - src/CampCenter.Application/Interfaces/IAvailabilityService.cs
+- [[.GetBlockedRoomIdsAsync()]] - code - src/CampCenter.Application/Interfaces/IAvailabilityService.cs
+- [[.GetCalendarAsync()]] - code - src/CampCenter.Application/Interfaces/IAvailabilityService.cs
+- [[.GetCenterClosureReasonAsync()]] - code - src/CampCenter.Application/Interfaces/IAvailabilityService.cs
+- [[.GetFreeRoomsByCapacityAsync()]] - code - src/CampCenter.Application/Interfaces/IAvailabilityService.cs
+- [[CancellationToken_19]] - code
+- [[DateOnly_5]] - code
+- [[Dictionary]] - code
+- [[Guid_10]] - code
+- [[HashSet]] - code
+- [[IAvailabilityService]] - code - src/CampCenter.Application/Interfaces/IAvailabilityService.cs
+- [[Task_19]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -26,12 +29,15 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_Admin Booking & Notifications (4)]]
-- 1 edge to [[_COMMUNITY_Application Namespaces & DTOs]]
-- 1 edge to [[_COMMUNITY_Public Booking Service (2)]]
+- 7 edges to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
+- 6 edges to [[_COMMUNITY_Public Booking Service (1)]]
+- 3 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (3)]]
+- 1 edge to [[_COMMUNITY_CampCenter.Application.DTOs.Public]]
+- 1 edge to [[_COMMUNITY_Room Management]]
 
 ## Top bridge nodes
-- [[SmtpEmailSender]] - degree 4, connects to 1 community
-- [[.SendAsync()_1]] - degree 4, connects to 1 community
-- [[CampCenter.Infrastructure.Email]] - degree 3, connects to 1 community
-- [[SmtpEmailSender.cs]] - degree 3, connects to 1 community
+- [[IAvailabilityService]] - degree 10, connects to 5 communities
+- [[.GetBlockedRoomIdsAsync()]] - degree 10, connects to 2 communities
+- [[.GetFreeRoomsByCapacityAsync()]] - degree 9, connects to 2 communities
+- [[.GetAvailabilityAsync()]] - degree 6, connects to 2 communities
+- [[.GetCalendarAsync()]] - degree 6, connects to 2 communities

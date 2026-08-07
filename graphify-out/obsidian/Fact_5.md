@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "PasswordRules"
+community: "src / api (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PasswordRules
+  - community/src_/_api_2
 ---
 
 # Fact
@@ -19,4 +19,4 @@ tags:
 - [[.ParallelBookings_ForTheLastRooms_ExactlyOneWins()]] - `references` [EXTRACTED]
 - [[.UnknownManageToken_Returns404()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PasswordRules
+#graphify/code #graphify/EXTRACTED #community/src_/_api_2

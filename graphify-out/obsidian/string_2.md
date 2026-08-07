@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.Application.DTOs.Public"
+community: "Public Booking Service (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterApplicationDTOsPublic
+  - community/Public_Booking_Service_2
 ---
 
 # string
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[RateLimitPolicies]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterApplicationDTOsPublic
+#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_2

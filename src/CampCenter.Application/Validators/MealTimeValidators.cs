@@ -14,7 +14,6 @@ public class CreateMealTimeDefaultRequestValidator
             .Must(MealTimeRules.BeAMealKind)
             .WithMessage(MealTimeRules.MealKindMessage);
         RuleFor(x => x.Label).NotEmpty().MaximumLength(128);
-        RuleFor(x => x.SortOrder).GreaterThanOrEqualTo(0);
         RuleFor(x => x.DurationMinutes)
             .InclusiveBetween(5, 480)
             .WithMessage(MealTimeRules.DurationMessage);
@@ -34,7 +33,6 @@ public class UpdateMealTimeDefaultRequestValidator
             .Must(MealTimeRules.BeAMealKind)
             .WithMessage(MealTimeRules.MealKindMessage);
         RuleFor(x => x.Label).NotEmpty().MaximumLength(128);
-        RuleFor(x => x.SortOrder).GreaterThanOrEqualTo(0);
         RuleFor(x => x.DurationMinutes)
             .InclusiveBetween(5, 480)
             .WithMessage(MealTimeRules.DurationMessage);

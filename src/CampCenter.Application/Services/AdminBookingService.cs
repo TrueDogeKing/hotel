@@ -180,20 +180,7 @@ public class AdminBookingService : IAdminBookingService
 
         // Fill the stay's meals straight away, so a new group arrives with its
         // programme already laid out instead of waiting on a manual generate step.
-        // Never fail the create over it — the booking is already committed, and the
-        // schedule page's backfill action remains the recovery path.
-        try
-        {
-            await _schedule.GenerateMealsForBookingAsync(booking.Id, cancellationToken);
-        }
-        catch (Exception ex) when (ex is not OperationCanceledException)
-        {
-            _logger.LogError(
-                ex,
-                "Meal generation failed for admin-created booking {BookingId}.",
-                booking.Id
-            );
-        }
+        await GenerateMealsSafelyAsync(booking.Id, "admin-created", cancellationToken);
 
         return await GetAsync(booking.Id, cancellationToken);
     }
@@ -276,7 +263,46 @@ public class AdminBookingService : IAdminBookingService
             target == BookingStatus.PendingDeposit ? ComputeHoldExpiry(booking.StartDate) : null;
 
         await _bookings.SaveChangesAsync(cancellationToken);
+
+        // Confirming a group is what puts it on the kitchen's timetable: the meals
+        // are seated into a sitting of their own and written across the stay. A
+        // booking made through the public wizard has none until this moment — it
+        // was only ever generated on create or when a payment came in, so a group
+        // confirmed by hand used to end up confirmed with an empty programme.
+        //
+        // Generation is idempotent and leaves deleted meals deleted, so a booking
+        // that already has its programme is unaffected.
+        if (target == BookingStatus.Confirmed)
+        {
+            await GenerateMealsSafelyAsync(id, "confirmed by status change", cancellationToken);
+        }
+
         return await GetAsync(id, cancellationToken);
+    }
+
+    /// Lays the stay's meals onto the timetable, and never lets that failure take
+    /// down the change that triggered it: the booking is already saved by this
+    /// point, and the schedule page's "generate missing meals" action is the
+    /// recovery path.
+    private async Task GenerateMealsSafelyAsync(
+        Guid bookingId,
+        string context,
+        CancellationToken cancellationToken
+    )
+    {
+        try
+        {
+            await _schedule.GenerateMealsForBookingAsync(bookingId, cancellationToken);
+        }
+        catch (Exception ex) when (ex is not OperationCanceledException)
+        {
+            _logger.LogError(
+                ex,
+                "Meal generation failed for booking {BookingId} ({Context}).",
+                bookingId,
+                context
+            );
+        }
     }
 
     /// A rate above this is a typo (10 000 zł per person per night), not a price.
@@ -464,21 +490,13 @@ public class AdminBookingService : IAdminBookingService
         {
             // Confirming used to happen in the payment webhook, which generated the
             // stay's meals and told the group it had a place. Both still have to
-            // happen — this is now the only path that confirms a public booking.
-            // Neither may fail the save: the schedule page can backfill meals, and a
-            // missed email is recoverable by hand.
-            try
-            {
-                await _schedule.GenerateMealsForBookingAsync(booking.Id, cancellationToken);
-            }
-            catch (Exception ex) when (ex is not OperationCanceledException)
-            {
-                _logger.LogError(
-                    ex,
-                    "Meal generation failed for booking {BookingId} confirmed by payment record.",
-                    booking.Id
-                );
-            }
+            // happen. Neither may fail the save: the schedule page can backfill
+            // meals, and a missed email is recoverable by hand.
+            await GenerateMealsSafelyAsync(
+                booking.Id,
+                "confirmed by payment record",
+                cancellationToken
+            );
 
             try
             {

@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Api/Controllers/AuthController.cs"
 type: "code"
-community: "CampCenter.UnitTests / Validators"
+community: "Public Booking Service (2)"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Validators
+  - community/Public_Booking_Service_2
 ---
 
 # CampCenter.Api.Controllers
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[AuthController.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Validators
+#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_2

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/CampCenter.IntegrationTests/RoomsAndClosuresApiTests.cs"
 type: "code"
-community: "IntegrationTestBase"
+community: "RoomsAndClosuresApiTests"
 location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/IntegrationTestBase
+  - community/RoomsAndClosuresApiTests
 ---
 
 # RoomsAndClosuresApiTests
@@ -18,4 +18,4 @@ tags:
 - [[IntegrationTestBase]] - `inherits` [EXTRACTED]
 - [[RoomsAndClosuresApiTests.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/IntegrationTestBase
+#graphify/code #graphify/EXTRACTED #community/RoomsAndClosuresApiTests

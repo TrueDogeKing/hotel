@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/package.json"
 type: "concept"
-community: "ESLint Dev Dependencies"
+community: ".CreateWorkerAsync"
 location: "L29"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/ESLint_Dev_Dependencies
+  - community/CreateWorkerAsync
 ---
 
 # eslint-plugin-react-hooks
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[eslint-plugin-react-hooks]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/ESLint_Dev_Dependencies
+#graphify/concept #graphify/EXTRACTED #community/CreateWorkerAsync

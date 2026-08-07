@@ -1,28 +1,24 @@
 ---
 type: community
-members: 15
+members: 11
 ---
 
 # RoomCleaningRepository
 
-**Members:** 15 nodes
+**Members:** 11 nodes
 
 ## Members
-- [[.CreateAsync()_10]] - code - src/CampCenter.Application/Services/MealTimeService.cs
-- [[.DeleteAsync()_6]] - code - src/CampCenter.Application/Services/MealTimeService.cs
-- [[.GetAllAsync()_4]] - code - src/CampCenter.Application/Services/MealTimeService.cs
-- [[.GetOrThrowAsync()_2]] - code - src/CampCenter.Application/Services/MealTimeService.cs
-- [[.GuardTimes()]] - code - src/CampCenter.Application/Services/MealTimeService.cs
-- [[.ParseMealKind()]] - code - src/CampCenter.Application/Services/MealTimeService.cs
-- [[.ToDto()_2]] - code - src/CampCenter.Application/Services/MealTimeService.cs
-- [[.UpdateAsync()_6]] - code - src/CampCenter.Application/Services/MealTimeService.cs
-- [[CancellationToken_38]] - code
-- [[Guid_23]] - code
-- [[List_13]] - code
-- [[MealTimeDefaultDto]] - code - src/CampCenter.Application/DTOs/Schedule/MealTimeDtos.cs
-- [[MealTimeService]] - code - src/CampCenter.Application/Services/MealTimeService.cs
-- [[Task_38]] - code
-- [[TimeOnly_2]] - code
+- [[.Down()_3]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/20260727123803_ScheduleAndMealTimes.cs
+- [[.Down()_10]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/20260802130913_MakeRoomTaskRoomOptional.cs
+- [[.Up()_3]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/20260727123803_ScheduleAndMealTimes.cs
+- [[.Up()_10]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/20260802130913_MakeRoomTaskRoomOptional.cs
+- [[20260727123803_ScheduleAndMealTimes.cs]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/20260727123803_ScheduleAndMealTimes.cs
+- [[20260802130913_MakeRoomTaskRoomOptional.cs]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/20260802130913_MakeRoomTaskRoomOptional.cs
+- [[MakeRoomTaskRoomOptional_1]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/20260802130913_MakeRoomTaskRoomOptional.cs
+- [[Migration]] - code
+- [[MigrationBuilder_3]] - code
+- [[MigrationBuilder_10]] - code
+- [[ScheduleAndMealTimes_1]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/20260727123803_ScheduleAndMealTimes.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -32,13 +28,21 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 12 edges to [[_COMMUNITY_AvailabilityService]]
-- 8 edges to [[_COMMUNITY_src  api (2)]]
-- 1 edge to [[_COMMUNITY_Exception]]
+- 2 edges to [[_COMMUNITY_EF Core Migrations (3)]]
+- 1 edge to [[_COMMUNITY_EF Core Migrations (4)]]
+- 1 edge to [[_COMMUNITY_EF Core Migrations (2)]]
+- 1 edge to [[_COMMUNITY_Persistence  Migrations (1)]]
+- 1 edge to [[_COMMUNITY_Persistence  Migrations (3)]]
+- 1 edge to [[_COMMUNITY_Persistence  Migrations (4)]]
+- 1 edge to [[_COMMUNITY_Persistence  Migrations (5)]]
+- 1 edge to [[_COMMUNITY_Persistence  Migrations (6)]]
+- 1 edge to [[_COMMUNITY_Persistence  Migrations (7)]]
+- 1 edge to [[_COMMUNITY_AdminUserRole]]
+- 1 edge to [[_COMMUNITY_ClosureValidatorsTests_1]]
+- 1 edge to [[_COMMUNITY_SupervisorCountsAndRates]]
+- 1 edge to [[_COMMUNITY_RoomCleaningRepository_1]]
 
 ## Top bridge nodes
-- [[MealTimeService]] - degree 11, connects to 3 communities
-- [[.UpdateAsync()_6]] - degree 11, connects to 2 communities
-- [[.CreateAsync()_10]] - degree 10, connects to 2 communities
-- [[.DeleteAsync()_6]] - degree 9, connects to 2 communities
-- [[MealTimeDefaultDto]] - degree 8, connects to 1 community
+- [[Migration]] - degree 14, connects to 12 communities
+- [[20260727123803_ScheduleAndMealTimes.cs]] - degree 2, connects to 1 community
+- [[20260802130913_MakeRoomTaskRoomOptional.cs]] - degree 2, connects to 1 community

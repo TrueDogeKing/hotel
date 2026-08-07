@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/api/admin.ts"
 type: "code"
-community: "useAuth"
+community: "Public Booking Frontend (1)"
 location: "L130"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/useAuth
+  - community/Public_Booking_Frontend_1
 ---
 
 # formatZl()
@@ -20,8 +20,9 @@ tags:
 - [[BookingManagePage.tsx]] - `imports` [EXTRACTED]
 - [[BookingWizardPage()]] - `calls` [EXTRACTED]
 - [[BookingWizardPage.tsx]] - `imports` [EXTRACTED]
+- [[PriceSummary()]] - `calls` [EXTRACTED]
 - [[PricingDefaultsPanel()]] - `calls` [EXTRACTED]
 - [[PricingDefaultsPanel.tsx]] - `imports` [EXTRACTED]
 - [[admin.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/useAuth
+#graphify/code #graphify/EXTRACTED #community/Public_Booking_Frontend_1

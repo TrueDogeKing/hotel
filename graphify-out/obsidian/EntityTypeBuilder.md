@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "eslint"
+community: "Booking Persistence & Entities (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/eslint
+  - community/Booking_Persistence__Entities_1
 ---
 
 # EntityTypeBuilder
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.Configure()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/eslint
+#graphify/code #graphify/EXTRACTED #community/Booking_Persistence__Entities_1

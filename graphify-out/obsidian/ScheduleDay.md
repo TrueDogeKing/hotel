@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[DayTimetable.tsx]] - `imports` [EXTRACTED]
-- [[Props_7]] - `references` [EXTRACTED]
+- [[Props_8]] - `references` [EXTRACTED]
 - [[SchedulePage.tsx]] - `imports` [EXTRACTED]
 - [[admin.ts]] - `contains` [EXTRACTED]
 

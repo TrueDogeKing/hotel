@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Persistence/Configurations/AdminUserConfiguration.cs"
 type: "code"
-community: "eslint"
+community: "Booking Persistence & Entities (1)"
 location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/eslint
+  - community/Booking_Persistence__Entities_1
 ---
 
 # AdminUserConfiguration
@@ -17,4 +17,4 @@ tags:
 - [[AdminUserConfiguration.cs]] - `contains` [EXTRACTED]
 - [[IEntityTypeConfiguration]] - `implements` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/eslint
+#graphify/code #graphify/EXTRACTED #community/Booking_Persistence__Entities_1

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Admin Booking & Notifications (4)"
+community: "MealTimeDefault"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Booking__Notifications_4
+  - community/MealTimeDefault
 ---
 
 # Task
@@ -15,4 +15,4 @@ tags:
 - [[.InitiateAsync()_1]] - `references` [EXTRACTED]
 - [[.SendSafelyAsync()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_4
+#graphify/code #graphify/EXTRACTED #community/MealTimeDefault

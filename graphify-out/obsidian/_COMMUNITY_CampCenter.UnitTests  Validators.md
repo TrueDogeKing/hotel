@@ -1,32 +1,41 @@
 ---
 type: community
-members: 19
+members: 28
 ---
 
 # CampCenter.UnitTests / Validators
 
-**Members:** 19 nodes
+**Members:** 28 nodes
 
 ## Members
-- [[AuthApiTests.cs]] - code - tests/CampCenter.IntegrationTests/AuthApiTests.cs
-- [[AuthController.cs]] - code - src/CampCenter.Api/Controllers/AuthController.cs
-- [[AuthService.cs]] - code - src/CampCenter.Application/Services/AuthService.cs
-- [[BcryptPasswordHasher.cs]] - code - src/CampCenter.Infrastructure/Auth/BcryptPasswordHasher.cs
-- [[BookingService.cs]] - code - src/CampCenter.Application/Services/BookingService.cs
-- [[CampCenter.Api.Controllers]] - code - src/CampCenter.Api/Controllers/AuthController.cs
-- [[CampCenter.Application.Common]] - code - src/CampCenter.Application/Common/LoginNormalizer.cs
-- [[CampCenter.Application.DTOs.Auth]] - code - src/CampCenter.Application/DTOs/Auth/LoginRequestDto.cs
-- [[CampCenter.Application.Models]] - code - src/CampCenter.Application/Models/AccessToken.cs
-- [[CampCenter.Infrastructure.Auth]] - code - src/CampCenter.Infrastructure/Auth/BcryptPasswordHasher.cs
-- [[IAuthService.cs]] - code - src/CampCenter.Application/Interfaces/IAuthService.cs
-- [[ITokenService.cs]] - code - src/CampCenter.Application/Interfaces/ITokenService.cs
-- [[JwtTokenService.cs]] - code - src/CampCenter.Infrastructure/Auth/JwtTokenService.cs
-- [[LoginRequestDto]] - code - src/CampCenter.Application/DTOs/Auth/LoginRequestDto.cs
-- [[LoginRequestDto.cs]] - code - src/CampCenter.Application/DTOs/Auth/LoginRequestDto.cs
-- [[LoginRequestValidator]] - code - src/CampCenter.Application/Validators/LoginRequestValidator.cs
-- [[LoginRequestValidator.cs]] - code - src/CampCenter.Application/Validators/LoginRequestValidator.cs
-- [[LoginResponseDto]] - code - src/CampCenter.Application/DTOs/Auth/LoginResponseDto.cs
-- [[LoginResponseDto.cs]] - code - src/CampCenter.Application/DTOs/Auth/LoginResponseDto.cs
+- [[.BeAKind()]] - code - src/CampCenter.Application/Validators/ScheduleValidators.cs
+- [[.BeAMealKind()]] - code - src/CampCenter.Application/Validators/MealTimeValidators.cs
+- [[.BeAMealKind()_1]] - code - src/CampCenter.Application/Validators/ScheduleValidators.cs
+- [[.IsMeal()]] - code - src/CampCenter.Application/Validators/ScheduleValidators.cs
+- [[.ValidPassword()]] - code - src/CampCenter.Application/Validators/PasswordRules.cs
+- [[.ValidRole()]] - code - src/CampCenter.Application/Validators/UserValidators.cs
+- [[AdminBookingValidators.cs]] - code - src/CampCenter.Application/Validators/AdminBookingValidators.cs
+- [[CampCenter.Application.Validators]] - code - src/CampCenter.Application/Validators/AdminBookingValidators.cs
+- [[CampCenter.UnitTests.Validators]] - code - tests/CampCenter.UnitTests/Validators/ClosureValidatorsTests.cs
+- [[ClosureValidatorsTests.cs]] - code - tests/CampCenter.UnitTests/Validators/ClosureValidatorsTests.cs
+- [[CreateBookingRequestValidator.cs]] - code - src/CampCenter.Application/Validators/CreateBookingRequestValidator.cs
+- [[IRuleBuilder]] - code
+- [[IRuleBuilder_1]] - code
+- [[IRuleBuilderOptions]] - code
+- [[IRuleBuilderOptions_1]] - code
+- [[MealTimeRules]] - code - src/CampCenter.Application/Validators/MealTimeValidators.cs
+- [[MealTimeValidators.cs]] - code - src/CampCenter.Application/Validators/MealTimeValidators.cs
+- [[PasswordRules]] - code - src/CampCenter.Application/Validators/PasswordRules.cs
+- [[PasswordRules.cs]] - code - src/CampCenter.Application/Validators/PasswordRules.cs
+- [[RoleRules]] - code - src/CampCenter.Application/Validators/UserValidators.cs
+- [[RoomValidators.cs]] - code - src/CampCenter.Application/Validators/RoomValidators.cs
+- [[ScheduleRules]] - code - src/CampCenter.Application/Validators/ScheduleValidators.cs
+- [[ScheduleValidators.cs]] - code - src/CampCenter.Application/Validators/ScheduleValidators.cs
+- [[ScheduleValidatorsTests.cs]] - code - tests/CampCenter.UnitTests/Validators/ScheduleValidatorsTests.cs
+- [[UserValidators.cs]] - code - src/CampCenter.Application/Validators/UserValidators.cs
+- [[int_2]] - code
+- [[string_5]] - code
+- [[string_6]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -36,25 +45,20 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 15 edges to [[_COMMUNITY_Exception]]
-- 8 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
-- 5 edges to [[_COMMUNITY_Auth Service & Tokens]]
-- 4 edges to [[_COMMUNITY_Auth Controller (1)]]
-- 4 edges to [[_COMMUNITY_Camp Session Management]]
-- 4 edges to [[_COMMUNITY_CampCenter.Application  Services (1)]]
+- 8 edges to [[_COMMUNITY_Camp Session Management]]
+- 5 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
+- 4 edges to [[_COMMUNITY_Exception]]
 - 3 edges to [[_COMMUNITY_CampCenter.Application.DTOs.Public]]
-- 2 edges to [[_COMMUNITY_Public Booking Service (2)]]
-- 1 edge to [[_COMMUNITY_eslint_1]]
-- 1 edge to [[_COMMUNITY_AdminPricingApiTests]]
-- 1 edge to [[_COMMUNITY_Admin Booking & Notifications (4)]]
-- 1 edge to [[_COMMUNITY_ScheduleSettings]]
-- 1 edge to [[_COMMUNITY_Public Booking Service (1)]]
-- 1 edge to [[_COMMUNITY_ClosureService]]
-- 1 edge to [[_COMMUNITY_.CreateClient]]
+- 3 edges to [[_COMMUNITY_Persistence  Migrations (2)]]
+- 3 edges to [[_COMMUNITY_CampCenter.Application  Services (3)]]
+- 2 edges to [[_COMMUNITY_DTOs  Schedule (1)]]
+- 2 edges to [[_COMMUNITY_Room Management]]
+- 1 edge to [[_COMMUNITY_.GetBlockedRoomIdsAsync]]
+- 1 edge to [[_COMMUNITY_.NextFreeSitting]]
 
 ## Top bridge nodes
-- [[CampCenter.Application.Models]] - degree 16, connects to 5 communities
-- [[BookingService.cs]] - degree 9, connects to 4 communities
-- [[AuthService.cs]] - degree 8, connects to 3 communities
-- [[AuthController.cs]] - degree 7, connects to 3 communities
-- [[JwtTokenService.cs]] - degree 5, connects to 3 communities
+- [[ScheduleValidators.cs]] - degree 7, connects to 5 communities
+- [[MealTimeValidators.cs]] - degree 7, connects to 4 communities
+- [[UserValidators.cs]] - degree 7, connects to 3 communities
+- [[AdminBookingValidators.cs]] - degree 4, connects to 3 communities
+- [[CampCenter.Application.Validators]] - degree 12, connects to 2 communities

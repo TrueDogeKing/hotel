@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Persistence/AppDbContext.cs"
 type: "code"
-community: "GroupRooms.tsx"
+community: "AppDbContext"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/GroupRoomstsx
+  - community/AppDbContext
 ---
 
 # AppDbContext
@@ -43,4 +43,4 @@ tags:
 - [[ScheduleEntry_1]] - `references` [EXTRACTED]
 - [[ScheduleEntryRepository]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/GroupRoomstsx
+#graphify/code #graphify/EXTRACTED #community/AppDbContext

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "PasswordRules"
+community: "src / api (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PasswordRules
+  - community/src_/_api_2
 ---
 
 # long
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[PublicBookingApiTests]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PasswordRules
+#graphify/code #graphify/EXTRACTED #community/src_/_api_2

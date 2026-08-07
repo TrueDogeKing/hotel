@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Api/Controllers/Public/PublicAvailabilityController.cs"
 type: "code"
-community: "Validator Unit Tests"
+community: "CampCenter.UnitTests / Services (3)"
 location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Validator_Unit_Tests
+  - community/CampCenterUnitTests_/_Services_3
 ---
 
 # PublicAvailabilityController
@@ -15,9 +15,11 @@ tags:
 - [[.Calendar()]] - `method` [EXTRACTED]
 - [[.Closures()]] - `method` [EXTRACTED]
 - [[.Get()_4]] - `method` [EXTRACTED]
+- [[.Pricing()]] - `method` [EXTRACTED]
 - [[ControllerBase]] - `inherits` [EXTRACTED]
 - [[IAvailabilityService]] - `references` [EXTRACTED]
 - [[IClosureRepository]] - `references` [EXTRACTED]
+- [[IPricingService]] - `references` [EXTRACTED]
 - [[PublicAvailabilityController.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Validator_Unit_Tests
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_3

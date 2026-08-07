@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Common/LoginNormalizer.cs"
 type: "code"
-community: "CampCenter.UnitTests / Validators"
+community: "ClosureService"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Validators
+  - community/ClosureService
 ---
 
 # CampCenter.Application.Common
@@ -16,4 +16,4 @@ tags:
 - [[LoginNormalizer.cs]] - `contains` [EXTRACTED]
 - [[UserService.cs]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Validators
+#graphify/code #graphify/EXTRACTED #community/ClosureService

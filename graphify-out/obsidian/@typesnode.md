@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/package.json"
 type: "code"
-community: "Node Type Definitions"
+community: "@types/node"
 location: "L24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Node_Type_Definitions
+  - community/types/node
 ---
 
 # @types/node
@@ -15,4 +15,4 @@ tags:
 - [[@typesnode_1]] - `imports` [EXTRACTED]
 - [[devDependencies]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Node_Type_Definitions
+#graphify/code #graphify/EXTRACTED #community/types/node

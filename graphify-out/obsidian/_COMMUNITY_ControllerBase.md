@@ -1,29 +1,35 @@
 ---
 type: community
-members: 16
+members: 22
 ---
 
 # ControllerBase
 
-**Members:** 16 nodes
+**Members:** 22 nodes
 
 ## Members
-- [[.Create()_5]] - code - src/CampCenter.Api/Controllers/Admin/UsersController.cs
-- [[.Delete()_4]] - code - src/CampCenter.Api/Controllers/Admin/UsersController.cs
-- [[.List()_2]] - code - src/CampCenter.Api/Controllers/Admin/UsersController.cs
-- [[.SetPassword()]] - code - src/CampCenter.Api/Controllers/Admin/UsersController.cs
-- [[.SetRole()]] - code - src/CampCenter.Api/Controllers/Admin/UsersController.cs
-- [[CancellationToken_11]] - code
-- [[Guid_7]] - code
-- [[HttpDelete_5]] - code
-- [[HttpGet_10]] - code
-- [[HttpPost_6]] - code
-- [[HttpPut_8]] - code
-- [[IActionResult_10]] - code
-- [[IValidator_5]] - code
-- [[ProducesResponseType_10]] - code
-- [[Task_12]] - code
-- [[UsersController]] - code - src/CampCenter.Api/Controllers/Admin/UsersController.cs
+- [[.CancelAsync()]] - code - src/CampCenter.Application/Interfaces/IAdminBookingService.cs
+- [[.CreateAsync()]] - code - src/CampCenter.Application/Interfaces/IAdminBookingService.cs
+- [[.GetAssignableRoomsAsync()]] - code - src/CampCenter.Application/Interfaces/IAdminBookingService.cs
+- [[.GetAsync()]] - code - src/CampCenter.Application/Interfaces/IAdminBookingService.cs
+- [[.GetDashboardAsync()]] - code - src/CampCenter.Application/Interfaces/IAdminBookingService.cs
+- [[.GetGroupPageAsync()]] - code - src/CampCenter.Application/Interfaces/IAdminBookingService.cs
+- [[.GetOccupancyAsync()]] - code - src/CampCenter.Application/Interfaces/IAdminBookingService.cs
+- [[.ListAsync()]] - code - src/CampCenter.Application/Interfaces/IAdminBookingService.cs
+- [[.ReassignAsync()]] - code - src/CampCenter.Application/Interfaces/IAdminBookingService.cs
+- [[.SetPaymentStateAsync()]] - code - src/CampCenter.Application/Interfaces/IAdminBookingService.cs
+- [[.SetStateAsync()]] - code - src/CampCenter.Application/Interfaces/IAdminBookingService.cs
+- [[.SetStatusAsync()]] - code - src/CampCenter.Application/Interfaces/IAdminBookingService.cs
+- [[.UpdateDietaryNotesAsync()]] - code - src/CampCenter.Application/Interfaces/IAdminBookingService.cs
+- [[.UpdatePeopleAsync()]] - code - src/CampCenter.Application/Interfaces/IAdminBookingService.cs
+- [[.UpdatePricingAsync()]] - code - src/CampCenter.Application/Interfaces/IAdminBookingService.cs
+- [[AdminBookingDto]] - code - src/CampCenter.Application/DTOs/AdminPanel/AdminPanelDtos.cs
+- [[CancellationToken_17]] - code
+- [[DateOnly_4]] - code
+- [[Guid_9]] - code
+- [[IAdminBookingService]] - code - src/CampCenter.Application/Interfaces/IAdminBookingService.cs
+- [[List]] - code
+- [[Task_17]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -33,13 +39,17 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 9 edges to [[_COMMUNITY_CampCenter.Application  Services (3)]]
-- 1 edge to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
+- 13 edges to [[_COMMUNITY_src  api (1)]]
+- 12 edges to [[_COMMUNITY_.GetBlockedRoomIdsAsync]]
+- 12 edges to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
+- 6 edges to [[_COMMUNITY_Admin Booking & Notifications (2)]]
+- 1 edge to [[_COMMUNITY_.NextFreeSitting]]
 - 1 edge to [[_COMMUNITY_Application Namespaces & DTOs]]
+- 1 edge to [[_COMMUNITY_Integration Test Harness (1)]]
 
 ## Top bridge nodes
-- [[UsersController]] - degree 10, connects to 3 communities
-- [[.SetRole()]] - degree 9, connects to 1 community
-- [[.SetPassword()]] - degree 9, connects to 1 community
-- [[.Create()_5]] - degree 8, connects to 1 community
-- [[.Delete()_4]] - degree 8, connects to 1 community
+- [[IAdminBookingService]] - degree 20, connects to 4 communities
+- [[AdminBookingDto]] - degree 22, connects to 2 communities
+- [[.ListAsync()]] - degree 7, connects to 2 communities
+- [[.SetStatusAsync()]] - degree 7, connects to 2 communities
+- [[.GetAssignableRoomsAsync()]] - degree 7, connects to 2 communities

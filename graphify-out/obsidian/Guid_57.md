@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: ".Calendar"
+community: "CampCenter.UnitTests / Services (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Calendar
+  - community/CampCenterUnitTests_/_Services_2
 ---
 
 # Guid
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.GetAsync()_9]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Calendar
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_2

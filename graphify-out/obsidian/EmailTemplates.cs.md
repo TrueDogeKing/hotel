@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Services/EmailTemplates.cs"
 type: "code"
-community: "Exception"
+community: "ClosureService"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Exception
+  - community/ClosureService
 ---
 
 # EmailTemplates.cs
@@ -17,4 +17,4 @@ tags:
 - [[CampCenter.Domain.Entities]] - `imports` [EXTRACTED]
 - [[EmailTemplates]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Exception
+#graphify/code #graphify/EXTRACTED #community/ClosureService

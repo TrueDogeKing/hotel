@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "ScheduleEntryConfiguration"
+community: "CampCenter.Infrastructure / Repositories (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ScheduleEntryConfiguration
+  - community/CampCenterInfrastructure_/_Repositories_1
 ---
 
 # EntityTypeBuilder
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.Configure()_12]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ScheduleEntryConfiguration
+#graphify/code #graphify/EXTRACTED #community/CampCenterInfrastructure_/_Repositories_1

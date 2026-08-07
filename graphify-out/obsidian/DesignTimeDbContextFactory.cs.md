@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Persistence/DesignTimeDbContextFactory.cs"
 type: "code"
-community: "GroupRooms.tsx"
+community: "AppDbContext"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/GroupRoomstsx
+  - community/AppDbContext
 ---
 
 # DesignTimeDbContextFactory.cs
@@ -15,4 +15,4 @@ tags:
 - [[CampCenter.Infrastructure.Persistence]] - `contains` [EXTRACTED]
 - [[DesignTimeDbContextFactory]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/GroupRoomstsx
+#graphify/code #graphify/EXTRACTED #community/AppDbContext

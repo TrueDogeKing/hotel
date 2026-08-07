@@ -14,6 +14,7 @@ tags:
 - [[.BookingMealTimes_DefaultToTheCenterTimes()]] - `references` [EXTRACTED]
 - [[.BulkRetime_PreservesADayChangedIndividually()]] - `references` [EXTRACTED]
 - [[.Calendar_BarSpansFullStayInclusive()]] - `references` [EXTRACTED]
+- [[.ConfirmingAGroup_LaysItsMealsOntoTheTimetable()]] - `references` [EXTRACTED]
 - [[.DayView_IncludesDepartingGroup()]] - `references` [EXTRACTED]
 - [[.DietaryNotes_AreStoredAndReturnedOnTheGroupSchedule()]] - `references` [EXTRACTED]
 - [[.GenerateMeals_CoversTheStay_AndIsIdempotent()]] - `references` [EXTRACTED]

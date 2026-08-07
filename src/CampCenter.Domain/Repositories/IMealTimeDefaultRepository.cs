@@ -4,7 +4,7 @@ namespace CampCenter.Domain.Repositories;
 
 public interface IMealTimeDefaultRepository
 {
-    /// All defaults (active and inactive) ordered by SortOrder, then start time.
+    /// All defaults (active and inactive) ordered by start time.
     Task<List<MealTimeDefault>> GetAllAsync(CancellationToken cancellationToken = default);
 
     /// Only the active defaults — the ones meal generation works from.

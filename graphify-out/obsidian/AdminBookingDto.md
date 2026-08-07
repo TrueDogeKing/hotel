@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/DTOs/AdminPanel/AdminPanelDtos.cs"
 type: "code"
-community: "Admin Booking & Notifications (1)"
+community: "ControllerBase"
 location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Booking__Notifications_1
+  - community/ControllerBase
 ---
 
 # AdminBookingDto
@@ -35,4 +35,4 @@ tags:
 - [[.UpdatePricingAsync()_1]] - `references` [EXTRACTED]
 - [[AdminPanelDtos.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_1
+#graphify/code #graphify/EXTRACTED #community/ControllerBase

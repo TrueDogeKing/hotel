@@ -156,7 +156,7 @@ public class MealTimeValidatorsTests
     private readonly CreateMealTimeDefaultRequestValidator _validator = new();
 
     private static CreateMealTimeDefaultRequestDto Valid() =>
-        new("Breakfast", "Śniadanie", new TimeOnly(8, 0), new TimeOnly(9, 0), 30, 1);
+        new("Breakfast", "Śniadanie", new TimeOnly(8, 0), new TimeOnly(9, 0), 30);
 
     [Fact]
     public void ValidSlot_Passes() => Assert.True(_validator.Validate(Valid()).IsValid);
@@ -174,10 +174,6 @@ public class MealTimeValidatorsTests
         Assert.False(_validator.Validate(Valid() with { Label = "" }).IsValid);
 
     [Fact]
-    public void NegativeSortOrder_Fails() =>
-        Assert.False(_validator.Validate(Valid() with { SortOrder = -1 }).IsValid);
-
-    [Fact]
     public void UpdateValidator_EnforcesTheSameRules()
     {
         var update = new UpdateMealTimeDefaultRequestValidator();
@@ -187,7 +183,6 @@ public class MealTimeValidatorsTests
             new TimeOnly(18, 0),
             new TimeOnly(19, 0),
             DurationMinutes: 30,
-            SortOrder: 3,
             IsActive: true,
             RowVersion: 1
         );

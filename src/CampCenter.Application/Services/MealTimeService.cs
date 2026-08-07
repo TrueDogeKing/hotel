@@ -31,7 +31,6 @@ public class MealTimeService : IMealTimeService
             StartTime = request.StartTime,
             EndTime = request.EndTime,
             DurationMinutes = request.DurationMinutes,
-            SortOrder = request.SortOrder,
             IsActive = true,
             CreatedAt = DateTime.UtcNow,
         };
@@ -64,7 +63,6 @@ public class MealTimeService : IMealTimeService
         mealTime.StartTime = request.StartTime;
         mealTime.EndTime = request.EndTime;
         mealTime.DurationMinutes = request.DurationMinutes;
-        mealTime.SortOrder = request.SortOrder;
         mealTime.IsActive = request.IsActive;
 
         await _mealTimes.SaveChangesAsync(cancellationToken);
@@ -120,7 +118,6 @@ public class MealTimeService : IMealTimeService
             m.StartTime,
             m.EndTime,
             m.DurationMinutes,
-            m.SortOrder,
             m.IsActive,
             m.RowVersion
         );

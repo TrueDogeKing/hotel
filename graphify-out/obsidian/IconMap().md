@@ -12,7 +12,6 @@ tags:
 # IconMap()
 
 ## Connections
-- [[PublicHomePage.tsx]] - `imports` [EXTRACTED]
 - [[icons.tsx]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Frontend_Icon_Components

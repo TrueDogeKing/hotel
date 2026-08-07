@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Admin Booking & Notifications (2)"
+community: "Public Booking Service (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Booking__Notifications_2
+  - community/Public_Booking_Service_1
 ---
 
 # EnableRateLimiting
@@ -16,4 +16,4 @@ tags:
 - [[.GetByToken()]] - `references` [EXTRACTED]
 - [[.GetScheduleByToken()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_2
+#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_1

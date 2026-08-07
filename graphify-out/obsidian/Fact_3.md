@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: ".CreateClient"
+community: "AuthApiTests"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateClient
+  - community/AuthApiTests
 ---
 
 # Fact
@@ -17,4 +17,4 @@ tags:
 - [[.Login_WithValidAdminCredentials_ReturnsTokenAndSetsRefreshCookie()]] - `references` [EXTRACTED]
 - [[.Login_WithWrongPassword_ReturnsUnauthorized()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateClient
+#graphify/code #graphify/EXTRACTED #community/AuthApiTests

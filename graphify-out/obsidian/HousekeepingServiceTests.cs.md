@@ -1,12 +1,12 @@
 ---
 source_file: "tests/CampCenter.UnitTests/Services/HousekeepingServiceTests.cs"
 type: "code"
-community: "Exception"
+community: "ClosureService"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Exception
+  - community/ClosureService
 ---
 
 # HousekeepingServiceTests.cs
@@ -20,4 +20,4 @@ tags:
 - [[CampCenter.UnitTests.Services]] - `contains` [EXTRACTED]
 - [[HousekeepingServiceTests]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Exception
+#graphify/code #graphify/EXTRACTED #community/ClosureService

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Persistence / Migrations (3)"
+community: "RoomCleaningRepository"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Persistence_/_Migrations_3
+  - community/RoomCleaningRepository
 ---
 
 # Migration
@@ -19,10 +19,11 @@ tags:
 - [[MealSittingDuration_1]] - `inherits` [EXTRACTED]
 - [[ParticipantCountOnScheduleEntry_1]] - `inherits` [EXTRACTED]
 - [[PerGroupMealTimes_1]] - `inherits` [EXTRACTED]
+- [[RemoveMealTimeSortOrder_1]] - `inherits` [EXTRACTED]
 - [[ReplaceSessionsWithClosures_1]] - `inherits` [EXTRACTED]
 - [[RoomCleanings_1]] - `inherits` [EXTRACTED]
 - [[ScheduleAndMealTimes_1]] - `inherits` [EXTRACTED]
 - [[SupervisorCountsAndRates_1]] - `inherits` [EXTRACTED]
 - [[SuppressDeletedGeneratedMeals_1]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Persistence_/_Migrations_3
+#graphify/code #graphify/EXTRACTED #community/RoomCleaningRepository

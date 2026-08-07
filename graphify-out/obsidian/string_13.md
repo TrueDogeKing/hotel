@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "AdminPricingApiTests"
+community: "IntegrationTestBase"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AdminPricingApiTests
+  - community/IntegrationTestBase
 ---
 
 # string
@@ -14,4 +14,4 @@ tags:
 - [[ApiCollection]] - `references` [EXTRACTED]
 - [[IntegrationTestBase]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AdminPricingApiTests
+#graphify/code #graphify/EXTRACTED #community/IntegrationTestBase

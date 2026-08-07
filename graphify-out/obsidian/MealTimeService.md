@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Services/MealTimeService.cs"
 type: "code"
-community: "RoomCleaningRepository"
+community: "CampCenter.UnitTests / Services (1)"
 location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RoomCleaningRepository
+  - community/CampCenterUnitTests_/_Services_1
 ---
 
 # MealTimeService
@@ -24,4 +24,4 @@ tags:
 - [[IMealTimeService]] - `implements` [EXTRACTED]
 - [[MealTimeService.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RoomCleaningRepository
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_1

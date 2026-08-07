@@ -1,8 +1,10 @@
 using System.Net;
 using System.Net.Http.Json;
+using CampCenter.Application.DTOs.AdminPanel;
 using CampCenter.Application.DTOs.Public;
 using CampCenter.Application.DTOs.Rooms;
 using CampCenter.Application.DTOs.Schedule;
+using CampCenter.Domain.Entities;
 
 namespace CampCenter.IntegrationTests;
 
@@ -42,8 +44,7 @@ public class ScheduleApiTests : IntegrationTestBase
                 "Podwieczorek testowy",
                 new TimeOnly(16, 0),
                 new TimeOnly(16, 30),
-                DurationMinutes: 30,
-                SortOrder: 9
+                DurationMinutes: 30
             )
         );
         Assert.Equal(HttpStatusCode.Created, create.StatusCode);
@@ -57,7 +58,6 @@ public class ScheduleApiTests : IntegrationTestBase
                 new TimeOnly(16, 0),
                 new TimeOnly(16, 45),
                 DurationMinutes: 45,
-                SortOrder: 9,
                 IsActive: true,
                 RowVersion: slot.RowVersion
             )
@@ -73,7 +73,6 @@ public class ScheduleApiTests : IntegrationTestBase
                 new TimeOnly(16, 0),
                 new TimeOnly(16, 45),
                 DurationMinutes: 45,
-                SortOrder: 9,
                 IsActive: true,
                 RowVersion: slot.RowVersion
             )
@@ -270,6 +269,50 @@ public class ScheduleApiTests : IntegrationTestBase
 
         var departureDay = Assert.Single(calendar.Days, d => d.Date == end);
         Assert.True(departureDay.GroupCount >= 1);
+    }
+
+    [Fact]
+    public async Task ConfirmingAGroup_LaysItsMealsOntoTheTimetable()
+    {
+        var admin = await CreateAuthenticatedClientAsync();
+        var (bookingId, _, _, _) = await CreateBookingAsync(admin);
+
+        string Url() => $"/api/admin/schedule/bookings/{bookingId}";
+
+        // A group booked through the public wizard arrives with nothing on the
+        // timetable — the kitchen has not been told to cook for it yet.
+        var before = (await admin.GetFromJsonAsync<BookingScheduleDto>(Url()))!;
+        Assert.Empty(before.Days.SelectMany(d => d.Entries));
+
+        var confirm = await admin.PutAsJsonAsync(
+            $"/api/admin/bookings/{bookingId}/status",
+            new SetBookingStatusRequestDto(nameof(BookingStatus.Confirmed))
+        );
+        Assert.Equal(HttpStatusCode.OK, confirm.StatusCode);
+
+        var after = (await admin.GetFromJsonAsync<BookingScheduleDto>(Url()))!;
+        var meals = after.Days.SelectMany(d => d.Entries).ToList();
+
+        Assert.NotEmpty(meals);
+        Assert.All(meals, e => Assert.Equal("Meal", e.Kind));
+        // The whole stay, departure day included.
+        Assert.Equal(after.Nights + 1, after.Days.Count);
+        // Seated at a real sitting rather than left at midnight.
+        Assert.All(meals, e => Assert.True(e.EndTime > e.StartTime));
+
+        // Confirming again changes nothing: generation is idempotent, so a status
+        // corrected back and forth does not double the group's meals.
+        await admin.PutAsJsonAsync(
+            $"/api/admin/bookings/{bookingId}/status",
+            new SetBookingStatusRequestDto(nameof(BookingStatus.PendingDeposit))
+        );
+        await admin.PutAsJsonAsync(
+            $"/api/admin/bookings/{bookingId}/status",
+            new SetBookingStatusRequestDto(nameof(BookingStatus.Confirmed))
+        );
+
+        var again = (await admin.GetFromJsonAsync<BookingScheduleDto>(Url()))!;
+        Assert.Equal(meals.Count, again.Days.SelectMany(d => d.Entries).Count());
     }
 
     [Fact]

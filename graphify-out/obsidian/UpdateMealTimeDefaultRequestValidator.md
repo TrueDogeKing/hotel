@@ -2,7 +2,7 @@
 source_file: "src/CampCenter.Application/Validators/MealTimeValidators.cs"
 type: "code"
 community: "Camp Session Management"
-location: "L27"
+location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED

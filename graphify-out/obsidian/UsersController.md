@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Api/Controllers/Admin/UsersController.cs"
 type: "code"
-community: "ControllerBase"
+community: "CampCenter.Application / Services (3)"
 location: "L18"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ControllerBase
+  - community/CampCenterApplication_/_Services_3
 ---
 
 # UsersController
@@ -23,4 +23,4 @@ tags:
 - [[IValidator_5]] - `references` [EXTRACTED]
 - [[UsersController.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ControllerBase
+#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_3

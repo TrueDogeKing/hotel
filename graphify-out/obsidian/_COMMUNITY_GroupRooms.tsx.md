@@ -1,21 +1,35 @@
 ---
 type: community
-members: 8
+members: 22
 ---
 
 # GroupRooms.tsx
 
-**Members:** 8 nodes
+**Members:** 22 nodes
 
 ## Members
-- [[AssignableRoom]] - code - frontend/src/api/admin.ts
-- [[Draft]] - code - frontend/src/components/admin/GroupRooms.tsx
-- [[GroupRooms()]] - code - frontend/src/components/admin/GroupRooms.tsx
-- [[GroupRooms.tsx]] - code - frontend/src/components/admin/GroupRooms.tsx
-- [[Props_10]] - code - frontend/src/components/admin/GroupRooms.tsx
-- [[getAdminBooking()]] - code - frontend/src/api/admin.ts
-- [[getAssignableRooms()]] - code - frontend/src/api/admin.ts
-- [[reassignBooking()]] - code - frontend/src/api/admin.ts
+- [[.AddAsync()_12]] - code - src/CampCenter.Infrastructure/Repositories/BookingMealTimeRepository.cs
+- [[.Configure()_2]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/BookingMealTimeConfiguration.cs
+- [[.GetAsync()_7]] - code - src/CampCenter.Infrastructure/Repositories/BookingMealTimeRepository.cs
+- [[.ListForBookingAsync()_2]] - code - src/CampCenter.Infrastructure/Repositories/BookingMealTimeRepository.cs
+- [[.ListForBookingsAsync()_1]] - code - src/CampCenter.Infrastructure/Repositories/BookingMealTimeRepository.cs
+- [[.Remove()_1]] - code - src/CampCenter.Domain/Repositories/IBookingMealTimeRepository.cs
+- [[.Remove()_8]] - code - src/CampCenter.Infrastructure/Repositories/BookingMealTimeRepository.cs
+- [[.SaveChangesAsync()_12]] - code - src/CampCenter.Infrastructure/Repositories/BookingMealTimeRepository.cs
+- [[BookingMealTime_1]] - code - src/CampCenter.Domain/Entities/BookingMealTime.cs
+- [[BookingMealTime.cs]] - code - src/CampCenter.Domain/Entities/BookingMealTime.cs
+- [[BookingMealTimeConfiguration]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/BookingMealTimeConfiguration.cs
+- [[BookingMealTimeConfiguration.cs]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/BookingMealTimeConfiguration.cs
+- [[BookingMealTimeRepository]] - code - src/CampCenter.Infrastructure/Repositories/BookingMealTimeRepository.cs
+- [[CancellationToken_60]] - code
+- [[DateTime_6]] - code
+- [[EntityTypeBuilder_2]] - code
+- [[Guid_30]] - code
+- [[Guid_52]] - code
+- [[IReadOnlyCollection_4]] - code
+- [[List_30]] - code
+- [[Task_60]] - code
+- [[TimeOnly_4]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -25,14 +39,17 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_Room Closure Management]]
-- 4 edges to [[_COMMUNITY_Frontend App Shell & i18n]]
-- 1 edge to [[_COMMUNITY_useAuth]]
-- 1 edge to [[_COMMUNITY_Frontend Auth & API Client]]
+- 6 edges to [[_COMMUNITY_eslint_1]]
+- 3 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (1)]]
+- 3 edges to [[_COMMUNITY_Exception]]
+- 2 edges to [[_COMMUNITY_CampCenter.Application  Services (2)]]
+- 2 edges to [[_COMMUNITY_AppDbContext]]
+- 2 edges to [[_COMMUNITY_BookingConfiguration]]
+- 1 edge to [[_COMMUNITY_Integration Test Harness (1)]]
 
 ## Top bridge nodes
-- [[GroupRooms.tsx]] - degree 13, connects to 4 communities
-- [[GroupRooms()]] - degree 4, connects to 1 community
-- [[getAdminBooking()]] - degree 3, connects to 1 community
-- [[getAssignableRooms()]] - degree 3, connects to 1 community
-- [[AssignableRoom]] - degree 2, connects to 1 community
+- [[BookingMealTime_1]] - degree 22, connects to 5 communities
+- [[BookingMealTimeRepository]] - degree 9, connects to 3 communities
+- [[.Remove()_1]] - degree 3, connects to 2 communities
+- [[BookingMealTimeConfiguration.cs]] - degree 3, connects to 2 communities
+- [[BookingMealTimeConfiguration]] - degree 4, connects to 1 community

@@ -1,19 +1,45 @@
 ---
 type: community
-members: 6
+members: 32
 ---
 
 # ClosureService
 
-**Members:** 6 nodes
+**Members:** 32 nodes
 
 ## Members
-- [[.Hash()_1]] - code - src/CampCenter.Infrastructure/Auth/BcryptPasswordHasher.cs
-- [[.Verify()]] - code - src/CampCenter.Application/Interfaces/IPasswordHasher.cs
-- [[.Verify()_1]] - code - src/CampCenter.Infrastructure/Auth/BcryptPasswordHasher.cs
-- [[BcryptPasswordHasher]] - code - src/CampCenter.Infrastructure/Auth/BcryptPasswordHasher.cs
-- [[IPasswordHasher]] - code - src/CampCenter.Application/Interfaces/IPasswordHasher.cs
-- [[IPasswordHasher.cs]] - code - src/CampCenter.Application/Interfaces/IPasswordHasher.cs
+- [[AdminBookingService.cs]] - code - src/CampCenter.Application/Services/AdminBookingService.cs
+- [[AuthService.cs]] - code - src/CampCenter.Application/Services/AuthService.cs
+- [[BookingService.cs]] - code - src/CampCenter.Application/Services/BookingService.cs
+- [[BusinessRuleViolationException]] - code - src/CampCenter.Domain/Exceptions/BusinessRuleViolationException.cs
+- [[BusinessRuleViolationException.cs]] - code - src/CampCenter.Domain/Exceptions/BusinessRuleViolationException.cs
+- [[CampCenter.Application.Common]] - code - src/CampCenter.Application/Common/LoginNormalizer.cs
+- [[CampCenter.Application.Models]] - code - src/CampCenter.Application/Models/AccessToken.cs
+- [[CampCenter.Application.Services]] - code - src/CampCenter.Application/Services/AdminBookingService.cs
+- [[CampCenter.Domain.Exceptions]] - code - src/CampCenter.Domain/Exceptions/BusinessRuleViolationException.cs
+- [[CampCenter.UnitTests.Services]] - code - tests/CampCenter.UnitTests/Services/HousekeepingPlannerTests.cs
+- [[ConcurrencyConflictException]] - code - src/CampCenter.Domain/Exceptions/ConcurrencyConflictException.cs
+- [[ConcurrencyConflictException.cs]] - code - src/CampCenter.Domain/Exceptions/ConcurrencyConflictException.cs
+- [[ConflictException]] - code - src/CampCenter.Domain/Exceptions/ConflictException.cs
+- [[ConflictException.cs]] - code - src/CampCenter.Domain/Exceptions/ConflictException.cs
+- [[EmailTemplates.cs]] - code - src/CampCenter.Application/Services/EmailTemplates.cs
+- [[Exception_1]] - code
+- [[ForbiddenActionException]] - code - src/CampCenter.Domain/Exceptions/ForbiddenActionException.cs
+- [[ForbiddenActionException.cs]] - code - src/CampCenter.Domain/Exceptions/ForbiddenActionException.cs
+- [[HousekeepingPlannerTests.cs]] - code - tests/CampCenter.UnitTests/Services/HousekeepingPlannerTests.cs
+- [[HousekeepingServiceTests.cs]] - code - tests/CampCenter.UnitTests/Services/HousekeepingServiceTests.cs
+- [[ITokenService.cs]] - code - src/CampCenter.Application/Interfaces/ITokenService.cs
+- [[MealGenerationPlanner.cs]] - code - src/CampCenter.Application/Services/MealGenerationPlanner.cs
+- [[MealGenerationPlannerTests.cs]] - code - tests/CampCenter.UnitTests/Services/MealGenerationPlannerTests.cs
+- [[NotFoundException]] - code - src/CampCenter.Domain/Exceptions/NotFoundException.cs
+- [[NotFoundException.cs]] - code - src/CampCenter.Domain/Exceptions/NotFoundException.cs
+- [[PaymentService.cs]] - code - src/CampCenter.Application/Services/PaymentService.cs
+- [[PricingService.cs]] - code - src/CampCenter.Application/Services/PricingService.cs
+- [[RoomMixCalculatorSplitTests.cs]] - code - tests/CampCenter.UnitTests/Services/RoomMixCalculatorSplitTests.cs
+- [[RoomMixCalculatorTests.cs]] - code - tests/CampCenter.UnitTests/Services/RoomMixCalculatorTests.cs
+- [[ScheduleConflictTests.cs]] - code - tests/CampCenter.UnitTests/Services/ScheduleConflictTests.cs
+- [[ScheduleService.cs]] - code - src/CampCenter.Application/Services/ScheduleService.cs
+- [[UserService.cs]] - code - src/CampCenter.Application/Services/UserService.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -23,13 +49,32 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_Admin User & Token Config]]
-- 2 edges to [[_COMMUNITY_Auth Service & Tokens]]
-- 1 edge to [[_COMMUNITY_Application Namespaces & DTOs]]
-- 1 edge to [[_COMMUNITY_CampCenter.UnitTests  Validators]]
+- 35 edges to [[_COMMUNITY_Exception]]
+- 19 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
+- 4 edges to [[_COMMUNITY_Public Booking Service (2)]]
+- 4 edges to [[_COMMUNITY_Auth Service & Tokens]]
+- 3 edges to [[_COMMUNITY_CampCenter.Application.DTOs.Public]]
+- 3 edges to [[_COMMUNITY_Room Mix Calculator Tests]]
+- 3 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (1)]]
+- 2 edges to [[_COMMUNITY_Persistence  Migrations (2)]]
+- 2 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (3)]]
+- 2 edges to [[_COMMUNITY_Integration Test Harness (1)]]
+- 1 edge to [[_COMMUNITY_BookingGroupSection.tsx]]
+- 1 edge to [[_COMMUNITY_CampCenter.Application  Services (1)]]
+- 1 edge to [[_COMMUNITY_ScheduleSettings]]
+- 1 edge to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
+- 1 edge to [[_COMMUNITY_Public Booking Service (1)]]
+- 1 edge to [[_COMMUNITY_Admin Booking & Notifications (4)]]
+- 1 edge to [[_COMMUNITY_MealTimeDefault]]
+- 1 edge to [[_COMMUNITY_CampCenter.Application  Services (2)]]
+- 1 edge to [[_COMMUNITY_Admin User & Token Config]]
+- 1 edge to [[_COMMUNITY_SmtpEmailSender]]
+- 1 edge to [[_COMMUNITY_CampCenter.UnitTests  Services (2)]]
+- 1 edge to [[_COMMUNITY_CampCenter.UnitTests  Services (4)]]
 
 ## Top bridge nodes
-- [[IPasswordHasher]] - degree 6, connects to 2 communities
-- [[BcryptPasswordHasher]] - degree 4, connects to 1 community
-- [[IPasswordHasher.cs]] - degree 2, connects to 1 community
-- [[.Verify()]] - degree 2, connects to 1 community
+- [[CampCenter.Application.Services]] - degree 25, connects to 6 communities
+- [[CampCenter.Application.Models]] - degree 16, connects to 6 communities
+- [[CampCenter.Domain.Exceptions]] - degree 22, connects to 4 communities
+- [[BookingService.cs]] - degree 9, connects to 4 communities
+- [[AuthService.cs]] - degree 8, connects to 4 communities

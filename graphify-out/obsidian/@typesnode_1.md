@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/package.json"
 type: "concept"
-community: "Node Type Definitions"
+community: "@types/node"
 location: "L24"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Node_Type_Definitions
+  - community/types/node
 ---
 
 # @types/node
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[@typesnode]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Node_Type_Definitions
+#graphify/concept #graphify/EXTRACTED #community/types/node

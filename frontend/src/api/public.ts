@@ -68,6 +68,19 @@ export async function getAvailabilityCalendar(
   return data;
 }
 
+/** The centre's rates, with no stay attached — what the booking wizard quotes
+ *  before any dates have been picked. */
+export interface PublicPricing {
+  pricePerPersonPerNightGrosze: number;
+  supervisorPricePerPersonPerNightGrosze: number;
+  depositPerPersonPerNightGrosze: number;
+}
+
+export async function getPublicPricing(): Promise<PublicPricing> {
+  const { data } = await api.get<PublicPricing>("/public/pricing");
+  return data;
+}
+
 export interface PublicClosure {
   reason: string;
   startDate: string;

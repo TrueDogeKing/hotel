@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Validators/RoomValidators.cs"
 type: "code"
-community: "Camp Session Management"
+community: "Room Management"
 location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Camp_Session_Management
+  - community/Room_Management
 ---
 
 # UpdateRoomRequestValidator
@@ -16,4 +16,4 @@ tags:
 - [[RoomValidators.cs]] - `contains` [EXTRACTED]
 - [[UpdateRoomRequestDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Camp_Session_Management
+#graphify/code #graphify/EXTRACTED #community/Room_Management

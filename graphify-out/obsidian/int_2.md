@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Camp Session Management"
+community: "CampCenter.UnitTests / Validators"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Camp_Session_Management
+  - community/CampCenterUnitTests_/_Validators
 ---
 
 # int
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[PasswordRules]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Camp_Session_Management
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Validators

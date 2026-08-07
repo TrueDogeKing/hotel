@@ -2,7 +2,7 @@
 source_file: "frontend/src/pages/PublicHomePage.tsx"
 type: "code"
 community: "Frontend Icon Components"
-location: "L28"
+location: "L31"
 tags:
   - graphify/code
   - graphify/EXTRACTED

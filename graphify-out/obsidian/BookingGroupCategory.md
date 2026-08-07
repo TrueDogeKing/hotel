@@ -1,19 +1,19 @@
 ---
 source_file: "frontend/src/api/admin.ts"
 type: "code"
-community: "Frontend App Shell & i18n"
+community: "ScheduleEntry"
 location: "L545"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Frontend_App_Shell__i18n
+  - community/ScheduleEntry
 ---
 
 # BookingGroupCategory
 
 ## Connections
 - [[BookingGroupSection.tsx]] - `imports` [EXTRACTED]
-- [[Props_6]] - `references` [EXTRACTED]
+- [[Props_7]] - `references` [EXTRACTED]
 - [[admin.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Frontend_App_Shell__i18n
+#graphify/code #graphify/EXTRACTED #community/ScheduleEntry

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "20260729224623_RoomCleanings.Designer.cs"
+community: "CampCenter.UnitTests / Services (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/20260729224623_RoomCleaningsDesignercs
+  - community/CampCenterUnitTests_/_Services_2
 ---
 
 # Guid
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[HousekeepingServiceTests]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/20260729224623_RoomCleaningsDesignercs
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_2

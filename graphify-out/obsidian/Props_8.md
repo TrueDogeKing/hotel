@@ -1,17 +1,18 @@
 ---
-source_file: "frontend/src/components/admin/GroupMealTimes.tsx"
+source_file: "frontend/src/components/admin/DayTimetable.tsx"
 type: "code"
-community: "src / api (1)"
-location: "L41"
+community: "Domain & Infra Namespaces"
+location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/src_/_api_1
+  - community/Domain__Infra_Namespaces
 ---
 
 # Props
 
 ## Connections
-- [[GroupMealTimes.tsx]] - `contains` [EXTRACTED]
+- [[DayTimetable.tsx]] - `contains` [EXTRACTED]
+- [[ScheduleDay]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/src_/_api_1
+#graphify/code #graphify/EXTRACTED #community/Domain__Infra_Namespaces

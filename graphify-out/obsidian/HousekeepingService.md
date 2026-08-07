@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Services/HousekeepingService.cs"
 type: "code"
-community: "BookingSettings"
+community: "CampCenter.UnitTests / Services (2)"
 location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/BookingSettings
+  - community/CampCenterUnitTests_/_Services_2
 ---
 
 # HousekeepingService
@@ -27,4 +27,4 @@ tags:
 - [[IRoomRepository]] - `references` [EXTRACTED]
 - [[IRoomTaskRepository]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/BookingSettings
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_2

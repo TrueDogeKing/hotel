@@ -1,15 +1,16 @@
 ---
 type: community
-members: 29
+members: 32
 ---
 
 # Booking Persistence & Entities (1)
 
-**Members:** 29 nodes
+**Members:** 32 nodes
 
 ## Members
 - [[.AddAsync()]] - code - src/CampCenter.Domain/Repositories/IAdminUserRepository.cs
 - [[.AddAsync()_11]] - code - src/CampCenter.Infrastructure/Repositories/AdminUserRepository.cs
+- [[.Configure()]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/AdminUserConfiguration.cs
 - [[.CountByRoleAsync()]] - code - src/CampCenter.Domain/Repositories/IAdminUserRepository.cs
 - [[.CountByRoleAsync()_1]] - code - src/CampCenter.Infrastructure/Repositories/AdminUserRepository.cs
 - [[.GetByIdAsync()]] - code - src/CampCenter.Domain/Repositories/IAdminUserRepository.cs
@@ -23,12 +24,14 @@ members: 29
 - [[.SaveChangesAsync()_11]] - code - src/CampCenter.Infrastructure/Repositories/AdminUserRepository.cs
 - [[AdminUser_1]] - code - src/CampCenter.Domain/Entities/AdminUser.cs
 - [[AdminUser.cs]] - code - src/CampCenter.Domain/Entities/AdminUser.cs
+- [[AdminUserConfiguration]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/AdminUserConfiguration.cs
 - [[AdminUserRepository]] - code - src/CampCenter.Infrastructure/Repositories/AdminUserRepository.cs
 - [[AdminUserRole]] - code - src/CampCenter.Domain/Entities/AdminUserRole.cs
 - [[AdminUserRole.cs]] - code - src/CampCenter.Domain/Entities/AdminUserRole.cs
 - [[CancellationToken_45]] - code
 - [[CancellationToken_59]] - code
 - [[DateTime_4]] - code
+- [[EntityTypeBuilder]] - code
 - [[Guid_28]] - code
 - [[Guid_41]] - code
 - [[Guid_51]] - code
@@ -48,15 +51,14 @@ SORT file.name ASC
 ## Connections to other communities
 - 13 edges to [[_COMMUNITY_Admin User & Token Config]]
 - 4 edges to [[_COMMUNITY_Auth Service & Tokens]]
-- 3 edges to [[_COMMUNITY_Exception]]
-- 2 edges to [[_COMMUNITY_GroupRooms.tsx_1]]
-- 2 edges to [[_COMMUNITY_eslint_3]]
+- 4 edges to [[_COMMUNITY_Exception]]
+- 2 edges to [[_COMMUNITY_AppDbContext]]
+- 2 edges to [[_COMMUNITY_BookingConfiguration]]
 - 1 edge to [[_COMMUNITY_Refresh Token Repository]]
 - 1 edge to [[_COMMUNITY_CampCenter.Application  Services (1)]]
-- 1 edge to [[_COMMUNITY_Public Booking Service (2)]]
 
 ## Top bridge nodes
-- [[AdminUser_1]] - degree 23, connects to 6 communities
+- [[AdminUser_1]] - degree 23, connects to 5 communities
 - [[IAdminUserRepository]] - degree 11, connects to 3 communities
 - [[AdminUserRepository]] - degree 10, connects to 2 communities
 - [[.GetByLoginAsync()]] - degree 6, connects to 2 communities

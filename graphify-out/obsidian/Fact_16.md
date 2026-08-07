@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Validator Unit Tests"
+community: "Camp Session Management"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Validator_Unit_Tests
+  - community/Camp_Session_Management
 ---
 
 # Fact
@@ -16,4 +16,4 @@ tags:
 - [[.SingleDayClosure_Passes()]] - `references` [EXTRACTED]
 - [[.ValidClosure_Passes()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Validator_Unit_Tests
+#graphify/code #graphify/EXTRACTED #community/Camp_Session_Management

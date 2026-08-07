@@ -918,7 +918,6 @@ public class ScheduleService : IScheduleService
             slot.Id,
             slot.MealKind.ToString(),
             slot.Label,
-            slot.SortOrder,
             slot.StartTime,
             slot.EndTime,
             slot.DurationMinutes,

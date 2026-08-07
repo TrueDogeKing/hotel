@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Services/AdminBookingService.cs"
 type: "code"
-community: "Admin Booking & Notifications (1)"
+community: "Admin Bookings Controller & DTOs"
 location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Booking__Notifications_1
+  - community/Admin_Bookings_Controller__DTOs
 ---
 
 # AdminBookingService
@@ -18,6 +18,7 @@ tags:
 - [[.ComputeHoldExpiry()]] - `method` [EXTRACTED]
 - [[.CreateAsync()_7]] - `method` [EXTRACTED]
 - [[.FinalDueDate()]] - `method` [EXTRACTED]
+- [[.GenerateMealsSafelyAsync()]] - `method` [EXTRACTED]
 - [[.GetAssignableRoomsAsync()_1]] - `method` [EXTRACTED]
 - [[.GetAsync()_2]] - `method` [EXTRACTED]
 - [[.GetDashboardAsync()_1]] - `method` [EXTRACTED]
@@ -51,4 +52,4 @@ tags:
 - [[int]] - `references` [EXTRACTED]
 - [[long]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_1
+#graphify/code #graphify/EXTRACTED #community/Admin_Bookings_Controller__DTOs

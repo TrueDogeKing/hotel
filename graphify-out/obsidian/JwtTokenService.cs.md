@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Auth/JwtTokenService.cs"
 type: "code"
-community: "CampCenter.UnitTests / Validators"
+community: "Public Booking Service (2)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Validators
+  - community/Public_Booking_Service_2
 ---
 
 # JwtTokenService.cs
@@ -18,4 +18,4 @@ tags:
 - [[CampCenter.Infrastructure.Auth]] - `contains` [EXTRACTED]
 - [[JwtTokenService]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Validators
+#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_2

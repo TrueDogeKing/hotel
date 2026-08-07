@@ -164,7 +164,17 @@
     "camperRooms": "Rooms for the campers ({{count}})",
     "supervisorsDoNotFit": "These dates cannot house the group with the supervisors in rooms of their own. Try other dates, or change the numbers.",
     "addRoom": "Add a {{capacity}}-bed room",
-    "removeRoom": "Remove a {{capacity}}-bed room"
+    "removeRoom": "Remove a {{capacity}}-bed room",
+    "pageTitle": "Book a stay for your group",
+    "pageLead": "Four steps: dates and numbers, the room split, your contact details and a confirmation. The booking is provisional until the deposit is paid.",
+    "stepsLabel": "Booking steps",
+    "ratePerPerson": "per person per night",
+    "ratePerCamper": "per camper per night",
+    "ratePerSupervisor": "per supervisor per night",
+    "rateDeposit": "deposit per person per night",
+    "summaryHeadcountSplit": "{{count}} people ({{campers}} campers + {{supervisors}} supervisors)",
+    "summaryCamperRooms": "Camper rooms",
+    "summarySupervisorRooms": "Supervisor rooms"
   },
   "manage": {
     "notFound": "Booking not found. Check the link from your email.",
@@ -625,7 +635,6 @@
     "label": "Label",
     "startTime": "From",
     "endTime": "To",
-    "sortOrder": "Order",
     "time": "Times",
     "status": "Status",
     "active": "Active",

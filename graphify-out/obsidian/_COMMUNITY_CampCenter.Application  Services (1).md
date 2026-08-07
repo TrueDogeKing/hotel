@@ -1,11 +1,11 @@
 ---
 type: community
-members: 14
+members: 11
 ---
 
 # CampCenter.Application / Services (1)
 
-**Members:** 14 nodes
+**Members:** 11 nodes
 
 ## Members
 - [[.CreateAccessToken()_1]] - code - src/CampCenter.Infrastructure/Auth/JwtTokenService.cs
@@ -16,12 +16,9 @@ members: 14
 - [[JwtSettings]] - code - src/CampCenter.Infrastructure/Auth/JwtSettings.cs
 - [[JwtSettings.cs]] - code - src/CampCenter.Infrastructure/Auth/JwtSettings.cs
 - [[JwtTokenService]] - code - src/CampCenter.Infrastructure/Auth/JwtTokenService.cs
-- [[RefreshTokenSettings]] - code - src/CampCenter.Infrastructure/Auth/RefreshTokenSettings.cs
-- [[RefreshTokenSettings.cs]] - code - src/CampCenter.Infrastructure/Auth/RefreshTokenSettings.cs
 - [[int_3]] - code
 - [[string_7]] - code
 - [[string_8]] - code
-- [[string_9]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -31,14 +28,15 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_CampCenter.UnitTests  Validators]]
 - 3 edges to [[_COMMUNITY_Auth Service & Tokens]]
-- 1 edge to [[_COMMUNITY_Auth Controller (1)]]
+- 2 edges to [[_COMMUNITY_Public Booking Service (2)]]
+- 1 edge to [[_COMMUNITY_ClosureService]]
 - 1 edge to [[_COMMUNITY_Booking Persistence & Entities (1)]]
+- 1 edge to [[_COMMUNITY_Auth Controller (1)]]
 
 ## Top bridge nodes
-- [[JwtTokenService]] - degree 9, connects to 2 communities
-- [[RefreshTokenSettings]] - degree 4, connects to 1 community
+- [[JwtTokenService]] - degree 9, connects to 3 communities
 - [[AccessToken]] - degree 3, connects to 1 community
 - [[.CreateAccessToken()_1]] - degree 3, connects to 1 community
 - [[.GenerateRefreshToken()_1]] - degree 3, connects to 1 community
+- [[AccessToken.cs]] - degree 2, connects to 1 community

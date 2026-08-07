@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "eslint"
+community: "CampCenter.UnitTests / Services (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/eslint
+  - community/CampCenterUnitTests_/_Services_1
 ---
 
 # EntityTypeBuilder
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.Configure()_5]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/eslint
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_1

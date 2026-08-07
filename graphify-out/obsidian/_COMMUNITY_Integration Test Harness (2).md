@@ -1,11 +1,11 @@
 ---
 type: community
-members: 30
+members: 29
 ---
 
 # Integration Test Harness (2)
 
-**Members:** 30 nodes
+**Members:** 29 nodes
 
 ## Members
 - [[.AddAssignmentAsync()]] - code - src/CampCenter.Domain/Repositories/IBookingRepository.cs
@@ -16,7 +16,6 @@ members: 30
 - [[.GetByTokenHashAsync()]] - code - src/CampCenter.Domain/Repositories/IBookingRepository.cs
 - [[.GetCompletedPaymentKindsAsync()]] - code - src/CampCenter.Domain/Repositories/IBookingRepository.cs
 - [[.GetConfirmedEndedAsync()]] - code - src/CampCenter.Domain/Repositories/IBookingRepository.cs
-- [[.GetDashboardAsync()_1]] - code - src/CampCenter.Application/Services/AdminBookingService.cs
 - [[.GetExpiredPendingAsync()]] - code - src/CampCenter.Domain/Repositories/IBookingRepository.cs
 - [[.GetPaymentByP24SessionIdAsync()]] - code - src/CampCenter.Domain/Repositories/IBookingRepository.cs
 - [[.GetPaymentsAsync()]] - code - src/CampCenter.Domain/Repositories/IBookingRepository.cs
@@ -47,27 +46,24 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 15 edges to [[_COMMUNITY_Admin Booking & Notifications (1)]]
-- 11 edges to [[_COMMUNITY_Integration Test Harness (1)]]
+- 14 edges to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
+- 12 edges to [[_COMMUNITY_Integration Test Harness (1)]]
 - 6 edges to [[_COMMUNITY_Public Booking Service (1)]]
 - 6 edges to [[_COMMUNITY_CampCenter.Application  Services (2)]]
-- 5 edges to [[_COMMUNITY_Admin Booking & Notifications (4)]]
+- 5 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (2)]]
+- 5 edges to [[_COMMUNITY_MealTimeDefault]]
 - 4 edges to [[_COMMUNITY_.Update]]
-- 3 edges to [[_COMMUNITY_Validator Unit Tests]]
 - 3 edges to [[_COMMUNITY_Room Management]]
-- 3 edges to [[_COMMUNITY_BookingSettings]]
 - 3 edges to [[_COMMUNITY_BookingStatus]]
-- 2 edges to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
-- 2 edges to [[_COMMUNITY_20260729224623_RoomCleanings.Designer.cs]]
-- 1 edge to [[_COMMUNITY_Room Task Management (1)]]
-- 1 edge to [[_COMMUNITY_eslint_2]]
-- 1 edge to [[_COMMUNITY_.AddInfrastructure]]
+- 2 edges to [[_COMMUNITY_Validator Unit Tests]]
+- 1 edge to [[_COMMUNITY_eslint_1]]
+- 1 edge to [[_COMMUNITY_Admin Booking & Notifications (2)]]
 - 1 edge to [[_COMMUNITY_Exception]]
 - 1 edge to [[_COMMUNITY_CampCenter.Domain  Repositories (1)]]
 
 ## Top bridge nodes
-- [[IBookingRepository]] - degree 32, connects to 11 communities
-- [[.GetDashboardAsync()_1]] - degree 10, connects to 4 communities
+- [[IBookingRepository]] - degree 32, connects to 10 communities
 - [[.ListLivePresentInAsync()]] - degree 11, connects to 3 communities
 - [[.ListByCategoryAsync()]] - degree 10, connects to 3 communities
-- [[.ListLiveChangingOverAsync()]] - degree 9, connects to 3 communities
+- [[.GetPaymentsAsync()]] - degree 8, connects to 3 communities
+- [[.GetByIdAsync()_1]] - degree 7, connects to 3 communities

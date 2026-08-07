@@ -1,15 +1,14 @@
 import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import LanguageSwitcher from "../components/LanguageSwitcher";
-import ThemeToggle from "../components/ThemeToggle";
+import PublicHeader from "../components/PublicHeader";
+import PublicFooter from "../components/PublicFooter";
 import {
   IconArrowRight,
   IconBed,
   IconMail,
   IconMapPin,
   IconPhone,
-  IconSunSea,
   IconUtensils,
   IconWaves,
 } from "../components/icons";
@@ -34,24 +33,7 @@ export default function PublicHomePage() {
 
   return (
     <div className="home">
-      <header className="home-header">
-        <a className="home-brand" href="#top">
-          <IconSunSea />
-          {t("common.appName")}
-        </a>
-        <nav className="home-nav">
-          <a href="#offer">{t("home.navOffer")}</a>
-          <a href="#how">{t("home.navHow")}</a>
-          <a href="#contact">{t("home.navContact")}</a>
-        </nav>
-        <div className="home-header-actions">
-          <ThemeToggle />
-          <LanguageSwitcher />
-          <Link className="home-book-btn" to="/rezerwacja">
-            {t("home.bookNow")}
-          </Link>
-        </div>
-      </header>
+      <PublicHeader />
 
       <main id="top">
         <section className="home-hero">
@@ -125,11 +107,7 @@ export default function PublicHomePage() {
         </section>
       </main>
 
-      <footer className="home-footer">
-        <span className="home-footer-brand">{t("common.appName")}</span>
-        <Link to="/admin">{t("home.adminLink")}</Link>
-        <span className="home-footer-rights">{t("home.rights")}</span>
-      </footer>
+      <PublicFooter />
     </div>
   );
 }

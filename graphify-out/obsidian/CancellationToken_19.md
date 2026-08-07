@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: ".GetBlockedRoomIdsAsync"
+community: "ClosureValidatorsTests"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/GetBlockedRoomIdsAsync
+  - community/ClosureValidatorsTests
 ---
 
 # CancellationToken
@@ -17,4 +17,4 @@ tags:
 - [[.GetCenterClosureReasonAsync()]] - `references` [EXTRACTED]
 - [[.GetFreeRoomsByCapacityAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/GetBlockedRoomIdsAsync
+#graphify/code #graphify/EXTRACTED #community/ClosureValidatorsTests

@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/components/admin/AdminLayout.tsx"
 type: "code"
-community: "Frontend App Shell & i18n"
+community: "Admin Booking & Notifications (1)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Frontend_App_Shell__i18n
+  - community/Admin_Booking__Notifications_1
 ---
 
 # AdminLayout.tsx
@@ -32,4 +32,4 @@ tags:
 - [[icons.tsx]] - `imports_from` [EXTRACTED]
 - [[useAuth()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Frontend_App_Shell__i18n
+#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_1

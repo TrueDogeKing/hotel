@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "ControllerBase"
+community: "CampCenter.Application / Services (3)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ControllerBase
+  - community/CampCenterApplication_/_Services_3
 ---
 
 # IValidator
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[UsersController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ControllerBase
+#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_3

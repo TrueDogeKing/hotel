@@ -1,34 +1,30 @@
 ---
 type: community
-members: 21
+members: 17
 ---
 
 # ScheduleEntry
 
-**Members:** 21 nodes
+**Members:** 17 nodes
 
 ## Members
+- [[BookingGroupCategory]] - code - frontend/src/api/admin.ts
+- [[BookingGroupSection()]] - code - frontend/src/components/admin/BookingGroupSection.tsx
+- [[BookingGroupSection.tsx]] - code - frontend/src/components/admin/BookingGroupSection.tsx
+- [[BookingStatus]] - code - frontend/src/api/admin.ts
+- [[DashboardBooking]] - code - frontend/src/api/admin.ts
 - [[DateField()]] - code - frontend/src/components/calendar/DateField.tsx
 - [[DateField.tsx]] - code - frontend/src/components/calendar/DateField.tsx
 - [[DateRangeField()]] - code - frontend/src/components/calendar/DateRangeField.tsx
 - [[DateRangeField.tsx]] - code - frontend/src/components/calendar/DateRangeField.tsx
-- [[HousekeepingDay]] - code - frontend/src/api/admin.ts
-- [[HousekeepingPage()]] - code - frontend/src/pages/admin/HousekeepingPage.tsx
-- [[HousekeepingPage.tsx]] - code - frontend/src/pages/admin/HousekeepingPage.tsx
-- [[HousekeepingRange]] - code - frontend/src/api/admin.ts
-- [[HousekeepingRoom]] - code - frontend/src/api/admin.ts
 - [[PopoverField()]] - code - frontend/src/components/calendar/PopoverField.tsx
 - [[PopoverField.tsx]] - code - frontend/src/components/calendar/PopoverField.tsx
-- [[Props_14]] - code - frontend/src/components/calendar/DateField.tsx
-- [[Props_15]] - code - frontend/src/components/calendar/DateRangeField.tsx
-- [[Props_18]] - code - frontend/src/components/calendar/PopoverField.tsx
-- [[RoomCleaningStatus]] - code - frontend/src/api/admin.ts
+- [[Props_7]] - code - frontend/src/components/admin/BookingGroupSection.tsx
+- [[Props_15]] - code - frontend/src/components/calendar/DateField.tsx
+- [[Props_16]] - code - frontend/src/components/calendar/DateRangeField.tsx
+- [[Props_19]] - code - frontend/src/components/calendar/PopoverField.tsx
 - [[formatDate()]] - code - frontend/src/utils/dates.ts
-- [[getHousekeepingDay()]] - code - frontend/src/api/admin.ts
-- [[getHousekeepingRange()]] - code - frontend/src/api/admin.ts
-- [[kindOrder]] - code - frontend/src/pages/admin/HousekeepingPage.tsx
-- [[roomCleaningStatuses]] - code - frontend/src/api/admin.ts
-- [[setRoomCleaning()]] - code - frontend/src/api/admin.ts
+- [[getBookingGroupPage()]] - code - frontend/src/api/admin.ts
 
 ## Live Query (requires Dataview plugin)
 
@@ -39,16 +35,16 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 15 edges to [[_COMMUNITY_Room Closure Management]]
-- 13 edges to [[_COMMUNITY_src  utils]]
-- 7 edges to [[_COMMUNITY_Public Booking Frontend (1)]]
+- 9 edges to [[_COMMUNITY_src  utils]]
+- 8 edges to [[_COMMUNITY_useAuth]]
+- 6 edges to [[_COMMUNITY_Public Booking Frontend (1)]]
 - 5 edges to [[_COMMUNITY_Frontend App Shell & i18n]]
-- 4 edges to [[_COMMUNITY_useAuth]]
+- 3 edges to [[_COMMUNITY_Frontend Auth & API Client]]
 - 2 edges to [[_COMMUNITY_Domain & Infra Namespaces]]
-- 2 edges to [[_COMMUNITY_src  api (1)]]
 
 ## Top bridge nodes
 - [[formatDate()]] - degree 26, connects to 7 communities
-- [[HousekeepingPage.tsx]] - degree 19, connects to 4 communities
+- [[BookingGroupSection.tsx]] - degree 13, connects to 5 communities
 - [[DateRangeField.tsx]] - degree 11, connects to 3 communities
+- [[BookingStatus]] - degree 6, connects to 3 communities
 - [[DateRangeField()]] - degree 6, connects to 3 communities
-- [[DateField.tsx]] - degree 8, connects to 1 community

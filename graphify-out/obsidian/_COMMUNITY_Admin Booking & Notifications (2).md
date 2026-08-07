@@ -1,34 +1,32 @@
 ---
 type: community
-members: 21
+members: 19
 ---
 
 # Admin Booking & Notifications (2)
 
-**Members:** 21 nodes
+**Members:** 19 nodes
 
 ## Members
-- [[.Cancel()_1]] - code - src/CampCenter.Api/Controllers/Public/PublicBookingsController.cs
-- [[.CancelByTokenAsync()]] - code - src/CampCenter.Application/Interfaces/IBookingService.cs
-- [[.Create()_6]] - code - src/CampCenter.Api/Controllers/Public/PublicBookingsController.cs
-- [[.CreateAsync()_1]] - code - src/CampCenter.Application/Interfaces/IBookingService.cs
-- [[.GetByToken()]] - code - src/CampCenter.Api/Controllers/Public/PublicBookingsController.cs
-- [[.GetByTokenAsync()]] - code - src/CampCenter.Application/Interfaces/IBookingService.cs
-- [[.GetScheduleByToken()]] - code - src/CampCenter.Api/Controllers/Public/PublicBookingsController.cs
-- [[.GetScheduleByTokenAsync()]] - code - src/CampCenter.Application/Interfaces/IBookingService.cs
-- [[CancellationToken_14]] - code
-- [[CancellationToken_20]] - code
-- [[EnableRateLimiting_1]] - code
-- [[HttpGet_12]] - code
-- [[HttpPost_8]] - code
-- [[IActionResult_13]] - code
-- [[IBookingService]] - code - src/CampCenter.Application/Interfaces/IBookingService.cs
-- [[IValidator_7]] - code
-- [[ProducesResponseType_13]] - code
-- [[PublicBookingsController]] - code - src/CampCenter.Api/Controllers/Public/PublicBookingsController.cs
-- [[PublicScheduleDto]] - code - src/CampCenter.Application/DTOs/Schedule/ScheduleDtos.cs
-- [[Task_15]] - code
-- [[Task_20]] - code
+- [[.Get()_1]] - code - src/CampCenter.Api/Controllers/Admin/DashboardController.cs
+- [[.Get()_2]] - code - src/CampCenter.Api/Controllers/Admin/OccupancyController.cs
+- [[.Groups()]] - code - src/CampCenter.Api/Controllers/Admin/DashboardController.cs
+- [[BookingGroupCategory_1]] - code - src/CampCenter.Domain/Entities/BookingGroupCategory.cs
+- [[BookingGroupCategory.cs]] - code - src/CampCenter.Domain/Entities/BookingGroupCategory.cs
+- [[CancellationToken_3]] - code
+- [[CancellationToken_6]] - code
+- [[ControllerBase]] - code
+- [[DashboardController]] - code - src/CampCenter.Api/Controllers/Admin/DashboardController.cs
+- [[DateOnly_1]] - code
+- [[HttpGet_2]] - code
+- [[HttpGet_5]] - code
+- [[IActionResult_2]] - code
+- [[IActionResult_5]] - code
+- [[OccupancyController]] - code - src/CampCenter.Api/Controllers/Admin/OccupancyController.cs
+- [[ProducesResponseType_2]] - code
+- [[ProducesResponseType_5]] - code
+- [[Task_4]] - code
+- [[Task_7]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -38,17 +36,27 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_Public Booking Service (1)]]
-- 1 edge to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
-- 1 edge to [[_COMMUNITY_CampCenter.Application.DTOs.Public]]
-- 1 edge to [[_COMMUNITY_.GetBlockedRoomIdsAsync]]
+- 6 edges to [[_COMMUNITY_ControllerBase]]
+- 2 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (3)]]
+- 2 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
+- 1 edge to [[_COMMUNITY_src  api (1)]]
+- 1 edge to [[_COMMUNITY_Validator Unit Tests]]
+- 1 edge to [[_COMMUNITY_CampCenter.UnitTests  Services (2)]]
+- 1 edge to [[_COMMUNITY_Camp Session Management]]
+- 1 edge to [[_COMMUNITY_Room Management]]
 - 1 edge to [[_COMMUNITY_DTOs  Schedule (1)]]
-- 1 edge to [[_COMMUNITY_CampCenter.Application  Services (2)]]
-- 1 edge to [[_COMMUNITY_Application Namespaces & DTOs]]
+- 1 edge to [[_COMMUNITY_Room Task Management (1)]]
+- 1 edge to [[_COMMUNITY_CampCenter.Application  Services (3)]]
+- 1 edge to [[_COMMUNITY_Auth Controller (1)]]
+- 1 edge to [[_COMMUNITY_Public Booking Service (1)]]
+- 1 edge to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
+- 1 edge to [[_COMMUNITY_Exception]]
+- 1 edge to [[_COMMUNITY_Integration Test Harness (2)]]
+- 1 edge to [[_COMMUNITY_CampCenter.Domain  Repositories (1)]]
 
 ## Top bridge nodes
-- [[PublicScheduleDto]] - degree 4, connects to 3 communities
-- [[PublicBookingsController]] - degree 8, connects to 2 communities
-- [[IBookingService]] - degree 7, connects to 2 communities
-- [[.Create()_6]] - degree 9, connects to 1 community
-- [[.CreateAsync()_1]] - degree 6, connects to 1 community
+- [[ControllerBase]] - degree 14, connects to 11 communities
+- [[BookingGroupCategory_1]] - degree 6, connects to 4 communities
+- [[DashboardController]] - degree 5, connects to 2 communities
+- [[OccupancyController]] - degree 4, connects to 2 communities
+- [[.Groups()]] - degree 8, connects to 1 community

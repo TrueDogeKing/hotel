@@ -1,12 +1,20 @@
-import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { isAxiosError } from "axios";
-import LanguageSwitcher from "../components/LanguageSwitcher";
+import PublicHeader from "../components/PublicHeader";
+import PublicFooter from "../components/PublicFooter";
 import RangeCalendar from "../components/calendar/RangeCalendar";
 import MixEditor from "../components/MixEditor";
 import { formatZl } from "../api/admin";
-import { createBooking, getAvailability, validateSplitMix, type Availability } from "../api/public";
+import {
+  createBooking,
+  getAvailability,
+  getPublicPricing,
+  validateSplitMix,
+  type Availability,
+  type PublicPricing,
+} from "../api/public";
 import { formatDate as formatIsoDate } from "../utils/dates";
 
 type Step = "dates" | "rooms" | "contact" | "summary";
@@ -26,6 +34,8 @@ const emptyContact: ContactForm = {
   phone: "",
   notes: "",
 };
+
+const STEPS: Step[] = ["dates", "rooms", "contact", "summary"];
 
 export default function BookingWizardPage() {
   const { t, i18n } = useTranslation();
@@ -47,6 +57,23 @@ export default function BookingWizardPage() {
   const [contact, setContact] = useState<ContactForm>(emptyContact);
   const [error, setError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
+  // The centre's rates, asked for on arrival so the page can quote a price
+  // before any dates exist — availability only answers for a concrete stay.
+  const [rates, setRates] = useState<PublicPricing | null>(null);
+
+  useEffect(() => {
+    let cancelled = false;
+    void getPublicPricing()
+      .then((data) => {
+        if (!cancelled) setRates(data);
+      })
+      // A missing quote is not worth an error banner over: the booking still
+      // works, and the real total arrives with availability a step later.
+      .catch(() => undefined);
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   const formatDate = (iso: string) => formatIsoDate(iso, i18n.language);
 
@@ -157,234 +184,337 @@ export default function BookingWizardPage() {
     }
   }
 
-  const steps: Step[] = ["dates", "rooms", "contact", "summary"];
+  /** "2 × 4-os., 1 × 3-os." — a chosen mix, largest rooms first. */
+  const roomLines = (mix: Record<string, number>) =>
+    Object.entries(mix)
+      .filter(([, v]) => v > 0)
+      .sort(([a], [b]) => Number(b) - Number(a))
+      .map(([cap, count]) => t("wizard.roomLine", { count, capacity: cap }))
+      .join(", ");
+
+  const currentIndex = STEPS.indexOf(step);
+  // One rate when the kadra are charged the same as the children, two when they
+  // are not — repeating an identical figure under two labels reads as a mistake.
+  const ratesDiffer =
+    rates !== null &&
+    rates.supervisorPricePerPersonPerNightGrosze !== rates.pricePerPersonPerNightGrosze;
 
   return (
-    <main className="public-page">
-      <header className="public-header">
-        <Link className="auth-brand" to="/">
-          <span className="mark">C</span> {t("common.appName")}
-        </Link>
-        <LanguageSwitcher />
-      </header>
+    <div className="home booking-page">
+      <PublicHeader variant="sub" />
 
-      <section className="wizard">
-        <ol className="wizard-steps">
-          {steps.map((s, i) => (
-            <li key={s} className={s === step ? "current" : steps.indexOf(step) > i ? "done" : ""}>
-              {t(`wizard.steps.${s}`)}
-            </li>
-          ))}
+      <main className="booking-main">
+        <div className="booking-intro">
+          <h1>{t("wizard.pageTitle")}</h1>
+          <p>{t("wizard.pageLead")}</p>
+
+          {/* The price, before anything has been chosen. Everything else on this
+              page asks the visitor for something; this is the page answering
+              first. */}
+          {rates && (
+            <ul className="rate-chips">
+              <li>
+                <strong>{formatZl(rates.pricePerPersonPerNightGrosze)}</strong>
+                <span>{ratesDiffer ? t("wizard.ratePerCamper") : t("wizard.ratePerPerson")}</span>
+              </li>
+              {ratesDiffer && (
+                <li>
+                  <strong>{formatZl(rates.supervisorPricePerPersonPerNightGrosze)}</strong>
+                  <span>{t("wizard.ratePerSupervisor")}</span>
+                </li>
+              )}
+              <li>
+                <strong>{formatZl(rates.depositPerPersonPerNightGrosze)}</strong>
+                <span>{t("wizard.rateDeposit")}</span>
+              </li>
+            </ul>
+          )}
+        </div>
+
+        <ol className="wizard-steps" aria-label={t("wizard.stepsLabel")}>
+          {STEPS.map((s, i) => {
+            const state = i === currentIndex ? "current" : i < currentIndex ? "done" : "upcoming";
+            return (
+              <li key={s} className={state} aria-current={state === "current" ? "step" : undefined}>
+                <span className="wizard-step-num" aria-hidden="true">
+                  {i + 1}
+                </span>
+                <span className="wizard-step-label">{t(`wizard.steps.${s}`)}</span>
+              </li>
+            );
+          })}
         </ol>
 
-        {error && <p role="alert">{error}</p>}
+        {error && (
+          <p className="booking-alert" role="alert">
+            {error}
+          </p>
+        )}
 
-        {step === "dates" && (
-          <div className="wizard-panel">
-            <h1>{t("wizard.datesTitle")}</h1>
-            {/* Headcount first: how many beds a night must have free is what
-                decides which days the calendar can offer, so asking for it after
-                the dates would grey out the wrong ones. */}
-            <div className="form">
-              <label>
-                {t("wizard.campersLabel")}
-                <input
-                  type="number"
-                  min={0}
-                  max={2000}
-                  value={camperInput}
-                  onChange={(e) => setCamperInput(e.target.value)}
-                />
-              </label>
-              <label>
-                {t("wizard.supervisorsLabel")}
-                <input
-                  type="number"
-                  min={0}
-                  max={2000}
-                  value={supervisorInput}
-                  onChange={(e) => setSupervisorInput(e.target.value)}
-                />
-              </label>
-              {headcountTyped > 0 && (
+        <section className="wizard-panel" key={step}>
+          {step === "dates" && (
+            <>
+              <h2>{t("wizard.datesTitle")}</h2>
+              {/* Headcount first: how many beds a night must have free is what
+                  decides which days the calendar can offer, so asking for it after
+                  the dates would grey out the wrong ones. */}
+              <div className="booking-counts">
+                <label>
+                  {t("wizard.campersLabel")}
+                  <input
+                    type="number"
+                    min={0}
+                    max={2000}
+                    value={camperInput}
+                    onChange={(e) => setCamperInput(e.target.value)}
+                  />
+                </label>
+                <label>
+                  {t("wizard.supervisorsLabel")}
+                  <input
+                    type="number"
+                    min={0}
+                    max={2000}
+                    value={supervisorInput}
+                    onChange={(e) => setSupervisorInput(e.target.value)}
+                  />
+                </label>
+                {headcountTyped > 0 && (
+                  <p className="booking-count-total">
+                    {t("wizard.headcountTotal", { count: headcountTyped })}
+                  </p>
+                )}
+              </div>
+
+              <RangeCalendar
+                startDate={startDate}
+                endDate={endDate}
+                headcount={headcountTyped}
+                onChange={(range) => {
+                  setStartDate(range.startDate);
+                  setEndDate(range.endDate);
+                  setError(null);
+                }}
+              />
+
+              {startDate !== "" && endDate !== "" && (
                 <p className="wizard-chosen">
-                  {t("wizard.headcountTotal", { count: headcountTyped })}
+                  {formatDate(startDate)} – {formatDate(endDate)}
                 </p>
               )}
-            </div>
 
-            <RangeCalendar
-              startDate={startDate}
-              endDate={endDate}
-              headcount={headcountTyped}
-              onChange={(range) => {
-                setStartDate(range.startDate);
-                setEndDate(range.endDate);
-                setError(null);
-              }}
-            />
+              <div className="wizard-nav end">
+                <button
+                  type="button"
+                  className="btn-primary"
+                  disabled={busy || !datesValid}
+                  onClick={() => void submitDates()}
+                >
+                  {busy ? t("common.loading") : t("wizard.checkAvailability")}
+                </button>
+              </div>
+            </>
+          )}
 
-            {startDate !== "" && endDate !== "" && (
-              <p className="wizard-chosen">
-                {formatDate(startDate)} – {formatDate(endDate)}
+          {step === "rooms" && availability && (
+            <>
+              <h2>{t("wizard.roomsTitle")}</h2>
+              <p className="wizard-stay">
+                {formatDate(availability.startDate)} – {formatDate(availability.endDate)} ·{" "}
+                {t("wizard.nights", { count: availability.nights })} ·{" "}
+                {t("wizard.headcountTotal", { count: headcount })}
               </p>
-            )}
+              <p className="wizard-hint">{t("wizard.roomsHint", { headcount })}</p>
 
-            <button type="button" disabled={busy || !datesValid} onClick={() => void submitDates()}>
-              {t("wizard.checkAvailability")}
-            </button>
-          </div>
-        )}
+              {/* Two editors when the group brings kadra, one when it does not. Each
+                  stepper caps at what the other cohort has left free, so the two can
+                  never claim the same room. */}
+              {supervisors > 0 && (
+                <>
+                  <h3 className="mix-heading">
+                    {t("wizard.supervisorRooms", { count: supervisors })}
+                  </h3>
+                  <MixEditor
+                    capacities={Object.keys(availability.freeRoomsByCapacity)}
+                    counts={supervisorCounts}
+                    freeFor={(capacity) => freeFor(capacity, "supervisors")}
+                    onAdjust={(capacity, delta) => adjustCount(capacity, delta, "supervisors")}
+                  />
+                  <h3 className="mix-heading">{t("wizard.camperRooms", { count: campers })}</h3>
+                </>
+              )}
+              <MixEditor
+                capacities={Object.keys(availability.freeRoomsByCapacity)}
+                counts={counts}
+                freeFor={(capacity) => freeFor(capacity, "campers")}
+                onAdjust={(capacity, delta) => adjustCount(capacity, delta, "campers")}
+              />
+              <p className={mixState === "ok" ? "mix-status ok" : "mix-status bad"}>
+                {t(`wizard.mix.${mixState}`, { beds: totalBeds, headcount })}
+              </p>
 
-        {step === "rooms" && availability && (
-          <div className="wizard-panel">
-            <h1>{t("wizard.roomsTitle")}</h1>
-            <p>
-              {formatDate(availability.startDate)} – {formatDate(availability.endDate)} ·{" "}
-              {t("wizard.nights", { count: availability.nights })}
-            </p>
-            <p>{t("wizard.roomsHint", { headcount })}</p>
+              <PriceSummary availability={availability} />
 
-            {/* Two editors when the group brings kadra, one when it does not. Each
-                stepper caps at what the other cohort has left free, so the two can
-                never claim the same room. */}
-            {supervisors > 0 && (
-              <>
-                <h2 className="mix-heading">
-                  {t("wizard.supervisorRooms", { count: supervisors })}
-                </h2>
-                <MixEditor
-                  capacities={Object.keys(availability.freeRoomsByCapacity)}
-                  counts={supervisorCounts}
-                  freeFor={(capacity) => freeFor(capacity, "supervisors")}
-                  onAdjust={(capacity, delta) => adjustCount(capacity, delta, "supervisors")}
-                />
-                <h2 className="mix-heading">{t("wizard.camperRooms", { count: campers })}</h2>
-              </>
-            )}
-            <MixEditor
-              capacities={Object.keys(availability.freeRoomsByCapacity)}
-              counts={counts}
-              freeFor={(capacity) => freeFor(capacity, "campers")}
-              onAdjust={(capacity, delta) => adjustCount(capacity, delta, "campers")}
-            />
-            <p className={mixState === "ok" ? "mix-status ok" : "mix-status bad"}>
-              {t(`wizard.mix.${mixState}`, { beds: totalBeds, headcount })}
-            </p>
-            <div className="wizard-nav">
-              <button type="button" onClick={() => setStep("dates")}>
-                {t("wizard.back")}
-              </button>
-              <button type="button" disabled={mixState !== "ok"} onClick={() => setStep("contact")}>
-                {t("wizard.next")}
-              </button>
-            </div>
-          </div>
-        )}
+              <div className="wizard-nav">
+                <button type="button" className="secondary" onClick={() => setStep("dates")}>
+                  {t("wizard.back")}
+                </button>
+                <button
+                  type="button"
+                  className="btn-primary"
+                  disabled={mixState !== "ok"}
+                  onClick={() => setStep("contact")}
+                >
+                  {t("wizard.next")}
+                </button>
+              </div>
+            </>
+          )}
 
-        {step === "contact" && (
-          <div className="wizard-panel">
-            <h1>{t("wizard.contactTitle")}</h1>
-            <div className="form">
-              <label>
-                {t("wizard.organization")}
-                <input
-                  value={contact.organizationName}
-                  onChange={(e) => setContact({ ...contact, organizationName: e.target.value })}
-                  maxLength={256}
-                  required
-                />
-              </label>
-              <label>
-                {t("wizard.contactName")}
-                <input
-                  value={contact.contactName}
-                  onChange={(e) => setContact({ ...contact, contactName: e.target.value })}
-                  maxLength={128}
-                  required
-                />
-              </label>
-              <label>
-                {t("wizard.email")}
-                <input
-                  type="email"
-                  value={contact.email}
-                  onChange={(e) => setContact({ ...contact, email: e.target.value })}
-                  maxLength={256}
-                  required
-                />
-              </label>
-              <label>
-                {t("wizard.phone")}
-                <input
-                  type="tel"
-                  value={contact.phone}
-                  onChange={(e) => setContact({ ...contact, phone: e.target.value })}
-                  maxLength={32}
-                  required
-                />
-              </label>
-              <label>
-                {t("wizard.notes")}
-                <textarea
-                  value={contact.notes}
-                  onChange={(e) => setContact({ ...contact, notes: e.target.value })}
-                  maxLength={2000}
-                  rows={3}
-                />
-              </label>
-            </div>
-            <div className="wizard-nav">
-              <button type="button" onClick={() => setStep("rooms")}>
-                {t("wizard.back")}
-              </button>
-              <button type="button" disabled={!contactValid} onClick={() => setStep("summary")}>
-                {t("wizard.next")}
-              </button>
-            </div>
-          </div>
-        )}
+          {step === "contact" && (
+            <>
+              <h2>{t("wizard.contactTitle")}</h2>
+              <div className="booking-form">
+                <label>
+                  {t("wizard.organization")}
+                  <input
+                    value={contact.organizationName}
+                    onChange={(e) => setContact({ ...contact, organizationName: e.target.value })}
+                    maxLength={256}
+                    required
+                  />
+                </label>
+                <label>
+                  {t("wizard.contactName")}
+                  <input
+                    value={contact.contactName}
+                    onChange={(e) => setContact({ ...contact, contactName: e.target.value })}
+                    maxLength={128}
+                    required
+                  />
+                </label>
+                <label>
+                  {t("wizard.email")}
+                  <input
+                    type="email"
+                    value={contact.email}
+                    onChange={(e) => setContact({ ...contact, email: e.target.value })}
+                    maxLength={256}
+                    required
+                  />
+                </label>
+                <label>
+                  {t("wizard.phone")}
+                  <input
+                    type="tel"
+                    value={contact.phone}
+                    onChange={(e) => setContact({ ...contact, phone: e.target.value })}
+                    maxLength={32}
+                    required
+                  />
+                </label>
+                <label className="booking-form-wide">
+                  {t("wizard.notes")}
+                  <textarea
+                    value={contact.notes}
+                    onChange={(e) => setContact({ ...contact, notes: e.target.value })}
+                    maxLength={2000}
+                    rows={3}
+                  />
+                </label>
+              </div>
+              <div className="wizard-nav">
+                <button type="button" className="secondary" onClick={() => setStep("rooms")}>
+                  {t("wizard.back")}
+                </button>
+                <button
+                  type="button"
+                  className="btn-primary"
+                  disabled={!contactValid}
+                  onClick={() => setStep("summary")}
+                >
+                  {t("wizard.next")}
+                </button>
+              </div>
+            </>
+          )}
 
-        {step === "summary" && availability && (
-          <div className="wizard-panel">
-            <h1>{t("wizard.summaryTitle")}</h1>
-            <dl className="summary-list">
-              <dt>{t("wizard.summaryDates")}</dt>
-              <dd>
-                {formatDate(availability.startDate)} – {formatDate(availability.endDate)} (
-                {t("wizard.nights", { count: availability.nights })})
-              </dd>
-              <dt>{t("wizard.summaryHeadcount")}</dt>
-              <dd>{headcount}</dd>
-              <dt>{t("wizard.summaryRooms")}</dt>
-              <dd>
-                {Object.entries(counts)
-                  .filter(([, v]) => v > 0)
-                  .sort(([a], [b]) => Number(b) - Number(a))
-                  .map(([cap, count]) => t("wizard.roomLine", { count, capacity: cap }))
-                  .join(", ")}
-              </dd>
-              <dt>{t("wizard.summaryTotal")}</dt>
-              <dd>{formatZl(availability.totalGrosze ?? 0)}</dd>
-              <dt>{t("wizard.summaryDeposit")}</dt>
-              <dd>{formatZl(availability.depositGrosze ?? 0)}</dd>
-              <dt>{t("wizard.summaryContact")}</dt>
-              <dd>
-                {contact.organizationName}, {contact.contactName}, {contact.email}, {contact.phone}
-              </dd>
-            </dl>
-            <p>{t("wizard.summaryNote")}</p>
-            <div className="wizard-nav">
-              <button type="button" onClick={() => setStep("contact")}>
-                {t("wizard.back")}
-              </button>
-              <button type="button" disabled={busy} onClick={() => void submitBooking()}>
-                {busy ? t("wizard.submitting") : t("wizard.submit")}
-              </button>
-            </div>
-          </div>
-        )}
-      </section>
-    </main>
+          {step === "summary" && availability && (
+            <>
+              <h2>{t("wizard.summaryTitle")}</h2>
+              <dl className="summary-list">
+                <dt>{t("wizard.summaryDates")}</dt>
+                <dd>
+                  {formatDate(availability.startDate)} – {formatDate(availability.endDate)} (
+                  {t("wizard.nights", { count: availability.nights })})
+                </dd>
+                <dt>{t("wizard.summaryHeadcount")}</dt>
+                <dd>
+                  {supervisors > 0
+                    ? t("wizard.summaryHeadcountSplit", { campers, supervisors, count: headcount })
+                    : headcount}
+                </dd>
+                <dt>
+                  {supervisors > 0 ? t("wizard.summaryCamperRooms") : t("wizard.summaryRooms")}
+                </dt>
+                <dd>{roomLines(counts)}</dd>
+                {/* The kadra's rooms are chosen separately, so listing only the
+                    children's would quietly under-report what was booked. */}
+                {supervisors > 0 && (
+                  <>
+                    <dt>{t("wizard.summarySupervisorRooms")}</dt>
+                    <dd>{roomLines(supervisorCounts)}</dd>
+                  </>
+                )}
+                <dt>{t("wizard.summaryContact")}</dt>
+                <dd>
+                  {contact.organizationName}, {contact.contactName}, {contact.email},{" "}
+                  {contact.phone}
+                </dd>
+              </dl>
+
+              <PriceSummary availability={availability} />
+
+              <p className="wizard-hint">{t("wizard.summaryNote")}</p>
+              <div className="wizard-nav">
+                <button type="button" className="secondary" onClick={() => setStep("contact")}>
+                  {t("wizard.back")}
+                </button>
+                {/* The one amber call to action in the flow, as on the landing
+                    page: the moment the booking actually happens. */}
+                <button
+                  type="button"
+                  className="cta-amber"
+                  disabled={busy}
+                  onClick={() => void submitBooking()}
+                >
+                  {busy ? t("wizard.submitting") : t("wizard.submit")}
+                </button>
+              </div>
+            </>
+          )}
+        </section>
+      </main>
+
+      <PublicFooter />
+    </div>
+  );
+}
+
+/** What the stay costs, once a real date range and group are known. */
+function PriceSummary({ availability }: { availability: Availability }) {
+  const { t } = useTranslation();
+
+  return (
+    <div className="booking-price">
+      <div className="booking-price-total">
+        <span>{t("wizard.summaryTotal")}</span>
+        <strong>{formatZl(availability.totalGrosze ?? 0)}</strong>
+      </div>
+      <div className="booking-price-deposit">
+        <span>{t("wizard.summaryDeposit")}</span>
+        <strong>{formatZl(availability.depositGrosze ?? 0)}</strong>
+      </div>
+    </div>
   );
 }

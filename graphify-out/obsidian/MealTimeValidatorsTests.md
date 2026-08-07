@@ -14,7 +14,6 @@ tags:
 ## Connections
 - [[.EmptyLabel_Fails()]] - `method` [EXTRACTED]
 - [[.EndBeforeStart_Fails()_1]] - `method` [EXTRACTED]
-- [[.NegativeSortOrder_Fails()]] - `method` [EXTRACTED]
 - [[.UnknownMealKind_Fails()]] - `method` [EXTRACTED]
 - [[.UpdateValidator_EnforcesTheSameRules()_1]] - `method` [EXTRACTED]
 - [[.Valid()_1]] - `method` [EXTRACTED]

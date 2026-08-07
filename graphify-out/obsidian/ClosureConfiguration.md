@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Persistence/Configurations/ClosureConfiguration.cs"
 type: "code"
-community: "eslint-plugin-react-hooks"
+community: "Validator Unit Tests"
 location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/eslint-plugin-react-hooks
+  - community/Validator_Unit_Tests
 ---
 
 # ClosureConfiguration
@@ -17,4 +17,4 @@ tags:
 - [[ClosureConfiguration.cs]] - `contains` [EXTRACTED]
 - [[IEntityTypeConfiguration]] - `implements` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/eslint-plugin-react-hooks
+#graphify/code #graphify/EXTRACTED #community/Validator_Unit_Tests

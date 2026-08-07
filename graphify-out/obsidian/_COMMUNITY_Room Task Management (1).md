@@ -46,7 +46,6 @@ members: 72
 - [[CancellationToken_42]] - code
 - [[CancellationToken_54]] - code
 - [[CancellationToken_68]] - code
-- [[CreateRoomTaskRequestDto]] - code - src/CampCenter.Application/DTOs/AdminPanel/AdminPanelDtos.cs
 - [[DateTime_13]] - code
 - [[Dictionary_7]] - code
 - [[Dictionary_10]] - code
@@ -80,6 +79,7 @@ members: 72
 - [[Task_54]] - code
 - [[Task_68]] - code
 - [[TasksController]] - code - src/CampCenter.Api/Controllers/Admin/TasksController.cs
+- [[UpdateRoomTaskRequestDto]] - code - src/CampCenter.Application/DTOs/AdminPanel/AdminPanelDtos.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -89,22 +89,20 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 6 edges to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
+- 5 edges to [[_COMMUNITY_.GetBlockedRoomIdsAsync]]
 - 4 edges to [[_COMMUNITY_Room Management]]
+- 3 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
+- 3 edges to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
+- 3 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (2)]]
 - 3 edges to [[_COMMUNITY_Exception]]
-- 2 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
-- 2 edges to [[_COMMUNITY_Admin Booking & Notifications (1)]]
-- 2 edges to [[_COMMUNITY_BookingSettings]]
-- 2 edges to [[_COMMUNITY_GroupRooms.tsx_1]]
-- 2 edges to [[_COMMUNITY_RoomTaskConfiguration]]
-- 1 edge to [[_COMMUNITY_Integration Test Harness (2)]]
+- 2 edges to [[_COMMUNITY_AppDbContext]]
+- 2 edges to [[_COMMUNITY_BookingConfiguration]]
+- 1 edge to [[_COMMUNITY_Admin Booking & Notifications (2)]]
 - 1 edge to [[_COMMUNITY_Integration Test Harness (1)]]
-- 1 edge to [[_COMMUNITY_20260729224623_RoomCleanings.Designer.cs]]
-- 1 edge to [[_COMMUNITY_Public Booking Service (2)]]
 
 ## Top bridge nodes
 - [[RoomTask_1]] - degree 18, connects to 4 communities
-- [[IRoomTaskRepository]] - degree 13, connects to 4 communities
+- [[IRoomTaskRepository]] - degree 13, connects to 3 communities
 - [[RoomTaskService]] - degree 12, connects to 2 communities
 - [[RoomTaskRepository]] - degree 10, connects to 2 communities
 - [[TasksController]] - degree 9, connects to 2 communities

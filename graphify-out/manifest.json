@@ -40,8 +40,8 @@
     "semantic_hash": ""
   },
   "frontend/src/api/admin.ts": {
-    "mtime": 1786024875.8321524,
-    "ast_hash": "8075a9b452a627dfdecffc9d9a1b1acf",
+    "mtime": 1786102222.4447424,
+    "ast_hash": "f43ae073d3bf09fa6dc3886360f66e25",
     "semantic_hash": ""
   },
   "frontend/src/api/auth.ts": {
@@ -65,8 +65,8 @@
     "semantic_hash": ""
   },
   "frontend/src/api/public.ts": {
-    "mtime": 1786013081.5657248,
-    "ast_hash": "e9c4a722bb3ec9c3d46022be1cbc6e7d",
+    "mtime": 1786095798.1917162,
+    "ast_hash": "d6e79470146cc2d7d38b302363359d5a",
     "semantic_hash": ""
   },
   "frontend/src/api/tokenStore.ts": {
@@ -115,8 +115,8 @@
     "semantic_hash": ""
   },
   "frontend/src/i18n/en.json": {
-    "mtime": 1786024868.956296,
-    "ast_hash": "f6a5257d4a7adedb8631baa063207d85",
+    "mtime": 1786102294.2112813,
+    "ast_hash": "673feb86546d1a21aa92cf77a7267aed",
     "semantic_hash": ""
   },
   "frontend/src/i18n/index.ts": {
@@ -125,8 +125,8 @@
     "semantic_hash": "2c62823bcdad775ae76fa3a6db453826"
   },
   "frontend/src/i18n/pl.json": {
-    "mtime": 1786024868.947752,
-    "ast_hash": "85939873614f91605ceb52bebabc9773",
+    "mtime": 1786102291.9316714,
+    "ast_hash": "5819f89ca609a77a0e45b8e8433befd9",
     "semantic_hash": ""
   },
   "frontend/src/main.tsx": {
@@ -135,13 +135,13 @@
     "semantic_hash": "453e877dd7ae7b6f87329c1edc1f3f78"
   },
   "frontend/src/pages/BookingManagePage.tsx": {
-    "mtime": 1786007661.702995,
-    "ast_hash": "fe7356f088c805698b3521adfcbe8a21",
+    "mtime": 1786096521.3758683,
+    "ast_hash": "dc7a99ad9f5900bc07f28894f25102b9",
     "semantic_hash": ""
   },
   "frontend/src/pages/BookingWizardPage.tsx": {
-    "mtime": 1786013083.0736275,
-    "ast_hash": "c7e0403898222f775ce539e1c6b2c168",
+    "mtime": 1786096521.41335,
+    "ast_hash": "816b1f9222562bc8f1324b921585863b",
     "semantic_hash": ""
   },
   "frontend/src/pages/LoginPage.tsx": {
@@ -155,8 +155,8 @@
     "semantic_hash": "c8a261d7a450dc4e3eb4ad614bba9055"
   },
   "frontend/src/pages/PublicHomePage.tsx": {
-    "mtime": 1785445503.1601472,
-    "ast_hash": "d4c95c618bb5dbd2766d3b019be280f6",
+    "mtime": 1786095663.9793322,
+    "ast_hash": "68f3b89803ea035c2ac255e7d3d4429b",
     "semantic_hash": ""
   },
   "frontend/src/pages/admin/AdminBookingsPage.tsx": {
@@ -325,8 +325,8 @@
     "semantic_hash": "cd08f0a690be240cf560e588b8487b28"
   },
   "src/CampCenter.Application/DTOs/Public/PublicDtos.cs": {
-    "mtime": 1786011750.451336,
-    "ast_hash": "7ad43538bff7d935d6a42fcad6c8a61f",
+    "mtime": 1786095549.4204643,
+    "ast_hash": "6238cef3aeff6a11ad6f9686c61a1e69",
     "semantic_hash": ""
   },
   "src/CampCenter.Application/DTOs/Rooms/RoomDtos.cs": {
@@ -415,8 +415,8 @@
     "semantic_hash": "89e59cee8a3802a19cdd55844cf73aaf"
   },
   "src/CampCenter.Application/Services/AdminBookingService.cs": {
-    "mtime": 1786024727.5266986,
-    "ast_hash": "4bb7efb803708b573a08b43350577cbd",
+    "mtime": 1786100824.1690938,
+    "ast_hash": "ef9680e91a147fa8348d882b0fede913",
     "semantic_hash": ""
   },
   "src/CampCenter.Application/Services/AuthService.cs": {
@@ -705,14 +705,14 @@
     "semantic_hash": "9a224075a0b2e3f1d14dbf3a46748d7b"
   },
   "src/CampCenter.Infrastructure/Persistence/Migrations/AppDbContextModelSnapshot.cs": {
-    "mtime": 1786011952.4302676,
-    "ast_hash": "e53ff4c80131d83f3221c367a712e32c",
+    "mtime": 1786102337.8612676,
+    "ast_hash": "a48b03628f3690ee6e3957be44f866a8",
     "semantic_hash": ""
   },
   "src/CampCenter.Infrastructure/Persistence/Seed/DataSeeder.cs": {
-    "mtime": 1785155839.2896135,
-    "ast_hash": "5be9a0ea25a840803e6a21b68ec3e078",
-    "semantic_hash": "5be9a0ea25a840803e6a21b68ec3e078"
+    "mtime": 1786102058.839622,
+    "ast_hash": "20ee983712a284f2b986c673a2539e32",
+    "semantic_hash": ""
   },
   "src/CampCenter.Infrastructure/Repositories/AdminUserRepository.cs": {
     "mtime": 1785446575.6359203,
@@ -925,8 +925,8 @@
     "semantic_hash": ""
   },
   "frontend/src/pages/admin/MealTimesPage.tsx": {
-    "mtime": 1786005763.7068233,
-    "ast_hash": "25358867cec919ac86009ecd8f589638",
+    "mtime": 1786102264.18073,
+    "ast_hash": "d33ca2eb21f57a08f70c662fc40c50cf",
     "semantic_hash": ""
   },
   "frontend/src/pages/admin/OccupancyPage.tsx": {
@@ -975,8 +975,8 @@
     "semantic_hash": ""
   },
   "src/CampCenter.Api/Controllers/Public/PublicAvailabilityController.cs": {
-    "mtime": 1786011750.4523377,
-    "ast_hash": "dbd2944c266c2f38e7c3449928e49e1d",
+    "mtime": 1786095579.3758328,
+    "ast_hash": "fff4b0d20f913b15a667f6a363c480c7",
     "semantic_hash": ""
   },
   "src/CampCenter.Application/DTOs/AdminPanel/HousekeepingDtos.cs": {
@@ -990,8 +990,8 @@
     "semantic_hash": "9e0b2b7a929d32fd2fb4483d83905e08"
   },
   "src/CampCenter.Application/DTOs/Schedule/MealTimeDtos.cs": {
-    "mtime": 1786005757.7457013,
-    "ast_hash": "c208eba6c3bf7dbb3a4c6390a21da419",
+    "mtime": 1786102007.2591467,
+    "ast_hash": "edaae02f487cab25eb449c4204125922",
     "semantic_hash": ""
   },
   "src/CampCenter.Application/DTOs/Schedule/ScheduleDtos.cs": {
@@ -1045,13 +1045,13 @@
     "semantic_hash": "4709ce897b414fdd239d49ab737e38f9"
   },
   "src/CampCenter.Application/Services/MealTimeService.cs": {
-    "mtime": 1785319974.1551783,
-    "ast_hash": "6ccafe70529a7f14ea8f52f043e8deba",
-    "semantic_hash": "6ccafe70529a7f14ea8f52f043e8deba"
+    "mtime": 1786102022.7463005,
+    "ast_hash": "cce914763997242990ef5d0cbce6d0df",
+    "semantic_hash": ""
   },
   "src/CampCenter.Application/Services/ScheduleService.cs": {
-    "mtime": 1786011806.2791,
-    "ast_hash": "3ba219996d3679a1be8e914456a98382",
+    "mtime": 1786102029.9273968,
+    "ast_hash": "20aa6d7783547afd9a55912d8a3586ba",
     "semantic_hash": ""
   },
   "src/CampCenter.Application/Validators/AdminBookingValidators.cs": {
@@ -1065,8 +1065,8 @@
     "semantic_hash": "9f18e8f05e8380fbbdbcb3a625887b09"
   },
   "src/CampCenter.Application/Validators/MealTimeValidators.cs": {
-    "mtime": 1786005757.8353589,
-    "ast_hash": "39556c28f75fa63d3a0307fc59f22ec1",
+    "mtime": 1786102042.3077505,
+    "ast_hash": "de306eafea73b9ea0d0a5d0e5ce952be",
     "semantic_hash": ""
   },
   "src/CampCenter.Application/Validators/ScheduleValidators.cs": {
@@ -1085,9 +1085,9 @@
     "semantic_hash": "1441d99e098ff51052278191130c60ec"
   },
   "src/CampCenter.Domain/Entities/MealTimeDefault.cs": {
-    "mtime": 1785319664.0321832,
-    "ast_hash": "f5bbd2bc9aecebb62b5129834139a310",
-    "semantic_hash": "f5bbd2bc9aecebb62b5129834139a310"
+    "mtime": 1786101953.1700046,
+    "ast_hash": "6ac106c0999db44f4b00dfc268107ee0",
+    "semantic_hash": ""
   },
   "src/CampCenter.Domain/Entities/RoomCleaning.cs": {
     "mtime": 1785365112.9901876,
@@ -1105,9 +1105,9 @@
     "semantic_hash": "c997f2643868fc298bfe7327d0c1b643"
   },
   "src/CampCenter.Domain/Repositories/IMealTimeDefaultRepository.cs": {
-    "mtime": 1785155724.470483,
-    "ast_hash": "9bccd69df41d670d6a90eaf667be6cac",
-    "semantic_hash": "9bccd69df41d670d6a90eaf667be6cac"
+    "mtime": 1786101987.5385053,
+    "ast_hash": "4d916b5fdd6f58ef6e09d2cb32c5b69f",
+    "semantic_hash": ""
   },
   "src/CampCenter.Domain/Repositories/IRoomCleaningRepository.cs": {
     "mtime": 1785365314.0459566,
@@ -1125,9 +1125,9 @@
     "semantic_hash": ""
   },
   "src/CampCenter.Infrastructure/Persistence/Configurations/MealTimeDefaultConfiguration.cs": {
-    "mtime": 1785319694.2645473,
-    "ast_hash": "7dff7f8f89814dfbe57668f6bda96f91",
-    "semantic_hash": "7dff7f8f89814dfbe57668f6bda96f91"
+    "mtime": 1786101959.7844608,
+    "ast_hash": "48a057bc122eed8186501d28e1995607",
+    "semantic_hash": ""
   },
   "src/CampCenter.Infrastructure/Persistence/Configurations/RoomCleaningConfiguration.cs": {
     "mtime": 1785365124.0131636,
@@ -1215,9 +1215,9 @@
     "semantic_hash": ""
   },
   "src/CampCenter.Infrastructure/Repositories/MealTimeDefaultRepository.cs": {
-    "mtime": 1785155824.958951,
-    "ast_hash": "ed427322fbfde7d9b2ee0bc60ed132ce",
-    "semantic_hash": "ed427322fbfde7d9b2ee0bc60ed132ce"
+    "mtime": 1786101969.956678,
+    "ast_hash": "23a33925e5ec01217ac6488583a6f8ec",
+    "semantic_hash": ""
   },
   "src/CampCenter.Infrastructure/Repositories/RoomCleaningRepository.cs": {
     "mtime": 1786005758.0404224,
@@ -1235,8 +1235,8 @@
     "semantic_hash": "f5948ff63d06d1f5c3f45377296ce28f"
   },
   "tests/CampCenter.IntegrationTests/ScheduleApiTests.cs": {
-    "mtime": 1786011911.7198687,
-    "ast_hash": "261b2e546f2f80028ed914a8f6f544b6",
+    "mtime": 1786102179.466536,
+    "ast_hash": "0df9e50008acd6158eff12b2d87291e2",
     "semantic_hash": ""
   },
   "tests/CampCenter.UnitTests/Services/HousekeepingPlannerTests.cs": {
@@ -1265,13 +1265,13 @@
     "semantic_hash": "4a4a370ad2087af37db7f8dcc6768681"
   },
   "tests/CampCenter.UnitTests/Validators/ScheduleValidatorsTests.cs": {
-    "mtime": 1785320218.163924,
-    "ast_hash": "fc2d1d04d8602fa9d1da14d194b1ce57",
-    "semantic_hash": "fc2d1d04d8602fa9d1da14d194b1ce57"
+    "mtime": 1786102142.2521665,
+    "ast_hash": "a55a47484e20ef8c461bb4f3fd752521",
+    "semantic_hash": ""
   },
   "tasks.txt": {
-    "mtime": 1785946134.3265576,
-    "ast_hash": "f5898451b87977bfe736c09e34966cb8",
+    "mtime": 1786095381.562253,
+    "ast_hash": "23a3a636bf209ca8a8a611ae3440a17a",
     "semantic_hash": ""
   },
   "frontend/src/components/admin/GroupRooms.tsx": {
@@ -1502,6 +1502,36 @@
   "frontend/src/components/admin/GroupPeople.tsx": {
     "mtime": 1786024817.0631611,
     "ast_hash": "ebeed7ecd5616c3017fdf5ecf90d53f8",
+    "semantic_hash": ""
+  },
+  "frontend/src/components/PublicFooter.tsx": {
+    "mtime": 1786095638.4456694,
+    "ast_hash": "bc6782a5ce894ef9be33ce334af7c445",
+    "semantic_hash": ""
+  },
+  "frontend/src/components/PublicHeader.tsx": {
+    "mtime": 1786095629.139785,
+    "ast_hash": "bb271d04124a8f76ebeeb13ac83adb24",
+    "semantic_hash": ""
+  },
+  "scripts/deploy.sh": {
+    "mtime": 1786026613.1671824,
+    "ast_hash": "659d7f1d19f0b037bcaf6c8376e5c725",
+    "semantic_hash": ""
+  },
+  "scripts/register-deploy-cron.sh": {
+    "mtime": 1786026630.4336236,
+    "ast_hash": "23533d612a77ea55284ad8441da41014",
+    "semantic_hash": ""
+  },
+  "src/CampCenter.Infrastructure/Persistence/Migrations/20260807113217_RemoveMealTimeSortOrder.Designer.cs": {
+    "mtime": 1786102337.8602962,
+    "ast_hash": "348146d79069ee7dae2e536e8c035b81",
+    "semantic_hash": ""
+  },
+  "src/CampCenter.Infrastructure/Persistence/Migrations/20260807113217_RemoveMealTimeSortOrder.cs": {
+    "mtime": 1786102337.8602962,
+    "ast_hash": "0e0fe13b287aba6fb76b4d65489f42c2",
     "semantic_hash": ""
   }
 }

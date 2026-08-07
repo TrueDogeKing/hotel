@@ -13,14 +13,17 @@ public class PublicAvailabilityController : ControllerBase
 {
     private readonly IAvailabilityService _availability;
     private readonly IClosureRepository _closures;
+    private readonly IPricingService _pricing;
 
     public PublicAvailabilityController(
         IAvailabilityService availability,
-        IClosureRepository closures
+        IClosureRepository closures,
+        IPricingService pricing
     )
     {
         _availability = availability;
         _closures = closures;
+        _pricing = pricing;
     }
 
     [HttpGet]
@@ -63,6 +66,23 @@ public class PublicAvailabilityController : ControllerBase
         [FromQuery] int? headcount,
         CancellationToken cancellationToken
     ) => Ok(await _availability.GetCalendarAsync(start, end, headcount, cancellationToken));
+
+    /// The centre's rates, with no stay attached — what the booking wizard quotes
+    /// before any dates have been chosen. Anonymous: these are the prices the
+    /// public site advertises.
+    [HttpGet("/api/public/pricing")]
+    [ProducesResponseType(typeof(PublicPricingDto), StatusCodes.Status200OK)]
+    public async Task<IActionResult> Pricing(CancellationToken cancellationToken)
+    {
+        var rates = await _pricing.GetAsync(cancellationToken);
+        return Ok(
+            new PublicPricingDto(
+                rates.PricePerPersonPerNightGrosze,
+                rates.SupervisorPricePerPersonPerNightGrosze,
+                rates.DepositPerPersonPerNightGrosze
+            )
+        );
+    }
 
     /// Upcoming center-wide closures, for advertising closed periods on the site.
     [HttpGet("closures")]

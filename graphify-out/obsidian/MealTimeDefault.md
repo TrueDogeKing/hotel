@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/api/admin.ts"
 type: "code"
-community: "Room Closure Management"
+community: "Domain & Infra Namespaces"
 location: "L780"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Closure_Management
+  - community/Domain__Infra_Namespaces
 ---
 
 # MealTimeDefault
@@ -15,4 +15,4 @@ tags:
 - [[MealTimesPage.tsx]] - `imports` [EXTRACTED]
 - [[admin.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management
+#graphify/code #graphify/EXTRACTED #community/Domain__Infra_Namespaces

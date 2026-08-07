@@ -694,7 +694,7 @@
       }
     },
     {
-      "query": "tag:#community/AvailabilityService",
+      "query": "tag:#community/MealTimeDefault",
       "color": {
         "a": 1,
         "rgb": 12234924
@@ -729,7 +729,7 @@
       }
     },
     {
-      "query": "tag:#community/IntegrationTestBase",
+      "query": "tag:#community/CampCenter.Domain.Exceptions",
       "color": {
         "a": 1,
         "rgb": 5873999
@@ -764,7 +764,7 @@
       }
     },
     {
-      "query": "tag:#community/.Calendar",
+      "query": "tag:#community/IntegrationTestBase",
       "color": {
         "a": 1,
         "rgb": 12234924
@@ -785,7 +785,7 @@
       }
     },
     {
-      "query": "tag:#community/Node_Type_Definitions",
+      "query": "tag:#community/.WithRoomsAsync",
       "color": {
         "a": 1,
         "rgb": 14767961
@@ -862,49 +862,49 @@
       }
     },
     {
-      "query": "tag:#community/.WithRoomsAsync",
+      "query": "tag:#community/AppDbContext",
       "color": {
         "a": 1,
         "rgb": 7780274
       }
     },
     {
-      "query": "tag:#community/eslint",
+      "query": "tag:#community/AdminPanelApiTests",
       "color": {
         "a": 1,
         "rgb": 5873999
       }
     },
     {
-      "query": "tag:#community/.CreateClient",
+      "query": "tag:#community/AuthApiTests",
       "color": {
         "a": 1,
         "rgb": 15583560
       }
     },
     {
-      "query": "tag:#community/AdminPanelApiTests",
+      "query": "tag:#community/GroupRooms.tsx",
       "color": {
         "a": 1,
         "rgb": 11565729
       }
     },
     {
-      "query": "tag:#community/AdminPricingApiTests",
+      "query": "tag:#community/BookingGroupSection.tsx",
       "color": {
         "a": 1,
         "rgb": 16752039
       }
     },
     {
-      "query": "tag:#community/UserValidators.cs",
+      "query": "tag:#community/.NextFreeSitting",
       "color": {
         "a": 1,
         "rgb": 10253663
       }
     },
     {
-      "query": "tag:#community/eslint",
+      "query": "tag:#community/RoomsAndClosuresApiTests",
       "color": {
         "a": 1,
         "rgb": 12234924
@@ -918,7 +918,7 @@
       }
     },
     {
-      "query": "tag:#community/.AddInfrastructure",
+      "query": "tag:#community/@types/node",
       "color": {
         "a": 1,
         "rgb": 15896107
@@ -953,84 +953,7 @@
       }
     },
     {
-      "query": "tag:#community/20260806102552_SupervisorCountsAndRates.Designer.cs",
-      "color": {
-        "a": 1,
-        "rgb": 11565729
-      }
-    },
-    {
       "query": "tag:#community/ScheduleSettings",
-      "color": {
-        "a": 1,
-        "rgb": 16752039
-      }
-    },
-    {
-      "query": "tag:#community/GroupRooms.tsx",
-      "color": {
-        "a": 1,
-        "rgb": 10253663
-      }
-    },
-    {
-      "query": "tag:#community/.NextFreeSitting",
-      "color": {
-        "a": 1,
-        "rgb": 12234924
-      }
-    },
-    {
-      "query": "tag:#community/DependencyInjection.cs",
-      "color": {
-        "a": 1,
-        "rgb": 5142951
-      }
-    },
-    {
-      "query": "tag:#community/AdminUserConfiguration",
-      "color": {
-        "a": 1,
-        "rgb": 15896107
-      }
-    },
-    {
-      "query": "tag:#community/BookingMealTimeConfiguration",
-      "color": {
-        "a": 1,
-        "rgb": 14767961
-      }
-    },
-    {
-      "query": "tag:#community/BookingRoomAssignmentConfiguration",
-      "color": {
-        "a": 1,
-        "rgb": 7780274
-      }
-    },
-    {
-      "query": "tag:#community/PaymentConfiguration",
-      "color": {
-        "a": 1,
-        "rgb": 5873999
-      }
-    },
-    {
-      "query": "tag:#community/RoomConfiguration",
-      "color": {
-        "a": 1,
-        "rgb": 15583560
-      }
-    },
-    {
-      "query": "tag:#community/RoomTaskConfiguration",
-      "color": {
-        "a": 1,
-        "rgb": 11565729
-      }
-    },
-    {
-      "query": "tag:#community/ScheduleEntryConfiguration",
       "color": {
         "a": 1,
         "rgb": 16752039

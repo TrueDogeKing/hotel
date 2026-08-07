@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Models/AccessToken.cs"
 type: "code"
-community: "CampCenter.UnitTests / Validators"
+community: "ClosureService"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Validators
+  - community/ClosureService
 ---
 
 # CampCenter.Application.Models
@@ -29,4 +29,4 @@ tags:
 - [[ScheduleService.cs]] - `imports` [EXTRACTED]
 - [[ScheduleSettings.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Validators
+#graphify/code #graphify/EXTRACTED #community/ClosureService

@@ -1,11 +1,11 @@
 ---
 type: community
-members: 33
+members: 34
 ---
 
 # src / utils
 
-**Members:** 33 nodes
+**Members:** 34 nodes
 
 ## Members
 - [[CalendarBar]] - code - frontend/src/components/calendar/MonthCalendar.tsx
@@ -17,10 +17,10 @@ members: 33
 - [[LaneEvent]] - code - frontend/src/components/calendar/lanes.ts
 - [[MonthCalendar()]] - code - frontend/src/components/calendar/MonthCalendar.tsx
 - [[MonthCalendar.tsx]] - code - frontend/src/components/calendar/MonthCalendar.tsx
-- [[Props_13]] - code - frontend/src/components/calendar/CalendarTile.tsx
-- [[Props_16]] - code - frontend/src/components/calendar/DayCalendar.tsx
-- [[Props_17]] - code - frontend/src/components/calendar/MonthCalendar.tsx
-- [[Props_19]] - code - frontend/src/components/calendar/RangeCalendar.tsx
+- [[Props_14]] - code - frontend/src/components/calendar/CalendarTile.tsx
+- [[Props_17]] - code - frontend/src/components/calendar/DayCalendar.tsx
+- [[Props_18]] - code - frontend/src/components/calendar/MonthCalendar.tsx
+- [[Props_20]] - code - frontend/src/components/calendar/RangeCalendar.tsx
 - [[RangeCalendar()]] - code - frontend/src/components/calendar/RangeCalendar.tsx
 - [[RangeCalendar.tsx]] - code - frontend/src/components/calendar/RangeCalendar.tsx
 - [[addDaysIso()]] - code - frontend/src/utils/dates.ts
@@ -28,6 +28,7 @@ members: 33
 - [[dates.ts]] - code - frontend/src/utils/dates.ts
 - [[dayNumber()]] - code - frontend/src/utils/dates.ts
 - [[formatMonth()]] - code - frontend/src/utils/dates.ts
+- [[formatTimeRange()]] - code - frontend/src/utils/dates.ts
 - [[fromIsoDate()]] - code - frontend/src/utils/dates.ts
 - [[getAvailabilityCalendar()]] - code - frontend/src/api/public.ts
 - [[groupHue()]] - code - frontend/src/components/calendar/lanes.ts
@@ -50,17 +51,18 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 13 edges to [[_COMMUNITY_ScheduleEntry]]
-- 11 edges to [[_COMMUNITY_Frontend App Shell & i18n]]
-- 9 edges to [[_COMMUNITY_Public Booking Frontend (1)]]
-- 8 edges to [[_COMMUNITY_Room Closure Management]]
-- 2 edges to [[_COMMUNITY_Domain & Infra Namespaces]]
-- 2 edges to [[_COMMUNITY_src  api (1)]]
+- 11 edges to [[_COMMUNITY_Room Closure Management]]
+- 10 edges to [[_COMMUNITY_Frontend App Shell & i18n]]
+- 9 edges to [[_COMMUNITY_ScheduleEntry]]
+- 7 edges to [[_COMMUNITY_Public Booking Frontend (1)]]
+- 6 edges to [[_COMMUNITY_Domain & Infra Namespaces]]
+- 1 edge to [[_COMMUNITY_Persistence  Migrations (10)]]
 - 1 edge to [[_COMMUNITY_useAuth]]
+- 1 edge to [[_COMMUNITY_Frontend Auth & API Client]]
 
 ## Top bridge nodes
-- [[dates.ts]] - degree 38, connects to 7 communities
-- [[todayIso()]] - degree 14, connects to 3 communities
-- [[addDaysIso()]] - degree 9, connects to 3 communities
+- [[dates.ts]] - degree 38, connects to 8 communities
 - [[RangeCalendar.tsx]] - degree 14, connects to 2 communities
+- [[todayIso()]] - degree 14, connects to 2 communities
+- [[addDaysIso()]] - degree 9, connects to 2 communities
 - [[fromIsoDate()]] - degree 6, connects to 2 communities

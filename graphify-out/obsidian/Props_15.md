@@ -1,5 +1,5 @@
 ---
-source_file: "frontend/src/components/calendar/DateRangeField.tsx"
+source_file: "frontend/src/components/calendar/DateField.tsx"
 type: "code"
 community: "ScheduleEntry"
 location: "L6"
@@ -12,6 +12,6 @@ tags:
 # Props
 
 ## Connections
-- [[DateRangeField.tsx]] - `contains` [EXTRACTED]
+- [[DateField.tsx]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/ScheduleEntry

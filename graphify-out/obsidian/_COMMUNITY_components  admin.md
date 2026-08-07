@@ -1,11 +1,11 @@
 ---
 type: community
-members: 25
+members: 26
 ---
 
 # components / admin
 
-**Members:** 25 nodes
+**Members:** 26 nodes
 
 ## Members
 - [[.AddAsync()_10]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
@@ -18,6 +18,7 @@ members: 25
 - [[.ListGeneratedSlotsAsync()]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
 - [[.ListLocationsAsync()]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
 - [[.ListVisibleSlotSpansAsync()]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
+- [[.Remove()_6]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
 - [[BookingId]] - code
 - [[CancellationToken_55]] - code
 - [[Count]] - code
@@ -42,10 +43,10 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 16 edges to [[_COMMUNITY_CampCenter.Application  Services (2)]]
+- 17 edges to [[_COMMUNITY_CampCenter.Application  Services (2)]]
 - 8 edges to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
 - 2 edges to [[_COMMUNITY_Public Booking Service (1)]]
-- 2 edges to [[_COMMUNITY_eslint_2]]
+- 2 edges to [[_COMMUNITY_eslint_1]]
 - 2 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (4)]]
 - 1 edge to [[_COMMUNITY_Exception]]
 

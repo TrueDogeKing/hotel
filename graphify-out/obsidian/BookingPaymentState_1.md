@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Domain/Entities/Booking.cs"
 type: "code"
-community: ".AddInfrastructure"
+community: "Integration Test Harness (1)"
 location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AddInfrastructure
+  - community/Integration_Test_Harness_1
 ---
 
 # BookingPaymentState
@@ -16,4 +16,4 @@ tags:
 - [[Booking]] - `references` [EXTRACTED]
 - [[Booking.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AddInfrastructure
+#graphify/code #graphify/EXTRACTED #community/Integration_Test_Harness_1

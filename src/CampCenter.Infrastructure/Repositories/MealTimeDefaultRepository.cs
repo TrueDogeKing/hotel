@@ -12,18 +12,14 @@ public class MealTimeDefaultRepository : IMealTimeDefaultRepository
     public MealTimeDefaultRepository(AppDbContext db) => _db = db;
 
     public Task<List<MealTimeDefault>> GetAllAsync(CancellationToken cancellationToken = default) =>
-        _db
-            .MealTimeDefaults.OrderBy(m => m.SortOrder)
-            .ThenBy(m => m.StartTime)
-            .ToListAsync(cancellationToken);
+        _db.MealTimeDefaults.OrderBy(m => m.StartTime).ToListAsync(cancellationToken);
 
     public Task<List<MealTimeDefault>> GetActiveAsync(
         CancellationToken cancellationToken = default
     ) =>
         _db
             .MealTimeDefaults.Where(m => m.IsActive)
-            .OrderBy(m => m.SortOrder)
-            .ThenBy(m => m.StartTime)
+            .OrderBy(m => m.StartTime)
             .ToListAsync(cancellationToken);
 
     public Task<MealTimeDefault?> GetByIdAsync(

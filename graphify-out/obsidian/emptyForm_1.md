@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/pages/admin/MealTimesPage.tsx"
 type: "code"
-community: "Room Closure Management"
-location: "L27"
+community: "Domain & Infra Namespaces"
+location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Closure_Management
+  - community/Domain__Infra_Namespaces
 ---
 
 # emptyForm
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[MealTimesPage.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management
+#graphify/code #graphify/EXTRACTED #community/Domain__Infra_Namespaces

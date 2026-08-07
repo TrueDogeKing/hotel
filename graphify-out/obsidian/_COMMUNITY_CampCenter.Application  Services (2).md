@@ -55,27 +55,24 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 16 edges to [[_COMMUNITY_DTOs  Schedule (1)]]
-- 16 edges to [[_COMMUNITY_components  admin]]
-- 13 edges to [[_COMMUNITY_eslint_2]]
-- 7 edges to [[_COMMUNITY_AvailabilityService]]
+- 17 edges to [[_COMMUNITY_DTOs  Schedule (1)]]
+- 17 edges to [[_COMMUNITY_components  admin]]
+- 13 edges to [[_COMMUNITY_eslint_1]]
+- 9 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (1)]]
 - 6 edges to [[_COMMUNITY_Integration Test Harness (2)]]
-- 6 edges to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
 - 5 edges to [[_COMMUNITY_Integration Test Harness (1)]]
-- 3 edges to [[_COMMUNITY_src  api (2)]]
+- 5 edges to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
+- 3 edges to [[_COMMUNITY_Camp Session Management]]
 - 2 edges to [[_COMMUNITY_tests  CampCenter.IntegrationTests (1)]]
-- 2 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (1)]]
+- 2 edges to [[_COMMUNITY_Public Booking Service (1)]]
 - 2 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (4)]]
-- 2 edges to [[_COMMUNITY_GroupRooms.tsx_1]]
-- 1 edge to [[_COMMUNITY_Camp Session Management]]
-- 1 edge to [[_COMMUNITY_Admin Booking & Notifications (2)]]
+- 2 edges to [[_COMMUNITY_GroupRooms.tsx]]
 - 1 edge to [[_COMMUNITY_ScheduleSettings]]
-- 1 edge to [[_COMMUNITY_Public Booking Service (1)]]
-- 1 edge to [[_COMMUNITY_Exception]]
+- 1 edge to [[_COMMUNITY_ClosureService]]
 
 ## Top bridge nodes
 - [[ScheduleService]] - degree 36, connects to 8 communities
 - [[.ToDto()_6]] - degree 15, connects to 5 communities
-- [[.GenerateMealsForBookingAsync()_1]] - degree 17, connects to 4 communities
-- [[.SetBookingMealTimeAsync()_1]] - degree 16, connects to 4 communities
 - [[.GetBookingMealTimesAsync()_1]] - degree 13, connects to 4 communities
+- [[.ResetBookingMealTimeAsync()_1]] - degree 13, connects to 4 communities
+- [[.GenerateMealsForBookingAsync()_1]] - degree 17, connects to 3 communities

@@ -12,7 +12,7 @@ tags:
 # ScheduleEntryKind
 
 ## Connections
-- [[Props_12]] - `references` [EXTRACTED]
+- [[Props_13]] - `references` [EXTRACTED]
 - [[ScheduleEntryForm.tsx]] - `imports` [EXTRACTED]
 - [[admin.ts]] - `contains` [EXTRACTED]
 

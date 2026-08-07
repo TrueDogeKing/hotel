@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: ".CreateWorkerAsync"
+community: "PasswordRules"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateWorkerAsync
+  - community/PasswordRules
 ---
 
 # Task
@@ -20,4 +20,4 @@ tags:
 - [[.Worker_MayRecordHousekeepingProgress()]] - `references` [EXTRACTED]
 - [[.Worker_ReadsEverySection_ButCannotWriteAnywhere()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateWorkerAsync
+#graphify/code #graphify/EXTRACTED #community/PasswordRules

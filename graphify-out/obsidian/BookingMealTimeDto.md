@@ -2,7 +2,7 @@
 source_file: "src/CampCenter.Application/DTOs/Schedule/MealTimeDtos.cs"
 type: "code"
 community: "CampCenter.Application / Services (2)"
-location: "L48"
+location: "L45"
 tags:
   - graphify/code
   - graphify/EXTRACTED

@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Common/LoginNormalizer.cs"
 type: "code"
-community: "eslint"
+community: "BookingGroupSection.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/eslint
+  - community/BookingGroupSectiontsx
 ---
 
 # LoginNormalizer.cs
@@ -15,4 +15,4 @@ tags:
 - [[CampCenter.Application.Common]] - `contains` [EXTRACTED]
 - [[LoginNormalizer]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/eslint
+#graphify/code #graphify/EXTRACTED #community/BookingGroupSectiontsx

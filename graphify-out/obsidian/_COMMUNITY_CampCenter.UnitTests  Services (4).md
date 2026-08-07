@@ -41,7 +41,7 @@ SORT file.name ASC
 - 2 edges to [[_COMMUNITY_CampCenter.Application  Services (2)]]
 - 2 edges to [[_COMMUNITY_components  admin]]
 - 1 edge to [[_COMMUNITY_DTOs  Schedule (1)]]
-- 1 edge to [[_COMMUNITY_Exception]]
+- 1 edge to [[_COMMUNITY_ClosureService]]
 
 ## Top bridge nodes
 - [[ScheduleConflictTests]] - degree 20, connects to 3 communities

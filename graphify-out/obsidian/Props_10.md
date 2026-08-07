@@ -1,17 +1,17 @@
 ---
-source_file: "frontend/src/components/admin/GroupRooms.tsx"
+source_file: "frontend/src/components/admin/GroupPeople.tsx"
 type: "code"
-community: "GroupRooms.tsx"
-location: "L13"
+community: "useAuth"
+location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/GroupRoomstsx
+  - community/useAuth
 ---
 
 # Props
 
 ## Connections
-- [[GroupRooms.tsx]] - `contains` [EXTRACTED]
+- [[GroupPeople.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/GroupRoomstsx
+#graphify/code #graphify/EXTRACTED #community/useAuth

@@ -165,7 +165,17 @@
     "camperRooms": "Pokoje dla uczestników ({{count}} os.)",
     "supervisorsDoNotFit": "W tym terminie nie da się zakwaterować grupy tak, aby opiekunowie mieli osobne pokoje. Spróbuj innego terminu lub zmień liczbę osób.",
     "addRoom": "Dodaj pokój {{capacity}}-osobowy",
-    "removeRoom": "Usuń pokój {{capacity}}-osobowy"
+    "removeRoom": "Usuń pokój {{capacity}}-osobowy",
+    "pageTitle": "Zarezerwuj pobyt dla swojej grupy",
+    "pageLead": "Cztery kroki: termin i liczba osób, podział pokoi, dane kontaktowe i potwierdzenie. Rezerwacja jest wstępna do czasu wpłaty zaliczki.",
+    "stepsLabel": "Kroki rezerwacji",
+    "ratePerPerson": "za osobę za noc",
+    "ratePerCamper": "za uczestnika za noc",
+    "ratePerSupervisor": "za opiekuna za noc",
+    "rateDeposit": "zaliczka od osoby za noc",
+    "summaryHeadcountSplit": "{{count}} os. ({{campers}} uczestn. + {{supervisors}} opiek.)",
+    "summaryCamperRooms": "Pokoje uczestników",
+    "summarySupervisorRooms": "Pokoje opiekunów"
   },
   "manage": {
     "notFound": "Nie znaleziono rezerwacji. Sprawdź link z e-maila.",
@@ -626,7 +636,6 @@
     "label": "Nazwa",
     "startTime": "Od",
     "endTime": "Do",
-    "sortOrder": "Kolejność",
     "time": "Godziny",
     "status": "Status",
     "active": "Aktywna",

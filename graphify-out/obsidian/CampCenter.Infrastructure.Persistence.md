@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Persistence/AppDbContext.cs"
 type: "code"
-community: "Public Booking Service (2)"
+community: "Exception"
 location: "L4"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public_Booking_Service_2
+  - community/Exception
 ---
 
 # CampCenter.Infrastructure.Persistence
@@ -25,6 +25,7 @@ tags:
 - [[20260802130913_MakeRoomTaskRoomOptional.Designer.cs]] - `imports` [EXTRACTED]
 - [[20260806090830_ManualPricingAndPaymentState.Designer.cs]] - `imports` [EXTRACTED]
 - [[20260806102552_SupervisorCountsAndRates.Designer.cs]] - `imports` [EXTRACTED]
+- [[20260807113217_RemoveMealTimeSortOrder.Designer.cs]] - `imports` [EXTRACTED]
 - [[AdminUserRepository.cs]] - `imports` [EXTRACTED]
 - [[AppDbContext.cs]] - `contains` [EXTRACTED]
 - [[AppDbContextModelSnapshot.cs]] - `imports` [EXTRACTED]
@@ -43,4 +44,4 @@ tags:
 - [[RoomTaskRepository.cs]] - `imports` [EXTRACTED]
 - [[ScheduleEntryRepository.cs]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_2
+#graphify/code #graphify/EXTRACTED #community/Exception

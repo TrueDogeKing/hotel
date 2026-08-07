@@ -36,9 +36,6 @@ public class MealTimeDefault
     /// DurationMinutes + ScheduleSettings.MealGapMinutes apart.
     public int DurationMinutes { get; set; } = 60;
 
-    /// Display order in the meal-times list and in generated schedules.
-    public int SortOrder { get; set; }
-
     /// Inactive defaults stop being generated but keep their history (entries
     /// already generated from them still reference them).
     public bool IsActive { get; set; } = true;

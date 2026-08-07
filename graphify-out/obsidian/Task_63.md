@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "IClosureRepository"
+community: "CampCenter.UnitTests / Services (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/IClosureRepository
+  - community/CampCenterUnitTests_/_Services_1
 ---
 
 # Task
@@ -18,4 +18,4 @@ tags:
 - [[.IsReferencedAsync()_1]] - `references` [EXTRACTED]
 - [[.SaveChangesAsync()_15]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/IClosureRepository
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_1

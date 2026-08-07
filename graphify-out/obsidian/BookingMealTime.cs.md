@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Domain/Entities/BookingMealTime.cs"
 type: "code"
-community: "Exception"
+community: "GroupRooms.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Exception
+  - community/GroupRoomstsx
 ---
 
 # BookingMealTime.cs
@@ -15,4 +15,4 @@ tags:
 - [[BookingMealTime_1]] - `contains` [EXTRACTED]
 - [[CampCenter.Domain.Entities]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Exception
+#graphify/code #graphify/EXTRACTED #community/GroupRoomstsx

@@ -32,6 +32,7 @@ tags:
 - [[PricingController.cs]] - `imports` [EXTRACTED]
 - [[PricingService.cs]] - `imports` [EXTRACTED]
 - [[RoomTaskService.cs]] - `imports` [EXTRACTED]
+- [[ScheduleApiTests.cs]] - `imports` [EXTRACTED]
 - [[TasksController.cs]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Application_Namespaces__DTOs

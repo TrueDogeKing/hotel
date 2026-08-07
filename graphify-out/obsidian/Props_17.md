@@ -1,8 +1,8 @@
 ---
-source_file: "frontend/src/components/calendar/MonthCalendar.tsx"
+source_file: "frontend/src/components/calendar/DayCalendar.tsx"
 type: "code"
 community: "src / utils"
-location: "L24"
+location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,6 +12,6 @@ tags:
 # Props
 
 ## Connections
-- [[MonthCalendar.tsx]] - `contains` [EXTRACTED]
+- [[DayCalendar.tsx]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/src_/_utils

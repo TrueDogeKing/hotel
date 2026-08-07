@@ -48,6 +48,7 @@ tags:
 - [[IconUtensils()]] - `contains` [EXTRACTED]
 - [[IconWaves()]] - `contains` [EXTRACTED]
 - [[LoginPage.tsx]] - `imports_from` [EXTRACTED]
+- [[PublicHeader.tsx]] - `imports_from` [EXTRACTED]
 - [[PublicHomePage.tsx]] - `imports_from` [EXTRACTED]
 - [[ThemeToggle.tsx]] - `imports_from` [EXTRACTED]
 

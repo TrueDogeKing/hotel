@@ -28,6 +28,17 @@ public record AvailabilityDto(
 /// A center-wide closure as the public site advertises it.
 public record PublicClosureDto(string Reason, DateOnly StartDate, DateOnly EndDate);
 
+/// The centre's rates on their own, with no dates and no group attached.
+///
+/// AvailabilityDto carries the same figures, but only ever alongside a concrete
+/// stay — so the booking wizard could not quote a price until the visitor had
+/// already picked dates. This is what it asks for on arrival.
+public record PublicPricingDto(
+    long PricePerPersonPerNightGrosze,
+    long SupervisorPricePerPersonPerNightGrosze,
+    long DepositPerPersonPerNightGrosze
+);
+
 /// One night, as the booking calendar needs to draw it: whether a group could
 /// sleep here, and why not when it could not.
 ///

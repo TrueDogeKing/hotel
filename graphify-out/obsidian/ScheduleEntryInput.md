@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[GroupSchedulePanel.tsx]] - `imports` [EXTRACTED]
-- [[Props_12]] - `references` [EXTRACTED]
+- [[Props_13]] - `references` [EXTRACTED]
 - [[ScheduleEntryForm.tsx]] - `imports` [EXTRACTED]
 - [[SchedulePage.tsx]] - `imports` [EXTRACTED]
 - [[admin.ts]] - `contains` [EXTRACTED]

@@ -1,17 +1,17 @@
 ---
-source_file: "frontend/src/components/admin/GroupPeople.tsx"
+source_file: "frontend/src/components/admin/GroupMealTimes.tsx"
 type: "code"
-community: "Frontend App Shell & i18n"
-location: "L7"
+community: "Persistence / Migrations (10)"
+location: "L41"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Frontend_App_Shell__i18n
+  - community/Persistence_/_Migrations_10
 ---
 
 # Props
 
 ## Connections
-- [[GroupPeople.tsx]] - `contains` [EXTRACTED]
+- [[GroupMealTimes.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Frontend_App_Shell__i18n
+#graphify/code #graphify/EXTRACTED #community/Persistence_/_Migrations_10

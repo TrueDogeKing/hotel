@@ -328,15 +328,12 @@ namespace CampCenter.Infrastructure.Persistence.Migrations
                         .HasColumnType("xid")
                         .HasColumnName("xmin");
 
-                    b.Property<int>("SortOrder")
-                        .HasColumnType("integer");
-
                     b.Property<TimeOnly>("StartTime")
                         .HasColumnType("time without time zone");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("SortOrder", "StartTime");
+                    b.HasIndex("StartTime");
 
                     b.ToTable("MealTimeDefaults", null, t =>
                         {

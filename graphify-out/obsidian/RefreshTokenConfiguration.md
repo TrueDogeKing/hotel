@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Persistence/Configurations/RefreshTokenConfiguration.cs"
 type: "code"
-community: "AdminUserConfiguration"
+community: "Refresh Token Repository"
 location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AdminUserConfiguration
+  - community/Refresh_Token_Repository
 ---
 
 # RefreshTokenConfiguration
@@ -17,4 +17,4 @@ tags:
 - [[RefreshToken]] - `references` [EXTRACTED]
 - [[RefreshTokenConfiguration.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AdminUserConfiguration
+#graphify/code #graphify/EXTRACTED #community/Refresh_Token_Repository

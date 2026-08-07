@@ -1,19 +1,18 @@
 ---
-source_file: "frontend/src/components/admin/BookingGroupSection.tsx"
+source_file: "frontend/src/components/admin/AddGroupForm.tsx"
 type: "code"
-community: "Frontend App Shell & i18n"
-location: "L17"
+community: "useAuth"
+location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Frontend_App_Shell__i18n
+  - community/useAuth
 ---
 
 # Props
 
 ## Connections
-- [[BookingGroupCategory]] - `references` [EXTRACTED]
-- [[BookingGroupSection.tsx]] - `contains` [EXTRACTED]
-- [[BookingStatus]] - `references` [EXTRACTED]
+- [[AddGroupForm.tsx]] - `contains` [EXTRACTED]
+- [[AdminBooking]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Frontend_App_Shell__i18n
+#graphify/code #graphify/EXTRACTED #community/useAuth

@@ -1,17 +1,17 @@
 ---
-source_file: "frontend/src/components/calendar/RangeCalendar.tsx"
+source_file: "frontend/src/components/calendar/PopoverField.tsx"
 type: "code"
-community: "src / utils"
-location: "L13"
+community: "ScheduleEntry"
+location: "L3"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/src_/_utils
+  - community/ScheduleEntry
 ---
 
 # Props
 
 ## Connections
-- [[RangeCalendar.tsx]] - `contains` [EXTRACTED]
+- [[PopoverField.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/src_/_utils
+#graphify/code #graphify/EXTRACTED #community/ScheduleEntry

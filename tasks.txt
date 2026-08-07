@@ -1,10 +1,7 @@
-każda grupa je w innym czasie ez i 15 min przerwy fool proof if place the same no no no
-
 Drukowanie dnia i pokoi do sprzątania
+		0. Wyjazd grupy z ośrodka
+big redesign,   1. allerts, edit request from clients
+		2. view for the group owner of their schedule and time tables (requesting changes)
 
-dodanie aktywności z tabelki godzinowej
 
-pomieszczenia aktywności do dodania jak basen,kręgle,dyskoteka do wybrania z listy gdy aktywności + opcja inne
-
-Opinia: sprawdzenie obłożenia można klikać jak ośrodek pełen
-dodać edytowanie zadań
+Opinia:  

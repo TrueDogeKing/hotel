@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "EF Core Migrations (3)"
+community: "GroupRooms.tsx"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EF_Core_Migrations_3
+  - community/GroupRoomstsx
 ---
 
 # ModelBuilder
 
 ## Connections
-- [[.BuildModel()]] - `references` [EXTRACTED]
+- [[.BuildTargetModel()_13]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EF_Core_Migrations_3
+#graphify/code #graphify/EXTRACTED #community/GroupRoomstsx

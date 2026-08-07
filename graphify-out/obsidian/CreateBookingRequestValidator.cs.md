@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Validators/CreateBookingRequestValidator.cs"
 type: "code"
-community: "Camp Session Management"
+community: "CampCenter.UnitTests / Validators"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Camp_Session_Management
+  - community/CampCenterUnitTests_/_Validators
 ---
 
 # CreateBookingRequestValidator.cs
@@ -16,4 +16,4 @@ tags:
 - [[CampCenter.Application.Validators]] - `contains` [EXTRACTED]
 - [[CreateBookingRequestValidator]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Camp_Session_Management
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Validators

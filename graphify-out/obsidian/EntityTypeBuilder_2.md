@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "BookingMealTimeConfiguration"
+community: "GroupRooms.tsx"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/BookingMealTimeConfiguration
+  - community/GroupRoomstsx
 ---
 
 # EntityTypeBuilder
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.Configure()_2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/BookingMealTimeConfiguration
+#graphify/code #graphify/EXTRACTED #community/GroupRoomstsx

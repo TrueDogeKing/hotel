@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: ".NextFreeSitting"
+community: "CampCenter.UnitTests / Services (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/NextFreeSitting
+  - community/CampCenterUnitTests_/_Services_1
 ---
 
 # Start
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.NextFreeSitting()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/NextFreeSitting
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_1

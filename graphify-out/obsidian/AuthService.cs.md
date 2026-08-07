@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Services/AuthService.cs"
 type: "code"
-community: "CampCenter.UnitTests / Validators"
+community: "ClosureService"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Validators
+  - community/ClosureService
 ---
 
 # AuthService.cs
@@ -21,4 +21,4 @@ tags:
 - [[CampCenter.Domain.Entities]] - `imports` [EXTRACTED]
 - [[CampCenter.Domain.Repositories]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Validators
+#graphify/code #graphify/EXTRACTED #community/ClosureService

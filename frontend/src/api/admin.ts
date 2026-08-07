@@ -787,7 +787,6 @@ export interface MealTimeDefault {
   endTime: string;
   /** How long one group's sitting lasts. */
   durationMinutes: number;
-  sortOrder: number;
   isActive: boolean;
   rowVersion: number;
 }
@@ -798,7 +797,6 @@ export interface MealTimeDefaultInput {
   startTime: string;
   endTime: string;
   durationMinutes: number;
-  sortOrder: number;
 }
 
 export async function getMealTimes(): Promise<MealTimeDefault[]> {
@@ -839,7 +837,6 @@ export interface BookingMealTime {
   mealTimeDefaultId: string;
   mealKind: MealKind;
   label: string;
-  sortOrder: number;
   defaultStartTime: string;
   defaultEndTime: string;
   /** The window's sitting length. */

@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Persistence/Configurations/MealTimeDefaultConfiguration.cs"
 type: "code"
-community: "eslint"
+community: "CampCenter.UnitTests / Services (1)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/eslint
+  - community/CampCenterUnitTests_/_Services_1
 ---
 
 # MealTimeDefaultConfiguration.cs
@@ -16,4 +16,4 @@ tags:
 - [[CampCenter.Infrastructure.Persistence.Configurations]] - `contains` [EXTRACTED]
 - [[MealTimeDefaultConfiguration]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/eslint
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_1

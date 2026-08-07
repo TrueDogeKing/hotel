@@ -21,7 +21,6 @@ interface FormState {
   startTime: string;
   endTime: string;
   durationMinutes: string;
-  sortOrder: string;
 }
 
 const emptyForm: FormState = {
@@ -30,7 +29,6 @@ const emptyForm: FormState = {
   startTime: "08:00",
   endTime: "09:00",
   durationMinutes: "30",
-  sortOrder: "1",
 };
 
 // The center's default meal slots. Confirmed bookings get one meal per active
@@ -80,7 +78,6 @@ export default function MealTimesPage() {
       startTime: fromTimeInput(form.startTime),
       endTime: fromTimeInput(form.endTime),
       durationMinutes: Number(form.durationMinutes) || 0,
-      sortOrder: Number(form.sortOrder) || 0,
     };
     try {
       if (editing) {
@@ -108,7 +105,6 @@ export default function MealTimesPage() {
       startTime: toTimeInput(mealTime.startTime),
       endTime: toTimeInput(mealTime.endTime),
       durationMinutes: String(mealTime.durationMinutes),
-      sortOrder: String(mealTime.sortOrder),
     });
   }
 
@@ -121,7 +117,6 @@ export default function MealTimesPage() {
         startTime: mealTime.startTime,
         endTime: mealTime.endTime,
         durationMinutes: mealTime.durationMinutes,
-        sortOrder: mealTime.sortOrder,
         isActive: !mealTime.isActive,
         rowVersion: mealTime.rowVersion,
       });
@@ -201,15 +196,6 @@ export default function MealTimesPage() {
               value={form.durationMinutes}
               onChange={(e) => setForm({ ...form, durationMinutes: e.target.value })}
               required
-            />
-          </label>
-          <label>
-            {t("mealTimes.sortOrder")}
-            <input
-              type="number"
-              min={0}
-              value={form.sortOrder}
-              onChange={(e) => setForm({ ...form, sortOrder: e.target.value })}
             />
           </label>
           <button type="submit">{editing ? t("mealTimes.save") : t("mealTimes.add")}</button>

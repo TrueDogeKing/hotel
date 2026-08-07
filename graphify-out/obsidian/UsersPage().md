@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/pages/admin/UsersPage.tsx"
 type: "code"
-community: "src / api (1)"
+community: "Frontend Auth & API Client"
 location: "L38"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/src_/_api_1
+  - community/Frontend_Auth__API_Client
 ---
 
 # UsersPage()
@@ -17,4 +17,4 @@ tags:
 - [[getUsers()]] - `calls` [EXTRACTED]
 - [[useAuth()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/src_/_api_1
+#graphify/code #graphify/EXTRACTED #community/Frontend_Auth__API_Client

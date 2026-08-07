@@ -1,12 +1,12 @@
 ---
 source_file: "tests/CampCenter.UnitTests/Validators/LoginRequestValidatorTests.cs"
 type: "code"
-community: "Camp Session Management"
+community: "Persistence / Migrations (2)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Camp_Session_Management
+  - community/Persistence_/_Migrations_2
 ---
 
 # LoginRequestValidatorTests.cs
@@ -17,4 +17,4 @@ tags:
 - [[CampCenter.UnitTests.Validators]] - `contains` [EXTRACTED]
 - [[LoginRequestValidatorTests]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Camp_Session_Management
+#graphify/code #graphify/EXTRACTED #community/Persistence_/_Migrations_2

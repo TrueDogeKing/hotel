@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Interfaces/IAvailabilityService.cs"
 type: "code"
-community: ".GetBlockedRoomIdsAsync"
+community: "ClosureValidatorsTests"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/GetBlockedRoomIdsAsync
+  - community/ClosureValidatorsTests
 ---
 
 # IAvailabilityService
@@ -23,4 +23,4 @@ tags:
 - [[IAvailabilityService.cs]] - `contains` [EXTRACTED]
 - [[PublicAvailabilityController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/GetBlockedRoomIdsAsync
+#graphify/code #graphify/EXTRACTED #community/ClosureValidatorsTests

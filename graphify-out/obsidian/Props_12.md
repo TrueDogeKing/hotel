@@ -1,20 +1,17 @@
 ---
-source_file: "frontend/src/components/admin/ScheduleEntryForm.tsx"
+source_file: "frontend/src/components/admin/GroupSchedulePanel.tsx"
 type: "code"
-community: "Domain & Infra Namespaces"
-location: "L54"
+community: "Frontend App Shell & i18n"
+location: "L31"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Domain__Infra_Namespaces
+  - community/Frontend_App_Shell__i18n
 ---
 
 # Props
 
 ## Connections
-- [[ScheduleEntry]] - `references` [EXTRACTED]
-- [[ScheduleEntryForm.tsx]] - `contains` [EXTRACTED]
-- [[ScheduleEntryInput]] - `references` [EXTRACTED]
-- [[ScheduleEntryKind]] - `references` [EXTRACTED]
+- [[GroupSchedulePanel.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Domain__Infra_Namespaces
+#graphify/code #graphify/EXTRACTED #community/Frontend_App_Shell__i18n

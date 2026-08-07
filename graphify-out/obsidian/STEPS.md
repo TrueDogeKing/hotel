@@ -1,17 +1,17 @@
 ---
-source_file: "frontend/src/pages/PublicHomePage.tsx"
+source_file: "frontend/src/pages/BookingWizardPage.tsx"
 type: "code"
-community: "Frontend Icon Components"
-location: "L26"
+community: "Public Booking Frontend (1)"
+location: "L38"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Frontend_Icon_Components
+  - community/Public_Booking_Frontend_1
 ---
 
 # STEPS
 
 ## Connections
-- [[PublicHomePage.tsx]] - `contains` [EXTRACTED]
+- [[BookingWizardPage.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Frontend_Icon_Components
+#graphify/code #graphify/EXTRACTED #community/Public_Booking_Frontend_1

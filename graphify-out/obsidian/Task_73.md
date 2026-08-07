@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: ".CreateWorkerAsync"
+community: "PasswordRules"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateWorkerAsync
+  - community/PasswordRules
 ---
 
 # Task
@@ -14,4 +14,4 @@ tags:
 - [[.CreateAuthenticatedClientAsync()]] - `references` [EXTRACTED]
 - [[.CreateClientForAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateWorkerAsync
+#graphify/code #graphify/EXTRACTED #community/PasswordRules

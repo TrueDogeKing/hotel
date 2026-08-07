@@ -21,7 +21,6 @@ tags:
 - [[.KindIsCaseInsensitive()]] - `references` [EXTRACTED]
 - [[.MealWithUnknownMealKind_Fails()]] - `references` [EXTRACTED]
 - [[.MealWithoutMealKind_Fails()]] - `references` [EXTRACTED]
-- [[.NegativeSortOrder_Fails()]] - `references` [EXTRACTED]
 - [[.NullParticipantCount_Passes()]] - `references` [EXTRACTED]
 - [[.OverlongMenuOrPrepNotes_Fails()]] - `references` [EXTRACTED]
 - [[.OverlongTitle_Fails()]] - `references` [EXTRACTED]

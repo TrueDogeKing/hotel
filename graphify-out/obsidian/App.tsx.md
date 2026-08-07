@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/App.tsx"
 type: "code"
-community: "Public Booking Frontend (1)"
+community: "useAuth"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public_Booking_Frontend_1
+  - community/useAuth
 ---
 
 # App.tsx
@@ -33,4 +33,4 @@ tags:
 - [[UsersPage.tsx]] - `imports_from` [EXTRACTED]
 - [[main.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public_Booking_Frontend_1
+#graphify/code #graphify/EXTRACTED #community/useAuth

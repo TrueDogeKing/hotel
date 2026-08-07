@@ -31,7 +31,7 @@ public class MealTimeDefaultConfiguration : IEntityTypeConfiguration<MealTimeDef
 
         builder.Property(x => x.DurationMinutes).HasDefaultValue(60);
 
-        builder.HasIndex(x => new { x.SortOrder, x.StartTime });
+        builder.HasIndex(x => x.StartTime);
 
         // Optimistic concurrency via the PostgreSQL "xmin" system column.
         builder
