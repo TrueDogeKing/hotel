@@ -30,7 +30,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_Public Booking Service (2)]]
+- 1 edge to [[_COMMUNITY_Exception]]
 
 ## Top bridge nodes
 - [[GlobalExceptionHandler]] - degree 6, connects to 1 community

@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs"
 type: "code"
-community: "components / admin"
+community: "Admin Booking & Notifications (1)"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/components_/_admin
+  - community/Admin_Booking__Notifications_1
 ---
 
 # IScheduleEntryRepository
@@ -21,6 +21,7 @@ tags:
 - [[.ListFullySuppressedSlotsAsync()]] - `method` [EXTRACTED]
 - [[.ListGeneratedSlotsAsync()]] - `method` [EXTRACTED]
 - [[.ListLocationsAsync()]] - `method` [EXTRACTED]
+- [[.ListOutingDaysAsync()]] - `method` [EXTRACTED]
 - [[.ListVisibleSlotSpansAsync()]] - `method` [EXTRACTED]
 - [[.Remove()_6]] - `method` [EXTRACTED]
 - [[.SaveChangesAsync()_10]] - `method` [EXTRACTED]
@@ -30,4 +31,4 @@ tags:
 - [[ScheduleEntryRepository]] - `implements` [EXTRACTED]
 - [[ScheduleService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/components_/_admin
+#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_1

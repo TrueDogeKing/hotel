@@ -127,6 +127,7 @@ tags:
 - [[reassignBooking()]] - `contains` [EXTRACTED]
 - [[resetBookingMealTime()]] - `contains` [EXTRACTED]
 - [[roomCleaningStatuses]] - `contains` [EXTRACTED]
+- [[scheduleEntryKinds]] - `contains` [EXTRACTED]
 - [[setBookingMealTime()]] - `contains` [EXTRACTED]
 - [[setBookingPaymentState()]] - `contains` [EXTRACTED]
 - [[setBookingState()]] - `contains` [EXTRACTED]

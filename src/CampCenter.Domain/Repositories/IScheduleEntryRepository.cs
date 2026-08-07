@@ -60,6 +60,15 @@ public interface IScheduleEntryRepository
         CancellationToken cancellationToken = default
     );
 
+    /// The (booking, day) pairs on which a group is away from the centre, over
+    /// [start, end]. Feeds the month calendar's trip-day marking.
+    Task<List<(Guid BookingId, DateOnly Date)>> ListOutingDaysAsync(
+        DateOnly start,
+        DateOnly end,
+        IReadOnlyCollection<Guid> bookingIds,
+        CancellationToken cancellationToken = default
+    );
+
     Task AddRangeAsync(
         IReadOnlyCollection<ScheduleEntry> entries,
         CancellationToken cancellationToken = default

@@ -8,16 +8,16 @@ members: 11
 **Members:** 11 nodes
 
 ## Members
+- [[.Down()]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/20260719142059_InitialAuth.cs
 - [[.Down()_3]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/20260727123803_ScheduleAndMealTimes.cs
-- [[.Down()_10]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/20260802130913_MakeRoomTaskRoomOptional.cs
+- [[.Up()]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/20260719142059_InitialAuth.cs
 - [[.Up()_3]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/20260727123803_ScheduleAndMealTimes.cs
-- [[.Up()_10]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/20260802130913_MakeRoomTaskRoomOptional.cs
+- [[20260719142059_InitialAuth.cs]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/20260719142059_InitialAuth.cs
 - [[20260727123803_ScheduleAndMealTimes.cs]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/20260727123803_ScheduleAndMealTimes.cs
-- [[20260802130913_MakeRoomTaskRoomOptional.cs]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/20260802130913_MakeRoomTaskRoomOptional.cs
-- [[MakeRoomTaskRoomOptional_1]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/20260802130913_MakeRoomTaskRoomOptional.cs
+- [[InitialAuth_1]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/20260719142059_InitialAuth.cs
 - [[Migration]] - code
+- [[MigrationBuilder]] - code
 - [[MigrationBuilder_3]] - code
-- [[MigrationBuilder_10]] - code
 - [[ScheduleAndMealTimes_1]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/20260727123803_ScheduleAndMealTimes.cs
 
 ## Live Query (requires Dataview plugin)
@@ -29,7 +29,6 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 2 edges to [[_COMMUNITY_EF Core Migrations (3)]]
-- 1 edge to [[_COMMUNITY_EF Core Migrations (4)]]
 - 1 edge to [[_COMMUNITY_EF Core Migrations (2)]]
 - 1 edge to [[_COMMUNITY_Persistence  Migrations (1)]]
 - 1 edge to [[_COMMUNITY_Persistence  Migrations (3)]]
@@ -38,11 +37,12 @@ SORT file.name ASC
 - 1 edge to [[_COMMUNITY_Persistence  Migrations (6)]]
 - 1 edge to [[_COMMUNITY_Persistence  Migrations (7)]]
 - 1 edge to [[_COMMUNITY_AdminUserRole]]
+- 1 edge to [[_COMMUNITY_MakeRoomTaskRoomOptional]]
 - 1 edge to [[_COMMUNITY_ClosureValidatorsTests_1]]
 - 1 edge to [[_COMMUNITY_SupervisorCountsAndRates]]
 - 1 edge to [[_COMMUNITY_RoomCleaningRepository_1]]
 
 ## Top bridge nodes
 - [[Migration]] - degree 14, connects to 12 communities
+- [[20260719142059_InitialAuth.cs]] - degree 2, connects to 1 community
 - [[20260727123803_ScheduleAndMealTimes.cs]] - degree 2, connects to 1 community
-- [[20260802130913_MakeRoomTaskRoomOptional.cs]] - degree 2, connects to 1 community

@@ -135,7 +135,5 @@
   "133": "20260721111400_ReplaceSessionsWithClosures.Designer.cs",
   "134": "deploy.ps1",
   "135": "register-deploy-task.ps1",
-  "136": "20260806102552_SupervisorCountsAndRates.Designer.cs",
-  "137": "ScheduleSettings",
-  "148": "eslint"
+  "136": "@types/react"
 }

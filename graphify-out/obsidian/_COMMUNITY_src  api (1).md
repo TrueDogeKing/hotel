@@ -42,9 +42,9 @@ SORT file.name ASC
 - 13 edges to [[_COMMUNITY_ControllerBase]]
 - 7 edges to [[_COMMUNITY_.GetBlockedRoomIdsAsync]]
 - 1 edge to [[_COMMUNITY_Application Namespaces & DTOs]]
-- 1 edge to [[_COMMUNITY_Admin Booking & Notifications (2)]]
+- 1 edge to [[_COMMUNITY_AppDbContext]]
 - 1 edge to [[_COMMUNITY_Integration Test Harness (1)]]
-- 1 edge to [[_COMMUNITY_.NextFreeSitting]]
+- 1 edge to [[_COMMUNITY_CampCenter.UnitTests  Validators]]
 
 ## Top bridge nodes
 - [[BookingsController]] - degree 16, connects to 3 communities

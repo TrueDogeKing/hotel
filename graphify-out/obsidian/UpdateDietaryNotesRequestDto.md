@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/DTOs/Schedule/ScheduleDtos.cs"
 type: "code"
-community: ".NextFreeSitting"
-location: "L181"
+community: "CampCenter.UnitTests / Validators"
+location: "L184"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/NextFreeSitting
+  - community/CampCenterUnitTests_/_Validators
 ---
 
 # UpdateDietaryNotesRequestDto
@@ -18,4 +18,4 @@ tags:
 - [[ScheduleDtos.cs]] - `contains` [EXTRACTED]
 - [[UpdateDietaryNotesRequestValidator]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/NextFreeSitting
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Validators

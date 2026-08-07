@@ -28,6 +28,7 @@ tags:
 - [[fromTimeInput()]] - `imports` [EXTRACTED]
 - [[houseLocationKey()]] - `contains` [EXTRACTED]
 - [[mealKinds]] - `imports` [EXTRACTED]
+- [[scheduleEntryKinds]] - `imports` [EXTRACTED]
 - [[toTimeInput()]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Domain__Infra_Namespaces

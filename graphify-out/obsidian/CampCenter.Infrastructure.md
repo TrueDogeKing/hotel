@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/DependencyInjection.cs"
 type: "code"
-community: "Public Booking Service (2)"
+community: "Exception"
 location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public_Booking_Service_2
+  - community/Exception
 ---
 
 # CampCenter.Infrastructure
@@ -15,4 +15,4 @@ tags:
 - [[DependencyInjection.cs_1]] - `contains` [EXTRACTED]
 - [[Program.cs]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_2
+#graphify/code #graphify/EXTRACTED #community/Exception

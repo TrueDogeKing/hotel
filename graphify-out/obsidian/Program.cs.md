@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Api/Program.cs"
 type: "code"
-community: "Public Booking Service (2)"
+community: "Exception"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public_Booking_Service_2
+  - community/Exception
 ---
 
 # Program.cs
@@ -22,4 +22,4 @@ tags:
 - [[CampCenter.Infrastructure.Persistence.Seed]] - `imports` [EXTRACTED]
 - [[Program]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_2
+#graphify/code #graphify/EXTRACTED #community/Exception

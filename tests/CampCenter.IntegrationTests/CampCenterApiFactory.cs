@@ -1,3 +1,4 @@
+using CampCenter.Application.Interfaces;
 using CampCenter.Infrastructure.Persistence;
 using CampCenter.Infrastructure.Persistence.Seed;
 using Microsoft.AspNetCore.Hosting;
@@ -19,6 +20,10 @@ public class CampCenterApiFactory : WebApplicationFactory<Program>, IAsyncLifeti
     private readonly PostgreSqlContainer _database = new PostgreSqlBuilder(
         "postgres:16-alpine"
     ).Build();
+
+    /// What the API tried to email, for tests that care — and, for every other
+    /// test, the reason the log is not full of SMTP stack traces.
+    public RecordingEmailSender Email { get; } = new();
 
     protected override void ConfigureWebHost(IWebHostBuilder builder)
     {
@@ -48,6 +53,11 @@ public class CampCenterApiFactory : WebApplicationFactory<Program>, IAsyncLifeti
             services.AddDbContext<AppDbContext>(options =>
                 options.UseNpgsql(_database.GetConnectionString())
             );
+
+            // No SMTP server here, and none wanted: the real sender would spend a
+            // connect timeout per email and log a failure for each one.
+            services.RemoveAll<IEmailSender>();
+            services.AddSingleton<IEmailSender>(Email);
         });
     }
 

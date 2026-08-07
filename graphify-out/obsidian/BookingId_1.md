@@ -12,6 +12,7 @@ tags:
 
 ## Connections
 - [[.ListFullySuppressedSlotsAsync()_1]] - `references` [EXTRACTED]
+- [[.ListOutingDaysAsync()_1]] - `references` [EXTRACTED]
 - [[.ListVisibleSlotSpansAsync()_1]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/CampCenterInfrastructure_/_Repositories_1

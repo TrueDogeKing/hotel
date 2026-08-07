@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.UnitTests / Validators"
+community: "Auth Controller (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Validators
+  - community/Auth_Controller_1
 ---
 
 # IRuleBuilderOptions
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.ValidPassword()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Validators
+#graphify/code #graphify/EXTRACTED #community/Auth_Controller_1

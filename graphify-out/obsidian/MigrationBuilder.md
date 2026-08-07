@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "EF Core Migrations (4)"
+community: "RoomCleaningRepository"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EF_Core_Migrations_4
+  - community/RoomCleaningRepository
 ---
 
 # MigrationBuilder
@@ -14,4 +14,4 @@ tags:
 - [[.Down()]] - `references` [EXTRACTED]
 - [[.Up()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EF_Core_Migrations_4
+#graphify/code #graphify/EXTRACTED #community/RoomCleaningRepository

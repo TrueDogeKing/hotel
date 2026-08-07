@@ -519,7 +519,8 @@
     "genericError": "Operacja się nie powiodła. Spróbuj ponownie.",
     "kinds": {
       "Meal": "Posiłek",
-      "Activity": "Zajęcia"
+      "Activity": "Zajęcia",
+      "Outing": "Wyjazd z ośrodka"
     },
     "mealKinds": {
       "Breakfast": "Śniadanie",
@@ -553,7 +554,8 @@
         "sportsField": "Boisko",
         "disco": "Dyskoteka",
         "bowlingAlley": "Kręgielnia"
-      }
+      },
+      "outingHint": "Zapisanie wyjazdu usunie posiłki i zajęcia tej grupy, które się z nim pokrywają."
     },
     "mealTimes": {
       "title": "Pory posiłków tej grupy",

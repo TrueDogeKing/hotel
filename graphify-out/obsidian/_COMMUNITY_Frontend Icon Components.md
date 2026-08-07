@@ -1,11 +1,11 @@
 ---
 type: community
-members: 39
+members: 51
 ---
 
 # Frontend Icon Components
 
-**Members:** 39 nodes
+**Members:** 51 nodes
 
 ## Members
 - [[AdminTiles()]] - code - frontend/src/components/admin/AdminTiles.tsx
@@ -31,22 +31,34 @@ members: 39
 - [[IconMessage()]] - code - frontend/src/components/icons.tsx
 - [[IconMic()]] - code - frontend/src/components/icons.tsx
 - [[IconMicOff()]] - code - frontend/src/components/icons.tsx
+- [[IconMoon()]] - code - frontend/src/components/icons.tsx
 - [[IconPhone()]] - code - frontend/src/components/icons.tsx
 - [[IconPhoneOff()]] - code - frontend/src/components/icons.tsx
 - [[IconScreenShare()]] - code - frontend/src/components/icons.tsx
 - [[IconSettings()]] - code - frontend/src/components/icons.tsx
 - [[IconSparkles()]] - code - frontend/src/components/icons.tsx
+- [[IconSun()]] - code - frontend/src/components/icons.tsx
 - [[IconUsers()]] - code - frontend/src/components/icons.tsx
 - [[IconUtensils()]] - code - frontend/src/components/icons.tsx
 - [[IconWaves()]] - code - frontend/src/components/icons.tsx
+- [[Listener_1]] - code - frontend/src/theme.ts
 - [[MAP_QUERY]] - code - frontend/src/pages/PublicHomePage.tsx
 - [[OFFER]] - code - frontend/src/pages/PublicHomePage.tsx
 - [[PublicHomePage()]] - code - frontend/src/pages/PublicHomePage.tsx
 - [[PublicHomePage.tsx]] - code - frontend/src/pages/PublicHomePage.tsx
 - [[STEPS_1]] - code - frontend/src/pages/PublicHomePage.tsx
 - [[TILES]] - code - frontend/src/components/admin/AdminTiles.tsx
+- [[Theme]] - code - frontend/src/theme.ts
+- [[ThemeToggle()]] - code - frontend/src/components/ThemeToggle.tsx
+- [[ThemeToggle.tsx]] - code - frontend/src/components/ThemeToggle.tsx
 - [[Tile]] - code - frontend/src/components/admin/AdminTiles.tsx
+- [[applyTheme()]] - code - frontend/src/theme.ts
+- [[getTheme()]] - code - frontend/src/theme.ts
 - [[icons.tsx]] - code - frontend/src/components/icons.tsx
+- [[listeners_1]] - code - frontend/src/theme.ts
+- [[subscribeTheme()]] - code - frontend/src/theme.ts
+- [[theme.ts]] - code - frontend/src/theme.ts
+- [[toggleTheme()]] - code - frontend/src/theme.ts
 
 ## Live Query (requires Dataview plugin)
 
@@ -56,13 +68,13 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 8 edges to [[_COMMUNITY_Admin Booking & Notifications (1)]]
+- 12 edges to [[_COMMUNITY_Public Booking Frontend (1)]]
 - 3 edges to [[_COMMUNITY_Frontend App Shell & i18n]]
-- 1 edge to [[_COMMUNITY_useAuth]]
-- 1 edge to [[_COMMUNITY_Public Booking Frontend (1)]]
+- 1 edge to [[_COMMUNITY_Frontend Auth & API Client]]
 
 ## Top bridge nodes
-- [[PublicHomePage.tsx]] - degree 15, connects to 3 communities
 - [[icons.tsx]] - degree 39, connects to 2 communities
+- [[PublicHomePage.tsx]] - degree 15, connects to 2 communities
 - [[AdminTiles.tsx]] - degree 14, connects to 1 community
-- [[IconUtensils()]] - degree 4, connects to 1 community
+- [[ThemeToggle.tsx]] - degree 11, connects to 1 community
+- [[ThemeToggle()]] - degree 7, connects to 1 community

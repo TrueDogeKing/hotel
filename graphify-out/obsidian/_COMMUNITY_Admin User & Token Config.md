@@ -1,11 +1,11 @@
 ---
 type: community
-members: 17
+members: 19
 ---
 
 # Admin User & Token Config
 
-**Members:** 17 nodes
+**Members:** 19 nodes
 
 ## Members
 - [[.CreateAsync()_13]] - code - src/CampCenter.Application/Services/UserService.cs
@@ -19,9 +19,11 @@ members: 17
 - [[.SetPasswordAsync()_1]] - code - src/CampCenter.Application/Services/UserService.cs
 - [[.SetRoleAsync()_1]] - code - src/CampCenter.Application/Services/UserService.cs
 - [[.ToDto()_7]] - code - src/CampCenter.Application/Services/UserService.cs
-- [[AdminUserDto]] - code - src/CampCenter.Application/DTOs/Users/UserDtos.cs
+- [[.Verify()]] - code - src/CampCenter.Application/Interfaces/IPasswordHasher.cs
 - [[CancellationToken_44]] - code
 - [[Guid_27]] - code
+- [[IPasswordHasher]] - code - src/CampCenter.Application/Interfaces/IPasswordHasher.cs
+- [[IPasswordHasher.cs]] - code - src/CampCenter.Application/Interfaces/IPasswordHasher.cs
 - [[List_18]] - code
 - [[Task_44]] - code
 - [[UserService]] - code - src/CampCenter.Application/Services/UserService.cs
@@ -35,16 +37,16 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 13 edges to [[_COMMUNITY_Booking Persistence & Entities (1)]]
-- 9 edges to [[_COMMUNITY_CampCenter.Application  Services (3)]]
-- 4 edges to [[_COMMUNITY_Auth Service & Tokens]]
-- 2 edges to [[_COMMUNITY_ClosureService_1]]
+- 9 edges to [[_COMMUNITY_EF Core Migrations (4)]]
+- 6 edges to [[_COMMUNITY_Auth Service & Tokens]]
 - 1 edge to [[_COMMUNITY_BookingGroupSection.tsx]]
-- 1 edge to [[_COMMUNITY_PasswordRules]]
+- 1 edge to [[_COMMUNITY_Application Namespaces & DTOs]]
+- 1 edge to [[_COMMUNITY_Public Booking Service (2)]]
 - 1 edge to [[_COMMUNITY_ClosureService]]
 
 ## Top bridge nodes
-- [[UserService]] - degree 14, connects to 5 communities
+- [[UserService]] - degree 14, connects to 4 communities
 - [[.CreateAsync()_13]] - degree 13, connects to 3 communities
 - [[.SetRoleAsync()_1]] - degree 12, connects to 2 communities
-- [[AdminUserDto]] - degree 11, connects to 2 communities
 - [[.SetPasswordAsync()_1]] - degree 11, connects to 2 communities
+- [[.DeleteAsync()_9]] - degree 9, connects to 2 communities

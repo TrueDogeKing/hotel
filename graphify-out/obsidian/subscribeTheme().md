@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/theme.ts"
 type: "code"
-community: "Admin Booking & Notifications (1)"
+community: "Frontend Icon Components"
 location: "L33"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Booking__Notifications_1
+  - community/Frontend_Icon_Components
 ---
 
 # subscribeTheme()
@@ -16,4 +16,4 @@ tags:
 - [[ThemeToggle.tsx]] - `imports` [EXTRACTED]
 - [[theme.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_1
+#graphify/code #graphify/EXTRACTED #community/Frontend_Icon_Components

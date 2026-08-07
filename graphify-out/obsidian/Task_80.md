@@ -1,23 +1,39 @@
 ---
 source_file: ""
 type: "code"
-community: "PasswordRules"
+community: "tests / CampCenter.IntegrationTests (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PasswordRules
+  - community/tests_/_CampCenterIntegrationTests_1
 ---
 
 # Task
 
 ## Connections
-- [[.Administrator_CanAdd_ChangeRole_AndDelete_Accounts()]] - `references` [EXTRACTED]
-- [[.Administrator_CanResetAPassword_AndItEndsThatAccountsSessions()]] - `references` [EXTRACTED]
-- [[.CreateWorkerAsync()]] - `references` [EXTRACTED]
-- [[.DuplicateLogin_AndWeakPassword_AreRejected()]] - `references` [EXTRACTED]
-- [[.RoleChange_EndsTheAffectedAccountsSessions()]] - `references` [EXTRACTED]
-- [[.SelfDelete_AndLastAdministrator_AreRefused()]] - `references` [EXTRACTED]
-- [[.Worker_MayRecordHousekeepingProgress()]] - `references` [EXTRACTED]
-- [[.Worker_ReadsEverySection_ButCannotWriteAnywhere()]] - `references` [EXTRACTED]
+- [[.AnOuting_ClearsWhatItOverlaps_AndKeepsItCleared()]] - `references` [EXTRACTED]
+- [[.BookingMealTimes_DefaultToTheCenterTimes()]] - `references` [EXTRACTED]
+- [[.BreakfastsAsync()]] - `references` [EXTRACTED]
+- [[.BulkRetime_PreservesADayChangedIndividually()]] - `references` [EXTRACTED]
+- [[.Calendar_BarSpansFullStayInclusive()]] - `references` [EXTRACTED]
+- [[.ConfirmingAGroup_LaysItsMealsOntoTheTimetable()]] - `references` [EXTRACTED]
+- [[.CreateBookingAsync()]] - `references` [EXTRACTED]
+- [[.DayView_IncludesDepartingGroup()]] - `references` [EXTRACTED]
+- [[.DietaryNotes_AreStoredAndReturnedOnTheGroupSchedule()]] - `references` [EXTRACTED]
+- [[.GenerateMealsAsync()]] - `references` [EXTRACTED]
+- [[.GenerateMeals_CoversTheStay_AndIsIdempotent()]] - `references` [EXTRACTED]
+- [[.GenerateMeals_DoesNotResurrectADeletedMeal()]] - `references` [EXTRACTED]
+- [[.GenerationUsesTheGroupsOwnTimes_ForMealsAddedLater()]] - `references` [EXTRACTED]
+- [[.GetMealTimesAsync()]] - `references` [EXTRACTED]
+- [[.MealTimeDefaults_CrudRoundtrip_Works()]] - `references` [EXTRACTED]
+- [[.Meal_WithoutMealKind_IsRejected()]] - `references` [EXTRACTED]
+- [[.PublicSchedule_ByToken_ShowsMenu_ButHidesPrepNotes()]] - `references` [EXTRACTED]
+- [[.ResettingAGroupsMealTime_RestoresTheCenterTime()]] - `references` [EXTRACTED]
+- [[.ScheduleEndpoints_WithoutToken_ReturnUnauthorized()]] - `references` [EXTRACTED]
+- [[.ScheduleEntries_CrudRoundtrip_Works()]] - `references` [EXTRACTED]
+- [[.ScheduleEntry_EndBeforeStart_IsRejected()]] - `references` [EXTRACTED]
+- [[.ScheduleEntry_OnDepartureDay_IsAccepted_ButNotOutsideTheStay()]] - `references` [EXTRACTED]
+- [[.SettingAGroupsMealTime_RejectsEndBeforeStart_AndStaleRowVersion()]] - `references` [EXTRACTED]
+- [[.SettingAGroupsMealTime_RetimesTheWholeStay_ButNotOtherGroups()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PasswordRules
+#graphify/code #graphify/EXTRACTED #community/tests_/_CampCenterIntegrationTests_1

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Public Booking Service (1)"
+community: "BookingSettings"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public_Booking_Service_1
+  - community/BookingSettings
 ---
 
 # HttpGet
@@ -14,4 +14,4 @@ tags:
 - [[.GetByToken()]] - `references` [EXTRACTED]
 - [[.GetScheduleByToken()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_1
+#graphify/code #graphify/EXTRACTED #community/BookingSettings

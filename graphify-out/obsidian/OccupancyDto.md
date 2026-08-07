@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/DTOs/AdminPanel/AdminPanelDtos.cs"
 type: "code"
-community: ".GetBlockedRoomIdsAsync"
+community: "ControllerBase"
 location: "L68"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/GetBlockedRoomIdsAsync
+  - community/ControllerBase
 ---
 
 # OccupancyDto
@@ -16,4 +16,4 @@ tags:
 - [[.GetOccupancyAsync()_1]] - `references` [EXTRACTED]
 - [[AdminPanelDtos.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/GetBlockedRoomIdsAsync
+#graphify/code #graphify/EXTRACTED #community/ControllerBase

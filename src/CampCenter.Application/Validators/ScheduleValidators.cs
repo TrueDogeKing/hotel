@@ -65,7 +65,7 @@ public class UpdateDietaryNotesRequestValidator : AbstractValidator<UpdateDietar
 /// Shared between the create and update validators so the two can never drift.
 internal static class ScheduleRules
 {
-    public const string KindMessage = "Kind must be either Meal or Activity.";
+    public const string KindMessage = "Kind must be Meal, Activity or Outing.";
     public const string MealKindMessage =
         "A meal must have a meal kind (Breakfast, Lunch, Dinner or Snack).";
     public const string TimeOrderMessage =

@@ -1,11 +1,11 @@
 ---
 type: community
-members: 68
+members: 65
 ---
 
 # DTOs / Schedule (1)
 
-**Members:** 68 nodes
+**Members:** 65 nodes
 
 ## Members
 - [[.CheckConflicts()]] - code - src/CampCenter.Api/Controllers/Admin/ScheduleController.cs
@@ -34,7 +34,6 @@ members: 68
 - [[.ResetBookingMealTimeAsync()]] - code - src/CampCenter.Application/Interfaces/IScheduleService.cs
 - [[.SetBookingMealTime()]] - code - src/CampCenter.Api/Controllers/Admin/ScheduleController.cs
 - [[.SetBookingMealTimeAsync()]] - code - src/CampCenter.Application/Interfaces/IScheduleService.cs
-- [[.ToCalendarDto()]] - code - src/CampCenter.Application/Services/ScheduleService.cs
 - [[.UpdateEntry()]] - code - src/CampCenter.Api/Controllers/Admin/ScheduleController.cs
 - [[.UpdateEntryAsync()]] - code - src/CampCenter.Application/Interfaces/IScheduleService.cs
 - [[ApplyBookingMealTimeResultDto]] - code - src/CampCenter.Application/DTOs/Schedule/MealTimeDtos.cs
@@ -70,8 +69,6 @@ members: 68
 - [[ScheduleDayGroupDto]] - code - src/CampCenter.Application/DTOs/Schedule/ScheduleDtos.cs
 - [[ScheduleDtos.cs]] - code - src/CampCenter.Application/DTOs/Schedule/ScheduleDtos.cs
 - [[ScheduleLocationsDto]] - code - src/CampCenter.Application/DTOs/Schedule/ScheduleDtos.cs
-- [[SetBookingMealTimeRequestDto]] - code - src/CampCenter.Application/DTOs/Schedule/MealTimeDtos.cs
-- [[SetBookingMealTimeRequestValidator]] - code - src/CampCenter.Application/Validators/MealTimeValidators.cs
 - [[Task_10]] - code
 - [[Task_30]] - code
 - [[UpdateScheduleEntryRequestDto]] - code - src/CampCenter.Application/DTOs/Schedule/ScheduleDtos.cs
@@ -85,17 +82,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 17 edges to [[_COMMUNITY_CampCenter.Application  Services (2)]]
-- 7 edges to [[_COMMUNITY_Camp Session Management]]
+- 16 edges to [[_COMMUNITY_CampCenter.Application  Services (2)]]
+- 4 edges to [[_COMMUNITY_Camp Session Management]]
 - 3 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
-- 2 edges to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
-- 2 edges to [[_COMMUNITY_MealTimeDefault]]
+- 3 edges to [[_COMMUNITY_ClosureService_1]]
 - 2 edges to [[_COMMUNITY_CampCenter.UnitTests  Validators]]
-- 1 edge to [[_COMMUNITY_Admin Booking & Notifications (2)]]
-- 1 edge to [[_COMMUNITY_Public Booking Service (1)]]
-- 1 edge to [[_COMMUNITY_.NextFreeSitting]]
+- 2 edges to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
+- 2 edges to [[_COMMUNITY_Payment Gateway Integration Tests (1)]]
+- 1 edge to [[_COMMUNITY_AppDbContext]]
+- 1 edge to [[_COMMUNITY_Persistence  Migrations (2)]]
 - 1 edge to [[_COMMUNITY_CampCenter.UnitTests  Services (4)]]
-- 1 edge to [[_COMMUNITY_Integration Test Harness (1)]]
 
 ## Top bridge nodes
 - [[ScheduleDtos.cs]] - degree 21, connects to 5 communities

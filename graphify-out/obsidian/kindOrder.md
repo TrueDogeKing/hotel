@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/pages/admin/HousekeepingPage.tsx"
 type: "code"
-community: "Room Closure Management"
+community: "ScheduleEntry"
 location: "L28"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Closure_Management
+  - community/ScheduleEntry
 ---
 
 # kindOrder
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[HousekeepingPage.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management
+#graphify/code #graphify/EXTRACTED #community/ScheduleEntry

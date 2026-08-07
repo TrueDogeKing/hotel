@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/components/ConfirmDialog.tsx"
 type: "code"
-community: "Frontend App Shell & i18n"
+community: "Persistence / Migrations (10)"
 location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Frontend_App_Shell__i18n
+  - community/Persistence_/_Migrations_10
 ---
 
 # ConfirmDialog()
@@ -21,4 +21,4 @@ tags:
 - [[SchedulePage.tsx]] - `imports` [EXTRACTED]
 - [[UsersPage.tsx]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Frontend_App_Shell__i18n
+#graphify/code #graphify/EXTRACTED #community/Persistence_/_Migrations_10

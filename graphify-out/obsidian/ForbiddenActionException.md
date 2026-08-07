@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Domain/Exceptions/ForbiddenActionException.cs"
 type: "code"
-community: "ClosureService"
+community: "Prettier Dependency"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ClosureService
+  - community/Prettier_Dependency
 ---
 
 # ForbiddenActionException
@@ -15,4 +15,4 @@ tags:
 - [[Exception_1]] - `inherits` [EXTRACTED]
 - [[ForbiddenActionException.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ClosureService
+#graphify/code #graphify/EXTRACTED #community/Prettier_Dependency

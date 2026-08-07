@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Public Booking Service (1)"
+community: "BookingSettings"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public_Booking_Service_1
+  - community/BookingSettings
 ---
 
 # IValidator
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[PublicBookingsController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_1
+#graphify/code #graphify/EXTRACTED #community/BookingSettings

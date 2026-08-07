@@ -3574,7 +3574,9 @@ p[role="alert"] {
   padding: 0;
   border: 0;
   border-radius: 0;
-  background: hsl(var(--bar-hue) 52% 34%);
+  /* background-COLOR, not the shorthand: `.away` layers a hatch into
+     background-image, and a shorthand anywhere in the cascade resets it. */
+  background-color: hsl(var(--bar-hue) 52% 34%);
   color: #fff;
   font-size: 0.78rem;
   font-weight: 600;
@@ -3603,8 +3605,24 @@ p[role="alert"] {
    element and starts the pattern afresh, so diagonal stripes broke at each tile edge
    instead of running through the stay. A solid colour reads as one continuous bar. */
 .cal-bar.pending {
-  background: hsl(var(--bar-hue) 30% 46%);
+  background-color: hsl(var(--bar-hue) 30% 46%);
 }
+/* Away from the centre that day. Hatched rather than a flat colour: unlike
+   `.pending`, which covers a whole run and needed the pattern to survive tile
+   edges, a trip is a single day — so the stripes restarting at each edge is
+   exactly what marks it out from the days around it.
+
+   The stripes are a darker shade of the bar's own hue rather than white or a
+   fixed grey: the bar is dark in the light theme and light in the dark one, and
+   only "darker than whatever this bar is" reads on both. */
+.cal-bar.away {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    hsl(var(--bar-hue) 65% 16% / 0.55) 0 5px,
+    transparent 5px 11px
+  );
+}
+
 /* Carries the label of the segment that starts a week-run. Raised above the plain
    segments (z-index 1) that follow it, so the name overhanging into them stays
    readable instead of being painted over. */
@@ -3635,11 +3653,11 @@ p[role="alert"] {
 
 /* Lightness has to flip in dark mode, so these need an explicit override. */
 :root[data-theme="dark"] .cal-bar {
-  background: hsl(var(--bar-hue) 45% 62%);
+  background-color: hsl(var(--bar-hue) 45% 62%);
   color: #0d1a1e;
 }
 :root[data-theme="dark"] .cal-bar.pending {
-  background: hsl(var(--bar-hue) 22% 74%);
+  background-color: hsl(var(--bar-hue) 22% 74%);
 }
 
 /* --- Day timetable --- */
@@ -3925,6 +3943,19 @@ p[role="alert"] {
 .timetable-chip.activity {
   background: color-mix(in srgb, var(--secondary) 18%, var(--bg-float));
   border-color: color-mix(in srgb, var(--secondary) 40%, transparent);
+}
+/* Off the site: hatched like the calendar bar's trip day, so the two read as the
+   same thing at both scales. Nothing of the centre's happens under it. */
+.timetable-chip.away {
+  background:
+    repeating-linear-gradient(
+      -45deg,
+      color-mix(in srgb, var(--accent) 14%, transparent) 0 6px,
+      transparent 6px 13px
+    ),
+    color-mix(in srgb, var(--accent) 8%, var(--bg-float));
+  border-color: color-mix(in srgb, var(--accent) 45%, transparent);
+  border-style: dashed;
 }
 /* Time and group on one line. The time keeps its width and the group takes the rest,
    ellipsised — a merged sitting lists several groups, and hover shows them all. */

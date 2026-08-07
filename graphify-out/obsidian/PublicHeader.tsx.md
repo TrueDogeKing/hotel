@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/components/PublicHeader.tsx"
 type: "code"
-community: "Admin Booking & Notifications (1)"
+community: "Public Booking Frontend (1)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Booking__Notifications_1
+  - community/Public_Booking_Frontend_1
 ---
 
 # PublicHeader.tsx
@@ -25,4 +25,4 @@ tags:
 - [[ThemeToggle.tsx]] - `imports_from` [EXTRACTED]
 - [[icons.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_1
+#graphify/code #graphify/EXTRACTED #community/Public_Booking_Frontend_1

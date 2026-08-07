@@ -12,6 +12,8 @@ export interface CalendarBar {
   label: string;
   /** Renders the bar in a muted fill, for stays that aren't confirmed yet. */
   muted?: boolean;
+  /** ISO days within the bar to hatch — the group is away from the centre then. */
+  texturedIso?: readonly string[];
 }
 
 export interface CalendarDayBadge {

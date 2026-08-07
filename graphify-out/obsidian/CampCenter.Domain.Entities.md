@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Domain/Entities/AdminUser.cs"
 type: "code"
-community: "Exception"
+community: "ClosureService"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Exception
+  - community/ClosureService
 ---
 
 # CampCenter.Domain.Entities
@@ -103,4 +103,4 @@ tags:
 - [[UsersController.cs]] - `imports` [EXTRACTED]
 - [[WriteRequiresAdministrator.cs]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Exception
+#graphify/code #graphify/EXTRACTED #community/ClosureService

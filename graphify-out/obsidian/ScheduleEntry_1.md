@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Domain/Entities/ScheduleEntry.cs"
 type: "code"
-community: "CampCenter.Infrastructure / Repositories (1)"
-location: "L15"
+community: "Admin Booking & Notifications (1)"
+location: "L22"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterInfrastructure_/_Repositories_1
+  - community/Admin_Booking__Notifications_1
 ---
 
 # ScheduleEntry
@@ -16,6 +16,7 @@ tags:
 - [[.AddAsync()_21]] - `references` [EXTRACTED]
 - [[.AddRangeAsync()]] - `references` [EXTRACTED]
 - [[.AddRangeAsync()_1]] - `references` [EXTRACTED]
+- [[.ClearUnderOutingAsync()]] - `references` [EXTRACTED]
 - [[.Configure()_12]] - `references` [EXTRACTED]
 - [[.Entry()]] - `references` [EXTRACTED]
 - [[.GetByIdAsync()_6]] - `references` [EXTRACTED]
@@ -41,4 +42,4 @@ tags:
 - [[ScheduleEntryKind_1]] - `references` [EXTRACTED]
 - [[TimeOnly_6]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterInfrastructure_/_Repositories_1
+#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_1

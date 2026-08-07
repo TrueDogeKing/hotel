@@ -100,7 +100,7 @@ members: 93
 - [[Task_37]] - code
 - [[Task_52]] - code
 - [[Task_66]] - code
-- [[Task_81]] - code
+- [[Task_82]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -112,15 +112,15 @@ SORT file.name ASC
 ## Connections to other communities
 - 13 edges to [[_COMMUNITY_Integration Test Harness (1)]]
 - 7 edges to [[_COMMUNITY_Room Management]]
-- 5 edges to [[_COMMUNITY_Exception]]
 - 5 edges to [[_COMMUNITY_Integration Test Harness (2)]]
-- 3 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
+- 4 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
+- 4 edges to [[_COMMUNITY_ClosureService]]
 - 3 edges to [[_COMMUNITY_Validator Unit Tests]]
 - 3 edges to [[_COMMUNITY_Room Task Management (1)]]
-- 2 edges to [[_COMMUNITY_AppDbContext]]
+- 2 edges to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
 - 2 edges to [[_COMMUNITY_BookingConfiguration]]
-- 1 edge to [[_COMMUNITY_Admin Booking & Notifications (2)]]
-- 1 edge to [[_COMMUNITY_ClosureService]]
+- 1 edge to [[_COMMUNITY_AppDbContext]]
+- 1 edge to [[_COMMUNITY_Exception]]
 
 ## Top bridge nodes
 - [[HousekeepingServiceTests]] - degree 22, connects to 5 communities

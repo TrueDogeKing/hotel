@@ -1,11 +1,11 @@
 ---
 type: community
-members: 16
+members: 15
 ---
 
 # Payment Gateway Integration Tests (2)
 
-**Members:** 16 nodes
+**Members:** 15 nodes
 
 ## Members
 - [[.ConfigureWebHost()]] - code - tests/CampCenter.IntegrationTests/CampCenterApiFactory.cs
@@ -20,7 +20,6 @@ members: 16
 - [[IServiceProvider]] - code
 - [[IWebHostBuilder]] - code
 - [[PostgreSqlContainer]] - code
-- [[Program]] - code - src/CampCenter.Api/Program.cs
 - [[Task_58]] - code
 - [[Task_75]] - code
 - [[WebApplicationFactory]] - code
@@ -33,10 +32,10 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_Public Booking Service (2)]]
-- 2 edges to [[_COMMUNITY_IntegrationTestBase]]
+- 3 edges to [[_COMMUNITY_Exception]]
+- 2 edges to [[_COMMUNITY_RoomsAndClosuresApiTests]]
+- 1 edge to [[_COMMUNITY_Admin Booking & Notifications (4)]]
 
 ## Top bridge nodes
-- [[CampCenterApiFactory]] - degree 10, connects to 2 communities
+- [[CampCenterApiFactory]] - degree 11, connects to 3 communities
 - [[DataSeeder]] - degree 3, connects to 1 community
-- [[Program]] - degree 2, connects to 1 community

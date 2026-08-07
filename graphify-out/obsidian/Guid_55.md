@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.UnitTests / Services (1)"
+community: "components / admin"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Services_1
+  - community/components_/_admin
 ---
 
 # Guid
@@ -14,4 +14,4 @@ tags:
 - [[.GetByIdAsync()_10]] - `references` [EXTRACTED]
 - [[.IsReferencedAsync()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_1
+#graphify/code #graphify/EXTRACTED #community/components_/_admin

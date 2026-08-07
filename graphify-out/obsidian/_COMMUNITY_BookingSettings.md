@@ -1,17 +1,26 @@
 ---
 type: community
-members: 4
+members: 13
 ---
 
 # BookingSettings
 
-**Members:** 4 nodes
+**Members:** 13 nodes
 
 ## Members
-- [[.AddInfrastructure()]] - code - src/CampCenter.Infrastructure/DependencyInjection.cs
-- [[DependencyInjection_1]] - code - src/CampCenter.Infrastructure/DependencyInjection.cs
-- [[IConfiguration]] - code
-- [[IServiceCollection_1]] - code
+- [[.Cancel()_1]] - code - src/CampCenter.Api/Controllers/Public/PublicBookingsController.cs
+- [[.Create()_6]] - code - src/CampCenter.Api/Controllers/Public/PublicBookingsController.cs
+- [[.GetByToken()]] - code - src/CampCenter.Api/Controllers/Public/PublicBookingsController.cs
+- [[.GetScheduleByToken()]] - code - src/CampCenter.Api/Controllers/Public/PublicBookingsController.cs
+- [[CancellationToken_14]] - code
+- [[EnableRateLimiting_1]] - code
+- [[HttpGet_12]] - code
+- [[HttpPost_8]] - code
+- [[IActionResult_13]] - code
+- [[IValidator_7]] - code
+- [[ProducesResponseType_13]] - code
+- [[PublicBookingsController]] - code - src/CampCenter.Api/Controllers/Public/PublicBookingsController.cs
+- [[Task_15]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -21,7 +30,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_Exception]]
+- 5 edges to [[_COMMUNITY_Persistence  Migrations (2)]]
+- 1 edge to [[_COMMUNITY_AppDbContext]]
+- 1 edge to [[_COMMUNITY_CampCenter.Application.DTOs.Public]]
+- 1 edge to [[_COMMUNITY_Public Booking Service (1)]]
 
 ## Top bridge nodes
-- [[DependencyInjection_1]] - degree 2, connects to 1 community
+- [[PublicBookingsController]] - degree 8, connects to 3 communities
+- [[.Create()_6]] - degree 9, connects to 2 communities
+- [[.GetByToken()]] - degree 8, connects to 1 community
+- [[.GetScheduleByToken()]] - degree 8, connects to 1 community
+- [[.Cancel()_1]] - degree 8, connects to 1 community

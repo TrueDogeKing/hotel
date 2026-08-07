@@ -14,6 +14,7 @@ tags:
 ## Connections
 - [[.AssignMealTimesAsync()]] - `method` [EXTRACTED]
 - [[.CheckConflictsAsync()_1]] - `method` [EXTRACTED]
+- [[.ClearUnderOutingAsync()]] - `method` [EXTRACTED]
 - [[.CreateEntryAsync()_1]] - `method` [EXTRACTED]
 - [[.DeleteBookingMealsAsync()_1]] - `method` [EXTRACTED]
 - [[.DeleteEntryAsync()_1]] - `method` [EXTRACTED]

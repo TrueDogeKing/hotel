@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "tests / CampCenter.IntegrationTests (1)"
+community: "Admin Booking & Notifications (4)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/tests_/_CampCenterIntegrationTests_1
+  - community/Admin_Booking__Notifications_4
 ---
 
 # List
 
 ## Connections
-- [[.BreakfastsAsync()]] - `references` [EXTRACTED]
-- [[.GetMealTimesAsync()]] - `references` [EXTRACTED]
+- [[RecordingEmailSender]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/tests_/_CampCenterIntegrationTests_1
+#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_4

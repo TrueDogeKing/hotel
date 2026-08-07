@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Auth/BcryptPasswordHasher.cs"
 type: "code"
-community: "ClosureService"
+community: "Public Booking Service (2)"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ClosureService
+  - community/Public_Booking_Service_2
 ---
 
 # BcryptPasswordHasher
@@ -17,4 +17,4 @@ tags:
 - [[BcryptPasswordHasher.cs]] - `contains` [EXTRACTED]
 - [[IPasswordHasher]] - `implements` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ClosureService
+#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_2

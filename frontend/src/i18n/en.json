@@ -518,7 +518,8 @@
     "genericError": "The operation failed. Please try again.",
     "kinds": {
       "Meal": "Meal",
-      "Activity": "Activity"
+      "Activity": "Activity",
+      "Outing": "Off-site trip"
     },
     "mealKinds": {
       "Breakfast": "Breakfast",
@@ -552,7 +553,8 @@
         "sportsField": "Sports field",
         "disco": "Disco",
         "bowlingAlley": "Bowling alley"
-      }
+      },
+      "outingHint": "Saving a trip removes this group's meals and activities that overlap it."
     },
     "mealTimes": {
       "title": "This group's meal times",

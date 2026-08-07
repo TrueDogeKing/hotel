@@ -82,6 +82,9 @@ export default function CalendarTile({
           if (isEnd) segClasses.push("end");
           if (continues) segClasses.push("continues");
           if (bar.muted) segClasses.push("pending");
+          // Marked per day rather than per run: a trip is one day of a stay, so the
+          // hatch restarting at each tile edge is exactly right here.
+          if (bar.texturedIso?.includes(iso)) segClasses.push("away");
           // Lifts this segment above the following days' segments, which are later in
           // the DOM and would otherwise paint over the label overhanging into them.
           if (showLabel) segClasses.push("labeled");

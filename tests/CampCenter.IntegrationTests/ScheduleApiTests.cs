@@ -272,6 +272,100 @@ public class ScheduleApiTests : IntegrationTestBase
     }
 
     [Fact]
+    public async Task AnOuting_ClearsWhatItOverlaps_AndKeepsItCleared()
+    {
+        var admin = await CreateAuthenticatedClientAsync();
+        var (bookingId, _, start, _) = await CreateBookingAsync(admin);
+
+        string Url() => $"/api/admin/schedule/bookings/{bookingId}";
+        var day = start.AddDays(1); // A full day: breakfast, lunch and dinner.
+
+        await admin.PostAsync($"/api/admin/schedule/bookings/{bookingId}/generate-meals", null);
+
+        // An activity the trip will swallow, and one after it that must survive.
+        foreach (
+            var (from, to, title) in new[]
+            {
+                (new TimeOnly(10, 0), new TimeOnly(11, 0), "Gry terenowe"),
+                (new TimeOnly(20, 0), new TimeOnly(21, 0), "Ognisko"),
+            }
+        )
+        {
+            var added = await admin.PostAsJsonAsync(
+                "/api/admin/schedule/entries",
+                new CreateScheduleEntryRequestDto(
+                    bookingId,
+                    "Activity",
+                    null,
+                    day,
+                    from,
+                    to,
+                    title,
+                    null,
+                    null,
+                    null,
+                    12
+                )
+            );
+            Assert.Equal(HttpStatusCode.Created, added.StatusCode);
+        }
+
+        var before = (await admin.GetFromJsonAsync<BookingScheduleDto>(Url()))!;
+        var beforeDay = before.Days.Single(d => d.Date == day).Entries;
+        Assert.Contains(beforeDay, e => e.Title == "Gry terenowe");
+        Assert.True(beforeDay.Count(e => e.Kind == "Meal") >= 2);
+
+        // The coach leaves after breakfast and comes back for the evening.
+        var outing = await admin.PostAsJsonAsync(
+            "/api/admin/schedule/entries",
+            new CreateScheduleEntryRequestDto(
+                bookingId,
+                "Outing",
+                null,
+                day,
+                new TimeOnly(9, 0),
+                new TimeOnly(19, 0),
+                "Wyjazd do Gdańska",
+                null,
+                null,
+                "Gdańsk",
+                12
+            )
+        );
+        Assert.Equal(HttpStatusCode.Created, outing.StatusCode);
+
+        var after = (await admin.GetFromJsonAsync<BookingScheduleDto>(Url()))!;
+        var afterDay = after.Days.Single(d => d.Date == day).Entries;
+
+        // Everything under the trip is gone; the trip and the evening remain.
+        Assert.DoesNotContain(afterDay, e => e.Title == "Gry terenowe");
+        Assert.Contains(afterDay, e => e.Title == "Ognisko");
+        Assert.Contains(afterDay, e => e.Kind == "Outing");
+        Assert.All(
+            afterDay.Where(e => e.Kind != "Outing"),
+            e => Assert.True(e.StartTime >= new TimeOnly(19, 0) || e.EndTime <= new TimeOnly(9, 0))
+        );
+
+        // Other days of the stay are untouched.
+        Assert.NotEmpty(after.Days.Single(d => d.Date == start.AddDays(2)).Entries);
+
+        // Generation must not put the swallowed meals back: their slots stay held.
+        await admin.PostAsync($"/api/admin/schedule/bookings/{bookingId}/generate-meals", null);
+        var regenerated = (await admin.GetFromJsonAsync<BookingScheduleDto>(Url()))!;
+        var regeneratedDay = regenerated.Days.Single(d => d.Date == day).Entries;
+        Assert.Equal(afterDay.Count, regeneratedDay.Count);
+
+        // And the calendar marks the day so the trip reads from the month view.
+        var calendar = (
+            await admin.GetFromJsonAsync<ScheduleCalendarDto>(
+                $"/api/admin/schedule/calendar?start={start:yyyy-MM-dd}&end={start.AddDays(5):yyyy-MM-dd}"
+            )
+        )!;
+        var bar = calendar.Bookings.Single(b => b.BookingId == bookingId);
+        Assert.Equal(day, Assert.Single(bar.OutingDates));
+    }
+
+    [Fact]
     public async Task ConfirmingAGroup_LaysItsMealsOntoTheTimetable()
     {
         var admin = await CreateAuthenticatedClientAsync();

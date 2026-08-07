@@ -55,9 +55,22 @@ public class ScheduleService : IScheduleService
         var mealsByDate = counts
             .Where(c => c.Kind == ScheduleEntryKind.Meal)
             .ToDictionary(c => c.Date, c => c.Count);
+        // Trips count towards the day's activity badge: they are something the day
+        // holds, and leaving them out would make a busy trip day read as empty.
         var activitiesByDate = counts
-            .Where(c => c.Kind == ScheduleEntryKind.Activity)
-            .ToDictionary(c => c.Date, c => c.Count);
+            .Where(c => c.Kind is ScheduleEntryKind.Activity or ScheduleEntryKind.Outing)
+            .GroupBy(c => c.Date)
+            .ToDictionary(g => g.Key, g => g.Sum(c => c.Count));
+
+        var outingDays = await _entries.ListOutingDaysAsync(
+            start,
+            end,
+            [.. bookings.Select(b => b.Id)],
+            cancellationToken
+        );
+        var outingsByBooking = outingDays
+            .GroupBy(o => o.BookingId)
+            .ToDictionary(g => g.Key, g => g.Select(o => o.Date).OrderBy(d => d).ToList());
 
         var days = new List<ScheduleCalendarDayDto>();
         for (var date = start; date <= end; date = date.AddDays(1))
@@ -76,7 +89,16 @@ public class ScheduleService : IScheduleService
             );
         }
 
-        return new ScheduleCalendarDto(start, end, [.. bookings.Select(ToCalendarDto)], days);
+        return new ScheduleCalendarDto(
+            start,
+            end,
+            [
+                .. bookings.Select(b =>
+                    ToCalendarDto(b, outingsByBooking.GetValueOrDefault(b.Id, []))
+                ),
+            ],
+            days
+        );
     }
 
     public async Task<ScheduleDayDto> GetDayAsync(
@@ -262,6 +284,8 @@ public class ScheduleService : IScheduleService
 
         await _entries.AddAsync(entry, cancellationToken);
         await _entries.SaveChangesAsync(cancellationToken);
+
+        await ClearUnderOutingAsync(entry, cancellationToken);
         return ToDto(entry, booking);
     }
 
@@ -311,7 +335,66 @@ public class ScheduleService : IScheduleService
         entry.UpdatedAt = DateTime.UtcNow;
 
         await _entries.SaveChangesAsync(cancellationToken);
+
+        // Moving an outing, stretching it, or turning an activity into one all
+        // leave the group's programme with things scheduled while it is away.
+        await ClearUnderOutingAsync(entry, cancellationToken);
         return ToDto(entry, booking);
+    }
+
+    /// Takes off the group's programme whatever it cannot be at: everything of
+    /// this group's that overlaps the outing on its day.
+    ///
+    /// Generated meals are suppressed rather than removed, exactly as deleting one
+    /// by hand does — that keeps the (day, slot) pair occupied so the next
+    /// generation run does not put the meal back under the outing. Hand-added
+    /// entries have no slot to hold and are removed outright. Another outing is
+    /// left alone: two of them overlapping is the admin's business, and clearing
+    /// one with the other would make the pair destroy each other.
+    private async Task<int> ClearUnderOutingAsync(
+        ScheduleEntry outing,
+        CancellationToken cancellationToken
+    )
+    {
+        if (outing.Kind != ScheduleEntryKind.Outing || outing.IsSuppressed)
+        {
+            return 0;
+        }
+
+        var entries = await _entries.ListForBookingAsync(outing.BookingId, cancellationToken);
+        var cleared = 0;
+        var now = DateTime.UtcNow;
+
+        foreach (var entry in entries)
+        {
+            if (entry.Id == outing.Id || entry.Date != outing.Date)
+                continue;
+            if (entry.Kind == ScheduleEntryKind.Outing)
+                continue;
+            // Touching ends do not overlap: a lunch that finishes exactly as the
+            // coach leaves still happened.
+            if (entry.StartTime >= outing.EndTime || outing.StartTime >= entry.EndTime)
+                continue;
+
+            if (entry.MealTimeDefaultId is null)
+            {
+                _entries.Remove(entry);
+            }
+            else
+            {
+                entry.IsSuppressed = true;
+                entry.UpdatedAt = now;
+            }
+
+            cleared++;
+        }
+
+        if (cleared > 0)
+        {
+            await _entries.SaveChangesAsync(cancellationToken);
+        }
+
+        return cleared;
     }
 
     public async Task DeleteEntryAsync(Guid id, CancellationToken cancellationToken = default)
@@ -790,7 +873,20 @@ public class ScheduleService : IScheduleService
             return 0;
         }
 
-        return created.Count;
+        // A trip planned before the group was confirmed would otherwise have meals
+        // laid straight over it. Clearing after the fact rather than skipping
+        // during planning is deliberate: the suppressed rows hold their slots, so
+        // the next run cannot put those meals back either.
+        var outings = (await _entries.ListForBookingAsync(bookingId, cancellationToken))
+            .Where(e => e.Kind == ScheduleEntryKind.Outing)
+            .ToList();
+        var cleared = 0;
+        foreach (var outing in outings)
+        {
+            cleared += await ClearUnderOutingAsync(outing, cancellationToken);
+        }
+
+        return created.Count - cleared < 0 ? 0 : created.Count - cleared;
     }
 
     public async Task<GenerateMissingMealsResultDto> GenerateMissingMealsAsync(
@@ -888,7 +984,10 @@ public class ScheduleService : IScheduleService
         await _entries.GetByIdAsync(id, cancellationToken)
         ?? throw new NotFoundException("Schedule entry not found.");
 
-    private static ScheduleCalendarBookingDto ToCalendarDto(Booking b) =>
+    private static ScheduleCalendarBookingDto ToCalendarDto(
+        Booking b,
+        List<DateOnly> outingDates
+    ) =>
         new(
             b.Id,
             b.OrganizationName,
@@ -897,7 +996,8 @@ public class ScheduleService : IScheduleService
             b.Nights,
             b.Headcount,
             b.SupervisorCount,
-            b.Status.ToString()
+            b.Status.ToString(),
+            outingDates
         );
 
     private static BookingMealTimeDto ToDto(

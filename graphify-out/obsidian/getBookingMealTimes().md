@@ -2,7 +2,7 @@
 source_file: "frontend/src/api/admin.ts"
 type: "code"
 community: "Persistence / Migrations (10)"
-location: "L866"
+location: "L872"
 tags:
   - graphify/code
   - graphify/EXTRACTED

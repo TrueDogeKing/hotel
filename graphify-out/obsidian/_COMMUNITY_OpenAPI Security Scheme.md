@@ -27,7 +27,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_Public Booking Service (2)]]
+- 1 edge to [[_COMMUNITY_Exception]]
 
 ## Top bridge nodes
 - [[CampCenter.Api.OpenApi]] - degree 2, connects to 1 community

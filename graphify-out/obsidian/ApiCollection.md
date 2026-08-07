@@ -1,12 +1,12 @@
 ---
 source_file: "tests/CampCenter.IntegrationTests/ApiCollection.cs"
 type: "code"
-community: "IntegrationTestBase"
+community: "RoomsAndClosuresApiTests"
 location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/IntegrationTestBase
+  - community/RoomsAndClosuresApiTests
 ---
 
 # ApiCollection
@@ -17,4 +17,4 @@ tags:
 - [[ICollectionFixture]] - `implements` [EXTRACTED]
 - [[string_13]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/IntegrationTestBase
+#graphify/code #graphify/EXTRACTED #community/RoomsAndClosuresApiTests

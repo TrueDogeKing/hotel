@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/pages/admin/MealTimesPage.tsx"
 type: "code"
-community: "Domain & Infra Namespaces"
+community: "Room Closure Management"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Domain__Infra_Namespaces
+  - community/Room_Closure_Management
 ---
 
 # MealTimesPage.tsx
@@ -31,4 +31,4 @@ tags:
 - [[updateMealTime()]] - `imports` [EXTRACTED]
 - [[useAuth()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Domain__Infra_Namespaces
+#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management

@@ -44,19 +44,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_Auth Controller (1)]]
-- 4 edges to [[_COMMUNITY_ClosureService]]
+- 6 edges to [[_COMMUNITY_Admin User & Token Config]]
+- 5 edges to [[_COMMUNITY_Auth Controller (1)]]
+- 5 edges to [[_COMMUNITY_ClosureService]]
 - 4 edges to [[_COMMUNITY_Booking Persistence & Entities (1)]]
 - 4 edges to [[_COMMUNITY_Refresh Token Repository]]
-- 4 edges to [[_COMMUNITY_Admin User & Token Config]]
 - 3 edges to [[_COMMUNITY_Public Booking Service (1)]]
 - 3 edges to [[_COMMUNITY_CampCenter.Application  Services (1)]]
-- 2 edges to [[_COMMUNITY_ClosureService_1]]
 - 2 edges to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
-- 2 edges to [[_COMMUNITY_MealTimeDefault]]
+- 2 edges to [[_COMMUNITY_Payment Gateway Integration Tests (1)]]
 - 1 edge to [[_COMMUNITY_BookingGroupSection.tsx]]
-- 1 edge to [[_COMMUNITY_Persistence  Migrations (2)]]
-- 1 edge to [[_COMMUNITY_Exception]]
 
 ## Top bridge nodes
 - [[ITokenService]] - degree 9, connects to 5 communities

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Camp Session Management"
+community: "Auth Controller (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Camp_Session_Management
+  - community/Auth_Controller_1
 ---
 
 # Dictionary
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.BeSaneCounts()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Camp_Session_Management
+#graphify/code #graphify/EXTRACTED #community/Auth_Controller_1

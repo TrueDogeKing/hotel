@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "IntegrationTestBase"
+community: "RoomsAndClosuresApiTests"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/IntegrationTestBase
+  - community/RoomsAndClosuresApiTests
 ---
 
 # string
@@ -14,4 +14,4 @@ tags:
 - [[ApiCollection]] - `references` [EXTRACTED]
 - [[IntegrationTestBase]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/IntegrationTestBase
+#graphify/code #graphify/EXTRACTED #community/RoomsAndClosuresApiTests

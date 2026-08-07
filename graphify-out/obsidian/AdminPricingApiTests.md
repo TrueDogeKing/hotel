@@ -13,6 +13,7 @@ tags:
 
 ## Connections
 - [[.MergedState_DrivesPaymentAndStatusTogether()]] - `method` [EXTRACTED]
+- [[.OnlyARecordedPayment_EmailsTheGroup()]] - `method` [EXTRACTED]
 - [[.Rates_PrefillANewBooking_AndCanBeRepricedPerGroup()]] - `method` [EXTRACTED]
 - [[.RecordingTheDeposit_ConfirmsABookingWaitingOnIt()]] - `method` [EXTRACTED]
 - [[AdminPricingApiTests.cs]] - `contains` [EXTRACTED]

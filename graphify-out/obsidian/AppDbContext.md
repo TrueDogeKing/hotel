@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Persistence/AppDbContext.cs"
 type: "code"
-community: "AppDbContext"
+community: "CampCenter.Infrastructure / Repositories (1)"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AppDbContext
+  - community/CampCenterInfrastructure_/_Repositories_1
 ---
 
 # AppDbContext
@@ -43,4 +43,4 @@ tags:
 - [[ScheduleEntry_1]] - `references` [EXTRACTED]
 - [[ScheduleEntryRepository]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AppDbContext
+#graphify/code #graphify/EXTRACTED #community/CampCenterInfrastructure_/_Repositories_1

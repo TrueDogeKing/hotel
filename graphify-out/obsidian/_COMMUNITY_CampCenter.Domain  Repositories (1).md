@@ -54,7 +54,7 @@ SORT file.name ASC
 - 3 edges to [[_COMMUNITY_BookingStatus]]
 - 1 edge to [[_COMMUNITY_Admin Booking & Notifications (2)]]
 - 1 edge to [[_COMMUNITY_Integration Test Harness (2)]]
-- 1 edge to [[_COMMUNITY_AppDbContext]]
+- 1 edge to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
 - 1 edge to [[_COMMUNITY_Exception]]
 
 ## Top bridge nodes

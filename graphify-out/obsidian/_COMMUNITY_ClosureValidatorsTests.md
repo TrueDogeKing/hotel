@@ -30,8 +30,9 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 7 edges to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
-- 6 edges to [[_COMMUNITY_Public Booking Service (1)]]
+- 4 edges to [[_COMMUNITY_Public Booking Service (1)]]
 - 3 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (3)]]
+- 2 edges to [[_COMMUNITY_Persistence  Migrations (2)]]
 - 1 edge to [[_COMMUNITY_CampCenter.Application.DTOs.Public]]
 - 1 edge to [[_COMMUNITY_Room Management]]
 

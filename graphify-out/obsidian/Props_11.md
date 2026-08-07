@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/components/admin/GroupRooms.tsx"
 type: "code"
-community: "useAuth"
+community: "MealTimeDefault"
 location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/useAuth
+  - community/MealTimeDefault
 ---
 
 # Props
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[GroupRooms.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/useAuth
+#graphify/code #graphify/EXTRACTED #community/MealTimeDefault

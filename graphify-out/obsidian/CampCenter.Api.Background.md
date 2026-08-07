@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Api/Background/BookingMaintenanceService.cs"
 type: "code"
-community: "Exception"
+community: "ClosureService"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Exception
+  - community/ClosureService
 ---
 
 # CampCenter.Api.Background
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[BookingMaintenanceService.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Exception
+#graphify/code #graphify/EXTRACTED #community/ClosureService

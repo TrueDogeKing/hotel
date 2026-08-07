@@ -1,11 +1,11 @@
 ---
 type: community
-members: 8
+members: 9
 ---
 
 # AuthApiTests
 
-**Members:** 8 nodes
+**Members:** 9 nodes
 
 ## Members
 - [[.Login_ExceedingRateLimit_ReturnsTooManyRequests()]] - code - tests/CampCenter.IntegrationTests/AuthApiTests.cs
@@ -14,6 +14,7 @@ members: 8
 - [[.Login_WithValidAdminCredentials_ReturnsTokenAndSetsRefreshCookie()]] - code - tests/CampCenter.IntegrationTests/AuthApiTests.cs
 - [[.Login_WithWrongPassword_ReturnsUnauthorized()]] - code - tests/CampCenter.IntegrationTests/AuthApiTests.cs
 - [[AuthApiTests]] - code - tests/CampCenter.IntegrationTests/AuthApiTests.cs
+- [[AuthApiTests.cs]] - code - tests/CampCenter.IntegrationTests/AuthApiTests.cs
 - [[Fact_3]] - code
 - [[Task_74]] - code
 
@@ -26,12 +27,13 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 4 edges to [[_COMMUNITY_src  api (2)]]
-- 1 edge to [[_COMMUNITY_IntegrationTestBase]]
-- 1 edge to [[_COMMUNITY_Persistence  Migrations (2)]]
+- 1 edge to [[_COMMUNITY_Auth Controller (1)]]
+- 1 edge to [[_COMMUNITY_CampCenter.Application.DTOs.Public]]
+- 1 edge to [[_COMMUNITY_RoomsAndClosuresApiTests]]
 
 ## Top bridge nodes
-- [[AuthApiTests]] - degree 7, connects to 2 communities
+- [[AuthApiTests.cs]] - degree 3, connects to 2 communities
+- [[AuthApiTests]] - degree 7, connects to 1 community
 - [[.Login_WithValidAdminCredentials_ReturnsTokenAndSetsRefreshCookie()]] - degree 4, connects to 1 community
 - [[.Login_WithWrongPassword_ReturnsUnauthorized()]] - degree 4, connects to 1 community
 - [[.Login_WithUnknownLogin_ReturnsUnauthorized()]] - degree 4, connects to 1 community
-- [[.Login_WithInvalidPayload_ReturnsBadRequest()]] - degree 4, connects to 1 community

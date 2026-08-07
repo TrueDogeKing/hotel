@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Domain/Exceptions/NotFoundException.cs"
 type: "code"
-community: "ClosureService"
+community: "Prettier Dependency"
 location: "L4"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ClosureService
+  - community/Prettier_Dependency
 ---
 
 # NotFoundException
@@ -15,4 +15,4 @@ tags:
 - [[Exception_1]] - `inherits` [EXTRACTED]
 - [[NotFoundException.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ClosureService
+#graphify/code #graphify/EXTRACTED #community/Prettier_Dependency

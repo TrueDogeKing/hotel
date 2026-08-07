@@ -27,7 +27,7 @@ members: 20
 - [[Fact_15]] - code
 - [[Guid_64]] - code
 - [[ScheduleConflictTests]] - code - tests/CampCenter.UnitTests/Services/ScheduleConflictTests.cs
-- [[Task_82]] - code
+- [[Task_83]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -37,9 +37,8 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
+- 5 edges to [[_COMMUNITY_Admin Booking & Notifications (1)]]
 - 2 edges to [[_COMMUNITY_CampCenter.Application  Services (2)]]
-- 2 edges to [[_COMMUNITY_components  admin]]
 - 1 edge to [[_COMMUNITY_DTOs  Schedule (1)]]
 - 1 edge to [[_COMMUNITY_ClosureService]]
 

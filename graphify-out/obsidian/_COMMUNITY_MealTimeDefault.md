@@ -1,28 +1,21 @@
 ---
 type: community
-members: 15
+members: 8
 ---
 
 # MealTimeDefault
 
-**Members:** 15 nodes
+**Members:** 8 nodes
 
 ## Members
-- [[.HandleNotificationAsync()]] - code - src/CampCenter.Application/Interfaces/IPaymentService.cs
-- [[.HandleNotificationAsync()_1]] - code - src/CampCenter.Application/Services/PaymentService.cs
-- [[.InitiateAsync()]] - code - src/CampCenter.Application/Interfaces/IPaymentService.cs
-- [[.InitiateAsync()_1]] - code - src/CampCenter.Application/Services/PaymentService.cs
-- [[.SendSafelyAsync()_1]] - code - src/CampCenter.Application/Services/PaymentService.cs
-- [[CancellationToken_26]] - code
-- [[CancellationToken_39]] - code
-- [[ILogger_4]] - code
-- [[IPaymentService]] - code - src/CampCenter.Application/Interfaces/IPaymentService.cs
-- [[IPaymentService.cs]] - code - src/CampCenter.Application/Interfaces/IPaymentService.cs
-- [[InitiatePaymentRequestDto]] - code - src/CampCenter.Application/Interfaces/IPaymentService.cs
-- [[InitiatePaymentResponseDto]] - code - src/CampCenter.Application/Interfaces/IPaymentService.cs
-- [[PaymentService]] - code - src/CampCenter.Application/Services/PaymentService.cs
-- [[Task_26]] - code
-- [[Task_39]] - code
+- [[AssignableRoom]] - code - frontend/src/api/admin.ts
+- [[Draft]] - code - frontend/src/components/admin/GroupRooms.tsx
+- [[GroupRooms()]] - code - frontend/src/components/admin/GroupRooms.tsx
+- [[GroupRooms.tsx]] - code - frontend/src/components/admin/GroupRooms.tsx
+- [[Props_11]] - code - frontend/src/components/admin/GroupRooms.tsx
+- [[getAdminBooking()]] - code - frontend/src/api/admin.ts
+- [[getAssignableRooms()]] - code - frontend/src/api/admin.ts
+- [[reassignBooking()]] - code - frontend/src/api/admin.ts
 
 ## Live Query (requires Dataview plugin)
 
@@ -32,20 +25,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 6 edges to [[_COMMUNITY_Payment Gateway Integration Tests (1)]]
-- 5 edges to [[_COMMUNITY_Integration Test Harness (2)]]
-- 4 edges to [[_COMMUNITY_Admin Booking & Notifications (4)]]
-- 2 edges to [[_COMMUNITY_DTOs  Schedule (1)]]
-- 2 edges to [[_COMMUNITY_Auth Service & Tokens]]
-- 2 edges to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
-- 1 edge to [[_COMMUNITY_CampCenter.Application.DTOs.Public]]
-- 1 edge to [[_COMMUNITY_Application Namespaces & DTOs]]
-- 1 edge to [[_COMMUNITY_CampCenter.UnitTests  Services (3)]]
-- 1 edge to [[_COMMUNITY_ClosureService]]
+- 5 edges to [[_COMMUNITY_Room Closure Management]]
+- 4 edges to [[_COMMUNITY_Frontend App Shell & i18n]]
+- 1 edge to [[_COMMUNITY_useAuth]]
+- 1 edge to [[_COMMUNITY_Frontend Auth & API Client]]
 
 ## Top bridge nodes
-- [[PaymentService]] - degree 12, connects to 7 communities
-- [[.HandleNotificationAsync()_1]] - degree 11, connects to 5 communities
-- [[.InitiateAsync()_1]] - degree 11, connects to 4 communities
-- [[IPaymentService.cs]] - degree 5, connects to 2 communities
-- [[.SendSafelyAsync()_1]] - degree 6, connects to 1 community
+- [[GroupRooms.tsx]] - degree 13, connects to 4 communities
+- [[GroupRooms()]] - degree 4, connects to 1 community
+- [[getAdminBooking()]] - degree 3, connects to 1 community
+- [[getAssignableRooms()]] - degree 3, connects to 1 community
+- [[AssignableRoom]] - degree 2, connects to 1 community

@@ -1,39 +1,31 @@
 ---
 type: community
-members: 26
+members: 18
 ---
 
 # components / admin
 
-**Members:** 26 nodes
+**Members:** 18 nodes
 
 ## Members
-- [[.AddAsync()_10]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
-- [[.AddRangeAsync()]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
-- [[.CountByDateAndKindAsync()]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
-- [[.GetByIdAsync()_6]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
-- [[.ListForBookingAsync()_1]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
-- [[.ListForDateAsync()_1]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
-- [[.ListFullySuppressedSlotsAsync()]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
-- [[.ListGeneratedSlotsAsync()]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
-- [[.ListLocationsAsync()]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
-- [[.ListVisibleSlotSpansAsync()]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
-- [[.Remove()_6]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
-- [[BookingId]] - code
-- [[CancellationToken_55]] - code
-- [[Count]] - code
-- [[Date_1]] - code
-- [[DateOnly_25]] - code
-- [[End_1]] - code
-- [[Guid_50]] - code
-- [[IReadOnlyCollection_3]] - code
-- [[IScheduleEntryRepository]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
-- [[Kind]] - code
-- [[List_28]] - code
-- [[MealTimeDefaultId]] - code
-- [[Start_1]] - code
-- [[Task_55]] - code
-- [[TimeOnly_7]] - code
+- [[.AddAsync()_15]] - code - src/CampCenter.Infrastructure/Repositories/MealTimeDefaultRepository.cs
+- [[.GetActiveAsync()_2]] - code - src/CampCenter.Infrastructure/Repositories/MealTimeDefaultRepository.cs
+- [[.GetAllAsync()_10]] - code - src/CampCenter.Infrastructure/Repositories/MealTimeDefaultRepository.cs
+- [[.GetByIdAsync()_10]] - code - src/CampCenter.Infrastructure/Repositories/MealTimeDefaultRepository.cs
+- [[.IsReferencedAsync()_1]] - code - src/CampCenter.Infrastructure/Repositories/MealTimeDefaultRepository.cs
+- [[.Remove()_10]] - code - src/CampCenter.Infrastructure/Repositories/MealTimeDefaultRepository.cs
+- [[.SaveChangesAsync()_15]] - code - src/CampCenter.Infrastructure/Repositories/MealTimeDefaultRepository.cs
+- [[CancellationToken_63]] - code
+- [[DateTime_8]] - code
+- [[Guid_33]] - code
+- [[Guid_55]] - code
+- [[List_33]] - code
+- [[MealKind_1]] - code - src/CampCenter.Domain/Entities/MealTimeDefault.cs
+- [[MealTimeDefault_1]] - code - src/CampCenter.Domain/Entities/MealTimeDefault.cs
+- [[MealTimeDefault.cs]] - code - src/CampCenter.Domain/Entities/MealTimeDefault.cs
+- [[MealTimeDefaultRepository]] - code - src/CampCenter.Infrastructure/Repositories/MealTimeDefaultRepository.cs
+- [[Task_63]] - code
+- [[TimeOnly_5]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -43,16 +35,19 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 17 edges to [[_COMMUNITY_CampCenter.Application  Services (2)]]
-- 8 edges to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
-- 2 edges to [[_COMMUNITY_Public Booking Service (1)]]
-- 2 edges to [[_COMMUNITY_eslint_1]]
-- 2 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (4)]]
+- 9 edges to [[_COMMUNITY_Camp Session Management]]
+- 6 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (1)]]
+- 2 edges to [[_COMMUNITY_CampCenter.Application  Services (2)]]
+- 2 edges to [[_COMMUNITY_Admin Booking & Notifications (1)]]
+- 2 edges to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
+- 2 edges to [[_COMMUNITY_BookingConfiguration]]
+- 1 edge to [[_COMMUNITY_CampCenter.Domain.Exceptions]]
+- 1 edge to [[_COMMUNITY_ClosureService]]
+- 1 edge to [[_COMMUNITY_GroupRooms.tsx]]
 - 1 edge to [[_COMMUNITY_Exception]]
 
 ## Top bridge nodes
-- [[IScheduleEntryRepository]] - degree 17, connects to 5 communities
-- [[.ListForBookingAsync()_1]] - degree 10, connects to 3 communities
-- [[.ListForDateAsync()_1]] - degree 9, connects to 3 communities
-- [[.CountByDateAndKindAsync()]] - degree 12, connects to 2 communities
-- [[.ListFullySuppressedSlotsAsync()]] - degree 10, connects to 2 communities
+- [[MealTimeDefault_1]] - degree 29, connects to 8 communities
+- [[MealKind_1]] - degree 6, connects to 4 communities
+- [[MealTimeDefaultRepository]] - degree 10, connects to 3 communities
+- [[MealTimeDefault.cs]] - degree 3, connects to 1 community

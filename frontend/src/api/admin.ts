@@ -565,7 +565,11 @@ export async function getBookingGroupPage(
 
 // --- Camp schedule (harmonogram) ---
 
-export type ScheduleEntryKind = "Meal" | "Activity";
+/** "Outing" is a spell away from the centre: nothing the centre serves or runs
+ *  can happen under it, so saving one clears the group's overlapping entries. */
+export type ScheduleEntryKind = "Meal" | "Activity" | "Outing";
+
+export const scheduleEntryKinds: ScheduleEntryKind[] = ["Activity", "Meal", "Outing"];
 export type MealKind = "Breakfast" | "Lunch" | "Dinner" | "Snack";
 
 export const mealKinds: MealKind[] = ["Breakfast", "Lunch", "Dinner", "Snack"];
@@ -603,6 +607,8 @@ export interface ScheduleCalendarBooking {
   headcount: number;
   supervisorCount: number;
   status: AdminBooking["status"];
+  /** Days of the stay spent off the site, drawn differently on the bar. */
+  outingDates: string[];
 }
 
 export interface ScheduleCalendarDay {

@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/DependencyInjection.cs"
 type: "code"
-community: "BookingSettings"
+community: "Exception"
 location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/BookingSettings
+  - community/Exception
 ---
 
 # DependencyInjection
@@ -15,4 +15,4 @@ tags:
 - [[.AddInfrastructure()]] - `method` [EXTRACTED]
 - [[DependencyInjection.cs_1]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/BookingSettings
+#graphify/code #graphify/EXTRACTED #community/Exception

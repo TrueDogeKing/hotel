@@ -153,6 +153,34 @@ public class ScheduleEntryRepository : IScheduleEntryRepository
         return [.. rows.Select(r => (r.Date, r.Kind, r.Count))];
     }
 
+    public async Task<List<(Guid BookingId, DateOnly Date)>> ListOutingDaysAsync(
+        DateOnly start,
+        DateOnly end,
+        IReadOnlyCollection<Guid> bookingIds,
+        CancellationToken cancellationToken = default
+    )
+    {
+        if (bookingIds.Count == 0)
+        {
+            return [];
+        }
+
+        // Distinct: two trips on one day still mark that day once.
+        var rows = await _db
+            .ScheduleEntries.Where(e =>
+                e.Kind == ScheduleEntryKind.Outing
+                && e.Date >= start
+                && e.Date <= end
+                && !e.IsSuppressed
+                && bookingIds.Contains(e.BookingId)
+            )
+            .Select(e => new { e.BookingId, e.Date })
+            .Distinct()
+            .ToListAsync(cancellationToken);
+
+        return [.. rows.Select(r => (r.BookingId, r.Date))];
+    }
+
     public async Task AddRangeAsync(
         IReadOnlyCollection<ScheduleEntry> entries,
         CancellationToken cancellationToken = default

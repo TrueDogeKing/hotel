@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/auth/ProtectedRoute.tsx"
 type: "code"
-community: "useAuth"
+community: "Frontend Auth & API Client"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/useAuth
+  - community/Frontend_Auth__API_Client
 ---
 
 # ProtectedRoute.tsx
@@ -17,4 +17,4 @@ tags:
 - [[ProtectedRoute()]] - `contains` [EXTRACTED]
 - [[useAuth()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/useAuth
+#graphify/code #graphify/EXTRACTED #community/Frontend_Auth__API_Client

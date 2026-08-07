@@ -21,6 +21,7 @@ tags:
 - [[.ListFullySuppressedSlotsAsync()_1]] - `method` [EXTRACTED]
 - [[.ListGeneratedSlotsAsync()_1]] - `method` [EXTRACTED]
 - [[.ListLocationsAsync()_1]] - `method` [EXTRACTED]
+- [[.ListOutingDaysAsync()_1]] - `method` [EXTRACTED]
 - [[.ListVisibleSlotSpansAsync()_1]] - `method` [EXTRACTED]
 - [[.Remove()_13]] - `method` [EXTRACTED]
 - [[.SaveChangesAsync()_21]] - `method` [EXTRACTED]

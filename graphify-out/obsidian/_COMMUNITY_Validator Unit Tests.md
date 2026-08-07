@@ -1,22 +1,23 @@
 ---
 type: community
-members: 77
+members: 83
 ---
 
 # Validator Unit Tests
 
-**Members:** 77 nodes
+**Members:** 83 nodes
 
 ## Members
 - [[.AddAsync()_3]] - code - src/CampCenter.Domain/Repositories/IClosureRepository.cs
 - [[.AddAsync()_14]] - code - src/CampCenter.Infrastructure/Repositories/ClosureRepository.cs
-- [[.Configure()_4]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/ClosureConfiguration.cs
 - [[.Create()_1]] - code - src/CampCenter.Api/Controllers/Admin/ClosuresController.cs
 - [[.CreateAsync()_2]] - code - src/CampCenter.Application/Interfaces/IClosureService.cs
 - [[.CreateAsync()_9]] - code - src/CampCenter.Application/Services/ClosureService.cs
 - [[.Delete()]] - code - src/CampCenter.Api/Controllers/Admin/ClosuresController.cs
 - [[.DeleteAsync()]] - code - src/CampCenter.Application/Interfaces/IClosureService.cs
 - [[.DeleteAsync()_5]] - code - src/CampCenter.Application/Services/ClosureService.cs
+- [[.EmptyReason_Fails()]] - code - tests/CampCenter.UnitTests/Validators/ClosureValidatorsTests.cs
+- [[.EndBeforeStart_Fails()]] - code - tests/CampCenter.UnitTests/Validators/ClosureValidatorsTests.cs
 - [[.GetAll()]] - code - src/CampCenter.Api/Controllers/Admin/ClosuresController.cs
 - [[.GetAllAsync()]] - code - src/CampCenter.Application/Interfaces/IClosureService.cs
 - [[.GetAllAsync()_3]] - code - src/CampCenter.Application/Services/ClosureService.cs
@@ -35,10 +36,13 @@ members: 77
 - [[.Remove()_9]] - code - src/CampCenter.Infrastructure/Repositories/ClosureRepository.cs
 - [[.SaveChangesAsync()_3]] - code - src/CampCenter.Domain/Repositories/IClosureRepository.cs
 - [[.SaveChangesAsync()_14]] - code - src/CampCenter.Infrastructure/Repositories/ClosureRepository.cs
+- [[.SingleDayClosure_Passes()]] - code - tests/CampCenter.UnitTests/Validators/ClosureValidatorsTests.cs
 - [[.ToDto()_1]] - code - src/CampCenter.Application/Services/ClosureService.cs
 - [[.Update()]] - code - src/CampCenter.Api/Controllers/Admin/ClosuresController.cs
 - [[.UpdateAsync()]] - code - src/CampCenter.Application/Interfaces/IClosureService.cs
 - [[.UpdateAsync()_5]] - code - src/CampCenter.Application/Services/ClosureService.cs
+- [[.Valid()]] - code - tests/CampCenter.UnitTests/Validators/ClosureValidatorsTests.cs
+- [[.ValidClosure_Passes()]] - code - tests/CampCenter.UnitTests/Validators/ClosureValidatorsTests.cs
 - [[CancellationToken_2]] - code
 - [[CancellationToken_21]] - code
 - [[CancellationToken_36]] - code
@@ -46,20 +50,21 @@ members: 77
 - [[CancellationToken_62]] - code
 - [[Closure_1]] - code - src/CampCenter.Domain/Entities/Closure.cs
 - [[Closure.cs]] - code - src/CampCenter.Domain/Entities/Closure.cs
-- [[ClosureConfiguration]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/ClosureConfiguration.cs
-- [[ClosureConfiguration.cs]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/ClosureConfiguration.cs
 - [[ClosureDto]] - code - src/CampCenter.Application/DTOs/Closures/ClosureDtos.cs
 - [[ClosureDtos.cs]] - code - src/CampCenter.Application/DTOs/Closures/ClosureDtos.cs
 - [[ClosureRepository]] - code - src/CampCenter.Infrastructure/Repositories/ClosureRepository.cs
 - [[ClosureService]] - code - src/CampCenter.Application/Services/ClosureService.cs
+- [[ClosureValidators.cs]] - code - src/CampCenter.Application/Validators/ClosureValidators.cs
+- [[ClosureValidatorsTests]] - code - tests/CampCenter.UnitTests/Validators/ClosureValidatorsTests.cs
 - [[ClosuresController]] - code - src/CampCenter.Api/Controllers/Admin/ClosuresController.cs
 - [[CreateClosureRequestDto]] - code - src/CampCenter.Application/DTOs/Closures/ClosureDtos.cs
+- [[CreateClosureRequestValidator]] - code - src/CampCenter.Application/Validators/ClosureValidators.cs
 - [[DateOnly_11]] - code
 - [[DateOnly_19]] - code
 - [[DateOnly_23]] - code
 - [[DateOnly_27]] - code
 - [[DateTime_7]] - code
-- [[EntityTypeBuilder_4]] - code
+- [[Fact_16]] - code
 - [[Guid_1]] - code
 - [[Guid_11]] - code
 - [[Guid_21]] - code
@@ -85,6 +90,7 @@ members: 77
 - [[Task_48]] - code
 - [[Task_62]] - code
 - [[UpdateClosureRequestDto]] - code - src/CampCenter.Application/DTOs/Closures/ClosureDtos.cs
+- [[UpdateClosureRequestValidator]] - code - src/CampCenter.Application/Validators/ClosureValidators.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -95,21 +101,23 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 7 edges to [[_COMMUNITY_Room Management]]
-- 5 edges to [[_COMMUNITY_Exception]]
-- 3 edges to [[_COMMUNITY_Camp Session Management]]
+- 4 edges to [[_COMMUNITY_CampCenter.Application.DTOs.Public]]
 - 3 edges to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
 - 3 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (2)]]
 - 2 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (3)]]
-- 2 edges to [[_COMMUNITY_CampCenter.Application.DTOs.Public]]
 - 2 edges to [[_COMMUNITY_Integration Test Harness (2)]]
-- 2 edges to [[_COMMUNITY_AppDbContext]]
+- 2 edges to [[_COMMUNITY_Auth Controller (1)]]
+- 2 edges to [[_COMMUNITY_Camp Session Management]]
+- 2 edges to [[_COMMUNITY_ClosureService]]
+- 2 edges to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
 - 2 edges to [[_COMMUNITY_BookingConfiguration]]
-- 1 edge to [[_COMMUNITY_Admin Booking & Notifications (2)]]
+- 1 edge to [[_COMMUNITY_AppDbContext]]
 - 1 edge to [[_COMMUNITY_Application Namespaces & DTOs]]
+- 1 edge to [[_COMMUNITY_Exception]]
 
 ## Top bridge nodes
 - [[IClosureRepository]] - degree 15, connects to 5 communities
+- [[Closure_1]] - degree 22, connects to 3 communities
 - [[ClosureService]] - degree 13, connects to 3 communities
 - [[.GetOverlappingAsync()]] - degree 11, connects to 3 communities
-- [[Closure_1]] - degree 22, connects to 2 communities
 - [[ClosureRepository]] - degree 10, connects to 2 communities

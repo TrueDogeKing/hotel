@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/components/Modal.tsx"
 type: "code"
-community: "Frontend App Shell & i18n"
+community: "Persistence / Migrations (10)"
 location: "L28"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Frontend_App_Shell__i18n
+  - community/Persistence_/_Migrations_10
 ---
 
 # Modal()
@@ -17,4 +17,4 @@ tags:
 - [[Modal.tsx]] - `contains` [EXTRACTED]
 - [[UsersPage.tsx]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Frontend_App_Shell__i18n
+#graphify/code #graphify/EXTRACTED #community/Persistence_/_Migrations_10

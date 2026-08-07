@@ -2,7 +2,7 @@
 source_file: "frontend/src/components/admin/ScheduleEntryForm.tsx"
 type: "code"
 community: "Domain & Infra Namespaces"
-location: "L30"
+location: "L31"
 tags:
   - graphify/code
   - graphify/EXTRACTED

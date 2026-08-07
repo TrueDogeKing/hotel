@@ -10,8 +10,6 @@ members: 15
 ## Members
 - [[@eslintjs]] - code - frontend/package.json
 - [[@eslintjs_1]] - concept - frontend/package.json
-- [[@typesreact]] - code - frontend/package.json
-- [[@typesreact_1]] - concept - frontend/package.json
 - [[@vitejsplugin-react]] - code - frontend/package.json
 - [[@vitejsplugin-react_1]] - concept - frontend/package.json
 - [[devDependencies]] - code - frontend/package.json
@@ -19,6 +17,8 @@ members: 15
 - [[eslint-plugin-react-refresh_1]] - concept - frontend/package.json
 - [[globals]] - code - frontend/package.json
 - [[globals_1]] - concept - frontend/package.json
+- [[prettier]] - code - frontend/package.json
+- [[prettier_1]] - concept - frontend/package.json
 - [[typescript-eslint]] - code - frontend/package.json
 - [[typescript-eslint_1]] - concept - frontend/package.json
 - [[vite]] - code - frontend/package.json
@@ -35,8 +35,8 @@ SORT file.name ASC
 - 1 edge to [[_COMMUNITY_Frontend Package Manifest]]
 - 1 edge to [[_COMMUNITY_eslint]]
 - 1 edge to [[_COMMUNITY_.CreateWorkerAsync]]
-- 1 edge to [[_COMMUNITY_Prettier Dependency]]
 - 1 edge to [[_COMMUNITY_@typesnode]]
+- 1 edge to [[_COMMUNITY_@typesreact]]
 - 1 edge to [[_COMMUNITY_React DOM Type Definitions]]
 - 1 edge to [[_COMMUNITY_TypeScript Dependency]]
 

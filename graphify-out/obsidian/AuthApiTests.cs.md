@@ -1,12 +1,12 @@
 ---
 source_file: "tests/CampCenter.IntegrationTests/AuthApiTests.cs"
 type: "code"
-community: "Persistence / Migrations (2)"
+community: "AuthApiTests"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Persistence_/_Migrations_2
+  - community/AuthApiTests
 ---
 
 # AuthApiTests.cs
@@ -16,4 +16,4 @@ tags:
 - [[CampCenter.Application.DTOs.Auth]] - `imports` [EXTRACTED]
 - [[CampCenter.IntegrationTests]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Persistence_/_Migrations_2
+#graphify/code #graphify/EXTRACTED #community/AuthApiTests

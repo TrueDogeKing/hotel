@@ -75,20 +75,20 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_Exception]]
+- 5 edges to [[_COMMUNITY_ClosureService]]
 - 3 edges to [[_COMMUNITY_ClosureValidatorsTests]]
 - 3 edges to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
 - 3 edges to [[_COMMUNITY_Public Booking Service (1)]]
-- 2 edges to [[_COMMUNITY_Admin Booking & Notifications (2)]]
+- 2 edges to [[_COMMUNITY_AppDbContext]]
 - 2 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
 - 2 edges to [[_COMMUNITY_Validator Unit Tests]]
 - 2 edges to [[_COMMUNITY_.GetBlockedRoomIdsAsync]]
 - 2 edges to [[_COMMUNITY_Room Management]]
-- 2 edges to [[_COMMUNITY_ClosureService]]
-- 2 edges to [[_COMMUNITY_AppDbContext]]
+- 2 edges to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
 - 2 edges to [[_COMMUNITY_BookingConfiguration]]
 - 1 edge to [[_COMMUNITY_CampCenter.Application.DTOs.Public]]
-- 1 edge to [[_COMMUNITY_MealTimeDefault]]
+- 1 edge to [[_COMMUNITY_Payment Gateway Integration Tests (1)]]
+- 1 edge to [[_COMMUNITY_Exception]]
 
 ## Top bridge nodes
 - [[PublicAvailabilityController]] - degree 9, connects to 4 communities

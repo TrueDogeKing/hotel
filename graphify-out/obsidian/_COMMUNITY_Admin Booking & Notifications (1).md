@@ -1,41 +1,47 @@
 ---
 type: community
-members: 28
+members: 34
 ---
 
 # Admin Booking & Notifications (1)
 
-**Members:** 28 nodes
+**Members:** 34 nodes
 
 ## Members
-- [[AdminLayout.tsx]] - code - frontend/src/components/admin/AdminLayout.tsx
-- [[FlagGB()]] - code - frontend/src/components/LanguageSwitcher.tsx
-- [[FlagPL()]] - code - frontend/src/components/LanguageSwitcher.tsx
-- [[IconMoon()]] - code - frontend/src/components/icons.tsx
-- [[IconSun()]] - code - frontend/src/components/icons.tsx
-- [[IconSunSea()]] - code - frontend/src/components/icons.tsx
-- [[Language]] - code - frontend/src/i18n/index.ts
-- [[LanguageSwitcher()]] - code - frontend/src/components/LanguageSwitcher.tsx
-- [[LanguageSwitcher.tsx]] - code - frontend/src/components/LanguageSwitcher.tsx
-- [[Listener_1]] - code - frontend/src/theme.ts
-- [[LoginPage()]] - code - frontend/src/pages/LoginPage.tsx
-- [[LoginPage.tsx]] - code - frontend/src/pages/LoginPage.tsx
-- [[Props_4]] - code - frontend/src/components/PublicHeader.tsx
-- [[PublicHeader()]] - code - frontend/src/components/PublicHeader.tsx
-- [[PublicHeader.tsx]] - code - frontend/src/components/PublicHeader.tsx
-- [[SECTIONS]] - code - frontend/src/components/PublicHeader.tsx
-- [[Theme]] - code - frontend/src/theme.ts
-- [[ThemeToggle()]] - code - frontend/src/components/ThemeToggle.tsx
-- [[ThemeToggle.tsx]] - code - frontend/src/components/ThemeToggle.tsx
-- [[applyTheme()]] - code - frontend/src/theme.ts
-- [[getStoredLanguage()]] - code - frontend/src/i18n/index.ts
-- [[getTheme()]] - code - frontend/src/theme.ts
-- [[index.ts]] - code - frontend/src/i18n/index.ts
-- [[listeners_1]] - code - frontend/src/theme.ts
-- [[setLanguage()]] - code - frontend/src/i18n/index.ts
-- [[subscribeTheme()]] - code - frontend/src/theme.ts
-- [[theme.ts]] - code - frontend/src/theme.ts
-- [[toggleTheme()]] - code - frontend/src/theme.ts
+- [[.AddAsync()_10]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
+- [[.AddRangeAsync()]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
+- [[.CountByDateAndKindAsync()]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
+- [[.GetByIdAsync()_6]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
+- [[.ListForBookingAsync()_1]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
+- [[.ListForDateAsync()_1]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
+- [[.ListFullySuppressedSlotsAsync()]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
+- [[.ListGeneratedSlotsAsync()]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
+- [[.ListLocationsAsync()]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
+- [[.ListOutingDaysAsync()]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
+- [[.ListVisibleSlotSpansAsync()]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
+- [[.Remove()_6]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
+- [[BookingId]] - code
+- [[CancellationToken_55]] - code
+- [[Count]] - code
+- [[Date_1]] - code
+- [[DateOnly_21]] - code
+- [[DateOnly_25]] - code
+- [[DateTime_14]] - code
+- [[End_1]] - code
+- [[Guid_40]] - code
+- [[Guid_50]] - code
+- [[IReadOnlyCollection_3]] - code
+- [[IScheduleEntryRepository]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
+- [[Kind]] - code
+- [[List_28]] - code
+- [[MealTimeDefaultId]] - code
+- [[ScheduleEntry_1]] - code - src/CampCenter.Domain/Entities/ScheduleEntry.cs
+- [[ScheduleEntry.cs]] - code - src/CampCenter.Domain/Entities/ScheduleEntry.cs
+- [[ScheduleEntryKind_1]] - code - src/CampCenter.Domain/Entities/ScheduleEntry.cs
+- [[Start_1]] - code
+- [[Task_55]] - code
+- [[TimeOnly_6]] - code
+- [[TimeOnly_7]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -45,17 +51,19 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 8 edges to [[_COMMUNITY_Frontend Icon Components]]
-- 7 edges to [[_COMMUNITY_useAuth]]
-- 7 edges to [[_COMMUNITY_Public Booking Frontend (1)]]
-- 5 edges to [[_COMMUNITY_Room Closure Management]]
-- 3 edges to [[_COMMUNITY_Frontend Auth & API Client]]
-- 2 edges to [[_COMMUNITY_Frontend App Shell & i18n]]
-- 1 edge to [[_COMMUNITY_Domain & Infra Namespaces]]
+- 27 edges to [[_COMMUNITY_CampCenter.Application  Services (2)]]
+- 9 edges to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
+- 5 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (4)]]
+- 2 edges to [[_COMMUNITY_Public Booking Service (1)]]
+- 2 edges to [[_COMMUNITY_CampCenter.Domain.Exceptions]]
+- 2 edges to [[_COMMUNITY_ClosureService]]
+- 2 edges to [[_COMMUNITY_components  admin]]
+- 2 edges to [[_COMMUNITY_BookingConfiguration]]
+- 1 edge to [[_COMMUNITY_Integration Test Harness (1)]]
 
 ## Top bridge nodes
-- [[AdminLayout.tsx]] - degree 19, connects to 6 communities
-- [[LoginPage.tsx]] - degree 10, connects to 3 communities
-- [[PublicHeader.tsx]] - degree 12, connects to 2 communities
-- [[index.ts]] - degree 6, connects to 2 communities
-- [[LanguageSwitcher.tsx]] - degree 11, connects to 1 community
+- [[ScheduleEntry_1]] - degree 29, connects to 6 communities
+- [[IScheduleEntryRepository]] - degree 18, connects to 5 communities
+- [[ScheduleEntryKind_1]] - degree 8, connects to 3 communities
+- [[.ListForBookingAsync()_1]] - degree 12, connects to 2 communities
+- [[.ListFullySuppressedSlotsAsync()]] - degree 10, connects to 2 communities

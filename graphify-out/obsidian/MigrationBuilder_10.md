@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "RoomCleaningRepository"
+community: "MakeRoomTaskRoomOptional"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RoomCleaningRepository
+  - community/MakeRoomTaskRoomOptional
 ---
 
 # MigrationBuilder
@@ -14,4 +14,4 @@ tags:
 - [[.Down()_10]] - `references` [EXTRACTED]
 - [[.Up()_10]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RoomCleaningRepository
+#graphify/code #graphify/EXTRACTED #community/MakeRoomTaskRoomOptional

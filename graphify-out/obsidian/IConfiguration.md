@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "BookingSettings"
+community: "Exception"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/BookingSettings
+  - community/Exception
 ---
 
 # IConfiguration
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.AddInfrastructure()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/BookingSettings
+#graphify/code #graphify/EXTRACTED #community/Exception

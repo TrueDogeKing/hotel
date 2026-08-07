@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Domain/Entities/BookingState.cs"
 type: "code"
-community: "CampCenter.Domain.Exceptions"
+community: "Integration Test Harness (1)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterDomainExceptions
+  - community/Integration_Test_Harness_1
 ---
 
 # BookingState.cs
@@ -16,4 +16,4 @@ tags:
 - [[BookingStates_1]] - `contains` [EXTRACTED]
 - [[CampCenter.Domain.Entities]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterDomainExceptions
+#graphify/code #graphify/EXTRACTED #community/Integration_Test_Harness_1

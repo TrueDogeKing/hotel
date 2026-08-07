@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/components/LanguageSwitcher.tsx"
 type: "code"
-community: "Admin Booking & Notifications (1)"
+community: "Public Booking Frontend (1)"
 location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Booking__Notifications_1
+  - community/Public_Booking_Frontend_1
 ---
 
 # FlagGB()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[LanguageSwitcher.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_1
+#graphify/code #graphify/EXTRACTED #community/Public_Booking_Frontend_1

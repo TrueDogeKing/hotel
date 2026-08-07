@@ -23,7 +23,7 @@ members: 19
 - [[HttpClient_2]] - code
 - [[HttpClient_6]] - code
 - [[Task_73]] - code
-- [[Task_80]] - code
+- [[Task_81]] - code
 - [[UsersAndRolesApiTests]] - code - tests/CampCenter.IntegrationTests/UsersAndRolesApiTests.cs
 - [[Worker]] - code
 - [[string_14]] - code
@@ -37,9 +37,9 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 6 edges to [[_COMMUNITY_tests  CampCenter.IntegrationTests (1)]]
-- 2 edges to [[_COMMUNITY_IntegrationTestBase]]
+- 2 edges to [[_COMMUNITY_RoomsAndClosuresApiTests]]
 - 2 edges to [[_COMMUNITY_src  api (2)]]
-- 1 edge to [[_COMMUNITY_Admin User & Token Config]]
+- 1 edge to [[_COMMUNITY_EF Core Migrations (4)]]
 - 1 edge to [[_COMMUNITY_Application Namespaces & DTOs]]
 
 ## Top bridge nodes

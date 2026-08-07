@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/components/ThemeToggle.tsx"
 type: "code"
-community: "Admin Booking & Notifications (1)"
+community: "Frontend Icon Components"
 location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Booking__Notifications_1
+  - community/Frontend_Icon_Components
 ---
 
 # ThemeToggle()
@@ -20,4 +20,4 @@ tags:
 - [[subscribeTheme()]] - `indirect_call` [INFERRED]
 - [[toggleTheme()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_1
+#graphify/code #graphify/EXTRACTED #community/Frontend_Icon_Components

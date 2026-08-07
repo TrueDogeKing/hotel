@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Domain/Repositories/IPricingDefaultsRepository.cs"
 type: "code"
-community: "Exception"
+community: "ClosureService"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Exception
+  - community/ClosureService
 ---
 
 # IPricingDefaultsRepository.cs
@@ -16,4 +16,4 @@ tags:
 - [[CampCenter.Domain.Repositories]] - `contains` [EXTRACTED]
 - [[IPricingDefaultsRepository]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Exception
+#graphify/code #graphify/EXTRACTED #community/ClosureService

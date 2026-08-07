@@ -35,10 +35,11 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 4 edges to [[_COMMUNITY_Auth Service & Tokens]]
-- 3 edges to [[_COMMUNITY_Exception]]
-- 2 edges to [[_COMMUNITY_AppDbContext]]
+- 2 edges to [[_COMMUNITY_ClosureService]]
+- 2 edges to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
 - 2 edges to [[_COMMUNITY_BookingConfiguration]]
 - 1 edge to [[_COMMUNITY_Booking Persistence & Entities (1)]]
+- 1 edge to [[_COMMUNITY_Exception]]
 
 ## Top bridge nodes
 - [[RefreshToken]] - degree 12, connects to 3 communities

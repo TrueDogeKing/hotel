@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "ClosureService"
+community: "Prettier Dependency"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ClosureService
+  - community/Prettier_Dependency
 ---
 
 # Exception
@@ -17,4 +17,4 @@ tags:
 - [[ForbiddenActionException]] - `inherits` [EXTRACTED]
 - [[NotFoundException]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ClosureService
+#graphify/code #graphify/EXTRACTED #community/Prettier_Dependency

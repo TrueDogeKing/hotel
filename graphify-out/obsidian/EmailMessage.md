@@ -17,8 +17,10 @@ tags:
 - [[.BookingCreated()]] - `references` [EXTRACTED]
 - [[.SendAsync()]] - `references` [EXTRACTED]
 - [[.SendAsync()_1]] - `references` [EXTRACTED]
+- [[.SendAsync()_2]] - `references` [EXTRACTED]
 - [[.SendSafelyAsync()]] - `references` [EXTRACTED]
 - [[.SendSafelyAsync()_1]] - `references` [EXTRACTED]
+- [[.To()]] - `references` [EXTRACTED]
 - [[IEmailSender.cs]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_4

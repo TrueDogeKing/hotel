@@ -12,6 +12,7 @@ tags:
 # ScheduleApiTests
 
 ## Connections
+- [[.AnOuting_ClearsWhatItOverlaps_AndKeepsItCleared()]] - `method` [EXTRACTED]
 - [[.BookingMealTimes_DefaultToTheCenterTimes()]] - `method` [EXTRACTED]
 - [[.BreakfastsAsync()]] - `method` [EXTRACTED]
 - [[.BulkRetime_PreservesADayChangedIndividually()]] - `method` [EXTRACTED]

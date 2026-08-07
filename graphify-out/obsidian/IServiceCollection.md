@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Public Booking Service (2)"
+community: ".NextFreeSitting"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public_Booking_Service_2
+  - community/NextFreeSitting
 ---
 
 # IServiceCollection
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.AddApplication()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_2
+#graphify/code #graphify/EXTRACTED #community/NextFreeSitting

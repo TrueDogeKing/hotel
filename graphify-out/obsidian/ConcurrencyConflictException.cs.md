@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Domain/Exceptions/ConcurrencyConflictException.cs"
 type: "code"
-community: "ClosureService"
+community: "Prettier Dependency"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ClosureService
+  - community/Prettier_Dependency
 ---
 
 # ConcurrencyConflictException.cs
@@ -15,4 +15,4 @@ tags:
 - [[CampCenter.Domain.Exceptions]] - `contains` [EXTRACTED]
 - [[ConcurrencyConflictException]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ClosureService
+#graphify/code #graphify/EXTRACTED #community/Prettier_Dependency

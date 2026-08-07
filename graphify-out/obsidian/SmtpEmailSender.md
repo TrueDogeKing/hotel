@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Email/SmtpEmailSender.cs"
 type: "code"
-community: "Admin Booking & Notifications (4)"
+community: "eslint"
 location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Booking__Notifications_4
+  - community/eslint
 ---
 
 # SmtpEmailSender
@@ -17,4 +17,4 @@ tags:
 - [[IEmailSender]] - `implements` [EXTRACTED]
 - [[SmtpEmailSender.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_4
+#graphify/code #graphify/EXTRACTED #community/eslint

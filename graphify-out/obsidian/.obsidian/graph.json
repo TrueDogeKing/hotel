@@ -953,17 +953,31 @@
       }
     },
     {
-      "query": "tag:#community/ScheduleSettings",
+      "query": "tag:#community/@types/react",
+      "color": {
+        "a": 1,
+        "rgb": 11565729
+      }
+    },
+    {
+      "query": "tag:#community/MakeRoomTaskRoomOptional",
       "color": {
         "a": 1,
         "rgb": 16752039
       }
     },
     {
-      "query": "tag:#community/eslint",
+      "query": "tag:#community/ScheduleSettings",
       "color": {
         "a": 1,
         "rgb": 10253663
+      }
+    },
+    {
+      "query": "tag:#community/eslint",
+      "color": {
+        "a": 1,
+        "rgb": 12234924
       }
     }
   ]

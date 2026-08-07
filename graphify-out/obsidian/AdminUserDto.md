@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/DTOs/Users/UserDtos.cs"
 type: "code"
-community: "Admin User & Token Config"
+community: "EF Core Migrations (4)"
 location: "L4"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_User__Token_Config
+  - community/EF_Core_Migrations_4
 ---
 
 # AdminUserDto
@@ -24,4 +24,4 @@ tags:
 - [[.ToDto()_7]] - `references` [EXTRACTED]
 - [[UserDtos.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_User__Token_Config
+#graphify/code #graphify/EXTRACTED #community/EF_Core_Migrations_4

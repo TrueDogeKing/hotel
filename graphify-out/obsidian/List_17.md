@@ -12,6 +12,7 @@ tags:
 
 ## Connections
 - [[.GetBookingMealTimesAsync()_1]] - `references` [EXTRACTED]
+- [[.ToCalendarDto()]] - `references` [EXTRACTED]
 - [[.ToDto()_6]] - `references` [EXTRACTED]
 - [[.ToPublicDto()]] - `references` [EXTRACTED]
 

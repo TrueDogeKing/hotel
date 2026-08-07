@@ -46,6 +46,7 @@ members: 72
 - [[CancellationToken_42]] - code
 - [[CancellationToken_54]] - code
 - [[CancellationToken_68]] - code
+- [[CreateRoomTaskRequestDto]] - code - src/CampCenter.Application/DTOs/AdminPanel/AdminPanelDtos.cs
 - [[DateTime_13]] - code
 - [[Dictionary_7]] - code
 - [[Dictionary_10]] - code
@@ -79,7 +80,6 @@ members: 72
 - [[Task_54]] - code
 - [[Task_68]] - code
 - [[TasksController]] - code - src/CampCenter.Api/Controllers/Admin/TasksController.cs
-- [[UpdateRoomTaskRequestDto]] - code - src/CampCenter.Application/DTOs/AdminPanel/AdminPanelDtos.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -94,11 +94,12 @@ SORT file.name ASC
 - 3 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
 - 3 edges to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
 - 3 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (2)]]
-- 3 edges to [[_COMMUNITY_Exception]]
-- 2 edges to [[_COMMUNITY_AppDbContext]]
+- 2 edges to [[_COMMUNITY_ClosureService]]
+- 2 edges to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
 - 2 edges to [[_COMMUNITY_BookingConfiguration]]
-- 1 edge to [[_COMMUNITY_Admin Booking & Notifications (2)]]
+- 1 edge to [[_COMMUNITY_AppDbContext]]
 - 1 edge to [[_COMMUNITY_Integration Test Harness (1)]]
+- 1 edge to [[_COMMUNITY_Exception]]
 
 ## Top bridge nodes
 - [[RoomTask_1]] - degree 18, connects to 4 communities

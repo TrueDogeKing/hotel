@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.UnitTests / Services (1)"
+community: "tests / CampCenter.IntegrationTests (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Services_1
+  - community/tests_/_CampCenterIntegrationTests_1
 ---
 
 # List
 
 ## Connections
-- [[.SeededDefaults()]] - `references` [EXTRACTED]
-- [[.SeededSlots()]] - `references` [EXTRACTED]
+- [[.BreakfastsAsync()]] - `references` [EXTRACTED]
+- [[.GetMealTimesAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_1
+#graphify/code #graphify/EXTRACTED #community/tests_/_CampCenterIntegrationTests_1

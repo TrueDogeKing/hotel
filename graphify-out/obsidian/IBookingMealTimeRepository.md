@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Domain/Repositories/IBookingMealTimeRepository.cs"
 type: "code"
-community: "eslint"
+community: "CampCenter.Domain.Exceptions"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/eslint
+  - community/CampCenterDomainExceptions
 ---
 
 # IBookingMealTimeRepository
@@ -22,4 +22,4 @@ tags:
 - [[IBookingMealTimeRepository.cs]] - `contains` [EXTRACTED]
 - [[ScheduleService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/eslint
+#graphify/code #graphify/EXTRACTED #community/CampCenterDomainExceptions

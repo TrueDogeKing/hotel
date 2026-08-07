@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/components/admin/AdminLayout.tsx"
 type: "code"
-community: "useAuth"
+community: "Public Booking Frontend (1)"
 location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/useAuth
+  - community/Public_Booking_Frontend_1
 ---
 
 # AdminLayout()
@@ -15,4 +15,4 @@ tags:
 - [[AdminLayout.tsx]] - `contains` [EXTRACTED]
 - [[useAuth()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/useAuth
+#graphify/code #graphify/EXTRACTED #community/Public_Booking_Frontend_1

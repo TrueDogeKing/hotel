@@ -1,11 +1,11 @@
 ---
 type: community
-members: 35
+members: 34
 ---
 
 # Admin Bookings Controller & DTOs
 
-**Members:** 35 nodes
+**Members:** 34 nodes
 
 ## Members
 - [[.ApplyCancellationAsync()]] - code - src/CampCenter.Application/Services/AdminBookingService.cs
@@ -18,7 +18,6 @@ members: 35
 - [[.GetAssignableRoomsAsync()_1]] - code - src/CampCenter.Application/Services/AdminBookingService.cs
 - [[.GetAsync()_2]] - code - src/CampCenter.Application/Services/AdminBookingService.cs
 - [[.GetDashboardAsync()_1]] - code - src/CampCenter.Application/Services/AdminBookingService.cs
-- [[.GetGroupPageAsync()_1]] - code - src/CampCenter.Application/Services/AdminBookingService.cs
 - [[.GetOccupancyAsync()_1]] - code - src/CampCenter.Application/Services/AdminBookingService.cs
 - [[.GetOrThrowAsync()]] - code - src/CampCenter.Application/Services/AdminBookingService.cs
 - [[.GuardPricing()]] - code - src/CampCenter.Application/Services/AdminBookingService.cs
@@ -52,9 +51,9 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 14 edges to [[_COMMUNITY_Integration Test Harness (2)]]
-- 12 edges to [[_COMMUNITY_ControllerBase]]
-- 11 edges to [[_COMMUNITY_.GetBlockedRoomIdsAsync]]
+- 13 edges to [[_COMMUNITY_ControllerBase]]
+- 13 edges to [[_COMMUNITY_Integration Test Harness (2)]]
+- 9 edges to [[_COMMUNITY_.GetBlockedRoomIdsAsync]]
 - 7 edges to [[_COMMUNITY_ClosureValidatorsTests]]
 - 7 edges to [[_COMMUNITY_Integration Test Harness (1)]]
 - 5 edges to [[_COMMUNITY_Admin Booking & Notifications (4)]]
@@ -62,18 +61,18 @@ SORT file.name ASC
 - 5 edges to [[_COMMUNITY_Room Mix Calculator Tests]]
 - 4 edges to [[_COMMUNITY_Public Booking Service (1)]]
 - 3 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (3)]]
+- 3 edges to [[_COMMUNITY_Admin Booking & Notifications (2)]]
 - 3 edges to [[_COMMUNITY_Validator Unit Tests]]
 - 3 edges to [[_COMMUNITY_Room Task Management (1)]]
 - 2 edges to [[_COMMUNITY_DTOs  Schedule (1)]]
 - 2 edges to [[_COMMUNITY_Auth Service & Tokens]]
 - 2 edges to [[_COMMUNITY_BookingStatus]]
-- 2 edges to [[_COMMUNITY_MealTimeDefault]]
-- 1 edge to [[_COMMUNITY_.NextFreeSitting]]
+- 2 edges to [[_COMMUNITY_Payment Gateway Integration Tests (1)]]
+- 1 edge to [[_COMMUNITY_CampCenter.UnitTests  Validators]]
 - 1 edge to [[_COMMUNITY_ClosureService]]
-- 1 edge to [[_COMMUNITY_Admin Booking & Notifications (2)]]
 
 ## Top bridge nodes
-- [[AdminBookingService]] - degree 39, connects to 11 communities
+- [[AdminBookingService]] - degree 39, connects to 12 communities
 - [[.CreateAsync()_7]] - degree 19, connects to 8 communities
 - [[.ReassignAsync()_1]] - degree 13, connects to 6 communities
 - [[.SetStatusAsync()_3]] - degree 18, connects to 5 communities

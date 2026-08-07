@@ -20,6 +20,7 @@ tags:
 - [[CampCenterApiFactory.cs]] - `contains` [EXTRACTED]
 - [[PaymentsApiTests.cs]] - `contains` [EXTRACTED]
 - [[PublicBookingApiTests.cs]] - `contains` [EXTRACTED]
+- [[RecordingEmailSender.cs]] - `contains` [EXTRACTED]
 - [[RoomsAndClosuresApiTests.cs]] - `contains` [EXTRACTED]
 - [[ScheduleApiTests.cs]] - `contains` [EXTRACTED]
 - [[UsersAndRolesApiTests.cs]] - `contains` [EXTRACTED]

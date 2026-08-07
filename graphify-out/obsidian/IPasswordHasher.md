@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Interfaces/IPasswordHasher.cs"
 type: "code"
-community: "ClosureService"
+community: "Admin User & Token Config"
 location: "L3"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ClosureService
+  - community/Admin_User__Token_Config
 ---
 
 # IPasswordHasher
@@ -19,4 +19,4 @@ tags:
 - [[IPasswordHasher.cs]] - `contains` [EXTRACTED]
 - [[UserService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ClosureService
+#graphify/code #graphify/EXTRACTED #community/Admin_User__Token_Config

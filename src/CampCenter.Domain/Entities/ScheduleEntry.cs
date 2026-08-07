@@ -4,9 +4,16 @@ public enum ScheduleEntryKind
 {
     Meal,
     Activity,
+
+    /// The group is off the site — a coach trip, a day at the seaside. Nothing the
+    /// centre serves or runs can happen while they are away, so entering one
+    /// clears this group's meals and activities that overlap it, and the day is
+    /// marked on the calendar.
+    Outing,
 }
 
-/// One hour-to-hour item in a group's camp programme: a meal or an activity.
+/// One hour-to-hour item in a group's camp programme: a meal, an activity, or a
+/// spell away from the centre.
 ///
 /// Meals and activities share one entity because every view of the schedule (day
 /// timetable, group programme, the booker's read-only copy) needs them merged into

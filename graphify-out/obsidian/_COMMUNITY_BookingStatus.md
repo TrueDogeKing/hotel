@@ -27,10 +27,10 @@ SORT file.name ASC
 - 3 edges to [[_COMMUNITY_CampCenter.Domain  Repositories (1)]]
 - 2 edges to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
 - 2 edges to [[_COMMUNITY_BookingConfiguration]]
-- 1 edge to [[_COMMUNITY_Exception]]
+- 1 edge to [[_COMMUNITY_ClosureService]]
 - 1 edge to [[_COMMUNITY_Integration Test Harness (1)]]
 - 1 edge to [[_COMMUNITY_Room Management]]
-- 1 edge to [[_COMMUNITY_AppDbContext]]
+- 1 edge to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
 
 ## Top bridge nodes
 - [[BookingRoomAssignment]] - degree 15, connects to 7 communities

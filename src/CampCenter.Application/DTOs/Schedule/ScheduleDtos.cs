@@ -37,7 +37,10 @@ public record ScheduleCalendarBookingDto(
     int Headcount,
     /// How many of them are supervisors — shown in brackets beside the group.
     int SupervisorCount,
-    string Status
+    string Status,
+    /// Days of this stay the group spends off the site. Drawn differently on the
+    /// bar, so a trip day reads from the month view without opening it.
+    List<DateOnly> OutingDates
 );
 
 public record ScheduleCalendarDayDto(

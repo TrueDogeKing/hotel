@@ -17,6 +17,7 @@ tags:
 - [[BookingService]] - `references` [EXTRACTED]
 - [[IEmailSender.cs]] - `contains` [EXTRACTED]
 - [[PaymentService]] - `references` [EXTRACTED]
+- [[RecordingEmailSender]] - `implements` [EXTRACTED]
 - [[SmtpEmailSender]] - `implements` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_4

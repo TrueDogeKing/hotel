@@ -240,6 +240,7 @@ export default function SchedulePage() {
         t("schedule.supervisorsShort", { count }),
       )} · ${t("schedule.people", { count: booking.headcount })}`,
       muted: booking.status === "PendingDeposit",
+      texturedIso: booking.outingDates,
     })) ?? [];
 
   // The badge shows how many people are in the center that day — the occupancy

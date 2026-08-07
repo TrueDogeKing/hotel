@@ -1,15 +1,18 @@
 ---
 type: community
-members: 2
+members: 5
 ---
 
 # .NextFreeSitting
 
-**Members:** 2 nodes
+**Members:** 5 nodes
 
 ## Members
-- [[UpdateDietaryNotesRequestDto]] - code - src/CampCenter.Application/DTOs/Schedule/ScheduleDtos.cs
-- [[UpdateDietaryNotesRequestValidator]] - code - src/CampCenter.Application/Validators/ScheduleValidators.cs
+- [[.AddApplication()]] - code - src/CampCenter.Application/DependencyInjection.cs
+- [[CampCenter.Application]] - code - src/CampCenter.Application/DependencyInjection.cs
+- [[DependencyInjection]] - code - src/CampCenter.Application/DependencyInjection.cs
+- [[DependencyInjection.cs]] - code - src/CampCenter.Application/DependencyInjection.cs
+- [[IServiceCollection]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -19,13 +22,10 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_src  api (1)]]
-- 1 edge to [[_COMMUNITY_DTOs  Schedule (1)]]
-- 1 edge to [[_COMMUNITY_ControllerBase]]
-- 1 edge to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
-- 1 edge to [[_COMMUNITY_Camp Session Management]]
-- 1 edge to [[_COMMUNITY_CampCenter.UnitTests  Validators]]
+- 1 edge to [[_COMMUNITY_Exception]]
+- 1 edge to [[_COMMUNITY_ClosureService]]
+- 1 edge to [[_COMMUNITY_Application Namespaces & DTOs]]
 
 ## Top bridge nodes
-- [[UpdateDietaryNotesRequestDto]] - degree 5, connects to 4 communities
-- [[UpdateDietaryNotesRequestValidator]] - degree 3, connects to 2 communities
+- [[DependencyInjection.cs]] - degree 4, connects to 2 communities
+- [[CampCenter.Application]] - degree 2, connects to 1 community

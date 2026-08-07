@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Interfaces/IAuthService.cs"
 type: "code"
-community: "Persistence / Migrations (2)"
+community: "Auth Controller (1)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Persistence_/_Migrations_2
+  - community/Auth_Controller_1
 ---
 
 # IAuthService.cs
@@ -17,4 +17,4 @@ tags:
 - [[CampCenter.Application.Models]] - `imports` [EXTRACTED]
 - [[IAuthService]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Persistence_/_Migrations_2
+#graphify/code #graphify/EXTRACTED #community/Auth_Controller_1

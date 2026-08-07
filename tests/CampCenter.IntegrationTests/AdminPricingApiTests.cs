@@ -186,6 +186,62 @@ public class AdminPricingApiTests : IntegrationTestBase
 
     /// The panel drives bookings through one merged control; this is the whole list
     /// it offers, in a round trip.
+    /// Recording money confirms the group and tells them so; the status override
+    /// confirms without emailing, because it is also how a booking gets corrected
+    /// or backfilled and an unexpected letter to the group cannot be taken back.
+    [Fact]
+    public async Task OnlyARecordedPayment_EmailsTheGroup()
+    {
+        var admin = await CreateAuthenticatedClientAsync();
+
+        var room = await admin.PostAsJsonAsync(
+            "/api/admin/rooms",
+            new CreateRoomRequestDto("EM-1", 16, null)
+        );
+        Assert.Equal(HttpStatusCode.Created, room.StatusCode);
+
+        async Task<AdminBookingDto> BookAsync(string email, DateOnly start)
+        {
+            var created = await admin.PostAsJsonAsync(
+                "/api/admin/bookings",
+                new CreateAdminBookingRequestDto(
+                    start,
+                    start.AddDays(2),
+                    "Email Org",
+                    "Ala Testowa",
+                    email,
+                    "+48 670 670 670",
+                    16,
+                    0,
+                    null,
+                    nameof(BookingStatus.PendingDeposit),
+                    "pl",
+                    null,
+                    null,
+                    null,
+                    null
+                )
+            );
+            Assert.Equal(HttpStatusCode.Created, created.StatusCode);
+            return (await created.Content.ReadFromJsonAsync<AdminBookingDto>())!;
+        }
+
+        var byPayment = await BookAsync("by-payment@example.com", new DateOnly(2036, 4, 1));
+        var byStatus = await BookAsync("by-status@example.com", new DateOnly(2036, 4, 8));
+
+        await admin.PutAsJsonAsync(
+            $"/api/admin/bookings/{byPayment.Id}/payment-state",
+            new SetBookingPaymentStateRequestDto(nameof(BookingPaymentState.DepositPaid))
+        );
+        await admin.PutAsJsonAsync(
+            $"/api/admin/bookings/{byStatus.Id}/status",
+            new SetBookingStatusRequestDto(nameof(BookingStatus.Confirmed))
+        );
+
+        Assert.NotEmpty(Factory.Email.To("by-payment@example.com"));
+        Assert.Empty(Factory.Email.To("by-status@example.com"));
+    }
+
     [Fact]
     public async Task MergedState_DrivesPaymentAndStatusTogether()
     {

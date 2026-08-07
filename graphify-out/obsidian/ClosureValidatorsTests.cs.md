@@ -1,12 +1,12 @@
 ---
 source_file: "tests/CampCenter.UnitTests/Validators/ClosureValidatorsTests.cs"
 type: "code"
-community: "CampCenter.UnitTests / Validators"
+community: "Auth Controller (1)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Validators
+  - community/Auth_Controller_1
 ---
 
 # ClosureValidatorsTests.cs
@@ -17,4 +17,4 @@ tags:
 - [[CampCenter.UnitTests.Validators]] - `contains` [EXTRACTED]
 - [[ClosureValidatorsTests]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Validators
+#graphify/code #graphify/EXTRACTED #community/Auth_Controller_1

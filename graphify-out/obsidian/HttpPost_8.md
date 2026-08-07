@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Public Booking Service (1)"
+community: "BookingSettings"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public_Booking_Service_1
+  - community/BookingSettings
 ---
 
 # HttpPost
@@ -14,4 +14,4 @@ tags:
 - [[.Cancel()_1]] - `references` [EXTRACTED]
 - [[.Create()_6]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_1
+#graphify/code #graphify/EXTRACTED #community/BookingSettings

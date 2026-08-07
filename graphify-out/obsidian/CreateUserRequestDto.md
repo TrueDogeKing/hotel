@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/DTOs/Users/UserDtos.cs"
 type: "code"
-community: "CampCenter.Application / Services (3)"
+community: "EF Core Migrations (4)"
 location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterApplication_/_Services_3
+  - community/EF_Core_Migrations_4
 ---
 
 # CreateUserRequestDto
@@ -18,4 +18,4 @@ tags:
 - [[CreateUserRequestValidator]] - `references` [EXTRACTED]
 - [[UserDtos.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_3
+#graphify/code #graphify/EXTRACTED #community/EF_Core_Migrations_4

@@ -135,6 +135,8 @@
   "133": "20260721111400_ReplaceSessionsWithClosures.Designer.cs",
   "134": "deploy.ps1",
   "135": "register-deploy-task.ps1",
-  "137": "ScheduleSettings",
-  "148": "eslint"
+  "136": "@types/react",
+  "137": "MakeRoomTaskRoomOptional",
+  "138": "ScheduleSettings",
+  "139": "eslint"
 }

@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Interfaces/IPaymentService.cs"
 type: "code"
-community: "MealTimeDefault"
+community: "Payment Gateway Integration Tests (1)"
 location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MealTimeDefault
+  - community/Payment_Gateway_Integration_Tests_1
 ---
 
 # InitiatePaymentResponseDto
@@ -16,4 +16,4 @@ tags:
 - [[.InitiateAsync()_1]] - `references` [EXTRACTED]
 - [[IPaymentService.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MealTimeDefault
+#graphify/code #graphify/EXTRACTED #community/Payment_Gateway_Integration_Tests_1

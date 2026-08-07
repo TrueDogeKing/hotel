@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Domain/Repositories/IAdminUserRepository.cs"
 type: "code"
-community: "Exception"
+community: "ClosureService"
 location: "L3"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Exception
+  - community/ClosureService
 ---
 
 # CampCenter.Domain.Repositories
@@ -53,4 +53,4 @@ tags:
 - [[ScheduleService.cs]] - `imports` [EXTRACTED]
 - [[UserService.cs]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Exception
+#graphify/code #graphify/EXTRACTED #community/ClosureService

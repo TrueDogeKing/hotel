@@ -1,26 +1,22 @@
 ---
 type: community
-members: 13
+members: 9
 ---
 
 # eslint
 
-**Members:** 13 nodes
+**Members:** 9 nodes
 
 ## Members
-- [[.AddAsync()_1]] - code - src/CampCenter.Domain/Repositories/IBookingMealTimeRepository.cs
-- [[.AssignMealTimesAsync()]] - code - src/CampCenter.Application/Services/ScheduleService.cs
-- [[.GetAsync()_4]] - code - src/CampCenter.Domain/Repositories/IBookingMealTimeRepository.cs
-- [[.ListForBookingAsync()]] - code - src/CampCenter.Domain/Repositories/IBookingMealTimeRepository.cs
-- [[.ListForBookingsAsync()]] - code - src/CampCenter.Domain/Repositories/IBookingMealTimeRepository.cs
-- [[.SaveChangesAsync()_1]] - code - src/CampCenter.Domain/Repositories/IBookingMealTimeRepository.cs
-- [[CancellationToken_46]] - code
-- [[Guid_42]] - code
-- [[IBookingMealTimeRepository]] - code - src/CampCenter.Domain/Repositories/IBookingMealTimeRepository.cs
-- [[IReadOnlyCollection_1]] - code
-- [[IReadOnlyList_1]] - code
-- [[List_21]] - code
-- [[Task_46]] - code
+- [[.SendAsync()_1]] - code - src/CampCenter.Infrastructure/Email/SmtpEmailSender.cs
+- [[CampCenter.Infrastructure.Email]] - code - src/CampCenter.Infrastructure/Email/EmailSettings.cs
+- [[CancellationToken_56]] - code
+- [[EmailSettings]] - code - src/CampCenter.Infrastructure/Email/EmailSettings.cs
+- [[EmailSettings.cs]] - code - src/CampCenter.Infrastructure/Email/EmailSettings.cs
+- [[SmtpEmailSender]] - code - src/CampCenter.Infrastructure/Email/SmtpEmailSender.cs
+- [[SmtpEmailSender.cs]] - code - src/CampCenter.Infrastructure/Email/SmtpEmailSender.cs
+- [[Task_56]] - code
+- [[string_10]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -30,17 +26,12 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 13 edges to [[_COMMUNITY_CampCenter.Application  Services (2)]]
-- 6 edges to [[_COMMUNITY_GroupRooms.tsx]]
-- 2 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (1)]]
-- 2 edges to [[_COMMUNITY_components  admin]]
-- 1 edge to [[_COMMUNITY_Integration Test Harness (1)]]
-- 1 edge to [[_COMMUNITY_Integration Test Harness (2)]]
+- 2 edges to [[_COMMUNITY_Admin Booking & Notifications (4)]]
+- 1 edge to [[_COMMUNITY_Application Namespaces & DTOs]]
 - 1 edge to [[_COMMUNITY_Exception]]
 
 ## Top bridge nodes
-- [[.AssignMealTimesAsync()]] - degree 15, connects to 5 communities
-- [[IBookingMealTimeRepository]] - degree 9, connects to 3 communities
-- [[.ListForBookingAsync()]] - degree 9, connects to 2 communities
-- [[.ListForBookingsAsync()]] - degree 9, connects to 2 communities
-- [[.GetAsync()_4]] - degree 7, connects to 2 communities
+- [[SmtpEmailSender]] - degree 4, connects to 1 community
+- [[.SendAsync()_1]] - degree 4, connects to 1 community
+- [[CampCenter.Infrastructure.Email]] - degree 3, connects to 1 community
+- [[SmtpEmailSender.cs]] - degree 3, connects to 1 community

@@ -1,13 +1,14 @@
 ---
 type: community
-members: 37
+members: 38
 ---
 
 # tests / CampCenter.IntegrationTests (1)
 
-**Members:** 37 nodes
+**Members:** 38 nodes
 
 ## Members
+- [[.AnOuting_ClearsWhatItOverlaps_AndKeepsItCleared()]] - code - tests/CampCenter.IntegrationTests/ScheduleApiTests.cs
 - [[.BookingMealTimes_DefaultToTheCenterTimes()]] - code - tests/CampCenter.IntegrationTests/ScheduleApiTests.cs
 - [[.BreakfastsAsync()]] - code - tests/CampCenter.IntegrationTests/ScheduleApiTests.cs
 - [[.BulkRetime_PreservesADayChangedIndividually()]] - code - tests/CampCenter.IntegrationTests/ScheduleApiTests.cs
@@ -39,10 +40,10 @@ members: 37
 - [[Fact_7]] - code
 - [[Guid_61]] - code
 - [[HttpClient_5]] - code
-- [[List_39]] - code
+- [[List_40]] - code
 - [[ScheduleApiTests]] - code - tests/CampCenter.IntegrationTests/ScheduleApiTests.cs
 - [[Start_3]] - code
-- [[Task_79]] - code
+- [[Task_80]] - code
 - [[Token_1]] - code
 - [[int_5]] - code
 
@@ -56,17 +57,17 @@ SORT file.name ASC
 ## Connections to other communities
 - 8 edges to [[_COMMUNITY_src  api (2)]]
 - 6 edges to [[_COMMUNITY_PasswordRules]]
-- 5 edges to [[_COMMUNITY_IntegrationTestBase]]
 - 4 edges to [[_COMMUNITY_AdminPanelApiTests]]
+- 4 edges to [[_COMMUNITY_IntegrationTestBase]]
+- 4 edges to [[_COMMUNITY_RoomsAndClosuresApiTests]]
 - 2 edges to [[_COMMUNITY_CampCenter.Application  Services (2)]]
-- 2 edges to [[_COMMUNITY_RoomsAndClosuresApiTests]]
-- 1 edge to [[_COMMUNITY_Camp Session Management]]
+- 1 edge to [[_COMMUNITY_ClosureService_1]]
 - 1 edge to [[_COMMUNITY_.WithRoomsAsync]]
 - 1 edge to [[_COMMUNITY_CampCenter.Application.DTOs.Public]]
 
 ## Top bridge nodes
-- [[.CreateAuthenticatedClientAsync()]] - degree 40, connects to 6 communities
-- [[ScheduleApiTests]] - degree 27, connects to 2 communities
-- [[.CreateBookingAsync()]] - degree 27, connects to 1 community
+- [[.CreateAuthenticatedClientAsync()]] - degree 42, connects to 6 communities
+- [[ScheduleApiTests]] - degree 28, connects to 2 communities
+- [[.CreateBookingAsync()]] - degree 28, connects to 1 community
 - [[.GetMealTimesAsync()]] - degree 12, connects to 1 community
 - [[.BreakfastsAsync()]] - degree 10, connects to 1 community

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "eslint"
+community: "CampCenter.Domain.Exceptions"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/eslint
+  - community/CampCenterDomainExceptions
 ---
 
 # Guid
@@ -15,4 +15,4 @@ tags:
 - [[.ListForBookingAsync()]] - `references` [EXTRACTED]
 - [[.ListForBookingsAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/eslint
+#graphify/code #graphify/EXTRACTED #community/CampCenterDomainExceptions

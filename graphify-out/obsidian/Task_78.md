@@ -1,18 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "RoomsAndClosuresApiTests"
+community: "Admin Booking & Notifications (4)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RoomsAndClosuresApiTests
+  - community/Admin_Booking__Notifications_4
 ---
 
 # Task
 
 ## Connections
-- [[.AdminEndpoints_WithoutToken_ReturnUnauthorized()]] - `references` [EXTRACTED]
-- [[.Closures_CrudRoundtrip_Works()]] - `references` [EXTRACTED]
-- [[.Rooms_CrudRoundtrip_Works()]] - `references` [EXTRACTED]
+- [[.SendAsync()_2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RoomsAndClosuresApiTests
+#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_4

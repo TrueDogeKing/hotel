@@ -13,6 +13,7 @@ tags:
 ## Connections
 - [[.AssignMealTimesAsync()]] - `references` [EXTRACTED]
 - [[.CheckConflictsAsync()_1]] - `references` [EXTRACTED]
+- [[.ClearUnderOutingAsync()]] - `references` [EXTRACTED]
 - [[.CreateEntryAsync()_1]] - `references` [EXTRACTED]
 - [[.DeleteBookingMealsAsync()_1]] - `references` [EXTRACTED]
 - [[.DeleteEntryAsync()_1]] - `references` [EXTRACTED]

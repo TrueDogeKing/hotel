@@ -471,7 +471,7 @@ export default function DayTimetable({
               <button
                 type="button"
                 key={chip.key}
-                className={`timetable-chip ${chip.kind === "Meal" ? "meal" : "activity"} rows-${rows}${
+                className={`timetable-chip ${chip.kind === "Meal" ? "meal" : chip.kind === "Outing" ? "away" : "activity"} rows-${rows}${
                   clash ? " clashing" : ""
                 }`}
                 style={

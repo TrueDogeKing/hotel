@@ -20,6 +20,7 @@ tags:
 - [[.ListFullySuppressedSlotsAsync()_1]] - `references` [EXTRACTED]
 - [[.ListGeneratedSlotsAsync()_1]] - `references` [EXTRACTED]
 - [[.ListLocationsAsync()_1]] - `references` [EXTRACTED]
+- [[.ListOutingDaysAsync()_1]] - `references` [EXTRACTED]
 - [[.ListVisibleSlotSpansAsync()_1]] - `references` [EXTRACTED]
 - [[.SaveChangesAsync()_21]] - `references` [EXTRACTED]
 

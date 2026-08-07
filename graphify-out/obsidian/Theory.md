@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Persistence / Migrations (2)"
+community: "Auth Controller (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Persistence_/_Migrations_2
+  - community/Auth_Controller_1
 ---
 
 # Theory
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.MissingFields_Fail()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Persistence_/_Migrations_2
+#graphify/code #graphify/EXTRACTED #community/Auth_Controller_1
