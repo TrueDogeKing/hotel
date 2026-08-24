@@ -1,47 +1,23 @@
 ---
 type: community
-members: 34
+members: 10
 ---
 
 # Admin Booking & Notifications (1)
 
-**Members:** 34 nodes
+**Members:** 10 nodes
 
 ## Members
-- [[.AddAsync()_10]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
-- [[.AddRangeAsync()]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
-- [[.CountByDateAndKindAsync()]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
-- [[.GetByIdAsync()_6]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
-- [[.ListForBookingAsync()_1]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
-- [[.ListForDateAsync()_1]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
-- [[.ListFullySuppressedSlotsAsync()]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
-- [[.ListGeneratedSlotsAsync()]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
-- [[.ListLocationsAsync()]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
-- [[.ListOutingDaysAsync()]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
-- [[.ListVisibleSlotSpansAsync()]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
-- [[.Remove()_6]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
-- [[BookingId]] - code
-- [[CancellationToken_55]] - code
-- [[Count]] - code
-- [[Date_1]] - code
-- [[DateOnly_21]] - code
-- [[DateOnly_25]] - code
-- [[DateTime_14]] - code
-- [[End_1]] - code
-- [[Guid_40]] - code
-- [[Guid_50]] - code
-- [[IReadOnlyCollection_3]] - code
-- [[IScheduleEntryRepository]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
-- [[Kind]] - code
-- [[List_28]] - code
-- [[MealTimeDefaultId]] - code
-- [[ScheduleEntry_1]] - code - src/CampCenter.Domain/Entities/ScheduleEntry.cs
-- [[ScheduleEntry.cs]] - code - src/CampCenter.Domain/Entities/ScheduleEntry.cs
-- [[ScheduleEntryKind_1]] - code - src/CampCenter.Domain/Entities/ScheduleEntry.cs
-- [[Start_1]] - code
-- [[Task_55]] - code
-- [[TimeOnly_6]] - code
-- [[TimeOnly_7]] - code
+- [[.Of()]] - code - src/CampCenter.Domain/Entities/BookingState.cs
+- [[Booking.cs]] - code - src/CampCenter.Domain/Entities/Booking.cs
+- [[BookingCancelReason]] - code - src/CampCenter.Domain/Entities/Booking.cs
+- [[BookingPaymentState_1]] - code - src/CampCenter.Domain/Entities/Booking.cs
+- [[BookingState_1]] - code - src/CampCenter.Domain/Entities/BookingState.cs
+- [[BookingState.cs]] - code - src/CampCenter.Domain/Entities/BookingState.cs
+- [[BookingStates_1]] - code - src/CampCenter.Domain/Entities/BookingState.cs
+- [[BookingStatus_1]] - code - src/CampCenter.Domain/Entities/Booking.cs
+- [[BookingStatuses_1]] - code - src/CampCenter.Domain/Entities/BookingStatuses.cs
+- [[BookingStatuses.cs]] - code - src/CampCenter.Domain/Entities/BookingStatuses.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -51,19 +27,15 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 27 edges to [[_COMMUNITY_CampCenter.Application  Services (2)]]
-- 9 edges to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
-- 5 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (4)]]
-- 2 edges to [[_COMMUNITY_Public Booking Service (1)]]
-- 2 edges to [[_COMMUNITY_CampCenter.Domain.Exceptions]]
-- 2 edges to [[_COMMUNITY_ClosureService]]
-- 2 edges to [[_COMMUNITY_components  admin]]
-- 2 edges to [[_COMMUNITY_BookingConfiguration]]
-- 1 edge to [[_COMMUNITY_Integration Test Harness (1)]]
+- 4 edges to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
+- 4 edges to [[_COMMUNITY_Integration Test Harness (1)]]
+- 3 edges to [[_COMMUNITY_ClosureService]]
+- 2 edges to [[_COMMUNITY_CampCenter.Domain  Repositories (1)]]
+- 1 edge to [[_COMMUNITY_Integration Test Harness (2)]]
 
 ## Top bridge nodes
-- [[ScheduleEntry_1]] - degree 29, connects to 6 communities
-- [[IScheduleEntryRepository]] - degree 18, connects to 5 communities
-- [[ScheduleEntryKind_1]] - degree 8, connects to 3 communities
-- [[.ListForBookingAsync()_1]] - degree 12, connects to 2 communities
-- [[.ListFullySuppressedSlotsAsync()]] - degree 10, connects to 2 communities
+- [[BookingStatus_1]] - degree 11, connects to 4 communities
+- [[Booking.cs]] - degree 5, connects to 2 communities
+- [[BookingPaymentState_1]] - degree 3, connects to 1 community
+- [[BookingState.cs]] - degree 3, connects to 1 community
+- [[BookingCancelReason]] - degree 2, connects to 1 community

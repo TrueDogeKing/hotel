@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "ControllerBase"
+community: "Admin Bookings Controller & DTOs"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ControllerBase
+  - community/Admin_Bookings_Controller__DTOs
 ---
 
 # List
@@ -14,4 +14,4 @@ tags:
 - [[.GetAssignableRoomsAsync()]] - `references` [EXTRACTED]
 - [[.ListAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ControllerBase
+#graphify/code #graphify/EXTRACTED #community/Admin_Bookings_Controller__DTOs

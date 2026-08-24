@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "BookingStatus"
+community: "BookingConfiguration"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/BookingStatus
+  - community/BookingConfiguration
 ---
 
 # DateOnly
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[BookingRoomAssignment]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/BookingStatus
+#graphify/code #graphify/EXTRACTED #community/BookingConfiguration

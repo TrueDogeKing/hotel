@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "BookingConfiguration"
+community: "Validator Unit Tests"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/BookingConfiguration
+  - community/Validator_Unit_Tests
 ---
 
 # EntityTypeBuilder
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.Configure()_4]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/BookingConfiguration
+#graphify/code #graphify/EXTRACTED #community/Validator_Unit_Tests

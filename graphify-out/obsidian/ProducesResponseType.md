@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "src / api (1)"
+community: "Admin Bookings Controller & DTOs"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/src_/_api_1
+  - community/Admin_Bookings_Controller__DTOs
 ---
 
 # ProducesResponseType
@@ -24,4 +24,4 @@ tags:
 - [[.UpdatePeople()]] - `references` [EXTRACTED]
 - [[.UpdatePricing()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/src_/_api_1
+#graphify/code #graphify/EXTRACTED #community/Admin_Bookings_Controller__DTOs

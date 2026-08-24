@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Auth Controller (1)"
+community: "components / admin"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Auth_Controller_1
+  - community/components_/_admin
 ---
 
 # IRuleBuilder
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.ValidPassword()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Auth_Controller_1
+#graphify/code #graphify/EXTRACTED #community/components_/_admin

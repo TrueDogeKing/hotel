@@ -1,15 +1,16 @@
 ---
 type: community
-members: 83
+members: 87
 ---
 
 # Validator Unit Tests
 
-**Members:** 83 nodes
+**Members:** 87 nodes
 
 ## Members
 - [[.AddAsync()_3]] - code - src/CampCenter.Domain/Repositories/IClosureRepository.cs
 - [[.AddAsync()_14]] - code - src/CampCenter.Infrastructure/Repositories/ClosureRepository.cs
+- [[.Configure()_4]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/ClosureConfiguration.cs
 - [[.Create()_1]] - code - src/CampCenter.Api/Controllers/Admin/ClosuresController.cs
 - [[.CreateAsync()_2]] - code - src/CampCenter.Application/Interfaces/IClosureService.cs
 - [[.CreateAsync()_9]] - code - src/CampCenter.Application/Services/ClosureService.cs
@@ -50,6 +51,8 @@ members: 83
 - [[CancellationToken_62]] - code
 - [[Closure_1]] - code - src/CampCenter.Domain/Entities/Closure.cs
 - [[Closure.cs]] - code - src/CampCenter.Domain/Entities/Closure.cs
+- [[ClosureConfiguration]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/ClosureConfiguration.cs
+- [[ClosureConfiguration.cs]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/ClosureConfiguration.cs
 - [[ClosureDto]] - code - src/CampCenter.Application/DTOs/Closures/ClosureDtos.cs
 - [[ClosureDtos.cs]] - code - src/CampCenter.Application/DTOs/Closures/ClosureDtos.cs
 - [[ClosureRepository]] - code - src/CampCenter.Infrastructure/Repositories/ClosureRepository.cs
@@ -64,6 +67,7 @@ members: 83
 - [[DateOnly_23]] - code
 - [[DateOnly_27]] - code
 - [[DateTime_7]] - code
+- [[EntityTypeBuilder_4]] - code
 - [[Fact_16]] - code
 - [[Guid_1]] - code
 - [[Guid_11]] - code
@@ -101,23 +105,22 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 7 edges to [[_COMMUNITY_Room Management]]
-- 4 edges to [[_COMMUNITY_CampCenter.Application.DTOs.Public]]
-- 3 edges to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
+- 4 edges to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
+- 4 edges to [[_COMMUNITY_ClosureService]]
+- 3 edges to [[_COMMUNITY_CampCenter.Application.DTOs.Public]]
 - 3 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (2)]]
 - 2 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (3)]]
 - 2 edges to [[_COMMUNITY_Integration Test Harness (2)]]
-- 2 edges to [[_COMMUNITY_Auth Controller (1)]]
-- 2 edges to [[_COMMUNITY_Camp Session Management]]
-- 2 edges to [[_COMMUNITY_ClosureService]]
-- 2 edges to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
+- 2 edges to [[_COMMUNITY_.GetBlockedRoomIdsAsync]]
+- 2 edges to [[_COMMUNITY_DTOs  Schedule (1)]]
+- 2 edges to [[_COMMUNITY_Refresh Token Repository]]
 - 2 edges to [[_COMMUNITY_BookingConfiguration]]
-- 1 edge to [[_COMMUNITY_AppDbContext]]
 - 1 edge to [[_COMMUNITY_Application Namespaces & DTOs]]
 - 1 edge to [[_COMMUNITY_Exception]]
 
 ## Top bridge nodes
 - [[IClosureRepository]] - degree 15, connects to 5 communities
-- [[Closure_1]] - degree 22, connects to 3 communities
 - [[ClosureService]] - degree 13, connects to 3 communities
 - [[.GetOverlappingAsync()]] - degree 11, connects to 3 communities
+- [[Closure_1]] - degree 22, connects to 2 communities
 - [[ClosureRepository]] - degree 10, connects to 2 communities

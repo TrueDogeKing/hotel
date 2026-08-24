@@ -1,2 +1,6 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Shell scripts run on Linux (in containers and on the production host) even
+# though the repo is worked on from Windows: CRLF would break the shebang.
+*.sh text eol=lf

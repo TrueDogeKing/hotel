@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "GroupRooms.tsx"
+community: "CampCenter.Application / Services (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/GroupRoomstsx
+  - community/CampCenterApplication_/_Services_2
 ---
 
 # Guid
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[BookingMealTime_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/GroupRoomstsx
+#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_2

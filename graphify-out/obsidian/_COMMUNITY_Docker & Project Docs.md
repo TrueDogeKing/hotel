@@ -1,14 +1,15 @@
 ---
 type: community
-members: 27
+members: 28
 ---
 
 # Docker & Project Docs
 
-**Members:** 27 nodes
+**Members:** 28 nodes
 
 ## Members
 - [[Admin Panel (Rooms, Closures, Occupancy, Housekeeping)]] - concept - README.md
+- [[Backups]] - document - README.md
 - [[CI Backend Job (build + tests)]] - concept - .github/workflows/ci.yml
 - [[CI Frontend Job (lint + typecheck + build)]] - concept - .github/workflows/ci.yml
 - [[CI Workflow]] - concept - .github/workflows/ci.yml

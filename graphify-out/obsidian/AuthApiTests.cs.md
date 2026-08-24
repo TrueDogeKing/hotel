@@ -1,12 +1,12 @@
 ---
 source_file: "tests/CampCenter.IntegrationTests/AuthApiTests.cs"
 type: "code"
-community: "AuthApiTests"
+community: ".GetBlockedRoomIdsAsync"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuthApiTests
+  - community/GetBlockedRoomIdsAsync
 ---
 
 # AuthApiTests.cs
@@ -16,4 +16,4 @@ tags:
 - [[CampCenter.Application.DTOs.Auth]] - `imports` [EXTRACTED]
 - [[CampCenter.IntegrationTests]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuthApiTests
+#graphify/code #graphify/EXTRACTED #community/GetBlockedRoomIdsAsync

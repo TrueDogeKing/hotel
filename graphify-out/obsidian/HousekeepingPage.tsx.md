@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/pages/admin/HousekeepingPage.tsx"
 type: "code"
-community: "ScheduleEntry"
+community: "Room Closure Management"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ScheduleEntry
+  - community/Room_Closure_Management
 ---
 
 # HousekeepingPage.tsx
@@ -32,4 +32,4 @@ tags:
 - [[setRoomCleaning()]] - `imports` [EXTRACTED]
 - [[todayIso()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ScheduleEntry
+#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management

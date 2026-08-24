@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Services/ClosureService.cs"
 type: "code"
-community: "CampCenter.Application.DTOs.Public"
+community: "ClosureService"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterApplicationDTOsPublic
+  - community/ClosureService
 ---
 
 # ClosureService.cs
@@ -20,4 +20,4 @@ tags:
 - [[CampCenter.Domain.Repositories]] - `imports` [EXTRACTED]
 - [[ClosureService]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterApplicationDTOsPublic
+#graphify/code #graphify/EXTRACTED #community/ClosureService

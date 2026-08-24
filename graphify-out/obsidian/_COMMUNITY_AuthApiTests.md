@@ -1,21 +1,22 @@
 ---
 type: community
-members: 9
+members: 10
 ---
 
 # AuthApiTests
 
-**Members:** 9 nodes
+**Members:** 10 nodes
 
 ## Members
+- [[.CreateClient()]] - code - tests/CampCenter.IntegrationTests/ApiCollection.cs
 - [[.Login_ExceedingRateLimit_ReturnsTooManyRequests()]] - code - tests/CampCenter.IntegrationTests/AuthApiTests.cs
 - [[.Login_WithInvalidPayload_ReturnsBadRequest()]] - code - tests/CampCenter.IntegrationTests/AuthApiTests.cs
 - [[.Login_WithUnknownLogin_ReturnsUnauthorized()]] - code - tests/CampCenter.IntegrationTests/AuthApiTests.cs
 - [[.Login_WithValidAdminCredentials_ReturnsTokenAndSetsRefreshCookie()]] - code - tests/CampCenter.IntegrationTests/AuthApiTests.cs
 - [[.Login_WithWrongPassword_ReturnsUnauthorized()]] - code - tests/CampCenter.IntegrationTests/AuthApiTests.cs
 - [[AuthApiTests]] - code - tests/CampCenter.IntegrationTests/AuthApiTests.cs
-- [[AuthApiTests.cs]] - code - tests/CampCenter.IntegrationTests/AuthApiTests.cs
 - [[Fact_3]] - code
+- [[HttpClient_2]] - code
 - [[Task_74]] - code
 
 ## Live Query (requires Dataview plugin)
@@ -26,14 +27,15 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_src  api (2)]]
-- 1 edge to [[_COMMUNITY_Auth Controller (1)]]
-- 1 edge to [[_COMMUNITY_CampCenter.Application.DTOs.Public]]
-- 1 edge to [[_COMMUNITY_RoomsAndClosuresApiTests]]
+- 7 edges to [[_COMMUNITY_src  api (2)]]
+- 4 edges to [[_COMMUNITY_tests  CampCenter.IntegrationTests (1)]]
+- 3 edges to [[_COMMUNITY_RoomsAndClosuresApiTests]]
+- 2 edges to [[_COMMUNITY_AdminPanelApiTests]]
+- 2 edges to [[_COMMUNITY_.WithRoomsAsync]]
+- 2 edges to [[_COMMUNITY_PasswordRules]]
+- 1 edge to [[_COMMUNITY_.GetBlockedRoomIdsAsync]]
 
 ## Top bridge nodes
-- [[AuthApiTests.cs]] - degree 3, connects to 2 communities
-- [[AuthApiTests]] - degree 7, connects to 1 community
-- [[.Login_WithValidAdminCredentials_ReturnsTokenAndSetsRefreshCookie()]] - degree 4, connects to 1 community
-- [[.Login_WithWrongPassword_ReturnsUnauthorized()]] - degree 4, connects to 1 community
-- [[.Login_WithUnknownLogin_ReturnsUnauthorized()]] - degree 4, connects to 1 community
+- [[.CreateClient()]] - degree 22, connects to 6 communities
+- [[AuthApiTests]] - degree 7, connects to 2 communities
+- [[HttpClient_2]] - degree 3, connects to 2 communities

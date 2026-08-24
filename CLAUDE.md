@@ -24,6 +24,13 @@ obsługi). Płatności rozliczane poza systemem: właściciel odnotowuje je w pa
   PublicPaymentsController, akcja InitiatePayment, rejestracje IPaymentService /
   IPaymentGateway i binding P24Settings
 * Reverse proxy / TLS: Caddy; środowisko: Docker Compose
+* Kopie zapasowe (produkcja): usługa `db-backup` w `docker-compose.prod.yml`
+  (ten sam obraz postgres:16-alpine, logika w `scripts/backup-db.sh`) — codzienny
+  `pg_dump` o `BACKUP_TIME` do katalogu `BACKUP_DIR` na hoście, retencja
+  `BACKUP_RETENTION_DAYS`, zrzut nadrabiający (sprawdzany co godzinę, także przy
+  starcie), gdy najnowsza kopia jest starsza niż doba,
+  healthcheck zgłasza brak świeżej kopii; `scripts/deploy.sh` robi dodatkowy
+  zrzut przed przebudową (API migruje bazę przy starcie)
 
 ## Model domeny
 

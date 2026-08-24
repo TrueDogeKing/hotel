@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Validators/UserValidators.cs"
 type: "code"
-community: "Camp Session Management"
+community: ".GetBlockedRoomIdsAsync"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Camp_Session_Management
+  - community/GetBlockedRoomIdsAsync
 ---
 
 # UserValidators.cs
@@ -20,4 +20,4 @@ tags:
 - [[SetUserPasswordRequestValidator]] - `contains` [EXTRACTED]
 - [[SetUserRoleRequestValidator]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Camp_Session_Management
+#graphify/code #graphify/EXTRACTED #community/GetBlockedRoomIdsAsync

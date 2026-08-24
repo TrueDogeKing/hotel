@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/App.tsx"
 type: "code"
-community: "Frontend Auth & API Client"
+community: "MealTimeDefault"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Frontend_Auth__API_Client
+  - community/MealTimeDefault
 ---
 
 # App.tsx
@@ -33,4 +33,4 @@ tags:
 - [[UsersPage.tsx]] - `imports_from` [EXTRACTED]
 - [[main.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Frontend_Auth__API_Client
+#graphify/code #graphify/EXTRACTED #community/MealTimeDefault

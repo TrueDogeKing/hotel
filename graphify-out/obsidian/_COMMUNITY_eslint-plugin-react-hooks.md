@@ -10,7 +10,7 @@ members: 3
 ## Members
 - [[deploy.sh]] - code - scripts/deploy.sh
 - [[deploy.sh script]] - code - scripts/deploy.sh
-- [[log()]] - code - scripts/deploy.sh
+- [[log()_1]] - code - scripts/deploy.sh
 
 ## Live Query (requires Dataview plugin)
 

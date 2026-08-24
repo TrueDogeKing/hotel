@@ -1,25 +1,18 @@
 ---
 type: community
-members: 12
+members: 5
 ---
 
 # ClosureValidatorsTests
 
-**Members:** 12 nodes
+**Members:** 5 nodes
 
 ## Members
-- [[.GetAvailabilityAsync()]] - code - src/CampCenter.Application/Interfaces/IAvailabilityService.cs
-- [[.GetBlockedRoomIdsAsync()]] - code - src/CampCenter.Application/Interfaces/IAvailabilityService.cs
-- [[.GetCalendarAsync()]] - code - src/CampCenter.Application/Interfaces/IAvailabilityService.cs
-- [[.GetCenterClosureReasonAsync()]] - code - src/CampCenter.Application/Interfaces/IAvailabilityService.cs
-- [[.GetFreeRoomsByCapacityAsync()]] - code - src/CampCenter.Application/Interfaces/IAvailabilityService.cs
-- [[CancellationToken_19]] - code
-- [[DateOnly_5]] - code
-- [[Dictionary]] - code
-- [[Guid_10]] - code
-- [[HashSet]] - code
-- [[IAvailabilityService]] - code - src/CampCenter.Application/Interfaces/IAvailabilityService.cs
-- [[Task_19]] - code
+- [[.Down()_11]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/20260806090830_ManualPricingAndPaymentState.cs
+- [[.Up()_11]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/20260806090830_ManualPricingAndPaymentState.cs
+- [[20260806090830_ManualPricingAndPaymentState.cs]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/20260806090830_ManualPricingAndPaymentState.cs
+- [[ManualPricingAndPaymentState_1]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/20260806090830_ManualPricingAndPaymentState.cs
+- [[MigrationBuilder_11]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -29,16 +22,9 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 7 edges to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
-- 4 edges to [[_COMMUNITY_Public Booking Service (1)]]
-- 3 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (3)]]
-- 2 edges to [[_COMMUNITY_Persistence  Migrations (2)]]
-- 1 edge to [[_COMMUNITY_CampCenter.Application.DTOs.Public]]
-- 1 edge to [[_COMMUNITY_Room Management]]
+- 1 edge to [[_COMMUNITY_EF Core Migrations (3)]]
+- 1 edge to [[_COMMUNITY_RoomCleaningRepository]]
 
 ## Top bridge nodes
-- [[IAvailabilityService]] - degree 10, connects to 5 communities
-- [[.GetBlockedRoomIdsAsync()]] - degree 10, connects to 2 communities
-- [[.GetFreeRoomsByCapacityAsync()]] - degree 9, connects to 2 communities
-- [[.GetAvailabilityAsync()]] - degree 6, connects to 2 communities
-- [[.GetCalendarAsync()]] - degree 6, connects to 2 communities
+- [[ManualPricingAndPaymentState_1]] - degree 4, connects to 1 community
+- [[20260806090830_ManualPricingAndPaymentState.cs]] - degree 2, connects to 1 community

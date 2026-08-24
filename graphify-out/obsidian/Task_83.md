@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.UnitTests / Services (4)"
+community: "CampCenter.Infrastructure / Repositories (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Services_4
+  - community/CampCenterInfrastructure_/_Repositories_1
 ---
 
 # Task
@@ -25,4 +25,4 @@ tags:
 - [[.Matches_places_case_insensitively()]] - `references` [EXTRACTED]
 - [[.Reports_the_place_rather_than_the_meal_when_both_hold()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_4
+#graphify/code #graphify/EXTRACTED #community/CampCenterInfrastructure_/_Repositories_1

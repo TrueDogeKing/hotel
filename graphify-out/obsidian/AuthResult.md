@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Models/AuthResult.cs"
 type: "code"
-community: "Auth Service & Tokens"
+community: "Auth Controller (1)"
 location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Auth_Service__Tokens
+  - community/Auth_Controller_1
 ---
 
 # AuthResult
@@ -20,4 +20,4 @@ tags:
 - [[.RefreshAsync()_1]] - `references` [EXTRACTED]
 - [[AuthResult.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Auth_Service__Tokens
+#graphify/code #graphify/EXTRACTED #community/Auth_Controller_1

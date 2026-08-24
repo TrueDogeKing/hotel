@@ -1,18 +1,20 @@
 ---
-source_file: "scripts/deploy.sh"
+source_file: "scripts/backup-db.sh"
 type: "code"
-community: "eslint-plugin-react-hooks"
-location: "L23"
+community: "ControllerBase"
+location: "L38"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/eslint-plugin-react-hooks
+  - community/ControllerBase
 ---
 
 # log()
 
 ## Connections
-- [[deploy.sh]] - `defines` [EXTRACTED]
-- [[deploy.sh script]] - `calls` [EXTRACTED]
+- [[backup-db.sh]] - `defines` [EXTRACTED]
+- [[backup-db.sh script]] - `calls` [EXTRACTED]
+- [[prune_old()]] - `calls` [EXTRACTED]
+- [[run_backup()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/eslint-plugin-react-hooks
+#graphify/code #graphify/EXTRACTED #community/ControllerBase

@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/DTOs/Auth/LoginRequestDto.cs"
 type: "code"
-community: "Auth Controller (1)"
+community: ".GetBlockedRoomIdsAsync"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Auth_Controller_1
+  - community/GetBlockedRoomIdsAsync
 ---
 
 # CampCenter.Application.DTOs.Auth
@@ -22,4 +22,4 @@ tags:
 - [[LoginRequestValidatorTests.cs]] - `imports` [EXTRACTED]
 - [[LoginResponseDto.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Auth_Controller_1
+#graphify/code #graphify/EXTRACTED #community/GetBlockedRoomIdsAsync

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Admin Booking & Notifications (1)"
+community: "CampCenter.Infrastructure / Repositories (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Booking__Notifications_1
+  - community/CampCenterInfrastructure_/_Repositories_1
 ---
 
 # DateOnly
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[ScheduleEntry_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_1
+#graphify/code #graphify/EXTRACTED #community/CampCenterInfrastructure_/_Repositories_1

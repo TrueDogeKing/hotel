@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "ClosureValidatorsTests"
+community: "Admin Bookings Controller & DTOs"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ClosureValidatorsTests
+  - community/Admin_Bookings_Controller__DTOs
 ---
 
 # Guid
@@ -14,4 +14,4 @@ tags:
 - [[.GetBlockedRoomIdsAsync()]] - `references` [EXTRACTED]
 - [[.GetFreeRoomsByCapacityAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ClosureValidatorsTests
+#graphify/code #graphify/EXTRACTED #community/Admin_Bookings_Controller__DTOs

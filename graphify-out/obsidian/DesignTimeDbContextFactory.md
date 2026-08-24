@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Persistence/DesignTimeDbContextFactory.cs"
 type: "code"
-community: "CampCenter.Infrastructure / Repositories (1)"
+community: "Refresh Token Repository"
 location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterInfrastructure_/_Repositories_1
+  - community/Refresh_Token_Repository
 ---
 
 # DesignTimeDbContextFactory
@@ -17,4 +17,4 @@ tags:
 - [[DesignTimeDbContextFactory.cs]] - `contains` [EXTRACTED]
 - [[IDesignTimeDbContextFactory]] - `implements` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterInfrastructure_/_Repositories_1
+#graphify/code #graphify/EXTRACTED #community/Refresh_Token_Repository

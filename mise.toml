@@ -22,10 +22,21 @@ description = "Podgląd logów bazy"
 run = "docker logs -f campcenter-db"
 
 # --- Kopie zapasowe ---
+# Na produkcji zrzuty robią się same: usługa db-backup (docker-compose.prod.yml)
+# uruchamia pg_dump codziennie o BACKUP_TIME i kasuje pliki starsze niż
+# BACKUP_RETENTION_DAYS. Zadania poniżej są do ręcznego użycia.
 
 [tasks."db:backup"]
 description = "Zrzut bazy (pg_dump) do backups/ z datą w nazwie"
 run = 'sh -c "mkdir -p backups && docker exec campcenter-db pg_dump -U ${POSTGRES_USER:-campcenter} ${POSTGRES_DB:-campcenter} > backups/campcenter-$(date +%Y%m%d-%H%M%S).sql"'
+
+[tasks."db:backup:now"]
+description = "Produkcja: wymuś zrzut teraz (usługa db-backup), poza harmonogramem"
+run = "docker exec campcenter-db-backup /bin/sh /usr/local/bin/backup-db.sh manual"
+
+[tasks."db:backup:logs"]
+description = "Produkcja: log automatycznych kopii zapasowych"
+run = "docker logs -f campcenter-db-backup"
 
 # --- Narzędzia deweloperskie: migracje EF Core ---
 

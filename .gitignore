@@ -29,6 +29,9 @@ pnpm-debug.log*
 deploy.log
 secrets.json
 
+## --- Kopie zapasowe bazy (zrzuty + log usługi db-backup) ---
+backups/
+
 ## --- IDE / OS ---
 .idea/
 .vscode/

@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/pages/admin/HousekeepingPage.tsx"
 type: "code"
-community: "ScheduleEntry"
+community: "Room Closure Management"
 location: "L38"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ScheduleEntry
+  - community/Room_Closure_Management
 ---
 
 # HousekeepingPage()
@@ -19,4 +19,4 @@ tags:
 - [[getHousekeepingRange()]] - `calls` [EXTRACTED]
 - [[todayIso()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/ScheduleEntry
+#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management

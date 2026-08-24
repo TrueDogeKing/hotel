@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Auth/JwtSettings.cs"
 type: "code"
-community: "Public Booking Service (2)"
+community: "CampCenter.Application / Services (1)"
 location: "L3"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public_Booking_Service_2
+  - community/CampCenterApplication_/_Services_1
 ---
 
 # JwtSettings
@@ -16,4 +16,4 @@ tags:
 - [[JwtTokenService]] - `references` [EXTRACTED]
 - [[string_7]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_2
+#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_1

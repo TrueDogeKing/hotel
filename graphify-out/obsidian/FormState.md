@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/pages/admin/MealTimesPage.tsx"
 type: "code"
-community: "Room Closure Management"
+community: "MealTimeDefault"
 location: "L18"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Closure_Management
+  - community/MealTimeDefault
 ---
 
 # FormState
@@ -15,4 +15,4 @@ tags:
 - [[MealKind]] - `references` [EXTRACTED]
 - [[MealTimesPage.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management
+#graphify/code #graphify/EXTRACTED #community/MealTimeDefault

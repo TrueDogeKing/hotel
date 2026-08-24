@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Persistence/Configurations/RoomTaskConfiguration.cs"
 type: "code"
-community: "BookingConfiguration"
+community: "Room Task Management (1)"
 location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/BookingConfiguration
+  - community/Room_Task_Management_1
 ---
 
 # RoomTaskConfiguration
@@ -17,4 +17,4 @@ tags:
 - [[RoomTask_1]] - `references` [EXTRACTED]
 - [[RoomTaskConfiguration.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/BookingConfiguration
+#graphify/code #graphify/EXTRACTED #community/Room_Task_Management_1

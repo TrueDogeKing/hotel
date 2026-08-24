@@ -40,17 +40,18 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 16 edges to [[_COMMUNITY_Room Closure Management]]
-- 9 edges to [[_COMMUNITY_Frontend App Shell & i18n]]
-- 6 edges to [[_COMMUNITY_Public Booking Frontend (1)]]
-- 4 edges to [[_COMMUNITY_ScheduleEntry]]
-- 3 edges to [[_COMMUNITY_Frontend Auth & API Client]]
+- 7 edges to [[_COMMUNITY_MealTimeDefault]]
+- 7 edges to [[_COMMUNITY_Public Booking Frontend (1)]]
+- 3 edges to [[_COMMUNITY_src  utils]]
+- 2 edges to [[_COMMUNITY_Domain & Infra Namespaces]]
+- 2 edges to [[_COMMUNITY_Frontend App Shell & i18n]]
+- 2 edges to [[_COMMUNITY_Frontend Auth & API Client]]
 - 2 edges to [[_COMMUNITY_Persistence  Migrations (10)]]
-- 1 edge to [[_COMMUNITY_MealTimeDefault]]
-- 1 edge to [[_COMMUNITY_src  utils]]
+- 1 edge to [[_COMMUNITY_src  api (1)]]
 
 ## Top bridge nodes
 - [[AdminBookingsPage.tsx]] - degree 21, connects to 7 communities
-- [[AddGroupForm.tsx]] - degree 16, connects to 3 communities
+- [[AddGroupForm.tsx]] - degree 16, connects to 4 communities
 - [[PricingDefaultsPanel.tsx]] - degree 11, connects to 3 communities
 - [[AdminBooking]] - degree 6, connects to 3 communities
 - [[formatZl()]] - degree 12, connects to 2 communities

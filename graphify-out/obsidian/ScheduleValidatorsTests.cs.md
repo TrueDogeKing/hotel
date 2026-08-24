@@ -1,12 +1,12 @@
 ---
 source_file: "tests/CampCenter.UnitTests/Validators/ScheduleValidatorsTests.cs"
 type: "code"
-community: "Auth Controller (1)"
+community: ".GetBlockedRoomIdsAsync"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Auth_Controller_1
+  - community/GetBlockedRoomIdsAsync
 ---
 
 # ScheduleValidatorsTests.cs
@@ -18,4 +18,4 @@ tags:
 - [[MealTimeValidatorsTests]] - `contains` [EXTRACTED]
 - [[ScheduleEntryValidatorsTests]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Auth_Controller_1
+#graphify/code #graphify/EXTRACTED #community/GetBlockedRoomIdsAsync

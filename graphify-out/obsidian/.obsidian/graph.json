@@ -316,24 +316,10 @@
       }
     },
     {
-      "query": "tag:#community/ScheduleEntry",
-      "color": {
-        "a": 1,
-        "rgb": 15583560
-      }
-    },
-    {
       "query": "tag:#community/AvailabilityService",
       "color": {
         "a": 1,
         "rgb": 11565729
-      }
-    },
-    {
-      "query": "tag:#community/ClosureService",
-      "color": {
-        "a": 1,
-        "rgb": 16752039
       }
     },
     {
@@ -484,13 +470,6 @@
       }
     },
     {
-      "query": "tag:#community/GroupRooms.tsx",
-      "color": {
-        "a": 1,
-        "rgb": 12234924
-      }
-    },
-    {
       "query": "tag:#community/OpenAPI_Security_Scheme",
       "color": {
         "a": 1,
@@ -610,13 +589,6 @@
       }
     },
     {
-      "query": "tag:#community/EF_Core_Migrations_(4)",
-      "color": {
-        "a": 1,
-        "rgb": 16752039
-      }
-    },
-    {
       "query": "tag:#community/Persistence_/_Migrations_(1)",
       "color": {
         "a": 1,
@@ -701,13 +673,6 @@
       }
     },
     {
-      "query": "tag:#community/ClosureValidatorsTests",
-      "color": {
-        "a": 1,
-        "rgb": 5142951
-      }
-    },
-    {
       "query": "tag:#community/Persistence_/_Migrations_(9)",
       "color": {
         "a": 1,
@@ -726,13 +691,6 @@
       "color": {
         "a": 1,
         "rgb": 7780274
-      }
-    },
-    {
-      "query": "tag:#community/CampCenter.Domain.Exceptions",
-      "color": {
-        "a": 1,
-        "rgb": 5873999
       }
     },
     {
@@ -768,13 +726,6 @@
       "color": {
         "a": 1,
         "rgb": 12234924
-      }
-    },
-    {
-      "query": "tag:#community/BookingStatus",
-      "color": {
-        "a": 1,
-        "rgb": 5142951
       }
     },
     {
@@ -859,13 +810,6 @@
       "color": {
         "a": 1,
         "rgb": 14767961
-      }
-    },
-    {
-      "query": "tag:#community/AppDbContext",
-      "color": {
-        "a": 1,
-        "rgb": 7780274
       }
     },
     {
@@ -964,20 +908,6 @@
       "color": {
         "a": 1,
         "rgb": 16752039
-      }
-    },
-    {
-      "query": "tag:#community/ScheduleSettings",
-      "color": {
-        "a": 1,
-        "rgb": 10253663
-      }
-    },
-    {
-      "query": "tag:#community/eslint",
-      "color": {
-        "a": 1,
-        "rgb": 12234924
       }
     }
   ]

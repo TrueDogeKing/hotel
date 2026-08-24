@@ -85,6 +85,44 @@ services:
       retries: 10
       start_period: 10s
 
+  # Automatic backups: one pg_dump a day at BACKUP_TIME, kept for
+  # BACKUP_RETENTION_DAYS. Same image as the server so pg_dump matches the
+  # server version; the script is bind-mounted, so `git pull` updates it
+  # without a rebuild. Details and restore steps: scripts/backup-db.sh, README.
+  db-backup:
+    image: postgres:16-alpine
+    container_name: campcenter-db-backup
+    restart: unless-stopped
+    # Explicit, so the dumps land in the mounted directory as root regardless of
+    # the image's default user.
+    user: root
+    environment:
+      PGHOST: postgres
+      PGUSER: ${POSTGRES_USER:-campcenter}
+      PGPASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env}
+      PGDATABASE: ${POSTGRES_DB:-campcenter}
+      BACKUP_TIME: ${BACKUP_TIME:-03:30}
+      BACKUP_RETENTION_DAYS: ${BACKUP_RETENTION_DAYS:-14}
+      TZ: ${TZ:-Europe/Warsaw}
+    volumes:
+      - ../scripts/backup-db.sh:/usr/local/bin/backup-db.sh:ro
+      # Host directory, not a named volume: the dumps are useless if they only
+      # live inside Docker. Point BACKUP_DIR at another disk to keep them off
+      # the machine that holds the database.
+      - ${BACKUP_DIR:-../backups}:/backups
+    entrypoint: ["/bin/sh", "/usr/local/bin/backup-db.sh", "--daemon"]
+    healthcheck:
+      # Unhealthy = the dumps stopped appearing; a backup container that is up
+      # but no longer dumping looks fine from the outside otherwise.
+      test: ["CMD", "/bin/sh", "/usr/local/bin/backup-db.sh", "--check"]
+      interval: 1h
+      timeout: 15s
+      retries: 2
+      start_period: 5m
+    depends_on:
+      postgres:
+        condition: service_healthy
+
 volumes:
   campcenter-db-prod:
   caddy-data:

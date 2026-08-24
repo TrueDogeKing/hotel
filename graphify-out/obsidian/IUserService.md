@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Interfaces/IUserService.cs"
 type: "code"
-community: "EF Core Migrations (4)"
+community: "CampCenter.Application / Services (3)"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EF_Core_Migrations_4
+  - community/CampCenterApplication_/_Services_3
 ---
 
 # IUserService
@@ -21,4 +21,4 @@ tags:
 - [[UserService]] - `implements` [EXTRACTED]
 - [[UsersController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EF_Core_Migrations_4
+#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_3

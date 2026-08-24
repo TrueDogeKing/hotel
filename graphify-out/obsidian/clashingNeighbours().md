@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/components/admin/GroupMealTimes.tsx"
 type: "code"
-community: "Persistence / Migrations (10)"
+community: "Room Closure Management"
 location: "L27"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Persistence_/_Migrations_10
+  - community/Room_Closure_Management
 ---
 
 # clashingNeighbours()
@@ -15,4 +15,4 @@ tags:
 - [[GroupMealTimes.tsx]] - `contains` [EXTRACTED]
 - [[minutesOf()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Persistence_/_Migrations_10
+#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management

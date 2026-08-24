@@ -1,15 +1,16 @@
 ---
 type: community
-members: 72
+members: 77
 ---
 
 # Room Task Management (1)
 
-**Members:** 72 nodes
+**Members:** 77 nodes
 
 ## Members
 - [[.AddAsync()_9]] - code - src/CampCenter.Domain/Repositories/IRoomTaskRepository.cs
 - [[.AddAsync()_20]] - code - src/CampCenter.Infrastructure/Repositories/RoomTaskRepository.cs
+- [[.Configure()_11]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/RoomTaskConfiguration.cs
 - [[.CountOpenAsync()]] - code - src/CampCenter.Domain/Repositories/IRoomTaskRepository.cs
 - [[.CountOpenAsync()_1]] - code - src/CampCenter.Infrastructure/Repositories/RoomTaskRepository.cs
 - [[.CountOpenByRoomAsync()]] - code - src/CampCenter.Domain/Repositories/IRoomTaskRepository.cs
@@ -50,6 +51,7 @@ members: 72
 - [[DateTime_13]] - code
 - [[Dictionary_7]] - code
 - [[Dictionary_10]] - code
+- [[EntityTypeBuilder_11]] - code
 - [[Guid_6]] - code
 - [[Guid_15]] - code
 - [[Guid_25]] - code
@@ -70,6 +72,8 @@ members: 72
 - [[ProducesResponseType_9]] - code
 - [[RoomTask_1]] - code - src/CampCenter.Domain/Entities/RoomTask.cs
 - [[RoomTask.cs]] - code - src/CampCenter.Domain/Entities/RoomTask.cs
+- [[RoomTaskConfiguration]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/RoomTaskConfiguration.cs
+- [[RoomTaskConfiguration.cs]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/RoomTaskConfiguration.cs
 - [[RoomTaskDto]] - code - src/CampCenter.Application/DTOs/AdminPanel/AdminPanelDtos.cs
 - [[RoomTaskRepository]] - code - src/CampCenter.Infrastructure/Repositories/RoomTaskRepository.cs
 - [[RoomTaskService]] - code - src/CampCenter.Application/Services/RoomTaskService.cs
@@ -80,6 +84,7 @@ members: 72
 - [[Task_54]] - code
 - [[Task_68]] - code
 - [[TasksController]] - code - src/CampCenter.Api/Controllers/Admin/TasksController.cs
+- [[UpdateRoomTaskRequestDto]] - code - src/CampCenter.Application/DTOs/AdminPanel/AdminPanelDtos.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -89,20 +94,18 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_.GetBlockedRoomIdsAsync]]
+- 7 edges to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
+- 4 edges to [[_COMMUNITY_ClosureService]]
 - 4 edges to [[_COMMUNITY_Room Management]]
-- 3 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
-- 3 edges to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
 - 3 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (2)]]
-- 2 edges to [[_COMMUNITY_ClosureService]]
-- 2 edges to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
+- 2 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
+- 2 edges to [[_COMMUNITY_Refresh Token Repository]]
 - 2 edges to [[_COMMUNITY_BookingConfiguration]]
-- 1 edge to [[_COMMUNITY_AppDbContext]]
 - 1 edge to [[_COMMUNITY_Integration Test Harness (1)]]
 - 1 edge to [[_COMMUNITY_Exception]]
 
 ## Top bridge nodes
-- [[RoomTask_1]] - degree 18, connects to 4 communities
+- [[RoomTask_1]] - degree 18, connects to 3 communities
 - [[IRoomTaskRepository]] - degree 13, connects to 3 communities
 - [[RoomTaskService]] - degree 12, connects to 2 communities
 - [[RoomTaskRepository]] - degree 10, connects to 2 communities

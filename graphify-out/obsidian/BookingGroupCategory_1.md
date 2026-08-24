@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Domain/Entities/BookingGroupCategory.cs"
 type: "code"
-community: "Admin Booking & Notifications (2)"
+community: "Admin Bookings Controller & DTOs"
 location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Booking__Notifications_2
+  - community/Admin_Bookings_Controller__DTOs
 ---
 
 # BookingGroupCategory
@@ -19,4 +19,4 @@ tags:
 - [[.ListByCategoryAsync()_1]] - `references` [EXTRACTED]
 - [[BookingGroupCategory.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_2
+#graphify/code #graphify/EXTRACTED #community/Admin_Bookings_Controller__DTOs

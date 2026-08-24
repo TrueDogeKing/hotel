@@ -1,30 +1,26 @@
 ---
 type: community
-members: 20
+members: 16
 ---
 
 # CampCenter.Application.DTOs.Public
 
-**Members:** 20 nodes
+**Members:** 16 nodes
 
 ## Members
 - [[AdminPanelApiTests.cs]] - code - tests/CampCenter.IntegrationTests/AdminPanelApiTests.cs
 - [[AdminPricingApiTests.cs]] - code - tests/CampCenter.IntegrationTests/AdminPricingApiTests.cs
 - [[AdminSupervisorRoomsApiTests.cs]] - code - tests/CampCenter.IntegrationTests/AdminSupervisorRoomsApiTests.cs
-- [[AvailabilityService.cs]] - code - src/CampCenter.Application/Services/AvailabilityService.cs
-- [[CampCenter.Api.Controllers.Public]] - code - src/CampCenter.Api/Controllers/Public/PublicAvailabilityController.cs
 - [[CampCenter.Application.DTOs.Closures]] - code - src/CampCenter.Application/DTOs/Closures/ClosureDtos.cs
 - [[CampCenter.Application.DTOs.Public]] - code - src/CampCenter.Application/DTOs/Public/PublicDtos.cs
 - [[CampCenter.Application.DTOs.Rooms]] - code - src/CampCenter.Application/DTOs/Rooms/RoomDtos.cs
 - [[CampCenter.IntegrationTests]] - code - tests/CampCenter.IntegrationTests/AdminPanelApiTests.cs
-- [[ClosureService.cs]] - code - src/CampCenter.Application/Services/ClosureService.cs
 - [[IAvailabilityService.cs]] - code - src/CampCenter.Application/Interfaces/IAvailabilityService.cs
+- [[IBookingService.cs]] - code - src/CampCenter.Application/Interfaces/IBookingService.cs
 - [[IClosureService.cs]] - code - src/CampCenter.Application/Interfaces/IClosureService.cs
 - [[IRoomService.cs]] - code - src/CampCenter.Application/Interfaces/IRoomService.cs
 - [[PaymentsApiTests.cs]] - code - tests/CampCenter.IntegrationTests/PaymentsApiTests.cs
-- [[PublicAvailabilityController.cs]] - code - src/CampCenter.Api/Controllers/Public/PublicAvailabilityController.cs
 - [[PublicBookingApiTests.cs]] - code - tests/CampCenter.IntegrationTests/PublicBookingApiTests.cs
-- [[PublicBookingsController.cs]] - code - src/CampCenter.Api/Controllers/Public/PublicBookingsController.cs
 - [[RecordingEmailSender.cs]] - code - tests/CampCenter.IntegrationTests/RecordingEmailSender.cs
 - [[RoomsAndClosuresApiTests.cs]] - code - tests/CampCenter.IntegrationTests/RoomsAndClosuresApiTests.cs
 - [[ScheduleApiTests.cs]] - code - tests/CampCenter.IntegrationTests/ScheduleApiTests.cs
@@ -37,20 +33,19 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 20 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
-- 12 edges to [[_COMMUNITY_ClosureService]]
-- 4 edges to [[_COMMUNITY_Validator Unit Tests]]
-- 4 edges to [[_COMMUNITY_Room Management]]
-- 3 edges to [[_COMMUNITY_Payment Gateway Integration Tests (1)]]
-- 2 edges to [[_COMMUNITY_Auth Controller (1)]]
+- 16 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
+- 6 edges to [[_COMMUNITY_ClosureService]]
+- 3 edges to [[_COMMUNITY_Validator Unit Tests]]
+- 3 edges to [[_COMMUNITY_.GetBlockedRoomIdsAsync]]
+- 3 edges to [[_COMMUNITY_Room Management]]
+- 2 edges to [[_COMMUNITY_Public Booking Service (2)]]
 - 2 edges to [[_COMMUNITY_RoomsAndClosuresApiTests]]
-- 1 edge to [[_COMMUNITY_CampCenter.UnitTests  Services (3)]]
-- 1 edge to [[_COMMUNITY_Public Booking Service (2)]]
-- 1 edge to [[_COMMUNITY_BookingSettings]]
+- 2 edges to [[_COMMUNITY_Payment Gateway Integration Tests (1)]]
 - 1 edge to [[_COMMUNITY_Persistence  Migrations (2)]]
-- 1 edge to [[_COMMUNITY_ClosureValidatorsTests]]
+- 1 edge to [[_COMMUNITY_CampCenter.UnitTests  Validators]]
+- 1 edge to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
+- 1 edge to [[_COMMUNITY_BookingSettings]]
 - 1 edge to [[_COMMUNITY_AdminPanelApiTests]]
-- 1 edge to [[_COMMUNITY_AuthApiTests]]
 - 1 edge to [[_COMMUNITY_Exception]]
 - 1 edge to [[_COMMUNITY_IntegrationTestBase]]
 - 1 edge to [[_COMMUNITY_.WithRoomsAsync]]
@@ -61,6 +56,6 @@ SORT file.name ASC
 ## Top bridge nodes
 - [[CampCenter.Application.DTOs.Public]] - degree 14, connects to 5 communities
 - [[CampCenter.IntegrationTests]] - degree 12, connects to 4 communities
+- [[CampCenter.Application.DTOs.Closures]] - degree 8, connects to 4 communities
 - [[CampCenter.Application.DTOs.Rooms]] - degree 12, connects to 3 communities
-- [[CampCenter.Application.DTOs.Closures]] - degree 8, connects to 3 communities
-- [[ClosureService.cs]] - degree 7, connects to 3 communities
+- [[ScheduleApiTests.cs]] - degree 7, connects to 3 communities

@@ -112,14 +112,14 @@ SORT file.name ASC
 ## Connections to other communities
 - 13 edges to [[_COMMUNITY_Integration Test Harness (1)]]
 - 7 edges to [[_COMMUNITY_Room Management]]
+- 5 edges to [[_COMMUNITY_ClosureService]]
 - 5 edges to [[_COMMUNITY_Integration Test Harness (2)]]
-- 4 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
-- 4 edges to [[_COMMUNITY_ClosureService]]
+- 3 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
 - 3 edges to [[_COMMUNITY_Validator Unit Tests]]
 - 3 edges to [[_COMMUNITY_Room Task Management (1)]]
-- 2 edges to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
+- 2 edges to [[_COMMUNITY_Refresh Token Repository]]
 - 2 edges to [[_COMMUNITY_BookingConfiguration]]
-- 1 edge to [[_COMMUNITY_AppDbContext]]
+- 1 edge to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
 - 1 edge to [[_COMMUNITY_Exception]]
 
 ## Top bridge nodes

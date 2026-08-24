@@ -1,35 +1,41 @@
 ---
 type: community
-members: 22
+members: 28
 ---
 
 # src / api (1)
 
-**Members:** 22 nodes
+**Members:** 28 nodes
 
 ## Members
-- [[.AssignableRooms()]] - code - src/CampCenter.Api/Controllers/Admin/BookingsController.cs
-- [[.Cancel()]] - code - src/CampCenter.Api/Controllers/Admin/BookingsController.cs
-- [[.Create()]] - code - src/CampCenter.Api/Controllers/Admin/BookingsController.cs
-- [[.Get()]] - code - src/CampCenter.Api/Controllers/Admin/BookingsController.cs
-- [[.List()]] - code - src/CampCenter.Api/Controllers/Admin/BookingsController.cs
-- [[.Reassign()]] - code - src/CampCenter.Api/Controllers/Admin/BookingsController.cs
-- [[.SetPaymentState()]] - code - src/CampCenter.Api/Controllers/Admin/BookingsController.cs
-- [[.SetState()]] - code - src/CampCenter.Api/Controllers/Admin/BookingsController.cs
-- [[.SetStatus()]] - code - src/CampCenter.Api/Controllers/Admin/BookingsController.cs
-- [[.UpdateDietaryNotes()]] - code - src/CampCenter.Api/Controllers/Admin/BookingsController.cs
-- [[.UpdatePeople()]] - code - src/CampCenter.Api/Controllers/Admin/BookingsController.cs
-- [[.UpdatePricing()]] - code - src/CampCenter.Api/Controllers/Admin/BookingsController.cs
-- [[BookingsController]] - code - src/CampCenter.Api/Controllers/Admin/BookingsController.cs
-- [[CancellationToken_1]] - code
-- [[Guid]] - code
-- [[HttpGet]] - code
-- [[HttpPost]] - code
-- [[HttpPut]] - code
-- [[IActionResult]] - code
-- [[IValidator]] - code
-- [[ProducesResponseType]] - code
-- [[Task_2]] - code
+- [[AdminLayout.tsx]] - code - frontend/src/components/admin/AdminLayout.tsx
+- [[FlagGB()]] - code - frontend/src/components/LanguageSwitcher.tsx
+- [[FlagPL()]] - code - frontend/src/components/LanguageSwitcher.tsx
+- [[IconMoon()]] - code - frontend/src/components/icons.tsx
+- [[IconSun()]] - code - frontend/src/components/icons.tsx
+- [[IconSunSea()]] - code - frontend/src/components/icons.tsx
+- [[Language]] - code - frontend/src/i18n/index.ts
+- [[LanguageSwitcher()]] - code - frontend/src/components/LanguageSwitcher.tsx
+- [[LanguageSwitcher.tsx]] - code - frontend/src/components/LanguageSwitcher.tsx
+- [[Listener_1]] - code - frontend/src/theme.ts
+- [[LoginPage()]] - code - frontend/src/pages/LoginPage.tsx
+- [[LoginPage.tsx]] - code - frontend/src/pages/LoginPage.tsx
+- [[Props_4]] - code - frontend/src/components/PublicHeader.tsx
+- [[PublicHeader()]] - code - frontend/src/components/PublicHeader.tsx
+- [[PublicHeader.tsx]] - code - frontend/src/components/PublicHeader.tsx
+- [[SECTIONS]] - code - frontend/src/components/PublicHeader.tsx
+- [[Theme]] - code - frontend/src/theme.ts
+- [[ThemeToggle()]] - code - frontend/src/components/ThemeToggle.tsx
+- [[ThemeToggle.tsx]] - code - frontend/src/components/ThemeToggle.tsx
+- [[applyTheme()]] - code - frontend/src/theme.ts
+- [[getStoredLanguage()]] - code - frontend/src/i18n/index.ts
+- [[getTheme()]] - code - frontend/src/theme.ts
+- [[index.ts]] - code - frontend/src/i18n/index.ts
+- [[listeners_1]] - code - frontend/src/theme.ts
+- [[setLanguage()]] - code - frontend/src/i18n/index.ts
+- [[subscribeTheme()]] - code - frontend/src/theme.ts
+- [[theme.ts]] - code - frontend/src/theme.ts
+- [[toggleTheme()]] - code - frontend/src/theme.ts
 
 ## Live Query (requires Dataview plugin)
 
@@ -39,16 +45,18 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 13 edges to [[_COMMUNITY_ControllerBase]]
-- 7 edges to [[_COMMUNITY_.GetBlockedRoomIdsAsync]]
-- 1 edge to [[_COMMUNITY_Application Namespaces & DTOs]]
-- 1 edge to [[_COMMUNITY_AppDbContext]]
-- 1 edge to [[_COMMUNITY_Integration Test Harness (1)]]
-- 1 edge to [[_COMMUNITY_CampCenter.UnitTests  Validators]]
+- 8 edges to [[_COMMUNITY_Frontend Icon Components]]
+- 7 edges to [[_COMMUNITY_MealTimeDefault]]
+- 7 edges to [[_COMMUNITY_Public Booking Frontend (1)]]
+- 5 edges to [[_COMMUNITY_Room Closure Management]]
+- 2 edges to [[_COMMUNITY_Frontend Auth & API Client]]
+- 2 edges to [[_COMMUNITY_Domain & Infra Namespaces]]
+- 1 edge to [[_COMMUNITY_useAuth]]
+- 1 edge to [[_COMMUNITY_Persistence  Migrations (10)]]
 
 ## Top bridge nodes
-- [[BookingsController]] - degree 16, connects to 3 communities
-- [[.SetStatus()]] - degree 9, connects to 2 communities
-- [[.Reassign()]] - degree 9, connects to 2 communities
-- [[.UpdatePeople()]] - degree 9, connects to 2 communities
-- [[.UpdatePricing()]] - degree 9, connects to 2 communities
+- [[AdminLayout.tsx]] - degree 19, connects to 7 communities
+- [[LoginPage.tsx]] - degree 10, connects to 3 communities
+- [[PublicHeader.tsx]] - degree 12, connects to 2 communities
+- [[index.ts]] - degree 6, connects to 2 communities
+- [[LanguageSwitcher.tsx]] - degree 11, connects to 1 community

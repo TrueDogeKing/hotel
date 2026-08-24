@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.UnitTests / Services (4)"
+community: "CampCenter.Infrastructure / Repositories (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Services_4
+  - community/CampCenterInfrastructure_/_Repositories_1
 ---
 
 # DateOnly
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[ScheduleConflictTests]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_4
+#graphify/code #graphify/EXTRACTED #community/CampCenterInfrastructure_/_Repositories_1

@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/api/admin.ts"
 type: "code"
-community: "Room Closure Management"
+community: "MealTimeDefault"
 location: "L575"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Closure_Management
+  - community/MealTimeDefault
 ---
 
 # mealKinds
@@ -16,4 +16,4 @@ tags:
 - [[ScheduleEntryForm.tsx]] - `imports` [EXTRACTED]
 - [[admin.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management
+#graphify/code #graphify/EXTRACTED #community/MealTimeDefault

@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/DTOs/Schedule/ScheduleDtos.cs"
 type: "code"
-community: "Persistence / Migrations (2)"
+community: "BookingSettings"
 location: "L203"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Persistence_/_Migrations_2
+  - community/BookingSettings
 ---
 
 # PublicScheduleDto
@@ -17,4 +17,4 @@ tags:
 - [[.ToPublicDto()]] - `references` [EXTRACTED]
 - [[ScheduleDtos.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Persistence_/_Migrations_2
+#graphify/code #graphify/EXTRACTED #community/BookingSettings

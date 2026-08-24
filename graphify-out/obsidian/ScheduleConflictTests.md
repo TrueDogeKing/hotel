@@ -1,12 +1,12 @@
 ---
 source_file: "tests/CampCenter.UnitTests/Services/ScheduleConflictTests.cs"
 type: "code"
-community: "CampCenter.UnitTests / Services (4)"
+community: "CampCenter.Infrastructure / Repositories (1)"
 location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Services_4
+  - community/CampCenterInfrastructure_/_Repositories_1
 ---
 
 # ScheduleConflictTests
@@ -33,4 +33,4 @@ tags:
 - [[ScheduleConflictTests.cs]] - `contains` [EXTRACTED]
 - [[ScheduleService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_4
+#graphify/code #graphify/EXTRACTED #community/CampCenterInfrastructure_/_Repositories_1

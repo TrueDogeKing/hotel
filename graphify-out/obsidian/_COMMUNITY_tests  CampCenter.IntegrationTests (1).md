@@ -55,18 +55,19 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 8 edges to [[_COMMUNITY_src  api (2)]]
-- 6 edges to [[_COMMUNITY_PasswordRules]]
+- 5 edges to [[_COMMUNITY_PasswordRules]]
+- 5 edges to [[_COMMUNITY_src  api (2)]]
 - 4 edges to [[_COMMUNITY_AdminPanelApiTests]]
 - 4 edges to [[_COMMUNITY_IntegrationTestBase]]
 - 4 edges to [[_COMMUNITY_RoomsAndClosuresApiTests]]
+- 4 edges to [[_COMMUNITY_AuthApiTests]]
 - 2 edges to [[_COMMUNITY_CampCenter.Application  Services (2)]]
-- 1 edge to [[_COMMUNITY_ClosureService_1]]
+- 1 edge to [[_COMMUNITY_Camp Session Management]]
 - 1 edge to [[_COMMUNITY_.WithRoomsAsync]]
 - 1 edge to [[_COMMUNITY_CampCenter.Application.DTOs.Public]]
 
 ## Top bridge nodes
-- [[.CreateAuthenticatedClientAsync()]] - degree 42, connects to 6 communities
+- [[.CreateAuthenticatedClientAsync()]] - degree 42, connects to 7 communities
 - [[ScheduleApiTests]] - degree 28, connects to 2 communities
 - [[.CreateBookingAsync()]] - degree 28, connects to 1 community
 - [[.GetMealTimesAsync()]] - degree 12, connects to 1 community

@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Services/RoomTaskService.cs"
 type: "code"
-community: "Application Namespaces & DTOs"
+community: "ClosureService"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Application_Namespaces__DTOs
+  - community/ClosureService
 ---
 
 # RoomTaskService.cs
@@ -20,4 +20,4 @@ tags:
 - [[CampCenter.Domain.Repositories]] - `imports` [EXTRACTED]
 - [[RoomTaskService]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Application_Namespaces__DTOs
+#graphify/code #graphify/EXTRACTED #community/ClosureService

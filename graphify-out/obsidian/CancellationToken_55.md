@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Admin Booking & Notifications (1)"
+community: "CampCenter.Application / Services (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Booking__Notifications_1
+  - community/CampCenterApplication_/_Services_2
 ---
 
 # CancellationToken
@@ -24,4 +24,4 @@ tags:
 - [[.ListVisibleSlotSpansAsync()]] - `references` [EXTRACTED]
 - [[.SaveChangesAsync()_10]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_1
+#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_2

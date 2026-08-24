@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Validators/PasswordRules.cs"
 type: "code"
-community: "Auth Controller (1)"
+community: "components / admin"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Auth_Controller_1
+  - community/components_/_admin
 ---
 
 # PasswordRules.cs
@@ -15,4 +15,4 @@ tags:
 - [[CampCenter.Application.Validators]] - `contains` [EXTRACTED]
 - [[PasswordRules]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Auth_Controller_1
+#graphify/code #graphify/EXTRACTED #community/components_/_admin

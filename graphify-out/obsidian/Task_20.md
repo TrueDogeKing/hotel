@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Persistence / Migrations (2)"
+community: "BookingSettings"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Persistence_/_Migrations_2
+  - community/BookingSettings
 ---
 
 # Task
@@ -16,4 +16,4 @@ tags:
 - [[.GetByTokenAsync()]] - `references` [EXTRACTED]
 - [[.GetScheduleByTokenAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Persistence_/_Migrations_2
+#graphify/code #graphify/EXTRACTED #community/BookingSettings

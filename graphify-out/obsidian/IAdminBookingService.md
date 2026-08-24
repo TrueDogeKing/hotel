@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Interfaces/IAdminBookingService.cs"
 type: "code"
-community: "ControllerBase"
+community: "Admin Bookings Controller & DTOs"
 location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ControllerBase
+  - community/Admin_Bookings_Controller__DTOs
 ---
 
 # IAdminBookingService
@@ -33,4 +33,4 @@ tags:
 - [[IAdminBookingService.cs]] - `contains` [EXTRACTED]
 - [[OccupancyController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ControllerBase
+#graphify/code #graphify/EXTRACTED #community/Admin_Bookings_Controller__DTOs

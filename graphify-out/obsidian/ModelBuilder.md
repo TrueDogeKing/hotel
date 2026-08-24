@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.Infrastructure / Repositories (1)"
+community: "Refresh Token Repository"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterInfrastructure_/_Repositories_1
+  - community/Refresh_Token_Repository
 ---
 
 # ModelBuilder
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.OnModelCreating()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterInfrastructure_/_Repositories_1
+#graphify/code #graphify/EXTRACTED #community/Refresh_Token_Repository

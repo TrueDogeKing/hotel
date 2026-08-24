@@ -61,7 +61,38 @@ bun run prod:up        # Caddy (auto-HTTPS) + frontend + api + postgres
 
 Caddy issues a Let's Encrypt certificate for `DOMAIN` on its own (ports 80/443
 must be forwarded to the server). The production database uses a separate volume
-(`campcenter-db-prod`); backup: `mise run db:backup`.
+(`campcenter-db-prod`).
+
+### Backups
+
+The production stack includes a `db-backup` service that needs no setup: it dumps
+the database every day at `BACKUP_TIME` (03:30 by default) into `backups/` on the
+host, deletes dumps older than `BACKUP_RETENTION_DAYS` (14), and — checking
+every hour — takes an extra dump whenever the newest one is older than a day, so
+a server that was off overnight, or a dump that failed while the database was
+still starting, still ends up with a backup. `scripts/deploy.sh` also dumps the
+database right before rebuilding, because the API applies EF Core migrations on
+startup. Settings live in `.env` (see `.env.example`); point `BACKUP_DIR` at
+another disk to keep the dumps off the machine that holds the database.
+
+```bash
+docker compose -f docker/docker-compose.prod.yml logs -f db-backup  # or: mise run db:backup:logs
+mise run db:backup:now                                              # extra dump, outside the schedule
+```
+
+A dump is a gzipped `pg_dump` (`--clean --if-exists`), so it restores straight
+into the running database — stop the API first so nothing writes during the
+restore:
+
+```bash
+docker compose --env-file .env -f docker/docker-compose.prod.yml stop api
+gunzip -c backups/campcenter-20260817-033000.sql.gz | docker exec -i campcenter-db psql -U campcenter -d campcenter
+docker compose --env-file .env -f docker/docker-compose.prod.yml start api
+```
+
+The `db-backup` container reports itself unhealthy once no dump has appeared for
+`BACKUP_STALE_HOURS` (36), which is what `docker ps` shows if backups quietly
+stop happening.
 
 ## Stack
 

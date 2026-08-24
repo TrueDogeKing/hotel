@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Domain/Entities/BookingRoomAssignment.cs"
 type: "code"
-community: "BookingStatus"
+community: "BookingConfiguration"
 location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/BookingStatus
+  - community/BookingConfiguration
 ---
 
 # BookingRoomAssignment
@@ -28,4 +28,4 @@ tags:
 - [[Guid_31]] - `references` [EXTRACTED]
 - [[Room_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/BookingStatus
+#graphify/code #graphify/EXTRACTED #community/BookingConfiguration

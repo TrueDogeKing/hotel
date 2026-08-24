@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "ClosureValidatorsTests"
+community: "Admin Bookings Controller & DTOs"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ClosureValidatorsTests
+  - community/Admin_Bookings_Controller__DTOs
 ---
 
 # HashSet
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.GetBlockedRoomIdsAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ClosureValidatorsTests
+#graphify/code #graphify/EXTRACTED #community/Admin_Bookings_Controller__DTOs

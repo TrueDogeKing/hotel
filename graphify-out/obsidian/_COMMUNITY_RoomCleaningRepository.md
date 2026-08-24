@@ -38,7 +38,7 @@ SORT file.name ASC
 - 1 edge to [[_COMMUNITY_Persistence  Migrations (7)]]
 - 1 edge to [[_COMMUNITY_AdminUserRole]]
 - 1 edge to [[_COMMUNITY_MakeRoomTaskRoomOptional]]
-- 1 edge to [[_COMMUNITY_ClosureValidatorsTests_1]]
+- 1 edge to [[_COMMUNITY_ClosureValidatorsTests]]
 - 1 edge to [[_COMMUNITY_SupervisorCountsAndRates]]
 - 1 edge to [[_COMMUNITY_RoomCleaningRepository_1]]
 

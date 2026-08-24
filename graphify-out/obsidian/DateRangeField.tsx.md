@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/components/calendar/DateRangeField.tsx"
 type: "code"
-community: "ScheduleEntry"
+community: "src / utils"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ScheduleEntry
+  - community/src_/_utils
 ---
 
 # DateRangeField.tsx
@@ -24,4 +24,4 @@ tags:
 - [[dayNumber()]] - `imports` [EXTRACTED]
 - [[formatDate()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ScheduleEntry
+#graphify/code #graphify/EXTRACTED #community/src_/_utils

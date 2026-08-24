@@ -55,11 +55,11 @@ SORT file.name ASC
 - 1 edge to [[_COMMUNITY_20260730211855_AdminUserRole.Designer.cs]]
 - 1 edge to [[_COMMUNITY_MakeRoomTaskRoomOptional]]
 - 1 edge to [[_COMMUNITY_20260802130913_MakeRoomTaskRoomOptional.Designer.cs]]
-- 1 edge to [[_COMMUNITY_ClosureValidatorsTests_1]]
+- 1 edge to [[_COMMUNITY_ClosureValidatorsTests]]
 - 1 edge to [[_COMMUNITY_UsersPage.tsx]]
 - 1 edge to [[_COMMUNITY_SupervisorCountsAndRates]]
 - 1 edge to [[_COMMUNITY_RoomCleaningRepository_1]]
-- 1 edge to [[_COMMUNITY_GroupRooms.tsx_1]]
+- 1 edge to [[_COMMUNITY_GroupRooms.tsx]]
 
 ## Top bridge nodes
 - [[CampCenter.Infrastructure.Persistence.Migrations]] - degree 29, connects to 24 communities

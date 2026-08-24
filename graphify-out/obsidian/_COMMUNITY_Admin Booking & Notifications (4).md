@@ -42,9 +42,9 @@ SORT file.name ASC
 ## Connections to other communities
 - 5 edges to [[_COMMUNITY_Public Booking Service (1)]]
 - 5 edges to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
-- 4 edges to [[_COMMUNITY_Payment Gateway Integration Tests (1)]]
+- 4 edges to [[_COMMUNITY_CampCenter.UnitTests  Validators]]
 - 4 edges to [[_COMMUNITY_Integration Test Harness (1)]]
-- 2 edges to [[_COMMUNITY_eslint_1]]
+- 2 edges to [[_COMMUNITY_eslint]]
 - 1 edge to [[_COMMUNITY_Booking Maintenance Background Service]]
 - 1 edge to [[_COMMUNITY_Application Namespaces & DTOs]]
 - 1 edge to [[_COMMUNITY_ClosureService]]

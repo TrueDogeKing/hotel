@@ -52,6 +52,18 @@ try {
     git pull --ff-only origin main 2>&1 | ForEach-Object { Write-Log "  $_" }
     if ($LASTEXITCODE -ne 0) { throw "git pull failed (exit $LASTEXITCODE)" }
 
+    # The API applies EF Core migrations on startup (Database__MigrateAutomatically),
+    # so the riskiest moment for the data is right after this deploy. Not fatal: a
+    # deploy that touches nothing but the frontend should not be blocked by it, and
+    # the daily backup still runs on its own schedule.
+    Write-Log "Backing up the database before deploying..."
+    docker compose --env-file .env -f docker/docker-compose.prod.yml `
+        exec -T db-backup /bin/sh /usr/local/bin/backup-db.sh predeploy 2>&1 |
+        ForEach-Object { Write-Log "  $_" }
+    if ($LASTEXITCODE -ne 0) {
+        Write-Log "WARNING: pre-deploy backup failed, continuing (check backups/backup.log)"
+    }
+
     Write-Log "Rebuilding and restarting containers..."
     docker compose --env-file .env -f docker/docker-compose.prod.yml up -d --build 2>&1 |
         ForEach-Object { Write-Log "  $_" }

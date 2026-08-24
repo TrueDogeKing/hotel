@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/components/LanguageSwitcher.tsx"
 type: "code"
-community: "Public Booking Frontend (1)"
+community: "src / api (1)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public_Booking_Frontend_1
+  - community/src_/_api_1
 ---
 
 # LanguageSwitcher.tsx
@@ -24,4 +24,4 @@ tags:
 - [[index.ts]] - `imports_from` [EXTRACTED]
 - [[setLanguage()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public_Booking_Frontend_1
+#graphify/code #graphify/EXTRACTED #community/src_/_api_1

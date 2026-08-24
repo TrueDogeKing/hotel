@@ -13,6 +13,6 @@ tags:
 
 ## Connections
 - [[deploy.sh]] - `contains` [EXTRACTED]
-- [[log()]] - `calls` [EXTRACTED]
+- [[log()_1]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/eslint-plugin-react-hooks

@@ -51,6 +51,16 @@ if ! git pull --ff-only origin main >>"$log_file" 2>&1; then
     exit 1
 fi
 
+# The API applies EF Core migrations on startup (Database__MigrateAutomatically),
+# so the riskiest moment for the data is right after this deploy. Not fatal: a
+# deploy that touches nothing but the frontend should not be blocked by it, and
+# the daily backup still runs on its own schedule.
+log "Backing up the database before deploying..."
+if ! docker compose --env-file .env -f docker/docker-compose.prod.yml \
+    exec -T db-backup /bin/sh /usr/local/bin/backup-db.sh predeploy >>"$log_file" 2>&1; then
+    log "WARNING: pre-deploy backup failed, continuing (check backups/backup.log)"
+fi
+
 log "Rebuilding and restarting containers..."
 if ! docker compose --env-file .env -f docker/docker-compose.prod.yml up -d --build >>"$log_file" 2>&1; then
     log "ERROR: docker compose up failed"

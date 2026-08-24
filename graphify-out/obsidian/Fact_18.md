@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "ClosureService"
+community: "Camp Session Management"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ClosureService
+  - community/Camp_Session_Management
 ---
 
 # Fact
@@ -33,4 +33,4 @@ tags:
 - [[.ValidSlot_Passes()]] - `references` [EXTRACTED]
 - [[.ZeroOrNegativeParticipantCount_Fails()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ClosureService
+#graphify/code #graphify/EXTRACTED #community/Camp_Session_Management

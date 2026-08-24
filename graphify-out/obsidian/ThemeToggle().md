@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/components/ThemeToggle.tsx"
 type: "code"
-community: "Frontend Icon Components"
+community: "src / api (1)"
 location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Frontend_Icon_Components
+  - community/src_/_api_1
 ---
 
 # ThemeToggle()
@@ -20,4 +20,4 @@ tags:
 - [[subscribeTheme()]] - `indirect_call` [INFERRED]
 - [[toggleTheme()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Frontend_Icon_Components
+#graphify/code #graphify/EXTRACTED #community/src_/_api_1

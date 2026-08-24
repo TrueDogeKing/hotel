@@ -1,15 +1,22 @@
 ---
 type: community
-members: 2
+members: 9
 ---
 
 # eslint
 
-**Members:** 2 nodes
+**Members:** 9 nodes
 
 ## Members
-- [[eslint]] - code - frontend/package.json
-- [[eslint_1]] - concept - frontend/package.json
+- [[.SendAsync()_1]] - code - src/CampCenter.Infrastructure/Email/SmtpEmailSender.cs
+- [[CampCenter.Infrastructure.Email]] - code - src/CampCenter.Infrastructure/Email/EmailSettings.cs
+- [[CancellationToken_56]] - code
+- [[EmailSettings]] - code - src/CampCenter.Infrastructure/Email/EmailSettings.cs
+- [[EmailSettings.cs]] - code - src/CampCenter.Infrastructure/Email/EmailSettings.cs
+- [[SmtpEmailSender]] - code - src/CampCenter.Infrastructure/Email/SmtpEmailSender.cs
+- [[SmtpEmailSender.cs]] - code - src/CampCenter.Infrastructure/Email/SmtpEmailSender.cs
+- [[Task_56]] - code
+- [[string_10]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -19,7 +26,12 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_ESLint Dev Dependencies]]
+- 2 edges to [[_COMMUNITY_Admin Booking & Notifications (4)]]
+- 1 edge to [[_COMMUNITY_Application Namespaces & DTOs]]
+- 1 edge to [[_COMMUNITY_Exception]]
 
 ## Top bridge nodes
-- [[eslint]] - degree 2, connects to 1 community
+- [[SmtpEmailSender]] - degree 4, connects to 1 community
+- [[.SendAsync()_1]] - degree 4, connects to 1 community
+- [[CampCenter.Infrastructure.Email]] - degree 3, connects to 1 community
+- [[SmtpEmailSender.cs]] - degree 3, connects to 1 community

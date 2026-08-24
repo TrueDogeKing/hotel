@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/pages/admin/MealTimesPage.tsx"
 type: "code"
-community: "Room Closure Management"
+community: "MealTimeDefault"
 location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Closure_Management
+  - community/MealTimeDefault
 ---
 
 # emptyForm
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[MealTimesPage.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management
+#graphify/code #graphify/EXTRACTED #community/MealTimeDefault
