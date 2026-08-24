@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/DTOs/Schedule/MealTimeDtos.cs"
 type: "code"
-community: "Camp Session Management"
+community: "MealTimeDtos.cs"
 location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Camp_Session_Management
+  - community/MealTimeDtoscs
 ---
 
 # UpdateMealTimeDefaultRequestDto
@@ -18,4 +18,4 @@ tags:
 - [[MealTimeDtos.cs]] - `contains` [EXTRACTED]
 - [[UpdateMealTimeDefaultRequestValidator]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Camp_Session_Management
+#graphify/code #graphify/EXTRACTED #community/MealTimeDtoscs

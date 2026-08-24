@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Refresh Token Repository"
+community: "CampCenter.Infrastructure / Repositories (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Refresh_Token_Repository
+  - community/CampCenterInfrastructure_/_Repositories_1
 ---
 
 # IDesignTimeDbContextFactory
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[DesignTimeDbContextFactory]] - `implements` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Refresh_Token_Repository
+#graphify/code #graphify/EXTRACTED #community/CampCenterInfrastructure_/_Repositories_1

@@ -316,10 +316,24 @@
       }
     },
     {
+      "query": "tag:#community/AdminBookingDto",
+      "color": {
+        "a": 1,
+        "rgb": 15583560
+      }
+    },
+    {
       "query": "tag:#community/AvailabilityService",
       "color": {
         "a": 1,
         "rgb": 11565729
+      }
+    },
+    {
+      "query": "tag:#community/Room",
+      "color": {
+        "a": 1,
+        "rgb": 16752039
       }
     },
     {
@@ -470,6 +484,13 @@
       }
     },
     {
+      "query": "tag:#community/UsersController",
+      "color": {
+        "a": 1,
+        "rgb": 12234924
+      }
+    },
+    {
       "query": "tag:#community/OpenAPI_Security_Scheme",
       "color": {
         "a": 1,
@@ -589,6 +610,13 @@
       }
     },
     {
+      "query": "tag:#community/MealTimeService",
+      "color": {
+        "a": 1,
+        "rgb": 16752039
+      }
+    },
+    {
       "query": "tag:#community/Persistence_/_Migrations_(1)",
       "color": {
         "a": 1,
@@ -673,6 +701,13 @@
       }
     },
     {
+      "query": "tag:#community/AvailabilityService",
+      "color": {
+        "a": 1,
+        "rgb": 5142951
+      }
+    },
+    {
       "query": "tag:#community/Persistence_/_Migrations_(9)",
       "color": {
         "a": 1,
@@ -691,6 +726,13 @@
       "color": {
         "a": 1,
         "rgb": 7780274
+      }
+    },
+    {
+      "query": "tag:#community/.Groups",
+      "color": {
+        "a": 1,
+        "rgb": 5873999
       }
     },
     {
@@ -726,6 +768,13 @@
       "color": {
         "a": 1,
         "rgb": 12234924
+      }
+    },
+    {
+      "query": "tag:#community/MealTimeDtos.cs",
+      "color": {
+        "a": 1,
+        "rgb": 5142951
       }
     },
     {
@@ -810,6 +859,13 @@
       "color": {
         "a": 1,
         "rgb": 14767961
+      }
+    },
+    {
+      "query": "tag:#community/IAvailabilityService",
+      "color": {
+        "a": 1,
+        "rgb": 7780274
       }
     },
     {
@@ -908,6 +964,48 @@
       "color": {
         "a": 1,
         "rgb": 16752039
+      }
+    },
+    {
+      "query": "tag:#community/IRoomService",
+      "color": {
+        "a": 1,
+        "rgb": 10253663
+      }
+    },
+    {
+      "query": "tag:#community/BookingRoomAssignment",
+      "color": {
+        "a": 1,
+        "rgb": 12234924
+      }
+    },
+    {
+      "query": "tag:#community/ControllerBase",
+      "color": {
+        "a": 1,
+        "rgb": 5142951
+      }
+    },
+    {
+      "query": "tag:#community/ScheduleValidators.cs",
+      "color": {
+        "a": 1,
+        "rgb": 15896107
+      }
+    },
+    {
+      "query": "tag:#community/ClosureValidatorsTests",
+      "color": {
+        "a": 1,
+        "rgb": 5873999
+      }
+    },
+    {
+      "query": "tag:#community/@vitejs/plugin-react",
+      "color": {
+        "a": 1,
+        "rgb": 10253663
       }
     }
   ]

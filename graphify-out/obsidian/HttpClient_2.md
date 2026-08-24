@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "AuthApiTests"
+community: "PasswordRules"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuthApiTests
+  - community/PasswordRules
 ---
 
 # HttpClient
@@ -15,4 +15,4 @@ tags:
 - [[.CreateClient()]] - `references` [EXTRACTED]
 - [[.CreateClientForAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuthApiTests
+#graphify/code #graphify/EXTRACTED #community/PasswordRules

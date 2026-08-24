@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.Application / Services (1)"
+community: ".GetBlockedRoomIdsAsync"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterApplication_/_Services_1
+  - community/GetBlockedRoomIdsAsync
 ---
 
 # string
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[RefreshTokenSettings]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_1
+#graphify/code #graphify/EXTRACTED #community/GetBlockedRoomIdsAsync

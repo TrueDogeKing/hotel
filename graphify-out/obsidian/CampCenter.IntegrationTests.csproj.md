@@ -16,7 +16,7 @@ tags:
 - [[Microsoft.AspNetCore.Mvc.Testing (10.0.9)]] - `imports` [EXTRACTED]
 - [[Microsoft.NET.Sdk_3]] - `references` [EXTRACTED]
 - [[Microsoft.NET.Test.Sdk (17.14.1)]] - `imports` [EXTRACTED]
-- [[Testcontainers.PostgreSql (4.12.0)]] - `imports` [EXTRACTED]
+- [[Testcontainers.PostgreSql (4.14.0)]] - `imports` [EXTRACTED]
 - [[coverlet.collector (6.0.4)]] - `imports` [EXTRACTED]
 - [[net10.0_4]] - `references` [EXTRACTED]
 - [[xunit (2.9.3)]] - `imports` [EXTRACTED]

@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/DTOs/AdminPanel/AdminPanelDtos.cs"
 type: "code"
-community: "CampCenter.UnitTests / Services (3)"
+community: "CampCenter.Infrastructure / Repositories (1)"
 location: "L160"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Services_3
+  - community/CampCenterInfrastructure_/_Repositories_1
 ---
 
 # PricingDefaultsDto
@@ -19,4 +19,4 @@ tags:
 - [[.UpdateAsync()_7]] - `references` [EXTRACTED]
 - [[AdminPanelDtos.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_3
+#graphify/code #graphify/EXTRACTED #community/CampCenterInfrastructure_/_Repositories_1

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "components / admin"
+community: ".GetBlockedRoomIdsAsync"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/components_/_admin
+  - community/GetBlockedRoomIdsAsync
 ---
 
 # int
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[PasswordRules]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/components_/_admin
+#graphify/code #graphify/EXTRACTED #community/GetBlockedRoomIdsAsync

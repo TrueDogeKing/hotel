@@ -17,7 +17,7 @@ tags:
 - [[CampCenter.Domain.csproj]] - `imports` [EXTRACTED]
 - [[CampCenter.UnitTests.csproj]] - `imports` [EXTRACTED]
 - [[CampCenter.slnx]] - `contains` [EXTRACTED]
-- [[MailKit (4.14.1)]] - `imports` [EXTRACTED]
+- [[MailKit (4.17.0)]] - `imports` [EXTRACTED]
 - [[Microsoft.EntityFrameworkCore.Design (10.0.4)_1]] - `imports` [EXTRACTED]
 - [[Microsoft.Extensions.Http (10.0.0)]] - `imports` [EXTRACTED]
 - [[Microsoft.NET.Sdk_2]] - `references` [EXTRACTED]

@@ -12,6 +12,7 @@ tags:
 # deploy.sh script
 
 ## Connections
+- [[compose()]] - `calls` [EXTRACTED]
 - [[deploy.sh]] - `contains` [EXTRACTED]
 - [[log()_1]] - `calls` [EXTRACTED]
 

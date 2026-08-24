@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs"
 type: "code"
-community: "ClosureService"
+community: "Exception"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ClosureService
+  - community/Exception
 ---
 
 # IScheduleEntryRepository.cs
@@ -16,4 +16,4 @@ tags:
 - [[CampCenter.Domain.Repositories]] - `contains` [EXTRACTED]
 - [[IScheduleEntryRepository]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ClosureService
+#graphify/code #graphify/EXTRACTED #community/Exception

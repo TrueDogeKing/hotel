@@ -30,9 +30,9 @@
     "semantic_hash": "c8ac6e35116e9b2fa4c27793b784c726"
   },
   "frontend/package.json": {
-    "mtime": 1784471223.9330125,
-    "ast_hash": "7651c450bd0804d578a469bac1007089",
-    "semantic_hash": "7651c450bd0804d578a469bac1007089"
+    "mtime": 1787582306.0638368,
+    "ast_hash": "d9fed2aed512238b1d47746679c335ae",
+    "semantic_hash": ""
   },
   "frontend/src/App.tsx": {
     "mtime": 1786007660.9573233,
@@ -600,9 +600,9 @@
     "semantic_hash": "57da11b965d9c6afbe993b2901bb52bc"
   },
   "src/CampCenter.Infrastructure/CampCenter.Infrastructure.csproj": {
-    "mtime": 1784554534.0378823,
-    "ast_hash": "bef30f2213ea3e91f8cd264feffd761f",
-    "semantic_hash": "bef30f2213ea3e91f8cd264feffd761f"
+    "mtime": 1787582232.7414713,
+    "ast_hash": "8dd45ea4dad4dc2b39f892a459715ce2",
+    "semantic_hash": ""
   },
   "src/CampCenter.Infrastructure/DependencyInjection.cs": {
     "mtime": 1786007156.750474,
@@ -615,9 +615,9 @@
     "semantic_hash": "711764b04a28a918fcca83b29a70e63f"
   },
   "src/CampCenter.Infrastructure/Email/SmtpEmailSender.cs": {
-    "mtime": 1784550960.0858095,
-    "ast_hash": "1d1e083689473af381e7550deb7df9d0",
-    "semantic_hash": "1d1e083689473af381e7550deb7df9d0"
+    "mtime": 1787582477.3035965,
+    "ast_hash": "fed40085fbe5f7b996542703862ce87e",
+    "semantic_hash": ""
   },
   "src/CampCenter.Infrastructure/Payments/P24Settings.cs": {
     "mtime": 1784554374.9711452,
@@ -760,9 +760,9 @@
     "semantic_hash": "1730c5a6dc2d97fc7ea63ee614c6dc0e"
   },
   "tests/CampCenter.IntegrationTests/CampCenter.IntegrationTests.csproj": {
-    "mtime": 1784470173.183634,
-    "ast_hash": "92deb8b6bd9a041aca6ae96b407a5971",
-    "semantic_hash": "92deb8b6bd9a041aca6ae96b407a5971"
+    "mtime": 1787582232.7977266,
+    "ast_hash": "8170c3ad80a423123a17f3fb1c9eefda",
+    "semantic_hash": ""
   },
   "tests/CampCenter.IntegrationTests/CampCenterApiFactory.cs": {
     "mtime": 1786117891.2267025,
@@ -800,9 +800,9 @@
     "semantic_hash": "8243fe4607d1b867552c5a1c33e2f3f7"
   },
   ".github/workflows/ci.yml": {
-    "mtime": 1784470172.464715,
-    "ast_hash": "2977b76b42db7b673b8bd34641d79b39",
-    "semantic_hash": "2977b76b42db7b673b8bd34641d79b39"
+    "mtime": 1787582165.89799,
+    "ast_hash": "bf45dd9b5198a0aa0aa72858a1d95a03",
+    "semantic_hash": ""
   },
   "CLAUDE.md": {
     "mtime": 1786965932.492592,
@@ -1395,13 +1395,13 @@
     "semantic_hash": ""
   },
   "scripts/deploy.ps1": {
-    "mtime": 1786964773.620918,
-    "ast_hash": "0790a4829e7a08a0c4598ae94708fae3",
+    "mtime": 1787590021.879131,
+    "ast_hash": "83897f08a637f536d01ce32d6bfebaeb",
     "semantic_hash": ""
   },
   "scripts/register-deploy-task.ps1": {
-    "mtime": 1785762128.6976652,
-    "ast_hash": "7c91a1026d02551386aaabead9ed8dbe",
+    "mtime": 1787590086.4706326,
+    "ast_hash": "f2c944298fe6ca771859983415c44902",
     "semantic_hash": ""
   },
   "frontend/src/components/admin/PricingDefaultsPanel.tsx": {
@@ -1515,13 +1515,13 @@
     "semantic_hash": ""
   },
   "scripts/deploy.sh": {
-    "mtime": 1786964770.850905,
-    "ast_hash": "0ba6f7ae125c7576ed89dfb2edd87671",
+    "mtime": 1787591243.3070126,
+    "ast_hash": "4edf109e9ed035ab05397e379e88764b",
     "semantic_hash": ""
   },
   "scripts/register-deploy-cron.sh": {
-    "mtime": 1786026630.4336236,
-    "ast_hash": "23533d612a77ea55284ad8441da41014",
+    "mtime": 1787591303.869547,
+    "ast_hash": "86074c2a04b054c5ec40e0b9066b0b08",
     "semantic_hash": ""
   },
   "src/CampCenter.Infrastructure/Persistence/Migrations/20260807113217_RemoveMealTimeSortOrder.Designer.cs": {

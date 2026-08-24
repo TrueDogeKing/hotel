@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.Infrastructure / Repositories (1)"
+community: "Frontend App Shell & i18n"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterInfrastructure_/_Repositories_1
+  - community/Frontend_App_Shell__i18n
 ---
 
 # Guid
@@ -15,4 +15,4 @@ tags:
 - [[.Entry()]] - `references` [EXTRACTED]
 - [[ScheduleConflictTests]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterInfrastructure_/_Repositories_1
+#graphify/code #graphify/EXTRACTED #community/Frontend_App_Shell__i18n

@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Domain/Entities/ScheduleEntry.cs"
 type: "code"
-community: "CampCenter.Infrastructure / Repositories (1)"
+community: "components / admin"
 location: "L22"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterInfrastructure_/_Repositories_1
+  - community/components_/_admin
 ---
 
 # ScheduleEntry
@@ -42,4 +42,4 @@ tags:
 - [[ScheduleEntryKind_1]] - `references` [EXTRACTED]
 - [[TimeOnly_6]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterInfrastructure_/_Repositories_1
+#graphify/code #graphify/EXTRACTED #community/components_/_admin

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: ".GetBlockedRoomIdsAsync"
+community: "CampCenter.Application / Services (3)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/GetBlockedRoomIdsAsync
+  - community/CampCenterApplication_/_Services_3
 ---
 
 # IRuleBuilder
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.ValidRole()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/GetBlockedRoomIdsAsync
+#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_3

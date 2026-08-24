@@ -8,7 +8,7 @@ tags:
   - community/Project__NuGet_Config
 ---
 
-# MailKit (4.14.1)
+# MailKit (4.17.0)
 
 ## Connections
 - [[CampCenter.Infrastructure.csproj]] - `imports` [EXTRACTED]

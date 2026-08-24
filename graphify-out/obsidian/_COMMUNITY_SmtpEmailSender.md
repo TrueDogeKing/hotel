@@ -1,20 +1,28 @@
 ---
 type: community
-members: 7
+members: 15
 ---
 
 # SmtpEmailSender
 
-**Members:** 7 nodes
+**Members:** 15 nodes
 
 ## Members
-- [[CampCenter.Infrastructure.Payments]] - code - src/CampCenter.Infrastructure/Payments/P24Settings.cs
-- [[P24SignCalculator.cs]] - code - src/CampCenter.Infrastructure/Payments/P24SignCalculator.cs
-- [[P24SignCalculatorTests.cs]] - code - tests/CampCenter.UnitTests/Services/P24SignCalculatorTests.cs
-- [[Przelewy24Client.cs]] - code - src/CampCenter.Infrastructure/Payments/Przelewy24Client.cs
-- [[RegisterData]] - code
-- [[RegisterData_1]] - code - src/CampCenter.Infrastructure/Payments/Przelewy24Client.cs
-- [[RegisterResponse]] - code - src/CampCenter.Infrastructure/Payments/Przelewy24Client.cs
+- [[.Create()_1]] - code - src/CampCenter.Api/Controllers/Admin/ClosuresController.cs
+- [[.Delete()]] - code - src/CampCenter.Api/Controllers/Admin/ClosuresController.cs
+- [[.GetAll()]] - code - src/CampCenter.Api/Controllers/Admin/ClosuresController.cs
+- [[.Update()]] - code - src/CampCenter.Api/Controllers/Admin/ClosuresController.cs
+- [[CancellationToken_2]] - code
+- [[ClosuresController]] - code - src/CampCenter.Api/Controllers/Admin/ClosuresController.cs
+- [[Guid_1]] - code
+- [[HttpDelete]] - code
+- [[HttpGet_1]] - code
+- [[HttpPost_1]] - code
+- [[HttpPut_1]] - code
+- [[IActionResult_1]] - code
+- [[IValidator_1]] - code
+- [[ProducesResponseType_1]] - code
+- [[Task_3]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -24,13 +32,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_Payment Gateway Integration Tests (1)]]
-- 3 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
-- 1 edge to [[_COMMUNITY_Exception]]
-- 1 edge to [[_COMMUNITY_ClosureService]]
+- 5 edges to [[_COMMUNITY_.NextFreeSitting]]
+- 2 edges to [[_COMMUNITY_ClosureValidatorsTests]]
+- 1 edge to [[_COMMUNITY_.Groups]]
+- 1 edge to [[_COMMUNITY_Application Namespaces & DTOs]]
 
 ## Top bridge nodes
-- [[P24SignCalculatorTests.cs]] - degree 4, connects to 3 communities
-- [[CampCenter.Infrastructure.Payments]] - degree 5, connects to 2 communities
-- [[Przelewy24Client.cs]] - degree 5, connects to 2 communities
-- [[P24SignCalculator.cs]] - degree 3, connects to 2 communities
+- [[ClosuresController]] - degree 8, connects to 3 communities
+- [[.Update()]] - degree 9, connects to 2 communities
+- [[.Create()_1]] - degree 8, connects to 2 communities
+- [[.Delete()]] - degree 8, connects to 1 community
+- [[.GetAll()]] - degree 7, connects to 1 community

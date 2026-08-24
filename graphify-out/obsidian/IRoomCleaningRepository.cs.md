@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Domain/Repositories/IRoomCleaningRepository.cs"
 type: "code"
-community: "ClosureService"
+community: "Exception"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ClosureService
+  - community/Exception
 ---
 
 # IRoomCleaningRepository.cs
@@ -16,4 +16,4 @@ tags:
 - [[CampCenter.Domain.Repositories]] - `contains` [EXTRACTED]
 - [[IRoomCleaningRepository]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ClosureService
+#graphify/code #graphify/EXTRACTED #community/Exception

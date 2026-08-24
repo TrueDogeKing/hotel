@@ -50,12 +50,12 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 13 edges to [[_COMMUNITY_Integration Test Harness (1)]]
-- 4 edges to [[_COMMUNITY_.Update]]
+- 4 edges to [[_COMMUNITY_IRoomService]]
 - 3 edges to [[_COMMUNITY_BookingConfiguration]]
 - 2 edges to [[_COMMUNITY_Admin Booking & Notifications (1)]]
-- 1 edge to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
+- 1 edge to [[_COMMUNITY_.Groups]]
 - 1 edge to [[_COMMUNITY_Integration Test Harness (2)]]
-- 1 edge to [[_COMMUNITY_Refresh Token Repository]]
+- 1 edge to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
 - 1 edge to [[_COMMUNITY_Exception]]
 
 ## Top bridge nodes

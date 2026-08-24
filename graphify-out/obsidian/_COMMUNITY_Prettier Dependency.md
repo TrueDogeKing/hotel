@@ -8,17 +8,17 @@ members: 11
 **Members:** 11 nodes
 
 ## Members
-- [[BusinessRuleViolationException]] - code - src/CampCenter.Domain/Exceptions/BusinessRuleViolationException.cs
-- [[BusinessRuleViolationException.cs]] - code - src/CampCenter.Domain/Exceptions/BusinessRuleViolationException.cs
-- [[ConcurrencyConflictException]] - code - src/CampCenter.Domain/Exceptions/ConcurrencyConflictException.cs
-- [[ConcurrencyConflictException.cs]] - code - src/CampCenter.Domain/Exceptions/ConcurrencyConflictException.cs
-- [[ConflictException]] - code - src/CampCenter.Domain/Exceptions/ConflictException.cs
-- [[ConflictException.cs]] - code - src/CampCenter.Domain/Exceptions/ConflictException.cs
-- [[Exception_1]] - code
-- [[ForbiddenActionException]] - code - src/CampCenter.Domain/Exceptions/ForbiddenActionException.cs
-- [[ForbiddenActionException.cs]] - code - src/CampCenter.Domain/Exceptions/ForbiddenActionException.cs
-- [[NotFoundException]] - code - src/CampCenter.Domain/Exceptions/NotFoundException.cs
-- [[NotFoundException.cs]] - code - src/CampCenter.Domain/Exceptions/NotFoundException.cs
+- [[.AddAsync()_3]] - code - src/CampCenter.Domain/Repositories/IClosureRepository.cs
+- [[.GetAllAsync()_6]] - code - src/CampCenter.Domain/Repositories/IClosureRepository.cs
+- [[.GetByIdAsync()_2]] - code - src/CampCenter.Domain/Repositories/IClosureRepository.cs
+- [[.GetUpcomingCenterWideAsync()]] - code - src/CampCenter.Domain/Repositories/IClosureRepository.cs
+- [[.Remove()_2]] - code - src/CampCenter.Domain/Repositories/IClosureRepository.cs
+- [[CancellationToken_48]] - code
+- [[DateOnly_23]] - code
+- [[Guid_44]] - code
+- [[IClosureRepository]] - code - src/CampCenter.Domain/Repositories/IClosureRepository.cs
+- [[List_23]] - code
+- [[Task_48]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -28,11 +28,17 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_ClosureService]]
+- 8 edges to [[_COMMUNITY_Auth Controller (1)]]
+- 6 edges to [[_COMMUNITY_AvailabilityService]]
+- 6 edges to [[_COMMUNITY_Validator Unit Tests]]
+- 2 edges to [[_COMMUNITY_AdminUserRole]]
+- 2 edges to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
+- 2 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (2)]]
+- 1 edge to [[_COMMUNITY_Exception]]
 
 ## Top bridge nodes
-- [[BusinessRuleViolationException.cs]] - degree 2, connects to 1 community
-- [[ConcurrencyConflictException.cs]] - degree 2, connects to 1 community
-- [[ConflictException.cs]] - degree 2, connects to 1 community
-- [[ForbiddenActionException.cs]] - degree 2, connects to 1 community
-- [[NotFoundException.cs]] - degree 2, connects to 1 community
+- [[IClosureRepository]] - degree 15, connects to 7 communities
+- [[.GetAllAsync()_6]] - degree 7, connects to 3 communities
+- [[.GetUpcomingCenterWideAsync()]] - degree 7, connects to 2 communities
+- [[CancellationToken_48]] - degree 6, connects to 2 communities
+- [[Task_48]] - degree 6, connects to 2 communities

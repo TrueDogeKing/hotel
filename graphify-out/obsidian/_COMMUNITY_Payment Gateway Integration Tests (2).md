@@ -32,7 +32,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_Exception]]
+- 3 edges to [[_COMMUNITY_Public Booking Service (2)]]
 - 2 edges to [[_COMMUNITY_RoomsAndClosuresApiTests]]
 - 1 edge to [[_COMMUNITY_Admin Booking & Notifications (4)]]
 

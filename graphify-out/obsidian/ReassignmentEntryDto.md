@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/DTOs/AdminPanel/AdminPanelDtos.cs"
 type: "code"
-community: "Admin Bookings Controller & DTOs"
+community: ".Update"
 location: "L99"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Bookings_Controller__DTOs
+  - community/Update
 ---
 
 # ReassignmentEntryDto
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[AdminPanelDtos.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Bookings_Controller__DTOs
+#graphify/code #graphify/EXTRACTED #community/Update

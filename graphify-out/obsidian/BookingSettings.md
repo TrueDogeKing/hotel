@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Models/BookingSettings.cs"
 type: "code"
-community: "CampCenter.UnitTests / Validators"
+community: "Room"
 location: "L4"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Validators
+  - community/Room
 ---
 
 # BookingSettings
@@ -19,4 +19,4 @@ tags:
 - [[PricingService]] - `references` [EXTRACTED]
 - [[string_3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Validators
+#graphify/code #graphify/EXTRACTED #community/Room

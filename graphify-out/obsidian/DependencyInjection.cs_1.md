@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/DependencyInjection.cs"
 type: "code"
-community: "Exception"
+community: "eslint"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Exception
+  - community/eslint
 ---
 
 # DependencyInjection.cs
@@ -22,4 +22,4 @@ tags:
 - [[CampCenter.Infrastructure.Repositories]] - `imports` [EXTRACTED]
 - [[DependencyInjection_1]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Exception
+#graphify/code #graphify/EXTRACTED #community/eslint

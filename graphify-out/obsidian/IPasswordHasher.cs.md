@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Interfaces/IPasswordHasher.cs"
 type: "code"
-community: "Admin Booking & Notifications (2)"
+community: "Auth Service & Tokens"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Booking__Notifications_2
+  - community/Auth_Service__Tokens
 ---
 
 # IPasswordHasher.cs
@@ -15,4 +15,4 @@ tags:
 - [[CampCenter.Application.Interfaces]] - `contains` [EXTRACTED]
 - [[IPasswordHasher]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_2
+#graphify/code #graphify/EXTRACTED #community/Auth_Service__Tokens

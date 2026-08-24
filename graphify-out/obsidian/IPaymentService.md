@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Interfaces/IPaymentService.cs"
 type: "code"
-community: "CampCenter.UnitTests / Validators"
+community: "Room"
 location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Validators
+  - community/Room
 ---
 
 # IPaymentService
@@ -17,4 +17,4 @@ tags:
 - [[IPaymentService.cs]] - `contains` [EXTRACTED]
 - [[PaymentService]] - `implements` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Validators
+#graphify/code #graphify/EXTRACTED #community/Room

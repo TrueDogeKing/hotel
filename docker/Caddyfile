@@ -6,9 +6,24 @@
 #
 # Moving to a host with a real public IP (a VPS) instead of a tunnel? Swap the
 # `:80 { ... }` block below back to `{$DOMAIN} { ... }` (see git history) to let
-# Caddy obtain its own certificate again, and add back the HSTS header.
+# Caddy obtain its own certificate again.
 :80 {
 	encode zstd gzip
+
+	# Baseline security headers on every response, API included (the SPA container
+	# adds its own CSP for HTML). `header` replaces rather than appends, so an
+	# upstream copy is not duplicated.
+	header {
+		# Visitors always reach this through Cloudflare's HTTPS edge, so telling
+		# browsers to refuse plain HTTP for a year costs nothing. No `preload`:
+		# that is a one-way listing and should be a deliberate decision.
+		Strict-Transport-Security "max-age=31536000; includeSubDomains"
+		X-Content-Type-Options "nosniff"
+		X-Frame-Options "DENY"
+		Referrer-Policy "no-referrer"
+		Cross-Origin-Opener-Policy "same-origin"
+		-Server
+	}
 
 	# REST API.
 	handle /api/* {

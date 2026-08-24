@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Persistence/Configurations/PricingDefaultsConfiguration.cs"
 type: "code"
-community: "CampCenter.UnitTests / Services (3)"
+community: "CampCenter.Infrastructure / Repositories (1)"
 location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Services_3
+  - community/CampCenterInfrastructure_/_Repositories_1
 ---
 
 # PricingDefaultsConfiguration
@@ -17,4 +17,4 @@ tags:
 - [[PricingDefaults_1]] - `references` [EXTRACTED]
 - [[PricingDefaultsConfiguration.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_3
+#graphify/code #graphify/EXTRACTED #community/CampCenterInfrastructure_/_Repositories_1

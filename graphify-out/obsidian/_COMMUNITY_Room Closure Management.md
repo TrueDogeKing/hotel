@@ -97,7 +97,7 @@ SORT file.name ASC
 - 13 edges to [[_COMMUNITY_Persistence  Migrations (10)]]
 - 8 edges to [[_COMMUNITY_Public Booking Frontend (1)]]
 - 7 edges to [[_COMMUNITY_Frontend Auth & API Client]]
-- 6 edges to [[_COMMUNITY_Frontend App Shell & i18n]]
+- 6 edges to [[_COMMUNITY_@typesreact]]
 - 5 edges to [[_COMMUNITY_src  api (1)]]
 
 ## Top bridge nodes

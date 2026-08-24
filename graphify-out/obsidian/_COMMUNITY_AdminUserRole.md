@@ -1,18 +1,24 @@
 ---
 type: community
-members: 5
+members: 11
 ---
 
 # AdminUserRole
 
-**Members:** 5 nodes
+**Members:** 11 nodes
 
 ## Members
-- [[.Down()_9]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/20260730211855_AdminUserRole.cs
-- [[.Up()_9]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/20260730211855_AdminUserRole.cs
-- [[20260730211855_AdminUserRole.cs]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/20260730211855_AdminUserRole.cs
-- [[AdminUserRole_2]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/20260730211855_AdminUserRole.cs
-- [[MigrationBuilder_9]] - code
+- [[.Calendar()]] - code - src/CampCenter.Api/Controllers/Public/PublicAvailabilityController.cs
+- [[.Closures()]] - code - src/CampCenter.Api/Controllers/Public/PublicAvailabilityController.cs
+- [[.Get()_4]] - code - src/CampCenter.Api/Controllers/Public/PublicAvailabilityController.cs
+- [[.Pricing()]] - code - src/CampCenter.Api/Controllers/Public/PublicAvailabilityController.cs
+- [[CancellationToken_13]] - code
+- [[DateOnly_3]] - code
+- [[HttpGet_11]] - code
+- [[IActionResult_12]] - code
+- [[ProducesResponseType_12]] - code
+- [[PublicAvailabilityController]] - code - src/CampCenter.Api/Controllers/Public/PublicAvailabilityController.cs
+- [[Task_14]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -22,9 +28,15 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_EF Core Migrations (3)]]
-- 1 edge to [[_COMMUNITY_RoomCleaningRepository]]
+- 3 edges to [[_COMMUNITY_IAvailabilityService]]
+- 2 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (3)]]
+- 2 edges to [[_COMMUNITY_Prettier Dependency]]
+- 1 edge to [[_COMMUNITY_.Groups]]
+- 1 edge to [[_COMMUNITY_CampCenter.Application.DTOs.Public]]
 
 ## Top bridge nodes
-- [[AdminUserRole_2]] - degree 4, connects to 1 community
-- [[20260730211855_AdminUserRole.cs]] - degree 2, connects to 1 community
+- [[PublicAvailabilityController]] - degree 9, connects to 5 communities
+- [[.Get()_4]] - degree 8, connects to 1 community
+- [[.Calendar()]] - degree 8, connects to 1 community
+- [[.Pricing()]] - degree 7, connects to 1 community
+- [[.Closures()]] - degree 7, connects to 1 community

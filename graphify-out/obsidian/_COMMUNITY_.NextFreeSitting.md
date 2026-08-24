@@ -1,18 +1,23 @@
 ---
 type: community
-members: 5
+members: 10
 ---
 
 # .NextFreeSitting
 
-**Members:** 5 nodes
+**Members:** 10 nodes
 
 ## Members
-- [[.AddApplication()]] - code - src/CampCenter.Application/DependencyInjection.cs
-- [[CampCenter.Application]] - code - src/CampCenter.Application/DependencyInjection.cs
-- [[DependencyInjection]] - code - src/CampCenter.Application/DependencyInjection.cs
-- [[DependencyInjection.cs]] - code - src/CampCenter.Application/DependencyInjection.cs
-- [[IServiceCollection]] - code
+- [[.CreateAsync()_2]] - code - src/CampCenter.Application/Interfaces/IClosureService.cs
+- [[.DeleteAsync()]] - code - src/CampCenter.Application/Interfaces/IClosureService.cs
+- [[.GetAllAsync()]] - code - src/CampCenter.Application/Interfaces/IClosureService.cs
+- [[.UpdateAsync()]] - code - src/CampCenter.Application/Interfaces/IClosureService.cs
+- [[CancellationToken_21]] - code
+- [[Guid_11]] - code
+- [[IClosureService]] - code - src/CampCenter.Application/Interfaces/IClosureService.cs
+- [[IClosureService.cs]] - code - src/CampCenter.Application/Interfaces/IClosureService.cs
+- [[List_1]] - code
+- [[Task_21]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -22,10 +27,15 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_Exception]]
-- 1 edge to [[_COMMUNITY_ClosureService]]
+- 5 edges to [[_COMMUNITY_SmtpEmailSender]]
+- 4 edges to [[_COMMUNITY_Auth Controller (1)]]
+- 2 edges to [[_COMMUNITY_ClosureValidatorsTests]]
+- 1 edge to [[_COMMUNITY_CampCenter.Application.DTOs.Public]]
 - 1 edge to [[_COMMUNITY_Application Namespaces & DTOs]]
 
 ## Top bridge nodes
-- [[DependencyInjection.cs]] - degree 4, connects to 2 communities
-- [[CampCenter.Application]] - degree 2, connects to 1 community
+- [[.UpdateAsync()]] - degree 7, connects to 3 communities
+- [[.CreateAsync()_2]] - degree 6, connects to 3 communities
+- [[IClosureService]] - degree 7, connects to 2 communities
+- [[.GetAllAsync()]] - degree 6, connects to 2 communities
+- [[IClosureService.cs]] - degree 3, connects to 2 communities

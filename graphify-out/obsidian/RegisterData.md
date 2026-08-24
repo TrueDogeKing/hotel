@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "SmtpEmailSender"
+community: "eslint"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SmtpEmailSender
+  - community/eslint
 ---
 
 # RegisterData
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[RegisterResponse]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SmtpEmailSender
+#graphify/code #graphify/EXTRACTED #community/eslint

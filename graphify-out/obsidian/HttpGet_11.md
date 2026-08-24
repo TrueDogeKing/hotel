@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.UnitTests / Services (3)"
+community: "AdminUserRole"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Services_3
+  - community/AdminUserRole
 ---
 
 # HttpGet
@@ -16,4 +16,4 @@ tags:
 - [[.Get()_4]] - `references` [EXTRACTED]
 - [[.Pricing()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_3
+#graphify/code #graphify/EXTRACTED #community/AdminUserRole

@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Domain/Repositories/IBookingRepository.cs"
 type: "code"
-community: "ClosureService"
+community: "Exception"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ClosureService
+  - community/Exception
 ---
 
 # IBookingRepository.cs
@@ -16,4 +16,4 @@ tags:
 - [[CampCenter.Domain.Repositories]] - `contains` [EXTRACTED]
 - [[IBookingRepository]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ClosureService
+#graphify/code #graphify/EXTRACTED #community/Exception

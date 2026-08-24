@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/DependencyInjection.cs"
 type: "code"
-community: ".NextFreeSitting"
+community: "Public Booking Service (2)"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/NextFreeSitting
+  - community/Public_Booking_Service_2
 ---
 
 # CampCenter.Application
@@ -15,4 +15,4 @@ tags:
 - [[DependencyInjection.cs]] - `contains` [EXTRACTED]
 - [[Program.cs]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/NextFreeSitting
+#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_2

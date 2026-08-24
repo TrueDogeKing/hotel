@@ -1,11 +1,11 @@
 ---
 type: community
-members: 89
+members: 77
 ---
 
 # Room Management
 
-**Members:** 89 nodes
+**Members:** 77 nodes
 
 ## Members
 - [[.AddAsync()_8]] - code - src/CampCenter.Domain/Repositories/IRoomRepository.cs
@@ -24,15 +24,10 @@ members: 89
 - [[.GetAllAsync()_5]] - code - src/CampCenter.Application/Services/RoomService.cs
 - [[.GetAllAsync()_8]] - code - src/CampCenter.Domain/Repositories/IRoomRepository.cs
 - [[.GetAllAsync()_11]] - code - src/CampCenter.Infrastructure/Repositories/RoomRepository.cs
-- [[.GetAvailabilityAsync()_1]] - code - src/CampCenter.Application/Services/AvailabilityService.cs
-- [[.GetBlockedRoomIdsAsync()_1]] - code - src/CampCenter.Application/Services/AvailabilityService.cs
 - [[.GetByIdAsync()_4]] - code - src/CampCenter.Domain/Repositories/IRoomRepository.cs
 - [[.GetByIdAsync()_11]] - code - src/CampCenter.Infrastructure/Repositories/RoomRepository.cs
 - [[.GetByNumberAsync()]] - code - src/CampCenter.Domain/Repositories/IRoomRepository.cs
 - [[.GetByNumberAsync()_1]] - code - src/CampCenter.Infrastructure/Repositories/RoomRepository.cs
-- [[.GetCalendarAsync()_2]] - code - src/CampCenter.Application/Services/AvailabilityService.cs
-- [[.GetCenterClosureReasonAsync()_1]] - code - src/CampCenter.Application/Services/AvailabilityService.cs
-- [[.GetFreeRoomsByCapacityAsync()_1]] - code - src/CampCenter.Application/Services/AvailabilityService.cs
 - [[.HasAssignmentsAsync()]] - code - src/CampCenter.Domain/Repositories/IRoomRepository.cs
 - [[.HasAssignmentsAsync()_1]] - code - src/CampCenter.Infrastructure/Repositories/RoomRepository.cs
 - [[.Remove()_4]] - code - src/CampCenter.Domain/Repositories/IRoomRepository.cs
@@ -45,26 +40,20 @@ members: 89
 - [[.Update()_3]] - code - src/CampCenter.Api/Controllers/Admin/RoomsController.cs
 - [[.UpdateAsync()_3]] - code - src/CampCenter.Application/Interfaces/IRoomService.cs
 - [[.UpdateAsync()_8]] - code - src/CampCenter.Application/Services/RoomService.cs
-- [[AvailabilityService]] - code - src/CampCenter.Application/Services/AvailabilityService.cs
 - [[CancellationToken_8]] - code
 - [[CancellationToken_28]] - code
-- [[CancellationToken_34]] - code
 - [[CancellationToken_41]] - code
 - [[CancellationToken_53]] - code
 - [[CancellationToken_67]] - code
 - [[CreateRoomRequestDto]] - code - src/CampCenter.Application/DTOs/Rooms/RoomDtos.cs
 - [[CreateRoomRequestValidator]] - code - src/CampCenter.Application/Validators/RoomValidators.cs
-- [[DateOnly_9]] - code
-- [[Dictionary_1]] - code
 - [[EntityTypeBuilder_10]] - code
 - [[Guid_4]] - code
 - [[Guid_14]] - code
-- [[Guid_20]] - code
 - [[Guid_24]] - code
 - [[Guid_37]] - code
 - [[Guid_48]] - code
 - [[Guid_58]] - code
-- [[HashSet_1]] - code
 - [[HttpDelete_2]] - code
 - [[HttpGet_7]] - code
 - [[HttpPost_3]] - code
@@ -72,6 +61,7 @@ members: 89
 - [[IActionResult_7]] - code
 - [[IRoomRepository]] - code - src/CampCenter.Domain/Repositories/IRoomRepository.cs
 - [[IRoomService]] - code - src/CampCenter.Application/Interfaces/IRoomService.cs
+- [[IRoomService.cs]] - code - src/CampCenter.Application/Interfaces/IRoomService.cs
 - [[IValidator_3]] - code
 - [[List_3]] - code
 - [[List_15]] - code
@@ -90,13 +80,11 @@ members: 89
 - [[RoomsController]] - code - src/CampCenter.Api/Controllers/Admin/RoomsController.cs
 - [[Task_9]] - code
 - [[Task_28]] - code
-- [[Task_34]] - code
 - [[Task_41]] - code
 - [[Task_53]] - code
 - [[Task_67]] - code
 - [[UpdateRoomRequestDto]] - code - src/CampCenter.Application/DTOs/Rooms/RoomDtos.cs
 - [[UpdateRoomRequestValidator]] - code - src/CampCenter.Application/Validators/RoomValidators.cs
-- [[int_1]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -106,27 +94,25 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 7 edges to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
-- 7 edges to [[_COMMUNITY_Validator Unit Tests]]
 - 7 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (2)]]
-- 5 edges to [[_COMMUNITY_ClosureService]]
+- 5 edges to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
+- 5 edges to [[_COMMUNITY_Exception]]
+- 4 edges to [[_COMMUNITY_AvailabilityService]]
 - 4 edges to [[_COMMUNITY_Public Booking Service (1)]]
 - 4 edges to [[_COMMUNITY_Room Task Management (1)]]
 - 3 edges to [[_COMMUNITY_CampCenter.Application.DTOs.Public]]
-- 3 edges to [[_COMMUNITY_Integration Test Harness (2)]]
 - 3 edges to [[_COMMUNITY_BookingConfiguration]]
-- 2 edges to [[_COMMUNITY_Persistence  Migrations (2)]]
-- 2 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (3)]]
-- 2 edges to [[_COMMUNITY_Room Mix Calculator Tests]]
+- 2 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
+- 2 edges to [[_COMMUNITY_Auth Controller (1)]]
 - 2 edges to [[_COMMUNITY_DTOs  Schedule (1)]]
-- 2 edges to [[_COMMUNITY_Refresh Token Repository]]
-- 1 edge to [[_COMMUNITY_Application Namespaces & DTOs]]
+- 2 edges to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
+- 1 edge to [[_COMMUNITY_.Groups]]
 - 1 edge to [[_COMMUNITY_.GetBlockedRoomIdsAsync]]
-- 1 edge to [[_COMMUNITY_Exception]]
+- 1 edge to [[_COMMUNITY_Validator Unit Tests]]
 
 ## Top bridge nodes
+- [[IRoomRepository]] - degree 18, connects to 7 communities
 - [[Room_1]] - degree 28, connects to 6 communities
-- [[IRoomRepository]] - degree 18, connects to 6 communities
-- [[AvailabilityService]] - degree 12, connects to 5 communities
-- [[.GetAvailabilityAsync()_1]] - degree 10, connects to 3 communities
+- [[.GetActiveAsync()_1]] - degree 11, connects to 3 communities
 - [[.GetByIdAsync()_4]] - degree 10, connects to 3 communities
+- [[RoomRepository]] - degree 11, connects to 2 communities

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.Application / Services (3)"
+community: "UsersController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterApplication_/_Services_3
+  - community/UsersController
 ---
 
 # Guid
@@ -16,4 +16,4 @@ tags:
 - [[.SetRole()]] - `references` [EXTRACTED]
 - [[UsersController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_3
+#graphify/code #graphify/EXTRACTED #community/UsersController

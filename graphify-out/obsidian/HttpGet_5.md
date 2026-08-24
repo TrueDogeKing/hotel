@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Admin Bookings Controller & DTOs"
+community: ".Groups"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Bookings_Controller__DTOs
+  - community/Groups
 ---
 
 # HttpGet
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.Get()_2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Bookings_Controller__DTOs
+#graphify/code #graphify/EXTRACTED #community/Groups

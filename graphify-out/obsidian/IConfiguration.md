@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Exception"
+community: "eslint"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Exception
+  - community/eslint
 ---
 
 # IConfiguration
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.AddInfrastructure()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Exception
+#graphify/code #graphify/EXTRACTED #community/eslint

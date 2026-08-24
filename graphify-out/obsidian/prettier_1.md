@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/package.json"
 type: "concept"
-community: "CampCenter.UnitTests / Services (4)"
+community: "ESLint Dev Dependencies"
 location: "L32"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Services_4
+  - community/ESLint_Dev_Dependencies
 ---
 
 # prettier
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[prettier]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_4
+#graphify/concept #graphify/EXTRACTED #community/ESLint_Dev_Dependencies

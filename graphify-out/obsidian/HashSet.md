@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Admin Bookings Controller & DTOs"
+community: "IAvailabilityService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Bookings_Controller__DTOs
+  - community/IAvailabilityService
 ---
 
 # HashSet
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.GetBlockedRoomIdsAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Bookings_Controller__DTOs
+#graphify/code #graphify/EXTRACTED #community/IAvailabilityService

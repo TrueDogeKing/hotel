@@ -52,7 +52,7 @@ SORT file.name ASC
 - 2 edges to [[_COMMUNITY_Public Booking Frontend (1)]]
 - 2 edges to [[_COMMUNITY_src  api (1)]]
 - 2 edges to [[_COMMUNITY_useAuth]]
-- 1 edge to [[_COMMUNITY_Frontend App Shell & i18n]]
+- 1 edge to [[_COMMUNITY_@typesreact]]
 
 ## Top bridge nodes
 - [[AuthContext.tsx]] - degree 37, connects to 7 communities

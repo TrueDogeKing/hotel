@@ -35,16 +35,16 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 13 edges to [[_COMMUNITY_Booking Persistence & Entities (1)]]
-- 9 edges to [[_COMMUNITY_CampCenter.Application  Services (3)]]
-- 4 edges to [[_COMMUNITY_Auth Service & Tokens]]
-- 2 edges to [[_COMMUNITY_Admin Booking & Notifications (2)]]
+- 6 edges to [[_COMMUNITY_UsersController]]
+- 6 edges to [[_COMMUNITY_Auth Service & Tokens]]
+- 3 edges to [[_COMMUNITY_CampCenter.Application  Services (3)]]
 - 1 edge to [[_COMMUNITY_BookingGroupSection.tsx]]
 - 1 edge to [[_COMMUNITY_PasswordRules]]
 - 1 edge to [[_COMMUNITY_ClosureService]]
 
 ## Top bridge nodes
-- [[UserService]] - degree 14, connects to 5 communities
+- [[UserService]] - degree 14, connects to 4 communities
 - [[.CreateAsync()_13]] - degree 13, connects to 3 communities
+- [[AdminUserDto]] - degree 11, connects to 3 communities
 - [[.SetRoleAsync()_1]] - degree 12, connects to 2 communities
-- [[AdminUserDto]] - degree 11, connects to 2 communities
 - [[.SetPasswordAsync()_1]] - degree 11, connects to 2 communities

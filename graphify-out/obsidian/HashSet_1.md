@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Room Management"
+community: "AvailabilityService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Management
+  - community/AvailabilityService
 ---
 
 # HashSet
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.GetBlockedRoomIdsAsync()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Management
+#graphify/code #graphify/EXTRACTED #community/AvailabilityService

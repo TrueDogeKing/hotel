@@ -2,7 +2,7 @@
 source_file: "scripts/deploy.ps1"
 type: "code"
 community: "deploy.ps1"
-location: "L25"
+location: "L36"
 tags:
   - graphify/code
   - graphify/EXTRACTED

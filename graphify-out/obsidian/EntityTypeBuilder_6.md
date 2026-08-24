@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: ".Update"
+community: "IRoomService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Update
+  - community/IRoomService
 ---
 
 # EntityTypeBuilder
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.Configure()_6]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Update
+#graphify/code #graphify/EXTRACTED #community/IRoomService

@@ -39,12 +39,12 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 5 edges to [[_COMMUNITY_Public Booking Service (1)]]
-- 1 edge to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
-- 1 edge to [[_COMMUNITY_Public Booking Service (2)]]
+- 1 edge to [[_COMMUNITY_.Groups]]
+- 1 edge to [[_COMMUNITY_CampCenter.Application.DTOs.Public]]
 - 1 edge to [[_COMMUNITY_Persistence  Migrations (2)]]
 - 1 edge to [[_COMMUNITY_DTOs  Schedule (1)]]
 - 1 edge to [[_COMMUNITY_CampCenter.Application  Services (2)]]
-- 1 edge to [[_COMMUNITY_CampCenter.Application.DTOs.Public]]
+- 1 edge to [[_COMMUNITY_Application Namespaces & DTOs]]
 
 ## Top bridge nodes
 - [[PublicScheduleDto]] - degree 4, connects to 3 communities

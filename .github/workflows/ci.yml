@@ -6,6 +6,9 @@ on:
     branches: [main]
   push:
     branches: [main]
+  # Weekly, so an advisory published after the last merge is still noticed.
+  schedule:
+    - cron: "0 5 * * 1"
 
 permissions:
   contents: read
@@ -61,3 +64,42 @@ jobs:
       # `bun run build` is `tsc -b && vite build`, so this covers the typecheck and the production bundle.
       - name: Build
         run: bun run build
+
+  dependencies:
+    name: Dependencies (vulnerability scan)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          global-json-file: global.json
+
+      - name: Restore
+        run: dotnet restore CampCenter.slnx
+
+      # NuGet advisories, transitive packages included. `dotnet list` exits 0 even when it
+      # finds something, so the report is grepped for the severity markers it prints.
+      - name: NuGet advisories
+        run: |
+          dotnet list CampCenter.slnx package --vulnerable --include-transitive > nuget-audit.txt
+          cat nuget-audit.txt
+          if grep -qiE "(Critical|High|Moderate|Low)$" nuget-audit.txt; then
+            echo "::error::Vulnerable NuGet packages found (see report above)."
+            exit 1
+          fi
+
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: "1.3.10"
+
+      - name: Install dependencies
+        working-directory: frontend
+        run: bun install --frozen-lockfile
+
+      # Fails the job on any advisory affecting the locked tree.
+      - name: npm advisories
+        working-directory: frontend
+        run: bun audit

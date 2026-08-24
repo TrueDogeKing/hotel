@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Validators/MealTimeValidators.cs"
 type: "code"
-community: ".GetBlockedRoomIdsAsync"
+community: "ScheduleValidators.cs"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/GetBlockedRoomIdsAsync
+  - community/ScheduleValidatorscs
 ---
 
 # MealTimeValidators.cs
@@ -20,4 +20,4 @@ tags:
 - [[SetBookingMealTimeRequestValidator]] - `contains` [EXTRACTED]
 - [[UpdateMealTimeDefaultRequestValidator]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/GetBlockedRoomIdsAsync
+#graphify/code #graphify/EXTRACTED #community/ScheduleValidatorscs

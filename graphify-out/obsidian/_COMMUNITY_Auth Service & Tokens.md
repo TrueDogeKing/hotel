@@ -1,11 +1,11 @@
 ---
 type: community
-members: 25
+members: 30
 ---
 
 # Auth Service & Tokens
 
-**Members:** 25 nodes
+**Members:** 30 nodes
 
 ## Members
 - [[.AddAsync()_6]] - code - src/CampCenter.Domain/Repositories/IRefreshTokenRepository.cs
@@ -20,6 +20,9 @@ members: 25
 - [[.RefreshAsync()_1]] - code - src/CampCenter.Application/Services/AuthService.cs
 - [[.RevokeAllActiveForUserAsync()]] - code - src/CampCenter.Domain/Repositories/IRefreshTokenRepository.cs
 - [[.SaveChangesAsync()_6]] - code - src/CampCenter.Domain/Repositories/IRefreshTokenRepository.cs
+- [[.Verify()]] - code - src/CampCenter.Application/Interfaces/IPasswordHasher.cs
+- [[AuthResult]] - code - src/CampCenter.Application/Models/AuthResult.cs
+- [[AuthResult.cs]] - code - src/CampCenter.Application/Models/AuthResult.cs
 - [[AuthService]] - code - src/CampCenter.Application/Services/AuthService.cs
 - [[CancellationToken_33]] - code
 - [[CancellationToken_51]] - code
@@ -27,6 +30,8 @@ members: 25
 - [[DateTime_16]] - code
 - [[Guid_19]] - code
 - [[Guid_46]] - code
+- [[IPasswordHasher]] - code - src/CampCenter.Application/Interfaces/IPasswordHasher.cs
+- [[IPasswordHasher.cs]] - code - src/CampCenter.Application/Interfaces/IPasswordHasher.cs
 - [[IRefreshTokenRepository]] - code - src/CampCenter.Domain/Repositories/IRefreshTokenRepository.cs
 - [[ITokenService]] - code - src/CampCenter.Application/Interfaces/ITokenService.cs
 - [[RefreshTokenInfo]] - code - src/CampCenter.Application/Models/RefreshTokenInfo.cs
@@ -42,21 +47,23 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_Auth Controller (1)]]
+- 6 edges to [[_COMMUNITY_Admin User & Token Config]]
+- 5 edges to [[_COMMUNITY_.GetBlockedRoomIdsAsync]]
 - 4 edges to [[_COMMUNITY_ClosureService]]
 - 4 edges to [[_COMMUNITY_Booking Persistence & Entities (1)]]
 - 4 edges to [[_COMMUNITY_Refresh Token Repository]]
-- 4 edges to [[_COMMUNITY_Admin User & Token Config]]
 - 3 edges to [[_COMMUNITY_Public Booking Service (1)]]
 - 3 edges to [[_COMMUNITY_CampCenter.Application  Services (1)]]
-- 2 edges to [[_COMMUNITY_Admin Booking & Notifications (2)]]
 - 2 edges to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
-- 2 edges to [[_COMMUNITY_CampCenter.UnitTests  Validators]]
+- 2 edges to [[_COMMUNITY_Room]]
 - 1 edge to [[_COMMUNITY_BookingGroupSection.tsx]]
+- 1 edge to [[_COMMUNITY_Application Namespaces & DTOs]]
+- 1 edge to [[_COMMUNITY_Public Booking Service (2)]]
+- 1 edge to [[_COMMUNITY_Exception]]
 
 ## Top bridge nodes
 - [[ITokenService]] - degree 9, connects to 5 communities
-- [[AuthService]] - degree 11, connects to 4 communities
-- [[.LoginAsync()_1]] - degree 9, connects to 4 communities
+- [[AuthService]] - degree 11, connects to 3 communities
+- [[.LoginAsync()_1]] - degree 9, connects to 3 communities
 - [[IRefreshTokenRepository]] - degree 8, connects to 3 communities
-- [[.IssueTokensAsync()]] - degree 11, connects to 2 communities
+- [[IPasswordHasher]] - degree 6, connects to 2 communities

@@ -2,7 +2,7 @@
 source_file: "scripts/deploy.sh"
 type: "code"
 community: "eslint-plugin-react-hooks"
-location: "L23"
+location: "L33"
 tags:
   - graphify/code
   - graphify/EXTRACTED

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.UnitTests / Validators"
+community: "Room"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Validators
+  - community/Room
 ---
 
 # Task
@@ -14,4 +14,4 @@ tags:
 - [[.HandleNotificationAsync()]] - `references` [EXTRACTED]
 - [[.InitiateAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Validators
+#graphify/code #graphify/EXTRACTED #community/Room

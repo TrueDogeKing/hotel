@@ -1,12 +1,12 @@
 ---
 source_file: "tests/CampCenter.IntegrationTests/UsersAndRolesApiTests.cs"
 type: "code"
-community: "Application Namespaces & DTOs"
+community: "ClosureService"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Application_Namespaces__DTOs
+  - community/ClosureService
 ---
 
 # UsersAndRolesApiTests.cs
@@ -17,4 +17,4 @@ tags:
 - [[CampCenter.IntegrationTests]] - `contains` [EXTRACTED]
 - [[UsersAndRolesApiTests]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Application_Namespaces__DTOs
+#graphify/code #graphify/EXTRACTED #community/ClosureService

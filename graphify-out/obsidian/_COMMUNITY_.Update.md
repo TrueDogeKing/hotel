@@ -1,21 +1,31 @@
 ---
 type: community
-members: 8
+members: 18
 ---
 
 # .Update
 
-**Members:** 8 nodes
+**Members:** 18 nodes
 
 ## Members
-- [[.Configure()_6]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/PaymentConfiguration.cs
-- [[DateTime_9]] - code
-- [[EntityTypeBuilder_6]] - code
-- [[Guid_34]] - code
-- [[Payment]] - code - src/CampCenter.Domain/Entities/Payment.cs
-- [[Payment.cs]] - code - src/CampCenter.Domain/Entities/Payment.cs
-- [[PaymentKind]] - code - src/CampCenter.Domain/Entities/Payment.cs
-- [[PaymentStatus]] - code - src/CampCenter.Domain/Entities/Payment.cs
+- [[AdminAssignmentDto]] - code - src/CampCenter.Application/DTOs/AdminPanel/AdminPanelDtos.cs
+- [[AdminBookingValidators.cs]] - code - src/CampCenter.Application/Validators/AdminBookingValidators.cs
+- [[AdminPanelDtos.cs]] - code - src/CampCenter.Application/DTOs/AdminPanel/AdminPanelDtos.cs
+- [[AssignableRoomDto]] - code - src/CampCenter.Application/DTOs/AdminPanel/AdminPanelDtos.cs
+- [[BookingGroupPageDto]] - code - src/CampCenter.Application/DTOs/AdminPanel/AdminPanelDtos.cs
+- [[CreateAdminBookingRequestDto]] - code - src/CampCenter.Application/DTOs/AdminPanel/AdminPanelDtos.cs
+- [[CreateAdminBookingRequestValidator]] - code - src/CampCenter.Application/Validators/AdminBookingValidators.cs
+- [[DashboardBookingDto]] - code - src/CampCenter.Application/DTOs/AdminPanel/AdminPanelDtos.cs
+- [[DashboardDto]] - code - src/CampCenter.Application/DTOs/AdminPanel/AdminPanelDtos.cs
+- [[OccupancyDto]] - code - src/CampCenter.Application/DTOs/AdminPanel/AdminPanelDtos.cs
+- [[ReassignBookingRequestDto]] - code - src/CampCenter.Application/DTOs/AdminPanel/AdminPanelDtos.cs
+- [[ReassignmentEntryDto]] - code - src/CampCenter.Application/DTOs/AdminPanel/AdminPanelDtos.cs
+- [[RoomOccupancyDto]] - code - src/CampCenter.Application/DTOs/AdminPanel/AdminPanelDtos.cs
+- [[SetBookingPaymentStateRequestDto]] - code - src/CampCenter.Application/DTOs/AdminPanel/AdminPanelDtos.cs
+- [[SetBookingStateRequestDto]] - code - src/CampCenter.Application/DTOs/AdminPanel/AdminPanelDtos.cs
+- [[SetBookingStatusRequestDto]] - code - src/CampCenter.Application/DTOs/AdminPanel/AdminPanelDtos.cs
+- [[UpdateBookingPeopleRequestDto]] - code - src/CampCenter.Application/DTOs/AdminPanel/AdminPanelDtos.cs
+- [[UpdateBookingPricingRequestDto]] - code - src/CampCenter.Application/DTOs/AdminPanel/AdminPanelDtos.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -25,15 +35,20 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_Integration Test Harness (2)]]
-- 4 edges to [[_COMMUNITY_CampCenter.Domain  Repositories (1)]]
-- 2 edges to [[_COMMUNITY_BookingConfiguration]]
-- 1 edge to [[_COMMUNITY_ClosureService]]
-- 1 edge to [[_COMMUNITY_Integration Test Harness (1)]]
-- 1 edge to [[_COMMUNITY_Refresh Token Repository]]
+- 12 edges to [[_COMMUNITY_AdminBookingDto]]
+- 11 edges to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
+- 7 edges to [[_COMMUNITY_Admin Booking & Notifications (2)]]
+- 3 edges to [[_COMMUNITY_Room Task Management (1)]]
+- 2 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
+- 1 edge to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
+- 1 edge to [[_COMMUNITY_CampCenter.UnitTests  Services (3)]]
+- 1 edge to [[_COMMUNITY_.GetBlockedRoomIdsAsync]]
+- 1 edge to [[_COMMUNITY_Exception]]
+- 1 edge to [[_COMMUNITY_DTOs  Schedule (1)]]
 
 ## Top bridge nodes
-- [[Payment]] - degree 15, connects to 5 communities
-- [[PaymentKind]] - degree 4, connects to 2 communities
-- [[Payment.cs]] - degree 4, connects to 1 community
-- [[.Configure()_6]] - degree 3, connects to 1 community
+- [[AdminPanelDtos.cs]] - degree 22, connects to 5 communities
+- [[CreateAdminBookingRequestDto]] - degree 5, connects to 3 communities
+- [[ReassignBookingRequestDto]] - degree 4, connects to 3 communities
+- [[SetBookingStatusRequestDto]] - degree 4, connects to 3 communities
+- [[UpdateBookingPeopleRequestDto]] - degree 4, connects to 3 communities

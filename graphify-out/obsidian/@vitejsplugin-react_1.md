@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/package.json"
 type: "concept"
-community: "ESLint Dev Dependencies"
+community: "@vitejs/plugin-react"
 location: "L27"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/ESLint_Dev_Dependencies
+  - community/vitejs/plugin-react
 ---
 
 # @vitejs/plugin-react
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[@vitejsplugin-react]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/ESLint_Dev_Dependencies
+#graphify/concept #graphify/EXTRACTED #community/vitejs/plugin-react

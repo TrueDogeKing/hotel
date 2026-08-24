@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/components/admin/BookingGroupSection.tsx"
 type: "code"
-community: "Frontend App Shell & i18n"
+community: "@types/react"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Frontend_App_Shell__i18n
+  - community/types/react
 ---
 
 # BookingGroupSection.tsx
@@ -26,4 +26,4 @@ tags:
 - [[getBookingGroupPage()]] - `imports` [EXTRACTED]
 - [[useAuth()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Frontend_App_Shell__i18n
+#graphify/code #graphify/EXTRACTED #community/types/react

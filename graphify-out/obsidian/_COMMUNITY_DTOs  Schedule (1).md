@@ -94,22 +94,28 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 17 edges to [[_COMMUNITY_CampCenter.Application  Services (2)]]
-- 9 edges to [[_COMMUNITY_Camp Session Management]]
-- 7 edges to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
+- 16 edges to [[_COMMUNITY_CampCenter.Application  Services (2)]]
+- 6 edges to [[_COMMUNITY_Camp Session Management]]
 - 4 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
-- 4 edges to [[_COMMUNITY_.GetBlockedRoomIdsAsync]]
+- 4 edges to [[_COMMUNITY_MealTimeDtos.cs]]
+- 3 edges to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
+- 3 edges to [[_COMMUNITY_.GetBlockedRoomIdsAsync]]
 - 3 edges to [[_COMMUNITY_CampCenter.Application  Services (3)]]
-- 2 edges to [[_COMMUNITY_CampCenter.UnitTests  Validators]]
-- 2 edges to [[_COMMUNITY_Validator Unit Tests]]
+- 2 edges to [[_COMMUNITY_Room]]
+- 2 edges to [[_COMMUNITY_ClosureValidatorsTests]]
 - 2 edges to [[_COMMUNITY_Room Management]]
+- 1 edge to [[_COMMUNITY_.Groups]]
+- 1 edge to [[_COMMUNITY_Admin Booking & Notifications (2)]]
 - 1 edge to [[_COMMUNITY_BookingSettings]]
-- 1 edge to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
-- 1 edge to [[_COMMUNITY_ClosureService]]
+- 1 edge to [[_COMMUNITY_Frontend App Shell & i18n]]
+- 1 edge to [[_COMMUNITY_AdminBookingDto]]
+- 1 edge to [[_COMMUNITY_.Update]]
+- 1 edge to [[_COMMUNITY_ScheduleValidators.cs]]
+- 1 edge to [[_COMMUNITY_Exception]]
 
 ## Top bridge nodes
-- [[AbstractValidator]] - degree 16, connects to 6 communities
+- [[AbstractValidator]] - degree 16, connects to 7 communities
 - [[ScheduleDtos.cs]] - degree 21, connects to 4 communities
 - [[IScheduleService]] - degree 19, connects to 4 communities
 - [[ScheduleValidators.cs]] - degree 7, connects to 3 communities
-- [[ScheduleController]] - degree 18, connects to 2 communities
+- [[UpdateDietaryNotesRequestDto]] - degree 5, connects to 3 communities

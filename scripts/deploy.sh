@@ -9,6 +9,11 @@
 # meant to run unattended, so silently discarding local changes would be worse
 # than a failed deploy.
 #
+# Called with the argument `boot` (see the @reboot line in
+# scripts/register-deploy-cron.sh) it first waits for the Docker daemon and
+# brings the stack up, then carries on with the usual update check. That is the
+# path that matters after a power cut.
+#
 # Linux counterpart of scripts/deploy.ps1 — see that file for the Windows
 # version and the PowerShell-specific pitfall (stderr-as-terminating-error)
 # that does not apply here, since bash does not treat a command's stderr as an
@@ -19,10 +24,55 @@ set -uo pipefail
 repo_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$repo_root"
 
+# cron runs with a minimal PATH (/usr/bin:/bin). That misses a snap-installed
+# Docker (/snap/bin) and anything in /usr/local/bin, and the failure would show
+# up only as "docker: command not found" in a log nobody reads.
+PATH="$PATH:/usr/local/bin:/snap/bin"
+
 log_file="$repo_root/deploy.log"
 log() {
     printf '%s  %s\n' "$(date '+%Y-%m-%d %H:%M:%S')" "$1" | tee -a "$log_file"
 }
+
+# "boot" when cron fires this from @reboot, anything else on the 5-minute schedule.
+mode="${1:-scheduled}"
+
+compose() {
+    docker compose --env-file .env -f docker/docker-compose.prod.yml "$@"
+}
+
+if [ "$mode" = "boot" ]; then
+    log "Boot run: making sure the stack is up."
+
+    # At boot this races the Docker daemon, which is usually not accepting
+    # connections yet. Five minutes of patience, then give up and let the
+    # 5-minute schedule retry.
+    docker_ready=0
+    for _ in $(seq 1 60); do
+        if docker info >/dev/null 2>&1; then
+            docker_ready=1
+            break
+        fi
+        sleep 5
+    done
+
+    if [ "$docker_ready" -ne 1 ]; then
+        log "ERROR: Docker is still not responding 5 minutes after boot; the scheduled runs will retry"
+        exit 1
+    fi
+
+    # `restart: unless-stopped` already brings back containers that were running
+    # when the power went — but not ones that a `docker compose down` (or a failed
+    # deploy) left absent, and not if the daemon itself was down at the time. This
+    # is idempotent: containers already running are left alone, and no --build, so
+    # it starts the images that are already on disk instead of waiting on a rebuild.
+    if ! compose up -d >>"$log_file" 2>&1; then
+        log "ERROR: docker compose up failed on the boot run"
+        exit 1
+    fi
+
+    log "Stack is up."
+fi
 
 git fetch origin main >/dev/null 2>&1
 if [ $? -ne 0 ]; then
@@ -62,7 +112,7 @@ if ! docker compose --env-file .env -f docker/docker-compose.prod.yml \
 fi
 
 log "Rebuilding and restarting containers..."
-if ! docker compose --env-file .env -f docker/docker-compose.prod.yml up -d --build >>"$log_file" 2>&1; then
+if ! compose up -d --build >>"$log_file" 2>&1; then
     log "ERROR: docker compose up failed"
     exit 1
 fi

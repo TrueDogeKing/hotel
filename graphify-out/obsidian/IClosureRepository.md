@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Domain/Repositories/IClosureRepository.cs"
 type: "code"
-community: "Validator Unit Tests"
+community: "Prettier Dependency"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Validator_Unit_Tests
+  - community/Prettier_Dependency
 ---
 
 # IClosureRepository
@@ -28,4 +28,4 @@ tags:
 - [[IClosureRepository.cs]] - `contains` [EXTRACTED]
 - [[PublicAvailabilityController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Validator_Unit_Tests
+#graphify/code #graphify/EXTRACTED #community/Prettier_Dependency

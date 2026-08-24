@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Services/MealTimeService.cs"
 type: "code"
-community: "ClosureService"
+community: "Application Namespaces & DTOs"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ClosureService
+  - community/Application_Namespaces__DTOs
 ---
 
 # MealTimeService.cs
@@ -20,4 +20,4 @@ tags:
 - [[CampCenter.Domain.Repositories]] - `imports` [EXTRACTED]
 - [[MealTimeService]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ClosureService
+#graphify/code #graphify/EXTRACTED #community/Application_Namespaces__DTOs

@@ -1,11 +1,11 @@
 ---
 type: community
-members: 26
+members: 27
 ---
 
 # Application Namespaces & DTOs
 
-**Members:** 26 nodes
+**Members:** 27 nodes
 
 ## Members
 - [[BookingsController.cs]] - code - src/CampCenter.Api/Controllers/Admin/BookingsController.cs
@@ -13,26 +13,27 @@ members: 26
 - [[CampCenter.Api.Extensions]] - code - src/CampCenter.Api/Extensions/ClaimsPrincipalExtensions.cs
 - [[CampCenter.Application.DTOs.AdminPanel]] - code - src/CampCenter.Application/DTOs/AdminPanel/AdminPanelDtos.cs
 - [[CampCenter.Application.DTOs.Schedule]] - code - src/CampCenter.Application/DTOs/Schedule/MealTimeDtos.cs
-- [[CampCenter.Application.DTOs.Users]] - code - src/CampCenter.Application/DTOs/Users/UserDtos.cs
 - [[CampCenter.Application.Interfaces]] - code - src/CampCenter.Application/Interfaces/IAdminBookingService.cs
 - [[ClosuresController.cs]] - code - src/CampCenter.Api/Controllers/Admin/ClosuresController.cs
 - [[DashboardController.cs]] - code - src/CampCenter.Api/Controllers/Admin/DashboardController.cs
 - [[HousekeepingController.cs]] - code - src/CampCenter.Api/Controllers/Admin/HousekeepingController.cs
+- [[HousekeepingService.cs]] - code - src/CampCenter.Application/Services/HousekeepingService.cs
 - [[IAdminBookingService.cs]] - code - src/CampCenter.Application/Interfaces/IAdminBookingService.cs
+- [[IBookingService.cs]] - code - src/CampCenter.Application/Interfaces/IBookingService.cs
 - [[IHousekeepingService.cs]] - code - src/CampCenter.Application/Interfaces/IHousekeepingService.cs
 - [[IMealTimeService.cs]] - code - src/CampCenter.Application/Interfaces/IMealTimeService.cs
 - [[IPricingService.cs]] - code - src/CampCenter.Application/Interfaces/IPricingService.cs
 - [[IRoomTaskService.cs]] - code - src/CampCenter.Application/Interfaces/IRoomTaskService.cs
 - [[IScheduleService.cs]] - code - src/CampCenter.Application/Interfaces/IScheduleService.cs
-- [[IUserService.cs]] - code - src/CampCenter.Application/Interfaces/IUserService.cs
+- [[MealTimeService.cs]] - code - src/CampCenter.Application/Services/MealTimeService.cs
 - [[MealTimesController.cs]] - code - src/CampCenter.Api/Controllers/Admin/MealTimesController.cs
 - [[OccupancyController.cs]] - code - src/CampCenter.Api/Controllers/Admin/OccupancyController.cs
 - [[PricingController.cs]] - code - src/CampCenter.Api/Controllers/Admin/PricingController.cs
 - [[RoomDeleteResultDto]] - code - src/CampCenter.Api/Controllers/Admin/RoomsController.cs
+- [[RoomTaskService.cs]] - code - src/CampCenter.Application/Services/RoomTaskService.cs
 - [[RoomsController.cs]] - code - src/CampCenter.Api/Controllers/Admin/RoomsController.cs
 - [[ScheduleController.cs]] - code - src/CampCenter.Api/Controllers/Admin/ScheduleController.cs
 - [[TasksController.cs]] - code - src/CampCenter.Api/Controllers/Admin/TasksController.cs
-- [[UsersAndRolesApiTests.cs]] - code - tests/CampCenter.IntegrationTests/UsersAndRolesApiTests.cs
 - [[UsersController.cs]] - code - src/CampCenter.Api/Controllers/Admin/UsersController.cs
 
 ## Live Query (requires Dataview plugin)
@@ -43,34 +44,39 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 33 edges to [[_COMMUNITY_ClosureService]]
-- 16 edges to [[_COMMUNITY_CampCenter.Application.DTOs.Public]]
+- 25 edges to [[_COMMUNITY_ClosureService]]
+- 15 edges to [[_COMMUNITY_Exception]]
+- 14 edges to [[_COMMUNITY_CampCenter.Application.DTOs.Public]]
 - 6 edges to [[_COMMUNITY_Public Booking Service (2)]]
-- 5 edges to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
-- 5 edges to [[_COMMUNITY_.GetBlockedRoomIdsAsync]]
+- 5 edges to [[_COMMUNITY_eslint]]
+- 4 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (2)]]
 - 4 edges to [[_COMMUNITY_DTOs  Schedule (1)]]
-- 3 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (2)]]
-- 3 edges to [[_COMMUNITY_Camp Session Management]]
-- 3 edges to [[_COMMUNITY_CampCenter.Application  Services (3)]]
-- 3 edges to [[_COMMUNITY_Exception]]
-- 3 edges to [[_COMMUNITY_SmtpEmailSender]]
+- 3 edges to [[_COMMUNITY_Room Task Management (1)]]
+- 2 edges to [[_COMMUNITY_.Groups]]
+- 2 edges to [[_COMMUNITY_Camp Session Management]]
 - 2 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (3)]]
-- 2 edges to [[_COMMUNITY_Room Task Management (1)]]
+- 2 edges to [[_COMMUNITY_Room Management]]
+- 2 edges to [[_COMMUNITY_UsersController]]
+- 2 edges to [[_COMMUNITY_.Update]]
+- 2 edges to [[_COMMUNITY_.GetBlockedRoomIdsAsync]]
+- 2 edges to [[_COMMUNITY_Admin Booking & Notifications (4)]]
 - 1 edge to [[_COMMUNITY_WriteRequiresAdministratorHandler]]
-- 1 edge to [[_COMMUNITY_Validator Unit Tests]]
-- 1 edge to [[_COMMUNITY_Room Management]]
-- 1 edge to [[_COMMUNITY_Claims Principal Extensions]]
-- 1 edge to [[_COMMUNITY_.NextFreeSitting]]
-- 1 edge to [[_COMMUNITY_Admin Booking & Notifications (4)]]
 - 1 edge to [[_COMMUNITY_Admin Booking & Notifications (2)]]
+- 1 edge to [[_COMMUNITY_SmtpEmailSender]]
+- 1 edge to [[_COMMUNITY_Claims Principal Extensions]]
+- 1 edge to [[_COMMUNITY_MealTimeDtos.cs]]
+- 1 edge to [[_COMMUNITY_ScheduleValidators.cs]]
+- 1 edge to [[_COMMUNITY_AdminBookingDto]]
+- 1 edge to [[_COMMUNITY_.NextFreeSitting]]
+- 1 edge to [[_COMMUNITY_Auth Service & Tokens]]
 - 1 edge to [[_COMMUNITY_Payment Gateway Integration Tests (1)]]
-- 1 edge to [[_COMMUNITY_CampCenter.UnitTests  Validators]]
-- 1 edge to [[_COMMUNITY_eslint]]
-- 1 edge to [[_COMMUNITY_PasswordRules]]
+- 1 edge to [[_COMMUNITY_Room]]
+- 1 edge to [[_COMMUNITY_BookingSettings]]
+- 1 edge to [[_COMMUNITY_MealTimeService]]
 
 ## Top bridge nodes
-- [[CampCenter.Application.Interfaces]] - degree 58, connects to 12 communities
+- [[CampCenter.Application.Interfaces]] - degree 58, connects to 13 communities
 - [[CampCenter.Application.DTOs.Schedule]] - degree 21, connects to 6 communities
-- [[CampCenter.Application.DTOs.AdminPanel]] - degree 22, connects to 5 communities
-- [[CampCenter.Application.DTOs.Users]] - degree 6, connects to 3 communities
-- [[BookingsController.cs]] - degree 6, connects to 2 communities
+- [[CampCenter.Application.DTOs.AdminPanel]] - degree 22, connects to 4 communities
+- [[HousekeepingService.cs]] - degree 7, connects to 3 communities
+- [[MealTimeService.cs]] - degree 7, connects to 3 communities

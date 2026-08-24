@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Payments/P24Settings.cs"
 type: "code"
-community: "SmtpEmailSender"
+community: "eslint"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SmtpEmailSender
+  - community/eslint
 ---
 
 # CampCenter.Infrastructure.Payments
@@ -18,4 +18,4 @@ tags:
 - [[P24SignCalculatorTests.cs]] - `imports` [EXTRACTED]
 - [[Przelewy24Client.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SmtpEmailSender
+#graphify/code #graphify/EXTRACTED #community/eslint

@@ -1,37 +1,44 @@
 ---
 type: community
-members: 26
+members: 33
 ---
 
 # Exception
 
-**Members:** 26 nodes
+**Members:** 33 nodes
 
 ## Members
-- [[.AddInfrastructure()]] - code - src/CampCenter.Infrastructure/DependencyInjection.cs
 - [[AdminUserRepository.cs]] - code - src/CampCenter.Infrastructure/Repositories/AdminUserRepository.cs
+- [[BookingMaintenanceService.cs]] - code - src/CampCenter.Api/Background/BookingMaintenanceService.cs
+- [[BookingMealTime.cs]] - code - src/CampCenter.Domain/Entities/BookingMealTime.cs
 - [[BookingMealTimeRepository.cs]] - code - src/CampCenter.Infrastructure/Repositories/BookingMealTimeRepository.cs
 - [[BookingRepository.cs]] - code - src/CampCenter.Infrastructure/Repositories/BookingRepository.cs
-- [[CampCenter.Api.Errors]] - code - src/CampCenter.Api/Errors/GlobalExceptionHandler.cs
-- [[CampCenter.Infrastructure]] - code - src/CampCenter.Infrastructure/DependencyInjection.cs
+- [[BookingStatuses_1]] - code - src/CampCenter.Domain/Entities/BookingStatuses.cs
+- [[BookingStatuses.cs]] - code - src/CampCenter.Domain/Entities/BookingStatuses.cs
+- [[CampCenter.Api.Background]] - code - src/CampCenter.Api/Background/BookingMaintenanceService.cs
+- [[CampCenter.Domain.Entities]] - code - src/CampCenter.Domain/Entities/AdminUser.cs
+- [[CampCenter.Domain.Repositories]] - code - src/CampCenter.Domain/Repositories/IAdminUserRepository.cs
 - [[CampCenter.Infrastructure.Persistence]] - code - src/CampCenter.Infrastructure/Persistence/AppDbContext.cs
-- [[CampCenter.Infrastructure.Persistence.Seed]] - code - src/CampCenter.Infrastructure/Persistence/Seed/DataSeeder.cs
 - [[CampCenter.Infrastructure.Repositories]] - code - src/CampCenter.Infrastructure/Repositories/AdminUserRepository.cs
-- [[CampCenterApiFactory.cs]] - code - tests/CampCenter.IntegrationTests/CampCenterApiFactory.cs
 - [[ClosureRepository.cs]] - code - src/CampCenter.Infrastructure/Repositories/ClosureRepository.cs
-- [[DataSeeder.cs]] - code - src/CampCenter.Infrastructure/Persistence/Seed/DataSeeder.cs
-- [[DependencyInjection_1]] - code - src/CampCenter.Infrastructure/DependencyInjection.cs
-- [[DependencyInjection.cs_1]] - code - src/CampCenter.Infrastructure/DependencyInjection.cs
-- [[GlobalExceptionHandler.cs]] - code - src/CampCenter.Api/Errors/GlobalExceptionHandler.cs
-- [[IConfiguration]] - code
-- [[IServiceCollection_1]] - code
+- [[ClosureService.cs]] - code - src/CampCenter.Application/Services/ClosureService.cs
+- [[IAdminUserRepository.cs]] - code - src/CampCenter.Domain/Repositories/IAdminUserRepository.cs
+- [[IBookingMealTimeRepository.cs]] - code - src/CampCenter.Domain/Repositories/IBookingMealTimeRepository.cs
+- [[IBookingRepository.cs]] - code - src/CampCenter.Domain/Repositories/IBookingRepository.cs
+- [[IClosureRepository.cs]] - code - src/CampCenter.Domain/Repositories/IClosureRepository.cs
+- [[IMealTimeDefaultRepository.cs]] - code - src/CampCenter.Domain/Repositories/IMealTimeDefaultRepository.cs
+- [[IPricingDefaultsRepository.cs]] - code - src/CampCenter.Domain/Repositories/IPricingDefaultsRepository.cs
+- [[IRefreshTokenRepository.cs]] - code - src/CampCenter.Domain/Repositories/IRefreshTokenRepository.cs
+- [[IRoomCleaningRepository.cs]] - code - src/CampCenter.Domain/Repositories/IRoomCleaningRepository.cs
+- [[IRoomRepository.cs]] - code - src/CampCenter.Domain/Repositories/IRoomRepository.cs
+- [[IRoomTaskRepository.cs]] - code - src/CampCenter.Domain/Repositories/IRoomTaskRepository.cs
+- [[IScheduleEntryRepository.cs]] - code - src/CampCenter.Domain/Repositories/IScheduleEntryRepository.cs
 - [[MealTimeDefaultRepository.cs]] - code - src/CampCenter.Infrastructure/Repositories/MealTimeDefaultRepository.cs
 - [[PricingDefaultsRepository.cs]] - code - src/CampCenter.Infrastructure/Repositories/PricingDefaultsRepository.cs
-- [[Program]] - code - src/CampCenter.Api/Program.cs
-- [[Program.cs]] - code - src/CampCenter.Api/Program.cs
 - [[RefreshTokenRepository.cs]] - code - src/CampCenter.Infrastructure/Repositories/RefreshTokenRepository.cs
 - [[RoomCleaningRepository.cs]] - code - src/CampCenter.Infrastructure/Repositories/RoomCleaningRepository.cs
 - [[RoomRepository.cs]] - code - src/CampCenter.Infrastructure/Repositories/RoomRepository.cs
+- [[RoomService.cs]] - code - src/CampCenter.Application/Services/RoomService.cs
 - [[RoomTaskRepository.cs]] - code - src/CampCenter.Infrastructure/Repositories/RoomTaskRepository.cs
 - [[ScheduleEntryRepository.cs]] - code - src/CampCenter.Infrastructure/Repositories/ScheduleEntryRepository.cs
 
@@ -43,17 +50,39 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 28 edges to [[_COMMUNITY_ClosureService]]
+- 31 edges to [[_COMMUNITY_ClosureService]]
+- 15 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
+- 8 edges to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
+- 7 edges to [[_COMMUNITY_BookingConfiguration]]
+- 5 edges to [[_COMMUNITY_CampCenter.Application.DTOs.Public]]
+- 5 edges to [[_COMMUNITY_Room Management]]
+- 5 edges to [[_COMMUNITY_Booking Persistence & Entities (1)]]
+- 4 edges to [[_COMMUNITY_Public Booking Service (2)]]
+- 4 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (2)]]
+- 4 edges to [[_COMMUNITY_Room Task Management (1)]]
 - 4 edges to [[_COMMUNITY_EF Core Migrations (3)]]
-- 3 edges to [[_COMMUNITY_Public Booking Service (2)]]
-- 3 edges to [[_COMMUNITY_Payment Gateway Integration Tests (2)]]
-- 3 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
+- 3 edges to [[_COMMUNITY_Admin Booking & Notifications (1)]]
+- 3 edges to [[_COMMUNITY_Validator Unit Tests]]
 - 3 edges to [[_COMMUNITY_Refresh Token Repository]]
-- 1 edge to [[_COMMUNITY_Global Exception Handler]]
-- 1 edge to [[_COMMUNITY_OpenAPI Security Scheme]]
-- 1 edge to [[_COMMUNITY_.NextFreeSitting]]
-- 1 edge to [[_COMMUNITY_eslint]]
-- 1 edge to [[_COMMUNITY_SmtpEmailSender]]
+- 3 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (4)]]
+- 3 edges to [[_COMMUNITY_eslint]]
+- 2 edges to [[_COMMUNITY_MealTimeService]]
+- 2 edges to [[_COMMUNITY_components  admin]]
+- 1 edge to [[_COMMUNITY_WriteRequiresAdministratorHandler]]
+- 1 edge to [[_COMMUNITY_Booking Maintenance Background Service]]
+- 1 edge to [[_COMMUNITY_Auth Controller (1)]]
+- 1 edge to [[_COMMUNITY_Integration Test Harness (1)]]
+- 1 edge to [[_COMMUNITY_CampCenter.UnitTests  Services (1)]]
+- 1 edge to [[_COMMUNITY_.Update]]
+- 1 edge to [[_COMMUNITY_ScheduleValidators.cs]]
+- 1 edge to [[_COMMUNITY_DTOs  Schedule (1)]]
+- 1 edge to [[_COMMUNITY_CampCenter.Application  Services (3)]]
+- 1 edge to [[_COMMUNITY_.Groups]]
+- 1 edge to [[_COMMUNITY_IRoomService]]
+- 1 edge to [[_COMMUNITY_RoomNumberComparer]]
+- 1 edge to [[_COMMUNITY_Integration Test Harness (2)]]
+- 1 edge to [[_COMMUNITY_Prettier Dependency]]
+- 1 edge to [[_COMMUNITY_Auth Service & Tokens]]
 - 1 edge to [[_COMMUNITY_EF Core Migrations (1)]]
 - 1 edge to [[_COMMUNITY_20260719143540_CoreDomain.Designer.cs]]
 - 1 edge to [[_COMMUNITY_20260721111400_ReplaceSessionsWithClosures.Designer.cs]]
@@ -65,21 +94,12 @@ SORT file.name ASC
 - 1 edge to [[_COMMUNITY_20260802130913_MakeRoomTaskRoomOptional.Designer.cs]]
 - 1 edge to [[_COMMUNITY_UsersPage.tsx]]
 - 1 edge to [[_COMMUNITY_GroupRooms.tsx]]
-- 1 edge to [[_COMMUNITY_Booking Persistence & Entities (1)]]
-- 1 edge to [[_COMMUNITY_CampCenter.Application  Services (2)]]
 - 1 edge to [[_COMMUNITY_CampCenter.Domain  Repositories (1)]]
-- 1 edge to [[_COMMUNITY_Validator Unit Tests]]
-- 1 edge to [[_COMMUNITY_CampCenter.UnitTests  Services (1)]]
-- 1 edge to [[_COMMUNITY_CampCenter.UnitTests  Services (3)]]
-- 1 edge to [[_COMMUNITY_CampCenter.UnitTests  Services (2)]]
-- 1 edge to [[_COMMUNITY_Room Management]]
-- 1 edge to [[_COMMUNITY_Room Task Management (1)]]
-- 1 edge to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
-- 1 edge to [[_COMMUNITY_CampCenter.Application.DTOs.Public]]
+- 1 edge to [[_COMMUNITY_CampCenter.UnitTests  Validators]]
 
 ## Top bridge nodes
-- [[CampCenter.Infrastructure.Persistence]] - degree 31, connects to 13 communities
-- [[DependencyInjection.cs_1]] - degree 9, connects to 5 communities
-- [[Program.cs]] - degree 9, connects to 3 communities
-- [[CampCenterApiFactory.cs]] - degree 5, connects to 3 communities
-- [[DataSeeder.cs]] - degree 4, connects to 3 communities
+- [[CampCenter.Domain.Entities]] - degree 90, connects to 25 communities
+- [[CampCenter.Infrastructure.Persistence]] - degree 31, connects to 15 communities
+- [[CampCenter.Domain.Repositories]] - degree 40, connects to 4 communities
+- [[ClosureService.cs]] - degree 7, connects to 4 communities
+- [[RoomService.cs]] - degree 7, connects to 4 communities

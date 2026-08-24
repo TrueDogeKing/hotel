@@ -1,40 +1,29 @@
 ---
 type: community
-members: 27
+members: 16
 ---
 
 # Auth Controller (1)
 
-**Members:** 27 nodes
+**Members:** 16 nodes
 
 ## Members
-- [[.BuildCookieOptions()]] - code - src/CampCenter.Api/Controllers/AuthController.cs
-- [[.DeleteRefreshTokenCookie()]] - code - src/CampCenter.Api/Controllers/AuthController.cs
-- [[.IssueTokens()]] - code - src/CampCenter.Api/Controllers/AuthController.cs
-- [[.Login()]] - code - src/CampCenter.Api/Controllers/AuthController.cs
-- [[.LoginAsync()]] - code - src/CampCenter.Application/Interfaces/IAuthService.cs
-- [[.Logout()]] - code - src/CampCenter.Api/Controllers/AuthController.cs
-- [[.LogoutAsync()]] - code - src/CampCenter.Application/Interfaces/IAuthService.cs
-- [[.Refresh()]] - code - src/CampCenter.Api/Controllers/AuthController.cs
-- [[.RefreshAsync()]] - code - src/CampCenter.Application/Interfaces/IAuthService.cs
-- [[.SetRefreshTokenCookie()]] - code - src/CampCenter.Api/Controllers/AuthController.cs
-- [[AuthController]] - code - src/CampCenter.Api/Controllers/AuthController.cs
-- [[AuthResult]] - code - src/CampCenter.Application/Models/AuthResult.cs
-- [[AuthResult.cs]] - code - src/CampCenter.Application/Models/AuthResult.cs
-- [[CancellationToken_12]] - code
-- [[CancellationToken_18]] - code
-- [[CookieOptions]] - code
-- [[DateTime]] - code
-- [[EnableRateLimiting]] - code
-- [[HttpPost_7]] - code
-- [[IActionResult_11]] - code
-- [[IAuthService]] - code - src/CampCenter.Application/Interfaces/IAuthService.cs
-- [[IValidator_6]] - code
-- [[LoginRequestDto]] - code - src/CampCenter.Application/DTOs/Auth/LoginRequestDto.cs
-- [[LoginRequestDto.cs]] - code - src/CampCenter.Application/DTOs/Auth/LoginRequestDto.cs
-- [[ProducesResponseType_11]] - code
-- [[Task_13]] - code
-- [[Task_18]] - code
+- [[.CreateAsync()_9]] - code - src/CampCenter.Application/Services/ClosureService.cs
+- [[.DeleteAsync()_5]] - code - src/CampCenter.Application/Services/ClosureService.cs
+- [[.GetAllAsync()_3]] - code - src/CampCenter.Application/Services/ClosureService.cs
+- [[.GetOrThrowAsync()_1]] - code - src/CampCenter.Application/Services/ClosureService.cs
+- [[.GuardNoLiveBookingsAsync()]] - code - src/CampCenter.Application/Services/ClosureService.cs
+- [[.GuardRoomExistsAsync()]] - code - src/CampCenter.Application/Services/ClosureService.cs
+- [[.SaveChangesAsync()_3]] - code - src/CampCenter.Domain/Repositories/IClosureRepository.cs
+- [[.ToDto()_1]] - code - src/CampCenter.Application/Services/ClosureService.cs
+- [[.UpdateAsync()_5]] - code - src/CampCenter.Application/Services/ClosureService.cs
+- [[CancellationToken_36]] - code
+- [[ClosureDto]] - code - src/CampCenter.Application/DTOs/Closures/ClosureDtos.cs
+- [[ClosureService]] - code - src/CampCenter.Application/Services/ClosureService.cs
+- [[DateOnly_11]] - code
+- [[Guid_21]] - code
+- [[List_9]] - code
+- [[Task_36]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -44,16 +33,17 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_Auth Service & Tokens]]
-- 3 edges to [[_COMMUNITY_.GetBlockedRoomIdsAsync]]
-- 1 edge to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
-- 1 edge to [[_COMMUNITY_Public Booking Service (2)]]
-- 1 edge to [[_COMMUNITY_CampCenter.Application  Services (1)]]
-- 1 edge to [[_COMMUNITY_ClosureService]]
+- 8 edges to [[_COMMUNITY_Prettier Dependency]]
+- 4 edges to [[_COMMUNITY_.NextFreeSitting]]
+- 3 edges to [[_COMMUNITY_ClosureValidatorsTests]]
+- 2 edges to [[_COMMUNITY_Integration Test Harness (2)]]
+- 2 edges to [[_COMMUNITY_Room Management]]
+- 2 edges to [[_COMMUNITY_Validator Unit Tests]]
+- 1 edge to [[_COMMUNITY_Exception]]
 
 ## Top bridge nodes
-- [[AuthController]] - degree 12, connects to 3 communities
-- [[IAuthService]] - degree 6, connects to 2 communities
-- [[LoginRequestDto]] - degree 5, connects to 2 communities
-- [[AuthResult]] - degree 7, connects to 1 community
-- [[LoginRequestDto.cs]] - degree 2, connects to 1 community
+- [[ClosureService]] - degree 13, connects to 5 communities
+- [[.CreateAsync()_9]] - degree 11, connects to 2 communities
+- [[.GetOrThrowAsync()_1]] - degree 9, connects to 2 communities
+- [[ClosureDto]] - degree 8, connects to 2 communities
+- [[.UpdateAsync()_5]] - degree 11, connects to 1 community

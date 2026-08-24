@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Admin Bookings Controller & DTOs"
+community: "IAvailabilityService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Bookings_Controller__DTOs
+  - community/IAvailabilityService
 ---
 
 # Task
@@ -17,4 +17,4 @@ tags:
 - [[.GetCenterClosureReasonAsync()]] - `references` [EXTRACTED]
 - [[.GetFreeRoomsByCapacityAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Bookings_Controller__DTOs
+#graphify/code #graphify/EXTRACTED #community/IAvailabilityService

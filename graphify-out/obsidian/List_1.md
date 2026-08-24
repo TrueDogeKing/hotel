@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Validator Unit Tests"
+community: ".NextFreeSitting"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Validator_Unit_Tests
+  - community/NextFreeSitting
 ---
 
 # List
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.GetAllAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Validator_Unit_Tests
+#graphify/code #graphify/EXTRACTED #community/NextFreeSitting

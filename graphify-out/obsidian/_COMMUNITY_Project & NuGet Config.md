@@ -18,7 +18,7 @@ members: 45
 - [[CampCenter.slnx]] - code - CampCenter.slnx
 - [[FluentValidation (12.1.1)]] - code - tests/CampCenter.UnitTests/CampCenter.UnitTests.csproj
 - [[FluentValidation.DependencyInjectionExtensions (12.1.1)]] - code - src/CampCenter.Application/CampCenter.Application.csproj
-- [[MailKit (4.14.1)]] - code - src/CampCenter.Infrastructure/CampCenter.Infrastructure.csproj
+- [[MailKit (4.17.0)]] - code - src/CampCenter.Infrastructure/CampCenter.Infrastructure.csproj
 - [[Microsoft.AspNetCore.Authentication.JwtBearer (10.0.9)]] - code - src/CampCenter.Api/CampCenter.Api.csproj
 - [[Microsoft.AspNetCore.Mvc.Testing (10.0.9)]] - code - tests/CampCenter.IntegrationTests/CampCenter.IntegrationTests.csproj
 - [[Microsoft.AspNetCore.OpenApi (10.0.9)]] - code - src/CampCenter.Api/CampCenter.Api.csproj
@@ -40,7 +40,7 @@ members: 45
 - [[Npgsql.EntityFrameworkCore.PostgreSQL (10.0.2)]] - code - src/CampCenter.Infrastructure/CampCenter.Infrastructure.csproj
 - [[Scalar.AspNetCore (2.16.5)]] - code - src/CampCenter.Api/CampCenter.Api.csproj
 - [[System.IdentityModel.Tokens.Jwt (8.19.1)]] - code - src/CampCenter.Infrastructure/CampCenter.Infrastructure.csproj
-- [[Testcontainers.PostgreSql (4.12.0)]] - code - tests/CampCenter.IntegrationTests/CampCenter.IntegrationTests.csproj
+- [[Testcontainers.PostgreSql (4.14.0)]] - code - tests/CampCenter.IntegrationTests/CampCenter.IntegrationTests.csproj
 - [[coverlet.collector (6.0.4)]] - code - tests/CampCenter.IntegrationTests/CampCenter.IntegrationTests.csproj
 - [[coverlet.collector (6.0.4)_1]] - code - tests/CampCenter.UnitTests/CampCenter.UnitTests.csproj
 - [[net10.0]] - concept - src/CampCenter.Api/CampCenter.Api.csproj

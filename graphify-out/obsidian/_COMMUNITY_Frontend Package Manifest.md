@@ -1,14 +1,16 @@
 ---
 type: community
-members: 5
+members: 7
 ---
 
 # Frontend Package Manifest
 
-**Members:** 5 nodes
+**Members:** 7 nodes
 
 ## Members
+- [[brace-expansion]] - code - frontend/package.json
 - [[name]] - code - frontend/package.json
+- [[overrides]] - code - frontend/package.json
 - [[package.json]] - code - frontend/package.json
 - [[private]] - code - frontend/package.json
 - [[type]] - code - frontend/package.json
@@ -27,4 +29,4 @@ SORT file.name ASC
 - 1 edge to [[_COMMUNITY_Frontend Build Scripts]]
 
 ## Top bridge nodes
-- [[package.json]] - degree 7, connects to 3 communities
+- [[package.json]] - degree 8, connects to 3 communities

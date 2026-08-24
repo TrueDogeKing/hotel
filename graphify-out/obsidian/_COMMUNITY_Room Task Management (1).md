@@ -94,15 +94,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 7 edges to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
-- 4 edges to [[_COMMUNITY_ClosureService]]
 - 4 edges to [[_COMMUNITY_Room Management]]
+- 4 edges to [[_COMMUNITY_Exception]]
+- 3 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
+- 3 edges to [[_COMMUNITY_.Update]]
+- 3 edges to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
 - 3 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (2)]]
-- 2 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
-- 2 edges to [[_COMMUNITY_Refresh Token Repository]]
+- 2 edges to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
 - 2 edges to [[_COMMUNITY_BookingConfiguration]]
+- 1 edge to [[_COMMUNITY_.Groups]]
 - 1 edge to [[_COMMUNITY_Integration Test Harness (1)]]
-- 1 edge to [[_COMMUNITY_Exception]]
 
 ## Top bridge nodes
 - [[RoomTask_1]] - degree 18, connects to 3 communities

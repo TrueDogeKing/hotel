@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Admin Bookings Controller & DTOs"
+community: "Admin Booking & Notifications (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Bookings_Controller__DTOs
+  - community/Admin_Booking__Notifications_2
 ---
 
 # IValidator
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[BookingsController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Bookings_Controller__DTOs
+#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_2

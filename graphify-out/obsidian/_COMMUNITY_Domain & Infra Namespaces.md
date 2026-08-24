@@ -80,7 +80,7 @@ SORT file.name ASC
 - 14 edges to [[_COMMUNITY_src  utils]]
 - 6 edges to [[_COMMUNITY_Public Booking Frontend (1)]]
 - 6 edges to [[_COMMUNITY_Persistence  Migrations (10)]]
-- 4 edges to [[_COMMUNITY_Frontend App Shell & i18n]]
+- 4 edges to [[_COMMUNITY_@typesreact]]
 - 3 edges to [[_COMMUNITY_Frontend Auth & API Client]]
 - 3 edges to [[_COMMUNITY_Frontend Icon Components]]
 - 2 edges to [[_COMMUNITY_useAuth]]

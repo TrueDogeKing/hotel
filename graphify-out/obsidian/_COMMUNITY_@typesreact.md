@@ -1,15 +1,21 @@
 ---
 type: community
-members: 2
+members: 8
 ---
 
 # @types/react
 
-**Members:** 2 nodes
+**Members:** 8 nodes
 
 ## Members
-- [[@typesreact]] - code - frontend/package.json
-- [[@typesreact_1]] - concept - frontend/package.json
+- [[BookingGroupCategory]] - code - frontend/src/api/admin.ts
+- [[BookingGroupSection()]] - code - frontend/src/components/admin/BookingGroupSection.tsx
+- [[BookingGroupSection.tsx]] - code - frontend/src/components/admin/BookingGroupSection.tsx
+- [[BookingStatus]] - code - frontend/src/api/admin.ts
+- [[DashboardBooking]] - code - frontend/src/api/admin.ts
+- [[Props_7]] - code - frontend/src/components/admin/BookingGroupSection.tsx
+- [[bookingStatuses]] - code - frontend/src/api/admin.ts
+- [[getBookingGroupPage()]] - code - frontend/src/api/admin.ts
 
 ## Live Query (requires Dataview plugin)
 
@@ -19,7 +25,17 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_ESLint Dev Dependencies]]
+- 6 edges to [[_COMMUNITY_Room Closure Management]]
+- 4 edges to [[_COMMUNITY_Domain & Infra Namespaces]]
+- 2 edges to [[_COMMUNITY_useAuth]]
+- 2 edges to [[_COMMUNITY_MealTimeDefault]]
+- 2 edges to [[_COMMUNITY_Public Booking Frontend (1)]]
+- 1 edge to [[_COMMUNITY_Frontend Auth & API Client]]
+- 1 edge to [[_COMMUNITY_src  utils]]
 
 ## Top bridge nodes
-- [[@typesreact]] - degree 2, connects to 1 community
+- [[BookingGroupSection.tsx]] - degree 13, connects to 6 communities
+- [[BookingStatus]] - degree 6, connects to 3 communities
+- [[bookingStatuses]] - degree 4, connects to 3 communities
+- [[BookingGroupSection()]] - degree 4, connects to 2 communities
+- [[BookingGroupCategory]] - degree 3, connects to 1 community

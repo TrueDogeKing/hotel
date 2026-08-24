@@ -73,7 +73,7 @@ SORT file.name ASC
 - 4 edges to [[_COMMUNITY_Persistence  Migrations (10)]]
 - 2 edges to [[_COMMUNITY_MealTimeDefault]]
 - 2 edges to [[_COMMUNITY_Frontend Auth & API Client]]
-- 2 edges to [[_COMMUNITY_Frontend App Shell & i18n]]
+- 2 edges to [[_COMMUNITY_@typesreact]]
 - 1 edge to [[_COMMUNITY_Frontend Icon Components]]
 
 ## Top bridge nodes

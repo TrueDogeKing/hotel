@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Api/Controllers/Public/PublicAvailabilityController.cs"
 type: "code"
-community: "Public Booking Service (2)"
+community: "CampCenter.Application.DTOs.Public"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public_Booking_Service_2
+  - community/CampCenterApplicationDTOsPublic
 ---
 
 # CampCenter.Api.Controllers.Public
@@ -15,4 +15,4 @@ tags:
 - [[PublicAvailabilityController.cs]] - `contains` [EXTRACTED]
 - [[PublicBookingsController.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_2
+#graphify/code #graphify/EXTRACTED #community/CampCenterApplicationDTOsPublic

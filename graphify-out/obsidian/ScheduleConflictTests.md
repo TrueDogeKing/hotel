@@ -1,12 +1,12 @@
 ---
 source_file: "tests/CampCenter.UnitTests/Services/ScheduleConflictTests.cs"
 type: "code"
-community: "CampCenter.Infrastructure / Repositories (1)"
+community: "Frontend App Shell & i18n"
 location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterInfrastructure_/_Repositories_1
+  - community/Frontend_App_Shell__i18n
 ---
 
 # ScheduleConflictTests
@@ -33,4 +33,4 @@ tags:
 - [[ScheduleConflictTests.cs]] - `contains` [EXTRACTED]
 - [[ScheduleService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterInfrastructure_/_Repositories_1
+#graphify/code #graphify/EXTRACTED #community/Frontend_App_Shell__i18n

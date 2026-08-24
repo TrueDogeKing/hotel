@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Repositories/BookingMealTimeRepository.cs"
 type: "code"
-community: "CampCenter.Application / Services (2)"
+community: "CampCenter.UnitTests / Services (4)"
 location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterApplication_/_Services_2
+  - community/CampCenterUnitTests_/_Services_4
 ---
 
 # BookingMealTimeRepository
@@ -22,4 +22,4 @@ tags:
 - [[BookingMealTimeRepository.cs]] - `contains` [EXTRACTED]
 - [[IBookingMealTimeRepository]] - `implements` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_2
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_4

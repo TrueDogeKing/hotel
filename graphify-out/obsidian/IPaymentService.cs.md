@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Interfaces/IPaymentService.cs"
 type: "code"
-community: "CampCenter.UnitTests / Validators"
+community: "Room"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Validators
+  - community/Room
 ---
 
 # IPaymentService.cs
@@ -18,4 +18,4 @@ tags:
 - [[InitiatePaymentRequestDto]] - `contains` [EXTRACTED]
 - [[InitiatePaymentResponseDto]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Validators
+#graphify/code #graphify/EXTRACTED #community/Room

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.Application / Services (1)"
+community: "Public Booking Service (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterApplication_/_Services_1
+  - community/Public_Booking_Service_2
 ---
 
 # string
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[JwtSettings]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_1
+#graphify/code #graphify/EXTRACTED #community/Public_Booking_Service_2

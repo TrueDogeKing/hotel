@@ -1,11 +1,11 @@
 ---
 type: community
-members: 23
+members: 24
 ---
 
 # Admin Booking & Notifications (4)
 
-**Members:** 23 nodes
+**Members:** 24 nodes
 
 ## Members
 - [[.BookingCancelled()]] - code - src/CampCenter.Application/Services/EmailTemplates.cs
@@ -29,6 +29,7 @@ members: 23
 - [[IReadOnlyList_2]] - code
 - [[List_39]] - code
 - [[RecordingEmailSender]] - code - tests/CampCenter.IntegrationTests/RecordingEmailSender.cs
+- [[RecordingEmailSender.cs]] - code - tests/CampCenter.IntegrationTests/RecordingEmailSender.cs
 - [[Task_22]] - code
 - [[Task_78]] - code
 
@@ -42,14 +43,14 @@ SORT file.name ASC
 ## Connections to other communities
 - 5 edges to [[_COMMUNITY_Public Booking Service (1)]]
 - 5 edges to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
-- 4 edges to [[_COMMUNITY_CampCenter.UnitTests  Validators]]
+- 4 edges to [[_COMMUNITY_Room]]
 - 4 edges to [[_COMMUNITY_Integration Test Harness (1)]]
+- 2 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
 - 2 edges to [[_COMMUNITY_eslint]]
 - 1 edge to [[_COMMUNITY_Booking Maintenance Background Service]]
-- 1 edge to [[_COMMUNITY_Application Namespaces & DTOs]]
 - 1 edge to [[_COMMUNITY_ClosureService]]
-- 1 edge to [[_COMMUNITY_Payment Gateway Integration Tests (2)]]
 - 1 edge to [[_COMMUNITY_CampCenter.Application.DTOs.Public]]
+- 1 edge to [[_COMMUNITY_Payment Gateway Integration Tests (2)]]
 
 ## Top bridge nodes
 - [[IEmailSender]] - degree 7, connects to 4 communities

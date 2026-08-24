@@ -51,15 +51,15 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 13 edges to [[_COMMUNITY_Admin User & Token Config]]
+- 5 edges to [[_COMMUNITY_Exception]]
 - 4 edges to [[_COMMUNITY_Auth Service & Tokens]]
-- 4 edges to [[_COMMUNITY_ClosureService]]
-- 3 edges to [[_COMMUNITY_Refresh Token Repository]]
+- 2 edges to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
 - 2 edges to [[_COMMUNITY_BookingConfiguration]]
+- 1 edge to [[_COMMUNITY_Refresh Token Repository]]
 - 1 edge to [[_COMMUNITY_CampCenter.Application  Services (1)]]
-- 1 edge to [[_COMMUNITY_Exception]]
 
 ## Top bridge nodes
-- [[AdminUser_1]] - degree 23, connects to 4 communities
+- [[AdminUser_1]] - degree 23, connects to 5 communities
 - [[IAdminUserRepository]] - degree 11, connects to 3 communities
 - [[AdminUserRepository]] - degree 10, connects to 2 communities
 - [[.GetByLoginAsync()]] - degree 6, connects to 2 communities

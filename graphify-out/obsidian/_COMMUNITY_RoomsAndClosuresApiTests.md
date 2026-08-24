@@ -29,7 +29,7 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 4 edges to [[_COMMUNITY_tests  CampCenter.IntegrationTests (1)]]
-- 3 edges to [[_COMMUNITY_AuthApiTests]]
+- 3 edges to [[_COMMUNITY_src  api (2)]]
 - 2 edges to [[_COMMUNITY_CampCenter.Application.DTOs.Public]]
 - 2 edges to [[_COMMUNITY_Payment Gateway Integration Tests (2)]]
 - 2 edges to [[_COMMUNITY_PasswordRules]]
@@ -37,8 +37,8 @@ SORT file.name ASC
 - 1 edge to [[_COMMUNITY_AdminPanelApiTests]]
 - 1 edge to [[_COMMUNITY_IntegrationTestBase]]
 - 1 edge to [[_COMMUNITY_.WithRoomsAsync]]
+- 1 edge to [[_COMMUNITY_AuthApiTests]]
 - 1 edge to [[_COMMUNITY_Payment Gateway Integration Tests (1)]]
-- 1 edge to [[_COMMUNITY_src  api (2)]]
 
 ## Top bridge nodes
 - [[IntegrationTestBase]] - degree 15, connects to 9 communities

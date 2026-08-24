@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: ".GetBlockedRoomIdsAsync"
+community: "ScheduleValidators.cs"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/GetBlockedRoomIdsAsync
+  - community/ScheduleValidatorscs
 ---
 
 # string
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[MealTimeRules]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/GetBlockedRoomIdsAsync
+#graphify/code #graphify/EXTRACTED #community/ScheduleValidatorscs
