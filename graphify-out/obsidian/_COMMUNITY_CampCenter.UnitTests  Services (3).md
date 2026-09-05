@@ -1,28 +1,20 @@
 ---
 type: community
-members: 15
+members: 7
 ---
 
 # CampCenter.UnitTests / Services (3)
 
-**Members:** 15 nodes
+**Members:** 7 nodes
 
 ## Members
-- [[.Get()_3]] - code - src/CampCenter.Api/Controllers/Admin/PricingController.cs
-- [[.GetAsync()_1]] - code - src/CampCenter.Application/Interfaces/IPricingService.cs
-- [[.Update()_2]] - code - src/CampCenter.Api/Controllers/Admin/PricingController.cs
-- [[.UpdateAsync()_2]] - code - src/CampCenter.Application/Interfaces/IPricingService.cs
-- [[CancellationToken_7]] - code
-- [[CancellationToken_27]] - code
-- [[HttpGet_6]] - code
-- [[HttpPut_4]] - code
-- [[IActionResult_6]] - code
-- [[IPricingService]] - code - src/CampCenter.Application/Interfaces/IPricingService.cs
-- [[PricingController]] - code - src/CampCenter.Api/Controllers/Admin/PricingController.cs
-- [[ProducesResponseType_6]] - code
-- [[Task_8]] - code
-- [[Task_27]] - code
-- [[UpdatePricingDefaultsRequestDto]] - code - src/CampCenter.Application/DTOs/AdminPanel/AdminPanelDtos.cs
+- [[CampCenter.Infrastructure.Payments]] - code - src/CampCenter.Infrastructure/Payments/P24Settings.cs
+- [[P24SignCalculator.cs]] - code - src/CampCenter.Infrastructure/Payments/P24SignCalculator.cs
+- [[P24SignCalculatorTests.cs]] - code - tests/CampCenter.UnitTests/Services/P24SignCalculatorTests.cs
+- [[Przelewy24Client.cs]] - code - src/CampCenter.Infrastructure/Payments/Przelewy24Client.cs
+- [[RegisterData]] - code
+- [[RegisterData_1]] - code - src/CampCenter.Infrastructure/Payments/Przelewy24Client.cs
+- [[RegisterResponse]] - code - src/CampCenter.Infrastructure/Payments/Przelewy24Client.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -32,18 +24,13 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
-- 2 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
-- 2 edges to [[_COMMUNITY_AdminUserRole]]
-- 2 edges to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
-- 2 edges to [[_COMMUNITY_AvailabilityService]]
-- 2 edges to [[_COMMUNITY_Public Booking Service (1)]]
-- 1 edge to [[_COMMUNITY_.Groups]]
-- 1 edge to [[_COMMUNITY_.Update]]
+- 4 edges to [[_COMMUNITY_Payment Gateway Integration Tests (1)]]
+- 3 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
+- 1 edge to [[_COMMUNITY_Exception]]
+- 1 edge to [[_COMMUNITY_ClosureService]]
 
 ## Top bridge nodes
-- [[IPricingService]] - degree 9, connects to 6 communities
-- [[.GetAsync()_1]] - degree 9, connects to 5 communities
-- [[PricingController]] - degree 5, connects to 2 communities
-- [[UpdatePricingDefaultsRequestDto]] - degree 4, connects to 2 communities
-- [[.UpdateAsync()_2]] - degree 6, connects to 1 community
+- [[P24SignCalculatorTests.cs]] - degree 4, connects to 3 communities
+- [[CampCenter.Infrastructure.Payments]] - degree 5, connects to 2 communities
+- [[Przelewy24Client.cs]] - degree 5, connects to 2 communities
+- [[P24SignCalculator.cs]] - degree 3, connects to 2 communities

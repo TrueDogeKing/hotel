@@ -1,12 +1,12 @@
 ---
 source_file: "tests/CampCenter.IntegrationTests/ApiCollection.cs"
 type: "code"
-community: "RoomsAndClosuresApiTests"
+community: "Payment Gateway Integration Tests (2)"
 location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RoomsAndClosuresApiTests
+  - community/Payment_Gateway_Integration_Tests_2
 ---
 
 # IntegrationTestBase
@@ -28,4 +28,4 @@ tags:
 - [[UsersAndRolesApiTests]] - `inherits` [EXTRACTED]
 - [[string_13]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RoomsAndClosuresApiTests
+#graphify/code #graphify/EXTRACTED #community/Payment_Gateway_Integration_Tests_2

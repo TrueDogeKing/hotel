@@ -40,15 +40,16 @@ SORT file.name ASC
 ## Connections to other communities
 - 8 edges to [[_COMMUNITY_tests  CampCenter.IntegrationTests (1)]]
 - 4 edges to [[_COMMUNITY_AuthApiTests]]
-- 3 edges to [[_COMMUNITY_RoomsAndClosuresApiTests]]
 - 2 edges to [[_COMMUNITY_AdminPanelApiTests]]
 - 2 edges to [[_COMMUNITY_.WithRoomsAsync]]
+- 2 edges to [[_COMMUNITY_Payment Gateway Integration Tests (2)]]
 - 2 edges to [[_COMMUNITY_PasswordRules]]
 - 1 edge to [[_COMMUNITY_Public Booking Service (1)]]
+- 1 edge to [[_COMMUNITY_RoomsAndClosuresApiTests]]
 - 1 edge to [[_COMMUNITY_CampCenter.Application.DTOs.Public]]
 
 ## Top bridge nodes
-- [[.CreateClient()]] - degree 22, connects to 6 communities
+- [[.CreateClient()]] - degree 22, connects to 7 communities
 - [[PublicBookingApiTests]] - degree 14, connects to 2 communities
 - [[.BookingRequest()]] - degree 9, connects to 1 community
 - [[.BookingFlow_AvailabilityShrinks_AndCancelFreesRooms()]] - degree 8, connects to 1 community

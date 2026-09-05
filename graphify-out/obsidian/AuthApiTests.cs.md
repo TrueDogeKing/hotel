@@ -1,12 +1,12 @@
 ---
 source_file: "tests/CampCenter.IntegrationTests/AuthApiTests.cs"
 type: "code"
-community: "AuthApiTests"
+community: "ScheduleValidators.cs"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AuthApiTests
+  - community/ScheduleValidatorscs
 ---
 
 # AuthApiTests.cs
@@ -16,4 +16,4 @@ tags:
 - [[CampCenter.Application.DTOs.Auth]] - `imports` [EXTRACTED]
 - [[CampCenter.IntegrationTests]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AuthApiTests
+#graphify/code #graphify/EXTRACTED #community/ScheduleValidatorscs

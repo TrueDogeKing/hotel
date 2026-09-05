@@ -1,25 +1,34 @@
 ---
 type: community
-members: 12
+members: 21
 ---
 
 # CampCenter.UnitTests / Validators
 
-**Members:** 12 nodes
+**Members:** 21 nodes
 
 ## Members
-- [[.AddAsync()_15]] - code - src/CampCenter.Infrastructure/Repositories/MealTimeDefaultRepository.cs
-- [[.GetActiveAsync()_2]] - code - src/CampCenter.Infrastructure/Repositories/MealTimeDefaultRepository.cs
-- [[.GetAllAsync()_10]] - code - src/CampCenter.Infrastructure/Repositories/MealTimeDefaultRepository.cs
-- [[.GetByIdAsync()_10]] - code - src/CampCenter.Infrastructure/Repositories/MealTimeDefaultRepository.cs
-- [[.IsReferencedAsync()_1]] - code - src/CampCenter.Infrastructure/Repositories/MealTimeDefaultRepository.cs
-- [[.Remove()_10]] - code - src/CampCenter.Infrastructure/Repositories/MealTimeDefaultRepository.cs
-- [[.SaveChangesAsync()_15]] - code - src/CampCenter.Infrastructure/Repositories/MealTimeDefaultRepository.cs
-- [[CancellationToken_63]] - code
-- [[Guid_55]] - code
-- [[List_33]] - code
-- [[MealTimeDefaultRepository]] - code - src/CampCenter.Infrastructure/Repositories/MealTimeDefaultRepository.cs
-- [[Task_63]] - code
+- [[1. The manifests are valid — no cluster needed]] - document - k8s/README.md
+- [[10. The backup job (prod overlay)]] - document - k8s/README.md
+- [[2. Everything scheduled and became ready]] - document - k8s/README.md
+- [[3. The API is alive and migrated the database]] - document - k8s/README.md
+- [[4. The app answers over HTTP]] - document - k8s/README.md
+- [[5. The Ingress routes (needs the controller installed above)]] - document - k8s/README.md
+- [[6. E-mail is captured]] - document - k8s/README.md
+- [[7. Self-healing — the part compose does not do]] - document - k8s/README.md
+- [[8. Data survives the pod]] - document - k8s/README.md
+- [[9. A rolling update keeps serving]] - document - k8s/README.md
+- [[CampCenter on Kubernetes]] - document - k8s/README.md
+- [[Deploy (dev)]] - document - k8s/README.md
+- [[Getting a cluster]] - document - k8s/README.md
+- [[How compose maps onto this]] - document - k8s/README.md
+- [[How to check it works]] - document - k8s/README.md
+- [[Layout]] - document - k8s/README.md
+- [[Production notes]] - document - k8s/README.md
+- [[README_1]] - document - k8s/README.md
+- [[Troubleshooting]] - document - k8s/README.md
+- [[What Kubernetes actually is]] - document - k8s/README.md
+- [[Why bother, for this project]] - document - k8s/README.md
 
 ## Live Query (requires Dataview plugin)
 
@@ -27,15 +36,3 @@ members: 12
 TABLE source_file, type FROM #community/CampCenterUnitTests_/_Validators
 SORT file.name ASC
 ```
-
-## Connections to other communities
-- 6 edges to [[_COMMUNITY_MealTimeService]]
-- 1 edge to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
-- 1 edge to [[_COMMUNITY_Exception]]
-
-## Top bridge nodes
-- [[MealTimeDefaultRepository]] - degree 10, connects to 3 communities
-- [[.GetAllAsync()_10]] - degree 5, connects to 1 community
-- [[.GetActiveAsync()_2]] - degree 5, connects to 1 community
-- [[.GetByIdAsync()_10]] - degree 5, connects to 1 community
-- [[.AddAsync()_15]] - degree 4, connects to 1 community

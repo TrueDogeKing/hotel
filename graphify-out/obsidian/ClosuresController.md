@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Api/Controllers/Admin/ClosuresController.cs"
 type: "code"
-community: "SmtpEmailSender"
+community: "Validator Unit Tests"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SmtpEmailSender
+  - community/Validator_Unit_Tests
 ---
 
 # ClosuresController
@@ -21,4 +21,4 @@ tags:
 - [[IClosureService]] - `references` [EXTRACTED]
 - [[IValidator_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SmtpEmailSender
+#graphify/code #graphify/EXTRACTED #community/Validator_Unit_Tests

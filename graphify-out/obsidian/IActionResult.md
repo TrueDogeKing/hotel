@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Admin Booking & Notifications (2)"
+community: "Admin Bookings Controller & DTOs"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Booking__Notifications_2
+  - community/Admin_Bookings_Controller__DTOs
 ---
 
 # IActionResult
@@ -24,4 +24,4 @@ tags:
 - [[.UpdatePeople()]] - `references` [EXTRACTED]
 - [[.UpdatePricing()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_2
+#graphify/code #graphify/EXTRACTED #community/Admin_Bookings_Controller__DTOs

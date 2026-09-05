@@ -1,11 +1,11 @@
 ---
 type: community
-members: 20
+members: 30
 ---
 
 # Root Task-Runner Scripts
 
-**Members:** 20 nodes
+**Members:** 30 nodes
 
 ## Members
 - [[backend]] - code - package.json
@@ -17,6 +17,16 @@ members: 20
 - [[formatbackend]] - code - package.json
 - [[formatfrontend]] - code - package.json
 - [[frontend]] - code - package.json
+- [[k8sdown]] - code - package.json
+- [[k8sforward]] - code - package.json
+- [[k8simages]] - code - package.json
+- [[k8slogs]] - code - package.json
+- [[k8sproddown]] - code - package.json
+- [[k8sprodimages]] - code - package.json
+- [[k8sprodup]] - code - package.json
+- [[k8srender]] - code - package.json
+- [[k8sstatus]] - code - package.json
+- [[k8sup]] - code - package.json
 - [[name_1]] - code - package.json
 - [[package.json_1]] - code - package.json
 - [[private_1]] - code - package.json

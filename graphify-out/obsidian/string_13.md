@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "RoomsAndClosuresApiTests"
+community: "Payment Gateway Integration Tests (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RoomsAndClosuresApiTests
+  - community/Payment_Gateway_Integration_Tests_2
 ---
 
 # string
@@ -14,4 +14,4 @@ tags:
 - [[ApiCollection]] - `references` [EXTRACTED]
 - [[IntegrationTestBase]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RoomsAndClosuresApiTests
+#graphify/code #graphify/EXTRACTED #community/Payment_Gateway_Integration_Tests_2

@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Validators/PasswordRules.cs"
 type: "code"
-community: ".GetBlockedRoomIdsAsync"
+community: "ScheduleValidators.cs"
 location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/GetBlockedRoomIdsAsync
+  - community/ScheduleValidatorscs
 ---
 
 # PasswordRules
@@ -16,4 +16,4 @@ tags:
 - [[PasswordRules.cs]] - `contains` [EXTRACTED]
 - [[int_2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/GetBlockedRoomIdsAsync
+#graphify/code #graphify/EXTRACTED #community/ScheduleValidatorscs

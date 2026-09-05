@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Domain/Entities/ScheduleEntry.cs"
 type: "code"
-community: "components / admin"
+community: "CampCenter.Application / Services (2)"
 location: "L3"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/components_/_admin
+  - community/CampCenterApplication_/_Services_2
 ---
 
 # ScheduleEntryKind
@@ -21,4 +21,4 @@ tags:
 - [[ScheduleEntry_1]] - `references` [EXTRACTED]
 - [[ScheduleEntry.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/components_/_admin
+#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_2

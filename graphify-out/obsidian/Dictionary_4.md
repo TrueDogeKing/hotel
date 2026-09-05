@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: ".GetBlockedRoomIdsAsync"
+community: "Room"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/GetBlockedRoomIdsAsync
+  - community/Room
 ---
 
 # Dictionary
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.BeSaneCounts()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/GetBlockedRoomIdsAsync
+#graphify/code #graphify/EXTRACTED #community/Room

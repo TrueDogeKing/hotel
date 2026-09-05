@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "AdminBookingDto"
+community: "Admin Bookings Controller & DTOs"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AdminBookingDto
+  - community/Admin_Bookings_Controller__DTOs
 ---
 
 # DateOnly
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.GetOccupancyAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AdminBookingDto
+#graphify/code #graphify/EXTRACTED #community/Admin_Bookings_Controller__DTOs

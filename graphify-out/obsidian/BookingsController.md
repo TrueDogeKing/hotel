@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Api/Controllers/Admin/BookingsController.cs"
 type: "code"
-community: "Admin Booking & Notifications (2)"
+community: "Admin Bookings Controller & DTOs"
 location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Booking__Notifications_2
+  - community/Admin_Bookings_Controller__DTOs
 ---
 
 # BookingsController
@@ -29,4 +29,4 @@ tags:
 - [[IAdminBookingService]] - `references` [EXTRACTED]
 - [[IValidator]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_2
+#graphify/code #graphify/EXTRACTED #community/Admin_Bookings_Controller__DTOs

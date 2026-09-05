@@ -1,0 +1,45 @@
+# Development stack: locally built images, Mailpit instead of a real SMTP
+# server, throwaway secrets, its own namespace.
+#
+#   bun run k8s:images && bun run k8s:dev:up
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: campcenter-dev
+
+resources:
+  - ../../base
+  - mailpit.yaml
+
+patches:
+  - path: ingress-patch.yaml
+  - path: image-pull-patch.yaml
+
+images:
+  - name: campcenter/api
+    newTag: dev
+  - name: campcenter/frontend
+    newTag: dev
+
+configMapGenerator:
+  # merge: keep the base keys, override these.
+  - name: campcenter-config
+    behavior: merge
+    literals:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - Email__Host=mailpit
+      - Email__Port=1025
+      # Same-origin in normal use (the Ingress serves the SPA and the API under
+      # one host), so this only matters when the SPA is run from `vite dev`
+      # against a port-forwarded API.
+      - Cors__AllowedOrigins__0=http://campcenter.localhost
+      - Cors__AllowedOrigins__1=http://localhost:5173
+      - Booking__PublicBaseUrl=http://campcenter.localhost
+
+secretGenerator:
+  # The generated name gets a content hash appended, and every reference is
+  # rewritten to match — so editing secrets.env rolls the pods automatically
+  # instead of leaving them on stale values.
+  - name: campcenter-secrets
+    envs:
+      - secrets.env

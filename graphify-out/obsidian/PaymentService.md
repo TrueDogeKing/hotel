@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Services/PaymentService.cs"
 type: "code"
-community: "Room"
+community: "Payment Gateway Integration Tests (1)"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room
+  - community/Payment_Gateway_Integration_Tests_1
 ---
 
 # PaymentService
@@ -25,4 +25,4 @@ tags:
 - [[ITokenService]] - `references` [EXTRACTED]
 - [[PaymentService.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room
+#graphify/code #graphify/EXTRACTED #community/Payment_Gateway_Integration_Tests_1

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "AvailabilityService"
+community: "Room Management"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AvailabilityService
+  - community/Room_Management
 ---
 
 # Guid
@@ -14,4 +14,4 @@ tags:
 - [[.GetBlockedRoomIdsAsync()_1]] - `references` [EXTRACTED]
 - [[.GetFreeRoomsByCapacityAsync()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AvailabilityService
+#graphify/code #graphify/EXTRACTED #community/Room_Management

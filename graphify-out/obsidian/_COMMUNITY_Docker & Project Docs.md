@@ -1,11 +1,11 @@
 ---
 type: community
-members: 28
+members: 29
 ---
 
 # Docker & Project Docs
 
-**Members:** 28 nodes
+**Members:** 29 nodes
 
 ## Members
 - [[Admin Panel (Rooms, Closures, Occupancy, Housekeeping)]] - concept - README.md
@@ -21,6 +21,7 @@ members: 28
 - [[Guest Booking Flow]] - concept - README.md
 - [[How it works]] - document - README.md
 - [[Infra Docker Compose Stack]] - concept - docker/docker-compose.infra.yml
+- [[Kubernetes]] - document - README.md
 - [[Payments]] - document - README.md
 - [[Production]] - document - README.md
 - [[Production Docker Compose Stack]] - concept - docker/docker-compose.prod.yml

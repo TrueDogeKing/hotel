@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Validators/CreateBookingRequestValidator.cs"
 type: "code"
-community: ".GetBlockedRoomIdsAsync"
+community: "CampCenter.Application.DTOs.Public"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/GetBlockedRoomIdsAsync
+  - community/CampCenterApplicationDTOsPublic
 ---
 
 # CreateBookingRequestValidator.cs
@@ -16,4 +16,4 @@ tags:
 - [[CampCenter.Application.Validators]] - `contains` [EXTRACTED]
 - [[CreateBookingRequestValidator]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/GetBlockedRoomIdsAsync
+#graphify/code #graphify/EXTRACTED #community/CampCenterApplicationDTOsPublic

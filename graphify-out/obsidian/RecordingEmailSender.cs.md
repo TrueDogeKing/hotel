@@ -1,12 +1,12 @@
 ---
 source_file: "tests/CampCenter.IntegrationTests/RecordingEmailSender.cs"
 type: "code"
-community: "Admin Booking & Notifications (4)"
+community: "CampCenter.Application.DTOs.Public"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Booking__Notifications_4
+  - community/CampCenterApplicationDTOsPublic
 ---
 
 # RecordingEmailSender.cs
@@ -16,4 +16,4 @@ tags:
 - [[CampCenter.IntegrationTests]] - `contains` [EXTRACTED]
 - [[RecordingEmailSender]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_4
+#graphify/code #graphify/EXTRACTED #community/CampCenterApplicationDTOsPublic

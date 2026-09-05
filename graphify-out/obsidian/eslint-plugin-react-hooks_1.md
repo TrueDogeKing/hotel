@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/package.json"
 type: "concept"
-community: "ESLint Dev Dependencies"
+community: "Auth Controller (1)"
 location: "L29"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/ESLint_Dev_Dependencies
+  - community/Auth_Controller_1
 ---
 
 # eslint-plugin-react-hooks
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[eslint-plugin-react-hooks]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/ESLint_Dev_Dependencies
+#graphify/concept #graphify/EXTRACTED #community/Auth_Controller_1

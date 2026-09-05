@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "eslint"
+community: "AdminBookingDto"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/eslint
+  - community/AdminBookingDto
 ---
 
 # IServiceCollection
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.AddInfrastructure()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/eslint
+#graphify/code #graphify/EXTRACTED #community/AdminBookingDto

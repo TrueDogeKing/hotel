@@ -1,11 +1,11 @@
 ---
 type: community
-members: 8
+members: 11
 ---
 
 # CampCenter.Application / Services (1)
 
-**Members:** 8 nodes
+**Members:** 11 nodes
 
 ## Members
 - [[.CreateAccessToken()_1]] - code - src/CampCenter.Infrastructure/Auth/JwtTokenService.cs
@@ -13,8 +13,11 @@ members: 8
 - [[.HashRefreshToken()_1]] - code - src/CampCenter.Infrastructure/Auth/JwtTokenService.cs
 - [[AccessToken]] - code - src/CampCenter.Application/Models/AccessToken.cs
 - [[AccessToken.cs]] - code - src/CampCenter.Application/Models/AccessToken.cs
+- [[JwtSettings]] - code - src/CampCenter.Infrastructure/Auth/JwtSettings.cs
+- [[JwtSettings.cs]] - code - src/CampCenter.Infrastructure/Auth/JwtSettings.cs
 - [[JwtTokenService]] - code - src/CampCenter.Infrastructure/Auth/JwtTokenService.cs
 - [[int_3]] - code
+- [[string_7]] - code
 - [[string_8]] - code
 
 ## Live Query (requires Dataview plugin)

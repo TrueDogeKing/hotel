@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "ControllerBase"
+community: "CampCenter.Application / Services (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ControllerBase
+  - community/CampCenterApplication_/_Services_2
 ---
 
 # string
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[ScheduleSettings]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ControllerBase
+#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_2

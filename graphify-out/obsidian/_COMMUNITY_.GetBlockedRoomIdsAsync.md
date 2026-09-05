@@ -1,14 +1,13 @@
 ---
 type: community
-members: 55
+members: 35
 ---
 
 # .GetBlockedRoomIdsAsync
 
-**Members:** 55 nodes
+**Members:** 35 nodes
 
 ## Members
-- [[.BeSaneCounts()]] - code - src/CampCenter.Application/Validators/CreateBookingRequestValidator.cs
 - [[.BuildCookieOptions()]] - code - src/CampCenter.Api/Controllers/AuthController.cs
 - [[.DeleteRefreshTokenCookie()]] - code - src/CampCenter.Api/Controllers/AuthController.cs
 - [[.IssueTokens()]] - code - src/CampCenter.Api/Controllers/AuthController.cs
@@ -21,47 +20,28 @@ members: 55
 - [[.RefreshAsync()]] - code - src/CampCenter.Application/Interfaces/IAuthService.cs
 - [[.SetRefreshTokenCookie()]] - code - src/CampCenter.Api/Controllers/AuthController.cs
 - [[.ValidCredentials_Pass()]] - code - tests/CampCenter.UnitTests/Validators/LoginRequestValidatorTests.cs
-- [[.ValidPassword()]] - code - src/CampCenter.Application/Validators/PasswordRules.cs
 - [[AuthController]] - code - src/CampCenter.Api/Controllers/AuthController.cs
-- [[CampCenter.Application.DTOs.Auth]] - code - src/CampCenter.Application/DTOs/Auth/LoginRequestDto.cs
-- [[CampCenter.Application.Validators]] - code - src/CampCenter.Application/Validators/AdminBookingValidators.cs
-- [[CampCenter.UnitTests.Validators]] - code - tests/CampCenter.UnitTests/Validators/ClosureValidatorsTests.cs
 - [[CancellationToken_12]] - code
 - [[CancellationToken_18]] - code
-- [[ClosureValidatorsTests.cs]] - code - tests/CampCenter.UnitTests/Validators/ClosureValidatorsTests.cs
 - [[CookieOptions]] - code
-- [[CreateBookingRequestValidator]] - code - src/CampCenter.Application/Validators/CreateBookingRequestValidator.cs
-- [[CreateBookingRequestValidator.cs]] - code - src/CampCenter.Application/Validators/CreateBookingRequestValidator.cs
 - [[DateTime]] - code
-- [[Dictionary_4]] - code
 - [[EnableRateLimiting]] - code
 - [[Fact_17]] - code
 - [[HttpPost_7]] - code
 - [[IActionResult_11]] - code
 - [[IAuthService]] - code - src/CampCenter.Application/Interfaces/IAuthService.cs
-- [[IAuthService.cs]] - code - src/CampCenter.Application/Interfaces/IAuthService.cs
-- [[IRuleBuilder]] - code
-- [[IRuleBuilderOptions]] - code
 - [[IValidator_6]] - code
 - [[InlineData]] - code
 - [[LoginRequestDto]] - code - src/CampCenter.Application/DTOs/Auth/LoginRequestDto.cs
 - [[LoginRequestDto.cs]] - code - src/CampCenter.Application/DTOs/Auth/LoginRequestDto.cs
 - [[LoginRequestValidator]] - code - src/CampCenter.Application/Validators/LoginRequestValidator.cs
-- [[LoginRequestValidator.cs]] - code - src/CampCenter.Application/Validators/LoginRequestValidator.cs
 - [[LoginRequestValidatorTests]] - code - tests/CampCenter.UnitTests/Validators/LoginRequestValidatorTests.cs
-- [[LoginRequestValidatorTests.cs]] - code - tests/CampCenter.UnitTests/Validators/LoginRequestValidatorTests.cs
-- [[LoginResponseDto]] - code - src/CampCenter.Application/DTOs/Auth/LoginResponseDto.cs
-- [[LoginResponseDto.cs]] - code - src/CampCenter.Application/DTOs/Auth/LoginResponseDto.cs
-- [[PasswordRules]] - code - src/CampCenter.Application/Validators/PasswordRules.cs
-- [[PasswordRules.cs]] - code - src/CampCenter.Application/Validators/PasswordRules.cs
 - [[ProducesResponseType_11]] - code
 - [[RefreshTokenSettings]] - code - src/CampCenter.Infrastructure/Auth/RefreshTokenSettings.cs
 - [[RefreshTokenSettings.cs]] - code - src/CampCenter.Infrastructure/Auth/RefreshTokenSettings.cs
-- [[ScheduleValidatorsTests.cs]] - code - tests/CampCenter.UnitTests/Validators/ScheduleValidatorsTests.cs
 - [[Task_13]] - code
 - [[Task_18]] - code
 - [[Theory]] - code
-- [[int_2]] - code
 - [[string_9]] - code
 
 ## Live Query (requires Dataview plugin)
@@ -73,26 +53,15 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 5 edges to [[_COMMUNITY_Auth Service & Tokens]]
-- 3 edges to [[_COMMUNITY_Public Booking Service (2)]]
-- 3 edges to [[_COMMUNITY_DTOs  Schedule (1)]]
-- 2 edges to [[_COMMUNITY_ClosureService]]
-- 2 edges to [[_COMMUNITY_CampCenter.Application.DTOs.Public]]
-- 2 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
-- 2 edges to [[_COMMUNITY_ClosureValidatorsTests]]
-- 2 edges to [[_COMMUNITY_Camp Session Management]]
-- 1 edge to [[_COMMUNITY_.Groups]]
-- 1 edge to [[_COMMUNITY_RoomsAndClosuresApiTests]]
-- 1 edge to [[_COMMUNITY_AuthApiTests]]
-- 1 edge to [[_COMMUNITY_Public Booking Service (1)]]
-- 1 edge to [[_COMMUNITY_.Update]]
-- 1 edge to [[_COMMUNITY_ScheduleValidators.cs]]
-- 1 edge to [[_COMMUNITY_Room Management]]
+- 4 edges to [[_COMMUNITY_ScheduleValidators.cs]]
+- 2 edges to [[_COMMUNITY_Public Booking Service (2)]]
+- 1 edge to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
 - 1 edge to [[_COMMUNITY_CampCenter.Application  Services (3)]]
 - 1 edge to [[_COMMUNITY_CampCenter.Application  Services (1)]]
 
 ## Top bridge nodes
-- [[CampCenter.Application.Validators]] - degree 12, connects to 6 communities
-- [[CampCenter.Application.DTOs.Auth]] - degree 9, connects to 4 communities
 - [[AuthController]] - degree 12, connects to 2 communities
-- [[ScheduleValidatorsTests.cs]] - degree 5, connects to 2 communities
-- [[IAuthService.cs]] - degree 4, connects to 2 communities
+- [[IAuthService]] - degree 6, connects to 2 communities
+- [[LoginRequestValidator]] - degree 4, connects to 2 communities
+- [[.IssueTokens()]] - degree 6, connects to 1 community
+- [[.LoginAsync()]] - degree 6, connects to 1 community

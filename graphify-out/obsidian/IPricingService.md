@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Interfaces/IPricingService.cs"
 type: "code"
-community: "CampCenter.UnitTests / Services (3)"
+community: "CampCenter.Infrastructure / Repositories (1)"
 location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterUnitTests_/_Services_3
+  - community/CampCenterInfrastructure_/_Repositories_1
 ---
 
 # IPricingService
@@ -22,4 +22,4 @@ tags:
 - [[PricingService]] - `implements` [EXTRACTED]
 - [[PublicAvailabilityController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_3
+#graphify/code #graphify/EXTRACTED #community/CampCenterInfrastructure_/_Repositories_1

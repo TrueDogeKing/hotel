@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/package.json"
 type: "code"
-community: "BookingRoomAssignment"
+community: "ESLint Dev Dependencies"
 location: "L31"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/BookingRoomAssignment
+  - community/ESLint_Dev_Dependencies
 ---
 
 # globals
@@ -15,4 +15,4 @@ tags:
 - [[devDependencies]] - `contains` [EXTRACTED]
 - [[globals_1]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/BookingRoomAssignment
+#graphify/code #graphify/EXTRACTED #community/ESLint_Dev_Dependencies

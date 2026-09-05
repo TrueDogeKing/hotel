@@ -1,0 +1,86 @@
+# Daily pg_dump — the `db-backup` service from docker-compose.prod.yml.
+#
+# The compose version is a poll loop in scripts/backup-db.sh because a container
+# has no scheduler of its own. Kubernetes does, so the loop, the catch-up check
+# and the "am I still dumping?" healthcheck all collapse into CronJob semantics:
+# `schedule` replaces BACKUP_TIME, `startingDeadlineSeconds` is the catch-up
+# window after a cluster outage, and a missed run shows up as a failed Job.
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: db-backups
+spec:
+  accessModes: ["ReadWriteOnce"]
+  resources:
+    requests:
+      storage: 10Gi
+---
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: db-backup
+spec:
+  # 03:30 daily. Kubernetes reads cron in UTC unless timeZone says otherwise.
+  schedule: "30 3 * * *"
+  timeZone: Europe/Warsaw
+  # If the cluster was down at 03:30, still run when it comes back — within 2h.
+  startingDeadlineSeconds: 7200
+  concurrencyPolicy: Forbid
+  successfulJobsHistoryLimit: 3
+  failedJobsHistoryLimit: 3
+  jobTemplate:
+    spec:
+      backoffLimit: 2
+      template:
+        metadata:
+          labels:
+            app.kubernetes.io/name: db-backup
+            # Matched by the NetworkPolicy that lets this reach PostgreSQL.
+            app.kubernetes.io/component: backup
+        spec:
+          restartPolicy: OnFailure
+          containers:
+            - name: pg-dump
+              # Same image as the server, so pg_dump always matches the server
+              # version — the reason compose pins it too.
+              image: postgres:16-alpine
+              env:
+                - name: PGHOST
+                  value: postgres
+                - name: PGUSER
+                  value: campcenter
+                - name: PGDATABASE
+                  value: campcenter
+                - name: PGPASSWORD
+                  valueFrom:
+                    secretKeyRef:
+                      name: campcenter-secrets
+                      key: POSTGRES_PASSWORD
+                - name: BACKUP_RETENTION_DAYS
+                  value: "14"
+              command: ["/bin/sh", "-c"]
+              args:
+                - |
+                  set -eu
+                  stamp="$(date +%Y%m%d-%H%M%S)"
+                  out="/backups/campcenter-$stamp.sql.gz"
+                  # --clean --if-exists so the dump restores straight into a
+                  # running database, exactly like the compose backups.
+                  pg_dump --clean --if-exists | gzip > "$out"
+                  echo "wrote $out ($(stat -c %s "$out") bytes)"
+                  find /backups -name 'campcenter-*.sql.gz' \
+                    -mtime "+$BACKUP_RETENTION_DAYS" -print -delete
+              resources:
+                requests:
+                  cpu: 50m
+                  memory: 64Mi
+                limits:
+                  cpu: 500m
+                  memory: 512Mi
+              volumeMounts:
+                - name: backups
+                  mountPath: /backups
+          volumes:
+            - name: backups
+              persistentVolumeClaim:
+                claimName: db-backups

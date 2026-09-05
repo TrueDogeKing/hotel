@@ -26,7 +26,7 @@ SORT file.name ASC
 ## Connections to other communities
 - 4 edges to [[_COMMUNITY_tests  CampCenter.IntegrationTests (1)]]
 - 1 edge to [[_COMMUNITY_CampCenter.Application.DTOs.Public]]
-- 1 edge to [[_COMMUNITY_RoomsAndClosuresApiTests]]
+- 1 edge to [[_COMMUNITY_Payment Gateway Integration Tests (2)]]
 
 ## Top bridge nodes
 - [[AdminPricingApiTests]] - degree 6, connects to 2 communities

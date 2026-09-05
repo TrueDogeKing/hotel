@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Services/AvailabilityService.cs"
 type: "code"
-community: "ClosureService"
+community: "CampCenter.Application.DTOs.Public"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ClosureService
+  - community/CampCenterApplicationDTOsPublic
 ---
 
 # AvailabilityService.cs
@@ -19,4 +19,4 @@ tags:
 - [[CampCenter.Domain.Exceptions]] - `imports` [EXTRACTED]
 - [[CampCenter.Domain.Repositories]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ClosureService
+#graphify/code #graphify/EXTRACTED #community/CampCenterApplicationDTOsPublic

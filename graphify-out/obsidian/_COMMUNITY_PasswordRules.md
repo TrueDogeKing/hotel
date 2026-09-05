@@ -37,10 +37,10 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 6 edges to [[_COMMUNITY_tests  CampCenter.IntegrationTests (1)]]
-- 2 edges to [[_COMMUNITY_RoomsAndClosuresApiTests]]
+- 2 edges to [[_COMMUNITY_Payment Gateway Integration Tests (2)]]
 - 2 edges to [[_COMMUNITY_src  api (2)]]
 - 1 edge to [[_COMMUNITY_Admin User & Token Config]]
-- 1 edge to [[_COMMUNITY_ClosureService]]
+- 1 edge to [[_COMMUNITY_Application Namespaces & DTOs]]
 
 ## Top bridge nodes
 - [[.CreateWorkerAsync()]] - degree 13, connects to 2 communities

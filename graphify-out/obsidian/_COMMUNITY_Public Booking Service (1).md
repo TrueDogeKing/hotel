@@ -1,11 +1,11 @@
 ---
 type: community
-members: 24
+members: 23
 ---
 
 # Public Booking Service (1)
 
-**Members:** 24 nodes
+**Members:** 23 nodes
 
 ## Members
 - [[.AssignRooms()]] - code - src/CampCenter.Application/Services/BookingService.cs
@@ -25,7 +25,6 @@ members: 24
 - [[BookingService]] - code - src/CampCenter.Application/Services/BookingService.cs
 - [[CancellationToken_35]] - code
 - [[CreateBookingRequestDto]] - code - src/CampCenter.Application/DTOs/Public/PublicDtos.cs
-- [[CreateBookingResponseDto]] - code - src/CampCenter.Application/DTOs/Public/PublicDtos.cs
 - [[DateOnly_10]] - code
 - [[Dictionary_2]] - code
 - [[ILogger_3]] - code
@@ -41,27 +40,25 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
+- 8 edges to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
 - 6 edges to [[_COMMUNITY_Integration Test Harness (2)]]
-- 5 edges to [[_COMMUNITY_BookingSettings]]
 - 5 edges to [[_COMMUNITY_Admin Booking & Notifications (4)]]
 - 5 edges to [[_COMMUNITY_Integration Test Harness (1)]]
-- 4 edges to [[_COMMUNITY_IAvailabilityService]]
-- 4 edges to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
+- 4 edges to [[_COMMUNITY_Persistence  Migrations (2)]]
 - 4 edges to [[_COMMUNITY_Room Management]]
-- 3 edges to [[_COMMUNITY_Persistence  Migrations (2)]]
+- 3 edges to [[_COMMUNITY_Admin Booking & Notifications (2)]]
+- 3 edges to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
 - 3 edges to [[_COMMUNITY_Auth Service & Tokens]]
-- 2 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (3)]]
-- 2 edges to [[_COMMUNITY_components  admin]]
+- 3 edges to [[_COMMUNITY_CampCenter.Application  Services (2)]]
 - 2 edges to [[_COMMUNITY_Room Mix Calculator Tests]]
-- 1 edge to [[_COMMUNITY_.GetBlockedRoomIdsAsync]]
-- 1 edge to [[_COMMUNITY_src  api (2)]]
+- 1 edge to [[_COMMUNITY_BookingSettings]]
 - 1 edge to [[_COMMUNITY_Room]]
+- 1 edge to [[_COMMUNITY_src  api (2)]]
 - 1 edge to [[_COMMUNITY_ClosureService]]
-- 1 edge to [[_COMMUNITY_CampCenter.Application  Services (2)]]
 
 ## Top bridge nodes
-- [[BookingService]] - degree 23, connects to 10 communities
+- [[BookingService]] - degree 23, connects to 9 communities
 - [[.TryCreateAsync()]] - degree 20, connects to 7 communities
-- [[CreateBookingRequestDto]] - degree 9, connects to 4 communities
+- [[CreateBookingRequestDto]] - degree 9, connects to 5 communities
 - [[.FindByTokenAsync()]] - degree 9, connects to 3 communities
 - [[.AssignRooms()]] - degree 7, connects to 3 communities

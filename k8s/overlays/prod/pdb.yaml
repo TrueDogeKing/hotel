@@ -1,0 +1,12 @@
+# Keeps at least one SPA pod serving while a node is drained or the Deployment
+# is rolled. The API has a single replica by design, so it gets no budget —
+# a drain would have nothing to keep available.
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: frontend
+spec:
+  minAvailable: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: frontend

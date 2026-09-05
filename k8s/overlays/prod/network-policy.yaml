@@ -1,0 +1,28 @@
+# Least-privilege pod-to-pod traffic: only the API may reach PostgreSQL, and
+# only from inside this namespace.
+#
+# Note for local testing: Docker Desktop's built-in cluster has no policy
+# enforcement, so this object is accepted and then silently ignored there. It
+# takes effect on any cluster with a CNI that implements NetworkPolicy
+# (Calico, Cilium, most managed clusters).
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: postgres-allow-api
+spec:
+  podSelector:
+    matchLabels:
+      app.kubernetes.io/name: postgres
+  policyTypes: ["Ingress"]
+  ingress:
+    - from:
+        - podSelector:
+            matchLabels:
+              app.kubernetes.io/name: api
+        # The backup CronJob connects with the same credentials.
+        - podSelector:
+            matchLabels:
+              app.kubernetes.io/component: backup
+      ports:
+        - protocol: TCP
+          port: 5432

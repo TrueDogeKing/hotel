@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/DTOs/Closures/ClosureDtos.cs"
 type: "code"
-community: "Auth Controller (1)"
+community: "Validator Unit Tests"
 location: "L3"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Auth_Controller_1
+  - community/Validator_Unit_Tests
 ---
 
 # ClosureDto
@@ -21,4 +21,4 @@ tags:
 - [[.UpdateAsync()_5]] - `references` [EXTRACTED]
 - [[ClosureDtos.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Auth_Controller_1
+#graphify/code #graphify/EXTRACTED #community/Validator_Unit_Tests

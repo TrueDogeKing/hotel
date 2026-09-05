@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Persistence/Migrations/20260730211855_AdminUserRole.cs"
 type: "code"
-community: "RoomCleaningRepository"
+community: "AdminUserRole"
 location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RoomCleaningRepository
+  - community/AdminUserRole
 ---
 
 # AdminUserRole
@@ -17,4 +17,4 @@ tags:
 - [[20260730211855_AdminUserRole.cs]] - `contains` [EXTRACTED]
 - [[Migration]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RoomCleaningRepository
+#graphify/code #graphify/EXTRACTED #community/AdminUserRole

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "BookingConfiguration"
+community: "IRoomService"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/BookingConfiguration
+  - community/IRoomService
 ---
 
 # IEntityTypeConfiguration
@@ -25,4 +25,4 @@ tags:
 - [[RoomTaskConfiguration]] - `implements` [EXTRACTED]
 - [[ScheduleEntryConfiguration]] - `implements` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/BookingConfiguration
+#graphify/code #graphify/EXTRACTED #community/IRoomService

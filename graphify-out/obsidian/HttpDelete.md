@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "SmtpEmailSender"
+community: "Validator Unit Tests"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SmtpEmailSender
+  - community/Validator_Unit_Tests
 ---
 
 # HttpDelete
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.Delete()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SmtpEmailSender
+#graphify/code #graphify/EXTRACTED #community/Validator_Unit_Tests

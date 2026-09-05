@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Payments/P24Settings.cs"
 type: "code"
-community: "eslint"
+community: "CampCenter.UnitTests / Services (3)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/eslint
+  - community/CampCenterUnitTests_/_Services_3
 ---
 
 # CampCenter.Infrastructure.Payments
@@ -18,4 +18,4 @@ tags:
 - [[P24SignCalculatorTests.cs]] - `imports` [EXTRACTED]
 - [[Przelewy24Client.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/eslint
+#graphify/code #graphify/EXTRACTED #community/CampCenterUnitTests_/_Services_3

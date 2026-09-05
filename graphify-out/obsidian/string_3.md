@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Room"
+community: "CampCenter.Infrastructure / Repositories (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room
+  - community/CampCenterInfrastructure_/_Repositories_1
 ---
 
 # string
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[BookingSettings]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room
+#graphify/code #graphify/EXTRACTED #community/CampCenterInfrastructure_/_Repositories_1

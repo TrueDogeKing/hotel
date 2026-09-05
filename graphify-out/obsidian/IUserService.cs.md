@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Interfaces/IUserService.cs"
 type: "code"
-community: "UsersController"
+community: "Application Namespaces & DTOs"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/UsersController
+  - community/Application_Namespaces__DTOs
 ---
 
 # IUserService.cs
@@ -16,4 +16,4 @@ tags:
 - [[CampCenter.Application.Interfaces]] - `contains` [EXTRACTED]
 - [[IUserService]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/UsersController
+#graphify/code #graphify/EXTRACTED #community/Application_Namespaces__DTOs

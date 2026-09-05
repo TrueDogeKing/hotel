@@ -1,0 +1,54 @@
+# Production stack. Differences from the base: a real SMTP server instead of
+# Mailpit, real secrets from a gitignored file, the daily backup CronJob,
+# a second SPA replica with a disruption budget, and a NetworkPolicy.
+#
+#   cp k8s/overlays/prod/secrets.env.example k8s/overlays/prod/secrets.env
+#   # edit secrets.env and the host in ingress-patch.yaml
+#   bun run k8s:prod:up
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: campcenter
+
+resources:
+  - ../../base
+  - backup-cronjob.yaml
+  - pdb.yaml
+  - network-policy.yaml
+
+patches:
+  - path: ingress-patch.yaml
+
+replicas:
+  # The SPA container is stateless, so it scales horizontally without
+  # conditions. The API stays at one replica on purpose (see k8s/base/api.yaml).
+  - name: frontend
+    count: 2
+
+images:
+  # Single-node cluster: build the images on the node and this is enough.
+  # Anywhere else the nodes need a registry to pull from — add
+  # `newName: ghcr.io/<owner>/campcenter-api` and push there.
+  - name: campcenter/api
+    newTag: prod
+  - name: campcenter/frontend
+    newTag: prod
+
+configMapGenerator:
+  - name: campcenter-config
+    behavior: merge
+    literals:
+      - ASPNETCORE_ENVIRONMENT=Production
+      # Same domain as in ingress-patch.yaml.
+      - Cors__AllowedOrigins__0=https://osrodek.example.com
+      - Booking__PublicBaseUrl=https://osrodek.example.com
+      - Email__Host=smtp.example.com
+      - Email__Port=587
+      - Email__UseSsl=true
+      - Email__From=rezerwacje@example.com
+
+secretGenerator:
+  - name: campcenter-secrets
+    envs:
+      # Not in git — see secrets.env.example.
+      - secrets.env

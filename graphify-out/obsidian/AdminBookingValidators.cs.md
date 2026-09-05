@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Validators/AdminBookingValidators.cs"
 type: "code"
-community: ".Update"
+community: "ScheduleValidators.cs"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Update
+  - community/ScheduleValidatorscs
 ---
 
 # AdminBookingValidators.cs
@@ -17,4 +17,4 @@ tags:
 - [[CampCenter.Domain.Entities]] - `imports` [EXTRACTED]
 - [[CreateAdminBookingRequestValidator]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Update
+#graphify/code #graphify/EXTRACTED #community/ScheduleValidatorscs

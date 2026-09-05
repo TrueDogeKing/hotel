@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/DTOs/AdminPanel/AdminPanelDtos.cs"
 type: "code"
-community: "AdminBookingDto"
+community: "Admin Bookings Controller & DTOs"
 location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AdminBookingDto
+  - community/Admin_Bookings_Controller__DTOs
 ---
 
 # AdminBookingDto
@@ -35,4 +35,4 @@ tags:
 - [[.UpdatePricingAsync()_1]] - `references` [EXTRACTED]
 - [[AdminPanelDtos.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AdminBookingDto
+#graphify/code #graphify/EXTRACTED #community/Admin_Bookings_Controller__DTOs

@@ -15,10 +15,10 @@ members: 17
 - [[devDependencies]] - code - frontend/package.json
 - [[eslint]] - code - frontend/package.json
 - [[eslint_1]] - concept - frontend/package.json
-- [[eslint-plugin-react-hooks]] - code - frontend/package.json
-- [[eslint-plugin-react-hooks_1]] - concept - frontend/package.json
 - [[eslint-plugin-react-refresh]] - code - frontend/package.json
 - [[eslint-plugin-react-refresh_1]] - concept - frontend/package.json
+- [[globals]] - code - frontend/package.json
+- [[globals_1]] - concept - frontend/package.json
 - [[prettier]] - code - frontend/package.json
 - [[prettier_1]] - concept - frontend/package.json
 - [[typescript-eslint]] - code - frontend/package.json
@@ -35,7 +35,7 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 1 edge to [[_COMMUNITY_Frontend Package Manifest]]
-- 1 edge to [[_COMMUNITY_BookingRoomAssignment]]
+- 1 edge to [[_COMMUNITY_Auth Controller (1)]]
 - 1 edge to [[_COMMUNITY_@typesnode]]
 - 1 edge to [[_COMMUNITY_React DOM Type Definitions]]
 - 1 edge to [[_COMMUNITY_TypeScript Dependency]]

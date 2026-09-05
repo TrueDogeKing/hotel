@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/DTOs/Schedule/MealTimeDtos.cs"
 type: "code"
-community: "MealTimeDtos.cs"
+community: "CampCenter.Application / Services (2)"
 location: "L45"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MealTimeDtoscs
+  - community/CampCenterApplication_/_Services_2
 ---
 
 # BookingMealTimeDto
@@ -18,4 +18,4 @@ tags:
 - [[.ToDto()_6]] - `references` [EXTRACTED]
 - [[MealTimeDtos.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MealTimeDtoscs
+#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_2

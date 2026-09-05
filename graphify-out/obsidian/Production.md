@@ -14,5 +14,6 @@ tags:
 ## Connections
 - [[Backups]] - `contains` [EXTRACTED]
 - [[CampCenter_1]] - `contains` [EXTRACTED]
+- [[Kubernetes]] - `contains` [EXTRACTED]
 
 #graphify/document #graphify/EXTRACTED #community/Docker__Project_Docs

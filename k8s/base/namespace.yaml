@@ -1,0 +1,7 @@
+# The namespace itself. Overlays rename it (kustomize's namespace transformer
+# rewrites both this object's name and every resource's metadata.namespace), so
+# the dev and prod stacks can live side by side in one cluster.
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: campcenter

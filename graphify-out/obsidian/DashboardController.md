@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Api/Controllers/Admin/DashboardController.cs"
 type: "code"
-community: ".Groups"
+community: "Admin Bookings Controller & DTOs"
 location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Groups
+  - community/Admin_Bookings_Controller__DTOs
 ---
 
 # DashboardController
@@ -18,4 +18,4 @@ tags:
 - [[DashboardController.cs]] - `contains` [EXTRACTED]
 - [[IAdminBookingService]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Groups
+#graphify/code #graphify/EXTRACTED #community/Admin_Bookings_Controller__DTOs

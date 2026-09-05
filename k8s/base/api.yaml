@@ -1,0 +1,125 @@
+# ASP.NET Core API — the docker-compose `api` service, translated.
+apiVersion: v1
+kind: Service
+metadata:
+  name: api
+  labels:
+    app.kubernetes.io/name: api
+    app.kubernetes.io/component: backend
+spec:
+  selector:
+    app.kubernetes.io/name: api
+  ports:
+    - name: http
+      port: 8080
+      targetPort: http
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api
+  labels:
+    app.kubernetes.io/name: api
+    app.kubernetes.io/component: backend
+spec:
+  # One replica on purpose. The API applies EF Core migrations on startup
+  # (Database__MigrateAutomatically), and a rolling update of a single replica
+  # means only one pod is ever migrating. Before scaling this up, move the
+  # migration into a separate Job — see k8s/README.md, "Scaling".
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: api
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: api
+        app.kubernetes.io/component: backend
+    spec:
+      securityContext:
+        # The mcr.microsoft.com/dotnet/aspnet images ship a non-root `app`
+        # account (uid/gid 1654); the app listens on 8080, so it never needs
+        # a privileged port.
+        runAsNonRoot: true
+        runAsUser: 1654
+        runAsGroup: 1654
+      initContainers:
+        # This is what replaces compose's `depends_on: condition: service_healthy`.
+        # Kubernetes has no ordering between pods, and the app migrates the
+        # database in Program.cs before Kestrel listens, so without this the first
+        # start reliably dies: the headless `postgres` Service has no endpoints
+        # until its pod is ready, and a headless Service with no endpoints answers
+        # DNS with NXDOMAIN, not a refused connection. The pod would recover on
+        # its own — that is what restarts are for — but it would come up with a
+        # CrashLoopBackOff delay and a restart count on every fresh deploy.
+        - name: wait-for-postgres
+          # Same image the database uses, so this pulls nothing extra.
+          image: postgres:16-alpine
+          command: ["/bin/sh", "-c"]
+          args:
+            - |
+              until pg_isready -h postgres -U campcenter -d campcenter; do
+                echo "waiting for postgres..."
+                sleep 2
+              done
+          resources:
+            requests:
+              cpu: 10m
+              memory: 16Mi
+            limits:
+              cpu: 200m
+              memory: 64Mi
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop: ["ALL"]
+      containers:
+        - name: api
+          image: campcenter/api:dev
+          ports:
+            - name: http
+              containerPort: 8080
+          envFrom:
+            # ConfigMap first, Secret second: on a duplicate key the Secret wins.
+            - configMapRef:
+                name: campcenter-config
+            - secretRef:
+                name: campcenter-secrets
+          # Three probes, three different questions:
+          #  startup   — "has it finished booting?" Migrations and seeding run
+          #              before Kestrel listens, so this buys up to 2.5 minutes
+          #              on a cold database and holds the other two probes off.
+          #  readiness — "should it get traffic?" Failing removes the pod from
+          #              the Service endpoints without killing it.
+          #  liveness  — "is it wedged?" Failing restarts the container.
+          startupProbe:
+            httpGet:
+              path: /health
+              port: http
+            periodSeconds: 5
+            failureThreshold: 30
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: http
+            periodSeconds: 10
+            timeoutSeconds: 3
+            failureThreshold: 3
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: http
+            periodSeconds: 20
+            timeoutSeconds: 3
+            failureThreshold: 3
+          resources:
+            requests:
+              cpu: 100m
+              memory: 256Mi
+            limits:
+              cpu: "1"
+              memory: 1Gi
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop: ["ALL"]

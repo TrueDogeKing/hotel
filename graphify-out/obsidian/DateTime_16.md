@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Auth Service & Tokens"
+community: "Admin User & Token Config"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Auth_Service__Tokens
+  - community/Admin_User__Token_Config
 ---
 
 # DateTime
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.RevokeAllActiveForUserAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Auth_Service__Tokens
+#graphify/code #graphify/EXTRACTED #community/Admin_User__Token_Config

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "ClosureValidatorsTests"
+community: "Validator Unit Tests"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ClosureValidatorsTests
+  - community/Validator_Unit_Tests
 ---
 
 # Fact
@@ -16,4 +16,4 @@ tags:
 - [[.SingleDayClosure_Passes()]] - `references` [EXTRACTED]
 - [[.ValidClosure_Passes()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ClosureValidatorsTests
+#graphify/code #graphify/EXTRACTED #community/Validator_Unit_Tests

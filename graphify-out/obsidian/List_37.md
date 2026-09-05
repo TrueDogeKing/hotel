@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.Infrastructure / Repositories (1)"
+community: "components / admin"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterInfrastructure_/_Repositories_1
+  - community/components_/_admin
 ---
 
 # List
@@ -20,4 +20,4 @@ tags:
 - [[.ListOutingDaysAsync()_1]] - `references` [EXTRACTED]
 - [[.ListVisibleSlotSpansAsync()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterInfrastructure_/_Repositories_1
+#graphify/code #graphify/EXTRACTED #community/components_/_admin

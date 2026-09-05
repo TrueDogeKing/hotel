@@ -115,12 +115,11 @@ SORT file.name ASC
 - 5 edges to [[_COMMUNITY_Integration Test Harness (2)]]
 - 4 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
 - 4 edges to [[_COMMUNITY_Exception]]
+- 3 edges to [[_COMMUNITY_Validator Unit Tests]]
 - 3 edges to [[_COMMUNITY_Room Task Management (1)]]
-- 2 edges to [[_COMMUNITY_Prettier Dependency]]
-- 2 edges to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
 - 2 edges to [[_COMMUNITY_BookingConfiguration]]
-- 1 edge to [[_COMMUNITY_.Groups]]
-- 1 edge to [[_COMMUNITY_AvailabilityService]]
+- 2 edges to [[_COMMUNITY_IRoomService]]
+- 1 edge to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
 - 1 edge to [[_COMMUNITY_ClosureService]]
 
 ## Top bridge nodes

@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Persistence/Configurations/BookingConfiguration.cs"
 type: "code"
-community: "BookingConfiguration"
+community: "IRoomService"
 location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/BookingConfiguration
+  - community/IRoomService
 ---
 
 # BookingConfiguration
@@ -17,4 +17,4 @@ tags:
 - [[BookingConfiguration.cs]] - `contains` [EXTRACTED]
 - [[IEntityTypeConfiguration]] - `implements` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/BookingConfiguration
+#graphify/code #graphify/EXTRACTED #community/IRoomService

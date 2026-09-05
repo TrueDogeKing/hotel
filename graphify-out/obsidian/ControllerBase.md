@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: ".Groups"
+community: "Admin Bookings Controller & DTOs"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Groups
+  - community/Admin_Bookings_Controller__DTOs
 ---
 
 # ControllerBase
@@ -26,4 +26,4 @@ tags:
 - [[TasksController]] - `inherits` [EXTRACTED]
 - [[UsersController]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Groups
+#graphify/code #graphify/EXTRACTED #community/Admin_Bookings_Controller__DTOs

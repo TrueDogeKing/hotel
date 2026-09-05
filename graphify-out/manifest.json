@@ -210,9 +210,9 @@
     "semantic_hash": "ba5cb28ea1f9ac08f2eb80bbf66927d7"
   },
   "package.json": {
-    "mtime": 1784470633.741823,
-    "ast_hash": "9a485b46dc5fd073786e72dc53375bb0",
-    "semantic_hash": "9a485b46dc5fd073786e72dc53375bb0"
+    "mtime": 1788610703.591894,
+    "ast_hash": "02f4300b4786b115dec3fe79b28cb9c6",
+    "semantic_hash": ""
   },
   "src/CampCenter.Api/Background/BookingMaintenanceService.cs": {
     "mtime": 1786005757.7547345,
@@ -805,13 +805,13 @@
     "semantic_hash": ""
   },
   "CLAUDE.md": {
-    "mtime": 1786965932.492592,
-    "ast_hash": "d6be8b8b79fe537ae5be458f9d7958f2",
+    "mtime": 1788610912.660326,
+    "ast_hash": "898d4b7a9c61fc91e4768ecd90a42146",
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1786965930.8118618,
-    "ast_hash": "f444da61a914d1a8e10af39aed24a55f",
+    "mtime": 1788610912.6583304,
+    "ast_hash": "c020ef2aaa522321d1be8182469c4681",
     "semantic_hash": ""
   },
   "docker/docker-compose.dev.yml": {
@@ -1542,6 +1542,86 @@
   "scripts/backup-db.sh": {
     "mtime": 1786965965.3059378,
     "ast_hash": "413f70e003d030c9a0a8c380660a0c6d",
+    "semantic_hash": ""
+  },
+  "k8s/README.md": {
+    "mtime": 1788618934.1477613,
+    "ast_hash": "260d21f3b183b928837cacc52ebed034",
+    "semantic_hash": ""
+  },
+  "k8s/base/api.yaml": {
+    "mtime": 1788614185.2953176,
+    "ast_hash": "00cd06c50c1a2427c768d2b2e1e5e6c6",
+    "semantic_hash": ""
+  },
+  "k8s/base/frontend.yaml": {
+    "mtime": 1788610562.610734,
+    "ast_hash": "696eff8d0b9c011521ea1561234d6142",
+    "semantic_hash": ""
+  },
+  "k8s/base/ingress.yaml": {
+    "mtime": 1788610577.085215,
+    "ast_hash": "4b573da7c73680f719275290c5c396fc",
+    "semantic_hash": ""
+  },
+  "k8s/base/kustomization.yaml": {
+    "mtime": 1788610577.1235352,
+    "ast_hash": "f53119054788ef69e9a9508d0e34ee17",
+    "semantic_hash": ""
+  },
+  "k8s/base/namespace.yaml": {
+    "mtime": 1788610536.8656864,
+    "ast_hash": "3d3e83e1bb23a2c6caa4b0aead8c524c",
+    "semantic_hash": ""
+  },
+  "k8s/base/postgres.yaml": {
+    "mtime": 1788610536.9064567,
+    "ast_hash": "d7244c1ef3ad6c18b49b891ea8379b75",
+    "semantic_hash": ""
+  },
+  "k8s/overlays/dev/image-pull-patch.yaml": {
+    "mtime": 1788610600.855312,
+    "ast_hash": "a569b6701e6fea8a2a765f9ae9ca293a",
+    "semantic_hash": ""
+  },
+  "k8s/overlays/dev/ingress-patch.yaml": {
+    "mtime": 1788610590.4475114,
+    "ast_hash": "a891ad744067831d85d9553ddabb3324",
+    "semantic_hash": ""
+  },
+  "k8s/overlays/dev/kustomization.yaml": {
+    "mtime": 1788610600.8927822,
+    "ast_hash": "38c82f690ba3df414c875a40a7f1c481",
+    "semantic_hash": ""
+  },
+  "k8s/overlays/dev/mailpit.yaml": {
+    "mtime": 1788610590.3696764,
+    "ast_hash": "6647c6aa52101ff165d5f860496baf07",
+    "semantic_hash": ""
+  },
+  "k8s/overlays/prod/backup-cronjob.yaml": {
+    "mtime": 1788610652.8786206,
+    "ast_hash": "e07925dcf410619f264eb9ba009c792f",
+    "semantic_hash": ""
+  },
+  "k8s/overlays/prod/ingress-patch.yaml": {
+    "mtime": 1788610665.6294036,
+    "ast_hash": "03334e6fc942021985d92ef18f805ee1",
+    "semantic_hash": ""
+  },
+  "k8s/overlays/prod/kustomization.yaml": {
+    "mtime": 1788610677.6482954,
+    "ast_hash": "904c509a227950e1a1c944a2fbc409b4",
+    "semantic_hash": ""
+  },
+  "k8s/overlays/prod/network-policy.yaml": {
+    "mtime": 1788610645.9114335,
+    "ast_hash": "54871c3404afc00d85f67adeea4cc218",
+    "semantic_hash": ""
+  },
+  "k8s/overlays/prod/pdb.yaml": {
+    "mtime": 1788610677.5268214,
+    "ast_hash": "bbc310c0526f0ecdf7cb4e03d427cc92",
     "semantic_hash": ""
   }
 }

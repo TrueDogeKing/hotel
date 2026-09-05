@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: ".CreateWorkerAsync"
+community: "RoomCleaningRepository"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateWorkerAsync
+  - community/RoomCleaningRepository
 ---
 
 # MigrationBuilder
@@ -14,4 +14,4 @@ tags:
 - [[.Down()]] - `references` [EXTRACTED]
 - [[.Up()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateWorkerAsync
+#graphify/code #graphify/EXTRACTED #community/RoomCleaningRepository

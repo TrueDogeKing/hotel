@@ -1,11 +1,11 @@
 ---
 type: community
-members: 17
+members: 20
 ---
 
 # Admin User & Token Config
 
-**Members:** 17 nodes
+**Members:** 20 nodes
 
 ## Members
 - [[.CreateAsync()_13]] - code - src/CampCenter.Application/Services/UserService.cs
@@ -15,13 +15,16 @@ members: 17
 - [[.Hash()]] - code - src/CampCenter.Application/Interfaces/IPasswordHasher.cs
 - [[.ListAsync()_5]] - code - src/CampCenter.Application/Services/UserService.cs
 - [[.ParseRole()]] - code - src/CampCenter.Application/Services/UserService.cs
+- [[.RevokeAllActiveForUserAsync()]] - code - src/CampCenter.Domain/Repositories/IRefreshTokenRepository.cs
 - [[.SaveChangesAsync()]] - code - src/CampCenter.Domain/Repositories/IAdminUserRepository.cs
 - [[.SetPasswordAsync()_1]] - code - src/CampCenter.Application/Services/UserService.cs
 - [[.SetRoleAsync()_1]] - code - src/CampCenter.Application/Services/UserService.cs
 - [[.ToDto()_7]] - code - src/CampCenter.Application/Services/UserService.cs
 - [[AdminUserDto]] - code - src/CampCenter.Application/DTOs/Users/UserDtos.cs
 - [[CancellationToken_44]] - code
+- [[DateTime_16]] - code
 - [[Guid_27]] - code
+- [[Guid_46]] - code
 - [[List_18]] - code
 - [[Task_44]] - code
 - [[UserService]] - code - src/CampCenter.Application/Services/UserService.cs
@@ -35,16 +38,15 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 13 edges to [[_COMMUNITY_Booking Persistence & Entities (1)]]
-- 6 edges to [[_COMMUNITY_UsersController]]
+- 9 edges to [[_COMMUNITY_UsersController]]
 - 6 edges to [[_COMMUNITY_Auth Service & Tokens]]
-- 3 edges to [[_COMMUNITY_CampCenter.Application  Services (3)]]
-- 1 edge to [[_COMMUNITY_BookingGroupSection.tsx]]
+- 2 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (4)]]
 - 1 edge to [[_COMMUNITY_PasswordRules]]
 - 1 edge to [[_COMMUNITY_ClosureService]]
 
 ## Top bridge nodes
-- [[UserService]] - degree 14, connects to 4 communities
+- [[UserService]] - degree 14, connects to 5 communities
 - [[.CreateAsync()_13]] - degree 13, connects to 3 communities
-- [[AdminUserDto]] - degree 11, connects to 3 communities
-- [[.SetRoleAsync()_1]] - degree 12, connects to 2 communities
-- [[.SetPasswordAsync()_1]] - degree 11, connects to 2 communities
+- [[AdminUserDto]] - degree 11, connects to 2 communities
+- [[.SetRoleAsync()_1]] - degree 12, connects to 1 community
+- [[.SetPasswordAsync()_1]] - degree 11, connects to 1 community

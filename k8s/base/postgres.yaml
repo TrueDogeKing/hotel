@@ -1,0 +1,104 @@
+# PostgreSQL — the docker-compose `postgres` service, translated.
+#
+# A StatefulSet rather than a Deployment: the database owns a disk, and a
+# StatefulSet ties one specific PersistentVolumeClaim to one specific pod and
+# never starts a second copy of pod-0 while the first is still terminating.
+# `volumeClaimTemplates` is what replaces the named docker volume — the claim
+# survives the pod, the StatefulSet, and a `kubectl delete pod`.
+apiVersion: v1
+kind: Service
+metadata:
+  name: postgres
+  labels:
+    app.kubernetes.io/name: postgres
+    app.kubernetes.io/component: database
+spec:
+  # Headless (no cluster IP): DNS `postgres` resolves straight to the pod. The
+  # database has exactly one client-visible instance, so there is nothing to
+  # load balance, and this doubles as the StatefulSet's governing service.
+  clusterIP: None
+  selector:
+    app.kubernetes.io/name: postgres
+  ports:
+    - name: postgres
+      port: 5432
+      targetPort: postgres
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: postgres
+  labels:
+    app.kubernetes.io/name: postgres
+    app.kubernetes.io/component: database
+spec:
+  serviceName: postgres
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: postgres
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: postgres
+        app.kubernetes.io/component: database
+    spec:
+      securityContext:
+        # The postgres image drops to uid 999 itself; this makes the mounted
+        # volume group-writable for it on clusters that honour fsGroup.
+        fsGroup: 999
+      containers:
+        - name: postgres
+          image: postgres:16-alpine
+          ports:
+            - name: postgres
+              containerPort: 5432
+          env:
+            - name: POSTGRES_USER
+              value: campcenter
+            - name: POSTGRES_DB
+              value: campcenter
+            - name: POSTGRES_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: campcenter-secrets
+                  key: POSTGRES_PASSWORD
+            # The image only initialises a fresh cluster when PGDATA is empty;
+            # a subdirectory keeps it away from the volume's lost+found.
+            - name: PGDATA
+              value: /var/lib/postgresql/data/pgdata
+          # Same check the compose healthcheck runs. Readiness gates the
+          # Service (and therefore the API's first connection attempt);
+          # liveness restarts a hung server.
+          readinessProbe:
+            exec:
+              command: ["pg_isready", "-U", "campcenter", "-d", "campcenter"]
+            initialDelaySeconds: 5
+            periodSeconds: 5
+            timeoutSeconds: 5
+            failureThreshold: 10
+          livenessProbe:
+            exec:
+              command: ["pg_isready", "-U", "campcenter", "-d", "campcenter"]
+            initialDelaySeconds: 30
+            periodSeconds: 20
+            timeoutSeconds: 5
+            failureThreshold: 5
+          resources:
+            requests:
+              cpu: 100m
+              memory: 256Mi
+            limits:
+              cpu: "1"
+              memory: 1Gi
+          volumeMounts:
+            - name: data
+              mountPath: /var/lib/postgresql/data
+  volumeClaimTemplates:
+    - metadata:
+        name: data
+      spec:
+        accessModes: ["ReadWriteOnce"]
+        resources:
+          requests:
+            storage: 5Gi

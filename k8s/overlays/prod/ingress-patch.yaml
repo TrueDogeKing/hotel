@@ -1,0 +1,33 @@
+# Replace osrodek.example.com with the real domain (the DOMAIN value from .env).
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: campcenter
+  annotations:
+    # Baseline security headers, matching docker/Caddyfile. The SPA container
+    # adds its own CSP for HTML responses.
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      more_set_headers "Strict-Transport-Security: max-age=31536000; includeSubDomains";
+      more_set_headers "X-Content-Type-Options: nosniff";
+      more_set_headers "X-Frame-Options: DENY";
+      more_set_headers "Referrer-Policy: no-referrer";
+      more_set_headers "Cross-Origin-Opener-Policy: same-origin";
+spec:
+  rules:
+    - host: osrodek.example.com
+      http:
+        paths:
+          - path: /api
+            pathType: Prefix
+            backend:
+              service:
+                name: api
+                port:
+                  name: http
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: frontend
+                port:
+                  name: http

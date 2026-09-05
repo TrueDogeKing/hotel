@@ -29,7 +29,7 @@ SORT file.name ASC
 - 4 edges to [[_COMMUNITY_tests  CampCenter.IntegrationTests (1)]]
 - 2 edges to [[_COMMUNITY_src  api (2)]]
 - 1 edge to [[_COMMUNITY_CampCenter.Application.DTOs.Public]]
-- 1 edge to [[_COMMUNITY_RoomsAndClosuresApiTests]]
+- 1 edge to [[_COMMUNITY_Payment Gateway Integration Tests (2)]]
 
 ## Top bridge nodes
 - [[AdminPanelApiTests]] - degree 7, connects to 2 communities

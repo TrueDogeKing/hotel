@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/DTOs/AdminPanel/AdminPanelDtos.cs"
 type: "code"
-community: ".Update"
+community: "Admin Bookings Controller & DTOs"
 location: "L107"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Update
+  - community/Admin_Bookings_Controller__DTOs
 ---
 
 # CreateAdminBookingRequestDto
@@ -18,4 +18,4 @@ tags:
 - [[AdminPanelDtos.cs]] - `contains` [EXTRACTED]
 - [[CreateAdminBookingRequestValidator]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Update
+#graphify/code #graphify/EXTRACTED #community/Admin_Bookings_Controller__DTOs

@@ -30,7 +30,7 @@ SORT file.name ASC
 ## Connections to other communities
 - 2 edges to [[_COMMUNITY_src  api (2)]]
 - 1 edge to [[_COMMUNITY_CampCenter.Application.DTOs.Public]]
-- 1 edge to [[_COMMUNITY_RoomsAndClosuresApiTests]]
+- 1 edge to [[_COMMUNITY_Payment Gateway Integration Tests (2)]]
 - 1 edge to [[_COMMUNITY_tests  CampCenter.IntegrationTests (1)]]
 
 ## Top bridge nodes

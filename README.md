@@ -94,9 +94,30 @@ The `db-backup` container reports itself unhealthy once no dump has appeared for
 `BACKUP_STALE_HOURS` (36), which is what `docker ps` shows if backups quietly
 stop happening.
 
+### Kubernetes
+
+The same stack also runs on a cluster: `k8s/` holds Kustomize manifests (base +
+dev/prod overlays) covering PostgreSQL, the API, the SPA, the Ingress that
+replaces Caddy, and a CronJob that replaces the `db-backup` daemon. Compose stays
+the shortest path on a single machine; Kubernetes adds self-healing, zero-downtime
+rollouts and scheduled jobs.
+
+```bash
+bun run k8s:images   # docker build campcenter/api:dev + campcenter/frontend:dev
+bun run k8s:up       # kubectl apply -k k8s/overlays/dev
+bun run k8s:status   # pods, services, ingress, volume claims
+bun run k8s:forward  # SPA on http://localhost:8080
+```
+
+`k8s/README.md` explains what Kubernetes is doing here, how each compose service
+maps onto a Kubernetes object, how to get a cluster (Docker Desktop, kind,
+minikube, k3s) and a step-by-step list for verifying that a deployment really
+works — including the self-healing and data-persistence checks.
+
 ## Stack
 
 .NET 10 (Clean Architecture: Domain/Application/Infrastructure/Api) · EF Core +
 PostgreSQL (optimistic concurrency via xmin) · React 19 + Vite + Bun ·
 react-i18next · MailKit · Przelewy24 REST · Caddy · Docker Compose ·
-xUnit + Testcontainers. Task-runner rules and domain details: `CLAUDE.md`.
+Kubernetes (Kustomize, `k8s/`) · xUnit + Testcontainers. Task-runner rules and
+domain details: `CLAUDE.md`.

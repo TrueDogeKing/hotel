@@ -1,29 +1,15 @@
 ---
 type: community
-members: 16
+members: 2
 ---
 
 # Auth Controller (1)
 
-**Members:** 16 nodes
+**Members:** 2 nodes
 
 ## Members
-- [[.CreateAsync()_9]] - code - src/CampCenter.Application/Services/ClosureService.cs
-- [[.DeleteAsync()_5]] - code - src/CampCenter.Application/Services/ClosureService.cs
-- [[.GetAllAsync()_3]] - code - src/CampCenter.Application/Services/ClosureService.cs
-- [[.GetOrThrowAsync()_1]] - code - src/CampCenter.Application/Services/ClosureService.cs
-- [[.GuardNoLiveBookingsAsync()]] - code - src/CampCenter.Application/Services/ClosureService.cs
-- [[.GuardRoomExistsAsync()]] - code - src/CampCenter.Application/Services/ClosureService.cs
-- [[.SaveChangesAsync()_3]] - code - src/CampCenter.Domain/Repositories/IClosureRepository.cs
-- [[.ToDto()_1]] - code - src/CampCenter.Application/Services/ClosureService.cs
-- [[.UpdateAsync()_5]] - code - src/CampCenter.Application/Services/ClosureService.cs
-- [[CancellationToken_36]] - code
-- [[ClosureDto]] - code - src/CampCenter.Application/DTOs/Closures/ClosureDtos.cs
-- [[ClosureService]] - code - src/CampCenter.Application/Services/ClosureService.cs
-- [[DateOnly_11]] - code
-- [[Guid_21]] - code
-- [[List_9]] - code
-- [[Task_36]] - code
+- [[eslint-plugin-react-hooks]] - code - frontend/package.json
+- [[eslint-plugin-react-hooks_1]] - concept - frontend/package.json
 
 ## Live Query (requires Dataview plugin)
 
@@ -33,17 +19,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 8 edges to [[_COMMUNITY_Prettier Dependency]]
-- 4 edges to [[_COMMUNITY_.NextFreeSitting]]
-- 3 edges to [[_COMMUNITY_ClosureValidatorsTests]]
-- 2 edges to [[_COMMUNITY_Integration Test Harness (2)]]
-- 2 edges to [[_COMMUNITY_Room Management]]
-- 2 edges to [[_COMMUNITY_Validator Unit Tests]]
-- 1 edge to [[_COMMUNITY_Exception]]
+- 1 edge to [[_COMMUNITY_ESLint Dev Dependencies]]
 
 ## Top bridge nodes
-- [[ClosureService]] - degree 13, connects to 5 communities
-- [[.CreateAsync()_9]] - degree 11, connects to 2 communities
-- [[.GetOrThrowAsync()_1]] - degree 9, connects to 2 communities
-- [[ClosureDto]] - degree 8, connects to 2 communities
-- [[.UpdateAsync()_5]] - degree 11, connects to 1 community
+- [[eslint-plugin-react-hooks]] - degree 2, connects to 1 community

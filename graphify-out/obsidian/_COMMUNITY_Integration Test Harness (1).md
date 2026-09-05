@@ -47,22 +47,19 @@ SORT file.name ASC
 - 13 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (2)]]
 - 13 edges to [[_COMMUNITY_CampCenter.Domain  Repositories (1)]]
 - 11 edges to [[_COMMUNITY_Integration Test Harness (2)]]
-- 6 edges to [[_COMMUNITY_CampCenter.Application  Services (2)]]
+- 9 edges to [[_COMMUNITY_CampCenter.Application  Services (2)]]
 - 5 edges to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
 - 5 edges to [[_COMMUNITY_Public Booking Service (1)]]
 - 4 edges to [[_COMMUNITY_Admin Booking & Notifications (4)]]
 - 4 edges to [[_COMMUNITY_Admin Booking & Notifications (1)]]
-- 3 edges to [[_COMMUNITY_BookingConfiguration]]
+- 3 edges to [[_COMMUNITY_IRoomService]]
 - 2 edges to [[_COMMUNITY_ClosureService]]
-- 2 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (4)]]
+- 2 edges to [[_COMMUNITY_BookingConfiguration]]
 - 1 edge to [[_COMMUNITY_Exception]]
-- 1 edge to [[_COMMUNITY_IRoomService]]
 - 1 edge to [[_COMMUNITY_Room Task Management (1)]]
-- 1 edge to [[_COMMUNITY_components  admin]]
-- 1 edge to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
 
 ## Top bridge nodes
-- [[Booking]] - degree 81, connects to 14 communities
+- [[Booking]] - degree 81, connects to 11 communities
 - [[HousekeepingPlanner.cs]] - degree 4, connects to 2 communities
 - [[.ForDay()]] - degree 16, connects to 1 community
 - [[HousekeepingPlannerTests]] - degree 12, connects to 1 community

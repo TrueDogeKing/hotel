@@ -2,7 +2,7 @@
 source_file: "package.json"
 type: "code"
 community: "Root Task-Runner Scripts"
-location: "L13"
+location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED

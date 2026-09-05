@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "components / admin"
+community: "CampCenter.Application / Services (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/components_/_admin
+  - community/CampCenterApplication_/_Services_2
 ---
 
 # Guid
@@ -19,4 +19,4 @@ tags:
 - [[.ListOutingDaysAsync()]] - `references` [EXTRACTED]
 - [[.ListVisibleSlotSpansAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/components_/_admin
+#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_2

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.Application / Services (3)"
+community: "ScheduleValidators.cs"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterApplication_/_Services_3
+  - community/ScheduleValidatorscs
 ---
 
 # IRuleBuilder
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.ValidRole()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_3
+#graphify/code #graphify/EXTRACTED #community/ScheduleValidatorscs

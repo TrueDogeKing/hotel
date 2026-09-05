@@ -351,7 +351,7 @@
       }
     },
     {
-      "query": "tag:#community/.Update",
+      "query": "tag:#community/AdminUserRole",
       "color": {
         "a": 1,
         "rgb": 5142951
@@ -526,13 +526,6 @@
       }
     },
     {
-      "query": "tag:#community/SmtpEmailSender",
-      "color": {
-        "a": 1,
-        "rgb": 15583560
-      }
-    },
-    {
       "query": "tag:#community/CampCenter.Application.DTOs.Public",
       "color": {
         "a": 1,
@@ -603,20 +596,6 @@
       }
     },
     {
-      "query": "tag:#community/AdminUserRole",
-      "color": {
-        "a": 1,
-        "rgb": 11565729
-      }
-    },
-    {
-      "query": "tag:#community/MealTimeService",
-      "color": {
-        "a": 1,
-        "rgb": 16752039
-      }
-    },
-    {
       "query": "tag:#community/Persistence_/_Migrations_(1)",
       "color": {
         "a": 1,
@@ -666,13 +645,6 @@
       }
     },
     {
-      "query": "tag:#community/.CreateWorkerAsync",
-      "color": {
-        "a": 1,
-        "rgb": 15583560
-      }
-    },
-    {
       "query": "tag:#community/Frontend_API_Error_Handling",
       "color": {
         "a": 1,
@@ -701,13 +673,6 @@
       }
     },
     {
-      "query": "tag:#community/AvailabilityService",
-      "color": {
-        "a": 1,
-        "rgb": 5142951
-      }
-    },
-    {
       "query": "tag:#community/Persistence_/_Migrations_(9)",
       "color": {
         "a": 1,
@@ -726,13 +691,6 @@
       "color": {
         "a": 1,
         "rgb": 7780274
-      }
-    },
-    {
-      "query": "tag:#community/.Groups",
-      "color": {
-        "a": 1,
-        "rgb": 5873999
       }
     },
     {
@@ -768,20 +726,6 @@
       "color": {
         "a": 1,
         "rgb": 12234924
-      }
-    },
-    {
-      "query": "tag:#community/MealTimeDtos.cs",
-      "color": {
-        "a": 1,
-        "rgb": 5142951
-      }
-    },
-    {
-      "query": "tag:#community/Prettier_Dependency",
-      "color": {
-        "a": 1,
-        "rgb": 15896107
       }
     },
     {
@@ -862,13 +806,6 @@
       }
     },
     {
-      "query": "tag:#community/IAvailabilityService",
-      "color": {
-        "a": 1,
-        "rgb": 7780274
-      }
-    },
-    {
       "query": "tag:#community/AdminPanelApiTests",
       "color": {
         "a": 1,
@@ -887,20 +824,6 @@
       "color": {
         "a": 1,
         "rgb": 11565729
-      }
-    },
-    {
-      "query": "tag:#community/BookingGroupSection.tsx",
-      "color": {
-        "a": 1,
-        "rgb": 16752039
-      }
-    },
-    {
-      "query": "tag:#community/.NextFreeSitting",
-      "color": {
-        "a": 1,
-        "rgb": 10253663
       }
     },
     {
@@ -974,31 +897,10 @@
       }
     },
     {
-      "query": "tag:#community/BookingRoomAssignment",
-      "color": {
-        "a": 1,
-        "rgb": 12234924
-      }
-    },
-    {
-      "query": "tag:#community/ControllerBase",
-      "color": {
-        "a": 1,
-        "rgb": 5142951
-      }
-    },
-    {
       "query": "tag:#community/ScheduleValidators.cs",
       "color": {
         "a": 1,
         "rgb": 15896107
-      }
-    },
-    {
-      "query": "tag:#community/ClosureValidatorsTests",
-      "color": {
-        "a": 1,
-        "rgb": 5873999
       }
     },
     {

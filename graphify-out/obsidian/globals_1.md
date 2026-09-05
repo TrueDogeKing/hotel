@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/package.json"
 type: "concept"
-community: "BookingRoomAssignment"
+community: "ESLint Dev Dependencies"
 location: "L31"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/BookingRoomAssignment
+  - community/ESLint_Dev_Dependencies
 ---
 
 # globals
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[globals]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/BookingRoomAssignment
+#graphify/concept #graphify/EXTRACTED #community/ESLint_Dev_Dependencies

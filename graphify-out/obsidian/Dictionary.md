@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "IAvailabilityService"
+community: "Admin Bookings Controller & DTOs"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/IAvailabilityService
+  - community/Admin_Bookings_Controller__DTOs
 ---
 
 # Dictionary
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[.GetFreeRoomsByCapacityAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/IAvailabilityService
+#graphify/code #graphify/EXTRACTED #community/Admin_Bookings_Controller__DTOs

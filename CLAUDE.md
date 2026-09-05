@@ -24,6 +24,14 @@ obsługi). Płatności rozliczane poza systemem: właściciel odnotowuje je w pa
   PublicPaymentsController, akcja InitiatePayment, rejestracje IPaymentService /
   IPaymentGateway i binding P24Settings
 * Reverse proxy / TLS: Caddy; środowisko: Docker Compose
+* Wdrożenie na klaster (alternatywa dla Compose): manifesty Kustomize w `k8s/`
+  (`base/` + `overlays/dev|prod`) — StatefulSet PostgreSQL z PVC, Deployment API
+  z sondami startup/readiness/liveness, Deployment SPA, Ingress w roli Caddy'ego,
+  CronJob zastępujący usługę `db-backup`. ConfigMap `campcenter-config` niesie
+  ustawienia jawne, Secret `campcenter-secrets` — sekrety (dev: `overlays/dev/secrets.env`
+  w repo, prod: `overlays/prod/secrets.env` poza repo, wzorzec w `.example`).
+  API celowo ma jedną replikę (migracje EF przy starcie). Opis, mapowanie
+  compose→k8s i lista kroków weryfikacji: `k8s/README.md`
 * Kopie zapasowe (produkcja): usługa `db-backup` w `docker-compose.prod.yml`
   (ten sam obraz postgres:16-alpine, logika w `scripts/backup-db.sh`) — codzienny
   `pg_dump` o `BACKUP_TIME` do katalogu `BACKUP_DIR` na hoście, retencja
@@ -132,7 +140,10 @@ Bun is the primary application task runner and the frontend package manager
 (tasks live in root `package.json`, run as `bun run <task>`; frontend deps are
 locked in `frontend/bun.lock`). All application workflows must be exposed
 through these tasks: `bun run dev`, `bun run build`, `bun run test`,
-`bun run backend`, `bun run frontend`. Always invoke tasks as `bun run <task>`
+`bun run backend`, `bun run frontend`. Deployment of the application — compose
+(`prod:up`) and Kubernetes alike (`k8s:images`, `k8s:up`, `k8s:status`,
+`k8s:logs`, `k8s:forward`, `k8s:prod:up`) — is an application workflow, so those
+tasks live in `package.json` too, not in mise. Always invoke tasks as `bun run <task>`
 — bare `bun <task>` collides with Bun built-ins (`bun build`, `bun test`,
 `bun install`).
 

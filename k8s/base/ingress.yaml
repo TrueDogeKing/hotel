@@ -1,0 +1,34 @@
+# The Ingress is what Caddy does in the compose stack: one public entry point
+# that splits /api from everything else. TLS is not terminated here on purpose —
+# same reasoning as docker/Caddyfile, the site sits behind a Cloudflare Tunnel
+# that already terminates HTTPS at the edge. On a host with a real public IP,
+# add a `tls:` block and cert-manager (see k8s/README.md, "TLS").
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: campcenter
+  annotations:
+    # Booking forms are small, but keep a sane ceiling rather than nginx's 1MB
+    # default surprising a future upload.
+    nginx.ingress.kubernetes.io/proxy-body-size: 8m
+spec:
+  ingressClassName: nginx
+  rules:
+    # Host is replaced per overlay.
+    - host: campcenter.localhost
+      http:
+        paths:
+          - path: /api
+            pathType: Prefix
+            backend:
+              service:
+                name: api
+                port:
+                  name: http
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: frontend
+                port:
+                  name: http

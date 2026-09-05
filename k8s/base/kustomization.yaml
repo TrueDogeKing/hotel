@@ -1,0 +1,38 @@
+# Shared shape of the stack. Nothing here is environment-specific: the dev and
+# prod overlays supply the images, the secrets, the hostname and the replica
+# counts. Render it with `kubectl kustomize k8s/overlays/dev` to see the result
+# before applying anything.
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: campcenter
+
+resources:
+  - namespace.yaml
+  - postgres.yaml
+  - api.yaml
+  - frontend.yaml
+  - ingress.yaml
+
+labels:
+  - pairs:
+      app.kubernetes.io/part-of: campcenter
+    # Selectors are immutable on a running Deployment, so labels added here must
+    # stay out of them.
+    includeSelectors: false
+
+configMapGenerator:
+  # Non-secret application settings, injected as environment variables. .NET
+  # configuration reads `Section__Key` from the environment, so these keys are
+  # exactly the appsettings.json paths with `:` written as `__`.
+  - name: campcenter-config
+    literals:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ASPNETCORE_HTTP_PORTS=8080
+      - Database__MigrateAutomatically=true
+      - Database__SeedAutomatically=true
+      - Jwt__Issuer=CampCenter
+      - Jwt__Audience=CampCenter
+      - Email__From=rezerwacje@campcenter.local
+      - Email__FromName=Osrodek CampCenter
+      - Email__UseSsl=false

@@ -1,0 +1,25 @@
+# Docker Desktop's Kubernetes shares the local image store, so a `docker build`
+# on the host is immediately visible to the cluster. IfNotPresent stops the
+# kubelet from trying to pull `campcenter/api:dev` from Docker Hub, where it
+# does not exist.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api
+spec:
+  template:
+    spec:
+      containers:
+        - name: api
+          imagePullPolicy: IfNotPresent
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+spec:
+  template:
+    spec:
+      containers:
+        - name: frontend
+          imagePullPolicy: IfNotPresent

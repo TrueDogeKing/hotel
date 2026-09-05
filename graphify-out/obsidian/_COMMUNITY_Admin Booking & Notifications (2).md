@@ -1,35 +1,21 @@
 ---
 type: community
-members: 22
+members: 8
 ---
 
 # Admin Booking & Notifications (2)
 
-**Members:** 22 nodes
+**Members:** 8 nodes
 
 ## Members
-- [[.AssignableRooms()]] - code - src/CampCenter.Api/Controllers/Admin/BookingsController.cs
-- [[.Cancel()]] - code - src/CampCenter.Api/Controllers/Admin/BookingsController.cs
-- [[.Create()]] - code - src/CampCenter.Api/Controllers/Admin/BookingsController.cs
-- [[.Get()]] - code - src/CampCenter.Api/Controllers/Admin/BookingsController.cs
-- [[.List()]] - code - src/CampCenter.Api/Controllers/Admin/BookingsController.cs
-- [[.Reassign()]] - code - src/CampCenter.Api/Controllers/Admin/BookingsController.cs
-- [[.SetPaymentState()]] - code - src/CampCenter.Api/Controllers/Admin/BookingsController.cs
-- [[.SetState()]] - code - src/CampCenter.Api/Controllers/Admin/BookingsController.cs
-- [[.SetStatus()]] - code - src/CampCenter.Api/Controllers/Admin/BookingsController.cs
-- [[.UpdateDietaryNotes()]] - code - src/CampCenter.Api/Controllers/Admin/BookingsController.cs
-- [[.UpdatePeople()]] - code - src/CampCenter.Api/Controllers/Admin/BookingsController.cs
-- [[.UpdatePricing()]] - code - src/CampCenter.Api/Controllers/Admin/BookingsController.cs
-- [[BookingsController]] - code - src/CampCenter.Api/Controllers/Admin/BookingsController.cs
-- [[CancellationToken_1]] - code
-- [[Guid]] - code
-- [[HttpGet]] - code
-- [[HttpPost]] - code
-- [[HttpPut]] - code
-- [[IActionResult]] - code
-- [[IValidator]] - code
-- [[ProducesResponseType]] - code
-- [[Task_2]] - code
+- [[.CancelByTokenAsync()]] - code - src/CampCenter.Application/Interfaces/IBookingService.cs
+- [[.CreateAsync()_1]] - code - src/CampCenter.Application/Interfaces/IBookingService.cs
+- [[.GetByTokenAsync()]] - code - src/CampCenter.Application/Interfaces/IBookingService.cs
+- [[.GetScheduleByTokenAsync()]] - code - src/CampCenter.Application/Interfaces/IBookingService.cs
+- [[CancellationToken_20]] - code
+- [[IBookingService]] - code - src/CampCenter.Application/Interfaces/IBookingService.cs
+- [[PublicScheduleDto]] - code - src/CampCenter.Application/DTOs/Schedule/ScheduleDtos.cs
+- [[Task_20]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -39,16 +25,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 13 edges to [[_COMMUNITY_AdminBookingDto]]
-- 7 edges to [[_COMMUNITY_.Update]]
-- 1 edge to [[_COMMUNITY_Application Namespaces & DTOs]]
-- 1 edge to [[_COMMUNITY_.Groups]]
-- 1 edge to [[_COMMUNITY_Admin Booking & Notifications (1)]]
+- 5 edges to [[_COMMUNITY_BookingSettings]]
+- 3 edges to [[_COMMUNITY_Public Booking Service (1)]]
+- 2 edges to [[_COMMUNITY_Persistence  Migrations (2)]]
 - 1 edge to [[_COMMUNITY_DTOs  Schedule (1)]]
+- 1 edge to [[_COMMUNITY_CampCenter.Application  Services (2)]]
+- 1 edge to [[_COMMUNITY_CampCenter.Application.DTOs.Public]]
 
 ## Top bridge nodes
-- [[BookingsController]] - degree 16, connects to 3 communities
-- [[.SetStatus()]] - degree 9, connects to 2 communities
-- [[.Reassign()]] - degree 9, connects to 2 communities
-- [[.UpdatePeople()]] - degree 9, connects to 2 communities
-- [[.UpdatePricing()]] - degree 9, connects to 2 communities
+- [[IBookingService]] - degree 7, connects to 3 communities
+- [[.CreateAsync()_1]] - degree 6, connects to 3 communities
+- [[PublicScheduleDto]] - degree 4, connects to 3 communities
+- [[.GetByTokenAsync()]] - degree 5, connects to 2 communities
+- [[.GetScheduleByTokenAsync()]] - degree 5, connects to 1 community

@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/DTOs/Schedule/ScheduleDtos.cs"
 type: "code"
-community: "BookingSettings"
+community: "Admin Booking & Notifications (2)"
 location: "L203"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/BookingSettings
+  - community/Admin_Booking__Notifications_2
 ---
 
 # PublicScheduleDto
@@ -17,4 +17,4 @@ tags:
 - [[.ToPublicDto()]] - `references` [EXTRACTED]
 - [[ScheduleDtos.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/BookingSettings
+#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_2

@@ -1,0 +1,72 @@
+# React SPA served by nginx — the docker-compose `frontend` service.
+#
+# The image is stateless, so this is an ordinary Deployment and can be scaled
+# freely. Its nginx.conf still proxies /api to http://api:8080, which resolves
+# in-cluster exactly as it did on the compose network; the Ingress routes /api
+# straight to the API anyway, so that proxy is a fallback rather than the path
+# requests normally take.
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend
+  labels:
+    app.kubernetes.io/name: frontend
+    app.kubernetes.io/component: frontend
+spec:
+  selector:
+    app.kubernetes.io/name: frontend
+  ports:
+    - name: http
+      port: 8080
+      targetPort: http
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+  labels:
+    app.kubernetes.io/name: frontend
+    app.kubernetes.io/component: frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: frontend
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: frontend
+        app.kubernetes.io/component: frontend
+    spec:
+      containers:
+        - name: frontend
+          image: campcenter/frontend:dev
+          ports:
+            - name: http
+              containerPort: 8080
+          # nginx.conf serves a literal 200 at /health.
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: http
+            periodSeconds: 10
+            failureThreshold: 3
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: http
+            periodSeconds: 20
+            failureThreshold: 3
+          resources:
+            requests:
+              cpu: 10m
+              memory: 32Mi
+            limits:
+              cpu: 500m
+              memory: 128Mi
+          securityContext:
+            allowPrivilegeEscalation: false
+            # No runAsNonRoot here: the stock nginx image starts its master
+            # process as root and drops the workers to the `nginx` user itself,
+            # which needs CHOWN/SETUID/SETGID. Switching to nginx:alpine-slim
+            # with an unprivileged setup is the way to tighten this.

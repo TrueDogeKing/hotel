@@ -29,6 +29,9 @@ pnpm-debug.log*
 deploy.log
 secrets.json
 
+## --- Kubernetes (sekrety produkcyjne; wzorzec: secrets.env.example) ---
+k8s/overlays/prod/secrets.env
+
 ## --- Kopie zapasowe bazy (zrzuty + log usługi db-backup) ---
 backups/
 

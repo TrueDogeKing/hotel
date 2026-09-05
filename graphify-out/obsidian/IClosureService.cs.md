@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Interfaces/IClosureService.cs"
 type: "code"
-community: ".NextFreeSitting"
+community: "CampCenter.Application.DTOs.Public"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/NextFreeSitting
+  - community/CampCenterApplicationDTOsPublic
 ---
 
 # IClosureService.cs
@@ -16,4 +16,4 @@ tags:
 - [[CampCenter.Application.Interfaces]] - `contains` [EXTRACTED]
 - [[IClosureService]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/NextFreeSitting
+#graphify/code #graphify/EXTRACTED #community/CampCenterApplicationDTOsPublic
