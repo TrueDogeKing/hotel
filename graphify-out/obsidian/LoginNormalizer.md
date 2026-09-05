@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Common/LoginNormalizer.cs"
 type: "code"
-community: "Auth Service & Tokens"
+community: ".Normalize"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Auth_Service__Tokens
+  - community/Normalize
 ---
 
 # LoginNormalizer
@@ -15,4 +15,4 @@ tags:
 - [[.Normalize()]] - `method` [EXTRACTED]
 - [[LoginNormalizer.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Auth_Service__Tokens
+#graphify/code #graphify/EXTRACTED #community/Normalize

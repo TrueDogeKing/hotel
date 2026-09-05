@@ -64,7 +64,7 @@ SORT file.name ASC
 ## Connections to other communities
 - 5 edges to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
 - 3 edges to [[_COMMUNITY_ClosureService]]
-- 2 edges to [[_COMMUNITY_Room Management]]
+- 2 edges to [[_COMMUNITY_Persistence  Migrations (2)]]
 - 2 edges to [[_COMMUNITY_Public Booking Service (1)]]
 
 ## Top bridge nodes

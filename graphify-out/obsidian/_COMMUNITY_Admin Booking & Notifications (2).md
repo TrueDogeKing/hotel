@@ -1,21 +1,31 @@
 ---
 type: community
-members: 8
+members: 18
 ---
 
 # Admin Booking & Notifications (2)
 
-**Members:** 8 nodes
+**Members:** 18 nodes
 
 ## Members
-- [[.CancelByTokenAsync()]] - code - src/CampCenter.Application/Interfaces/IBookingService.cs
-- [[.CreateAsync()_1]] - code - src/CampCenter.Application/Interfaces/IBookingService.cs
-- [[.GetByTokenAsync()]] - code - src/CampCenter.Application/Interfaces/IBookingService.cs
-- [[.GetScheduleByTokenAsync()]] - code - src/CampCenter.Application/Interfaces/IBookingService.cs
-- [[CancellationToken_20]] - code
-- [[IBookingService]] - code - src/CampCenter.Application/Interfaces/IBookingService.cs
-- [[PublicScheduleDto]] - code - src/CampCenter.Application/DTOs/Schedule/ScheduleDtos.cs
-- [[Task_20]] - code
+- [[.AddAsync()_14]] - code - src/CampCenter.Infrastructure/Repositories/ClosureRepository.cs
+- [[.GetAllAsync()_9]] - code - src/CampCenter.Infrastructure/Repositories/ClosureRepository.cs
+- [[.GetByIdAsync()_9]] - code - src/CampCenter.Infrastructure/Repositories/ClosureRepository.cs
+- [[.GetOverlappingAsync()_1]] - code - src/CampCenter.Infrastructure/Repositories/ClosureRepository.cs
+- [[.GetUpcomingCenterWideAsync()_1]] - code - src/CampCenter.Infrastructure/Repositories/ClosureRepository.cs
+- [[.Remove()_9]] - code - src/CampCenter.Infrastructure/Repositories/ClosureRepository.cs
+- [[.SaveChangesAsync()_14]] - code - src/CampCenter.Infrastructure/Repositories/ClosureRepository.cs
+- [[CancellationToken_62]] - code
+- [[Closure_1]] - code - src/CampCenter.Domain/Entities/Closure.cs
+- [[Closure.cs]] - code - src/CampCenter.Domain/Entities/Closure.cs
+- [[ClosureRepository]] - code - src/CampCenter.Infrastructure/Repositories/ClosureRepository.cs
+- [[DateOnly_19]] - code
+- [[DateOnly_27]] - code
+- [[DateTime_7]] - code
+- [[Guid_32]] - code
+- [[Guid_54]] - code
+- [[List_32]] - code
+- [[Task_62]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -25,16 +35,15 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_BookingSettings]]
-- 3 edges to [[_COMMUNITY_Public Booking Service (1)]]
-- 2 edges to [[_COMMUNITY_Persistence  Migrations (2)]]
-- 1 edge to [[_COMMUNITY_DTOs  Schedule (1)]]
-- 1 edge to [[_COMMUNITY_CampCenter.Application  Services (2)]]
-- 1 edge to [[_COMMUNITY_CampCenter.Application.DTOs.Public]]
+- 6 edges to [[_COMMUNITY_IClosureRepository]]
+- 2 edges to [[_COMMUNITY_Room]]
+- 2 edges to [[_COMMUNITY_Exception]]
+- 2 edges to [[_COMMUNITY_components  admin]]
+- 2 edges to [[_COMMUNITY_IRoomService]]
+- 1 edge to [[_COMMUNITY_Room Management]]
+- 1 edge to [[_COMMUNITY_Persistence  Migrations (2)]]
 
 ## Top bridge nodes
-- [[IBookingService]] - degree 7, connects to 3 communities
-- [[.CreateAsync()_1]] - degree 6, connects to 3 communities
-- [[PublicScheduleDto]] - degree 4, connects to 3 communities
-- [[.GetByTokenAsync()]] - degree 5, connects to 2 communities
-- [[.GetScheduleByTokenAsync()]] - degree 5, connects to 1 community
+- [[Closure_1]] - degree 22, connects to 6 communities
+- [[ClosureRepository]] - degree 10, connects to 3 communities
+- [[Closure.cs]] - degree 2, connects to 1 community

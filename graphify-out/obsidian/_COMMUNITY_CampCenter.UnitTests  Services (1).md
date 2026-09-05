@@ -1,17 +1,16 @@
 ---
 type: community
-members: 83
+members: 79
 ---
 
 # CampCenter.UnitTests / Services (1)
 
-**Members:** 83 nodes
+**Members:** 79 nodes
 
 ## Members
 - [[.AddAsync()_4]] - code - src/CampCenter.Domain/Repositories/IMealTimeDefaultRepository.cs
 - [[.AddAsync()_15]] - code - src/CampCenter.Infrastructure/Repositories/MealTimeDefaultRepository.cs
 - [[.ClashesWith()]] - code - src/CampCenter.Application/Services/MealGenerationPlanner.cs
-- [[.Configure()_5]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/MealTimeDefaultConfiguration.cs
 - [[.CreateAsync()_10]] - code - src/CampCenter.Application/Services/MealTimeService.cs
 - [[.Default()]] - code - tests/CampCenter.UnitTests/Services/MealGenerationPlannerTests.cs
 - [[.DeleteAsync()_6]] - code - src/CampCenter.Application/Services/MealTimeService.cs
@@ -56,7 +55,6 @@ members: 83
 - [[DateOnly_15]] - code
 - [[DateTime_8]] - code
 - [[End]] - code
-- [[EntityTypeBuilder_5]] - code
 - [[Fact_11]] - code
 - [[Guid_23]] - code
 - [[Guid_33]] - code
@@ -77,8 +75,6 @@ members: 83
 - [[MealSlot]] - code - src/CampCenter.Application/Services/MealGenerationPlanner.cs
 - [[MealTimeDefault_1]] - code - src/CampCenter.Domain/Entities/MealTimeDefault.cs
 - [[MealTimeDefault.cs]] - code - src/CampCenter.Domain/Entities/MealTimeDefault.cs
-- [[MealTimeDefaultConfiguration]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/MealTimeDefaultConfiguration.cs
-- [[MealTimeDefaultConfiguration.cs]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/MealTimeDefaultConfiguration.cs
 - [[MealTimeDefaultDto]] - code - src/CampCenter.Application/DTOs/Schedule/MealTimeDtos.cs
 - [[MealTimeDefaultRepository]] - code - src/CampCenter.Infrastructure/Repositories/MealTimeDefaultRepository.cs
 - [[MealTimeService]] - code - src/CampCenter.Application/Services/MealTimeService.cs
@@ -102,15 +98,15 @@ SORT file.name ASC
 ## Connections to other communities
 - 16 edges to [[_COMMUNITY_CampCenter.Application  Services (2)]]
 - 8 edges to [[_COMMUNITY_Camp Session Management]]
-- 4 edges to [[_COMMUNITY_Exception]]
 - 3 edges to [[_COMMUNITY_ClosureService]]
-- 2 edges to [[_COMMUNITY_BookingConfiguration]]
+- 3 edges to [[_COMMUNITY_Exception]]
+- 2 edges to [[_COMMUNITY_components  admin]]
 - 2 edges to [[_COMMUNITY_IRoomService]]
 - 1 edge to [[_COMMUNITY_Application Namespaces & DTOs]]
 
 ## Top bridge nodes
-- [[MealTimeDefault_1]] - degree 29, connects to 2 communities
+- [[MealTimeDefault_1]] - degree 29, connects to 3 communities
 - [[MealTimeService]] - degree 11, connects to 2 communities
 - [[IMealTimeDefaultRepository]] - degree 11, connects to 2 communities
 - [[MealTimeDefaultRepository]] - degree 10, connects to 2 communities
-- [[MealTimeDefaultConfiguration.cs]] - degree 3, connects to 2 communities
+- [[.EffectiveSlots()]] - degree 16, connects to 1 community

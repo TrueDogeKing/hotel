@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "AdminUserRole"
+community: "RoomCleaningRepository"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AdminUserRole
+  - community/RoomCleaningRepository
 ---
 
 # MigrationBuilder
@@ -14,4 +14,4 @@ tags:
 - [[.Down()_9]] - `references` [EXTRACTED]
 - [[.Up()_9]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AdminUserRole
+#graphify/code #graphify/EXTRACTED #community/RoomCleaningRepository

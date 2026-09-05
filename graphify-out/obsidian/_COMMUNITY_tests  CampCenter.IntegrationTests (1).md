@@ -55,13 +55,13 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 8 edges to [[_COMMUNITY_src  api (2)]]
-- 6 edges to [[_COMMUNITY_PasswordRules]]
+- 5 edges to [[_COMMUNITY_PasswordRules]]
+- 5 edges to [[_COMMUNITY_src  api (2)]]
 - 4 edges to [[_COMMUNITY_AdminPanelApiTests]]
 - 4 edges to [[_COMMUNITY_IntegrationTestBase]]
+- 4 edges to [[_COMMUNITY_RoomsAndClosuresApiTests]]
+- 4 edges to [[_COMMUNITY_AuthApiTests]]
 - 2 edges to [[_COMMUNITY_CampCenter.Application  Services (2)]]
-- 2 edges to [[_COMMUNITY_Payment Gateway Integration Tests (2)]]
-- 2 edges to [[_COMMUNITY_RoomsAndClosuresApiTests]]
 - 1 edge to [[_COMMUNITY_Camp Session Management]]
 - 1 edge to [[_COMMUNITY_.WithRoomsAsync]]
 - 1 edge to [[_COMMUNITY_CampCenter.Application.DTOs.Public]]

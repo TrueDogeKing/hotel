@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/components/admin/GroupMealTimes.tsx"
 type: "code"
-community: "Room Closure Management"
+community: "Persistence / Migrations (10)"
 location: "L41"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Closure_Management
+  - community/Persistence_/_Migrations_10
 ---
 
 # Props
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[GroupMealTimes.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management
+#graphify/code #graphify/EXTRACTED #community/Persistence_/_Migrations_10

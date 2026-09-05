@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/i18n/index.ts"
 type: "code"
-community: "src / api (1)"
+community: "Public Booking Frontend (1)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/src_/_api_1
+  - community/Public_Booking_Frontend_1
 ---
 
 # index.ts
@@ -19,4 +19,4 @@ tags:
 - [[public.ts]] - `imports_from` [EXTRACTED]
 - [[setLanguage()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/src_/_api_1
+#graphify/code #graphify/EXTRACTED #community/Public_Booking_Frontend_1

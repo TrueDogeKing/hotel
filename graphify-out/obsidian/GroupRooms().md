@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/components/admin/GroupRooms.tsx"
 type: "code"
-community: "MealTimeDefault"
+community: "eslint"
 location: "L36"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MealTimeDefault
+  - community/eslint
 ---
 
 # GroupRooms()
@@ -17,4 +17,4 @@ tags:
 - [[getAssignableRooms()]] - `calls` [EXTRACTED]
 - [[useAuth()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MealTimeDefault
+#graphify/code #graphify/EXTRACTED #community/eslint

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "CampCenter.Application / Services (3)"
+community: "DTOs / Schedule (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterApplication_/_Services_3
+  - community/DTOs_/_Schedule_1
 ---
 
 # AbstractValidator
@@ -28,4 +28,4 @@ tags:
 - [[UpdateRoomRequestValidator]] - `inherits` [EXTRACTED]
 - [[UpdateScheduleEntryRequestValidator]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_3
+#graphify/code #graphify/EXTRACTED #community/DTOs_/_Schedule_1

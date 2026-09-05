@@ -1,11 +1,11 @@
 ---
 type: community
-members: 45
+members: 46
 ---
 
 # Project & NuGet Config
 
-**Members:** 45 nodes
+**Members:** 46 nodes
 
 ## Members
 - [[BCrypt.Net-Next (4.2.0)]] - code - src/CampCenter.Infrastructure/CampCenter.Infrastructure.csproj
@@ -24,6 +24,7 @@ members: 45
 - [[Microsoft.AspNetCore.OpenApi (10.0.9)]] - code - src/CampCenter.Api/CampCenter.Api.csproj
 - [[Microsoft.EntityFrameworkCore.Design (10.0.4)]] - code - src/CampCenter.Api/CampCenter.Api.csproj
 - [[Microsoft.EntityFrameworkCore.Design (10.0.4)_1]] - code - src/CampCenter.Infrastructure/CampCenter.Infrastructure.csproj
+- [[Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore (10.0.4)]] - code - src/CampCenter.Api/CampCenter.Api.csproj
 - [[Microsoft.Extensions.Http (10.0.0)]] - code - src/CampCenter.Infrastructure/CampCenter.Infrastructure.csproj
 - [[Microsoft.Extensions.Logging.Abstractions (10.0.0)]] - code - src/CampCenter.Application/CampCenter.Application.csproj
 - [[Microsoft.Extensions.Options (10.0.0)]] - code - src/CampCenter.Application/CampCenter.Application.csproj

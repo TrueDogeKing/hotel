@@ -18,6 +18,7 @@ tags:
 - [[Microsoft.AspNetCore.Authentication.JwtBearer (10.0.9)]] - `imports` [EXTRACTED]
 - [[Microsoft.AspNetCore.OpenApi (10.0.9)]] - `imports` [EXTRACTED]
 - [[Microsoft.EntityFrameworkCore.Design (10.0.4)]] - `imports` [EXTRACTED]
+- [[Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore (10.0.4)]] - `imports` [EXTRACTED]
 - [[Microsoft.NET.Sdk.Web]] - `references` [EXTRACTED]
 - [[Microsoft.OpenApi (2.10.0)]] - `imports` [EXTRACTED]
 - [[Scalar.AspNetCore (2.16.5)]] - `imports` [EXTRACTED]

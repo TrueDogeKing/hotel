@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Admin Booking & Notifications (2)"
+community: "BookingSettings"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Booking__Notifications_2
+  - community/BookingSettings
 ---
 
 # CancellationToken
@@ -16,4 +16,4 @@ tags:
 - [[.GetByTokenAsync()]] - `references` [EXTRACTED]
 - [[.GetScheduleByTokenAsync()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_2
+#graphify/code #graphify/EXTRACTED #community/BookingSettings

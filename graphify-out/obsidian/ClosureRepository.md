@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Repositories/ClosureRepository.cs"
 type: "code"
-community: "Validator Unit Tests"
+community: "Admin Booking & Notifications (2)"
 location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Validator_Unit_Tests
+  - community/Admin_Booking__Notifications_2
 ---
 
 # ClosureRepository
@@ -23,4 +23,4 @@ tags:
 - [[ClosureRepository.cs]] - `contains` [EXTRACTED]
 - [[IClosureRepository]] - `implements` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Validator_Unit_Tests
+#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_2

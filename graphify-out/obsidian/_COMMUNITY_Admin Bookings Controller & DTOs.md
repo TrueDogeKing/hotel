@@ -1,11 +1,11 @@
 ---
 type: community
-members: 129
+members: 118
 ---
 
 # Admin Bookings Controller & DTOs
 
-**Members:** 129 nodes
+**Members:** 118 nodes
 
 ## Members
 - [[.ApplyCancellationAsync()]] - code - src/CampCenter.Application/Services/AdminBookingService.cs
@@ -22,7 +22,6 @@ members: 129
 - [[.GenerateMealsSafelyAsync()]] - code - src/CampCenter.Application/Services/AdminBookingService.cs
 - [[.Get()]] - code - src/CampCenter.Api/Controllers/Admin/BookingsController.cs
 - [[.Get()_1]] - code - src/CampCenter.Api/Controllers/Admin/DashboardController.cs
-- [[.Get()_2]] - code - src/CampCenter.Api/Controllers/Admin/OccupancyController.cs
 - [[.GetAssignableRoomsAsync()]] - code - src/CampCenter.Application/Interfaces/IAdminBookingService.cs
 - [[.GetAssignableRoomsAsync()_1]] - code - src/CampCenter.Application/Services/AdminBookingService.cs
 - [[.GetAsync()]] - code - src/CampCenter.Application/Interfaces/IAdminBookingService.cs
@@ -79,17 +78,14 @@ members: 129
 - [[BookingsController]] - code - src/CampCenter.Api/Controllers/Admin/BookingsController.cs
 - [[CancellationToken_1]] - code
 - [[CancellationToken_3]] - code
-- [[CancellationToken_6]] - code
 - [[CancellationToken_17]] - code
 - [[CancellationToken_19]] - code
 - [[CancellationToken_32]] - code
-- [[ControllerBase]] - code
 - [[CreateAdminBookingRequestDto]] - code - src/CampCenter.Application/DTOs/AdminPanel/AdminPanelDtos.cs
 - [[CreateAdminBookingRequestValidator]] - code - src/CampCenter.Application/Validators/AdminBookingValidators.cs
 - [[DashboardBookingDto]] - code - src/CampCenter.Application/DTOs/AdminPanel/AdminPanelDtos.cs
 - [[DashboardController]] - code - src/CampCenter.Api/Controllers/Admin/DashboardController.cs
 - [[DashboardDto]] - code - src/CampCenter.Application/DTOs/AdminPanel/AdminPanelDtos.cs
-- [[DateOnly_1]] - code
 - [[DateOnly_4]] - code
 - [[DateOnly_5]] - code
 - [[DateOnly_8]] - code
@@ -102,23 +98,19 @@ members: 129
 - [[HashSet]] - code
 - [[HttpGet]] - code
 - [[HttpGet_2]] - code
-- [[HttpGet_5]] - code
 - [[HttpPost]] - code
 - [[HttpPut]] - code
 - [[IActionResult]] - code
 - [[IActionResult_2]] - code
-- [[IActionResult_5]] - code
 - [[IAdminBookingService]] - code - src/CampCenter.Application/Interfaces/IAdminBookingService.cs
 - [[IAvailabilityService]] - code - src/CampCenter.Application/Interfaces/IAvailabilityService.cs
 - [[ILogger_2]] - code
 - [[IValidator]] - code
 - [[List]] - code
 - [[List_7]] - code
-- [[OccupancyController]] - code - src/CampCenter.Api/Controllers/Admin/OccupancyController.cs
 - [[OccupancyDto]] - code - src/CampCenter.Application/DTOs/AdminPanel/AdminPanelDtos.cs
 - [[ProducesResponseType]] - code
 - [[ProducesResponseType_2]] - code
-- [[ProducesResponseType_5]] - code
 - [[ReassignBookingRequestDto]] - code - src/CampCenter.Application/DTOs/AdminPanel/AdminPanelDtos.cs
 - [[ReassignmentEntryDto]] - code - src/CampCenter.Application/DTOs/AdminPanel/AdminPanelDtos.cs
 - [[RoomOccupancyDto]] - code - src/CampCenter.Application/DTOs/AdminPanel/AdminPanelDtos.cs
@@ -127,14 +119,11 @@ members: 129
 - [[SetBookingStatusRequestDto]] - code - src/CampCenter.Application/DTOs/AdminPanel/AdminPanelDtos.cs
 - [[Task_2]] - code
 - [[Task_4]] - code
-- [[Task_7]] - code
 - [[Task_17]] - code
 - [[Task_19]] - code
 - [[Task_32]] - code
 - [[UpdateBookingPeopleRequestDto]] - code - src/CampCenter.Application/DTOs/AdminPanel/AdminPanelDtos.cs
 - [[UpdateBookingPricingRequestDto]] - code - src/CampCenter.Application/DTOs/AdminPanel/AdminPanelDtos.cs
-- [[UpdateDietaryNotesRequestDto]] - code - src/CampCenter.Application/DTOs/Schedule/ScheduleDtos.cs
-- [[UpdateDietaryNotesRequestValidator]] - code - src/CampCenter.Application/Validators/ScheduleValidators.cs
 - [[int]] - code
 - [[long]] - code
 
@@ -147,36 +136,30 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 15 edges to [[_COMMUNITY_Integration Test Harness (2)]]
-- 10 edges to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
-- 8 edges to [[_COMMUNITY_Public Booking Service (1)]]
-- 7 edges to [[_COMMUNITY_Room Management]]
-- 7 edges to [[_COMMUNITY_Room Task Management (1)]]
-- 5 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
+- 11 edges to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
+- 7 edges to [[_COMMUNITY_Integration Test Harness (1)]]
+- 6 edges to [[_COMMUNITY_DTOs  Schedule (1)]]
+- 6 edges to [[_COMMUNITY_Room Task Management (1)]]
+- 6 edges to [[_COMMUNITY_Public Booking Service (1)]]
 - 5 edges to [[_COMMUNITY_Admin Booking & Notifications (4)]]
+- 5 edges to [[_COMMUNITY_Room Management]]
 - 5 edges to [[_COMMUNITY_Room Mix Calculator Tests]]
-- 5 edges to [[_COMMUNITY_Integration Test Harness (1)]]
-- 4 edges to [[_COMMUNITY_Validator Unit Tests]]
-- 4 edges to [[_COMMUNITY_DTOs  Schedule (1)]]
+- 4 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
 - 4 edges to [[_COMMUNITY_Admin Booking & Notifications (1)]]
-- 2 edges to [[_COMMUNITY_Persistence  Migrations (2)]]
+- 4 edges to [[_COMMUNITY_Persistence  Migrations (2)]]
+- 3 edges to [[_COMMUNITY_CampCenter.Application  Services (3)]]
 - 2 edges to [[_COMMUNITY_Auth Service & Tokens]]
+- 2 edges to [[_COMMUNITY_IClosureRepository]]
 - 2 edges to [[_COMMUNITY_BookingConfiguration]]
-- 2 edges to [[_COMMUNITY_Payment Gateway Integration Tests (1)]]
-- 2 edges to [[_COMMUNITY_ScheduleValidators.cs]]
-- 2 edges to [[_COMMUNITY_CampCenter.Application  Services (3)]]
-- 1 edge to [[_COMMUNITY_CampCenter.UnitTests  Services (2)]]
-- 1 edge to [[_COMMUNITY_Camp Session Management]]
-- 1 edge to [[_COMMUNITY_UsersController]]
-- 1 edge to [[_COMMUNITY_.GetBlockedRoomIdsAsync]]
-- 1 edge to [[_COMMUNITY_BookingSettings]]
 - 1 edge to [[_COMMUNITY_CampCenter.Application.DTOs.Public]]
 - 1 edge to [[_COMMUNITY_ClosureService]]
+- 1 edge to [[_COMMUNITY_ScheduleValidators.cs]]
 - 1 edge to [[_COMMUNITY_Exception]]
 - 1 edge to [[_COMMUNITY_CampCenter.Domain  Repositories (1)]]
 
 ## Top bridge nodes
-- [[ControllerBase]] - degree 14, connects to 10 communities
-- [[AdminBookingService]] - degree 39, connects to 9 communities
+- [[AdminBookingService]] - degree 39, connects to 10 communities
 - [[.CreateAsync()_7]] - degree 19, connects to 5 communities
 - [[.BuildAssignmentsAsync()]] - degree 13, connects to 4 communities
 - [[IAvailabilityService]] - degree 10, connects to 4 communities
+- [[.GetOccupancyAsync()_1]] - degree 9, connects to 4 communities

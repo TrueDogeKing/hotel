@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Domain/Entities/Closure.cs"
 type: "code"
-community: "Validator Unit Tests"
+community: "Admin Booking & Notifications (2)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Validator_Unit_Tests
+  - community/Admin_Booking__Notifications_2
 ---
 
 # Closure.cs
@@ -15,4 +15,4 @@ tags:
 - [[CampCenter.Domain.Entities]] - `contains` [EXTRACTED]
 - [[Closure_1]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Validator_Unit_Tests
+#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_2

@@ -1,16 +1,29 @@
 ---
 type: community
-members: 3
+members: 16
 ---
 
 # Room
 
-**Members:** 3 nodes
+**Members:** 16 nodes
 
 ## Members
-- [[.BeSaneCounts()]] - code - src/CampCenter.Application/Validators/CreateBookingRequestValidator.cs
-- [[CreateBookingRequestValidator]] - code - src/CampCenter.Application/Validators/CreateBookingRequestValidator.cs
-- [[Dictionary_4]] - code
+- [[.CreateAsync()_9]] - code - src/CampCenter.Application/Services/ClosureService.cs
+- [[.DeleteAsync()_5]] - code - src/CampCenter.Application/Services/ClosureService.cs
+- [[.GetAllAsync()_3]] - code - src/CampCenter.Application/Services/ClosureService.cs
+- [[.GetOrThrowAsync()_1]] - code - src/CampCenter.Application/Services/ClosureService.cs
+- [[.GuardNoLiveBookingsAsync()]] - code - src/CampCenter.Application/Services/ClosureService.cs
+- [[.GuardRoomExistsAsync()]] - code - src/CampCenter.Application/Services/ClosureService.cs
+- [[.SaveChangesAsync()_3]] - code - src/CampCenter.Domain/Repositories/IClosureRepository.cs
+- [[.ToDto()_1]] - code - src/CampCenter.Application/Services/ClosureService.cs
+- [[.UpdateAsync()_5]] - code - src/CampCenter.Application/Services/ClosureService.cs
+- [[CancellationToken_36]] - code
+- [[ClosureDto]] - code - src/CampCenter.Application/DTOs/Closures/ClosureDtos.cs
+- [[ClosureService]] - code - src/CampCenter.Application/Services/ClosureService.cs
+- [[DateOnly_11]] - code
+- [[Guid_21]] - code
+- [[List_9]] - code
+- [[Task_36]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -20,9 +33,17 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_Public Booking Service (1)]]
-- 1 edge to [[_COMMUNITY_CampCenter.Application  Services (3)]]
+- 8 edges to [[_COMMUNITY_IClosureRepository]]
+- 4 edges to [[_COMMUNITY_Validator Unit Tests]]
+- 3 edges to [[_COMMUNITY_AdminUserRole]]
+- 2 edges to [[_COMMUNITY_Integration Test Harness (2)]]
+- 2 edges to [[_COMMUNITY_Room Management]]
+- 2 edges to [[_COMMUNITY_Admin Booking & Notifications (2)]]
 - 1 edge to [[_COMMUNITY_CampCenter.Application.DTOs.Public]]
 
 ## Top bridge nodes
-- [[CreateBookingRequestValidator]] - degree 4, connects to 3 communities
+- [[ClosureService]] - degree 13, connects to 5 communities
+- [[.CreateAsync()_9]] - degree 11, connects to 2 communities
+- [[.GetOrThrowAsync()_1]] - degree 9, connects to 2 communities
+- [[ClosureDto]] - degree 8, connects to 2 communities
+- [[.UpdateAsync()_5]] - degree 11, connects to 1 community

@@ -1,13 +1,14 @@
 ---
 type: community
-members: 8
+members: 10
 ---
 
 # AuthApiTests
 
-**Members:** 8 nodes
+**Members:** 10 nodes
 
 ## Members
+- [[.CreateClient()]] - code - tests/CampCenter.IntegrationTests/ApiCollection.cs
 - [[.Login_ExceedingRateLimit_ReturnsTooManyRequests()]] - code - tests/CampCenter.IntegrationTests/AuthApiTests.cs
 - [[.Login_WithInvalidPayload_ReturnsBadRequest()]] - code - tests/CampCenter.IntegrationTests/AuthApiTests.cs
 - [[.Login_WithUnknownLogin_ReturnsUnauthorized()]] - code - tests/CampCenter.IntegrationTests/AuthApiTests.cs
@@ -15,6 +16,7 @@ members: 8
 - [[.Login_WithWrongPassword_ReturnsUnauthorized()]] - code - tests/CampCenter.IntegrationTests/AuthApiTests.cs
 - [[AuthApiTests]] - code - tests/CampCenter.IntegrationTests/AuthApiTests.cs
 - [[Fact_3]] - code
+- [[HttpClient_2]] - code
 - [[Task_74]] - code
 
 ## Live Query (requires Dataview plugin)
@@ -25,13 +27,15 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_src  api (2)]]
-- 1 edge to [[_COMMUNITY_Payment Gateway Integration Tests (2)]]
+- 7 edges to [[_COMMUNITY_src  api (2)]]
+- 4 edges to [[_COMMUNITY_tests  CampCenter.IntegrationTests (1)]]
+- 3 edges to [[_COMMUNITY_RoomsAndClosuresApiTests]]
+- 2 edges to [[_COMMUNITY_AdminPanelApiTests]]
+- 2 edges to [[_COMMUNITY_.WithRoomsAsync]]
+- 2 edges to [[_COMMUNITY_PasswordRules]]
 - 1 edge to [[_COMMUNITY_ScheduleValidators.cs]]
 
 ## Top bridge nodes
+- [[.CreateClient()]] - degree 22, connects to 6 communities
 - [[AuthApiTests]] - degree 7, connects to 2 communities
-- [[.Login_WithValidAdminCredentials_ReturnsTokenAndSetsRefreshCookie()]] - degree 4, connects to 1 community
-- [[.Login_WithWrongPassword_ReturnsUnauthorized()]] - degree 4, connects to 1 community
-- [[.Login_WithUnknownLogin_ReturnsUnauthorized()]] - degree 4, connects to 1 community
-- [[.Login_WithInvalidPayload_ReturnsBadRequest()]] - degree 4, connects to 1 community
+- [[HttpClient_2]] - degree 3, connects to 2 communities

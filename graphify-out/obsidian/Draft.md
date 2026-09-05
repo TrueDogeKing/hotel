@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/components/admin/GroupRooms.tsx"
 type: "code"
-community: "MealTimeDefault"
+community: "eslint"
 location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MealTimeDefault
+  - community/eslint
 ---
 
 # Draft
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[GroupRooms.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MealTimeDefault
+#graphify/code #graphify/EXTRACTED #community/eslint

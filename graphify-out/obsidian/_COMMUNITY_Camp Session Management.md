@@ -1,11 +1,11 @@
 ---
 type: community
-members: 61
+members: 60
 ---
 
 # Camp Session Management
 
-**Members:** 61 nodes
+**Members:** 60 nodes
 
 ## Members
 - [[.ActivityWithoutMealKind_Passes()]] - code - tests/CampCenter.UnitTests/Validators/ScheduleValidatorsTests.cs
@@ -45,7 +45,6 @@ members: 61
 - [[CreateMealTimeDefaultRequestDto]] - code - src/CampCenter.Application/DTOs/Schedule/MealTimeDtos.cs
 - [[CreateMealTimeDefaultRequestValidator]] - code - src/CampCenter.Application/Validators/MealTimeValidators.cs
 - [[CreateScheduleEntryRequestDto]] - code - src/CampCenter.Application/DTOs/Schedule/ScheduleDtos.cs
-- [[CreateScheduleEntryRequestValidator]] - code - src/CampCenter.Application/Validators/ScheduleValidators.cs
 - [[DeleteBookingMealsResultDto]] - code - src/CampCenter.Application/DTOs/Schedule/MealTimeDtos.cs
 - [[DeleteMealTimeDefaultResultDto]] - code - src/CampCenter.Application/DTOs/Schedule/MealTimeDtos.cs
 - [[Fact_18]] - code
@@ -78,18 +77,17 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
+- 9 edges to [[_COMMUNITY_DTOs  Schedule (1)]]
 - 8 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (1)]]
-- 5 edges to [[_COMMUNITY_DTOs  Schedule (1)]]
-- 5 edges to [[_COMMUNITY_ScheduleValidators.cs]]
+- 4 edges to [[_COMMUNITY_ScheduleValidators.cs]]
 - 3 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
 - 3 edges to [[_COMMUNITY_CampCenter.Application  Services (2)]]
-- 3 edges to [[_COMMUNITY_CampCenter.Application  Services (3)]]
-- 1 edge to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
+- 1 edge to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
 - 1 edge to [[_COMMUNITY_tests  CampCenter.IntegrationTests (1)]]
 
 ## Top bridge nodes
 - [[MealTimeDtos.cs]] - degree 10, connects to 4 communities
 - [[CreateScheduleEntryRequestDto]] - degree 8, connects to 3 communities
+- [[ScheduleEntryValidatorsTests]] - degree 20, connects to 2 communities
 - [[MealTimesController]] - degree 8, connects to 2 communities
 - [[IMealTimeService]] - degree 7, connects to 2 communities
-- [[CreateMealTimeDefaultRequestValidator]] - degree 4, connects to 2 communities

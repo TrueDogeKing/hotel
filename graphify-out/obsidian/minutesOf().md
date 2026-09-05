@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/components/admin/DayTimetable.tsx"
 type: "code"
-community: "Domain & Infra Namespaces"
+community: "MealTimeDefault"
 location: "L124"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Domain__Infra_Namespaces
+  - community/MealTimeDefault
 ---
 
 # minutesOf()
@@ -16,4 +16,4 @@ tags:
 - [[DayTimetable.tsx]] - `contains` [EXTRACTED]
 - [[buildChips()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Domain__Infra_Namespaces
+#graphify/code #graphify/EXTRACTED #community/MealTimeDefault

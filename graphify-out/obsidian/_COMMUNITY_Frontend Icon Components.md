@@ -1,11 +1,11 @@
 ---
 type: community
-members: 39
+members: 41
 ---
 
 # Frontend Icon Components
 
-**Members:** 39 nodes
+**Members:** 41 nodes
 
 ## Members
 - [[AdminTiles()]] - code - frontend/src/components/admin/AdminTiles.tsx
@@ -41,6 +41,8 @@ members: 39
 - [[IconWaves()]] - code - frontend/src/components/icons.tsx
 - [[MAP_QUERY]] - code - frontend/src/pages/PublicHomePage.tsx
 - [[OFFER]] - code - frontend/src/pages/PublicHomePage.tsx
+- [[PublicFooter()]] - code - frontend/src/components/PublicFooter.tsx
+- [[PublicFooter.tsx]] - code - frontend/src/components/PublicFooter.tsx
 - [[PublicHomePage()]] - code - frontend/src/pages/PublicHomePage.tsx
 - [[PublicHomePage.tsx]] - code - frontend/src/pages/PublicHomePage.tsx
 - [[STEPS_1]] - code - frontend/src/pages/PublicHomePage.tsx
@@ -56,13 +58,13 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 8 edges to [[_COMMUNITY_src  api (1)]]
+- 7 edges to [[_COMMUNITY_src  api (1)]]
+- 4 edges to [[_COMMUNITY_Public Booking Frontend (1)]]
 - 3 edges to [[_COMMUNITY_Domain & Infra Namespaces]]
-- 1 edge to [[_COMMUNITY_MealTimeDefault]]
-- 1 edge to [[_COMMUNITY_Public Booking Frontend (1)]]
 
 ## Top bridge nodes
-- [[PublicHomePage.tsx]] - degree 15, connects to 3 communities
-- [[icons.tsx]] - degree 39, connects to 2 communities
+- [[icons.tsx]] - degree 39, connects to 3 communities
+- [[PublicHomePage.tsx]] - degree 15, connects to 2 communities
 - [[AdminTiles.tsx]] - degree 14, connects to 1 community
+- [[PublicFooter.tsx]] - degree 4, connects to 1 community
 - [[IconUtensils()]] - degree 4, connects to 1 community

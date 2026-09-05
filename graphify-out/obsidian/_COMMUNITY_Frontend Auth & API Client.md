@@ -45,14 +45,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 7 edges to [[_COMMUNITY_MealTimeDefault]]
-- 7 edges to [[_COMMUNITY_Room Closure Management]]
-- 5 edges to [[_COMMUNITY_Persistence  Migrations (10)]]
-- 3 edges to [[_COMMUNITY_Domain & Infra Namespaces]]
+- 7 edges to [[_COMMUNITY_src  api (1)]]
+- 6 edges to [[_COMMUNITY_Room Closure Management]]
+- 6 edges to [[_COMMUNITY_Persistence  Migrations (10)]]
+- 4 edges to [[_COMMUNITY_Domain & Infra Namespaces]]
 - 2 edges to [[_COMMUNITY_Public Booking Frontend (1)]]
-- 2 edges to [[_COMMUNITY_src  api (1)]]
 - 2 edges to [[_COMMUNITY_useAuth]]
-- 1 edge to [[_COMMUNITY_@typesreact]]
+- 1 edge to [[_COMMUNITY_eslint]]
+- 1 edge to [[_COMMUNITY_MealTimeDefault]]
 
 ## Top bridge nodes
 - [[AuthContext.tsx]] - degree 37, connects to 7 communities

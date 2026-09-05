@@ -1,11 +1,11 @@
 ---
 type: community
-members: 20
+members: 16
 ---
 
 # Payment Gateway Integration Tests (2)
 
-**Members:** 20 nodes
+**Members:** 16 nodes
 
 ## Members
 - [[.ConfigureWebHost()]] - code - tests/CampCenter.IntegrationTests/CampCenterApiFactory.cs
@@ -13,21 +13,17 @@ members: 20
 - [[.InitializeAsync()]] - code - tests/CampCenter.IntegrationTests/CampCenterApiFactory.cs
 - [[.SeedAdminUserAsync()]] - code - src/CampCenter.Infrastructure/Persistence/Seed/DataSeeder.cs
 - [[.SeedMealTimeDefaultsAsync()]] - code - src/CampCenter.Infrastructure/Persistence/Seed/DataSeeder.cs
-- [[ApiCollection]] - code - tests/CampCenter.IntegrationTests/ApiCollection.cs
-- [[ApiCollection.cs]] - code - tests/CampCenter.IntegrationTests/ApiCollection.cs
 - [[CampCenterApiFactory]] - code - tests/CampCenter.IntegrationTests/CampCenterApiFactory.cs
 - [[CancellationToken_58]] - code
 - [[DataSeeder]] - code - src/CampCenter.Infrastructure/Persistence/Seed/DataSeeder.cs
 - [[IAsyncLifetime]] - code
-- [[ICollectionFixture]] - code
 - [[IServiceProvider]] - code
 - [[IWebHostBuilder]] - code
-- [[IntegrationTestBase]] - code - tests/CampCenter.IntegrationTests/ApiCollection.cs
 - [[PostgreSqlContainer]] - code
+- [[Program]] - code - src/CampCenter.Api/Program.cs
 - [[Task_58]] - code
 - [[Task_75]] - code
 - [[WebApplicationFactory]] - code
-- [[string_13]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -38,21 +34,10 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 3 edges to [[_COMMUNITY_Public Booking Service (2)]]
-- 2 edges to [[_COMMUNITY_tests  CampCenter.IntegrationTests (1)]]
-- 2 edges to [[_COMMUNITY_src  api (2)]]
-- 2 edges to [[_COMMUNITY_PasswordRules]]
-- 1 edge to [[_COMMUNITY_ScheduleValidators.cs]]
-- 1 edge to [[_COMMUNITY_CampCenter.Application.DTOs.Public]]
-- 1 edge to [[_COMMUNITY_AdminPanelApiTests]]
-- 1 edge to [[_COMMUNITY_IntegrationTestBase]]
-- 1 edge to [[_COMMUNITY_.WithRoomsAsync]]
-- 1 edge to [[_COMMUNITY_AuthApiTests]]
-- 1 edge to [[_COMMUNITY_Payment Gateway Integration Tests (1)]]
-- 1 edge to [[_COMMUNITY_RoomsAndClosuresApiTests]]
+- 2 edges to [[_COMMUNITY_RoomsAndClosuresApiTests]]
 - 1 edge to [[_COMMUNITY_Admin Booking & Notifications (4)]]
 
 ## Top bridge nodes
-- [[IntegrationTestBase]] - degree 15, connects to 9 communities
-- [[CampCenterApiFactory]] - degree 11, connects to 2 communities
-- [[ApiCollection.cs]] - degree 4, connects to 2 communities
+- [[CampCenterApiFactory]] - degree 11, connects to 3 communities
 - [[DataSeeder]] - degree 3, connects to 1 community
+- [[Program]] - degree 2, connects to 1 community

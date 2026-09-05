@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Interfaces/IBookingService.cs"
 type: "code"
-community: "Admin Booking & Notifications (2)"
+community: "BookingSettings"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Booking__Notifications_2
+  - community/BookingSettings
 ---
 
 # IBookingService
@@ -20,4 +20,4 @@ tags:
 - [[IBookingService.cs]] - `contains` [EXTRACTED]
 - [[PublicBookingsController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Booking__Notifications_2
+#graphify/code #graphify/EXTRACTED #community/BookingSettings

@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/components/admin/GroupPeople.tsx"
 type: "code"
-community: "MealTimeDefault"
+community: "src / api (1)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MealTimeDefault
+  - community/src_/_api_1
 ---
 
 # GroupPeople.tsx
@@ -21,4 +21,4 @@ tags:
 - [[updateBookingPeople()]] - `imports` [EXTRACTED]
 - [[useAuth()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MealTimeDefault
+#graphify/code #graphify/EXTRACTED #community/src_/_api_1

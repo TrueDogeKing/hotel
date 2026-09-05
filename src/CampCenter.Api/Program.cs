@@ -11,6 +11,7 @@ using CampCenter.Infrastructure.Persistence;
 using CampCenter.Infrastructure.Persistence.Seed;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -42,7 +43,16 @@ builder.Services.AddControllers();
 builder.Services.AddOpenApi(options =>
     options.AddDocumentTransformer<BearerSecuritySchemeTransformer>()
 );
-builder.Services.AddHealthChecks();
+
+// Health checks. The database check is tagged "ready" so the readiness endpoint
+// can select it and the liveness endpoint can leave it out: liveness answers
+// "is this process wedged?" (failing it restarts the container), readiness
+// answers "can this instance serve a request?" (failing it only removes the
+// instance from load balancing). A liveness probe that touched the database
+// would turn a database blip into a restart of every API instance.
+builder
+    .Services.AddHealthChecks()
+    .AddDbContextCheck<AppDbContext>("database", tags: ["ready"]);
 
 // CORS for the frontend. Credentials are allowed (refresh token cookie), so origins must be explicit.
 var allowedOrigins =
@@ -237,7 +247,23 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
-app.MapHealthChecks("/health");
+
+// Three endpoints over the same checks. Rate limiting is switched off on all of
+// them: a probe that gets a 429 counts as a failed probe, and a failed liveness
+// probe restarts the container.
+//   /health       every check — the Docker HEALTHCHECK and compose's
+//                 `depends_on: condition: service_healthy` point here, so this
+//                 now also means "the database answered".
+//   /health/live  no checks; the process is up and serving. Kubernetes liveness.
+//   /health/ready the "ready"-tagged checks. Kubernetes readiness and startup.
+app.MapHealthChecks("/health").DisableRateLimiting();
+app.MapHealthChecks("/health/live", new HealthCheckOptions { Predicate = _ => false })
+    .DisableRateLimiting();
+app.MapHealthChecks(
+        "/health/ready",
+        new HealthCheckOptions { Predicate = check => check.Tags.Contains("ready") }
+    )
+    .DisableRateLimiting();
 
 app.Run();
 

@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Models/BookingSettings.cs"
 type: "code"
-community: "CampCenter.Infrastructure / Repositories (1)"
+community: "CampCenter.Application / Services (3)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CampCenterInfrastructure_/_Repositories_1
+  - community/CampCenterApplication_/_Services_3
 ---
 
 # BookingSettings.cs
@@ -15,4 +15,4 @@ tags:
 - [[BookingSettings]] - `contains` [EXTRACTED]
 - [[CampCenter.Application.Models]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CampCenterInfrastructure_/_Repositories_1
+#graphify/code #graphify/EXTRACTED #community/CampCenterApplication_/_Services_3

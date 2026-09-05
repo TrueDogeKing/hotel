@@ -1,11 +1,11 @@
 ---
 type: community
-members: 58
+members: 64
 ---
 
 # CampCenter.Infrastructure / Repositories (1)
 
-**Members:** 58 nodes
+**Members:** 64 nodes
 
 ## Members
 - [[.AddAsync()_5]] - code - src/CampCenter.Domain/Repositories/IPricingDefaultsRepository.cs
@@ -13,6 +13,7 @@ members: 58
 - [[.Calendar()]] - code - src/CampCenter.Api/Controllers/Public/PublicAvailabilityController.cs
 - [[.Closures()]] - code - src/CampCenter.Api/Controllers/Public/PublicAvailabilityController.cs
 - [[.Configure()_7]] - code - src/CampCenter.Infrastructure/Persistence/Configurations/PricingDefaultsConfiguration.cs
+- [[.Get()_2]] - code - src/CampCenter.Api/Controllers/Admin/OccupancyController.cs
 - [[.Get()_3]] - code - src/CampCenter.Api/Controllers/Admin/PricingController.cs
 - [[.Get()_4]] - code - src/CampCenter.Api/Controllers/Public/PublicAvailabilityController.cs
 - [[.GetAsync()_1]] - code - src/CampCenter.Application/Interfaces/IPricingService.cs
@@ -27,25 +28,29 @@ members: 58
 - [[.Update()_2]] - code - src/CampCenter.Api/Controllers/Admin/PricingController.cs
 - [[.UpdateAsync()_2]] - code - src/CampCenter.Application/Interfaces/IPricingService.cs
 - [[.UpdateAsync()_7]] - code - src/CampCenter.Application/Services/PricingService.cs
-- [[BookingSettings]] - code - src/CampCenter.Application/Models/BookingSettings.cs
-- [[BookingSettings.cs]] - code - src/CampCenter.Application/Models/BookingSettings.cs
+- [[CancellationToken_6]] - code
 - [[CancellationToken_7]] - code
 - [[CancellationToken_13]] - code
 - [[CancellationToken_27]] - code
 - [[CancellationToken_40]] - code
 - [[CancellationToken_50]] - code
 - [[CancellationToken_64]] - code
+- [[ControllerBase]] - code
+- [[DateOnly_1]] - code
 - [[DateOnly_3]] - code
 - [[DateTime_10]] - code
 - [[EntityTypeBuilder_7]] - code
 - [[Guid_35]] - code
+- [[HttpGet_5]] - code
 - [[HttpGet_6]] - code
 - [[HttpGet_11]] - code
 - [[HttpPut_4]] - code
+- [[IActionResult_5]] - code
 - [[IActionResult_6]] - code
 - [[IActionResult_12]] - code
 - [[IPricingDefaultsRepository]] - code - src/CampCenter.Domain/Repositories/IPricingDefaultsRepository.cs
 - [[IPricingService]] - code - src/CampCenter.Application/Interfaces/IPricingService.cs
+- [[OccupancyController]] - code - src/CampCenter.Api/Controllers/Admin/OccupancyController.cs
 - [[PricingController]] - code - src/CampCenter.Api/Controllers/Admin/PricingController.cs
 - [[PricingDefaults_1]] - code - src/CampCenter.Domain/Entities/PricingDefaults.cs
 - [[PricingDefaults.cs]] - code - src/CampCenter.Domain/Entities/PricingDefaults.cs
@@ -54,9 +59,11 @@ members: 58
 - [[PricingDefaultsDto]] - code - src/CampCenter.Application/DTOs/AdminPanel/AdminPanelDtos.cs
 - [[PricingDefaultsRepository]] - code - src/CampCenter.Infrastructure/Repositories/PricingDefaultsRepository.cs
 - [[PricingService]] - code - src/CampCenter.Application/Services/PricingService.cs
+- [[ProducesResponseType_5]] - code
 - [[ProducesResponseType_6]] - code
 - [[ProducesResponseType_12]] - code
 - [[PublicAvailabilityController]] - code - src/CampCenter.Api/Controllers/Public/PublicAvailabilityController.cs
+- [[Task_7]] - code
 - [[Task_8]] - code
 - [[Task_14]] - code
 - [[Task_27]] - code
@@ -65,7 +72,6 @@ members: 58
 - [[Task_64]] - code
 - [[UpdatePricingDefaultsRequestDto]] - code - src/CampCenter.Application/DTOs/AdminPanel/AdminPanelDtos.cs
 - [[long_1]] - code
-- [[string_3]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -75,21 +81,30 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 10 edges to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
+- 11 edges to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
 - 4 edges to [[_COMMUNITY_Exception]]
-- 3 edges to [[_COMMUNITY_Public Booking Service (1)]]
-- 2 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
-- 2 edges to [[_COMMUNITY_Validator Unit Tests]]
-- 2 edges to [[_COMMUNITY_Room Management]]
-- 2 edges to [[_COMMUNITY_ClosureService]]
-- 2 edges to [[_COMMUNITY_BookingConfiguration]]
+- 3 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
+- 2 edges to [[_COMMUNITY_IClosureRepository]]
+- 2 edges to [[_COMMUNITY_Persistence  Migrations (2)]]
+- 2 edges to [[_COMMUNITY_Public Booking Service (1)]]
+- 2 edges to [[_COMMUNITY_components  admin]]
 - 2 edges to [[_COMMUNITY_IRoomService]]
+- 1 edge to [[_COMMUNITY_Validator Unit Tests]]
+- 1 edge to [[_COMMUNITY_CampCenter.UnitTests  Services (2)]]
+- 1 edge to [[_COMMUNITY_Camp Session Management]]
+- 1 edge to [[_COMMUNITY_Room Management]]
+- 1 edge to [[_COMMUNITY_DTOs  Schedule (1)]]
+- 1 edge to [[_COMMUNITY_Room Task Management (1)]]
+- 1 edge to [[_COMMUNITY_UsersController]]
+- 1 edge to [[_COMMUNITY_.GetBlockedRoomIdsAsync]]
+- 1 edge to [[_COMMUNITY_BookingSettings]]
 - 1 edge to [[_COMMUNITY_Public Booking Service (2)]]
-- 1 edge to [[_COMMUNITY_Payment Gateway Integration Tests (1)]]
+- 1 edge to [[_COMMUNITY_CampCenter.Application  Services (3)]]
+- 1 edge to [[_COMMUNITY_ClosureService]]
 
 ## Top bridge nodes
+- [[ControllerBase]] - degree 14, connects to 10 communities
 - [[IPricingService]] - degree 9, connects to 4 communities
 - [[PublicAvailabilityController]] - degree 9, connects to 3 communities
 - [[.GetAsync()_1]] - degree 9, connects to 3 communities
-- [[BookingSettings]] - degree 6, connects to 3 communities
-- [[PricingDefaultsRepository]] - degree 6, connects to 2 communities
+- [[PricingService]] - degree 9, connects to 2 communities

@@ -1,17 +1,24 @@
 ---
 type: community
-members: 4
+members: 11
 ---
 
 # IClosureRepository
 
-**Members:** 4 nodes
+**Members:** 11 nodes
 
 ## Members
-- [[.BuildTargetModel()_6]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/20260729100842_MealSittingDuration.Designer.cs
-- [[20260729100842_MealSittingDuration.Designer.cs]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/20260729100842_MealSittingDuration.Designer.cs
-- [[MealSittingDuration]] - code - src/CampCenter.Infrastructure/Persistence/Migrations/20260729100842_MealSittingDuration.Designer.cs
-- [[ModelBuilder_7]] - code
+- [[.AddAsync()_3]] - code - src/CampCenter.Domain/Repositories/IClosureRepository.cs
+- [[.GetAllAsync()_6]] - code - src/CampCenter.Domain/Repositories/IClosureRepository.cs
+- [[.GetByIdAsync()_2]] - code - src/CampCenter.Domain/Repositories/IClosureRepository.cs
+- [[.GetUpcomingCenterWideAsync()]] - code - src/CampCenter.Domain/Repositories/IClosureRepository.cs
+- [[.Remove()_2]] - code - src/CampCenter.Domain/Repositories/IClosureRepository.cs
+- [[CancellationToken_48]] - code
+- [[DateOnly_23]] - code
+- [[Guid_44]] - code
+- [[IClosureRepository]] - code - src/CampCenter.Domain/Repositories/IClosureRepository.cs
+- [[List_23]] - code
+- [[Task_48]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -21,8 +28,17 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
+- 8 edges to [[_COMMUNITY_Room]]
+- 6 edges to [[_COMMUNITY_Persistence  Migrations (2)]]
+- 6 edges to [[_COMMUNITY_Admin Booking & Notifications (2)]]
+- 2 edges to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
+- 2 edges to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
+- 2 edges to [[_COMMUNITY_CampCenter.UnitTests  Services (2)]]
 - 1 edge to [[_COMMUNITY_Exception]]
-- 1 edge to [[_COMMUNITY_EF Core Migrations (3)]]
 
 ## Top bridge nodes
-- [[20260729100842_MealSittingDuration.Designer.cs]] - degree 3, connects to 2 communities
+- [[IClosureRepository]] - degree 15, connects to 7 communities
+- [[.GetAllAsync()_6]] - degree 7, connects to 3 communities
+- [[.GetUpcomingCenterWideAsync()]] - degree 7, connects to 2 communities
+- [[CancellationToken_48]] - degree 6, connects to 2 communities
+- [[Task_48]] - degree 6, connects to 2 communities

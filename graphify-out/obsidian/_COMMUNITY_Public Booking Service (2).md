@@ -1,11 +1,11 @@
 ---
 type: community
-members: 25
+members: 24
 ---
 
 # Public Booking Service (2)
 
-**Members:** 25 nodes
+**Members:** 24 nodes
 
 ## Members
 - [[.AddApplication()]] - code - src/CampCenter.Application/DependencyInjection.cs
@@ -26,7 +26,6 @@ members: 25
 - [[GlobalExceptionHandler.cs]] - code - src/CampCenter.Api/Errors/GlobalExceptionHandler.cs
 - [[IServiceCollection]] - code
 - [[JwtTokenService.cs]] - code - src/CampCenter.Infrastructure/Auth/JwtTokenService.cs
-- [[Program]] - code - src/CampCenter.Api/Program.cs
 - [[Program.cs]] - code - src/CampCenter.Api/Program.cs
 - [[PublicAvailabilityController.cs]] - code - src/CampCenter.Api/Controllers/Public/PublicAvailabilityController.cs
 - [[PublicBookingsController.cs]] - code - src/CampCenter.Api/Controllers/Public/PublicBookingsController.cs
@@ -47,9 +46,9 @@ SORT file.name ASC
 - 4 edges to [[_COMMUNITY_ClosureService]]
 - 3 edges to [[_COMMUNITY_CampCenter.Application.DTOs.Public]]
 - 3 edges to [[_COMMUNITY_Payment Gateway Integration Tests (2)]]
-- 2 edges to [[_COMMUNITY_.GetBlockedRoomIdsAsync]]
-- 2 edges to [[_COMMUNITY_CampCenter.Application  Services (1)]]
+- 3 edges to [[_COMMUNITY_CampCenter.Application  Services (1)]]
 - 1 edge to [[_COMMUNITY_ScheduleValidators.cs]]
+- 1 edge to [[_COMMUNITY_.GetBlockedRoomIdsAsync]]
 - 1 edge to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
 - 1 edge to [[_COMMUNITY_BookingSettings]]
 - 1 edge to [[_COMMUNITY_Global Exception Handler]]
@@ -61,4 +60,4 @@ SORT file.name ASC
 - [[PublicAvailabilityController.cs]] - degree 5, connects to 4 communities
 - [[JwtTokenService.cs]] - degree 5, connects to 4 communities
 - [[CampCenterApiFactory.cs]] - degree 5, connects to 4 communities
-- [[CampCenter.Infrastructure.Auth]] - degree 7, connects to 3 communities
+- [[Program.cs]] - degree 9, connects to 3 communities

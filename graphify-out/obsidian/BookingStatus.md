@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/api/admin.ts"
 type: "code"
-community: "@types/react"
+community: "Domain & Infra Namespaces"
 location: "L249"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/types/react
+  - community/Domain__Infra_Namespaces
 ---
 
 # BookingStatus
@@ -19,4 +19,4 @@ tags:
 - [[Props_7]] - `references` [EXTRACTED]
 - [[admin.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/types/react
+#graphify/code #graphify/EXTRACTED #community/Domain__Infra_Namespaces

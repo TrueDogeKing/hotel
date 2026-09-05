@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "IRoomService"
+community: "Payment"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/IRoomService
+  - community/Payment
 ---
 
 # Guid
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Payment]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/IRoomService
+#graphify/code #graphify/EXTRACTED #community/Payment

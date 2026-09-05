@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Validators/ScheduleValidators.cs"
 type: "code"
-community: "Camp Session Management"
+community: "DTOs / Schedule (1)"
 location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Camp_Session_Management
+  - community/DTOs_/_Schedule_1
 ---
 
 # CreateScheduleEntryRequestValidator
@@ -17,4 +17,4 @@ tags:
 - [[ScheduleEntryValidatorsTests]] - `references` [EXTRACTED]
 - [[ScheduleValidators.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Camp_Session_Management
+#graphify/code #graphify/EXTRACTED #community/DTOs_/_Schedule_1

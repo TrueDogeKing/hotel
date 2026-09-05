@@ -1,11 +1,11 @@
 ---
 type: community
-members: 20
+members: 19
 ---
 
 # CampCenter.Application.DTOs.Public
 
-**Members:** 20 nodes
+**Members:** 19 nodes
 
 ## Members
 - [[AdminPanelApiTests.cs]] - code - tests/CampCenter.IntegrationTests/AdminPanelApiTests.cs
@@ -17,7 +17,6 @@ members: 20
 - [[CampCenter.Application.DTOs.Rooms]] - code - src/CampCenter.Application/DTOs/Rooms/RoomDtos.cs
 - [[CampCenter.IntegrationTests]] - code - tests/CampCenter.IntegrationTests/AdminPanelApiTests.cs
 - [[ClosureService.cs]] - code - src/CampCenter.Application/Services/ClosureService.cs
-- [[CreateBookingRequestValidator.cs]] - code - src/CampCenter.Application/Validators/CreateBookingRequestValidator.cs
 - [[IAvailabilityService.cs]] - code - src/CampCenter.Application/Interfaces/IAvailabilityService.cs
 - [[IBookingService.cs]] - code - src/CampCenter.Application/Interfaces/IBookingService.cs
 - [[IClosureService.cs]] - code - src/CampCenter.Application/Interfaces/IClosureService.cs
@@ -40,27 +39,27 @@ SORT file.name ASC
 - 19 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
 - 7 edges to [[_COMMUNITY_ClosureService]]
 - 7 edges to [[_COMMUNITY_Exception]]
-- 4 edges to [[_COMMUNITY_Validator Unit Tests]]
 - 4 edges to [[_COMMUNITY_Room Management]]
 - 3 edges to [[_COMMUNITY_Public Booking Service (2)]]
 - 3 edges to [[_COMMUNITY_ScheduleValidators.cs]]
-- 3 edges to [[_COMMUNITY_Payment Gateway Integration Tests (1)]]
-- 1 edge to [[_COMMUNITY_Persistence  Migrations (2)]]
+- 2 edges to [[_COMMUNITY_AdminUserRole]]
+- 2 edges to [[_COMMUNITY_Persistence  Migrations (2)]]
+- 2 edges to [[_COMMUNITY_RoomsAndClosuresApiTests]]
+- 2 edges to [[_COMMUNITY_Payment Gateway Integration Tests (1)]]
 - 1 edge to [[_COMMUNITY_CampCenter.Application  Services (3)]]
 - 1 edge to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
-- 1 edge to [[_COMMUNITY_Admin Booking & Notifications (2)]]
+- 1 edge to [[_COMMUNITY_BookingSettings]]
+- 1 edge to [[_COMMUNITY_Validator Unit Tests]]
 - 1 edge to [[_COMMUNITY_Room]]
 - 1 edge to [[_COMMUNITY_AdminPanelApiTests]]
-- 1 edge to [[_COMMUNITY_Payment Gateway Integration Tests (2)]]
 - 1 edge to [[_COMMUNITY_IntegrationTestBase]]
 - 1 edge to [[_COMMUNITY_.WithRoomsAsync]]
 - 1 edge to [[_COMMUNITY_src  api (2)]]
 - 1 edge to [[_COMMUNITY_Admin Booking & Notifications (4)]]
-- 1 edge to [[_COMMUNITY_RoomsAndClosuresApiTests]]
 - 1 edge to [[_COMMUNITY_tests  CampCenter.IntegrationTests (1)]]
 
 ## Top bridge nodes
-- [[CampCenter.Application.DTOs.Public]] - degree 14, connects to 4 communities
+- [[CampCenter.Application.DTOs.Public]] - degree 14, connects to 5 communities
 - [[CampCenter.IntegrationTests]] - degree 12, connects to 4 communities
 - [[ClosureService.cs]] - degree 7, connects to 4 communities
 - [[RoomService.cs]] - degree 7, connects to 4 communities

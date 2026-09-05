@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Application/Validators/ClosureValidators.cs"
 type: "code"
-community: "Validator Unit Tests"
+community: "AdminUserRole"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Validator_Unit_Tests
+  - community/AdminUserRole
 ---
 
 # CreateClosureRequestValidator
@@ -17,4 +17,4 @@ tags:
 - [[ClosureValidatorsTests]] - `references` [EXTRACTED]
 - [[CreateClosureRequestDto]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Validator_Unit_Tests
+#graphify/code #graphify/EXTRACTED #community/AdminUserRole

@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Persistence/Configurations/RefreshTokenConfiguration.cs"
 type: "code"
-community: "Refresh Token Repository"
+community: "IRoomService"
 location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Refresh_Token_Repository
+  - community/IRoomService
 ---
 
 # RefreshTokenConfiguration
@@ -17,4 +17,4 @@ tags:
 - [[RefreshToken]] - `references` [EXTRACTED]
 - [[RefreshTokenConfiguration.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Refresh_Token_Repository
+#graphify/code #graphify/EXTRACTED #community/IRoomService

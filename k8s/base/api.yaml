@@ -85,29 +85,35 @@ spec:
                 name: campcenter-config
             - secretRef:
                 name: campcenter-secrets
-          # Three probes, three different questions:
+          # Three probes, three different questions — and deliberately two
+          # different endpoints, because the consequences of failing differ.
           #  startup   — "has it finished booting?" Migrations and seeding run
           #              before Kestrel listens, so this buys up to 2.5 minutes
           #              on a cold database and holds the other two probes off.
-          #  readiness — "should it get traffic?" Failing removes the pod from
-          #              the Service endpoints without killing it.
-          #  liveness  — "is it wedged?" Failing restarts the container.
+          #  readiness — "should it get traffic?" /health/ready runs the database
+          #              check; failing only removes the pod from the Service
+          #              endpoints, so a database blip stops traffic rather than
+          #              killing anything.
+          #  liveness  — "is it wedged?" /health/live runs NO checks on purpose.
+          #              Failing restarts the container, and restarting an API
+          #              because the database is briefly unreachable makes an
+          #              outage worse, not better.
           startupProbe:
             httpGet:
-              path: /health
+              path: /health/ready
               port: http
             periodSeconds: 5
             failureThreshold: 30
           readinessProbe:
             httpGet:
-              path: /health
+              path: /health/ready
               port: http
             periodSeconds: 10
             timeoutSeconds: 3
             failureThreshold: 3
           livenessProbe:
             httpGet:
-              path: /health
+              path: /health/live
               port: http
             periodSeconds: 20
             timeoutSeconds: 3

@@ -1,19 +1,31 @@
 ---
 type: community
-members: 6
+members: 18
 ---
 
 # CampCenter.Application / Services (3)
 
-**Members:** 6 nodes
+**Members:** 18 nodes
 
 ## Members
-- [[AbstractValidator]] - code
-- [[CreateRoomRequestValidator]] - code - src/CampCenter.Application/Validators/RoomValidators.cs
-- [[CreateUserRequestValidator]] - code - src/CampCenter.Application/Validators/UserValidators.cs
-- [[RoomValidators.cs]] - code - src/CampCenter.Application/Validators/RoomValidators.cs
-- [[SetUserRoleRequestValidator]] - code - src/CampCenter.Application/Validators/UserValidators.cs
-- [[UpdateRoomRequestValidator]] - code - src/CampCenter.Application/Validators/RoomValidators.cs
+- [[.HandleNotificationAsync()]] - code - src/CampCenter.Application/Interfaces/IPaymentService.cs
+- [[.HandleNotificationAsync()_1]] - code - src/CampCenter.Application/Services/PaymentService.cs
+- [[.InitiateAsync()]] - code - src/CampCenter.Application/Interfaces/IPaymentService.cs
+- [[.InitiateAsync()_1]] - code - src/CampCenter.Application/Services/PaymentService.cs
+- [[.SendSafelyAsync()_1]] - code - src/CampCenter.Application/Services/PaymentService.cs
+- [[BookingSettings]] - code - src/CampCenter.Application/Models/BookingSettings.cs
+- [[BookingSettings.cs]] - code - src/CampCenter.Application/Models/BookingSettings.cs
+- [[CancellationToken_26]] - code
+- [[CancellationToken_39]] - code
+- [[ILogger_4]] - code
+- [[IPaymentService]] - code - src/CampCenter.Application/Interfaces/IPaymentService.cs
+- [[IPaymentService.cs]] - code - src/CampCenter.Application/Interfaces/IPaymentService.cs
+- [[InitiatePaymentRequestDto]] - code - src/CampCenter.Application/Interfaces/IPaymentService.cs
+- [[InitiatePaymentResponseDto]] - code - src/CampCenter.Application/Interfaces/IPaymentService.cs
+- [[PaymentService]] - code - src/CampCenter.Application/Services/PaymentService.cs
+- [[Task_26]] - code
+- [[Task_39]] - code
+- [[string_3]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -23,20 +35,21 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_UsersController]]
-- 3 edges to [[_COMMUNITY_ScheduleValidators.cs]]
-- 3 edges to [[_COMMUNITY_Camp Session Management]]
-- 2 edges to [[_COMMUNITY_Room Management]]
-- 2 edges to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
-- 2 edges to [[_COMMUNITY_Validator Unit Tests]]
+- 6 edges to [[_COMMUNITY_Payment Gateway Integration Tests (1)]]
+- 5 edges to [[_COMMUNITY_Integration Test Harness (2)]]
+- 4 edges to [[_COMMUNITY_Admin Booking & Notifications (4)]]
+- 3 edges to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
 - 2 edges to [[_COMMUNITY_DTOs  Schedule (1)]]
+- 2 edges to [[_COMMUNITY_Auth Service & Tokens]]
+- 2 edges to [[_COMMUNITY_ClosureService]]
 - 1 edge to [[_COMMUNITY_CampCenter.Application.DTOs.Public]]
-- 1 edge to [[_COMMUNITY_Room]]
-- 1 edge to [[_COMMUNITY_.GetBlockedRoomIdsAsync]]
+- 1 edge to [[_COMMUNITY_Application Namespaces & DTOs]]
+- 1 edge to [[_COMMUNITY_Public Booking Service (1)]]
+- 1 edge to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
 
 ## Top bridge nodes
-- [[AbstractValidator]] - degree 16, connects to 7 communities
-- [[RoomValidators.cs]] - degree 4, connects to 2 communities
-- [[CreateUserRequestValidator]] - degree 3, connects to 2 communities
-- [[SetUserRoleRequestValidator]] - degree 3, connects to 2 communities
-- [[CreateRoomRequestValidator]] - degree 3, connects to 1 community
+- [[PaymentService]] - degree 12, connects to 6 communities
+- [[.HandleNotificationAsync()_1]] - degree 11, connects to 5 communities
+- [[.InitiateAsync()_1]] - degree 11, connects to 4 communities
+- [[BookingSettings]] - degree 6, connects to 3 communities
+- [[IPaymentService.cs]] - degree 5, connects to 2 communities

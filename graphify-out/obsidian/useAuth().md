@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/auth/AuthContext.tsx"
 type: "code"
-community: "MealTimeDefault"
+community: "src / api (1)"
 location: "L58"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MealTimeDefault
+  - community/src_/_api_1
 ---
 
 # useAuth()
@@ -48,4 +48,4 @@ tags:
 - [[UsersPage()]] - `calls` [EXTRACTED]
 - [[UsersPage.tsx]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MealTimeDefault
+#graphify/code #graphify/EXTRACTED #community/src_/_api_1

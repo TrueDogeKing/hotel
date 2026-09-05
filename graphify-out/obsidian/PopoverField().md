@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/components/calendar/PopoverField.tsx"
 type: "code"
-community: "Public Booking Frontend (1)"
+community: "src / utils"
 location: "L27"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Public_Booking_Frontend_1
+  - community/src_/_utils
 ---
 
 # PopoverField()
@@ -16,4 +16,4 @@ tags:
 - [[DateRangeField.tsx]] - `imports` [EXTRACTED]
 - [[PopoverField.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Public_Booking_Frontend_1
+#graphify/code #graphify/EXTRACTED #community/src_/_utils

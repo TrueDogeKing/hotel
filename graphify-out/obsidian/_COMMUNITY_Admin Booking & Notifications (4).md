@@ -1,11 +1,11 @@
 ---
 type: community
-members: 23
+members: 32
 ---
 
 # Admin Booking & Notifications (4)
 
-**Members:** 23 nodes
+**Members:** 32 nodes
 
 ## Members
 - [[.BookingCancelled()]] - code - src/CampCenter.Application/Services/EmailTemplates.cs
@@ -15,22 +15,31 @@ members: 23
 - [[.FormatDateTime()]] - code - src/CampCenter.Application/Services/EmailTemplates.cs
 - [[.FormatZl()]] - code - src/CampCenter.Application/Services/EmailTemplates.cs
 - [[.SendAsync()]] - code - src/CampCenter.Application/Interfaces/IEmailSender.cs
+- [[.SendAsync()_1]] - code - src/CampCenter.Infrastructure/Email/SmtpEmailSender.cs
 - [[.SendAsync()_2]] - code - tests/CampCenter.IntegrationTests/RecordingEmailSender.cs
 - [[.Stay()]] - code - src/CampCenter.Application/Services/EmailTemplates.cs
 - [[.To()]] - code - tests/CampCenter.IntegrationTests/RecordingEmailSender.cs
+- [[CampCenter.Infrastructure.Email]] - code - src/CampCenter.Infrastructure/Email/EmailSettings.cs
 - [[CancellationToken_22]] - code
+- [[CancellationToken_56]] - code
 - [[CancellationToken_71]] - code
 - [[DateOnly_12]] - code
 - [[DateTime_3]] - code
 - [[EmailMessage]] - code - src/CampCenter.Application/Interfaces/IEmailSender.cs
+- [[EmailSettings]] - code - src/CampCenter.Infrastructure/Email/EmailSettings.cs
+- [[EmailSettings.cs]] - code - src/CampCenter.Infrastructure/Email/EmailSettings.cs
 - [[EmailTemplates]] - code - src/CampCenter.Application/Services/EmailTemplates.cs
 - [[IEmailSender]] - code - src/CampCenter.Application/Interfaces/IEmailSender.cs
 - [[IEmailSender.cs]] - code - src/CampCenter.Application/Interfaces/IEmailSender.cs
 - [[IReadOnlyList_2]] - code
 - [[List_39]] - code
 - [[RecordingEmailSender]] - code - tests/CampCenter.IntegrationTests/RecordingEmailSender.cs
+- [[SmtpEmailSender]] - code - src/CampCenter.Infrastructure/Email/SmtpEmailSender.cs
+- [[SmtpEmailSender.cs]] - code - src/CampCenter.Infrastructure/Email/SmtpEmailSender.cs
 - [[Task_22]] - code
+- [[Task_56]] - code
 - [[Task_78]] - code
+- [[string_10]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -42,18 +51,18 @@ SORT file.name ASC
 ## Connections to other communities
 - 5 edges to [[_COMMUNITY_Public Booking Service (1)]]
 - 5 edges to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
-- 4 edges to [[_COMMUNITY_Payment Gateway Integration Tests (1)]]
+- 4 edges to [[_COMMUNITY_CampCenter.Application  Services (3)]]
 - 4 edges to [[_COMMUNITY_Integration Test Harness (1)]]
-- 2 edges to [[_COMMUNITY_eslint]]
+- 2 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
 - 1 edge to [[_COMMUNITY_Booking Maintenance Background Service]]
-- 1 edge to [[_COMMUNITY_Application Namespaces & DTOs]]
 - 1 edge to [[_COMMUNITY_ClosureService]]
+- 1 edge to [[_COMMUNITY_Exception]]
 - 1 edge to [[_COMMUNITY_Payment Gateway Integration Tests (2)]]
 - 1 edge to [[_COMMUNITY_CampCenter.Application.DTOs.Public]]
 
 ## Top bridge nodes
-- [[IEmailSender]] - degree 7, connects to 4 communities
 - [[.BookingCancelled()]] - degree 7, connects to 4 communities
-- [[EmailMessage]] - degree 10, connects to 3 communities
 - [[.SendAsync()]] - degree 8, connects to 3 communities
+- [[IEmailSender]] - degree 7, connects to 3 communities
 - [[.BookingConfirmed()]] - degree 6, connects to 3 communities
+- [[EmailMessage]] - degree 10, connects to 2 communities

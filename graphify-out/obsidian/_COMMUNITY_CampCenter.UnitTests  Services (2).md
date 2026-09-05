@@ -1,11 +1,11 @@
 ---
 type: community
-members: 93
+members: 94
 ---
 
 # CampCenter.UnitTests / Services (2)
 
-**Members:** 93 nodes
+**Members:** 94 nodes
 
 ## Members
 - [[.A_room_nobody_has_touched_is_pending()]] - code - tests/CampCenter.UnitTests/Services/HousekeepingServiceTests.cs
@@ -35,6 +35,7 @@ members: 93
 - [[.Rejects_a_range_that_ends_before_it_starts()]] - code - tests/CampCenter.UnitTests/Services/HousekeepingServiceTests.cs
 - [[.Rejects_an_unknown_status()]] - code - tests/CampCenter.UnitTests/Services/HousekeepingServiceTests.cs
 - [[.Reopening_a_room_clears_who_finished_it()]] - code - tests/CampCenter.UnitTests/Services/HousekeepingServiceTests.cs
+- [[.Room()]] - code - tests/CampCenter.UnitTests/Services/HousekeepingServiceTests.cs
 - [[.SaveChangesAsync()_7]] - code - src/CampCenter.Domain/Repositories/IRoomCleaningRepository.cs
 - [[.SaveChangesAsync()_18]] - code - src/CampCenter.Infrastructure/Repositories/RoomCleaningRepository.cs
 - [[.SetStatus()_1]] - code - src/CampCenter.Api/Controllers/Admin/HousekeepingController.cs
@@ -115,11 +116,12 @@ SORT file.name ASC
 - 5 edges to [[_COMMUNITY_Integration Test Harness (2)]]
 - 4 edges to [[_COMMUNITY_Application Namespaces & DTOs]]
 - 4 edges to [[_COMMUNITY_Exception]]
-- 3 edges to [[_COMMUNITY_Validator Unit Tests]]
 - 3 edges to [[_COMMUNITY_Room Task Management (1)]]
-- 2 edges to [[_COMMUNITY_BookingConfiguration]]
+- 2 edges to [[_COMMUNITY_IClosureRepository]]
+- 2 edges to [[_COMMUNITY_components  admin]]
 - 2 edges to [[_COMMUNITY_IRoomService]]
-- 1 edge to [[_COMMUNITY_Admin Bookings Controller & DTOs]]
+- 1 edge to [[_COMMUNITY_CampCenter.Infrastructure  Repositories (1)]]
+- 1 edge to [[_COMMUNITY_Persistence  Migrations (2)]]
 - 1 edge to [[_COMMUNITY_ClosureService]]
 
 ## Top bridge nodes

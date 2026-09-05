@@ -13,6 +13,7 @@ tags:
 
 ## Connections
 - [[CampCenter on Kubernetes]] - `contains` [EXTRACTED]
+- [[Health endpoints]] - `contains` [EXTRACTED]
 - [[How compose maps onto this]] - `contains` [EXTRACTED]
 
 #graphify/document #graphify/EXTRACTED #community/CampCenterUnitTests_/_Validators

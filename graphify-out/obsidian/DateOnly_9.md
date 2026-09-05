@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Room Management"
+community: "Persistence / Migrations (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Management
+  - community/Persistence_/_Migrations_2
 ---
 
 # DateOnly
@@ -17,4 +17,4 @@ tags:
 - [[.GetCenterClosureReasonAsync()_1]] - `references` [EXTRACTED]
 - [[.GetFreeRoomsByCapacityAsync()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Management
+#graphify/code #graphify/EXTRACTED #community/Persistence_/_Migrations_2

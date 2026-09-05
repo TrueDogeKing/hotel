@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/api/admin.ts"
 type: "code"
-community: "@types/react"
+community: "Domain & Infra Namespaces"
 location: "L555"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/types/react
+  - community/Domain__Infra_Namespaces
 ---
 
 # getBookingGroupPage()
@@ -16,4 +16,4 @@ tags:
 - [[BookingGroupSection.tsx]] - `imports` [EXTRACTED]
 - [[admin.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/types/react
+#graphify/code #graphify/EXTRACTED #community/Domain__Infra_Namespaces

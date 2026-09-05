@@ -1,11 +1,11 @@
 ---
 type: community
-members: 21
+members: 22
 ---
 
 # CampCenter.UnitTests / Validators
 
-**Members:** 21 nodes
+**Members:** 22 nodes
 
 ## Members
 - [[1. The manifests are valid — no cluster needed]] - document - k8s/README.md
@@ -21,6 +21,7 @@ members: 21
 - [[CampCenter on Kubernetes]] - document - k8s/README.md
 - [[Deploy (dev)]] - document - k8s/README.md
 - [[Getting a cluster]] - document - k8s/README.md
+- [[Health endpoints]] - document - k8s/README.md
 - [[How compose maps onto this]] - document - k8s/README.md
 - [[How to check it works]] - document - k8s/README.md
 - [[Layout]] - document - k8s/README.md

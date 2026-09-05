@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/src/components/admin/GroupMealTimes.tsx"
 type: "code"
-community: "Room Closure Management"
+community: "Persistence / Migrations (10)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Room_Closure_Management
+  - community/Persistence_/_Migrations_10
 ---
 
 # GroupMealTimes.tsx
@@ -32,4 +32,4 @@ tags:
 - [[toTimeInput()]] - `imports` [EXTRACTED]
 - [[useAuth()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Room_Closure_Management
+#graphify/code #graphify/EXTRACTED #community/Persistence_/_Migrations_10

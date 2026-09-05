@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "BookingConfiguration"
+community: "components / admin"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/BookingConfiguration
+  - community/components_/_admin
 ---
 
 # DbContext
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[AppDbContext]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/BookingConfiguration
+#graphify/code #graphify/EXTRACTED #community/components_/_admin

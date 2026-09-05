@@ -94,8 +94,30 @@ are unsure what a change actually does.
 | `services.db-backup` + poll loop | CronJob `db-backup` |
 | `environment:` block | ConfigMap `campcenter-config` |
 | `.env` secrets | Secret `campcenter-secrets` (from `secrets.env`) |
-| `healthcheck:` | `readinessProbe` + `livenessProbe` + `startupProbe` |
+| `healthcheck:` | `readinessProbe` + `livenessProbe` + `startupProbe`, over two different endpoints — see "Health endpoints" below |
 | `depends_on: service_healthy` | for *traffic*, readiness probes — a Service has no endpoints until a pod is ready. For *startup ordering*, the `wait-for-postgres` init container in `base/api.yaml`: the API migrates the database before Kestrel listens, and a headless Service with no ready endpoints answers DNS with NXDOMAIN, so without it the first start reliably crashes. |
+
+### Health endpoints
+
+The API exposes three, and the probes deliberately do not all use the same one:
+
+| Endpoint | Checks | Used by |
+| --- | --- | --- |
+| `/health` | all of them, database included | the Docker `HEALTHCHECK` and compose's `depends_on: service_healthy` |
+| `/health/live` | none — "the process is up and serving" | Kubernetes **liveness** |
+| `/health/ready` | the `ready`-tagged checks, i.e. `AddDbContextCheck<AppDbContext>()` | Kubernetes **readiness** and **startup** |
+
+The split matters because failing the two probes has very different
+consequences. Failing readiness only takes the pod out of the Service's
+endpoints; failing liveness *restarts the container*. If liveness also checked
+the database, a brief database outage would restart every API pod at once —
+turning a recoverable blip into a thundering herd of cold starts, all of them
+re-running migrations against the database that was already struggling. So
+liveness asks the narrow question and readiness asks the useful one.
+
+All three have rate limiting disabled (`DisableRateLimiting()`): the global
+limiter partitions by client IP, and a probe that got a `429` would count as a
+failed probe.
 
 ## Getting a cluster
 
@@ -233,8 +255,27 @@ kubectl port-forward -n campcenter-dev svc/api 5080:8080
 ```
 
 ```bash
-curl http://localhost:5080/health
+curl -w " %{http_code}\n" http://localhost:5080/health/live
 ```
+
+```bash
+curl -w " %{http_code}\n" http://localhost:5080/health/ready
+```
+
+Both `Healthy 200`. To prove `/health/ready` is not lying, scale the database to
+zero and watch only readiness go red while the container keeps running:
+
+```bash
+kubectl scale statefulset/postgres -n campcenter-dev --replicas=0
+```
+
+```bash
+kubectl get pods -n campcenter-dev -l app.kubernetes.io/name=api
+```
+
+The API goes `READY 0/1` with `RESTARTS 0` — out of rotation, not restarted,
+which is exactly the intended split. `kubectl scale … --replicas=1` brings it
+back.
 
 The whole app, through the SPA container (whose nginx proxies `/api` itself):
 
@@ -388,22 +429,6 @@ several replicas would mean several migrators racing on a fresh deploy. To scale
 it, move the migration out of the app's startup path into a Job that runs before
 the rollout (a Helm `pre-upgrade` hook, an Argo CD `PreSync` hook, or a plain Job
 applied by the deploy script) and set `Database__MigrateAutomatically=false`.
-
-**The probes are shallower than they look.** `Program.cs` registers
-`AddHealthChecks()` with no checks in it, so `/health` returns `Healthy` as soon
-as Kestrel is listening — it says nothing about whether the API can still reach
-PostgreSQL. In practice that means a pod whose database connection is broken
-stays in the Service's endpoints and never gets restarted, because from
-Kubernetes' point of view it is fine. Bouncing `postgres-0` under a running API
-shows the mild version: the first request afterwards fails with a 500 on a stale
-pooled connection and the next one succeeds, which is normal pool behaviour and
-self-heals — but a *permanent* breakage would look identical to Kubernetes.
-Making the readiness probe meaningful needs a real check
-(`AddDbContextCheck<AppDbContext>()` from
-`Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore`, or
-`AspNetCore.HealthChecks.NpgSql`) and ideally a separate liveness endpoint that
-does *not* check the database — otherwise a database blip restarts every API pod
-instead of just taking them out of rotation.
 
 **Backups.** The CronJob dumps to a PersistentVolumeClaim that lives in the same
 cluster as the database it protects — the same objection the compose setup

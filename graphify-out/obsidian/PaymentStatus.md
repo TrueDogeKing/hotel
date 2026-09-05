@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Domain/Entities/Payment.cs"
 type: "code"
-community: "IRoomService"
+community: "Payment"
 location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/IRoomService
+  - community/Payment
 ---
 
 # PaymentStatus
@@ -15,4 +15,4 @@ tags:
 - [[Payment]] - `references` [EXTRACTED]
 - [[Payment.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/IRoomService
+#graphify/code #graphify/EXTRACTED #community/Payment

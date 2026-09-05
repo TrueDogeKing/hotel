@@ -49,7 +49,7 @@ SORT file.name ASC
 - 13 edges to [[_COMMUNITY_Admin User & Token Config]]
 - 4 edges to [[_COMMUNITY_Auth Service & Tokens]]
 - 4 edges to [[_COMMUNITY_Exception]]
-- 2 edges to [[_COMMUNITY_BookingConfiguration]]
+- 2 edges to [[_COMMUNITY_components  admin]]
 - 2 edges to [[_COMMUNITY_IRoomService]]
 - 1 edge to [[_COMMUNITY_Refresh Token Repository]]
 - 1 edge to [[_COMMUNITY_CampCenter.Application  Services (1)]]

@@ -1545,8 +1545,8 @@
     "semantic_hash": ""
   },
   "k8s/README.md": {
-    "mtime": 1788614430.3133676,
-    "ast_hash": "dd229ff77d59e9416891e309921c4007",
+    "mtime": 1788618934.1477613,
+    "ast_hash": "260d21f3b183b928837cacc52ebed034",
     "semantic_hash": ""
   },
   "k8s/base/api.yaml": {

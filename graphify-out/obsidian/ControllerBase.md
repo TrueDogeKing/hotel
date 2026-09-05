@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Admin Bookings Controller & DTOs"
+community: "CampCenter.Infrastructure / Repositories (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Bookings_Controller__DTOs
+  - community/CampCenterInfrastructure_/_Repositories_1
 ---
 
 # ControllerBase
@@ -26,4 +26,4 @@ tags:
 - [[TasksController]] - `inherits` [EXTRACTED]
 - [[UsersController]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Bookings_Controller__DTOs
+#graphify/code #graphify/EXTRACTED #community/CampCenterInfrastructure_/_Repositories_1

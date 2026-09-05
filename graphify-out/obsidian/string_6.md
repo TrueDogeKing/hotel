@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "ScheduleValidators.cs"
+community: "DTOs / Schedule (1)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ScheduleValidatorscs
+  - community/DTOs_/_Schedule_1
 ---
 
 # string
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[ScheduleRules]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ScheduleValidatorscs
+#graphify/code #graphify/EXTRACTED #community/DTOs_/_Schedule_1

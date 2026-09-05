@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Api/Controllers/Admin/OccupancyController.cs"
 type: "code"
-community: "Admin Bookings Controller & DTOs"
+community: "CampCenter.Infrastructure / Repositories (1)"
 location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Admin_Bookings_Controller__DTOs
+  - community/CampCenterInfrastructure_/_Repositories_1
 ---
 
 # OccupancyController
@@ -17,4 +17,4 @@ tags:
 - [[IAdminBookingService]] - `references` [EXTRACTED]
 - [[OccupancyController.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Admin_Bookings_Controller__DTOs
+#graphify/code #graphify/EXTRACTED #community/CampCenterInfrastructure_/_Repositories_1

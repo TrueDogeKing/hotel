@@ -1,41 +1,40 @@
 ---
 type: community
-members: 28
+members: 27
 ---
 
 # src / api (1)
 
-**Members:** 28 nodes
+**Members:** 27 nodes
 
 ## Members
+- [[AdminLayout()]] - code - frontend/src/components/admin/AdminLayout.tsx
 - [[AdminLayout.tsx]] - code - frontend/src/components/admin/AdminLayout.tsx
-- [[FlagGB()]] - code - frontend/src/components/LanguageSwitcher.tsx
-- [[FlagPL()]] - code - frontend/src/components/LanguageSwitcher.tsx
+- [[App()]] - code - frontend/src/App.tsx
+- [[App.tsx]] - code - frontend/src/App.tsx
+- [[GroupPeople()]] - code - frontend/src/components/admin/GroupPeople.tsx
+- [[GroupPeople.tsx]] - code - frontend/src/components/admin/GroupPeople.tsx
 - [[IconMoon()]] - code - frontend/src/components/icons.tsx
 - [[IconSun()]] - code - frontend/src/components/icons.tsx
 - [[IconSunSea()]] - code - frontend/src/components/icons.tsx
-- [[Language]] - code - frontend/src/i18n/index.ts
-- [[LanguageSwitcher()]] - code - frontend/src/components/LanguageSwitcher.tsx
-- [[LanguageSwitcher.tsx]] - code - frontend/src/components/LanguageSwitcher.tsx
 - [[Listener_1]] - code - frontend/src/theme.ts
 - [[LoginPage()]] - code - frontend/src/pages/LoginPage.tsx
 - [[LoginPage.tsx]] - code - frontend/src/pages/LoginPage.tsx
-- [[Props_4]] - code - frontend/src/components/PublicHeader.tsx
-- [[PublicHeader()]] - code - frontend/src/components/PublicHeader.tsx
-- [[PublicHeader.tsx]] - code - frontend/src/components/PublicHeader.tsx
-- [[SECTIONS]] - code - frontend/src/components/PublicHeader.tsx
+- [[Props_10]] - code - frontend/src/components/admin/GroupPeople.tsx
+- [[ProtectedRoute()]] - code - frontend/src/auth/ProtectedRoute.tsx
+- [[ProtectedRoute.tsx]] - code - frontend/src/auth/ProtectedRoute.tsx
 - [[Theme]] - code - frontend/src/theme.ts
 - [[ThemeToggle()]] - code - frontend/src/components/ThemeToggle.tsx
 - [[ThemeToggle.tsx]] - code - frontend/src/components/ThemeToggle.tsx
 - [[applyTheme()]] - code - frontend/src/theme.ts
-- [[getStoredLanguage()]] - code - frontend/src/i18n/index.ts
 - [[getTheme()]] - code - frontend/src/theme.ts
-- [[index.ts]] - code - frontend/src/i18n/index.ts
 - [[listeners_1]] - code - frontend/src/theme.ts
-- [[setLanguage()]] - code - frontend/src/i18n/index.ts
+- [[main.tsx]] - code - frontend/src/main.tsx
 - [[subscribeTheme()]] - code - frontend/src/theme.ts
 - [[theme.ts]] - code - frontend/src/theme.ts
 - [[toggleTheme()]] - code - frontend/src/theme.ts
+- [[updateBookingPeople()]] - code - frontend/src/api/admin.ts
+- [[useAuth()]] - code - frontend/src/auth/AuthContext.tsx
 
 ## Live Query (requires Dataview plugin)
 
@@ -45,18 +44,19 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 8 edges to [[_COMMUNITY_Frontend Icon Components]]
-- 7 edges to [[_COMMUNITY_MealTimeDefault]]
-- 7 edges to [[_COMMUNITY_Public Booking Frontend (1)]]
-- 5 edges to [[_COMMUNITY_Room Closure Management]]
-- 2 edges to [[_COMMUNITY_Frontend Auth & API Client]]
-- 2 edges to [[_COMMUNITY_Domain & Infra Namespaces]]
-- 1 edge to [[_COMMUNITY_useAuth]]
-- 1 edge to [[_COMMUNITY_Persistence  Migrations (10)]]
+- 18 edges to [[_COMMUNITY_Room Closure Management]]
+- 13 edges to [[_COMMUNITY_Domain & Infra Namespaces]]
+- 10 edges to [[_COMMUNITY_Public Booking Frontend (1)]]
+- 7 edges to [[_COMMUNITY_Frontend Auth & API Client]]
+- 7 edges to [[_COMMUNITY_useAuth]]
+- 7 edges to [[_COMMUNITY_Frontend Icon Components]]
+- 6 edges to [[_COMMUNITY_Persistence  Migrations (10)]]
+- 4 edges to [[_COMMUNITY_MealTimeDefault]]
+- 2 edges to [[_COMMUNITY_eslint]]
 
 ## Top bridge nodes
-- [[AdminLayout.tsx]] - degree 19, connects to 7 communities
+- [[App.tsx]] - degree 20, connects to 8 communities
+- [[AdminLayout.tsx]] - degree 19, connects to 8 communities
+- [[useAuth()]] - degree 35, connects to 7 communities
+- [[GroupPeople.tsx]] - degree 8, connects to 4 communities
 - [[LoginPage.tsx]] - degree 10, connects to 3 communities
-- [[PublicHeader.tsx]] - degree 12, connects to 2 communities
-- [[index.ts]] - degree 6, connects to 2 communities
-- [[LanguageSwitcher.tsx]] - degree 11, connects to 1 community

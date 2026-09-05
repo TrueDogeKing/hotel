@@ -1,22 +1,21 @@
 ---
 type: community
-members: 9
+members: 8
 ---
 
 # eslint
 
-**Members:** 9 nodes
+**Members:** 8 nodes
 
 ## Members
-- [[.SendAsync()_1]] - code - src/CampCenter.Infrastructure/Email/SmtpEmailSender.cs
-- [[CampCenter.Infrastructure.Email]] - code - src/CampCenter.Infrastructure/Email/EmailSettings.cs
-- [[CancellationToken_56]] - code
-- [[EmailSettings]] - code - src/CampCenter.Infrastructure/Email/EmailSettings.cs
-- [[EmailSettings.cs]] - code - src/CampCenter.Infrastructure/Email/EmailSettings.cs
-- [[SmtpEmailSender]] - code - src/CampCenter.Infrastructure/Email/SmtpEmailSender.cs
-- [[SmtpEmailSender.cs]] - code - src/CampCenter.Infrastructure/Email/SmtpEmailSender.cs
-- [[Task_56]] - code
-- [[string_10]] - code
+- [[AssignableRoom]] - code - frontend/src/api/admin.ts
+- [[Draft]] - code - frontend/src/components/admin/GroupRooms.tsx
+- [[GroupRooms()]] - code - frontend/src/components/admin/GroupRooms.tsx
+- [[GroupRooms.tsx]] - code - frontend/src/components/admin/GroupRooms.tsx
+- [[Props_11]] - code - frontend/src/components/admin/GroupRooms.tsx
+- [[getAdminBooking()]] - code - frontend/src/api/admin.ts
+- [[getAssignableRooms()]] - code - frontend/src/api/admin.ts
+- [[reassignBooking()]] - code - frontend/src/api/admin.ts
 
 ## Live Query (requires Dataview plugin)
 
@@ -26,12 +25,15 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_Admin Booking & Notifications (4)]]
-- 1 edge to [[_COMMUNITY_Application Namespaces & DTOs]]
-- 1 edge to [[_COMMUNITY_Exception]]
+- 5 edges to [[_COMMUNITY_Room Closure Management]]
+- 2 edges to [[_COMMUNITY_src  api (1)]]
+- 2 edges to [[_COMMUNITY_Domain & Infra Namespaces]]
+- 1 edge to [[_COMMUNITY_useAuth]]
+- 1 edge to [[_COMMUNITY_Frontend Auth & API Client]]
 
 ## Top bridge nodes
-- [[SmtpEmailSender]] - degree 4, connects to 1 community
-- [[.SendAsync()_1]] - degree 4, connects to 1 community
-- [[CampCenter.Infrastructure.Email]] - degree 3, connects to 1 community
-- [[SmtpEmailSender.cs]] - degree 3, connects to 1 community
+- [[GroupRooms.tsx]] - degree 13, connects to 5 communities
+- [[GroupRooms()]] - degree 4, connects to 1 community
+- [[getAdminBooking()]] - degree 3, connects to 1 community
+- [[getAssignableRooms()]] - degree 3, connects to 1 community
+- [[AssignableRoom]] - degree 2, connects to 1 community

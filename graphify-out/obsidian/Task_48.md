@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Validator Unit Tests"
+community: "IClosureRepository"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Validator_Unit_Tests
+  - community/IClosureRepository
 ---
 
 # Task
@@ -18,4 +18,4 @@ tags:
 - [[.GetUpcomingCenterWideAsync()]] - `references` [EXTRACTED]
 - [[.SaveChangesAsync()_3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Validator_Unit_Tests
+#graphify/code #graphify/EXTRACTED #community/IClosureRepository

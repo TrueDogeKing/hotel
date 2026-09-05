@@ -1,12 +1,12 @@
 ---
 source_file: "src/CampCenter.Infrastructure/Persistence/DesignTimeDbContextFactory.cs"
 type: "code"
-community: "BookingConfiguration"
+community: "components / admin"
 location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/BookingConfiguration
+  - community/components_/_admin
 ---
 
 # DesignTimeDbContextFactory
@@ -17,4 +17,4 @@ tags:
 - [[DesignTimeDbContextFactory.cs]] - `contains` [EXTRACTED]
 - [[IDesignTimeDbContextFactory]] - `implements` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/BookingConfiguration
+#graphify/code #graphify/EXTRACTED #community/components_/_admin
